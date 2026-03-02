@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CausalChain from '../../components/ui/CausalChain.svelte';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,6 +13,7 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
+const showChain = page.id === 'differential-diagnosis' || page.id === 'higher-order-effects';
 ---
 
 <BaseLayout title={page.data.title} description={page.data.summary}>
@@ -37,6 +39,17 @@ const { Content } = await render(page);
       )}
     </header>
 
+    {showChain && (
+      <section class="chain-section" aria-label="Interactive causal chain visualization">
+        <h2>Causal Chain Visualization</h2>
+        <p class="chain-section-note">
+          The view adapts to your selected lens — use the lens toggle in the navigation
+          to switch between Educator (accordion), Developer (flowchart), and Researcher (step-through).
+        </p>
+        <CausalChain client:visible />
+      </section>
+    )}
+
     <div class="content">
       <Content />
     </div>
@@ -49,8 +62,20 @@ const { Content } = await render(page);
 
 <style>
   .connection-page {
-    max-width: var(--max-width-content);
+    max-width: var(--max-width-wide);
     margin: 0 auto;
+  }
+
+  .chain-section {
+    margin: var(--space-2xl) 0;
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .chain-section-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
   }
 
   .breadcrumb ol {
