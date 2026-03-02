@@ -282,3 +282,34 @@ The U.S. Dignity Quotient — with ICCPR ratified but ICESCR unratified — carr
 - Content collections for analysis documents (typed frontmatter)
 - Single codebase, single build, domain routing at CDN level
 - `/discriminate` skill created to encode the methodology used for this and all prior decisions
+
+---
+
+## D013: Visualization Prioritization — Timeline + World Map First
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: Architecture specifies 8 visualization types. Quiz (V8) already built. Evidence tables (V4, V6) function as styled HTML. Five candidates remain requiring D3/Layercake investment:
+
+| Candidate | Order 0 | Order 1 | Order 2 | Order 3 | Trajectory |
+|-----------|---------|---------|---------|---------|------------|
+| V2 Timeline | 22/25 | 21/25 | 19/25 | 18/25 | STABLE |
+| V1 World Map | 21/25 | 19/25 | 19/25 | 17/25 | STABLE |
+| V5 Bar Chart | 15/25 | 19/25 | 15/25 | — | ELIMINATED |
+| V3 Causal Chain | 15/25 | 11/25 | — | — | ELIMINATED |
+| V7 Sankey Flow | 12/25 | — | — | — | ELIMINATED |
+
+**Decision**: Build V2 (Timeline) and V1 (World Map). Defer V3, V5, V7.
+
+**Reasoning**:
+- **V2 Timeline wins on parsimony**: CSS-first implementation, no D3 dependency, data already structured in timeline.mdx. Universal audience comprehension. "49 years of nothing" drives urgency.
+- **V1 World Map wins on emotional impact**: The visual of 173 ratified nations vs. the US delivers the core argument without words. Home page placement creates emotional anchor for entire site experience.
+- **V5 eliminated**: Existing HTML tables serve the function adequately. A bar chart adds marginal comprehension gain.
+- **V3 eliminated**: Data structuring requires significant editorial work (prose → graph JSON). Layout complexity highest of all candidates. Accessibility challenging for directed graphs.
+- **V7 eliminated at Order 0**: No quantitative flow data exists. Sankey requires proportional data. Highest complexity, lowest audience familiarity.
+
+**What follows**:
+- Timeline component: Svelte with CSS layout, expandable event details, color-coded by event type
+- World Map component: Svelte + D3-geo with Natural Earth projection, responsive SVG, text alternative for accessibility
+- Both lazy-loaded via client:visible directive
+- Deferred visualizations captured as Phase 3 tasks

@@ -30,13 +30,34 @@
     applyLens(lens);
   }
 
+  const lenses = ['developer', 'educator', 'researcher'];
+
   function applyLens(lens: string) {
     document.body.setAttribute('data-lens', lens);
-    // Announce to screen readers
     const announcer = document.getElementById('lens-announcer');
     if (announcer) {
       announcer.textContent = `Viewing as ${lens}`;
     }
+  }
+
+  function handleKeydown(event: KeyboardEvent) {
+    const currentIndex = lenses.indexOf(activeLens);
+    let nextIndex = currentIndex;
+
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      event.preventDefault();
+      nextIndex = (currentIndex + 1) % lenses.length;
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      nextIndex = (currentIndex - 1 + lenses.length) % lenses.length;
+    } else {
+      return;
+    }
+
+    setLens(lenses[nextIndex]);
+    const container = (event.currentTarget as HTMLElement).closest('.lens-toggle');
+    const buttons = container?.querySelectorAll('button');
+    (buttons?.[nextIndex] as HTMLElement)?.focus();
   }
 
   $effect(() => {
@@ -47,25 +68,28 @@
 <div class="lens-toggle" role="radiogroup" aria-label="Content perspective">
   <button
     onclick={() => setLens('developer')}
-    aria-pressed={activeLens === 'developer'}
+    onkeydown={handleKeydown}
     role="radio"
     aria-checked={activeLens === 'developer'}
+    tabindex={activeLens === 'developer' ? 0 : -1}
   >
     Developer
   </button>
   <button
     onclick={() => setLens('educator')}
-    aria-pressed={activeLens === 'educator'}
+    onkeydown={handleKeydown}
     role="radio"
     aria-checked={activeLens === 'educator'}
+    tabindex={activeLens === 'educator' ? 0 : -1}
   >
     Educator
   </button>
   <button
     onclick={() => setLens('researcher')}
-    aria-pressed={activeLens === 'researcher'}
+    onkeydown={handleKeydown}
     role="radio"
     aria-checked={activeLens === 'researcher'}
+    tabindex={activeLens === 'researcher' ? 0 : -1}
   >
     Researcher
   </button>

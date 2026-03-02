@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import RatificationMap from '../components/ui/RatificationMap.svelte';
 ---
 
 <BaseLayout title="What Remains Unratified">
@@ -15,6 +16,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       progress. 173 nations ratified it. The United States signed it &mdash;
       and stopped there.
     </p>
+    <RatificationMap client:visible />
   </section>
 
   <section class="why-now">
@@ -45,6 +47,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <a href="/connection" class="path-card">
         <h3>The AI Connection</h3>
         <p>Differential diagnosis, knock-on effects, and the evidence connecting AI economics to your rights.</p>
+      </a>
+      <a href="/evidence" class="path-card">
+        <h3>The Evidence</h3>
+        <p>Tariff impacts, AI investment data, conflict costs &mdash; the observable conditions driving urgency.</p>
       </a>
       <a href="/action" class="path-card">
         <h3>Take Action</h3>

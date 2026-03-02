@@ -5,16 +5,20 @@ interface Props {
   title: string;
   description?: string;
   defaultLens?: 'developer' | 'educator' | 'researcher';
+  ogType?: 'website' | 'article';
 }
 
 const {
   title,
   description = 'Advocating for U.S. ratification of the ICESCR through the lens of AI\'s economic impact',
   defaultLens = 'developer',
+  ogType = 'website',
 } = Astro.props;
 
 const lensFromUrl = Astro.url.searchParams.get('lens') as Props['defaultLens'] | null;
 const activeLens = lensFromUrl ?? defaultLens;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://unratified.org');
+const fullTitle = `${title} | Unratified`;
 ---
 
 <!doctype html>
@@ -23,8 +27,37 @@ const activeLens = lensFromUrl ?? defaultLens;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:site_name" content="Unratified" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": ogType === 'article' ? 'Article' : 'WebSite',
+      "name": fullTitle,
+      "description": description,
+      "url": canonicalUrl.href,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Safety Quotient Lab",
+        "url": "https://github.com/safety-quotient-lab"
+      }
+    })} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title} | Unratified</title>
+    <title>{fullTitle}</title>
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="stylesheet" href="/styles/lens.css" />
   </head>
@@ -38,6 +71,7 @@ const activeLens = lensFromUrl ?? defaultLens;
           <li><a href="/covenant">The Covenant</a></li>
           <li><a href="/gap">The Gap</a></li>
           <li><a href="/connection">AI Connection</a></li>
+          <li><a href="/evidence">Evidence</a></li>
           <li><a href="/educators">Educators</a></li>
           <li><a href="/action">Take Action</a></li>
           <li><a href="/resources">Resources</a></li>

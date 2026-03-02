@@ -205,8 +205,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 
 **1D: Evidence and Data (Section 5)**
 - [x] Resources page with all research links and evidence sources
-- [ ] Adapt economic-landscape.md for dedicated web page
-- [ ] Design interactive visualization components (Svelte + D3)
+- [x] Adapt economic-landscape.md for dedicated web page
+- [x] Design interactive visualization components — Timeline (Svelte CSS) + World Map (Svelte+D3) per D013
 - [ ] Create downloadable research summary
 
 **1E: Advocacy Toolkit (Section 6)**
@@ -216,20 +216,22 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Create talking points per ICESCR article
 - [x] Design educator toolkit (lesson plans, discussion guides)
 
-**Phase 2: Design and Build** (PARTIALLY COMPLETE) ← CURRENT
+**Phase 2: Design and Build** (MOSTLY COMPLETE) ← CURRENT
 - [x] Design system (typography, color, layout) — base.css complete
-- [x] Build component library — LensToggle, Quiz, ArticleLayout, SectionLayout
+- [x] Build component library — LensToggle, Quiz, Timeline, RatificationMap, ArticleLayout, SectionLayout
 - [x] Implement responsive layouts — mobile-first CSS in base.css
-- [x] Build interactive elements (quiz, lens toggle)
-- [ ] D3/Layercake data visualizations (ratification map, causal chains, evidence matrix)
-- [ ] Accessibility audit (WCAG 2.1 AA minimum)
+- [x] Build interactive elements (quiz, lens toggle, timeline, world map)
+- [x] D3 data visualizations — World Map (D3-geo) + Timeline (CSS+Svelte) per D013
+- [x] Accessibility pass — global focus-visible, ARIA radiogroup fix, prefers-reduced-motion, keyboard nav, text alternatives
+- [ ] Full accessibility audit (WCAG 2.1 AA minimum) — manual screen reader testing pending
 
-**Phase 3: Content Integration and Polish**
-- [x] Integrate all content into built pages — 33 pages building
+**Phase 3: Content Integration and Polish** (MOSTLY COMPLETE)
+- [x] Integrate all content into built pages — 35 pages building
 - [x] Cross-link between sections — verified, all internal links valid
+- [x] SEO and meta content — Open Graph, Twitter Card, JSON-LD structured data, canonical URLs
 - [ ] Downloadable educator resources (PDF, DOCX)
 - [ ] Performance optimization (font loading, image optimization)
-- [ ] SEO and meta content (Open Graph, structured data)
+- [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
 
 **Phase 4: Launch and Outreach**
 - [ ] Deploy to production

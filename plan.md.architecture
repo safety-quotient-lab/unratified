@@ -223,17 +223,23 @@ unratified/
 │   │   ├── covenant/               ← 10 ICESCR article MDX files
 │   │   ├── gap/                    ← 5 ratification gap MDX files
 │   │   ├── connection/             ← 4 AI connection MDX files
+│   │   ├── evidence/               ← 1 evidence MDX file (economic landscape)
 │   │   └── action/                 ← 4 advocacy toolkit MDX files
-│   ├── content.config.ts           ← Collection schemas
+│   ├── content.config.ts           ← Collection schemas (5 collections)
+│   ├── data/
+│   │   └── ratification-status.json ← ICESCR ratification data (193 nations)
 │   ├── components/
-│   │   ├── lens/LensToggle.svelte  ← Svelte island: lens switching
-│   │   └── ui/Quiz.svelte          ← Svelte island: self-assessment quiz
+│   │   ├── lens/LensToggle.svelte  ← Svelte island: lens switching (ARIA radiogroup)
+│   │   └── ui/
+│   │       ├── Quiz.svelte         ← Svelte island: self-assessment quiz
+│   │       ├── Timeline.svelte     ← Svelte island: ratification history timeline
+│   │       └── RatificationMap.svelte ← Svelte+D3: world map choropleth
 │   ├── layouts/
-│   │   ├── BaseLayout.astro        ← Root layout with lens + nav
+│   │   ├── BaseLayout.astro        ← Root layout with lens + nav + SEO (OG, JSON-LD)
 │   │   ├── ArticleLayout.astro     ← ICESCR article pages
 │   │   └── SectionLayout.astro     ← Section landing pages
 │   ├── pages/
-│   │   ├── index.astro             ← Home: "What Remains Unratified"
+│   │   ├── index.astro             ← Home: "What Remains Unratified" + World Map
 │   │   ├── covenant/
 │   │   │   ├── index.astro         ← Covenant landing
 │   │   │   ├── history.astro       ← UDHR → ICESCR historical context
@@ -241,10 +247,13 @@ unratified/
 │   │   │   └── articles/[...slug].astro ← Dynamic article routes
 │   │   ├── gap/
 │   │   │   ├── index.astro         ← Gap landing
-│   │   │   └── [...slug].astro     ← Dynamic gap content routes
+│   │   │   └── [...slug].astro     ← Dynamic gap content routes + Timeline
 │   │   ├── connection/
 │   │   │   ├── index.astro         ← AI Connection landing
 │   │   │   └── [...slug].astro     ← Dynamic analysis routes
+│   │   ├── evidence/
+│   │   │   ├── index.astro         ← Evidence landing
+│   │   │   └── [...slug].astro     ← Dynamic evidence routes
 │   │   ├── action/
 │   │   │   ├── index.astro         ← Take Action landing
 │   │   │   ├── contact.astro       ← Senator contact page
@@ -254,13 +263,13 @@ unratified/
 │   └── (styles in public/styles/)
 ├── public/
 │   ├── styles/
-│   │   ├── base.css                ← Typography, colors, spacing
+│   │   ├── base.css                ← Typography, colors, spacing, a11y
 │   │   └── lens.css                ← Lens-specific layout transformations
 │   ├── favicon.svg
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log
+├── plan.md.decisions               ← Decision log (D001–D013)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
@@ -268,4 +277,18 @@ unratified/
 └── tsconfig.json
 ```
 
-### Page Count: 33 static pages (as of Phase 1 completion)
+### Page Count: 35 static pages (as of Phase 2)
+
+### JS Bundle Profile
+```
+Component             │ Size (gzip) │ Load Strategy
+──────────────────────┼─────────────┼──────────────
+LensToggle.svelte     │   0.95 KB   │ client:load
+Quiz.svelte           │   2.60 KB   │ client:visible
+Timeline.svelte       │   2.31 KB   │ client:visible
+RatificationMap.svelte│  11.15 KB   │ client:visible
+Svelte runtime        │   9.20 KB   │ shared
+D3-geo + topojson     │   2.61 KB   │ dynamic import
+──────────────────────┼─────────────┼──────────────
+Total (max per page)  │  ~28 KB     │ progressive
+```

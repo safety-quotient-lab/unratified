@@ -114,7 +114,7 @@
   background: var(--color-surface-alt);
 }
 
-.lens-toggle button[aria-pressed="true"] {
+.lens-toggle button[aria-checked="true"] {
   background: var(--color-primary);
   color: var(--color-bg);
 }
