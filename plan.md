@@ -163,8 +163,15 @@ See plan.md.marketing for complete user journeys, UX constraints, and launch seq
 - [x] Establish advocacy framing: "Human Rights, Nothing More, Nothing Less"
 - [x] PSQ evaluation of full UDHR — Dignity Quotient framework established
 - [x] Deploy repository to GitHub (safety-quotient-lab/unratified)
+- [ ] Define organizational identity for unratified.org ← CURRENT
 - [ ] Select technology stack
 - [ ] Set up project scaffolding
+
+### Future Paths (Dignity Quotient)
+These emerged from the PSQ-UDHR evaluation and require dedicated context:
+- [ ] Dignity Quotient measurement framework — formalize DQ as quantitative instrument; define scoring protocol; connect to PSQ validation pipeline
+- [ ] Advocacy messaging restructure — apply prohibition-entitlement asymmetry finding and procedural-declarative finding to rewrite all ICESCR article framing across site
+- [ ] Safety Quotient Lab organizational identity — how SQ Lab positions itself across all projects (unratified, PSQ, PJE, future); brand architecture; mission/vision alignment with dignity-as-axiom
 
 **Phase 1: Core Content Development**
 - [ ] Write Section 2 (The Covenant) content
