@@ -1,0 +1,84 @@
+---
+/**
+ * ObservatoryLink — contextual deep-link to observatory.unratified.org
+ *
+ * Renders lens-aware link text pointing to the UDHR article that corresponds
+ * to an ICESCR article. Uses CSS data-lens selectors for persona framing.
+ * No build-time data fetching — qualitative text only to avoid staleness.
+ */
+
+interface Props {
+  udhrArticle: number;
+  udhrTitle: string;
+  icesCrArticle?: number;
+  /** Override the developer-lens label (defaults to "UDHR Article N — evidence corpus →") */
+  developerLabel?: string;
+  /** Override the educator-lens label */
+  educatorLabel?: string;
+  /** Override the researcher-lens label */
+  researcherLabel?: string;
+  class?: string;
+}
+
+const {
+  udhrArticle,
+  udhrTitle,
+  icesCrArticle,
+  developerLabel,
+  educatorLabel,
+  researcherLabel,
+  class: className,
+} = Astro.props;
+
+const href = `https://observatory.unratified.org/article/${udhrArticle}`;
+const devLabel = developerLabel ?? `UDHR Article ${udhrArticle} — evidence corpus →`;
+const eduLabel = educatorLabel ?? `How the tech community discusses ${udhrTitle} →`;
+const resLabel = researcherLabel ?? `UDHR Article ${udhrArticle}: ${udhrTitle} — evaluated HN corpus →`;
+---
+
+<a
+  href={href}
+  rel="noopener"
+  class:list={['observatory-link', className]}
+  aria-label={`Observatory: UDHR Article ${udhrArticle} — ${udhrTitle} (opens observatory.unratified.org)`}
+>
+  <span class="lens-developer">{devLabel}</span>
+  <span class="lens-educator">{eduLabel}</span>
+  <span class="lens-researcher">{resLabel}</span>
+</a>
+
+<style>
+  .observatory-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    font-size: 0.9em;
+  }
+
+  .observatory-link:hover {
+    opacity: 0.75;
+  }
+
+  /* Lens-aware text: only the active lens label shows */
+  .lens-developer,
+  .lens-educator,
+  .lens-researcher {
+    display: none;
+  }
+
+  [data-lens="developer"] .lens-developer,
+  :not([data-lens]) .lens-developer {
+    display: inline;
+  }
+
+  [data-lens="educator"] .lens-educator {
+    display: inline;
+  }
+
+  [data-lens="researcher"] .lens-researcher {
+    display: inline;
+  }
+</style>

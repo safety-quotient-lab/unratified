@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import ObservatoryLink from '../components/ui/ObservatoryLink.astro';
 
 interface Props {
   title: string;
@@ -9,6 +10,8 @@ interface Props {
   aiConnection: string;
   legalText: string;
   pivotal?: boolean;
+  udhrArticle?: number;
+  udhrTitle?: string;
   prevArticle?: { number: number; slug: string; rightName: string };
   nextArticle?: { number: number; slug: string; rightName: string };
 }
@@ -21,6 +24,8 @@ const {
   aiConnection,
   legalText,
   pivotal = false,
+  udhrArticle,
+  udhrTitle,
   prevArticle,
   nextArticle,
 } = Astro.props;
@@ -82,7 +87,16 @@ const {
     <section class="ai-connection-callout">
       <h2>The AI Connection</h2>
       <p>{aiConnection}</p>
-      <a href={`/connection#article-${articleNumber}`}>Read the full analysis &rarr;</a>
+      <div class="callout-links">
+        <a href={`/connection#article-${articleNumber}`}>Read the full analysis &rarr;</a>
+        {udhrArticle && udhrTitle && (
+          <ObservatoryLink
+            udhrArticle={udhrArticle}
+            udhrTitle={udhrTitle}
+            icesCrArticle={articleNumber}
+          />
+        )}
+      </div>
     </section>
 
     <div class="educator-only discussion-prompt">
@@ -209,9 +223,16 @@ const {
     font-size: 1.1rem;
   }
 
-  .ai-connection-callout a {
-    display: inline-block;
+  .callout-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
     margin-top: var(--space-sm);
+  }
+
+  .callout-links a,
+  .ai-connection-callout a {
     font-family: var(--font-heading);
     font-size: 0.875rem;
   }

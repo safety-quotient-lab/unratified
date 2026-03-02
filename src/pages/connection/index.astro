@@ -51,6 +51,30 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
       how the analysis maps onto <a href="/covenant">the covenant</a>.
     </p>
   </section>
+
+  <section class="observatory-callout">
+    <h2>Live Evidence</h2>
+    <p>
+      The <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>
+      tracks how the tech community discusses all 30 UDHR articles in real time — every story
+      on Hacker News evaluated against the Universal Declaration. The ICESCR rights analyzed
+      here map directly to observable discourse patterns in the Observatory.
+    </p>
+    <p class="observatory-links">
+      <a href="https://observatory.unratified.org/rights/articles" rel="noopener" class="lens-developer">
+        Rights signal corpus — all 31 UDHR provisions &nearr;
+      </a>
+      <a href="https://observatory.unratified.org/rights/articles" rel="noopener" class="lens-educator">
+        See which rights the tech community discusses most &nearr;
+      </a>
+      <a href="https://observatory.unratified.org/rights/articles" rel="noopener" class="lens-researcher">
+        UDHR article scores, HRCB metrics, FW ratios — evidence corpus &nearr;
+      </a>
+      <a href="https://observatory.unratified.org/rights/network" rel="noopener" class="lens-researcher">
+        Rights correlation network — MST backbone &nearr;
+      </a>
+    </p>
+  </section>
 </SectionLayout>
 
 <style>
@@ -137,4 +161,43 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
     padding-top: var(--space-xl);
     border-top: 1px solid var(--color-border);
   }
+
+  .observatory-callout {
+    margin-top: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .observatory-callout h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+  }
+
+  .observatory-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+  }
+
+  .observatory-links a {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    display: none;
+  }
+
+  /* Show only the active lens links */
+  [data-lens="developer"] .lens-developer,
+  :not([data-lens]) .lens-developer { display: inline; }
+  [data-lens="educator"] .lens-educator { display: inline; }
+  [data-lens="researcher"] .lens-researcher { display: inline; }
 </style>

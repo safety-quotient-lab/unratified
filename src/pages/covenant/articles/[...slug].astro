@@ -3,17 +3,34 @@ import ArticleLayout from '../../../layouts/ArticleLayout.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
+  // ICESCR article number → corresponding UDHR article for Observatory deep-linking
+  // Defined inside getStaticPaths — Astro extracts this function to a separate build context
+  const UDHR_MAP: Record<number, { article: number; title: string }> = {
+    6:  { article: 23, title: 'Work & Equal Pay' },
+    7:  { article: 23, title: 'Work & Equal Pay' },
+    9:  { article: 22, title: 'Social Security' },
+    10: { article: 16, title: 'Marriage & Family' },
+    11: { article: 25, title: 'Standard of Living' },
+    12: { article: 25, title: 'Standard of Living' },
+    13: { article: 26, title: 'Education' },
+    14: { article: 26, title: 'Education' },
+    15: { article: 27, title: 'Cultural Participation' },
+  };
+
   const articles = await getCollection('covenant');
   const sorted = articles.sort((a, b) => a.data.order - b.data.order);
 
   return sorted.map((article, index) => {
     const prev = index > 0 ? sorted[index - 1] : undefined;
     const next = index < sorted.length - 1 ? sorted[index + 1] : undefined;
+    const udhr = UDHR_MAP[article.data.articleNumber];
 
     return {
       params: { slug: article.id },
       props: {
         article,
+        udhrArticle: udhr?.article,
+        udhrTitle: udhr?.title,
         prevArticle: prev
           ? { number: prev.data.articleNumber, slug: prev.id, rightName: prev.data.rightName }
           : undefined,
@@ -25,7 +42,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { article, prevArticle, nextArticle } = Astro.props;
+const { article, udhrArticle, udhrTitle, prevArticle, nextArticle } = Astro.props;
 const { Content } = await render(article);
 ---
 
@@ -37,6 +54,8 @@ const { Content } = await render(article);
   aiConnection={article.data.aiConnection}
   legalText={article.data.legalText}
   pivotal={article.data.pivotal}
+  udhrArticle={udhrArticle}
+  udhrTitle={udhrTitle}
   prevArticle={prevArticle}
   nextArticle={nextArticle}
 >
