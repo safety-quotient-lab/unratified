@@ -148,7 +148,7 @@ See plan.md.marketing for complete user journeys, UX constraints, and launch seq
 
 ## Current Phase
 
-**Phase 0: Planning and Foundation** (CURRENT)
+**Phase 0: Planning and Foundation** (COMPLETE)
 - [x] Research AI economic impact landscape
 - [x] Develop differential diagnosis with integral chain analysis
 - [x] Research ICESCR content, ratification status, arguments
@@ -166,69 +166,70 @@ See plan.md.marketing for complete user journeys, UX constraints, and launch seq
 - [x] Define organizational identity for unratified.org
 - [x] Select technology stack — Astro + MDX + Svelte Islands + D3/Layercake (D012)
 - [x] Create /discriminate skill encoding the discriminator methodology
-- [ ] Set up project scaffolding ← CURRENT
+- [x] Set up project scaffolding
 
 ### Future Paths (Dignity Quotient)
 These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Dignity Quotient measurement framework — formalize DQ as quantitative instrument; define scoring protocol; connect to PSQ validation pipeline
 - [ ] Advocacy messaging restructure — apply prohibition-entitlement asymmetry finding and procedural-declarative finding to rewrite all ICESCR article framing across site
 - [ ] Safety Quotient Lab organizational identity — how SQ Lab positions itself across all projects (unratified, PSQ, PJE, future); brand architecture; mission/vision alignment with dignity-as-axiom
+- [ ] A/B testing infrastructure — hybrid vs. observational voice for content effectiveness measurement
 
-**Phase 1: Core Content Development** ← ENTERING
-
-Priority order based on dependency analysis:
+**Phase 1: Core Content Development** (COMPLETE)
 
 **1A: The Covenant (Section 2)** — foundational content all other sections reference
-- [ ] Write ICESCR historical context page (UDHR → twin covenants → adoption → entry into force)
-- [ ] Write Article 6 (Right to work) — plain language + "what this means" + AI connection
-- [ ] Write Article 7 (Just work conditions) — plain language + AI connection
-- [ ] Write Article 9 (Social security) — plain language + AI connection
-- [ ] Write Article 11 (Adequate standard of living) — plain language + AI connection
-- [ ] Write Article 12 (Right to health) — plain language + AI connection
-- [ ] Write Article 13 (Right to education) — CO-PIVOTAL — deep treatment
-- [ ] Write Article 15 (Right to science) — CO-PIVOTAL — deep treatment + Dignity Quotient
-- [ ] Write remaining articles (1, 10, 14) — lighter treatment
-- [ ] Design self-assessment quiz ("Do you experience these rights?")
+- [x] Write ICESCR historical context page (UDHR → twin covenants → adoption → entry into force)
+- [x] Write Article 6 (Right to work) — plain language + "what this means" + AI connection
+- [x] Write Article 7 (Just work conditions) — plain language + AI connection
+- [x] Write Article 9 (Social security) — plain language + AI connection
+- [x] Write Article 11 (Adequate standard of living) — plain language + AI connection
+- [x] Write Article 12 (Right to health) — plain language + AI connection
+- [x] Write Article 13 (Right to education) — CO-PIVOTAL — deep treatment
+- [x] Write Article 15 (Right to science) — CO-PIVOTAL — deep treatment + Dignity Quotient
+- [x] Write remaining articles (1, 10, 14) — lighter treatment
+- [x] Design self-assessment quiz ("Do you experience these rights?")
 
 **1B: The Gap (Section 3)** — completes "understand the problem" layer
-- [ ] Research and write administration-by-administration ratification timeline
-- [ ] Write arguments against ratification (fair witness — present faithfully)
-- [ ] Write counterarguments with evidence
-- [ ] Write "not really rights" intellectual history
-- [ ] Write international comparison: how other nations handle ESCR
+- [x] Research and write administration-by-administration ratification timeline
+- [x] Write arguments against ratification (fair witness — present faithfully)
+- [x] Write counterarguments with evidence
+- [x] Write "not really rights" intellectual history
+- [x] Write international comparison: how other nations handle ESCR
 
 **1C: The AI Connection (Section 4)** — adapt existing analysis
-- [ ] Adapt differential-diagnosis.md into website MDX pages
-- [ ] Adapt higher-order-effects.md (Four Scarcities, Article 13 pivot)
-- [ ] Adapt ratification-counterfactual.md (tools not solutions)
-- [ ] Adapt udhr-psq-evaluation.md (Dignity Quotient)
-- [ ] Create per-article AI connection summaries linking to covenant pages
+- [x] Adapt differential-diagnosis.md into website MDX pages
+- [x] Adapt higher-order-effects.md (Four Scarcities, Article 13 pivot)
+- [x] Adapt ratification-counterfactual.md (tools not solutions)
+- [x] Adapt udhr-psq-evaluation.md (Dignity Quotient)
+- [x] Create per-article AI connection summaries (integrated into article frontmatter)
 
 **1D: Evidence and Data (Section 5)**
-- [ ] Adapt economic-landscape.md for web
+- [x] Resources page with all research links and evidence sources
+- [ ] Adapt economic-landscape.md for dedicated web page
 - [ ] Design interactive visualization components (Svelte + D3)
 - [ ] Create downloadable research summary
 
 **1E: Advocacy Toolkit (Section 6)**
-- [ ] Write treaty ratification process explainer
-- [ ] Build senator contact/lookup tool
-- [ ] Write template advocacy letters
-- [ ] Create talking points per ICESCR article
-- [ ] Design educator toolkit (lesson plans, discussion guides)
+- [x] Write treaty ratification process explainer
+- [x] Build senator contact page
+- [x] Write template advocacy letters
+- [x] Create talking points per ICESCR article
+- [x] Design educator toolkit (lesson plans, discussion guides)
 
-**Phase 2: Design and Build**
-- [ ] Design system (typography, color, layout)
-- [ ] Build component library
-- [ ] Implement responsive layouts
-- [ ] Build interactive elements (quiz, data viz)
+**Phase 2: Design and Build** (PARTIALLY COMPLETE) ← CURRENT
+- [x] Design system (typography, color, layout) — base.css complete
+- [x] Build component library — LensToggle, Quiz, ArticleLayout, SectionLayout
+- [x] Implement responsive layouts — mobile-first CSS in base.css
+- [x] Build interactive elements (quiz, lens toggle)
+- [ ] D3/Layercake data visualizations (ratification map, causal chains, evidence matrix)
 - [ ] Accessibility audit (WCAG 2.1 AA minimum)
 
 **Phase 3: Content Integration and Polish**
-- [ ] Integrate all content into built pages
-- [ ] Cross-link between sections
-- [ ] Educator toolkit and downloadable resources
-- [ ] Performance optimization
-- [ ] SEO and meta content
+- [x] Integrate all content into built pages — 33 pages building
+- [x] Cross-link between sections — verified, all internal links valid
+- [ ] Downloadable educator resources (PDF, DOCX)
+- [ ] Performance optimization (font loading, image optimization)
+- [ ] SEO and meta content (Open Graph, structured data)
 
 **Phase 4: Launch and Outreach**
 - [ ] Deploy to production

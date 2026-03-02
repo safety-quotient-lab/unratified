@@ -1,0 +1,143 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+const pages = await getCollection('action');
+const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+---
+
+<SectionLayout
+  title="Take Action"
+  description="The ICESCR has waited 49 years for Senate action. These tools help you change that — from understanding the ratification process to contacting your senators."
+  section="action"
+  breadcrumbLabel="Take Action"
+>
+  <div class="action-grid">
+    {sorted.map((page) => (
+      <a href={`/action/${page.id}`} class="action-card">
+        <h2>{page.data.title}</h2>
+        <p>{page.data.summary}</p>
+      </a>
+    ))}
+  </div>
+
+  <section class="quick-action">
+    <h2>Quick Action</h2>
+    <p>
+      The most impactful action: contact your senators. The ICESCR stalled because no
+      organized constituency demanded ratification. Each constituent letter shifts the
+      political calculation.
+    </p>
+    <div class="action-steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <p>Find your senators at <a href="https://www.senate.gov/senators/" rel="noopener">senate.gov</a></p>
+      </div>
+      <div class="step">
+        <span class="step-number">2</span>
+        <p>Use a <a href="/action/template-letters">template letter</a> or write your own</p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <p>Send by mail (most impact), email, or phone call to (202) 224-3121</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="framing">
+    <blockquote>
+      Human Rights, Nothing More, Nothing Less
+    </blockquote>
+    <p>
+      Every element of this advocacy represents implementation of rights 173 nations
+      already committed to. Nothing here asks for anything beyond what the United States
+      signed in 1977.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .action-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .action-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .action-card h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .action-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .quick-action {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .action-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+    max-width: 30rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 50%;
+  }
+
+  .step p {
+    margin: 0;
+    padding-top: var(--space-xs);
+  }
+
+  .framing {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+</style>

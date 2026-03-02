@@ -1,0 +1,133 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+---
+
+<SectionLayout
+  title="For Educators"
+  description="Teaching resources connecting AI economics, human rights law, and the ICESCR — adaptable for high school and university courses."
+  section="educators"
+  breadcrumbLabel="Educators"
+>
+  <section class="educator-intro">
+    <p>
+      The ICESCR provides a framework for teaching students how technology, economics, and
+      human rights interact. The analysis throughout this site — differential diagnosis,
+      knock-on effects, ratification counterfactuals — teaches analytical methodology while
+      engaging substantive questions about economic rights.
+    </p>
+  </section>
+
+  <section class="quick-links">
+    <h2>Teaching Resources</h2>
+    <div class="resource-grid">
+      <a href="/action/educator-toolkit" class="resource-card">
+        <h3>Lesson Plans</h3>
+        <p>Three complete lesson plans for different levels — from introductory rights awareness to advanced policy analysis.</p>
+      </a>
+      <a href="/action/talking-points" class="resource-card">
+        <h3>Discussion Points</h3>
+        <p>Five discussion questions adaptable for any level, connecting AI, economics, and human rights.</p>
+      </a>
+      <a href="/covenant" class="resource-card">
+        <h3>Article-by-Article Guide</h3>
+        <p>Each ICESCR article explained in plain language with AI connections — suitable as reading assignments.</p>
+      </a>
+      <a href="/connection" class="resource-card">
+        <h3>The Analysis</h3>
+        <p>Differential diagnosis, higher-order effects, and the ratification counterfactual — teaches analytical methodology.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="by-level">
+    <h2>By Course Level</h2>
+
+    <div class="level-section">
+      <h3>High School (Grades 10-12)</h3>
+      <p><strong>Social Studies / Civics</strong>: Use Lesson Plan 1 ("What Rights Do You Have?") to introduce the distinction between ratified and unratified rights. The self-assessment quiz connects abstract rights to lived experience.</p>
+      <p><strong>Economics</strong>: The Four Scarcities model (judgment, specification, curation, energy) provides a framework for discussing AI's economic impact beyond "jobs will disappear."</p>
+    </div>
+
+    <div class="level-section">
+      <h3>University — Introductory</h3>
+      <p><strong>International Relations / Human Rights</strong>: The ratification timeline and arguments/counterarguments provide balanced source material for debate exercises.</p>
+      <p><strong>Economics 101</strong>: The differential diagnosis demonstrates hypothesis-testing methodology applied to real economic questions.</p>
+    </div>
+
+    <div class="level-section">
+      <h3>University — Advanced</h3>
+      <p><strong>Public Policy</strong>: The OBBBA case study and quality floor analysis provide material for policy analysis exercises using a rights framework.</p>
+      <p><strong>Law</strong>: The ratification counterfactual and ADA pattern provide frameworks for analyzing treaty implementation through litigation.</p>
+      <p><strong>STS (Science, Technology, and Society)</strong>: The entire analysis demonstrates how to evaluate technology's societal impact using structured methodology.</p>
+    </div>
+  </section>
+
+  <section class="license-note">
+    <h2>Licensing</h2>
+    <p>
+      All content on this site releases under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">Creative Commons BY 4.0</a>.
+      You may adapt, modify, and share freely with attribution. No permission needed for classroom use.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .educator-intro {
+    margin-bottom: var(--space-2xl);
+    max-width: var(--max-width-content);
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .resource-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .resource-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .resource-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+  }
+
+  .resource-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .by-level {
+    margin: var(--space-2xl) 0;
+  }
+
+  .level-section {
+    margin-bottom: var(--space-xl);
+    padding-left: var(--space-lg);
+    border-left: 2px solid var(--color-border);
+  }
+
+  .level-section h3 {
+    margin-top: 0;
+  }
+
+  .license-note {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

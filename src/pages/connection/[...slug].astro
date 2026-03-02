@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('connection');
+  return pages.map((page) => ({
+    params: { slug: page.id },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<BaseLayout title={page.data.title} description={page.data.summary}>
+  <article class="connection-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/connection">AI Connection</a></li>
+        <li aria-current="page">{page.data.title}</li>
+      </ol>
+    </nav>
+
+    <header>
+      <h1>{page.data.title}</h1>
+      <p class="lede">{page.data.summary}</p>
+      {page.data.relatedArticles.length > 0 && (
+        <div class="related">
+          <span class="related-label">Related articles:</span>
+          {page.data.relatedArticles.map((num: number) => (
+            <a href={`/covenant/articles/article-${num}`} class="article-link">Art. {num}</a>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="content">
+      <Content />
+    </div>
+
+    <nav class="section-nav">
+      <a href="/connection">&larr; Back to The AI Connection</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .connection-page {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 36rem;
+  }
+
+  .related {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .related-label {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .article-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 2px var(--space-sm);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .article-link:hover {
+    background: var(--color-surface);
+    border-color: var(--color-accent);
+  }
+
+  .content {
+    margin-top: var(--space-xl);
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin: var(--space-md) 0 var(--space-md) var(--space-xl);
+  }
+
+  .content :global(li) {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-nav {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-nav a {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+  }
+</style>

@@ -205,38 +205,67 @@ Astro project (unratified.org)
     resources/index.astro          → unratified.org/resources/
 ```
 
-### Project Structure
+### Project Structure (Actual — March 2026)
 
 ```
 unratified/
 ├── .claude/
 │   └── skills/
-│       └── discriminate/SKILL.md
-├── content/
-│   ├── analysis/              ← existing deep analysis documents
-│   ├── design/                ← persona lens system spec
-│   ├── covenant/              ← ICESCR article content (MDX)
-│   ├── gap/                   ← ratification gap content (MDX)
-│   ├── observatory/           ← observatory analysis content (MDX)
-│   └── data/                  ← JSON/CSV for visualizations
+│       ├── discriminate/SKILL.md
+│       ├── cycle/SKILL.md
+│       ├── doc/SKILL.md
+│       └── hunt/SKILL.md
+├── content/                        ← Reference documents (not rendered by Astro)
+│   ├── analysis/                   ← 7 deep analysis documents
+│   └── design/                     ← Persona lens system spec
 ├── src/
+│   ├── content/                    ← Astro content collections (rendered)
+│   │   ├── covenant/               ← 10 ICESCR article MDX files
+│   │   ├── gap/                    ← 5 ratification gap MDX files
+│   │   ├── connection/             ← 4 AI connection MDX files
+│   │   └── action/                 ← 4 advocacy toolkit MDX files
+│   ├── content.config.ts           ← Collection schemas
 │   ├── components/
-│   │   ├── lens/              ← LensProvider, LensToggle (Svelte)
-│   │   ├── viz/               ← Visualization components (Svelte + D3)
-│   │   └── ui/                ← Shared UI components
+│   │   ├── lens/LensToggle.svelte  ← Svelte island: lens switching
+│   │   └── ui/Quiz.svelte          ← Svelte island: self-assessment quiz
 │   ├── layouts/
-│   │   ├── BaseLayout.astro   ← Root layout with lens system
-│   │   ├── ArticleLayout.astro← ICESCR article pages
-│   │   └── AnalysisLayout.astro← Observatory analysis pages
-│   ├── pages/                 ← Route structure (see deployment architecture)
-│   └── styles/
-│       ├── base.css           ← Typography, colors, spacing
-│       └── lens.css           ← Lens-specific layout transformations
-├── plan.md                    ← Project plan
-├── plan.md.architecture       ← This file
-├── plan.md.decisions          ← Decision log
-├── plan.md.identity           ← Organizational identity
-├── plan.md.marketing          ← Marketing and audience strategy
-├── astro.config.mjs           ← Astro configuration
+│   │   ├── BaseLayout.astro        ← Root layout with lens + nav
+│   │   ├── ArticleLayout.astro     ← ICESCR article pages
+│   │   └── SectionLayout.astro     ← Section landing pages
+│   ├── pages/
+│   │   ├── index.astro             ← Home: "What Remains Unratified"
+│   │   ├── covenant/
+│   │   │   ├── index.astro         ← Covenant landing
+│   │   │   ├── history.astro       ← UDHR → ICESCR historical context
+│   │   │   ├── quiz.astro          ← Self-assessment quiz
+│   │   │   └── articles/[...slug].astro ← Dynamic article routes
+│   │   ├── gap/
+│   │   │   ├── index.astro         ← Gap landing
+│   │   │   └── [...slug].astro     ← Dynamic gap content routes
+│   │   ├── connection/
+│   │   │   ├── index.astro         ← AI Connection landing
+│   │   │   └── [...slug].astro     ← Dynamic analysis routes
+│   │   ├── action/
+│   │   │   ├── index.astro         ← Take Action landing
+│   │   │   ├── contact.astro       ← Senator contact page
+│   │   │   └── [...slug].astro     ← Dynamic action content routes
+│   │   ├── educators/index.astro   ← Educator hub
+│   │   └── resources/index.astro   ← Further reading + sources
+│   └── (styles in public/styles/)
+├── public/
+│   ├── styles/
+│   │   ├── base.css                ← Typography, colors, spacing
+│   │   └── lens.css                ← Lens-specific layout transformations
+│   ├── favicon.svg
+│   └── favicon.ico
+├── plan.md                         ← Project plan
+├── plan.md.architecture            ← This file
+├── plan.md.decisions               ← Decision log
+├── plan.md.identity                ← Organizational identity
+├── plan.md.marketing               ← Marketing and audience strategy
+├── astro.config.mjs                ← Astro 5 + MDX + Svelte
 ├── package.json
 └── tsconfig.json
+```
+
+### Page Count: 33 static pages (as of Phase 1 completion)

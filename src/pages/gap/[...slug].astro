@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('gap');
+  return pages.map((page) => ({
+    params: { slug: page.id },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<BaseLayout title={page.data.title} description={page.data.summary}>
+  <article class="gap-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/gap">The Gap</a></li>
+        <li aria-current="page">{page.data.title}</li>
+      </ol>
+    </nav>
+
+    <header>
+      <h1>{page.data.title}</h1>
+      <p class="lede">{page.data.summary}</p>
+    </header>
+
+    <div class="content">
+      <Content />
+    </div>
+
+    <nav class="section-nav">
+      <a href="/gap">&larr; Back to The Gap</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .gap-page {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 36rem;
+  }
+
+  .content {
+    margin-top: var(--space-xl);
+  }
+
+  .content :global(ul),
+  .content :global(ol) {
+    margin: var(--space-md) 0 var(--space-md) var(--space-xl);
+  }
+
+  .content :global(li) {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-nav {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-nav a {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+const pages = await getCollection('gap');
+const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+---
+
+<SectionLayout
+  title="The Gap"
+  description="The United States signed the ICESCR in 1977. Nearly five decades later, the Senate has never voted on ratification. This section examines why — and what that gap costs."
+  section="gap"
+>
+  <div class="gap-grid">
+    {sorted.map((page) => (
+      <a href={`/gap/${page.id}`} class="gap-card">
+        <h2>{page.data.title}</h2>
+        <p>{page.data.summary}</p>
+      </a>
+    ))}
+  </div>
+
+  <section class="gap-summary">
+    <h2>The Pattern</h2>
+    <p>
+      Across 12 presidential terms and 49 years, no administration prioritized ICESCR ratification.
+      Not because the arguments against it prevailed in debate — the debate never occurred.
+      The ICESCR remains unratified because no one with political power found ratification worth the effort.
+    </p>
+    <p>
+      AI-driven economic transformation changes the calculation. When technology restructures
+      the labor market faster than any previous force, the absence of binding economic rights
+      protections shifts from philosophical debate to observable consequence.
+    </p>
+    <p>
+      <a href="/connection">Explore the AI connection &rarr;</a>
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .gap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .gap-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .gap-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .gap-card h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .gap-card p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .gap-summary {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

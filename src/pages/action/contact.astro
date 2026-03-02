@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact Your Senators">
+  <article class="contact-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/action">Take Action</a></li>
+        <li aria-current="page">Contact</li>
+      </ol>
+    </nav>
+
+    <header>
+      <h1>Contact Your Senators</h1>
+      <p class="lede">
+        The ICESCR stalled because no organized constituency demanded ratification.
+        Each constituent contact shifts the political calculation.
+      </p>
+    </header>
+
+    <section class="contact-methods">
+      <h2>Find Your Senators</h2>
+      <p>
+        Use the official Senate directory to find your senators and their contact information:
+      </p>
+      <a href="https://www.senate.gov/senators/senators-contact.htm" rel="noopener" class="external-link">
+        U.S. Senate Contact Directory &rarr;
+      </a>
+
+      <h3>U.S. Capitol Switchboard</h3>
+      <p>
+        Call <strong>(202) 224-3121</strong> and ask to speak with your senator's office.
+        Request the staffer handling foreign relations or human rights issues.
+      </p>
+
+      <h3>Senate Foreign Relations Committee</h3>
+      <p>
+        The committee that must act on the ICESCR. Contact the committee directly to request hearings:
+      </p>
+      <a href="https://www.foreign.senate.gov/" rel="noopener" class="external-link">
+        Senate Foreign Relations Committee &rarr;
+      </a>
+    </section>
+
+    <section class="what-to-say">
+      <h2>What to Say</h2>
+      <p>
+        Use our <a href="/action/template-letters">template letters</a> as a starting point,
+        or draw from the <a href="/action/talking-points">talking points</a> to craft your own message.
+      </p>
+      <p>
+        The most effective communications:
+      </p>
+      <ul>
+        <li>Identify yourself as a constituent (include your address)</li>
+        <li>Make a specific ask: "Schedule ICESCR hearings in the Foreign Relations Committee"</li>
+        <li>Connect the ICESCR to a personal experience or local condition</li>
+        <li>Keep the message brief — one page or less</li>
+      </ul>
+    </section>
+
+    <section class="impact">
+      <h2>By Method of Contact</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Impact</th>
+            <th>Time Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Physical letter</td>
+            <td>Highest — individually reviewed</td>
+            <td>15 minutes + postage</td>
+          </tr>
+          <tr>
+            <td>Phone call</td>
+            <td>High — logged by topic</td>
+            <td>5 minutes</td>
+          </tr>
+          <tr>
+            <td>Email/web form</td>
+            <td>Moderate — categorized and counted</td>
+            <td>10 minutes</td>
+          </tr>
+          <tr>
+            <td>Social media</td>
+            <td>Lower — less systematic tracking</td>
+            <td>2 minutes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <nav class="section-nav">
+      <a href="/action">&larr; Back to Take Action</a>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .contact-page {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 36rem;
+  }
+
+  .external-link {
+    display: inline-block;
+    margin: var(--space-md) 0;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: border-color 0.15s;
+  }
+
+  .external-link:hover {
+    border-color: var(--color-accent);
+  }
+
+  ul {
+    margin: var(--space-md) 0 var(--space-md) var(--space-xl);
+  }
+
+  li {
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-nav {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .section-nav a {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+  }
+</style>

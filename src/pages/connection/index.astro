@@ -1,0 +1,140 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+const pages = await getCollection('connection');
+const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+---
+
+<SectionLayout
+  title="The AI Connection"
+  description="How AI-driven economic transformation maps onto the rights the ICESCR protects — differential diagnosis, knock-on effects, and the ratification counterfactual."
+  section="connection"
+  breadcrumbLabel="AI Connection"
+>
+  <section class="tagline">
+    <blockquote>
+      One of Anthropic Claude's takes on the impact of AI on the economy — differential diagnosis, integral chain analysis, and what it means for your rights
+    </blockquote>
+    <p class="meta-note">
+      This analysis was produced through structured dialogue between a human researcher and Claude (Anthropic's AI). The meta-layer — an AI analyzing AI's own economic impact — forms part of the site's intellectual honesty.
+    </p>
+  </section>
+
+  <div class="analysis-grid">
+    {sorted.map((page) => (
+      <a href={`/connection/${page.id}`} class="analysis-card">
+        <span class="card-order">Part {page.data.order}</span>
+        <h2>{page.data.title}</h2>
+        <p>{page.data.summary}</p>
+        {page.data.relatedArticles.length > 0 && (
+          <div class="related-articles">
+            {page.data.relatedArticles.map((num: number) => (
+              <span class="article-tag">Art. {num}</span>
+            ))}
+          </div>
+        )}
+      </a>
+    ))}
+  </div>
+
+  <section class="reading-guide">
+    <h2>Reading Guide</h2>
+    <p>
+      The analysis builds sequentially: the differential diagnosis establishes the mechanism,
+      higher-order effects trace its consequences, the ratification counterfactual explores
+      what changes with ICESCR protection, and the Dignity Quotient provides a measurement
+      framework connecting psychology to human rights.
+    </p>
+    <p>
+      Each section connects to specific ICESCR articles — follow the article tags to see
+      how the analysis maps onto <a href="/covenant">the covenant</a>.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .tagline {
+    margin-bottom: var(--space-2xl);
+    max-width: var(--max-width-content);
+  }
+
+  .tagline blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    border-left-color: var(--color-accent);
+  }
+
+  .meta-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .analysis-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .analysis-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .card-order {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+  }
+
+  .analysis-card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .analysis-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .related-articles {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .article-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 2px var(--space-xs);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    color: var(--color-text-muted);
+  }
+
+  .reading-guide {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+</style>

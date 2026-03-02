@@ -1,0 +1,152 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('covenant');
+const sortedArticles = articles.sort((a, b) => a.data.order - b.data.order);
+---
+
+<SectionLayout
+  title="The Covenant"
+  description="The International Covenant on Economic, Social and Cultural Rights protects fundamental economic rights. 173 nations ratified it. The United States signed — and stopped there."
+  section="covenant"
+>
+  <section class="history-link">
+    <a href="/covenant/history" class="feature-card">
+      <h2>Historical Context</h2>
+      <p>From the Universal Declaration to the twin covenants — how the world agreed to protect economic rights, and why the United States walked a different path.</p>
+    </a>
+  </section>
+
+  <section class="articles-grid">
+    <h2>The Articles</h2>
+    <p>Each article protects a specific economic, social, or cultural right. Select any article to explore what it protects, what it means in practice, and how AI-driven economic transformation makes it more relevant than ever.</p>
+
+    <div class="grid">
+      {sortedArticles.map((article) => (
+        <a href={`/covenant/articles/${article.id}`} class="article-card">
+          <span class="card-number">Article {article.data.articleNumber}</span>
+          <h3>{article.data.rightName}</h3>
+          <p>{article.data.summary}</p>
+          {article.data.pivotal && <span class="pivotal-badge">Co-Pivotal</span>}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="quiz-teaser">
+    <h2>Do You Experience These Rights?</h2>
+    <p>
+      The ICESCR protects rights that affect daily life — employment, housing, healthcare, education.
+      Take a brief self-assessment to explore whether these protections show up in your own experience.
+    </p>
+    <a href="/covenant/quiz" class="quiz-link">Take the Self-Assessment &rarr;</a>
+  </section>
+</SectionLayout>
+
+<style>
+  .history-link {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .feature-card {
+    display: block;
+    padding: var(--space-xl);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+    max-width: var(--max-width-content);
+  }
+
+  .feature-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .feature-card h2 {
+    margin-top: 0;
+    font-size: 1.309rem;
+  }
+
+  .feature-card p {
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .articles-grid {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .article-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .card-number {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+  }
+
+  .article-card h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+
+  .article-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .pivotal-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 2px var(--space-sm);
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+
+  .quiz-teaser {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .quiz-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+</style>

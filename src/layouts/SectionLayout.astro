@@ -1,0 +1,76 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  section: string;
+  breadcrumbLabel?: string;
+}
+
+const {
+  title,
+  description,
+  section,
+  breadcrumbLabel,
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="section-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">{breadcrumbLabel ?? title}</li>
+      </ol>
+    </nav>
+
+    <header class="section-header">
+      <h1>{title}</h1>
+      {description && <p class="section-description">{description}</p>}
+    </header>
+
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  .section-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 42rem;
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Quiz from '../../components/ui/Quiz.svelte';
+---
+
+<BaseLayout title="Self-Assessment: Do You Experience These Rights?">
+  <article class="quiz-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/covenant">The Covenant</a></li>
+        <li aria-current="page">Self-Assessment</li>
+      </ol>
+    </nav>
+
+    <header>
+      <h1>Do You Experience These Rights?</h1>
+      <p class="lede">
+        The ICESCR protects economic, social, and cultural rights that affect daily life.
+        This brief self-assessment explores whether these protections show up in your own experience.
+      </p>
+    </header>
+
+    <Quiz client:visible />
+
+  </article>
+</BaseLayout>
+
+<style>
+  .quiz-page {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 36rem;
+    margin-bottom: var(--space-xl);
+  }
+</style>

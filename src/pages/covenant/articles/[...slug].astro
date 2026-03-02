@@ -1,0 +1,44 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('covenant');
+  const sorted = articles.sort((a, b) => a.data.order - b.data.order);
+
+  return sorted.map((article, index) => {
+    const prev = index > 0 ? sorted[index - 1] : undefined;
+    const next = index < sorted.length - 1 ? sorted[index + 1] : undefined;
+
+    return {
+      params: { slug: article.id },
+      props: {
+        article,
+        prevArticle: prev
+          ? { number: prev.data.articleNumber, slug: prev.id, rightName: prev.data.rightName }
+          : undefined,
+        nextArticle: next
+          ? { number: next.data.articleNumber, slug: next.id, rightName: next.data.rightName }
+          : undefined,
+      },
+    };
+  });
+}
+
+const { article, prevArticle, nextArticle } = Astro.props;
+const { Content } = await render(article);
+---
+
+<ArticleLayout
+  title={article.data.title}
+  articleNumber={article.data.articleNumber}
+  rightName={article.data.rightName}
+  summary={article.data.summary}
+  aiConnection={article.data.aiConnection}
+  legalText={article.data.legalText}
+  pivotal={article.data.pivotal}
+  prevArticle={prevArticle}
+  nextArticle={nextArticle}
+>
+  <Content />
+</ArticleLayout>

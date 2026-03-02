@@ -1,4 +1,6 @@
 ---
+import LensToggle from '../components/lens/LensToggle.svelte';
+
 interface Props {
   title: string;
   description?: string;
@@ -35,10 +37,12 @@ const activeLens = lensFromUrl ?? defaultLens;
         <ul class="nav-links">
           <li><a href="/covenant">The Covenant</a></li>
           <li><a href="/gap">The Gap</a></li>
+          <li><a href="/connection">AI Connection</a></li>
           <li><a href="/educators">Educators</a></li>
           <li><a href="/action">Take Action</a></li>
           <li><a href="/resources">Resources</a></li>
         </ul>
+        <LensToggle client:load />
       </nav>
     </header>
 
