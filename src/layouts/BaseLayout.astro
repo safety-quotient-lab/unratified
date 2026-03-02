@@ -4,14 +4,14 @@ import LensToggle from '../components/lens/LensToggle.svelte';
 interface Props {
   title: string;
   description?: string;
-  defaultLens?: 'developer' | 'educator' | 'researcher';
+  defaultLens?: 'voter' | 'politician' | 'developer' | 'educator' | 'researcher';
   ogType?: 'website' | 'article';
 }
 
 const {
   title,
   description = 'Advocating for U.S. ratification of the ICESCR through the lens of AI\'s economic impact',
-  defaultLens = 'developer',
+  defaultLens = 'voter',
   ogType = 'website',
 } = Astro.props;
 

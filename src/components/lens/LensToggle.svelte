@@ -1,5 +1,5 @@
 <script lang="ts">
-  let activeLens = $state('developer');
+  let activeLens = $state('voter');
 
   function init() {
     // Priority: URL param > sessionStorage > localStorage > default
@@ -20,7 +20,7 @@
   }
 
   function isValidLens(value: string): boolean {
-    return ['developer', 'educator', 'researcher'].includes(value);
+    return ['voter', 'politician', 'developer', 'educator', 'researcher'].includes(value);
   }
 
   function setLens(lens: string) {
@@ -30,7 +30,7 @@
     applyLens(lens);
   }
 
-  const lenses = ['developer', 'educator', 'researcher'];
+  const lenses = ['voter', 'politician', 'developer', 'educator', 'researcher'];
 
   function applyLens(lens: string) {
     document.body.setAttribute('data-lens', lens);
@@ -66,33 +66,17 @@
 </script>
 
 <div class="lens-toggle" role="radiogroup" aria-label="Content perspective">
-  <button
-    onclick={() => setLens('developer')}
-    onkeydown={handleKeydown}
-    role="radio"
-    aria-checked={activeLens === 'developer'}
-    tabindex={activeLens === 'developer' ? 0 : -1}
-  >
-    Developer
-  </button>
-  <button
-    onclick={() => setLens('educator')}
-    onkeydown={handleKeydown}
-    role="radio"
-    aria-checked={activeLens === 'educator'}
-    tabindex={activeLens === 'educator' ? 0 : -1}
-  >
-    Educator
-  </button>
-  <button
-    onclick={() => setLens('researcher')}
-    onkeydown={handleKeydown}
-    role="radio"
-    aria-checked={activeLens === 'researcher'}
-    tabindex={activeLens === 'researcher' ? 0 : -1}
-  >
-    Researcher
-  </button>
+  {#each lenses as lens}
+    <button
+      onclick={() => setLens(lens)}
+      onkeydown={handleKeydown}
+      role="radio"
+      aria-checked={activeLens === lens}
+      tabindex={activeLens === lens ? 0 : -1}
+    >
+      {lens.charAt(0).toUpperCase() + lens.slice(1)}
+    </button>
+  {/each}
 </div>
 <div id="lens-announcer" class="sr-only" aria-live="polite"></div>
 

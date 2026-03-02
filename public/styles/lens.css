@@ -1,8 +1,26 @@
 /* Lens-specific layout transformations */
 /* Driven by data-lens attribute on <body> */
-/* Progressive enhancement: without JS, developer lens (default) applies */
+/* Progressive enhancement: without JS, voter lens (default) applies */
+
+/* Voter lens — personal impact, action-oriented (default) */
+[data-lens="voter"] .politician-only,
+[data-lens="voter"] .developer-only,
+[data-lens="voter"] .educator-only,
+[data-lens="voter"] .researcher-only {
+  display: none;
+}
+
+/* Politician lens — policy framing, legislative pathways */
+[data-lens="politician"] .voter-only,
+[data-lens="politician"] .developer-only,
+[data-lens="politician"] .educator-only,
+[data-lens="politician"] .researcher-only {
+  display: none;
+}
 
 /* Developer lens — dense, data-forward */
+[data-lens="developer"] .voter-only,
+[data-lens="developer"] .politician-only,
 [data-lens="developer"] .educator-only,
 [data-lens="developer"] .researcher-only {
   display: none;
@@ -14,6 +32,8 @@
 }
 
 /* Educator lens — learning-objective framing */
+[data-lens="educator"] .voter-only,
+[data-lens="educator"] .politician-only,
 [data-lens="educator"] .developer-only,
 [data-lens="educator"] .researcher-only {
   display: none;
@@ -48,6 +68,8 @@
 }
 
 /* Researcher lens — citations, structured abstracts */
+[data-lens="researcher"] .voter-only,
+[data-lens="researcher"] .politician-only,
 [data-lens="researcher"] .developer-only,
 [data-lens="researcher"] .educator-only {
   display: none;
@@ -90,7 +112,7 @@
 [data-lens="educator"] .content-section[data-section="objectives"] { order: -1; }
 [data-lens="researcher"] .content-section[data-section="abstract"] { order: -1; }
 
-/* Lens toggle — visible in nav after first selection */
+/* Lens toggle — visible in nav */
 .lens-toggle {
   display: inline-flex;
   gap: 2px;
