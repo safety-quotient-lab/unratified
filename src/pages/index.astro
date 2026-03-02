@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="What Remains Unratified">
+  <section class="hero">
+    <h1>What Remains Unratified</h1>
+    <p class="hero-lede">
+      The United States signed a promise to protect your economic rights in 1977.
+      It never kept that promise.
+    </p>
+    <p>
+      The International Covenant on Economic, Social and Cultural Rights protects
+      the right to work, to health, to education, and to benefit from scientific
+      progress. 173 nations ratified it. The United States signed it &mdash;
+      and stopped there.
+    </p>
+  </section>
+
+  <section class="why-now">
+    <h2>Why This Matters Now</h2>
+    <p>
+      AI-driven economic transformation creates winners and losers faster than any
+      previous technology. The resulting bifurcation &mdash; between those who
+      benefit from AI and those who do not &mdash; maps directly onto the rights
+      the ICESCR protects.
+    </p>
+    <p>
+      Without a binding legal framework for economic, social, and cultural rights,
+      the U.S. has no structural mechanism to ensure AI's benefits reach everyone.
+    </p>
+  </section>
+
+  <section class="paths">
+    <h2>Explore</h2>
+    <div class="path-grid">
+      <a href="/covenant" class="path-card">
+        <h3>The Covenant</h3>
+        <p>Understand what the ICESCR protects &mdash; article by article, in plain language.</p>
+      </a>
+      <a href="/gap" class="path-card">
+        <h3>The Gap</h3>
+        <p>Why the United States signed but never ratified &mdash; the arguments, the history, the cost.</p>
+      </a>
+      <a href="/action" class="path-card">
+        <h3>Take Action</h3>
+        <p>Contact your senators, use our advocacy toolkit, bring this to your classroom.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="framing">
+    <blockquote>
+      Human Rights, Nothing More, Nothing Less
+    </blockquote>
+    <p>
+      Every element of this analysis represents implementation of rights 173 nations
+      already committed to. Nothing here asks for anything beyond what the United
+      States signed in 1977.
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .hero-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 36rem;
+  }
+
+  .why-now {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .path-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .path-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .path-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+  }
+
+  .path-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+</style>

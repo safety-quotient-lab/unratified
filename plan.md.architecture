@@ -131,20 +131,112 @@ Interactive quiz          │ /covenant/quiz   │ Question bank JSON
 
 ---
 
-## Technology Stack (TBD — Phase 0)
+## Technology Stack (DECIDED — D012)
 
-Candidates under consideration:
-- **A**: Next.js + MDX + D3.js — rich interactivity, good SEO, complex build
-- **B**: Astro + MDX + Observable Plot — fast static site, good DX, simpler
-- **C**: SvelteKit + Markdown + Layercake — excellent performance, reactive viz
-- **D**: 11ty + Markdown + vanilla JS — maximum simplicity, accessibility-first
+**Astro + MDX + Svelte Islands + D3/Layercake**
 
-Decision criteria:
-1. Accessibility-first (eliminates heavy JS frameworks without SSR)
-2. Content-driven (markdown/MDX support essential)
-3. Visualization support (D3, Observable, or equivalent)
-4. SEO performance (static generation preferred)
-5. Maintainability (small team, content updates frequent)
-6. Progressive enhancement (core content without JS)
+Selected via full differential diagnosis through Orders 0–4. See plan.md.decisions D012.
 
-Decision pending — will document in plan.md.decisions when made.
+```
+LAYER              │ TECHNOLOGY          │ PURPOSE
+───────────────────┼─────────────────────┼──────────────────────────────
+Static generation  │ Astro 4+            │ Content-first SSG; zero JS default
+Content authoring  │ MDX                 │ Markdown + component embedding
+Interactive islands│ Svelte 5            │ Compiled components, no runtime
+Visualizations     │ D3.js + Layercake   │ Full viz power + Svelte-native charts
+Styling            │ TBD (CSS/Tailwind)  │ CSS-driven lens layout transformation
+Deployment         │ Cloudflare Pages    │ CDN-level domain routing; edge functions
+                   │ or Vercel/Netlify   │ if needed for senator lookup API
+```
+
+### Content Pipeline
+
+```
+content/*.mdx
+  → Astro content collections (typed frontmatter)
+    → lens-aware Astro layouts
+      → static HTML + Svelte islands (client:visible)
+        → CDN deployment
+```
+
+### Lens System Architecture
+
+```
+BaseLayout.astro
+  ├── <LensProvider client:load>        Svelte island
+  │   ├── reads: URL param ?lens=       highest priority
+  │   ├── reads: sessionStorage         per-page override
+  │   ├── reads: localStorage           session default
+  │   ├── reads: route path             entry-point detection
+  │   ├── fallback: developer           most complete content
+  │   └── sets: data-lens on <body>
+  │
+  ├── <body data-lens="developer|educator|researcher">
+  │   │
+  │   ├── CSS layout rules:
+  │   │   [data-lens="developer"]  → dense, data-forward, monospace tables
+  │   │   [data-lens="educator"]   → learning-objective framing, downloads prominent
+  │   │   [data-lens="researcher"] → structured abstracts, citations, BibTeX
+  │   │
+  │   ├── Section reordering via CSS order property
+  │   ├── Conditional visibility via display: none/block
+  │   └── View Transitions API for smooth switch animation
+  │
+  └── Interactive islands (Svelte, client:visible)
+      ├── Receive lens as prop from LensProvider store
+      └── Render lens-appropriate visualization variant
+```
+
+### Deployment Architecture
+
+NOTE: observatory.unratified.org lives in a separate project/agent,
+preparing for a soft launch targeting Hacker News (news.ycombinator.com).
+This project handles unratified.org only. Cross-linking uses standard hyperlinks.
+
+```
+Astro project (unratified.org)
+  src/pages/
+    index.astro                    → unratified.org/
+    covenant/index.astro           → unratified.org/covenant/
+    covenant/articles/[id].astro   → unratified.org/covenant/articles/6
+    gap/index.astro                → unratified.org/gap/
+    educators/index.astro          → unratified.org/educators/
+    action/index.astro             → unratified.org/action/
+    resources/index.astro          → unratified.org/resources/
+```
+
+### Project Structure
+
+```
+unratified/
+├── .claude/
+│   └── skills/
+│       └── discriminate/SKILL.md
+├── content/
+│   ├── analysis/              ← existing deep analysis documents
+│   ├── design/                ← persona lens system spec
+│   ├── covenant/              ← ICESCR article content (MDX)
+│   ├── gap/                   ← ratification gap content (MDX)
+│   ├── observatory/           ← observatory analysis content (MDX)
+│   └── data/                  ← JSON/CSV for visualizations
+├── src/
+│   ├── components/
+│   │   ├── lens/              ← LensProvider, LensToggle (Svelte)
+│   │   ├── viz/               ← Visualization components (Svelte + D3)
+│   │   └── ui/                ← Shared UI components
+│   ├── layouts/
+│   │   ├── BaseLayout.astro   ← Root layout with lens system
+│   │   ├── ArticleLayout.astro← ICESCR article pages
+│   │   └── AnalysisLayout.astro← Observatory analysis pages
+│   ├── pages/                 ← Route structure (see deployment architecture)
+│   └── styles/
+│       ├── base.css           ← Typography, colors, spacing
+│       └── lens.css           ← Lens-specific layout transformations
+├── plan.md                    ← Project plan
+├── plan.md.architecture       ← This file
+├── plan.md.decisions          ← Decision log
+├── plan.md.identity           ← Organizational identity
+├── plan.md.marketing          ← Marketing and audience strategy
+├── astro.config.mjs           ← Astro configuration
+├── package.json
+└── tsconfig.json

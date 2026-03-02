@@ -1,0 +1,125 @@
+/* Lens-specific layout transformations */
+/* Driven by data-lens attribute on <body> */
+/* Progressive enhancement: without JS, developer lens (default) applies */
+
+/* Developer lens — dense, data-forward */
+[data-lens="developer"] .educator-only,
+[data-lens="developer"] .researcher-only {
+  display: none;
+}
+
+[data-lens="developer"] .data-table {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* Educator lens — learning-objective framing */
+[data-lens="educator"] .developer-only,
+[data-lens="educator"] .researcher-only {
+  display: none;
+}
+
+[data-lens="educator"] .learning-objectives {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+[data-lens="educator"] .discussion-prompt {
+  display: block;
+  background: var(--color-surface-alt);
+  border-left: 3px solid var(--color-accent-light);
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+[data-lens="educator"] .download-callout {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent-light);
+  border-radius: 4px;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
+}
+
+/* Researcher lens — citations, structured abstracts */
+[data-lens="researcher"] .developer-only,
+[data-lens="researcher"] .educator-only {
+  display: none;
+}
+
+[data-lens="researcher"] .structured-abstract {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+[data-lens="researcher"] .citation-apparatus {
+  display: block;
+}
+
+[data-lens="researcher"] .bibtex-export {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Default hidden elements — shown only in their respective lens */
+.learning-objectives,
+.discussion-prompt,
+.download-callout,
+.structured-abstract,
+.citation-apparatus {
+  display: none;
+}
+
+/* Section reordering per lens */
+[data-lens="educator"] .content-section[data-section="objectives"] { order: -1; }
+[data-lens="researcher"] .content-section[data-section="abstract"] { order: -1; }
+
+/* Lens toggle — visible in nav after first selection */
+.lens-toggle {
+  display: inline-flex;
+  gap: 2px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lens-toggle button {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  padding: var(--space-xs) var(--space-sm);
+  border: none;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.lens-toggle button:hover {
+  background: var(--color-surface-alt);
+}
+
+.lens-toggle button[aria-pressed="true"] {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.lens-toggle button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: -2px;
+}

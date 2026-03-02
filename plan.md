@@ -163,9 +163,10 @@ See plan.md.marketing for complete user journeys, UX constraints, and launch seq
 - [x] Establish advocacy framing: "Human Rights, Nothing More, Nothing Less"
 - [x] PSQ evaluation of full UDHR — Dignity Quotient framework established
 - [x] Deploy repository to GitHub (safety-quotient-lab/unratified)
-- [ ] Define organizational identity for unratified.org ← CURRENT
-- [ ] Select technology stack
-- [ ] Set up project scaffolding
+- [x] Define organizational identity for unratified.org
+- [x] Select technology stack — Astro + MDX + Svelte Islands + D3/Layercake (D012)
+- [x] Create /discriminate skill encoding the discriminator methodology
+- [ ] Set up project scaffolding ← CURRENT
 
 ### Future Paths (Dignity Quotient)
 These emerged from the PSQ-UDHR evaluation and require dedicated context:

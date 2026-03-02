@@ -250,3 +250,35 @@ The U.S. Dignity Quotient — with ICCPR ratified but ICESCR unratified — carr
 - The prohibition-entitlement finding informs how ICESCR article pages frame their content
 - The procedural-declarative finding reinforces the "tools, not solutions" framing — tools (procedures) produce more psychoemotional safety than declarations
 - Safety Quotient Lab's organizational identity connects coherently to the unratified project: the lab measures dignity; the project demonstrates the gap
+
+---
+
+## D012: Technology Stack — Astro + MDX + Svelte Islands + D3/Layercake
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: Four candidates evaluated through full differential diagnosis with consensus-or-parsimony discriminator through Orders 0–4:
+
+| Candidate | Order 0 | Order 1 | Order 2 | Order 3 | Trajectory |
+|-----------|---------|---------|---------|---------|------------|
+| TS2 Astro+Svelte | 20/25 | 23/25 | 19.6/25 | 18.3/25 | STABLE |
+| TS1 Next.js+React | 19/25 | 17/25 | — | — | DECLINING |
+| TS3 SvelteKit | 17/25 | — | — | — | ELIMINATED |
+| TS4 11ty | 15/25 | — | — | — | ELIMINATED |
+
+**Decision**: Astro + MDX + Svelte Islands + D3/Layercake for visualizations. Single Astro project with CDN-level domain routing for dual-domain architecture.
+
+**Reasoning**:
+- **Parsimony wins**: Astro treats content as primary artifact and interactivity as islands within content — matching a content-first advocacy site. Next.js treats interactivity as primary and content as data, creating impedance mismatch.
+- **Progressive enhancement for free**: Astro ships zero JS by default; all content renders as static HTML; islands hydrate only interactive components
+- **Lens system via CSS + islands**: data-lens attribute on body drives CSS layout transformation (<100ms); Svelte islands receive lens as prop for viz variants
+- **Viz ecosystem unlocked**: Astro's framework-agnostic islands avoid the React-D3 DOM control tension; D3 and Layercake both work natively
+- **Accessibility strongest**: HTML-first output provides the best baseline for WCAG 2.1 AA; semantic structure exists without JS hydration
+- **Ecosystem hedged**: HTML output survives framework death; content in MDX files remains portable
+
+**What follows**:
+- Initialize Astro project with MDX and Svelte integrations
+- Implement lens system as CSS-driven layout + Svelte island LensProvider
+- Content collections for analysis documents (typed frontmatter)
+- Single codebase, single build, domain routing at CDN level
+- `/discriminate` skill created to encode the methodology used for this and all prior decisions
