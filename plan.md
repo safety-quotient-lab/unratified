@@ -248,7 +248,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] D3 data visualizations — World Map (D3-geo) + Timeline (CSS+Svelte) per D013
 - [x] Accessibility pass — global focus-visible, ARIA radiogroup fix, prefers-reduced-motion, keyboard nav, text alternatives
 - [x] Typography — Fira Code monospace matching kashifshah.net aesthetic (D016)
-- [ ] Full kashifshah.net style adaptation — colors, layout, spacing (in progress)
+- [x] Full kashifshah.net style adaptation — colors, layout, spacing (f611985)
 - [ ] Full accessibility audit (WCAG 2.1 AA minimum) — manual screen reader testing pending
 
 **Phase 3: Content Integration and Polish** (MOSTLY COMPLETE)
@@ -262,7 +262,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Share-after-action prompts — SharePrompt component on all /action pages (amplification loop)
 - [x] E-prime audit pass — 7 violations corrected, license consistency fixed
 - [ ] Downloadable educator resources (PDF, DOCX)
-- [ ] Full kashifshah.net style adaptation — colors, layout, spacing beyond fonts
+- [x] Full kashifshah.net style adaptation — colors, layout, spacing (f611985)
 - [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
 
 **Phase 4: Launch and Outreach**
@@ -271,7 +271,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] .github/CONTRIBUTING.md — contribution guidelines
 - [x] .github/ISSUE_TEMPLATE/ — factual correction, accessibility, feature request
 - [x] .github/workflows/build-check.yml — CI: type-check + build on push/PR
-- [ ] Deploy to production (requires: wrangler login && wrangler pages deploy dist)
+- [x] Deploy to production — live at https://unratified.org (Cloudflare Pages)
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach
