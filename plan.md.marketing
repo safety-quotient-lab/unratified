@@ -31,6 +31,10 @@ Three core audiences, derived from the higher-order differential analysis findin
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
+### Future Audience: Commercial Educational Publishers
+
+A fourth audience exists as a future possibility, distinct from the three core audiences above. Commercial educational publishers — textbook companies, EdTech platforms, curriculum distributors — may want to license and package this content for institutional distribution. This audience requires a separate licensing conversation before activation: the current CC BY-NC-SA 4.0 content license blocks commercial use by design. See Audience 4 section below for full persona.
+
 ### Why NOT a general public audience
 
 The analysis shows that the general public arrives through one of these three channels, not independently. Attempting to serve "everyone" dilutes the content for the audiences who actually engage with it. General public reach comes as a second-order effect: teachers bring it to students, HN amplifies it to the broader tech community, academic citations bring it to policy circles.
@@ -306,6 +310,107 @@ API access to underlying data           │ Enables programmatic reuse   │ LOW
 
 ---
 
+---
+
+## Audience 4 (Future): Commercial Educational Publishers
+
+**Status**: Not yet activated. Requires license revision or explicit commercial exception before outreach. Document here to preserve the mental model and surface the constraint early.
+
+### Profile
+- Textbook publishers (Pearson, McGraw-Hill, Bedford/St. Martin's, Norton)
+- EdTech platforms (Coursera, edX institutional, Khan Academy partnerships)
+- Curriculum development companies (TCI, Facing History and Ourselves, iCivics at scale)
+- State or district curriculum adoption offices procuring materials at volume
+- Not individuals using content for personal or classroom use — that's Audience 2 (Teachers)
+
+**Distinguishing feature**: These entities package, distribute, and revenue-derive from educational content. A teacher downloading a PDF for Thursday's class falls under Audience 2. A company bundling that PDF into a $75 course catalog or licensed curriculum product falls under Audience 4.
+
+### What They Evaluate
+
+| Factor | Specific Concern |
+|--------|-----------------|
+| License terms | Can they use, adapt, and sell without direct negotiation? |
+| Curriculum standards | CCSS, C3 Framework, AP curriculum alignment documented? |
+| Quality signal | Peer review status, institutional affiliation, author credentials |
+| Update cadence | Will content stay current or become stale in a 3-year adoption cycle? |
+| Accessibility compliance | WCAG, ADA, Section 508 for their distribution channels |
+| Exclusivity | Can they license exclusively or does CC nature prevent that? |
+
+### License Conflict — The Core Constraint
+
+The current CC BY-NC-SA 4.0 content license explicitly prohibits commercial use without permission. This creates a structural barrier:
+
+```
+CC BY-NC-SA 4.0
+│
+├── BY: Attribution required — compatible with commercial needs
+├── NC: NonCommercial — BLOCKS commercial publisher use
+└── SA: ShareAlike — would require derivative works carry same license
+    (which commercial publishers cannot offer to their customers)
+```
+
+**Three paths to activation**:
+
+A: **Commercial exception license** — retain CC BY-NC-SA as default; negotiate individual commercial licenses via contact form. Standard practice for CC-licensed academic works.
+
+B: **License upgrade to CC BY-SA 4.0** — remove NC clause; allow commercial use with ShareAlike. Loses NC protection but unlocks this audience. Requires a decision in plan.md.decisions.
+
+C: **Dual licensing** — content available under CC BY-NC-SA 4.0 publicly and under a commercial license by agreement. Most flexible; highest maintenance overhead.
+
+Path A (commercial exception) requires the least structural change and preserves the open access model. Revisit when audience activation becomes relevant.
+
+### User Journey (Anticipated)
+
+```
+STEP │ ACTION                          │ LOCATION                │ EMOTIONAL STATE
+─────┼─────────────────────────────────┼─────────────────────────┼──────────────────
+  1  │ Discover via teacher referral,  │ Conference, email,      │ Evaluating:
+     │ award recognition, or search    │ colleague               │ "Worth licensing?"
+     │                                 │                         │
+  2  │ Evaluate license terms          │ LICENSE file, FAQ       │ Calculating:
+     │ Encounter NC clause             │                         │ "NC blocks us"
+     │                                 │                         │
+  3  │ Contact for commercial license  │ Contact page / email    │ Negotiating:
+     │ (if path A activated)           │                         │ "What are terms?"
+     │                                 │                         │
+  4  │ Evaluate content quality        │ Full site review,       │ Due diligence:
+     │ against their catalog standards │ sample lesson plans     │ "Does this fit?"
+     │                                 │                         │
+  5  │ Negotiate licensing terms       │ Offline                 │ Commercial
+     │                                 │                         │
+  6  │ Package and distribute          │ Their platform          │ Revenue
+     │ with attribution per terms      │                         │
+```
+
+### UX Constraints — When Activated
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+License terms prominently accessible    │ First thing they check       │ HARD
+Contact/licensing inquiry path visible  │ NC exception requires contact│ HARD
+Standards alignment documented per page│ Procurement requires this    │ HARD
+Version/date metadata on all materials  │ Adoption cycle dependency    │ HIGH
+Clear content provenance                │ Editorial policy requirement │ HIGH
+Accessibility conformance statement     │ Institutional procurement req│ HIGH
+Attribution requirements clearly stated│ Licensing compliance         │ HIGH
+```
+
+### Relationship to Other Audiences
+
+```
+AUDIENCE 2 (Teachers)                    AUDIENCE 4 (Commercial Publishers)
+─────────────────────────────────────    ──────────────────────────────────────
+Individual classroom use                 Institutional packaging + distribution
+Free download                            Licensed (revenue model)
+Self-directed adoption                   Procurement cycle (months-years)
+CC BY-NC-SA applies                      CC BY-NC-SA BLOCKS — needs exception
+Direct UX: download and use             Indirect UX: they adapt and deliver
+Impact: one classroom                    Impact: potentially thousands of classrooms
+```
+
+---
+
 ## Shared UX Constraints (All Audiences)
 
 ```
@@ -328,8 +433,10 @@ Consistent design language across       │ Coherent brand               │ HIG
   observatory and main site             │                              │
 Clear cross-links between domains       │ Audiences discover the other │ HIGH
                                         │ site naturally               │
-Content license: Creative Commons       │ Enables sharing, especially  │ HIGH
-  (CC BY or CC BY-SA)                   │ by educators                 │
+Content license: CC BY-NC-SA 4.0        │ Enables sharing by educators │ HIGH
+  (NC clause blocks commercial use;     │ and academics; NC clause     │
+  see Audience 4 for implications)      │ requires exception for       │
+                                        │ commercial publishers         │
 ```
 
 ---

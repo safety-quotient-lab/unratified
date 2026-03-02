@@ -40,7 +40,7 @@ The dominant enforcement mechanism across all paths: **State AG litigation** (sc
 
 ---
 
-## Core Audiences (Three)
+## Core Audiences (Three + One Future)
 
 Derived from the analysis itself — these groups map to the structural roles the model identifies:
 
@@ -58,6 +58,12 @@ Derived from the analysis itself — these groups map to the structural roles th
    - Economics, international law, STS, AI impact researchers
    - They validate and extend the methodology (credibility engine)
    - Entry: citation/conference → methodology → evaluate → cite/extend
+
+4. **Commercial Educational Publishers** *(future — not yet activated)*
+   - Textbook publishers, EdTech platforms, curriculum distributors
+   - **Blocked by CC BY-NC-SA 4.0 NC clause** — requires commercial exception or license revision
+   - Entry: teacher referral → evaluate license → contact for exception → package and distribute
+   - See plan.md.marketing Audience 4 for full persona, license conflict analysis, and three activation paths
 
 See plan.md.marketing for complete user journeys, UX constraints, and launch sequencing.
 
