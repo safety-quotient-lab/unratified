@@ -250,9 +250,12 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Full accessibility audit (WCAG 2.1 AA minimum) — manual screen reader testing pending
 
 **Phase 3: Content Integration and Polish** (MOSTLY COMPLETE)
-- [x] Integrate all content into built pages — 35 pages building
+- [x] Integrate all content into built pages — 36 pages building
 - [x] Cross-link between sections — verified, all internal links valid
+- [x] Observatory cross-links — footer ecosystem link + contextual ICESCR→UDHR deep-links
+- [x] Braver Angels depolarization callouts — /action hub, contact, talking-points, educator-toolkit (D015)
 - [x] SEO and meta content — Open Graph, Twitter Card, JSON-LD structured data, canonical URLs
+- [x] Production readiness — 404 page, sitemap, robots.txt, .node-version
 - [ ] Downloadable educator resources (PDF, DOCX)
 - [ ] Performance optimization (font loading, image optimization)
 - [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
