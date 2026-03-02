@@ -174,12 +174,47 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Advocacy messaging restructure — apply prohibition-entitlement asymmetry finding and procedural-declarative finding to rewrite all ICESCR article framing across site
 - [ ] Safety Quotient Lab organizational identity — how SQ Lab positions itself across all projects (unratified, PSQ, PJE, future); brand architecture; mission/vision alignment with dignity-as-axiom
 
-**Phase 1: Core Content Development**
-- [ ] Write Section 2 (The Covenant) content
-- [ ] Write Section 3 (The Gap) content
-- [ ] Write Section 4 (The AI Connection) content
-- [ ] Develop data visualizations for Section 5
-- [ ] Create advocacy toolkit for Section 6
+**Phase 1: Core Content Development** ← ENTERING
+
+Priority order based on dependency analysis:
+
+**1A: The Covenant (Section 2)** — foundational content all other sections reference
+- [ ] Write ICESCR historical context page (UDHR → twin covenants → adoption → entry into force)
+- [ ] Write Article 6 (Right to work) — plain language + "what this means" + AI connection
+- [ ] Write Article 7 (Just work conditions) — plain language + AI connection
+- [ ] Write Article 9 (Social security) — plain language + AI connection
+- [ ] Write Article 11 (Adequate standard of living) — plain language + AI connection
+- [ ] Write Article 12 (Right to health) — plain language + AI connection
+- [ ] Write Article 13 (Right to education) — CO-PIVOTAL — deep treatment
+- [ ] Write Article 15 (Right to science) — CO-PIVOTAL — deep treatment + Dignity Quotient
+- [ ] Write remaining articles (1, 10, 14) — lighter treatment
+- [ ] Design self-assessment quiz ("Do you experience these rights?")
+
+**1B: The Gap (Section 3)** — completes "understand the problem" layer
+- [ ] Research and write administration-by-administration ratification timeline
+- [ ] Write arguments against ratification (fair witness — present faithfully)
+- [ ] Write counterarguments with evidence
+- [ ] Write "not really rights" intellectual history
+- [ ] Write international comparison: how other nations handle ESCR
+
+**1C: The AI Connection (Section 4)** — adapt existing analysis
+- [ ] Adapt differential-diagnosis.md into website MDX pages
+- [ ] Adapt higher-order-effects.md (Four Scarcities, Article 13 pivot)
+- [ ] Adapt ratification-counterfactual.md (tools not solutions)
+- [ ] Adapt udhr-psq-evaluation.md (Dignity Quotient)
+- [ ] Create per-article AI connection summaries linking to covenant pages
+
+**1D: Evidence and Data (Section 5)**
+- [ ] Adapt economic-landscape.md for web
+- [ ] Design interactive visualization components (Svelte + D3)
+- [ ] Create downloadable research summary
+
+**1E: Advocacy Toolkit (Section 6)**
+- [ ] Write treaty ratification process explainer
+- [ ] Build senator contact/lookup tool
+- [ ] Write template advocacy letters
+- [ ] Create talking points per ICESCR article
+- [ ] Design educator toolkit (lesson plans, discussion guides)
 
 **Phase 2: Design and Build**
 - [ ] Design system (typography, color, layout)
