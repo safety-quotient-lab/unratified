@@ -12,6 +12,16 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
   section="action"
   breadcrumbLabel="Take Action"
 >
+  <section class="conversion-bridge">
+    <h2>Start Here</h2>
+    <p>
+      The ICESCR has waited 49 years. Understanding why &mdash; and what you can do
+      about it in five minutes &mdash; starts with one question: how do unratified
+      economic rights affect your daily life?
+    </p>
+    <a href="/action/why-act" class="bridge-link">Why Act Now &rarr;</a>
+  </section>
+
   <div class="action-grid">
     {sorted.map((page) => (
       <a href={`/action/${page.id}`} class="action-card">
@@ -42,6 +52,16 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
         <p>Send by mail (most impact), email, or phone call to (202) 224-3121</p>
       </div>
     </div>
+  </section>
+
+  <section class="legislative-staff">
+    <h2>For Legislative Staff</h2>
+    <p>
+      A one-page executive summary of the ICESCR &mdash; what it covers, what
+      ratification means, political cover, risk assessment, and floor-speech
+      talking points. Designed for the staffing process.
+    </p>
+    <a href="/action/policy-brief" class="brief-link">ICESCR Policy Brief &rarr;</a>
   </section>
 
   <section class="depolarization">
@@ -75,6 +95,29 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
 </SectionLayout>
 
 <style>
+  .conversion-bridge {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .conversion-bridge h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+  }
+
+  .bridge-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
   .action-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
@@ -145,6 +188,36 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
   .step p {
     margin: 0;
     padding-top: var(--space-xs);
+  }
+
+  .legislative-staff {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .legislative-staff h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-text-muted);
+  }
+
+  .legislative-staff p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .brief-link {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.875rem;
   }
 
   .depolarization {

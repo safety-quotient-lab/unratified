@@ -538,9 +538,9 @@ Conversion bridge before toolkit       │ Agency reframe motivates     │ HIGH
 
 ### Content Gaps for This Persona
 
-- [ ] **Conversion bridge page** (`/action/why-act`) — personal stakes + agency + social proof
+- [x] **Conversion bridge page** (`/action/why-act`) — personal stakes + agency + social proof
 - [ ] **Share-after-action prompt** on /action pages — amplification loop
-- [ ] **"What happens next" section** — set expectations for the ratification process timeline
+- [x] **"What happens next" section** — "Honest About the Timeline" in why-act (ADA pattern, 10-20 years)
 
 ---
 
@@ -617,15 +617,15 @@ STEP │ ACTION                          │ LOCATION                │ EMOTION
 
 The site currently lacks any content shaped for staffers. The specific gaps:
 
-- [ ] **Policy brief page** (`/action/policy-brief`) — one-page executive summary:
+- [x] **Policy brief page** (`/action/policy-brief`) — one-page executive summary:
   - What the ICESCR covers (one paragraph)
   - What ratification would mean (one paragraph, including RUDs precedent)
   - Political cover (173 nations, NATO, G7, EU, Five Eyes)
   - Political risk and mitigation (sovereignty objection + counterargument)
   - Committee pathway (Senate Foreign Relations Committee)
   - Current constituent signal (qualitative — "growing awareness driven by AI economic concerns")
-- [ ] **Talking points in floor-speech format** — 60-second versions of each argument
-- [ ] **Comparison with existing U.S. treaty commitments** — ICCPR, CRC optional protocols, WTO — showing the ICESCR asks nothing structurally novel
+- [x] **Talking points in floor-speech format** — 60-second versions (in policy-brief)
+- [x] **Comparison with existing U.S. treaty commitments** — ICCPR, CAT, CERD, WTO (in policy-brief)
 
 ### UX Constraints — When Built
 

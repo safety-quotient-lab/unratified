@@ -66,16 +66,16 @@ Six personas across three tiers. Entry personas discover content; the conversion
 5. **Voters** (unratified.org/action)
    - Not a demographic — a functional role. Anyone from any entry persona who decides to act.
    - "I understand — now what do I DO?"
-   - Conversion bridge gap identified: `/action/why-act` page not yet built
-   - The /action section already serves this persona; persona now documented (D015)
+   - Conversion bridge: `/action/why-act` (built)
+   - The /action section serves this persona; persona documented (D015)
 
 ### Tier 3 — Target (Who receives the advocacy)
 
 6. **Politicians / Legislative Staff** (unratified.org/action/policy-brief — not yet built)
    - The site addresses politicians indirectly, through voter pressure
    - Functional persona: the legislative aide who evaluates and briefs the senator
-   - Content gap: no policy brief page, no floor-speech talking points
-   - D015: documented as target persona with specific content gaps
+   - Policy brief: `/action/policy-brief` (built) with floor-speech talking points
+   - D015: documented as target persona
 
 ### Delivery Channel
 
@@ -250,7 +250,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Full accessibility audit (WCAG 2.1 AA minimum) — manual screen reader testing pending
 
 **Phase 3: Content Integration and Polish** (MOSTLY COMPLETE)
-- [x] Integrate all content into built pages — 36 pages building
+- [x] Integrate all content into built pages — 38 pages building
 - [x] Cross-link between sections — verified, all internal links valid
 - [x] Observatory cross-links — footer ecosystem link + contextual ICESCR→UDHR deep-links
 - [x] Braver Angels depolarization callouts — /action hub, contact, talking-points, educator-toolkit (D015)
