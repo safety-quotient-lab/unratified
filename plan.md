@@ -161,6 +161,8 @@ See plan.md.marketing for complete user journeys, UX constraints, and launch seq
 - [x] Litigation activation deep dive — State AG mechanism through all orders
 - [x] Quality floor / safety net analysis — three paths (B/C/A) in post-OBBBA landscape
 - [x] Establish advocacy framing: "Human Rights, Nothing More, Nothing Less"
+- [x] PSQ evaluation of full UDHR — Dignity Quotient framework established
+- [x] Deploy repository to GitHub (safety-quotient-lab/unratified)
 - [ ] Select technology stack
 - [ ] Set up project scaffolding
 
