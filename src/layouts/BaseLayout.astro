@@ -1,5 +1,7 @@
 ---
 import LensToggle from '../components/lens/LensToggle.svelte';
+import '../styles/base.css';
+import '../styles/lens.css';
 
 interface Props {
   title: string;
@@ -29,9 +31,6 @@ const fullTitle = `${title} | Unratified`;
     <meta name="description" content={description} />
     <meta name="theme-color" content="#002d38" />
     <link rel="canonical" href={canonicalUrl.href} />
-
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="/styles/base.css" as="style" />
 
     <!-- Fira Code font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -72,8 +71,7 @@ const fullTitle = `${title} | Unratified`;
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{fullTitle}</title>
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/lens.css" />
+    <!-- base.css and lens.css imported in frontmatter → Astro bundles with content hash -->
   </head>
   <body data-lens={activeLens}>
     <a href="#main-content" class="skip-link">Skip to main content</a>
