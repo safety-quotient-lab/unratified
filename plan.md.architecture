@@ -223,8 +223,8 @@ unratified/
 │   │   ├── covenant/               ← 10 ICESCR article MDX files
 │   │   ├── gap/                    ← 5 ratification gap MDX files
 │   │   ├── connection/             ← 4 AI connection MDX files
-│   │   ├── evidence/               ← 1 evidence MDX file (economic landscape)
-│   │   └── action/                 ← 4 advocacy toolkit MDX files
+│   │   ├── evidence/               ← 2 evidence MDX files (economic-landscape, research-summary)
+│   │   └── action/                 ← 5 advocacy toolkit MDX files (why-act, ratification-process, talking-points, template-letters, educator-toolkit)
 │   ├── content.config.ts           ← Collection schemas (5 collections)
 │   ├── data/
 │   │   └── ratification-status.json ← ICESCR ratification data (193 nations)
@@ -233,7 +233,8 @@ unratified/
 │   │   └── ui/
 │   │       ├── Quiz.svelte         ← Svelte island: self-assessment quiz
 │   │       ├── Timeline.svelte     ← Svelte island: ratification history timeline
-│   │       └── RatificationMap.svelte ← Svelte+D3: world map choropleth
+│   │       ├── RatificationMap.svelte ← Svelte+D3: world map choropleth
+│   │       └── SharePrompt.astro   ← Share-after-action amplification (email/X/LinkedIn/copy)
 │   ├── layouts/
 │   │   ├── BaseLayout.astro        ← Root layout with lens + nav + SEO (OG, JSON-LD)
 │   │   ├── ArticleLayout.astro     ← ICESCR article pages
@@ -253,23 +254,25 @@ unratified/
 │   │   │   └── [...slug].astro     ← Dynamic analysis routes
 │   │   ├── evidence/
 │   │   │   ├── index.astro         ← Evidence landing
-│   │   │   └── [...slug].astro     ← Dynamic evidence routes
+│   │   │   └── [...slug].astro     ← Dynamic evidence routes (includes research-summary)
 │   │   ├── action/
-│   │   │   ├── index.astro         ← Take Action landing
-│   │   │   ├── contact.astro       ← Senator contact page
-│   │   │   └── [...slug].astro     ← Dynamic action content routes
+│   │   │   ├── index.astro         ← Take Action landing (+ conversion bridge + legislative callout)
+│   │   │   ├── contact.astro       ← Senator contact page (+ SharePrompt)
+│   │   │   ├── policy-brief.astro  ← Legislative staff executive summary (print-ready)
+│   │   │   └── [...slug].astro     ← Dynamic action content routes (+ SharePrompt)
 │   │   ├── educators/index.astro   ← Educator hub
 │   │   └── resources/index.astro   ← Further reading + sources
 │   └── (styles in public/styles/)
 ├── public/
 │   ├── styles/
-│   │   ├── base.css                ← Typography, colors, spacing, a11y
+│   │   ├── base.css                ← Typography (Fira Code, D016), colors, spacing, a11y
 │   │   └── lens.css                ← Lens-specific layout transformations
+│   ├── _headers                    ← Cloudflare Pages security + cache headers
 │   ├── favicon.svg
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D013)
+├── plan.md.decisions               ← Decision log (D001–D016)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
@@ -277,7 +280,7 @@ unratified/
 └── tsconfig.json
 ```
 
-### Page Count: 35 static pages (as of Phase 2)
+### Page Count: 39 static pages (as of Phase 3)
 
 ### JS Bundle Profile
 ```

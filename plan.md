@@ -231,7 +231,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Resources page with all research links and evidence sources
 - [x] Adapt economic-landscape.md for dedicated web page
 - [x] Design interactive visualization components — Timeline (Svelte CSS) + World Map (Svelte+D3) per D013
-- [ ] Create downloadable research summary
+- [x] Create downloadable research summary — /evidence/research-summary (print-ready via browser)
 
 **1E: Advocacy Toolkit (Section 6)**
 - [x] Write treaty ratification process explainer
@@ -242,22 +242,27 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 
 **Phase 2: Design and Build** (MOSTLY COMPLETE) ← CURRENT
 - [x] Design system (typography, color, layout) — base.css complete
-- [x] Build component library — LensToggle, Quiz, Timeline, RatificationMap, ArticleLayout, SectionLayout
+- [x] Build component library — LensToggle, Quiz, Timeline, RatificationMap, ArticleLayout, SectionLayout, SharePrompt
 - [x] Implement responsive layouts — mobile-first CSS in base.css
 - [x] Build interactive elements (quiz, lens toggle, timeline, world map)
 - [x] D3 data visualizations — World Map (D3-geo) + Timeline (CSS+Svelte) per D013
 - [x] Accessibility pass — global focus-visible, ARIA radiogroup fix, prefers-reduced-motion, keyboard nav, text alternatives
+- [x] Typography — Fira Code monospace matching kashifshah.net aesthetic (D016)
+- [ ] Full kashifshah.net style adaptation — colors, layout, spacing (in progress)
 - [ ] Full accessibility audit (WCAG 2.1 AA minimum) — manual screen reader testing pending
 
 **Phase 3: Content Integration and Polish** (MOSTLY COMPLETE)
-- [x] Integrate all content into built pages — 38 pages building
+- [x] Integrate all content into built pages — 39 pages building
 - [x] Cross-link between sections — verified, all internal links valid
 - [x] Observatory cross-links — footer ecosystem link + contextual ICESCR→UDHR deep-links
 - [x] Braver Angels depolarization callouts — /action hub, contact, talking-points, educator-toolkit (D015)
 - [x] SEO and meta content — Open Graph, Twitter Card, JSON-LD structured data, canonical URLs
-- [x] Production readiness — 404 page, sitemap, robots.txt, .node-version
+- [x] Production readiness — 404 page, sitemap, robots.txt, .node-version, _headers security (Cloudflare)
+- [x] Performance optimization — CSS preload, DNS prefetch, theme-color, cache headers
+- [x] Share-after-action prompts — SharePrompt component on all /action pages (amplification loop)
+- [x] E-prime audit pass — 7 violations corrected, license consistency fixed
 - [ ] Downloadable educator resources (PDF, DOCX)
-- [ ] Performance optimization (font loading, image optimization)
+- [ ] Full kashifshah.net style adaptation — colors, layout, spacing beyond fonts
 - [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
 
 **Phase 4: Launch and Outreach**
@@ -266,7 +271,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] .github/CONTRIBUTING.md — contribution guidelines
 - [x] .github/ISSUE_TEMPLATE/ — factual correction, accessibility, feature request
 - [x] .github/workflows/build-check.yml — CI: type-check + build on push/PR
-- [ ] Deploy to production
+- [ ] Deploy to production (requires: wrangler login && wrangler pages deploy dist)
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

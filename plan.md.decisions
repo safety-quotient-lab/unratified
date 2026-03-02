@@ -422,3 +422,37 @@ Key architectural decisions:
   not as a partnership (unless one develops organically)
 - Cross-Audience Flow diagram updated with full pipeline: Entry → Conversion Bridge →
   /action toolkit → Senate office
+
+---
+
+## D016: Typography — Fira Code as Primary Typeface
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: kashifshah.net uses Fira Code (monospace) for all text — body, headings,
+and code. The site uses self-hosted woff2 files with weights 300-700 plus a variable font.
+The aesthetic: terminal/hacker feel, unified typeface across the entire site, dense but
+readable with ligatures enabled.
+
+The current unratified.org type stack:
+- Body: Charter (serif) — print-editorial feel
+- Heading: Inter (sans-serif) — clean modern feel
+- Mono: JetBrains Mono / Fira Code — code only
+
+**Decision**: Adopt Fira Code as the unified typeface for all text (body, heading, mono).
+Load via Google Fonts (weights 300-700) with preconnect for performance. Enable ligatures
+and contextual alternates. Base font-size 16px, line-height 1.6.
+
+**Reasoning**:
+- Primary audience (Hackers, HN community) responds naturally to monospace aesthetics
+- Signals intellectual honesty and technical precision — consistent with fair witness framing
+- Unified typeface simplifies the design system and reduces cognitive load
+- Fira Code's ligature support (→, !=, etc.) renders well in data-forward content
+- kashifshah.net demonstrates this aesthetic at production quality
+- Simpler than self-hosting: Google Fonts CDN with preconnect provides adequate performance
+
+**What follows**:
+- --font-body, --font-heading, --font-mono all map to Fira Code
+- Future style adaptation from kashifshah.net: color palette (dark terminal theme),
+  spacing system, layout proportions
+- D017 will capture full color/layout decisions when that work completes
