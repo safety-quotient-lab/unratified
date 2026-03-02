@@ -71,7 +71,7 @@ Six personas across three tiers. Entry personas discover content; the conversion
 
 ### Tier 3 — Target (Who receives the advocacy)
 
-6. **Politicians / Legislative Staff** (unratified.org/action/policy-brief — not yet built)
+6. **Politicians / Legislative Staff** (unratified.org/action/policy-brief)
    - The site addresses politicians indirectly, through voter pressure
    - Functional persona: the legislative aide who evaluates and briefs the senator
    - Policy brief: `/action/policy-brief` (built) with floor-speech talking points

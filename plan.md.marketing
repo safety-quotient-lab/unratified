@@ -47,7 +47,7 @@ The audience model operates across three tiers. The original three audiences (Ha
 │                                                                      │
 │  ┌──────────────────────────────────────────────────────────────┐    │
 │  │  POLITICIANS (via legislative staff)                          │    │
-│  │  unratified.org/action/policy-brief (not yet built)          │    │
+│  │  unratified.org/action/policy-brief                          │    │
 │  │  "What would I vote for, and can I survive voting for it?"   │    │
 │  │                                                              │    │
 │  │  The site addresses politicians indirectly, through voter    │    │
@@ -78,7 +78,7 @@ The **Voter** persona does not contradict this. Voter describes a *functional ro
 | 3 | Scientists | Entry | observatory.unratified.org/methodology | Active |
 | 4 | Commercial Publishers | Delivery | (institutional) | License cleared, not yet engaged |
 | 5 | Voters | Conversion | unratified.org/action | Active (content exists, persona now documented) |
-| 6 | Politicians | Target | unratified.org/action/policy-brief | Content gap — page not yet built |
+| 6 | Politicians | Target | unratified.org/action/policy-brief | Active |
 
 ---
 
@@ -489,8 +489,8 @@ STEP │ ACTION                          │ LOCATION                │ EMOTION
      │ Understand what ICESCR protects  │ /connection, /evidence  │ "I didn't know this"
      │ and why the U.S. has not ratified│                        │
      │                                 │                         │
-  3  │ [CONVERSION BRIDGE — gap]       │ /action/why-act         │ Emotional shift:
-     │ Personal stakes + agency +      │ (not yet built)         │ "This affects me,
+  3  │ Conversion bridge               │ /action/why-act         │ Emotional shift:
+     │ Personal stakes + agency +      │                         │ "This affects me,
      │ social proof + low barrier      │                         │ and I can do something"
      │                                 │                         │
   4  │ Reach /action toolkit           │ unratified.org/action   │ Ready to act:
