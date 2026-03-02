@@ -142,8 +142,10 @@ Content corrections, factual updates, and accessibility improvements are the hig
 
 ## License
 
-Content: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — use freely with attribution.
+**Content** (MDX files, analysis documents, data, written copy):
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — share and adapt with attribution, non-commercial, same license.
 
-Code: [MIT](LICENSE).
+**Code** (Astro pages, Svelte components, configuration):
+[Apache 2.0](LICENSE).
 
 A [Safety Quotient Lab](https://github.com/safety-quotient-lab) project.

@@ -3,7 +3,7 @@
   "description": "Advocating for U.S. ratification of the ICESCR through the lens of AI's economic impact",
   "type": "module",
   "version": "0.1.0",
-  "license": "CC-BY-4.0",
+  "license": "Apache-2.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

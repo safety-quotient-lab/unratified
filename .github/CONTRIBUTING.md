@@ -84,4 +84,4 @@ Use the issue templates for:
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the same terms as the project: CC BY 4.0 for content, MIT for code.
+By contributing, you agree that your contributions will be licensed under the same terms as the project: CC BY-NC-SA 4.0 for content, Apache 2.0 for code.
