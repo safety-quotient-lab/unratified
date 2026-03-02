@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import SharePrompt from '../../components/ui/SharePrompt.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,6 +13,7 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
+const pageUrl = `https://unratified.org/action/${page.id}`;
 ---
 
 <BaseLayout title={page.data.title} description={page.data.summary}>
@@ -32,6 +34,8 @@ const { Content } = await render(page);
     <div class="content">
       <Content />
     </div>
+
+    <SharePrompt shareUrl={pageUrl} />
 
     <nav class="section-nav">
       <a href="/action">&larr; Back to Take Action</a>

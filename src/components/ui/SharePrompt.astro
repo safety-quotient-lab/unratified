@@ -1,0 +1,139 @@
+---
+/**
+ * SharePrompt — post-action amplification prompt.
+ * Appears after key action sections to close the advocacy loop.
+ * No external dependencies. Static HTML + scoped CSS.
+ */
+
+interface Props {
+  /** The URL to share. Defaults to the current page. */
+  shareUrl?: string;
+  /** Short description for the share text. */
+  shareText?: string;
+}
+
+const {
+  shareUrl = 'https://unratified.org/action',
+  shareText = '173 nations protect economic rights through the ICESCR. The U.S. has not ratified it in 49 years. Learn more and take action.',
+} = Astro.props;
+
+const encodedUrl = encodeURIComponent(shareUrl);
+const encodedText = encodeURIComponent(shareText);
+---
+
+<aside class="share-prompt" aria-label="Share this with your network">
+  <h3>Your Voice Carries Further</h3>
+  <p>
+    The ICESCR stalled for 49 years because no organized constituency demanded it.
+    Each person who learns about this treaty amplifies the signal.
+    Share with your network — help build the constituency that has never existed.
+  </p>
+  <div class="share-actions">
+    <a
+      href={`mailto:?subject=${encodeURIComponent('U.S. Economic Rights and the ICESCR')}&body=${encodedText}%0A%0A${encodedUrl}`}
+      class="share-btn share-email"
+      rel="noopener"
+    >
+      Email
+    </a>
+    <a
+      href={`https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="share-btn share-twitter"
+    >
+      Post on X
+    </a>
+    <a
+      href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="share-btn share-linkedin"
+    >
+      LinkedIn
+    </a>
+    <button class="share-btn share-copy" data-url={shareUrl}>
+      Copy Link
+    </button>
+  </div>
+</aside>
+
+<script>
+  document.querySelectorAll('.share-copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const url = (btn as HTMLButtonElement).dataset.url;
+      if (!url) return;
+      try {
+        await navigator.clipboard.writeText(url);
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      } catch {
+        // Fallback for older browsers
+        const input = document.createElement('input');
+        input.value = url;
+        document.body.appendChild(input);
+        input.select();
+        document.execCommand('copy');
+        document.body.removeChild(input);
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      }
+    });
+  });
+</script>
+
+<style>
+  .share-prompt {
+    margin-top: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .share-prompt h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    font-family: var(--font-heading);
+  }
+
+  .share-prompt p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    max-width: 36rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .share-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .share-btn {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+
+  .share-btn:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface);
+  }
+
+  button.share-btn {
+    line-height: inherit;
+  }
+</style>
