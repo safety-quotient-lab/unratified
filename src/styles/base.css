@@ -251,8 +251,15 @@ th {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: var(--space-lg);
+  gap: 0;
   flex-wrap: wrap;
+}
+
+.nav-links li + li::before {
+  content: '|';
+  color: var(--color-text-muted);
+  padding: 0 var(--space-sm);
+  font-size: 0.875rem;
 }
 
 .nav-links a {
