@@ -168,3 +168,47 @@ Each entry records: what we observed, what we decided, why, and what follows.
 **Reasoning**: Article 15 provides the more immediate, intuitive hook ("your right to benefit from AI"). Article 13 provides the deeper structural argument ("the only way to prevent permanent stratification by judgment capability requires educational transformation guaranteed by rights, not markets"). Together they create a complete argument: Article 15 addresses access, Article 13 addresses capacity.
 
 **What follows**: The advocacy toolkit leads with Article 15 for accessibility, then develops the Article 13 argument for depth. The educator toolkit foregrounds Article 13 as directly relevant to their professional mission.
+
+---
+
+## D009: Ratification Counterfactual — The Uncomfortable Finding
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: Applying the differential diagnosis framework to the counterfactual "what if the U.S. fully ratified ICESCR" produces seven ratification hypotheses (R1-R7). The discriminator selects Composite R-A (R3 Institutional Capacity + R5 Quality Floor + R6 Compliance Theater, activated by R7 Litigation) over the optimistic Composite R-B (R1 + R2 + R4).
+
+The second-order analysis reveals that Compliance Theater × Litigation (R-II, score 18/25) provides the most robust prediction: shallow compliance creates legal surface area that litigation gradually enforces, following the ADA pattern of slow-burn progressive realization over 10-20 years.
+
+**Decision**: Incorporate the ratification counterfactual as a core analytical piece. Present the uncomfortable finding honestly: ratification provides legal tools, not solutions. The tools' effectiveness flows primarily through litigation, not executive action. The timeline for meaningful impact extends 10-20 years, not 1-5 years.
+
+**Reasoning**:
+- Fair witness obligation: present the evidence-based prediction, not the advocacy aspiration
+- The honest framing ("ratification gives us tools; courts activate them; progress comes slow") proves MORE persuasive to our core audiences (HN, academics) than inflated claims
+- The ADA-pattern argument gives the advocacy concrete historical grounding
+- Addressing the compliance theater risk upfront builds trust with skeptics
+- The finding that ratification addresses 2 of 4 scarcities (judgment via Art 13, attention via Art 15) while leaving 2 unaddressed (energy, specification) provides nuanced talking points
+
+**What follows**:
+- The ratification counterfactual joins the analysis section of observatory.unratified.org
+- Advocacy messaging shifts from "ratification solves this" to "ratification gives us the legal tools — courts enforce them over time"
+- The ADA pattern becomes a primary talking point for all three audiences
+- The "rights-industrial complex" risk (R-I interaction) gets documented as a watch-out
+
+---
+
+## D010: Advocacy Reframing — Tools, Not Solutions
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The ratification counterfactual analysis shows that the strongest argument for ICESCR ratification emerges not from "ratification fixes everything" but from:
+
+> "Without ratification, no legal basis exists for challenging AI-driven rights violations. With ratification, the American legal system provides an enforcement mechanism that slowly but genuinely bends AI's economic transformation toward rights realization."
+
+**Decision**: Adopt "tools, not solutions" as the site's advocacy framing. This aligns fair witness honesty with persuasive effectiveness.
+
+**Reasoning**: Each core audience responds to this framing differently, all positively:
+- **HN/Developers**: Respect intellectual honesty; distrust overclaiming; "tools not solutions" resonates with engineering mindset
+- **Teachers**: Understand that tools require skilled use; connects to their role in building judgment capability
+- **Academics**: Value nuanced claims over advocacy inflation; citable precisely because it doesn't overclaim
+
+**What follows**: All advocacy materials use this framing. The action toolkit presents ratification as creating a legal toolset, with litigation as the primary activation mechanism. The educator toolkit frames teachers' work as part of the long-term implementation — they build the judgment capability that makes the legal tools effective.
