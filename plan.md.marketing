@@ -1,153 +1,477 @@
-# Unratified — Marketing and Outreach Strategy
+# Unratified — Marketing, User Journey, and UX Strategy
 
-## Core Message
+## Core Audiences (Established 2026-03-02)
 
-"The United States signed a promise to protect your economic rights in 1977. AI makes that broken promise matter more than ever."
+Three core audiences, derived from the higher-order differential analysis findings. The analysis itself points to these groups: technical analysts who can evaluate the methodology, educators who shape the judgment pipeline, and academics who extend and validate the work.
 
-## Positioning
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│                        THREE CORE AUDIENCES                          │
+│                                                                      │
+│  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐   │
+│  │                  │  │                  │  │                  │   │
+│  │  HACKERS         │  │  TEACHERS        │  │  SCIENTISTS      │   │
+│  │                  │  │                  │  │                  │   │
+│  │  observatory.    │  │  unratified.org  │  │  observatory.    │   │
+│  │  unratified.org  │  │  /educators      │  │  unratified.org  │   │
+│  │                  │  │                  │  │                  │   │
+│  │  "Show me the    │  │  "Give me        │  │  "Show me the    │   │
+│  │   analysis"      │  │   materials"     │  │   methodology"   │   │
+│  │                  │  │                  │  │                  │   │
+│  │  Evaluates:      │  │  Evaluates:      │  │  Evaluates:      │   │
+│  │  rigor, novelty, │  │  usability,      │  │  citations,      │   │
+│  │  intellectual    │  │  curriculum fit,  │  │  reproducibility,│   │
+│  │  honesty        │  │  classroom-ready  │  │  novel contrib.  │   │
+│  └──────────────────┘  └──────────────────┘  └──────────────────┘   │
+│                                                                      │
+│  WHY THESE THREE:                                                    │
+│  • Hackers: evaluate + amplify the analysis (distribution)           │
+│  • Teachers: shape the judgment pipeline (Article 13 pivot)          │
+│  • Scientists: validate + extend the methodology (credibility)       │
+└──────────────────────────────────────────────────────────────────────┘
+```
 
-### What Unratified Delivers That Others Don't
+### Why NOT a general public audience
 
-Most ICESCR advocacy focuses on legal argumentation or moral appeals. Unratified brings **data-driven economic analysis** showing that AI's transformative impact on the economy creates urgent, measurable consequences when economic rights lack legal protection.
-
-### Competitive Landscape
-
-| Organization | Focus | Gap Unratified Fills |
-|---|---|---|
-| ACLU | Civil/political rights, some ESCR | Limited AI-economic connection |
-| Human Rights Watch | Monitoring, reporting | Not focused on U.S. ratification advocacy |
-| Amnesty International | Global HRE, campaigns | General rather than ICESCR-specific |
-| CESR (Center for ESCR) | ESCR policy/research | Academic, not pedagogical/public-facing |
-| AAAS Right to Science | Article 15 research | Research-focused, not advocacy-oriented |
-
-Unratified occupies a unique niche: **pedagogical website connecting AI economics to ICESCR advocacy with original analytical content**.
-
----
-
-## Audience Segments and Messaging
-
-### Segment 1: Tech-Adjacent Public
-**Who**: Software developers, tech workers, AI-interested professionals, policy followers
-**Hook**: "AI changes everything — but who decides who benefits? Your economic rights have no legal protection in the U.S."
-**Channel**: Hacker News, Reddit (r/technology, r/economics), tech newsletters, LinkedIn
-**Content**: AI analysis sections, differential diagnosis, data visualizations
-
-### Segment 2: Human Rights Community
-**Who**: Activists, advocates, law students, NGO staff
-**Hook**: "The most significant scientific advance of our era meets the most consequential unratified treaty."
-**Channel**: Human rights conferences, law school partnerships, NGO networks, academic journals
-**Content**: ICESCR content, Article 15 analysis, advocacy toolkit
-
-### Segment 3: Educators
-**Who**: High school social studies/civics teachers, university human rights/economics professors
-**Hook**: "Teach the intersection of technology and human rights with data-driven curriculum materials."
-**Channel**: Education conferences, teacher networks, NEA/AFT partnerships, university syllabi
-**Content**: Educator toolkit, lesson plans, discussion guides, the interactive quiz
-
-### Segment 4: Policy and Media
-**Who**: Journalists, policy analysts, congressional staff, think tank researchers
-**Hook**: "Original economic analysis shows AI bifurcation demands ICESCR ratification."
-**Channel**: Direct outreach, press releases, policy briefs, op-ed placements
-**Content**: Differential diagnosis research summary, policy brief, downloadable data
+The analysis shows that the general public arrives through one of these three channels, not independently. Attempting to serve "everyone" dilutes the content for the audiences who actually engage with it. General public reach comes as a second-order effect: teachers bring it to students, HN amplifies it to the broader tech community, academic citations bring it to policy circles.
 
 ---
 
-## Content Marketing Strategy
+## Domain Architecture
 
-### Phase 1: Foundation Content (Pre-Launch)
-- Write 3-5 long-form articles extractable from site content for external publication
-- Potential titles:
-  - "Seven Hypotheses About AI and the Economy — Only One Survives"
-  - "The Treaty the U.S. Forgot: ICESCR and the AI Revolution"
-  - "Article 15: Your Right to Benefit from AI Has No Legal Force"
-  - "Constraint Removal, Jevons Paradox, and the Future of Software Labor"
-  - "Fair Witness Economics: What We Actually Know About AI Productivity"
+```
+unratified.org                          Main site — ICESCR content, advocacy, action
+│
+├── /educators                          Teacher-facing: curriculum, lesson plans, materials
+├── /covenant                           ICESCR article-by-article guide
+├── /gap                                Why the U.S. has not ratified
+├── /action                             Advocacy toolkit, contact senators, templates
+└── /resources                          Further reading, organizations
 
-### Phase 2: Launch Campaign
-- Simultaneous publication on site + social media + partner channels
-- Press release to tech and human rights media
-- Op-ed placement in 1-2 major outlets
-- Email to relevant congressional offices with policy brief
+observatory.unratified.org              Human Rights Observatory, Hacker News Edition
+│
+├── /diagnosis                          Differential diagnosis (7 hypotheses)
+├── /chains                             Integral chain analysis (interactive)
+├── /higher-order                       Recursive higher-order effects (Orders 0-4)
+├── /evidence                           Evidence matrix, data, sources
+├── /landscape                          Current economic/geopolitical conditions
+├── /methodology                        How the analysis works (for academics)
+└── /data                               Downloadable datasets, citations, BibTeX
+```
 
-### Phase 3: Sustained Engagement
-- Monthly content updates reflecting AI landscape changes
-- Quarterly "State of Unratified" reports connecting current events to ICESCR
-- Annual updated differential diagnosis as new evidence arrives
-- Educator workshop series (virtual)
+**The Observatory serves HN + Academics. The main site serves Teachers.
+Cross-linking connects them at every relevant point.**
 
----
-
-## Social Media Strategy
-
-### Platform Focus
-- **LinkedIn**: Long-form analysis, professional audience, policy connections
-- **Bluesky/Mastodon**: Tech community, open web advocates
-- **YouTube/TikTok**: Short explainer videos ("What remains Unratified in 60 seconds")
-- **Substack/Newsletter**: Deep analysis, regular updates, subscriber relationship
-
-### Content Types
-- **Shareable graphics**: Article-by-article "Did you know?" cards
-- **Data visualizations**: Animated versions of site charts
-- **Quote cards**: Key findings from differential diagnosis
-- **Comparison cards**: "173 nations ratified. The U.S. did not."
-- **Explainer threads**: Step-by-step analysis breakdowns
-
-### Hashtag Strategy
-- #Unratified
-- #ICESCR
-- #RightToScience
-- #Article15
-- #AIRights
-- #EconomicRights
+The "Hacker News Edition" subtitle signals density and intellectual honesty. It says: "We built this for people who check sources and argue about methodology." That framing earns trust with HN readers and academics simultaneously. Teachers arrive at a different door, purpose-built for their workflow.
 
 ---
 
-## Partnership Opportunities
+## Audience 1: Hackers (news.ycombinator.com)
 
-### Academic Partners
-- University human rights clinics and centers
-- Economics departments studying AI impact
-- Law school international law programs
-- AAAS Right to Science program
+### Profile
+- Software developers, engineers, technical founders, AI practitioners
+- Browse HN daily; skeptical of marketing language; respect rigor
+- Will read 5,000+ words if the content earns their attention
+- Check sources, argue in comments, share when genuinely impressed
+- Allergic to: popups, dark patterns, advocacy-speak, shallow analysis
 
-### NGO Partners
-- CESR (Center for Economic and Social Rights)
-- National Economic and Social Rights Initiative (NESRI)
-- Human Rights Institute at Columbia Law
-- International Network for Economic, Social and Cultural Rights (ESCR-Net)
+### Messaging
+**What resonates**: Novel methodology applied to a real question. The differential diagnosis framework applied to economics presents something HN has not seen before. Lead with the analysis, not the advocacy.
 
-### Tech Community Partners
-- AI ethics organizations (Partnership on AI, AI Now Institute)
-- Developer advocacy groups
-- Open source communities affected by AI labor dynamics
+**What repels**: "You should care about human rights." Start there and lose them immediately. The ICESCR connection must emerge organically from the analysis — a discovery, not a lecture.
+
+**HN submission titles** (candidates):
+- "Differential Diagnosis of AI's Economic Impact — Seven Hypotheses, One Survivor"
+- "Constraint Removal, Jevons Paradox, and the Four Scarcities: A Chain Analysis"
+- "An AI's analysis of AI's economic impact (and the 1966 treaty it accidentally argues for)"
+
+### User Journey
+
+```
+STEP │ ACTION                          │ LOCATION                │ EMOTIONAL STATE
+─────┼─────────────────────────────────┼─────────────────────────┼──────────────────
+  1  │ See link on HN front page       │ news.ycombinator.com    │ Curious, skeptical
+     │ Title: analysis-focused,        │                         │
+     │ NOT advocacy-focused            │                         │
+     │                                 │                         │
+  2  │ Click → land on Observatory     │ observatory.            │ Evaluating: "Will
+     │ Immediately see: methodology,   │ unratified.org          │ this waste my
+     │ the analysis itself, data       │ /diagnosis              │ time?"
+     │                                 │                         │
+  3  │ Read the differential diagnosis │ Same page, scrolling    │ Engaged: "This
+     │ 7 hypotheses, evidence matrix,  │                         │ framework is
+     │ discriminator scores            │                         │ interesting"
+     │                                 │                         │
+  4  │ Encounter ICESCR connection     │ Bottom of /diagnosis    │ Surprised: "Wait,
+     │ WITHIN the analysis — not as    │ or /chains              │ there's a treaty
+     │ separate advocacy section       │                         │ about this?"
+     │                                 │                         │
+  5  │ Follow link to ICESCR content   │ unratified.org          │ Learning: "I had
+     │ Article 15, Article 13 detail   │ /covenant/articles/15   │ no idea"
+     │                                 │                         │
+  6  │ Return to HN comments           │ news.ycombinator.com    │ Processing,
+     │ Discuss, argue, share           │                         │ debating
+     │                                 │                         │
+  7  │ (Some fraction) Explore action  │ unratified.org          │ Motivated or
+     │ toolkit, share with others      │ /action                 │ at least informed
+```
+
+### UX Constraints — Observatory (HN-Facing)
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+ZERO newsletter popups                  │ Instant credibility kill     │ HARD
+ZERO cookie banners beyond legal min.   │ Friction = bounce            │ HARD
+Fast load: <2s first contentful paint   │ HN audience has zero patience│ HARD
+Content above the fold immediately      │ No splash pages, no hero imgs│ HARD
+All sources inline and clickable        │ They WILL check              │ HARD
+Dark mode support                       │ Expected by this audience    │ HIGH
+Print/PDF stylesheet that works         │ People want to save analysis │ HIGH
+Monospace for data tables and code      │ Visual trust signal          │ HIGH
+No social share buttons on page body    │ Clutter tax; they share URLs │ HIGH
+Dense text OK — do NOT simplify         │ Respects intelligence        │ HIGH
+No animations that delay content access │ Substance over style         │ HIGH
+Methodology visible without clicking    │ Front and center, not hidden │ HIGH
+Mobile-responsive but desktop-optimized │ HN browses on desktop        │ MEDIUM
+Discussion link to HN thread            │ Community expects it         │ MEDIUM
+Anchor links for every section/heading  │ HN comments reference sections│ MEDIUM
+View source reveals clean, semantic HTML│ Audience inspects code       │ MEDIUM
+No tracking beyond minimal analytics    │ Privacy-conscious audience   │ MEDIUM
+RSS feed for updates                    │ HN audience uses RSS         │ MEDIUM
+```
 
 ---
 
-## Key Talking Points for All Channels
+## Audience 2: Teachers / Educators
 
-1. The U.S. signed ICESCR in 1977 and never ratified it. Only a handful of nations share this status.
+### Profile
+- High school social studies, civics, government, economics teachers
+- University professors: human rights, international law, economics, technology studies
+- Limited prep time; need classroom-ready materials
+- Evaluate by: curriculum alignment, pedagogical quality, ease of use
+- Browse on phones during planning periods; download PDFs for classroom use
 
-2. ICESCR Article 15 recognizes everyone's right to benefit from scientific progress. AI represents the most significant scientific advance of our era.
+### Messaging
+**What resonates**: "Ready-to-use lesson plans connecting AI and human rights, backed by rigorous research." Teachers want materials that save them time AND teach well.
 
-3. Our original economic analysis identifies seven competing hypotheses about AI's impact. The surviving model shows AI creates a bifurcated economy — exactly the condition ICESCR addresses.
+**What repels**: Jargon-heavy analysis without pedagogical scaffolding. Raw data without learning objectives. Anything that requires them to do significant adaptation work.
 
-4. The "productivity doubling" narrative fails the evidence. The real story: AI removes labor constraints, triggering a demand explosion bounded by new bottlenecks and distributed unevenly.
+### User Journey
 
-5. Without ratification, the U.S. has no binding legal framework to ensure AI benefits reach everyone.
+```
+STEP │ ACTION                          │ LOCATION                │ EMOTIONAL STATE
+─────┼─────────────────────────────────┼─────────────────────────┼──────────────────
+  1  │ Find via colleague, education   │ Search, conference,     │ Looking for
+     │ conference, search engine       │ email from colleague    │ materials
+     │ Query: "AI human rights lesson  │                         │
+     │ plan" or similar                │                         │
+     │                                 │                         │
+  2  │ Land on educator hub            │ unratified.org          │ Evaluating:
+     │ Immediately see: grade levels,  │ /educators              │ "Does this fit
+     │ lesson plans, learning objects  │                         │ my curriculum?"
+     │                                 │                         │
+  3  │ Browse by grade level or topic  │ /educators/high-school  │ Shopping: "Which
+     │ Find lesson plan that fits      │ or /educators/university│ unit does this
+     │                                 │                         │ support?"
+     │                                 │                         │
+  4  │ Preview lesson plan             │ Lesson plan page        │ Assessing:
+     │ See: objectives, timing,        │                         │ "Can I use this
+     │ materials, discussion questions │                         │ Thursday?"
+     │                                 │                         │
+  5  │ Download PDF + supplementary    │ Download action         │ Satisfied:
+     │ materials for classroom use     │                         │ "This saves me
+     │                                 │                         │ hours"
+     │                                 │                         │
+  6  │ (Some) Explore underlying       │ observatory.            │ Deepening own
+     │ analysis to strengthen their    │ unratified.org          │ understanding
+     │ own understanding               │                         │
+     │                                 │                         │
+  7  │ Share with department/network   │ Email, social, PD event │ Recommending:
+     │ Recommend to colleagues         │                         │ "You should use
+     │                                 │                         │ this too"
+```
 
-6. This concerns more than technology — work, health, education, housing, and social security all connect to AI's economic transformation.
+### UX Constraints — Main Site (Teacher-Facing)
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+Grade-level indicators on all materials │ Teachers filter by level     │ HARD
+Downloadable PDFs, no login required    │ Teachers need offline access │ HARD
+Learning objectives on every lesson     │ Pedagogical standard         │ HARD
+Mobile-friendly layout and navigation   │ Teachers browse on phones    │ HARD
+Clear visual hierarchy: what to grab    │ Limited time to evaluate     │ HARD
+Student-facing materials at 8th grade   │ Accessible to most students  │ HIGH
+  reading level                         │                              │
+Teacher guides with deeper context      │ Different from student mat'l │ HIGH
+Discussion questions with facilitator   │ Teachers need guidance too   │ HIGH
+  notes                                 │                              │
+Estimated class time for each activity  │ Scheduling constraint        │ HIGH
+Printable format that uses ink well     │ Classroom printing budgets   │ HIGH
+  (avoid heavy backgrounds)             │                              │
+Standards alignment notes where         │ Justification for admin      │ MEDIUM
+  applicable (Common Core, C3, etc.)    │                              │
+Editable formats (DOCX alongside PDF)   │ Teachers adapt materials     │ MEDIUM
+No jargon in student-facing materials   │ Accessibility                │ MEDIUM
+Visual assets suitable for display      │ Classroom walls, slides      │ MEDIUM
+Assessment rubrics for assignments      │ Teachers need eval tools     │ MEDIUM
+Sequencing suggestions (1-day, 3-day,   │ Flexibility for different    │ LOW
+  full unit)                            │ schedule constraints         │
+```
 
 ---
 
-## Measurement Framework
+## Audience 3: Scientists / Academics
 
-| Metric | Target (Year 1) | Tool |
-|--------|-----------------|------|
-| Monthly unique visitors | 10,000 | Analytics |
-| Educator toolkit downloads | 500 | Download tracking |
-| Newsletter subscribers | 2,000 | Email platform |
-| Template letters sent | 1,000 | Action tracker |
-| Media mentions | 20 | Media monitoring |
-| Academic citations | 5 | Google Scholar alerts |
-| Social media impressions | 500,000 | Platform analytics |
-| Average time on analysis pages | >5 minutes | Analytics |
+### Profile
+- Economics researchers studying AI impact, labor markets, productivity
+- International law scholars, human rights researchers
+- Science and technology studies (STS) faculty and researchers
+- Methodologically rigorous; evaluate by citation quality and novel contribution
+- Access via academic search, conference references, citation chains
+
+### Messaging
+**What resonates**: "Novel analytical framework connecting AI economic impact to international human rights law, with transparent methodology and downloadable data." Academics want something they can cite, extend, or critique.
+
+**What repels**: Advocacy language that suggests conclusion-first reasoning. Insufficient citation depth. Unverifiable claims.
+
+### User Journey
+
+```
+STEP │ ACTION                          │ LOCATION                │ EMOTIONAL STATE
+─────┼─────────────────────────────────┼─────────────────────────┼──────────────────
+  1  │ Find via citation, conference   │ Google Scholar, SSRN,   │ Evaluating a
+     │ presentation, colleague, or     │ colleague email,        │ potential source
+     │ academic search                 │ conference program      │
+     │                                 │                         │
+  2  │ Land on specific analysis page  │ observatory.            │ Assessing:
+     │ (often deep-linked, not home)   │ unratified.org          │ "Credible
+     │                                 │ /methodology or         │ methodology?"
+     │                                 │ /diagnosis              │
+     │                                 │                         │
+  3  │ Check methodology section       │ /methodology            │ Scrutinizing:
+     │ Evaluate: framework soundness,  │                         │ "Does the
+     │ epistemic confidence levels,    │                         │ discriminator
+     │ transparency about limitations  │                         │ hold up?"
+     │                                 │                         │
+  4  │ Check citations — follow links  │ Sources throughout      │ Verifying:
+     │ to original METR study, SF Fed, │                         │ "Primary sources
+     │ Wharton PWBM, etc.             │                         │ check out?"
+     │                                 │                         │
+  5  │ Evaluate novel contribution:    │ /diagnosis,             │ Assessing:
+     │ Does ICESCR-AI connection add   │ /higher-order           │ "Has anyone done
+     │ something new to the literature?│                         │ this before?"
+     │                                 │                         │
+  6  │ Download citation (BibTeX/APA)  │ /data                   │ Incorporating
+     │ Download underlying dataset     │                         │ into their own
+     │ for replication/extension       │                         │ work
+     │                                 │                         │
+  7  │ (Some) Cite in their own work   │ Their publications      │ Extending the
+     │ (Some) Propose collaboration    │ Email contact           │ analysis
+     │ (Some) Critique in commentary   │ Their platforms         │ Engaging
+```
+
+### UX Constraints — Observatory (Academic-Facing)
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+Full citations in BibTeX, APA, Chicago  │ Standard academic workflow   │ HARD
+Structured abstract on each analysis    │ Academics scan abstracts     │ HARD
+  piece (background, methods, results,  │ before committing to read    │
+  conclusions)                          │                              │
+Persistent URLs (DOI or equivalent)     │ Citations need stable links  │ HARD
+Clear provenance: AI-generated,         │ Methodological transparency  │ HARD
+  human-reviewed, revision history      │                              │
+Epistemic confidence levels visible     │ Already in our analysis;     │ HARD
+  on every claim                        │ academics expect this        │
+Open access — no paywalls               │ Aligns with Art. 15; builds │ HARD
+                                        │ credibility                  │
+Downloadable datasets (CSV/JSON)        │ Reproducibility standard     │ HIGH
+  underlying all visualizations         │                              │
+Version history with dates              │ Academics track when content │ HIGH
+                                        │ last changed                 │
+Cross-references to related academic    │ Situates work in literature  │ HIGH
+  literature                            │                              │
+Methodology section: exhaustive,        │ Must withstand peer scrutiny │ HIGH
+  reproducible                          │                              │
+Clear statement: not peer-reviewed      │ Honest about status          │ HIGH
+  (unless/until it becomes so)          │                              │
+ORCID or equivalent for human           │ Academic identity standard   │ MEDIUM
+  contributors                          │                              │
+Semantic HTML with schema.org markup    │ Academic search indexing     │ MEDIUM
+API access to underlying data           │ Enables programmatic reuse   │ LOW
+```
+
+---
+
+## Shared UX Constraints (All Audiences)
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+E-prime in all user-facing copy         │ Project principle: precise,  │ HARD
+                                        │ active language              │
+Fair witness framing throughout         │ Project principle: observe   │ HARD
+                                        │ without interpretation       │
+All factual claims link to source       │ Trust across all audiences   │ HARD
+Inferences marked as inferences         │ Epistemic honesty            │ HARD
+WCAG 2.1 AA minimum accessibility      │ Legal + ethical baseline     │ HARD
+Progressive enhancement: core content   │ Works for everyone           │ HARD
+  works without JavaScript              │                              │
+No dark patterns (forced signup,        │ Ethical baseline             │ HARD
+  notification begging, etc.)           │                              │
+Performance: Lighthouse score >90       │ All audiences benefit        │ HIGH
+Clean, semantic HTML throughout         │ Accessibility + inspectable  │ HIGH
+Consistent design language across       │ Coherent brand               │ HIGH
+  observatory and main site             │                              │
+Clear cross-links between domains       │ Audiences discover the other │ HIGH
+                                        │ site naturally               │
+Content license: Creative Commons       │ Enables sharing, especially  │ HIGH
+  (CC BY or CC BY-SA)                   │ by educators                 │
+```
+
+---
+
+## Cross-Audience Flow
+
+The three audiences don't exist in isolation. The site architecture enables organic discovery across audience boundaries:
+
+```
+                    ┌──────────────────┐
+                    │   HACKER NEWS    │
+                    │   SUBMISSION     │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │    OBSERVATORY       │
+                  │    /diagnosis        │◄──────── Academic finds
+                  │                      │         via citation
+                  │  Analysis engages    │
+                  │  HN + Academics      │
+                  └──────────┬───────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+              ▼              ▼              ▼
+    ┌─────────────┐ ┌──────────────┐ ┌──────────────┐
+    │ /covenant   │ │ /methodology │ │ /educators   │
+    │             │ │              │ │              │
+    │ HN reader   │ │ Academic     │ │ Teacher finds│
+    │ discovers   │ │ evaluates    │ │ via search / │
+    │ ICESCR      │ │ framework    │ │ colleague    │
+    └──────┬──────┘ └──────┬───────┘ └──────┬───────┘
+           │               │               │
+           ▼               ▼               ▼
+    ┌─────────────────────────────────────────────┐
+    │              /action                         │
+    │  All paths converge on advocacy toolkit      │
+    │                                              │
+    │  HN: shares, discusses, some write senators  │
+    │  Academic: cites, extends, informs policy    │
+    │  Teacher: uses materials, shapes students    │
+    └─────────────────────────────────────────────┘
+```
+
+---
+
+## Content Tailoring by Audience
+
+The same underlying analysis gets presented differently depending on entry point:
+
+| Content Element | HN Presentation | Teacher Presentation | Academic Presentation |
+|---|---|---|---|
+| Differential diagnosis | Full analysis with scoring tables | Simplified "competing explanations" activity | Full analysis + methodology appendix |
+| Evidence matrix | Interactive sortable table | Worksheet with guided evaluation | Downloadable CSV + replication notes |
+| ICESCR articles | Linked organically from analysis | Lesson plans per article | Cross-referenced with legal commentary |
+| Higher-order effects | Full cascade visualization | "What happens next?" classroom discussion | Formal chain analysis with confidence intervals |
+| Causal chains | ASCII diagrams (they love these) | Simplified flowcharts for classroom | Formal DAG notation option |
+| Action items | Template letters, senator lookup | Lesson plan on civic participation | Policy brief format |
+| Tagline visible | "Human Rights Observatory, Hacker News Edition" | "Classroom Resources for Human Rights Education" | "Research and Methodology" |
+
+---
+
+## Launch Sequencing by Audience
+
+```
+PHASE │ AUDIENCE   │ ACTION                                │ GOAL
+──────┼────────────┼───────────────────────────────────────┼──────────────────
+  1   │ HN         │ Submit observatory analysis to HN     │ Attention +
+      │            │ Title: analysis-focused, not advocacy  │ credibility
+      │            │                                        │
+  2   │ Academic   │ Post methodology to SSRN / arXiv      │ Citation +
+      │            │ Announce on academic social media      │ validation
+      │            │                                        │
+  3   │ Teacher    │ Educator outreach via networks,        │ Adoption +
+      │            │ conferences, NEA/AFT channels          │ durability
+      │            │                                        │
+  ∞   │ All        │ Quarterly updates as landscape evolves │ Sustained
+      │            │ Annual differential diagnosis refresh  │ relevance
+```
+
+**Rationale for sequencing**: HN provides the initial amplification burst. Academic engagement provides credibility that supports the educator pitch. Educator adoption creates the most durable long-term impact (shapes the judgment pipeline — the Article 13 argument in action).
+
+---
+
+## Measurement Framework (Revised for Core Audiences)
+
+| Metric | Audience | Target (Year 1) | Tool |
+|--------|----------|-----------------|------|
+| HN front page appearances | HN | 3+ | HN API monitoring |
+| Average time on observatory pages | HN | >7 minutes | Analytics |
+| Return visitors to observatory | HN + Academic | 20%+ | Analytics |
+| Academic citations | Academic | 10+ | Google Scholar alerts |
+| Dataset downloads | Academic | 200+ | Download tracking |
+| BibTeX citation copies | Academic | 500+ | Click tracking |
+| Educator toolkit downloads | Teacher | 500+ | Download tracking |
+| Lesson plan page views | Teacher | 5,000+ | Analytics |
+| Repeat educator visits | Teacher | 30%+ | Analytics |
+| Cross-domain navigation rate | All | 25%+ of visitors | Analytics |
+| Observatory → main site flow | HN → advocacy | 15%+ | Funnel tracking |
+| /action page engagement | All | 10%+ of visitors | Analytics |
+
+---
+
+## Competitive Positioning (Revised)
+
+```
+                    ANALYTICAL DEPTH
+                         ▲
+                         │
+                    ┌────┤
+                    │ ★  │  observatory.unratified.org
+                    │    │  (HN + Academic)
+                    │    │
+            ────────┼────┼──────────────────────► ADVOCACY DIRECTNESS
+                    │    │
+                    │    │
+                    │    │  unratified.org/educators
+                    │    │  (Teachers)
+                    │    ★
+                    │    │
+                    └────┘
+
+  Other players:
+  ○ CESR — high analytical depth, low public engagement
+  ○ Amnesty — high advocacy directness, low analytical depth
+  ○ AAAS Right to Science — moderate both, academic-only
+  ○ United for Human Rights — low depth, high accessibility
+
+  Unratified occupies the space between:
+  deep analysis (observatory) ←→ practical action (main site + educators)
+```
+
+---
+
+## Key Messaging by Audience (Final)
+
+### HN: Lead with the methodology
+> "Seven hypotheses about AI's economic impact. A consensus/parsimony discriminator. One composite model survives. And it accidentally makes the strongest case for a 1966 UN treaty you've never heard of."
+
+### Teachers: Lead with the materials
+> "Ready-to-use lesson plans connecting AI's economic transformation to human rights — backed by original research, designed for your classroom."
+
+### Academics: Lead with the novel contribution
+> "A differential diagnosis framework applied to AI economic impact, with integral chain analysis connecting Jevons paradox and bottleneck migration to ICESCR obligations under Article 15."

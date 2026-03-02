@@ -27,11 +27,26 @@ The recursive higher-order analysis reveals that bottlenecks migrate from techni
 
 ---
 
-## Target Audience
+## Core Audiences (Three)
 
-- **Primary**: U.S. citizens and residents interested in human rights, technology policy, or economic justice
-- **Secondary**: Educators (high school, university) seeking curriculum materials on human rights + technology
-- **Tertiary**: Policy advocates, journalists, researchers at the human rights / technology intersection
+Derived from the analysis itself — these groups map to the structural roles the model identifies:
+
+1. **Hackers** (observatory.unratified.org — "Human Rights Observatory, Hacker News Edition")
+   - Software developers, engineers, AI practitioners, technical founders
+   - They evaluate and amplify the analysis (distribution engine)
+   - Entry: HN front page → observatory analysis → discover ICESCR → advocacy
+
+2. **Teachers** (unratified.org/educators)
+   - High school civics/social studies, university human rights/economics professors
+   - They shape the judgment pipeline (the Article 13 pivot in action)
+   - Entry: colleague/search → educator hub → lesson plans → classroom use
+
+3. **Scientists / Academics** (observatory.unratified.org/methodology)
+   - Economics, international law, STS, AI impact researchers
+   - They validate and extend the methodology (credibility engine)
+   - Entry: citation/conference → methodology → evaluate → cite/extend
+
+See plan.md.marketing for complete user journeys, UX constraints, and launch sequencing.
 
 ---
 

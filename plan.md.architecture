@@ -39,52 +39,56 @@ The site organizes around three conceptual layers:
 └─────────────────────────────────────────────────────────┘
 ```
 
-#### Information Architecture — Site Map
+#### Information Architecture — Dual-Domain Site Map
 
 ```
-/                                   Home — "What Remains Unratified"
-├── /covenant                       The Covenant — Understanding ICESCR
-│   ├── /covenant/history           Historical context (UDHR → ICESCR)
-│   ├── /covenant/articles          Article-by-article guide
-│   │   ├── /covenant/articles/1    Self-determination
-│   │   ├── /covenant/articles/6    Right to work
-│   │   ├── /covenant/articles/7    Just work conditions
-│   │   ├── /covenant/articles/9    Social security
-│   │   ├── /covenant/articles/11   Adequate standard of living
-│   │   ├── /covenant/articles/12   Right to health
-│   │   ├── /covenant/articles/13   Right to education
-│   │   └── /covenant/articles/15   Right to benefit from science
-│   └── /covenant/quiz              Self-assessment: "Do you experience these?"
+unratified.org                          MAIN SITE — ICESCR, advocacy, educators
 │
-├── /gap                            The Gap — Why the U.S. Has Not Ratified
-│   ├── /gap/timeline               Administration-by-administration timeline
-│   ├── /gap/arguments              Arguments against, presented faithfully
-│   └── /gap/comparison             How other nations handle ESCR
+├── /                                   Home — "What Remains Unratified"
+├── /covenant                           The Covenant — Understanding ICESCR
+│   ├── /covenant/history               Historical context (UDHR → ICESCR)
+│   ├── /covenant/articles              Article-by-article guide
+│   │   ├── /covenant/articles/1        Self-determination
+│   │   ├── /covenant/articles/6        Right to work
+│   │   ├── /covenant/articles/7        Just work conditions
+│   │   ├── /covenant/articles/9        Social security
+│   │   ├── /covenant/articles/11       Adequate standard of living
+│   │   ├── /covenant/articles/12       Right to health
+│   │   ├── /covenant/articles/13       Right to education
+│   │   └── /covenant/articles/15       Right to benefit from science
+│   └── /covenant/quiz                  Self-assessment: "Do you experience these?"
 │
-├── /analysis                       The AI Connection
-│   ├── /analysis/model             Constraint-removal economic model
-│   ├── /analysis/diagnosis         Differential diagnosis (7 hypotheses)
-│   ├── /analysis/evidence          Evidence evaluation matrix
-│   ├── /analysis/chains            Integral chain analysis (interactive)
-│   ├── /analysis/discriminator     Consensus/parsimony discriminator
-│   └── /analysis/implications      What this means for each ICESCR right
+├── /gap                                The Gap — Why the U.S. Has Not Ratified
+│   ├── /gap/timeline                   Administration-by-administration timeline
+│   ├── /gap/arguments                  Arguments against, presented faithfully
+│   └── /gap/comparison                 How other nations handle ESCR
 │
-├── /data                           The Evidence
-│   ├── /data/ai-productivity       AI productivity studies
-│   ├── /data/economic-landscape    Current economic conditions
-│   └── /data/visualizations        Interactive data visualizations
+├── /educators                          Teacher Hub (primary teacher entry point)
+│   ├── /educators/high-school          HS-level lesson plans and materials
+│   ├── /educators/university           University-level curriculum guides
+│   └── /educators/downloads            All downloadable materials (PDF, DOCX)
 │
-├── /action                         Take Action
-│   ├── /action/how-ratification    How U.S. treaty ratification works
-│   ├── /action/contact             Senator lookup and contact tools
-│   ├── /action/letters             Template letters and talking points
-│   ├── /action/educators           Lesson plans and curriculum guides
-│   └── /action/share               Shareable graphics and social content
+├── /action                             Take Action — Advocacy Toolkit
+│   ├── /action/how-ratification        How U.S. treaty ratification works
+│   ├── /action/contact                 Senator lookup and contact tools
+│   ├── /action/letters                 Template letters and talking points
+│   └── /action/share                   Shareable graphics and social content
 │
-└── /resources                      Further Reading
-    ├── /resources/icescr           Full annotated ICESCR text
-    ├── /resources/research         Academic and research sources
-    └── /resources/organizations    Organizations working on ratification
+└── /resources                          Further Reading
+    ├── /resources/icescr               Full annotated ICESCR text
+    ├── /resources/research             Academic and research sources
+    └── /resources/organizations        Organizations working on ratification
+
+observatory.unratified.org              OBSERVATORY — "Human Rights Observatory, HN Edition"
+│
+├── /                                   Observatory home — analysis overview
+├── /diagnosis                          Differential diagnosis (7 hypotheses)
+├── /chains                             Integral chain analysis (interactive)
+├── /higher-order                       Recursive higher-order effects (Orders 0-4)
+├── /evidence                           Evidence evaluation matrix + data
+├── /landscape                          Current economic/geopolitical conditions
+├── /methodology                        How the analysis works (academic-facing)
+└── /data                               Downloads: datasets, BibTeX, citations
 ```
 
 #### Cross-Linking Strategy
