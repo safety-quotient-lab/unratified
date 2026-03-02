@@ -1,0 +1,131 @@
+---
+/**
+ * DownloadCard — styled link to a print-optimized educator resource page.
+ * Pattern follows SharePrompt.astro: static HTML, scoped CSS, no external deps.
+ */
+
+interface Props {
+  /** URL to the print-optimized page */
+  href: string;
+  /** Resource title */
+  title: string;
+  /** One-sentence description */
+  description: string;
+  /** Grade level indicator, e.g. "Grades 10–12" */
+  level: string;
+  /** Optional duration, e.g. "1–2 class periods" */
+  duration?: string;
+  /** Resource type */
+  type: 'teacher-guide' | 'student-handout';
+}
+
+const { href, title, description, level, duration, type } = Astro.props;
+const typeLabel = type === 'teacher-guide' ? 'Teacher Guide' : 'Student Handout';
+---
+
+<div class="download-card">
+  <div class="download-card-body">
+    <div class="download-card-meta">
+      <span class="level-badge">{level}</span>
+      {duration && <span class="duration-note">{duration}</span>}
+      <span class="type-label">{typeLabel}</span>
+    </div>
+    <h4 class="download-card-title">{title}</h4>
+    <p class="download-card-desc">{description}</p>
+    <a href={href} target="_blank" rel="noopener" class="download-btn">
+      Open Print Version
+      <span class="download-hint">— use Ctrl+P or ⌘P to save as PDF</span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .download-card {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-cyan);
+    border-radius: 0 4px 4px 0;
+    margin: var(--space-md) 0;
+  }
+
+  .download-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: center;
+    margin-bottom: var(--space-sm);
+  }
+
+  .level-badge {
+    display: inline-block;
+    padding: 0.1rem 0.4rem;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: 1px solid var(--color-accent);
+    border-radius: 3px;
+    color: var(--color-accent);
+  }
+
+  .duration-note {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+  }
+
+  .type-label {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.1rem 0.4rem;
+    background: var(--color-text-muted);
+    color: var(--color-bg);
+    border-radius: 3px;
+  }
+
+  .download-card-title {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin: 0 0 var(--space-xs);
+  }
+
+  .download-card-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm);
+    max-width: none;
+  }
+
+  .download-btn {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: border-color 0.15s, background-color 0.15s;
+  }
+
+  .download-btn:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface);
+  }
+
+  .download-hint {
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: var(--color-text-muted);
+  }
+
+  @media print {
+    .download-card {
+      display: none;
+    }
+  }
+</style>

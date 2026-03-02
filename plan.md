@@ -261,7 +261,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Performance optimization — CSS preload, DNS prefetch, theme-color, cache headers
 - [x] Share-after-action prompts — SharePrompt component on all /action pages (amplification loop)
 - [x] E-prime audit pass — 7 violations corrected, license consistency fixed
-- [ ] Downloadable educator resources (PDF, DOCX)
+- [x] Downloadable educator resources — PrintLayout + 4 print pages (teacher guide + 3 student handouts)
 - [x] Full kashifshah.net style adaptation — colors, layout, spacing (f611985)
 - [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
 

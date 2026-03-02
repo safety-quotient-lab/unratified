@@ -1,5 +1,6 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
+import DownloadCard from '../../components/ui/DownloadCard.astro';
 ---
 
 <SectionLayout
@@ -59,6 +60,48 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
       <p><strong>Public Policy</strong>: The OBBBA case study and quality floor analysis provide material for policy analysis exercises using a rights framework.</p>
       <p><strong>Law</strong>: The ratification counterfactual and ADA pattern provide frameworks for analyzing treaty implementation through litigation.</p>
       <p><strong>STS (Science, Technology, and Society)</strong>: The entire analysis demonstrates how to evaluate technology's societal impact using structured methodology.</p>
+    </div>
+  </section>
+
+  <section class="downloads">
+    <h2>Download for Classroom Use</h2>
+    <p>
+      Open any resource as a print-ready page and save as PDF using your browser
+      (Ctrl+P or ⌘P). No login. No account. CC BY-SA 4.0.
+    </p>
+    <div class="download-grid">
+      <DownloadCard
+        href="/educators/print/teacher-guide"
+        title="Complete Educator Toolkit"
+        description="All three lesson plans with learning objectives, activities, and assessment rubrics."
+        level="Grades 10–12 + University"
+        duration="1–5 class periods"
+        type="teacher-guide"
+      />
+      <DownloadCard
+        href="/educators/print/student-lesson-1"
+        title="Student Handout — Lesson 1"
+        description="What Rights Do You Have? Activity worksheet with rights audit table."
+        level="Grades 10–12"
+        duration="50 minutes"
+        type="student-handout"
+      />
+      <DownloadCard
+        href="/educators/print/student-lesson-2"
+        title="Student Handout — Lesson 2"
+        description="AI and the Four Scarcities. Hypothesis evaluation and policy proposal."
+        level="University / Advanced HS"
+        duration="2–3 class periods"
+        type="student-handout"
+      />
+      <DownloadCard
+        href="/educators/print/student-lesson-3"
+        title="Student Handout — Lesson 3"
+        description="The OBBBA and Economic Rights. Case study and structured debate."
+        level="University"
+        duration="2 class periods"
+        type="student-handout"
+      />
     </div>
   </section>
 
@@ -124,6 +167,22 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
 
   .level-section h3 {
     margin-top: 0;
+  }
+
+  .downloads {
+    margin: var(--space-2xl) 0;
+  }
+
+  .downloads p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
   }
 
   .license-note {

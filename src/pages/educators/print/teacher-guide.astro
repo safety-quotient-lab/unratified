@@ -1,0 +1,21 @@
+---
+/**
+ * Teacher Guide — print-optimized rendering of the full educator toolkit.
+ * Re-renders educator-toolkit.mdx via getEntry() for zero content duplication.
+ */
+import PrintLayout from '../../../layouts/PrintLayout.astro';
+import { getEntry, render } from 'astro:content';
+
+const toolkit = await getEntry('action', 'educator-toolkit');
+if (!toolkit) throw new Error('educator-toolkit content entry not found');
+const { Content } = await render(toolkit);
+---
+
+<PrintLayout
+  title="Educator Toolkit — Complete Lesson Plans"
+  gradeLevel="Grades 10–12 + University"
+  duration="1–5 class periods"
+  type="teacher-guide"
+>
+  <Content />
+</PrintLayout>

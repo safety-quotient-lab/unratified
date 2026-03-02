@@ -234,11 +234,13 @@ unratified/
 │   │       ├── Quiz.svelte         ← Svelte island: self-assessment quiz
 │   │       ├── Timeline.svelte     ← Svelte island: ratification history timeline
 │   │       ├── RatificationMap.svelte ← Svelte+D3: world map choropleth
-│   │       └── SharePrompt.astro   ← Share-after-action amplification (email/X/LinkedIn/copy)
+│   │       ├── SharePrompt.astro   ← Share-after-action amplification (email/X/LinkedIn/copy)
+│   │       └── DownloadCard.astro  ← Print-page download links (level badges, type labels)
 │   ├── layouts/
 │   │   ├── BaseLayout.astro        ← Root layout with lens + nav + SEO (OG, JSON-LD)
 │   │   ├── ArticleLayout.astro     ← ICESCR article pages
-│   │   └── SectionLayout.astro     ← Section landing pages
+│   │   ├── SectionLayout.astro     ← Section landing pages
+│   │   └── PrintLayout.astro       ← Light-theme print layout (no dark CSS, @media print rules)
 │   ├── pages/
 │   │   ├── index.astro             ← Home: "What Remains Unratified" + World Map
 │   │   ├── covenant/
@@ -260,7 +262,13 @@ unratified/
 │   │   │   ├── contact.astro       ← Senator contact page (+ SharePrompt)
 │   │   │   ├── policy-brief.astro  ← Legislative staff executive summary (print-ready)
 │   │   │   └── [...slug].astro     ← Dynamic action content routes (+ SharePrompt)
-│   │   ├── educators/index.astro   ← Educator hub
+│   │   ├── educators/
+│   │   │   ├── index.astro         ← Educator hub (+ download grid)
+│   │   │   └── print/
+│   │   │       ├── teacher-guide.astro     ← Full toolkit re-render (light theme, getEntry)
+│   │   │       ├── student-lesson-1.astro  ← Student handout: What Rights Do You Have?
+│   │   │       ├── student-lesson-2.astro  ← Student handout: AI and the Four Scarcities
+│   │   │       └── student-lesson-3.astro  ← Student handout: The OBBBA and Economic Rights
 │   │   └── resources/index.astro   ← Further reading + sources
 │   └── (styles in public/styles/)
 ├── public/
@@ -280,7 +288,7 @@ unratified/
 └── tsconfig.json
 ```
 
-### Page Count: 39 static pages (as of Phase 3)
+### Page Count: 43 static pages (39 main + 4 print/educator)
 
 ### JS Bundle Profile
 ```
