@@ -240,9 +240,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Create talking points per ICESCR article
 - [x] Design educator toolkit (lesson plans, discussion guides)
 
-**Phase 2: Design and Build** (MOSTLY COMPLETE) ← CURRENT
+**Phase 2: Design and Build** (MOSTLY COMPLETE)
 - [x] Design system (typography, color, layout) — base.css complete
-- [x] Build component library — LensToggle, Quiz, Timeline, RatificationMap, ArticleLayout, SectionLayout, SharePrompt
+- [x] Build component library — LensToggle, Quiz, Timeline, RatificationMap, ArticleLayout, SectionLayout, SharePrompt, DownloadCard
 - [x] Implement responsive layouts — mobile-first CSS in base.css
 - [x] Build interactive elements (quiz, lens toggle, timeline, world map)
 - [x] D3 data visualizations — World Map (D3-geo) + Timeline (CSS+Svelte) per D013
@@ -252,7 +252,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Full accessibility audit (WCAG 2.1 AA minimum) — manual screen reader testing pending
 
 **Phase 3: Content Integration and Polish** (MOSTLY COMPLETE)
-- [x] Integrate all content into built pages — 39 pages building
+- [x] Integrate all content into built pages — 43 pages building
 - [x] Cross-link between sections — verified, all internal links valid
 - [x] Observatory cross-links — footer ecosystem link + contextual ICESCR→UDHR deep-links
 - [x] Braver Angels depolarization callouts — /action hub, contact, talking-points, educator-toolkit (D015)
@@ -265,13 +265,16 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Full kashifshah.net style adaptation — colors, layout, spacing (f611985)
 - [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
 
-**Phase 4: Launch and Outreach**
+**Phase 4: Launch and Outreach** ← CURRENT
 - [x] README.md — project overview, tech stack, component table, editorial principles
 - [x] LICENSE — Apache 2.0 (code) + CC BY-SA 4.0 (content)
 - [x] .github/CONTRIBUTING.md — contribution guidelines
 - [x] .github/ISSUE_TEMPLATE/ — factual correction, accessibility, feature request
 - [x] .github/workflows/build-check.yml — CI: type-check + build on push/PR
 - [x] Deploy to production — live at https://unratified.org (Cloudflare Pages)
+- [x] Five-lens audience model — voter (default), politician, developer, educator, researcher (D017)
+- [x] CSS build pipeline — moved to src/styles/, content-hashed via Astro bundler
+- [x] HN-style pipe separators in nav
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

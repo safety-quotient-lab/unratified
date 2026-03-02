@@ -455,4 +455,38 @@ and contextual alternates. Base font-size 16px, line-height 1.6.
 - --font-body, --font-heading, --font-mono all map to Fira Code
 - Future style adaptation from kashifshah.net: color palette (dark terminal theme),
   spacing system, layout proportions
-- D017 will capture full color/layout decisions when that work completes
+- D017 captures the five-lens audience expansion
+
+---
+
+## D017: Five-Lens Audience Model — Voter as Default Persona
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The original three-lens model (developer, educator, researcher) served
+the technical audience pipeline but missed two critical personas: voters (the largest
+constituency for ICESCR advocacy) and politicians/legislative staff (the target of
+that advocacy). The site launched with developer as the default lens, centering the
+technical audience over the advocacy audience.
+
+**Alternatives considered**:
+- A: Keep three lenses, add voter/politician content without lens switching — loses personalization
+- B: Add voter and politician as separate lenses, keep developer default — wrong priority signal
+- C: Add voter and politician, make voter the default — centers the advocacy mission
+
+**Decision**: Expand to five lenses ordered voter → politician → developer → educator → researcher.
+Voter serves as default. Lens toggle refactored from hardcoded buttons to array iteration.
+
+**Reasoning**:
+- The site advocates for ICESCR ratification — voters represent the primary change agent
+- Politician lens serves legislative staff who receive constituent advocacy
+- Developer and researcher lenses serve the analytical/technical entry audiences
+- Educator lens serves the curriculum pipeline
+- Order reflects the advocacy funnel: act → legislate → analyze → teach → research
+
+**What follows**:
+- Voter-specific and politician-specific content sections can now use `.voter-only`
+  and `.politician-only` CSS classes
+- Content differentiation per lens will develop as content matures
+- CSS moved to Astro build pipeline (src/styles/) with content-hashed filenames
+  to prevent cache staleness during lens evolution

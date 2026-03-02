@@ -168,12 +168,14 @@ BaseLayout.astro
   │   ├── reads: sessionStorage         per-page override
   │   ├── reads: localStorage           session default
   │   ├── reads: route path             entry-point detection
-  │   ├── fallback: developer           most complete content
+  │   ├── fallback: voter               advocacy-first default (D017)
   │   └── sets: data-lens on <body>
   │
-  ├── <body data-lens="developer|educator|researcher">
+  ├── <body data-lens="voter|politician|developer|educator|researcher">
   │   │
-  │   ├── CSS layout rules:
+  │   ├── CSS layout rules (5 lenses):
+  │   │   [data-lens="voter"]      → personal impact, action-oriented (default)
+  │   │   [data-lens="politician"] → policy framing, legislative pathways
   │   │   [data-lens="developer"]  → dense, data-forward, monospace tables
   │   │   [data-lens="educator"]   → learning-objective framing, downloads prominent
   │   │   [data-lens="researcher"] → structured abstracts, citations, BibTeX
@@ -270,17 +272,16 @@ unratified/
 │   │   │       ├── student-lesson-2.astro  ← Student handout: AI and the Four Scarcities
 │   │   │       └── student-lesson-3.astro  ← Student handout: The OBBBA and Economic Rights
 │   │   └── resources/index.astro   ← Further reading + sources
-│   └── (styles in public/styles/)
+│   └── styles/
+│       ├── base.css                ← Typography (Fira Code, D016), colors, spacing, a11y
+│       └── lens.css                ← Lens-specific layout transformations (5 lenses, D017)
 ├── public/
-│   ├── styles/
-│   │   ├── base.css                ← Typography (Fira Code, D016), colors, spacing, a11y
-│   │   └── lens.css                ← Lens-specific layout transformations
 │   ├── _headers                    ← Cloudflare Pages security + cache headers
 │   ├── favicon.svg
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D016)
+├── plan.md.decisions               ← Decision log (D001–D017)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
