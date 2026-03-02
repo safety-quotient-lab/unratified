@@ -1,0 +1,146 @@
+# Unratified — Architecture Evolution
+
+## Date: 2026-03-02
+
+### Initial Architecture Decisions
+
+#### Content Architecture
+
+The site organizes around three conceptual layers:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    PRESENTATION LAYER                    │
+│  Progressive disclosure: summary → detail → evidence     │
+│  Multiple entry points: AI/tech, human rights, education│
+└───────────────────────────┬─────────────────────────────┘
+                            │
+┌───────────────────────────▼─────────────────────────────┐
+│                    CONTENT LAYER                         │
+│                                                          │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐              │
+│  │ ICESCR   │  │ AI ECON  │  │ ADVOCACY │              │
+│  │ Content  │◄─┤ Analysis ├─►│ Toolkit  │              │
+│  │          │  │          │  │          │              │
+│  │ Articles │  │ Diff Dx  │  │ Letters  │              │
+│  │ History  │  │ Evidence │  │ Contacts │              │
+│  │ Arguments│  │ Data Viz │  │ Educator │              │
+│  └──────────┘  └──────────┘  └──────────┘              │
+│       ▲              ▲              ▲                    │
+│       └──────────────┼──────────────┘                    │
+│              Cross-linking layer                         │
+└───────────────────────────┬─────────────────────────────┘
+                            │
+┌───────────────────────────▼─────────────────────────────┐
+│                    DATA LAYER                            │
+│  Static content (markdown/MDX)                           │
+│  Research data (JSON/CSV for visualizations)             │
+│  Citation graph (structured references)                  │
+└─────────────────────────────────────────────────────────┘
+```
+
+#### Information Architecture — Site Map
+
+```
+/                                   Home — "What Remains Unratified"
+├── /covenant                       The Covenant — Understanding ICESCR
+│   ├── /covenant/history           Historical context (UDHR → ICESCR)
+│   ├── /covenant/articles          Article-by-article guide
+│   │   ├── /covenant/articles/1    Self-determination
+│   │   ├── /covenant/articles/6    Right to work
+│   │   ├── /covenant/articles/7    Just work conditions
+│   │   ├── /covenant/articles/9    Social security
+│   │   ├── /covenant/articles/11   Adequate standard of living
+│   │   ├── /covenant/articles/12   Right to health
+│   │   ├── /covenant/articles/13   Right to education
+│   │   └── /covenant/articles/15   Right to benefit from science
+│   └── /covenant/quiz              Self-assessment: "Do you experience these?"
+│
+├── /gap                            The Gap — Why the U.S. Has Not Ratified
+│   ├── /gap/timeline               Administration-by-administration timeline
+│   ├── /gap/arguments              Arguments against, presented faithfully
+│   └── /gap/comparison             How other nations handle ESCR
+│
+├── /analysis                       The AI Connection
+│   ├── /analysis/model             Constraint-removal economic model
+│   ├── /analysis/diagnosis         Differential diagnosis (7 hypotheses)
+│   ├── /analysis/evidence          Evidence evaluation matrix
+│   ├── /analysis/chains            Integral chain analysis (interactive)
+│   ├── /analysis/discriminator     Consensus/parsimony discriminator
+│   └── /analysis/implications      What this means for each ICESCR right
+│
+├── /data                           The Evidence
+│   ├── /data/ai-productivity       AI productivity studies
+│   ├── /data/economic-landscape    Current economic conditions
+│   └── /data/visualizations        Interactive data visualizations
+│
+├── /action                         Take Action
+│   ├── /action/how-ratification    How U.S. treaty ratification works
+│   ├── /action/contact             Senator lookup and contact tools
+│   ├── /action/letters             Template letters and talking points
+│   ├── /action/educators           Lesson plans and curriculum guides
+│   └── /action/share               Shareable graphics and social content
+│
+└── /resources                      Further Reading
+    ├── /resources/icescr           Full annotated ICESCR text
+    ├── /resources/research         Academic and research sources
+    └── /resources/organizations    Organizations working on ratification
+```
+
+#### Cross-Linking Strategy
+
+Every ICESCR article page links to:
+- The relevant AI analysis section showing how that right gets affected
+- The relevant evidence/data supporting the connection
+- The relevant action items (what to say to senators about THIS right)
+
+Every analysis page links to:
+- The ICESCR article(s) it connects to
+- The underlying evidence
+- The methodology explanation
+
+This creates a web of reinforcing content rather than a linear reading path.
+
+#### Visualization Architecture
+
+```
+VISUALIZATION TYPE        │ SECTION          │ DATA SOURCE
+──────────────────────────┼──────────────────┼─────────────────────────
+World map: ratification   │ Home, /gap       │ UN treaty database
+Timeline: U.S. history    │ /gap/timeline    │ Historical events JSON
+Causal chain diagram      │ /analysis/chains │ Hypothesis chain data
+Evidence matrix (table)   │ /analysis/dx     │ Evidence scoring JSON
+Discriminator scoring     │ /analysis/disc   │ Hypothesis scores JSON
+Bar charts: AI studies    │ /data            │ Research findings CSV
+Sankey: bottleneck flow   │ /analysis/model  │ Economic flow data
+Interactive quiz          │ /covenant/quiz   │ Question bank JSON
+```
+
+#### Accessibility Architecture
+
+- WCAG 2.1 AA minimum, AAA target for text content
+- All visualizations have text alternatives
+- All interactive elements keyboard-navigable
+- Reading level: 8th grade for summaries, college level for analysis
+- Progressive enhancement: core content works without JavaScript
+- Screen reader testing with NVDA and VoiceOver
+
+---
+
+## Technology Stack (TBD — Phase 0)
+
+Candidates under consideration:
+- **A**: Next.js + MDX + D3.js — rich interactivity, good SEO, complex build
+- **B**: Astro + MDX + Observable Plot — fast static site, good DX, simpler
+- **C**: SvelteKit + Markdown + Layercake — excellent performance, reactive viz
+- **D**: 11ty + Markdown + vanilla JS — maximum simplicity, accessibility-first
+
+Decision criteria:
+1. Accessibility-first (eliminates heavy JS frameworks without SSR)
+2. Content-driven (markdown/MDX support essential)
+3. Visualization support (D3, Observable, or equivalent)
+4. SEO performance (static generation preferred)
+5. Maintainability (small team, content updates frequent)
+6. Progressive enhancement (core content without JS)
+
+Decision pending — will document in plan.md.decisions when made.

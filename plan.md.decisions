@@ -1,0 +1,170 @@
+# Unratified — Decision Log
+
+## Decision Format
+Each entry records: what we observed, what we decided, why, and what follows.
+
+---
+
+## D001: Project Framing — AI Economics as ICESCR Advocacy Lens
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The AI economic landscape produces a bifurcation effect (H7 in our differential diagnosis) where AI-adopting entities gain while non-adopters face relative decline. This maps directly onto ICESCR Article 15 (right to benefit from scientific progress) and touches Articles 6, 7, 9, 11, 12, and 13.
+
+**Decision**: Frame the entire website around the connection between AI-driven economic transformation and ICESCR rights. Use the contemporary AI analysis as the primary hook to make a 1966 treaty feel urgent and relevant.
+
+**Reasoning**:
+- ICESCR advocacy has historically struggled with the "not really rights" framing
+- AI's economic impact provides concrete, data-driven evidence that economic rights matter
+- The constraint-removal model shows that without structural protections, AI benefits concentrate
+- Article 15 (right to science) provides direct legal grounding for the AI connection
+- This framing reaches audiences who might not engage with traditional human rights content
+
+**What follows**: All content development should maintain this dual lens — every ICESCR article gets connected to AI dynamics, every AI analysis gets connected back to specific rights.
+
+---
+
+## D002: Analytical Methodology — Differential Diagnosis with Discriminator
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The question "what happens to the economy when AI removes software labor constraints" has multiple competing answers. Simple claims like "productivity doubles" fail epistemically.
+
+**Decision**: Use a formal differential diagnosis framework with seven hypotheses, integral chain analysis, and a consensus/parsimony discriminator. Present this methodology transparently on the site.
+
+**Reasoning**:
+- Demonstrates intellectual honesty (fair witness approach)
+- Shows the work — visitors can evaluate the reasoning themselves
+- The methodology itself teaches critical thinking about economic claims
+- The discriminator result (Composite A: H2+H3+H4+H7 mod H6) holds up under scrutiny
+- Eliminated hypotheses (H1, H5) are documented with reasons, not hidden
+
+**What follows**: The analysis section requires interactive visualizations that let visitors explore the hypothesis space. The methodology explanation becomes pedagogical content in its own right.
+
+---
+
+## D003: Surviving Economic Model — Composite A
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: After running seven hypotheses through the discriminator:
+
+| Hypothesis | Score (/25) | Verdict |
+|------------|------------|---------|
+| H1 Productivity Multiplier | 12 | ELIMINATED — contradicted by evidence |
+| H2 Constraint Removal | 17 | RETAINED — component of composite |
+| H3 Jevons Explosion | 17 | RETAINED — component of composite |
+| H4 Bottleneck Migration | 20 | RETAINED — most parsimonious component |
+| H5 Recursive Acceleration | 7 | ELIMINATED — insufficient evidence |
+| H6 Quality Erosion | 16 | RETAINED — modulating factor |
+| H7 Bifurcated Economy | 19 | RETAINED — distributional filter |
+
+**Decision**: The surviving model (Composite A) describes: constraint removal → Jevons demand explosion → bounded by new bottlenecks → distributed unevenly → quality drag as primary risk. This model forms the analytical backbone of the website's AI economics section.
+
+**Reasoning**: Composite A achieves highest explanatory power with acceptable parsimony. Each component mechanism draws from established economic principles. The model makes testable predictions that differ from eliminated alternatives. It explains all observed evidence including apparent contradictions (task speedups + organizational stagnation).
+
+**What follows**: Present this as the site's primary analytical framework. Update if new evidence shifts the discriminator scores. Design visualizations around the integrated causal chain.
+
+---
+
+## D004: Communication Framework — Fair Witness in E-Prime
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: Advocacy websites often alienate skeptical audiences through perceived bias. The "not really rights" argument against ICESCR has persisted for decades partly because advocates failed to engage it seriously.
+
+**Decision**: Apply fair witness principles throughout. Present all arguments — including arguments against ratification — faithfully and without distortion. Use e-prime (no forms of "to be") in user-facing copy. Let evidence carry the persuasive weight.
+
+**Reasoning**:
+- Fair witness approach builds trust with skeptical audiences
+- E-prime forces active, precise language that avoids hidden assumptions
+- Presenting counterarguments strengthens, not weakens, the case for ratification
+- The evidence genuinely supports ratification — it doesn't need rhetorical inflation
+- This approach serves the pedagogical mission (teaching critical thinking)
+
+**What follows**: All content passes through fair witness review. Arguments against ratification get their own section, presented at the same quality level as arguments for. Every factual claim links to a source.
+
+---
+
+## D005: The Article 15 Pivot — Right to Science as Central Argument
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: ICESCR Article 15(1)(b) recognizes "the right of everyone to enjoy the benefits of scientific progress and its applications." General Comment 25 (2020) from CESCR expanded interpretation to include access, participation, protection, freedom, and enabling environment. AI constitutes the most significant scientific/technological advance of the current era.
+
+**Decision**: Position Article 15 as the central connecting point between AI economics and ICESCR advocacy. Use it as the pivot that makes the abstract concrete: "You have a right to benefit from AI. That right has no legal force in the United States."
+
+**Reasoning**:
+- Article 15 directly addresses the bifurcation problem (H7): if everyone has a right to benefit from scientific progress, then AI's uneven distribution of benefits represents a rights violation
+- General Comment 25 provides interpretive framework for applying this to AI
+- This framing converts the abstract "economic, social, cultural rights" into something tangible and immediate
+- The constraint-removal model (H2) shows AI creating enormous new value — Article 15 asks who gets access to that value
+
+**What follows**: Article 15 gets the most detailed treatment of any article page. The AI analysis section anchors on Article 15 while connecting to other articles. The advocacy toolkit leads with the Article 15 argument.
+
+---
+
+## D006: Pedagogical Approach — Progressive Disclosure with Multiple Entry Points
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The target audience spans tech-interested general public, human rights advocates, and educators. These groups arrive with different knowledge bases and different motivations.
+
+**Decision**: Design content in layers (summary → detail → evidence → methodology) with three entry paths:
+1. **AI/Tech path**: Hook with AI economics → discover ICESCR rights → arrive at advocacy
+2. **Human Rights path**: Hook with ICESCR explanation → discover AI relevance → arrive at advocacy
+3. **Educator path**: Hook with curriculum materials → explore both content streams → adapt for classroom
+
+**Reasoning**:
+- Progressive disclosure respects the reader's time and expertise level
+- Multiple entry points maximize audience reach
+- Each path leads to the same core thesis through different routes
+- The educator path generates the most durable impact (students become advocates)
+
+**What follows**: Navigation design must support all three paths. Each section needs a "summary card" (2-3 sentences) and a "deep dive" (full analysis). Cross-linking connects paths at every level.
+
+---
+
+## D007: Recursive Differential Analysis — Higher-Order Effects
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The base model (Composite A) generates cascading effects when each component's consequences get traced through further differential diagnosis at Orders 1 through 4. Applying the discriminator at each level reveals which knock-on effects survive scrutiny and which get eliminated.
+
+**Decision**: The recursive analysis identified a convergent structure — the "Four Scarcities" model — and elevated Article 13 (Education) to pivotal status. This analysis now forms the deepest analytical layer of the website's content.
+
+**Key findings by order:**
+
+| Order | Confidence | Key Survivor(s) | Eliminated |
+|-------|-----------|-----------------|-----------|
+| 0 | HIGH | Composite A (H2+H3+H4+H7 mod H6) | H1, H5 |
+| 1 | MODERATE | Commoditization, Attention, Energy, Judgment, Specification, Quality Stratification | Overwhelm, Inst. Bypass, Software Ecology, Regulatory Impossibility, Trust Collapse, Cascading Failure, Digital Colonialism, Permanent Stratification |
+| 2 | MODERATE | Value Migration Triad, Energy-Quality Feedback, Platform Recurrence, Judgment-Diffusion Paradox | (interactions, not eliminations) |
+| 3 | MOD-LOW | Four Scarcities convergence, Platform gatekeeping prediction, Judgment stratification | (convergent synthesis) |
+| 4 | LOW | Values Bottleneck (speculative) | Analysis reaches productive exhaustion |
+
+**Convergent validation**: Energy constraint identified independently from H3 (Jevons) and H4 (Bottleneck Migration), strengthening confidence in that prediction.
+
+**Reasoning**: The recursive methodology produces diminishing analytical returns beyond Order 3 but reveals a robust DIRECTIONAL finding: bottlenecks migrate from technical to human capabilities at each order. This direction holds even when individual predictions carry low confidence, because every surviving chain shows the same migration pattern.
+
+**What follows**:
+- The "Four Scarcities" model (Judgment, Attention, Energy, Specification) structures the analysis section's presentation
+- Article 13 (Education) gets featured treatment alongside Article 15 (Science) as co-pivotal articles
+- The confidence degradation map gets presented transparently — readers see where analysis transitions from evidence to inference to speculation
+- The Platform Recurrence prediction (HIGH confidence) becomes a key talking point in advocacy materials
+
+---
+
+## D008: Article 13 as Co-Pivotal (Alongside Article 15)
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The higher-order analysis reveals that across all analytical orders, Article 13 (Right to Education) carries the most consequential implications for navigating AI-driven economic transformation. The judgment pipeline problem — junior roles disappear, judgment develops through practice, judgment becomes the scarce stratifying resource — makes education the structural intervention point.
+
+**Decision**: Elevate Article 13 to co-pivotal status alongside Article 15. The website's advocacy argument now rests on two pillars:
+1. **Article 15**: Everyone has a right to benefit from scientific progress (AI). Without ratification, no binding framework ensures equitable access.
+2. **Article 13**: Everyone has a right to education. Without ratification, no binding framework ensures education adapts to produce judgment capability (the new scarce resource) rather than just production skills.
+
+**Reasoning**: Article 15 provides the more immediate, intuitive hook ("your right to benefit from AI"). Article 13 provides the deeper structural argument ("the only way to prevent permanent stratification by judgment capability requires educational transformation guaranteed by rights, not markets"). Together they create a complete argument: Article 15 addresses access, Article 13 addresses capacity.
+
+**What follows**: The advocacy toolkit leads with Article 15 for accessibility, then develops the Article 13 argument for depth. The educator toolkit foregrounds Article 13 as directly relevant to their professional mission.
