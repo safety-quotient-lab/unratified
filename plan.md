@@ -61,7 +61,7 @@ Derived from the analysis itself — these groups map to the structural roles th
 
 4. **Commercial Educational Publishers** *(future — not yet activated)*
    - Textbook publishers, EdTech platforms, curriculum distributors
-   - **Blocked by CC BY-NC-SA 4.0 NC clause** — requires commercial exception or license revision
+   - **License cleared** — CC BY-SA 4.0 permits commercial use (NC clause removed, D014)
    - Entry: teacher referral → evaluate license → contact for exception → package and distribute
    - See plan.md.marketing Audience 4 for full persona, license conflict analysis, and three activation paths
 
@@ -241,7 +241,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 
 **Phase 4: Launch and Outreach**
 - [x] README.md — project overview, tech stack, component table, editorial principles
-- [x] LICENSE — MIT (code) + CC BY 4.0 (content)
+- [x] LICENSE — Apache 2.0 (code) + CC BY-SA 4.0 (content)
 - [x] .github/CONTRIBUTING.md — contribution guidelines
 - [x] .github/ISSUE_TEMPLATE/ — factual correction, accessibility, feature request
 - [x] .github/workflows/build-check.yml — CI: type-check + build on push/PR

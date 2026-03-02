@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page Not Found" description="The page you requested does not exist.">
+  <section class="error-page">
+    <h1>404</h1>
+    <p class="error-lead">That page doesn't exist here.</p>
+    <p>
+      The URL may have changed, or the page may have moved.
+      Try navigating from the home page, or use one of the links below.
+    </p>
+    <nav class="error-nav" aria-label="Recovery navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/covenant">The Covenant</a></li>
+        <li><a href="/gap">The Gap</a></li>
+        <li><a href="/connection">AI Connection</a></li>
+        <li><a href="/evidence">Evidence</a></li>
+        <li><a href="/action">Take Action</a></li>
+      </ul>
+    </nav>
+  </section>
+</BaseLayout>
+
+<style>
+  .error-page {
+    max-width: var(--max-width-prose);
+    margin: var(--space-16) auto;
+    padding: 0 var(--space-4);
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--color-accent);
+    margin-bottom: var(--space-4);
+  }
+
+  .error-lead {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .error-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+  }
+
+  .error-nav a {
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+  }
+
+  .error-nav a:hover {
+    opacity: 0.75;
+  }
+</style>

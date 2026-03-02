@@ -143,7 +143,7 @@ Content corrections, factual updates, and accessibility improvements are the hig
 ## License
 
 **Content** (MDX files, analysis documents, data, written copy):
-[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) — share and adapt with attribution, non-commercial, same license.
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — share and adapt with attribution, same license. Commercial use permitted.
 
 **Code** (Astro pages, Svelte components, configuration):
 [Apache 2.0](LICENSE).

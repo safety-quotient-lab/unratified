@@ -314,7 +314,7 @@ API access to underlying data           │ Enables programmatic reuse   │ LOW
 
 ## Audience 4 (Future): Commercial Educational Publishers
 
-**Status**: Not yet activated. Requires license revision or explicit commercial exception before outreach. Document here to preserve the mental model and surface the constraint early.
+**Status**: License cleared as of 2026-03-02. CC BY-SA 4.0 permits commercial use (NC clause removed). Activation path now open — requires outreach strategy before engagement.
 
 ### Profile
 - Textbook publishers (Pearson, McGraw-Hill, Bedford/St. Martin's, Norton)
@@ -336,28 +336,21 @@ API access to underlying data           │ Enables programmatic reuse   │ LOW
 | Accessibility compliance | WCAG, ADA, Section 508 for their distribution channels |
 | Exclusivity | Can they license exclusively or does CC nature prevent that? |
 
-### License Conflict — The Core Constraint
+### License Resolution — Path B Selected (2026-03-02)
 
-The current CC BY-NC-SA 4.0 content license explicitly prohibits commercial use without permission. This creates a structural barrier:
+Content license upgraded from CC BY-NC-SA 4.0 → CC BY-SA 4.0. The NC clause was removed. Commercial publishers may now use, adapt, and distribute content provided they:
+- Give attribution (credit Safety Quotient Lab, link to license, note changes)
+- Distribute derivatives under CC BY-SA 4.0
 
 ```
-CC BY-NC-SA 4.0
+CC BY-SA 4.0
 │
-├── BY: Attribution required — compatible with commercial needs
-├── NC: NonCommercial — BLOCKS commercial publisher use
-└── SA: ShareAlike — would require derivative works carry same license
-    (which commercial publishers cannot offer to their customers)
+├── BY: Attribution required — compatible with commercial needs ✓
+├── SA: ShareAlike required on derivatives ✓ (acceptable to most publishers)
+└── Commercial use: PERMITTED ✓
 ```
 
-**Three paths to activation**:
-
-A: **Commercial exception license** — retain CC BY-NC-SA as default; negotiate individual commercial licenses via contact form. Standard practice for CC-licensed academic works.
-
-B: **License upgrade to CC BY-SA 4.0** — remove NC clause; allow commercial use with ShareAlike. Loses NC protection but unlocks this audience. Requires a decision in plan.md.decisions.
-
-C: **Dual licensing** — content available under CC BY-NC-SA 4.0 publicly and under a commercial license by agreement. Most flexible; highest maintenance overhead.
-
-Path A (commercial exception) requires the least structural change and preserves the open access model. Revisit when audience activation becomes relevant.
+**Decision recorded**: D014 in plan.md.decisions.
 
 ### User Journey (Anticipated)
 
@@ -433,10 +426,10 @@ Consistent design language across       │ Coherent brand               │ HIG
   observatory and main site             │                              │
 Clear cross-links between domains       │ Audiences discover the other │ HIGH
                                         │ site naturally               │
-Content license: CC BY-NC-SA 4.0        │ Enables sharing by educators │ HIGH
-  (NC clause blocks commercial use;     │ and academics; NC clause     │
-  see Audience 4 for implications)      │ requires exception for       │
-                                        │ commercial publishers         │
+Content license: CC BY-SA 4.0           │ Enables sharing by all       │ HIGH
+  (commercial use permitted;            │ audiences including          │
+  ShareAlike required on derivatives;   │ commercial publishers;       │
+  see Audience 4 for activation path)   │ NC clause removed 2026-03-02 │
 ```
 
 ---

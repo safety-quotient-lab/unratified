@@ -313,3 +313,32 @@ The U.S. Dignity Quotient — with ICCPR ratified but ICESCR unratified — carr
 - World Map component: Svelte + D3-geo with Natural Earth projection, responsive SVG, text alternative for accessibility
 - Both lazy-loaded via client:visible directive
 - Deferred visualizations captured as Phase 3 tasks
+
+---
+
+## D014: Content License — CC BY-SA 4.0 (NC Clause Removed)
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: Original content license was CC BY-NC-SA 4.0. The NC clause blocked
+commercial educational publishers (Audience 4) from using, adapting, or distributing
+content without explicit permission negotiation. A dedicated license-review agent
+evaluated the full SQ Lab license architecture and confirmed CC BY-SA 4.0 as the
+correct content license across all SQ Lab projects.
+
+**Decision**: Upgrade content license from CC BY-NC-SA 4.0 to CC BY-SA 4.0. Remove
+the NonCommercial restriction. Retain ShareAlike (derivatives must carry same license).
+
+**Reasoning**:
+- CC BY-SA 4.0 aligns with the SQ Lab license convention confirmed by the license agent
+- Removing NC unlocks commercial educational publishers as an active audience (Audience 4)
+- ShareAlike ensures derivative works remain open — consistent with the project's
+  advocacy mission
+- The ICESCR's Article 15 (right to benefit from scientific progress) argues for
+  maximizing access to this content, not restricting it
+
+**What follows**:
+- LICENSE updated (content section)
+- README.md, BaseLayout.astro footer, CONTRIBUTING.md updated
+- plan.md.marketing Audience 4 status updated — license barrier removed
+- Commercial educational publisher outreach becomes a viable future path
