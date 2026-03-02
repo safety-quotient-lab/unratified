@@ -116,7 +116,7 @@
           <path
             {d}
             fill={statusColor(status)}
-            stroke="#faf9f7"
+            stroke="#002d38"
             stroke-width="0.5"
             role="presentation"
             onmouseenter={() => { hoveredCountry = `${country.properties?.name ?? 'Unknown'}: ${statusLabel(status)}`; }}

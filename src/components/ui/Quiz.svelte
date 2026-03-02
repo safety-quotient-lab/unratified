@@ -137,7 +137,7 @@
 
   .quiz-note {
     font-size: 0.8rem;
-    color: var(--color-text-muted, #5a5a5a);
+    color: var(--color-text-muted);
     font-style: italic;
   }
 
@@ -149,14 +149,14 @@
   }
 
   fieldset.question {
-    border: 1px solid #d4d0c8;
+    border: 1px solid var(--color-border);
     border-radius: 4px;
     padding: 1.618rem;
     transition: border-color 0.15s;
   }
 
   fieldset.answered {
-    border-color: #8b4513;
+    border-color: var(--color-accent);
   }
 
   legend {
@@ -167,19 +167,19 @@
   }
 
   .q-article {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #8b4513;
+    color: var(--color-accent);
   }
 
   .q-right {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
-    color: #2d3047;
+    color: var(--color-primary);
   }
 
   .q-text {
@@ -193,35 +193,35 @@
   }
 
   .q-options button {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.8rem;
     padding: 0.382rem 1rem;
-    border: 1px solid #d4d0c8;
+    border: 1px solid var(--color-border);
     border-radius: 4px;
-    background: #ffffff;
-    color: #5a5a5a;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
     cursor: pointer;
     transition: all 0.15s;
   }
 
   .q-options button:hover {
-    border-color: #8b4513;
-    color: #2d3047;
+    border-color: var(--color-accent);
+    color: var(--color-text);
   }
 
   .q-options button.selected {
-    background: #2d3047;
-    color: #faf9f7;
-    border-color: #2d3047;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
   }
 
   .submit-btn {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
     padding: 0.618rem 1.618rem;
-    background: #8b4513;
-    color: #faf9f7;
+    background: var(--color-accent);
+    color: var(--color-bg);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -229,7 +229,7 @@
   }
 
   .submit-btn:hover:not(:disabled) {
-    background: #2d3047;
+    background: var(--color-accent-light);
   }
 
   .submit-btn:disabled {
@@ -250,24 +250,24 @@
     height: 1.618rem;
     border-radius: 4px;
     overflow: hidden;
-    background: #f0eeeb;
+    background: var(--color-surface-alt);
   }
 
-  .bar-yes { background: #2d6a4f; }
-  .bar-partial { background: #d4a574; }
-  .bar-no { background: #c1121f; }
+  .bar-yes { background: var(--color-green); }
+  .bar-partial { background: var(--color-yellow); }
+  .bar-no { background: var(--color-red); }
 
   .result-legend {
     display: flex;
     gap: 1.618rem;
     margin-top: 0.618rem;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.8rem;
   }
 
-  .legend-yes { color: #2d6a4f; }
-  .legend-partial { color: #8b4513; }
-  .legend-no { color: #c1121f; }
+  .legend-yes { color: var(--color-green); }
+  .legend-partial { color: var(--color-yellow); }
+  .legend-no { color: var(--color-red); }
 
   .result-detail {
     display: flex;
@@ -285,53 +285,54 @@
   }
 
   .result-indicator {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.75rem;
     font-weight: 600;
     min-width: 3.5rem;
   }
 
-  .result-yes .result-indicator { color: #2d6a4f; }
-  .result-partial .result-indicator { color: #8b4513; }
-  .result-no .result-indicator { color: #c1121f; }
+  .result-yes .result-indicator { color: var(--color-green); }
+  .result-partial .result-indicator { color: var(--color-yellow); }
+  .result-no .result-indicator { color: var(--color-red); }
 
   .result-right a {
-    color: #2d3047;
+    color: var(--color-accent);
     text-decoration: none;
     font-size: 0.875rem;
   }
 
   .result-right a:hover {
-    color: #8b4513;
+    color: var(--color-accent-light);
   }
 
   .result-message {
     margin: 1.618rem 0;
     padding: 1rem 1.618rem;
-    background: #f0eeeb;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 4px;
   }
 
   .result-message a {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
-    color: #8b4513;
+    color: var(--color-accent);
   }
 
   .reset-btn {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-heading);
     font-size: 0.8rem;
     padding: 0.382rem 1rem;
-    border: 1px solid #d4d0c8;
+    border: 1px solid var(--color-border);
     border-radius: 4px;
-    background: #ffffff;
-    color: #5a5a5a;
+    background: var(--color-surface);
+    color: var(--color-text-muted);
     cursor: pointer;
   }
 
   .reset-btn:hover {
-    border-color: #8b4513;
-    color: #2d3047;
+    border-color: var(--color-accent);
+    color: var(--color-text);
   }
 </style>

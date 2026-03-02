@@ -105,14 +105,14 @@
 
   function nodeColor(type: NodeType): string {
     return {
-      root: '#2d3047',
-      composite: '#2d3047',
-      hypothesis: '#4a7c59',
-      survivor: '#5a8a69',
-      interaction: '#8b4513',
-      convergence: '#2d3047',
-      speculative: '#8b8b8b',
-    }[type] ?? '#5a5a5a';
+      root: '#8faaab',
+      composite: '#8faaab',
+      hypothesis: '#819500',
+      survivor: '#a0c070',
+      interaction: '#259d94',
+      convergence: '#7d80d1',
+      speculative: '#5b7279',
+    }[type] ?? '#5b7279';
   }
 
   function isHighlighted(id: string): boolean {
@@ -458,10 +458,10 @@
   </div>
 
   <p class="flowchart-legend">
-    <span class="legend-dot" style="background:#4a7c59"></span> Hypothesis
-    <span class="legend-dot" style="background:#8b4513"></span> Interaction
-    <span class="legend-dot" style="background:#2d3047"></span> Convergence
-    <span class="legend-dot" style="background:#8b8b8b"></span> Speculative
+    <span class="legend-dot" style="background:#819500"></span> Hypothesis
+    <span class="legend-dot" style="background:#259d94"></span> Interaction
+    <span class="legend-dot" style="background:#7d80d1"></span> Convergence
+    <span class="legend-dot" style="background:#5b7279"></span> Speculative
     <span class="legend-line convergence-legend"></span> Convergent validation
   </p>
 </section>
@@ -702,8 +702,8 @@
     color: var(--color-text-muted);
   }
 
-  .node-confidence[data-confidence="high"] { color: #4a7c59; }
-  .node-confidence[data-confidence="low"] { color: #8b8b8b; }
+  .node-confidence[data-confidence="high"] { color: #819500; }
+  .node-confidence[data-confidence="low"] { color: #5b7279; }
 
   .node-sublabel {
     font-size: 0.8rem;
@@ -1000,8 +1000,8 @@
     white-space: nowrap;
   }
 
-  .step-detail-confidence[data-confidence="high"] { color: #4a7c59; }
-  .step-detail-confidence[data-confidence="low"] { color: #8b8b8b; }
+  .step-detail-confidence[data-confidence="high"] { color: #819500; }
+  .step-detail-confidence[data-confidence="low"] { color: #5b7279; }
 
   .step-detail-sublabel {
     color: var(--color-text-muted);

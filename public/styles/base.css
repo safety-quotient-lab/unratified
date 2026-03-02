@@ -1,18 +1,30 @@
 /* Unratified — Base Styles */
+/* Color palette and typography inspired by kashifshah.net */
 
 :root {
-  /* Color: restrained authority palette */
-  --color-bg: #faf9f7;
-  --color-text: #1a1a1a;
-  --color-text-muted: #5a5a5a;
-  --color-primary: #2d3047;
-  --color-accent: #8b4513;
-  --color-accent-light: #d4a574;
-  --color-border: #d4d0c8;
-  --color-surface: #ffffff;
-  --color-surface-alt: #f0eeeb;
+  /* Color: dark terminal palette (kashifshah.net) */
+  --color-bg: #002d38;
+  --color-text: #98a8a8;
+  --color-text-muted: #5b7279;
+  --color-primary: #8faaab;          /* fg-emphasis — h1, site title */
+  --color-heading: #819500;          /* green — h2/h3/h4 */
+  --color-accent: #259d94;           /* cyan — links */
+  --color-accent-light: #2b90d8;     /* blue — hover states */
+  --color-border: #093946;           /* bg-highlight — borders */
+  --color-surface: #093946;          /* bg-highlight — card surfaces */
+  --color-surface-alt: #012430;      /* deeper dark — alt surfaces */
 
-  /* Typography — Fira Code for all text (terminal/hacker aesthetic) */
+  /* Accent palette (full terminal spectrum) */
+  --color-yellow: #ac8300;
+  --color-orange: #d56500;
+  --color-red: #f23749;
+  --color-magenta: #dd459d;
+  --color-violet: #7d80d1;
+  --color-blue: #2b90d8;
+  --color-cyan: #259d94;
+  --color-green: #819500;
+
+  /* Typography — Fira Code unified (D016) */
   --font-body: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
   --font-heading: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
   --font-mono: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
@@ -26,7 +38,7 @@
   --space-2xl: 4.236rem;
 
   /* Layout */
-  --max-width-content: 42rem;
+  --max-width-content: 69ch;
   --max-width-wide: 64rem;
 }
 
@@ -41,15 +53,17 @@
 
 html {
   font-size: 16px;
-  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-variant-ligatures: common-ligatures contextual;
   font-feature-settings: "liga" 1, "calt" 1;
+  background-color: var(--color-bg);
 }
 
 body {
   font-family: var(--font-body);
+  font-size: min(6vmin, calc(1rem + 0.125vmax));
+  line-height: 1.4;
   color: var(--color-text);
   background-color: var(--color-bg);
 }
@@ -60,8 +74,8 @@ body {
   top: -100%;
   left: var(--space-md);
   padding: var(--space-sm) var(--space-md);
-  background: var(--color-primary);
-  color: var(--color-bg);
+  background: var(--color-surface);
+  color: var(--color-accent);
   z-index: 1000;
   text-decoration: none;
 }
@@ -75,30 +89,70 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.2;
-  color: var(--color-primary);
 }
 
-h1 { font-size: 2.618rem; margin-bottom: var(--space-lg); }
-h2 { font-size: 1.618rem; margin-top: var(--space-2xl); margin-bottom: var(--space-md); }
-h3 { font-size: 1.309rem; margin-top: var(--space-xl); margin-bottom: var(--space-sm); }
+h1 {
+  font-size: 2.618rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary);
+  text-shadow: 0.31rem 0.31rem 0.5rem rgba(0, 0, 0, 0.62);
+}
+
+h2 {
+  font-size: 1.618rem;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  color: var(--color-heading);
+  text-shadow: 0.19rem 0.19rem 0.31rem rgba(0, 0, 0, 0.62);
+}
+
+h3 {
+  font-size: 1.309rem;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  color: var(--color-heading);
+  text-shadow: 0.19rem 0.19rem 0.31rem rgba(0, 0, 0, 0.62);
+}
+
+h4, h5, h6 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--color-heading);
+  text-shadow: 0.11rem 0.11rem 0.19rem rgba(0, 0, 0, 0.62);
+}
+
+h4 { font-size: 1.1rem; }
+h5, h6 { font-size: 1rem; }
 
 p {
   margin-bottom: var(--space-md);
   max-width: var(--max-width-content);
+  word-wrap: break-word;
 }
 
 a {
   color: var(--color-accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
+  outline: none;
+}
+
+a:visited {
+  color: var(--color-accent);
 }
 
 a:hover {
-  color: var(--color-primary);
+  color: var(--color-accent-light);
+  background-color: var(--color-surface);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--color-accent-light);
 }
 
 blockquote {
-  border-left: 3px solid var(--color-accent-light);
+  border-left: 3px solid var(--color-accent);
   padding-left: var(--space-lg);
   margin: var(--space-lg) 0;
   color: var(--color-text-muted);
@@ -108,7 +162,8 @@ blockquote {
 code {
   font-family: var(--font-mono);
   font-size: 0.875em;
-  background: var(--color-surface-alt);
+  background: var(--color-surface);
+  color: var(--color-accent-light);
   padding: 0.1em 0.3em;
   border-radius: 3px;
 }
@@ -118,8 +173,9 @@ pre {
   font-size: 0.8rem;
   line-height: 1.4;
   padding: var(--space-lg);
-  background: var(--color-primary);
-  color: var(--color-bg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   overflow-x: auto;
   margin: var(--space-lg) 0;
@@ -127,6 +183,7 @@ pre {
 
 pre code {
   background: none;
+  color: inherit;
   padding: 0;
 }
 
@@ -139,12 +196,12 @@ table {
 }
 
 thead {
-  border-top: 2px solid var(--color-text);
-  border-bottom: 1px solid var(--color-text);
+  border-top: 2px solid var(--color-text-muted);
+  border-bottom: 1px solid var(--color-text-muted);
 }
 
 tbody {
-  border-bottom: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text-muted);
 }
 
 th, td {
@@ -155,6 +212,7 @@ th, td {
 th {
   font-family: var(--font-heading);
   font-weight: 600;
+  color: var(--color-primary);
 }
 
 /* Navigation */
@@ -179,7 +237,15 @@ th {
   font-weight: 700;
   color: var(--color-primary);
   text-decoration: none;
-  letter-spacing: -0.02em;
+}
+
+.site-title:visited {
+  color: var(--color-primary);
+}
+
+.site-title:hover {
+  color: var(--color-accent);
+  background-color: transparent;
 }
 
 .nav-links {
@@ -192,13 +258,17 @@ th {
 .nav-links a {
   font-family: var(--font-heading);
   font-size: 0.875rem;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
   text-decoration: none;
-  letter-spacing: 0.01em;
+}
+
+.nav-links a:visited {
+  color: var(--color-accent);
 }
 
 .nav-links a:hover {
-  color: var(--color-primary);
+  color: var(--color-accent-light);
+  background-color: var(--color-surface);
 }
 
 /* Main content */
@@ -214,7 +284,7 @@ main {
   padding: var(--space-xl) var(--space-lg);
   text-align: center;
   color: var(--color-text-muted);
-  font-size: 0.875rem;
+  font-size: min(6vmin, calc(0.8125rem + 0.125vmax));
 }
 
 .footer-note {
@@ -242,7 +312,6 @@ main {
 
 /* Responsive */
 @media (max-width: 768px) {
-  html { font-size: 16px; }
   h1 { font-size: 1.618rem; }
   h2 { font-size: 1.309rem; }
   main { padding: var(--space-lg); }
@@ -254,6 +323,5 @@ main {
 
   .nav-links {
     gap: var(--space-md);
-    font-size: 0.8rem;
   }
 }
