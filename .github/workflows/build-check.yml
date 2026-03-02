@@ -1,0 +1,37 @@
+name: Build check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run check
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify page count
+        run: |
+          PAGE_COUNT=$(find dist -name "index.html" | wc -l | tr -d ' ')
+          echo "Built $PAGE_COUNT pages"
+          if [ "$PAGE_COUNT" -lt "30" ]; then
+            echo "ERROR: Expected at least 30 pages, got $PAGE_COUNT"
+            exit 1
+          fi

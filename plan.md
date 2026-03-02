@@ -234,6 +234,11 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
 
 **Phase 4: Launch and Outreach**
+- [x] README.md — project overview, tech stack, component table, editorial principles
+- [x] LICENSE — MIT (code) + CC BY 4.0 (content)
+- [x] .github/CONTRIBUTING.md — contribution guidelines
+- [x] .github/ISSUE_TEMPLATE/ — factual correction, accessibility, feature request
+- [x] .github/workflows/build-check.yml — CI: type-check + build on push/PR
 - [ ] Deploy to production
 - [ ] Social media campaign
 - [ ] Educator outreach
