@@ -342,3 +342,83 @@ the NonCommercial restriction. Retain ShareAlike (derivatives must carry same li
 - README.md, BaseLayout.astro footer, CONTRIBUTING.md updated
 - plan.md.marketing Audience 4 status updated — license barrier removed
 - Commercial educational publisher outreach becomes a viable future path
+
+---
+
+## D015: Audience Architecture — Three-Tier Advocacy Pipeline with Depolarization Bridge
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The original audience model (three personas: Hackers, Teachers, Scientists)
+described how people discover the site but not what happens after understanding arrives.
+Two functional gaps emerged:
+
+1. **Conversion gap**: No documented path from "I understand the problem" to "I contacted
+   my senator." The /action section already serves this function but the persona driving
+   it — the Voter — went undocumented.
+2. **Target gap**: The site addresses politicians indirectly through voter pressure, but
+   no content exists shaped for the functional recipient — the legislative aide who
+   evaluates and briefs the senator.
+
+Simultaneously, [Braver Angels](https://braverangels.org/) (formerly Better Angels, founded 2016)
+provides a proven depolarization model: structured dialogue between opposing political
+orientations using LAPP skills (Listen, Acknowledge, Pivot, Perspective), Red/Blue workshops,
+and Common Ground exercises that produce unanimous "Points of Agreement." Their approach
+— couples therapy principles applied to political dialogue — demonstrates that
+depolarization outperforms persuasion for civic action.
+
+**Decision**: Restructure the audience model into a three-tier advocacy pipeline:
+
+```
+Tier 1 — ENTRY          Tier 2 — CONVERSION     Tier 3 — TARGET
+─────────────────────    ─────────────────────    ─────────────────────
+Hackers (HN/tech)        Voters (functional)      Politicians (indirect)
+Teachers (education)     /action/why-act          Legislative aides
+Scientists (research)    Braver Angels-inspired   /action/policy-brief
+                         depolarization bridge
+
+DELIVERY CHANNEL: Commercial Educational Publishers (Audience 4, license cleared)
+```
+
+Key architectural decisions:
+- **Voter = functional role, not demographic**. Anyone from any entry persona who decides
+  to act enters the Voter persona. This preserves the "no general public" decision.
+- **Politician = indirect target**. The site never addresses politicians directly. Voter
+  pressure, through the advocacy toolkit, provides the mechanism. The functional persona
+  within the politician tier: the **legislative aide** who evaluates and briefs.
+- **Depolarization over persuasion**. Inspired by Braver Angels' LAPP methodology, the
+  conversion bridge frames ICESCR ratification as a nonpartisan issue. Economic rights
+  cross partisan lines: conservatives value property rights and family stability (Articles
+  10, 11); progressives value social safety nets and labor rights (Articles 6, 7, 9).
+  The site surfaces common ground rather than arguing one side.
+- **"Tools not solutions" + depolarization = compound framing**. D010's "tools not
+  solutions" framing already avoids partisan overclaiming. Adding the Braver Angels
+  depolarization lens strengthens this: ratification creates a shared legal toolset
+  that both sides can use toward their own values.
+
+**Reasoning**:
+- The three-tier model describes the full advocacy pipeline — not just who finds the site,
+  but what happens after they understand the content, and who ultimately receives the action
+- Braver Angels demonstrates measurable depolarization effects: participants learn to
+  understand opposing positions and identify common interest (NPR, 2022 study)
+- ICESCR content naturally supports depolarization — economic rights lack the
+  culture-war valence of civil/political rights disputes
+- The legislative aide persona grounds the politician tier in observable behavior:
+  staffers evaluate policy briefs, quantify constituent pressure, brief senators
+- Two content gaps identified: /action/why-act (conversion bridge) and
+  /action/policy-brief (target document)
+- The pipeline model connects cleanly to the observatory: Hacker News discourse
+  (Observatory) feeds the Hacker entry persona, which feeds the full pipeline
+
+**What follows**:
+- plan.md updated with three-tier audience architecture
+- plan.md.marketing updated with full Audience 5 (Voters) and Audience 6 (Politicians)
+  sections including user journeys, messaging, UX constraints, and content gaps
+- Content gap: /action/why-act page — personal stakes + agency + social proof +
+  Braver Angels-inspired depolarization framing
+- Content gap: /action/policy-brief — executive summary for legislative aides with
+  floor-speech talking points, constituent pressure metrics, state comparison data
+- Braver Angels referenced as methodological inspiration for the conversion bridge,
+  not as a partnership (unless one develops organically)
+- Cross-Audience Flow diagram updated with full pipeline: Entry → Conversion Bridge →
+  /action toolkit → Senate office

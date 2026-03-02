@@ -1,43 +1,84 @@
 # Unratified — Marketing, User Journey, and UX Strategy
 
-## Core Audiences (Established 2026-03-02)
+## Audience Architecture (Established 2026-03-02, expanded 2026-03-02)
 
-Three core audiences, derived from the higher-order differential analysis findings. The analysis itself points to these groups: technical analysts who can evaluate the methodology, educators who shape the judgment pipeline, and academics who extend and validate the work.
+### Three-Tier Advocacy Pipeline
+
+The audience model operates across three tiers. The original three audiences (Hackers, Teachers, Scientists) function as **entry personas** — they describe how people discover and engage with the content. Two additional personas complete the advocacy pipeline: **Voters** (the conversion moment) and **Politicians** (the target of advocacy).
+
+**Depolarization methodology**: Inspired by [Braver Angels](https://braverangels.org/) (formerly Better Angels), the conversion bridge frames ICESCR ratification as a nonpartisan issue using structured dialogue techniques (LAPP: Listen, Acknowledge, Pivot, Perspective). Economic rights cross partisan lines — conservatives value family stability and property rights; progressives value labor rights and social safety nets. The ICESCR protects both. See D015 in plan.md.decisions.
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│                        THREE CORE AUDIENCES                          │
+│                     ADVOCACY PIPELINE (3 TIERS)                      │
+│                                                                      │
+│  TIER 1 — ENTRY                                                      │
+│  How people discover the site and engage with its content            │
 │                                                                      │
 │  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐   │
-│  │                  │  │                  │  │                  │   │
 │  │  HACKERS         │  │  TEACHERS        │  │  SCIENTISTS      │   │
-│  │                  │  │                  │  │                  │   │
 │  │  observatory.    │  │  unratified.org  │  │  observatory.    │   │
 │  │  unratified.org  │  │  /educators      │  │  unratified.org  │   │
-│  │                  │  │                  │  │                  │   │
 │  │  "Show me the    │  │  "Give me        │  │  "Show me the    │   │
 │  │   analysis"      │  │   materials"     │  │   methodology"   │   │
-│  │                  │  │                  │  │                  │   │
-│  │  Evaluates:      │  │  Evaluates:      │  │  Evaluates:      │   │
-│  │  rigor, novelty, │  │  usability,      │  │  citations,      │   │
-│  │  intellectual    │  │  curriculum fit,  │  │  reproducibility,│   │
-│  │  honesty        │  │  classroom-ready  │  │  novel contrib.  │   │
-│  └──────────────────┘  └──────────────────┘  └──────────────────┘   │
+│  └────────┬─────────┘  └────────┬─────────┘  └────────┬─────────┘   │
+│           │                     │                      │             │
+│           └─────────────────────┼──────────────────────┘             │
+│                                 ▼                                     │
+│  TIER 2 — CONVERSION                                                 │
+│  The moment an informed person decides to act                        │
 │                                                                      │
-│  WHY THESE THREE:                                                    │
-│  • Hackers: evaluate + amplify the analysis (distribution)           │
-│  • Teachers: shape the judgment pipeline (Article 13 pivot)          │
-│  • Scientists: validate + extend the methodology (credibility)       │
+│  ┌──────────────────────────────────────────────────────────────┐    │
+│  │  VOTERS                                                      │    │
+│  │  unratified.org/action                                       │    │
+│  │  "I understand — now what do I DO?"                          │    │
+│  │                                                              │    │
+│  │  Not a demographic. A functional role. Anyone in any entry   │    │
+│  │  persona becomes a Voter when they decide to act. A hacker   │    │
+│  │  who contacts their senator occupies both Hacker and Voter   │    │
+│  │  personas simultaneously.                                    │    │
+│  └──────────────────────────────┬───────────────────────────────┘    │
+│                                 │                                     │
+│                          constituent                                 │
+│                          pressure                                    │
+│                                 ▼                                     │
+│  TIER 3 — TARGET                                                     │
+│  Who receives the advocacy and makes the political calculation       │
+│                                                                      │
+│  ┌──────────────────────────────────────────────────────────────┐    │
+│  │  POLITICIANS (via legislative staff)                          │    │
+│  │  unratified.org/action/policy-brief (not yet built)          │    │
+│  │  "What would I vote for, and can I survive voting for it?"   │    │
+│  │                                                              │    │
+│  │  The site addresses politicians indirectly, through voter    │    │
+│  │  pressure. The functional persona: the legislative aide who  │    │
+│  │  evaluates the site and decides whether to brief the senator.│    │
+│  └──────────────────────────────────────────────────────────────┘    │
+│                                                                      │
+│  SUPPLY CHAIN:                                                       │
+│  • Entry personas: evaluate + amplify + validate (content power)     │
+│  • Voter persona: convert understanding into constituent pressure    │
+│  • Politician persona: target of pressure, holds legislative power   │
+│  • Commercial Publishers (Aud 4): scale delivery channel (future)    │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
-### Future Audience: Commercial Educational Publishers
-
-A fourth audience exists as a future possibility, distinct from the three core audiences above. Commercial educational publishers — textbook companies, EdTech platforms, curriculum distributors — may want to license and package this content for institutional distribution. This audience requires a separate licensing conversation before activation: the current CC BY-NC-SA 4.0 content license blocks commercial use by design. See Audience 4 section below for full persona.
-
 ### Why NOT a general public audience
 
-The analysis shows that the general public arrives through one of these three channels, not independently. Attempting to serve "everyone" dilutes the content for the audiences who actually engage with it. General public reach comes as a second-order effect: teachers bring it to students, HN amplifies it to the broader tech community, academic citations bring it to policy circles.
+The general public arrives through one of the three entry channels, not independently. Attempting to serve "everyone" dilutes content for the audiences who actually engage with it. General public reach arrives as a second-order effect: teachers bring it to students, HN amplifies it to the broader tech community, academic citations bring it to policy circles.
+
+The **Voter** persona does not contradict this. Voter describes a *functional role*, not an entry channel. Every entry persona feeds into the voter conversion moment. "Voter" answers the question: *what happens after someone finishes reading?*
+
+### Audience Numbering
+
+| # | Persona | Tier | Primary URL | Status |
+|---|---------|------|-------------|--------|
+| 1 | Hackers | Entry | observatory.unratified.org | Active |
+| 2 | Teachers | Entry | unratified.org/educators | Active |
+| 3 | Scientists | Entry | observatory.unratified.org/methodology | Active |
+| 4 | Commercial Publishers | Delivery | (institutional) | License cleared, not yet engaged |
+| 5 | Voters | Conversion | unratified.org/action | Active (content exists, persona now documented) |
+| 6 | Politicians | Target | unratified.org/action/policy-brief | Content gap — page not yet built |
 
 ---
 
@@ -397,9 +438,229 @@ AUDIENCE 2 (Teachers)                    AUDIENCE 4 (Commercial Publishers)
 Individual classroom use                 Institutional packaging + distribution
 Free download                            Licensed (revenue model)
 Self-directed adoption                   Procurement cycle (months-years)
-CC BY-NC-SA applies                      CC BY-NC-SA BLOCKS — needs exception
+CC BY-SA 4.0 — free to use             CC BY-SA 4.0 — commercial use permitted
 Direct UX: download and use             Indirect UX: they adapt and deliver
 Impact: one classroom                    Impact: potentially thousands of classrooms
+```
+
+---
+
+## Audience 5: Voters (Conversion Persona)
+
+### Structural Position
+
+Voter describes a functional role, not an entry channel. Every entry persona eventually feeds into the voter conversion moment. A software engineer who reads the Observatory analysis and then contacts their senator occupies both the Hacker and Voter personas simultaneously.
+
+The /action section already serves this persona. The persona was not previously documented — this section fills that gap.
+
+### Profile
+- Any person who has moved from "informed about the ICESCR" to "ready to act"
+- May have arrived through any entry channel (HN, educator materials, academic citation, friend's link, news article)
+- American — only U.S. residents can pressure U.S. senators on ratification
+- The activation trigger varies by entry path:
+  - Hacker: "The analysis convinced me — this treaty would create legal tools the U.S. currently lacks"
+  - Teacher: "I taught this to my students and now I want to act on it myself"
+  - Scientist: "The evidence supports ratification — I want policy to reflect that"
+  - General (arrived via any second-order channel): "I had no idea this treaty existed — 173 nations ratified it and we didn't?"
+
+### The Conversion Gap
+
+The site currently handles **awareness → understanding** well (covenant, gap, connection sections) but provides no explicit **bridge** between understanding and action. The jump from "I learned about the ICESCR" to "here's how to contact your senator" lacks an emotional and agency-building intermediate step.
+
+The missing bridge elements:
+1. **Personal stakes** — "How does this affect *you*?" — connecting abstract treaty rights to the reader's observable conditions
+2. **Agency framing** — "Your senator has never heard from a constituent about the ICESCR" — the rarity of the ask makes each contact more powerful
+3. **Social proof** — "173 nations, including every NATO ally" — the U.S. position as outlier
+4. **Low barrier** — "This takes 5 minutes" — reducing perceived effort
+
+These elements could live on a dedicated bridge page (e.g., `/action/why-act`) or as an enhanced introduction to the existing /action section.
+
+**Depolarization integration (implemented)**: Braver Angels callouts now appear in the /action hub, /action/contact, /action/talking-points, and /action/educator-toolkit — framing ICESCR advocacy as a cross-partisan exercise using LAPP methodology.
+
+### User Journey
+
+```
+STEP │ ACTION                          │ LOCATION                │ EMOTIONAL STATE
+─────┼─────────────────────────────────┼─────────────────────────┼──────────────────
+  1  │ Arrive via any entry channel    │ Any entry point         │ Varies — curious,
+     │ (HN, educator, academic, link)  │                         │ assigned, researching
+     │                                 │                         │
+  2  │ Engage with content             │ /covenant, /gap,        │ Learning:
+     │ Understand what ICESCR protects  │ /connection, /evidence  │ "I didn't know this"
+     │ and why the U.S. has not ratified│                        │
+     │                                 │                         │
+  3  │ [CONVERSION BRIDGE — gap]       │ /action/why-act         │ Emotional shift:
+     │ Personal stakes + agency +      │ (not yet built)         │ "This affects me,
+     │ social proof + low barrier      │                         │ and I can do something"
+     │                                 │                         │
+  4  │ Reach /action toolkit           │ unratified.org/action   │ Ready to act:
+     │ Find senator, choose template,  │                         │ "Show me how"
+     │ see talking points              │                         │
+     │                                 │                         │
+  5  │ Take action                     │ Senate.gov, phone, mail │ Acting: "Done —
+     │ Contact senator via preferred   │                         │ sent the letter"
+     │ channel (letter > email > call) │                         │
+     │                                 │                         │
+  6  │ Amplify                         │ Social media, friends,  │ Advocating:
+     │ Share with network              │ family, colleagues      │ "You should know
+     │ (becomes second-order entry     │                         │ about this too"
+     │ channel for new visitors)       │                         │
+```
+
+### Messaging
+
+**What resonates**: Concrete, personal, low-barrier. "173 nations protect these rights. Yours doesn't. Your senator has probably never received a letter about this treaty. Five minutes changes that."
+
+**What repels**: Guilt-tripping, overwhelming policy detail, making the ask feel futile. "The Senate has ignored this for 49 years" — true but demotivating without the agency reframe.
+
+**The reframe**: "The Senate has ignored this for 49 years *because no organized constituency demanded it*. Each constituent letter shifts the calculation."
+
+### UX Constraints — /action (Voter-Facing)
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+Senator lookup prominent and immediate  │ Reduce friction to action    │ HARD
+Template letters copy-paste ready       │ Lower the barrier            │ HARD
+Action takes < 5 minutes               │ Completion rate drops with   │ HARD
+                                        │ time investment              │
+Talking points per ICESCR article      │ Personalize the ask          │ HIGH
+Phone number visible (202-224-3121)    │ Some prefer calling          │ HIGH
+"What happens after I send" section    │ Set expectations, sustain    │ HIGH
+                                        │ engagement                   │
+Share-after-action prompt              │ Amplification loop back to   │ MEDIUM
+                                        │ entry personas               │
+No login, no signup, no email capture  │ Trust; respect; zero friction│ HARD
+Conversion bridge before toolkit       │ Agency reframe motivates     │ HIGH
+                                        │ action (the gap documented   │
+                                        │ above)                       │
+```
+
+### Content Gaps for This Persona
+
+- [ ] **Conversion bridge page** (`/action/why-act`) — personal stakes + agency + social proof
+- [ ] **Share-after-action prompt** on /action pages — amplification loop
+- [ ] **"What happens next" section** — set expectations for the ratification process timeline
+
+---
+
+## Audience 6: Politicians / Legislative Staff (Target Persona)
+
+### Structural Position
+
+The site addresses politicians indirectly, through voter pressure. The functional persona: the **legislative aide** who discovers the site, evaluates it, and decides whether to brief the senator. Senators rarely read advocacy websites directly — staffers filter, summarize, and recommend.
+
+This persona occupies the far end of the advocacy pipeline. The site does not need to optimize for politicians as primary readers. It needs to produce content that *survives the staffing process* — material a 25-year-old legislative correspondent can hand to a senior policy advisor with a recommendation.
+
+### Profile — Legislative Staff (Primary)
+- Senate legislative correspondents, legislative assistants, senior policy advisors
+- Age 22–35 for correspondents; 30–50 for senior advisors
+- Evaluate by: constituent signal (volume + quality of contacts), political risk/cover, floor-ready talking points, alignment with senator's existing positions or committee assignments
+- Time-constrained: will spend 2 minutes on initial evaluation, 15 minutes if it passes the filter
+- Skeptical of advocacy sites by default — they process hundreds of constituent contacts per week
+
+### Profile — Senator (Secondary)
+- Receives a filtered brief from staff, not the raw website
+- Evaluates by: political calculation (will this help or hurt reelection?), committee relevance, leadership alignment, constituent demand signal
+- Needs: one paragraph on what this asks, one paragraph on political cover, one paragraph on risk
+
+### What They Evaluate
+
+| Factor | Specific Concern |
+|--------|-----------------|
+| Constituent signal | How many constituents wrote about this? (volume = political relevance) |
+| Political cover | Who else supports this? NATO allies? Other senators? |
+| Floor-ready framing | Can I explain this in 60 seconds during a floor speech? |
+| Risk assessment | Will opponents frame this as "UN sovereignty grab"? |
+| Committee fit | Does this fall under Foreign Relations, HELP, Finance? |
+| Bipartisan potential | Can this appeal across the aisle? |
+
+### User Journey
+
+```
+STEP │ ACTION                          │ LOCATION                │ EMOTIONAL STATE
+─────┼─────────────────────────────────┼─────────────────────────┼──────────────────
+  1  │ Constituent letters arrive      │ Senate office            │ Noticing:
+     │ referencing "unratified.org"    │                         │ "Multiple people
+     │ or "ICESCR ratification"        │                         │ wrote about this"
+     │                                 │                         │
+  2  │ Legislative correspondent       │ unratified.org          │ Evaluating:
+     │ visits site to assess           │                         │ "Credible source?
+     │                                 │                         │ What do they want?"
+     │                                 │                         │
+  3  │ Finds (or fails to find)        │ /action/policy-brief    │ Filtering:
+     │ executive summary / policy brief│ (NOT YET BUILT)         │ "Can I summarize
+     │ in staffer-friendly format      │                         │ this in one page?"
+     │                                 │                         │
+  4  │ Evaluates political cover       │ /gap/comparison         │ Calculating:
+     │ 173 nations, NATO allies,       │ /gap/arguments          │ "Can the senator
+     │ arguments + counterarguments    │ /gap/counterarguments   │ survive this vote?"
+     │                                 │                         │
+  5  │ Briefs senior policy advisor    │ Internal                │ Recommending or
+     │ "Multiple constituents wrote    │                         │ declining
+     │ about ICESCR. Here's a summary" │                         │
+     │                                 │                         │
+  6  │ (If brief accepted) Senator     │ Committee or floor      │ Political
+     │ considers introducing or        │                         │ calculation
+     │ cosponsoring                    │                         │
+```
+
+### Messaging
+
+**What resonates with staffers**: Brevity, political cover, constituent signal. "173 nations ratified this treaty, including every NATO ally, every G7 member, and every EU member state. The U.S. signed it in 1977. Your constituents want to know why the Senate has not acted."
+
+**What repels staffers**: Academic analysis (too long), advocacy tone (they're professionals, not targets), moral arguments without political framing (morality doesn't pass floor votes — political calculations do).
+
+**The frame that works**: "This has bipartisan potential. It protects workers (labor priority), limits international obligations through standard RUDs (addresses sovereignty concern), and positions the U.S. with allies rather than against them."
+
+### Content Gaps for This Persona
+
+The site currently lacks any content shaped for staffers. The specific gaps:
+
+- [ ] **Policy brief page** (`/action/policy-brief`) — one-page executive summary:
+  - What the ICESCR covers (one paragraph)
+  - What ratification would mean (one paragraph, including RUDs precedent)
+  - Political cover (173 nations, NATO, G7, EU, Five Eyes)
+  - Political risk and mitigation (sovereignty objection + counterargument)
+  - Committee pathway (Senate Foreign Relations Committee)
+  - Current constituent signal (qualitative — "growing awareness driven by AI economic concerns")
+- [ ] **Talking points in floor-speech format** — 60-second versions of each argument
+- [ ] **Comparison with existing U.S. treaty commitments** — ICCPR, CRC optional protocols, WTO — showing the ICESCR asks nothing structurally novel
+
+### UX Constraints — When Built
+
+```
+CONSTRAINT                              │ RATIONALE                    │ PRIORITY
+────────────────────────────────────────┼──────────────────────────────┼─────────
+One-page summary (scrollable, no nav)  │ Staffers print or screenshot │ HARD
+No advocacy tone — informational only  │ Professional audience; they  │ HARD
+                                        │ distrust advocacy framing    │
+Printable layout (PDF-ready)           │ Physical briefs still matter │ HIGH
+                                        │ in Senate offices            │
+Sources inline (not footnoted)         │ Staffers fact-check in-line  │ HIGH
+Political cover front and center       │ First thing staffers check   │ HIGH
+No signup, no tracking, no popups      │ Government staff cannot use  │ HARD
+                                        │ sites that track or capture  │
+Accessible on government networks      │ Senate IT restricts some     │ HIGH
+  (no heavy JS, no CDN dependencies)   │ external resources           │
+```
+
+### Relationship Between Voter and Politician Personas
+
+```
+VOTER (Audience 5)                       POLITICIAN (Audience 6)
+─────────────────────────────────────    ──────────────────────────────────────
+Exerts constituent pressure              Receives constituent pressure
+Many-to-one relationship                 One senator, many constituents
+Motivated by personal stakes + values    Motivated by political calculation
+Uses /action toolkit directly            Reached indirectly through voter action
+Success = contacted senator              Success = senator considers ratification
+
+POWER FLOW:
+  Site → informs Voter → Voter contacts Senator → Staffer evaluates → Senator calculates
+
+INFORMATION FLOW:
+  Site content → Voter understanding → Constituent letter → Staffer brief → Political decision
 ```
 
 ---
@@ -436,7 +697,7 @@ Content license: CC BY-SA 4.0           │ Enables sharing by all       │ HIG
 
 ## Cross-Audience Flow
 
-The three audiences don't exist in isolation. The site architecture enables organic discovery across audience boundaries:
+The six audiences form a pipeline. Entry personas discover content; the conversion persona acts on it; the target persona receives that action.
 
 ```
                     ┌──────────────────┐
@@ -459,20 +720,49 @@ The three audiences don't exist in isolation. The site architecture enables orga
     ┌─────────────┐ ┌──────────────┐ ┌──────────────┐
     │ /covenant   │ │ /methodology │ │ /educators   │
     │             │ │              │ │              │
-    │ HN reader   │ │ Academic     │ │ Teacher finds│
+    │ HN reader   │ │ Academic     │ │ Teacher finds│    ◄── TIER 1: ENTRY
     │ discovers   │ │ evaluates    │ │ via search / │
     │ ICESCR      │ │ framework    │ │ colleague    │
     └──────┬──────┘ └──────┬───────┘ └──────┬───────┘
            │               │               │
-           ▼               ▼               ▼
-    ┌─────────────────────────────────────────────┐
-    │              /action                         │
-    │  All paths converge on advocacy toolkit      │
-    │                                              │
-    │  HN: shares, discusses, some write senators  │
-    │  Academic: cites, extends, informs policy    │
-    │  Teacher: uses materials, shapes students    │
-    └─────────────────────────────────────────────┘
+           └───────────────┼───────────────┘
+                           │
+                           ▼
+            ┌──────────────────────────────┐
+            │      /action/why-act         │
+            │  (CONVERSION BRIDGE — gap)   │    ◄── TIER 2: CONVERSION
+            │  Personal stakes + agency +  │
+            │  social proof + low barrier  │
+            └──────────────┬───────────────┘
+                           │
+                           ▼
+            ┌──────────────────────────────┐
+            │         /action              │
+            │  Senator lookup, templates,  │
+            │  talking points              │
+            │                              │
+            │  VOTER acts:                 │
+            │  letter / email / call       │──────┐
+            └──────────────────────────────┘      │
+                                                  │ constituent
+                                                  │ pressure
+                                                  ▼
+                               ┌──────────────────────────────┐
+                               │    SENATE OFFICE              │
+                               │                               │
+                               │  Staffer evaluates:           │    ◄── TIER 3: TARGET
+                               │  /action/policy-brief         │
+                               │  (NOT YET BUILT)              │
+                               │                               │
+                               │  Senator calculates:          │
+                               │  political risk vs. cover     │
+                               └──────────────────────────────┘
+
+AMPLIFICATION LOOPS:
+  Voter → shares with network → new Entry visitors (second-order)
+  Teacher → students become Voters → constituent letters
+  Academic → policy brief cited by staffer → credibility signal
+  Commercial Publisher (Aud 4) → materials reach thousands → more Voters
 ```
 
 ---
@@ -481,15 +771,14 @@ The three audiences don't exist in isolation. The site architecture enables orga
 
 The same underlying analysis gets presented differently depending on entry point:
 
-| Content Element | HN Presentation | Teacher Presentation | Academic Presentation |
-|---|---|---|---|
-| Differential diagnosis | Full analysis with scoring tables | Simplified "competing explanations" activity | Full analysis + methodology appendix |
-| Evidence matrix | Interactive sortable table | Worksheet with guided evaluation | Downloadable CSV + replication notes |
-| ICESCR articles | Linked organically from analysis | Lesson plans per article | Cross-referenced with legal commentary |
-| Higher-order effects | Full cascade visualization | "What happens next?" classroom discussion | Formal chain analysis with confidence intervals |
-| Causal chains | ASCII diagrams (they love these) | Simplified flowcharts for classroom | Formal DAG notation option |
-| Action items | Template letters, senator lookup | Lesson plan on civic participation | Policy brief format |
-| Tagline visible | "Human Rights Observatory, Hacker News Edition" | "Classroom Resources for Human Rights Education" | "Research and Methodology" |
+| Content Element | HN (Entry) | Teacher (Entry) | Academic (Entry) | Voter (Conversion) | Politician (Target) |
+|---|---|---|---|---|---|
+| Differential diagnosis | Full analysis with scoring tables | Simplified "competing explanations" | Full analysis + methodology appendix | Irrelevant — already convinced | Irrelevant — too academic |
+| ICESCR articles | Linked from analysis | Lesson plans per article | Cross-referenced with legal commentary | "This right affects you because..." | "This treaty protects X" (one line) |
+| Higher-order effects | Full cascade visualization | "What happens next?" discussion | Formal chain analysis | "Here's what happens without this" | 60-second floor speech version |
+| Action items | Template letters, senator lookup | Civic participation lesson plan | Policy brief format | **Primary content**: senator lookup + template + 5-min CTA | Policy brief + political cover |
+| Political cover | Implicit in analysis quality | Implicit in materials quality | Citation-worthy methodology | "173 nations including all NATO allies" | **Primary content**: who else, what risk, what cover |
+| Tagline | "HRO, Hacker News Edition" | "Classroom Resources" | "Research and Methodology" | "5 minutes. Your senator. 173 nations." | "Bipartisan. Standard RUDs. Allied consensus." |
 
 ---
 

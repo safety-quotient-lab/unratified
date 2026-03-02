@@ -44,6 +44,24 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
     </div>
   </section>
 
+  <section class="depolarization">
+    <h2>Beyond Partisan Lines</h2>
+    <p>
+      Economic rights cross the partisan divide. Conservatives value property rights
+      and family stability &mdash; the ICESCR protects both (Articles 10, 11).
+      Progressives champion labor rights and social safety nets &mdash; the ICESCR
+      protects those too (Articles 6, 7, 9).
+    </p>
+    <p>
+      <a href="https://braverangels.org/" rel="noopener">Braver Angels</a>, the nation's
+      largest cross-partisan citizen movement, demonstrates that structured dialogue across
+      political differences produces common ground more effectively than persuasion.
+      Their methodology &mdash; <strong>Listen, Acknowledge, Pivot, Perspective</strong> &mdash;
+      applies directly to ICESCR advocacy: lead with shared values, acknowledge genuine
+      concerns, and find the common ground that already exists in the treaty text.
+    </p>
+  </section>
+
   <section class="framing">
     <blockquote>
       Human Rights, Nothing More, Nothing Less
@@ -127,6 +145,24 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
   .step p {
     margin: 0;
     padding-top: var(--space-xs);
+  }
+
+  .depolarization {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .depolarization h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+
+  .depolarization a {
+    font-weight: 600;
   }
 
   .framing {

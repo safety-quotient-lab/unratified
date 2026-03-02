@@ -61,6 +61,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </ul>
     </section>
 
+    <section class="across-differences">
+      <h2>Communicating Across Differences</h2>
+      <p>
+        Your senator may hold different political views than you.
+        <a href="https://braverangels.org/" rel="noopener">Braver Angels</a>,
+        a national cross-partisan movement, teaches the LAPP approach to bridging divides:
+      </p>
+      <ul>
+        <li><strong>Listen</strong> &mdash; acknowledge the senator's stated concerns about the ICESCR</li>
+        <li><strong>Acknowledge</strong> &mdash; recognize sovereignty concerns as genuine, then address them with precedent (the Senate ratified the ICCPR with reservations in 1992)</li>
+        <li><strong>Pivot</strong> &mdash; redirect to shared values: economic stability, family protection, international standing</li>
+        <li><strong>Perspective</strong> &mdash; share your personal stake: how do unprotected economic rights affect your community?</li>
+      </ul>
+      <p>
+        ICESCR ratification carries natural bipartisan appeal. The treaty protects family
+        stability (Article 10), adequate living standards (Article 11), and the right to
+        benefit from scientific progress (Article 15) &mdash; values that resonate across
+        political orientations.
+      </p>
+    </section>
+
     <section class="impact">
       <h2>By Method of Contact</h2>
       <table>
@@ -158,6 +179,23 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
   li {
     margin-bottom: var(--space-sm);
+  }
+
+  .across-differences {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .across-differences h2 {
+    margin-top: 0;
+  }
+
+  .across-differences a {
+    font-weight: 600;
   }
 
   .section-nav {

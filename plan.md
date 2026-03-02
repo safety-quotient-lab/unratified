@@ -40,9 +40,11 @@ The dominant enforcement mechanism across all paths: **State AG litigation** (sc
 
 ---
 
-## Core Audiences (Three + One Future)
+## Audience Architecture (Three-Tier Pipeline + Delivery Channel)
 
-Derived from the analysis itself — these groups map to the structural roles the model identifies:
+Six personas across three tiers. Entry personas discover content; the conversion persona acts on it; the target persona receives that action.
+
+### Tier 1 — Entry (How people find the site)
 
 1. **Hackers** (observatory.unratified.org — "Human Rights Observatory, Hacker News Edition")
    - Software developers, engineers, AI practitioners, technical founders
@@ -59,13 +61,29 @@ Derived from the analysis itself — these groups map to the structural roles th
    - They validate and extend the methodology (credibility engine)
    - Entry: citation/conference → methodology → evaluate → cite/extend
 
-4. **Commercial Educational Publishers** *(future — not yet activated)*
-   - Textbook publishers, EdTech platforms, curriculum distributors
-   - **License cleared** — CC BY-SA 4.0 permits commercial use (NC clause removed, D014)
-   - Entry: teacher referral → evaluate license → contact for exception → package and distribute
-   - See plan.md.marketing Audience 4 for full persona, license conflict analysis, and three activation paths
+### Tier 2 — Conversion (The moment understanding becomes action)
 
-See plan.md.marketing for complete user journeys, UX constraints, and launch sequencing.
+5. **Voters** (unratified.org/action)
+   - Not a demographic — a functional role. Anyone from any entry persona who decides to act.
+   - "I understand — now what do I DO?"
+   - Conversion bridge gap identified: `/action/why-act` page not yet built
+   - The /action section already serves this persona; persona now documented (D015)
+
+### Tier 3 — Target (Who receives the advocacy)
+
+6. **Politicians / Legislative Staff** (unratified.org/action/policy-brief — not yet built)
+   - The site addresses politicians indirectly, through voter pressure
+   - Functional persona: the legislative aide who evaluates and briefs the senator
+   - Content gap: no policy brief page, no floor-speech talking points
+   - D015: documented as target persona with specific content gaps
+
+### Delivery Channel
+
+4. **Commercial Educational Publishers** *(license cleared, not yet engaged)*
+   - Textbook publishers, EdTech platforms, curriculum distributors
+   - CC BY-SA 4.0 permits commercial use (D014)
+
+See plan.md.marketing for complete user journeys, UX constraints, and the full pipeline diagram.
 
 ---
 
@@ -300,6 +318,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [Yale Budget Lab: State of US Tariffs](https://budgetlab.yale.edu/research/state-us-tariffs-february-20-2026)
 - [Goldman Sachs: AI Investment 2026](https://www.goldmansachs.com/insights/articles/why-ai-companies-may-invest-more-than-500-billion-in-2026)
 - [Euronews: Economic Toll of Ukraine War](https://www.euronews.com/business/2026/02/24/four-years-on-the-staggering-economic-toll-of-russias-war-in-ukraine)
+
+### Depolarization
+- [Braver Angels](https://braverangels.org/) — nation's largest cross-partisan citizen movement; LAPP methodology (Listen, Acknowledge, Pivot, Perspective); Red/Blue workshops; formerly Better Angels
 
 ### Pedagogical Design
 - [United for Human Rights Education](https://education.humanrights.com/)
