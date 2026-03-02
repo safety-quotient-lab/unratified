@@ -25,6 +25,19 @@ Without a binding legal framework for economic, social, and cultural rights, the
 
 The recursive higher-order analysis reveals that bottlenecks migrate from technical capability toward human capacities — judgment, specification, curation, and ultimately values/meaning. Article 13 (Education) emerges as the most pivotal ICESCR provision across all analytical orders, because judgment capability (the new scarce resource) develops through practice and experience that AI cannot substitute.
 
+### Advocacy Framing: "Human Rights, Nothing More, Nothing Less"
+
+Every element of this analysis — quality floors, safety net reconstruction, litigation activation, educational reform — represents implementation of rights the United States already signed onto in 1977. Nothing here asks for anything beyond what 173 nations have already committed to.
+
+### Post-OBBBA Context
+
+The One Big Beautiful Bill Act (P.L. 119-21, July 2025) slashed $990B from Medicaid, eliminated coverage for 10.9M Americans, and structured tax changes that decrease income for the lowest 10% while increasing it for the highest 10%. The analysis identifies three paths for rebuilding the safety net:
+- **Path B (NOW)**: State action + litigation — proceeds without federal legislation
+- **Path C (NEXT)**: Progressive enabling framework — federal standards states can adopt
+- **Path A (EVENTUALLY)**: Comprehensive reform — requires political transformation
+
+The dominant enforcement mechanism across all paths: **State AG litigation** (scoring 20/25), following the tobacco Master Settlement pattern.
+
 ---
 
 ## Core Audiences (Three)
@@ -143,6 +156,11 @@ See plan.md.marketing for complete user journeys, UX constraints, and launch seq
 - [x] Write project plan to disk
 - [x] Recursive differential analysis — higher-order effects through Order 4
 - [x] Identify convergent structure: Four Scarcities model + Article 13 pivot
+- [x] Ratification counterfactual analysis (ADA-pattern finding)
+- [x] Persona lens system design (Developer / Educator / Researcher)
+- [x] Litigation activation deep dive — State AG mechanism through all orders
+- [x] Quality floor / safety net analysis — three paths (B/C/A) in post-OBBBA landscape
+- [x] Establish advocacy framing: "Human Rights, Nothing More, Nothing Less"
 - [ ] Select technology stack
 - [ ] Set up project scaffolding
 
