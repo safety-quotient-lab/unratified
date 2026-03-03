@@ -108,16 +108,15 @@ This creates a web of reinforcing content rather than a linear reading path.
 #### Visualization Architecture
 
 ```
-VISUALIZATION TYPE        │ SECTION          │ DATA SOURCE
-──────────────────────────┼──────────────────┼─────────────────────────
-World map: ratification   │ Home, /gap       │ UN treaty database
-Timeline: U.S. history    │ /gap/timeline    │ Historical events JSON
-Causal chain diagram      │ /analysis/chains │ Hypothesis chain data
-Evidence matrix (table)   │ /analysis/dx     │ Evidence scoring JSON
-Discriminator scoring     │ /analysis/disc   │ Hypothesis scores JSON
-Bar charts: AI studies    │ /data            │ Research findings CSV
-Sankey: bottleneck flow   │ /analysis/model  │ Economic flow data
-Interactive quiz          │ /covenant/quiz   │ Question bank JSON
+COMPONENT (FILE)           │ TYPE         │ PAGES                        │ DATA SOURCE          │ STATUS
+───────────────────────────┼──────────────┼──────────────────────────────┼──────────────────────┼────────
+RatificationMap.svelte     │ D3-geo map   │ /                            │ ratification-status  │ ✓ D013
+Timeline.svelte            │ CSS+Svelte   │ /gap/timeline                │ Hardcoded events     │ ✓ D013
+CausalChain.svelte         │ SVG+Svelte   │ /connection (2 pages)        │ causal-chain.json    │ ✓ D019
+Quiz.svelte                │ CSS+Svelte   │ /covenant/quiz               │ Hardcoded questions  │ ✓
+ScoreChart.svelte          │ Pure SVG     │ /connection (2) /evidence (1)│ Inline Astro props   │ ✓ D020
+RadarChart.svelte          │ Pure SVG     │ /connection/dignity-quotient │ Inline Astro props   │ ✓ D020
+Sankey (V7)                │ —            │ —                            │ No flow data exists  │ Deferred
 ```
 
 #### Accessibility Architecture
@@ -338,7 +337,7 @@ unratified/
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D019)
+├── plan.md.decisions               ← Decision log (D001–D020)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
@@ -352,14 +351,16 @@ unratified/
 ```
 Component             │ Size (gzip) │ Load Strategy
 ──────────────────────┼─────────────┼──────────────
-LensToggle.svelte     │   0.95 KB   │ client:load
-ThemeToggle.svelte    │   0.85 KB   │ client:load
+LensToggle.svelte     │   0.96 KB   │ client:load
+ThemeToggle.svelte    │   0.99 KB   │ client:load
 Quiz.svelte           │   2.60 KB   │ client:visible
-Timeline.svelte       │   2.31 KB   │ client:visible
-RatificationMap.svelte│  11.15 KB   │ client:visible
-CausalChain.svelte    │  10.55 KB   │ client:visible
-Svelte runtime        │   9.20 KB   │ shared
+Timeline.svelte       │   2.30 KB   │ client:visible
+ScoreChart.svelte     │   1.98 KB   │ client:visible (D020)
+RadarChart.svelte     │   2.28 KB   │ client:visible (D020)
+RatificationMap.svelte│  11.39 KB   │ client:visible
+CausalChain.svelte    │  10.50 KB   │ client:visible
+Svelte runtime        │  10.90 KB   │ shared
 D3-geo + topojson     │   2.61 KB   │ dynamic import
 ──────────────────────┼─────────────┼──────────────
-Total (max per page)  │  ~29 KB     │ progressive
+Total (max per page)  │  ~31 KB     │ progressive
 ```

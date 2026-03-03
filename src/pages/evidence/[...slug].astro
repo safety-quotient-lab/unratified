@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ScoreChart from '../../components/ui/ScoreChart.svelte';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -12,6 +13,21 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
+const showCharts = page.id === 'research-summary';
+
+const hypothesisSummary = [
+  { label: 'H4: Bottleneck Migration', score: 20, status: 'survived' as const },
+  { label: 'H7: Bifurcated Economy', score: 19, status: 'survived' as const },
+  { label: 'H2: Constraint Removal', score: 17, status: 'survived' as const },
+  { label: 'H3: Jevons Explosion', score: 17, status: 'survived' as const },
+  { label: 'H6: Quality Erosion', score: 16, status: 'modulator' as const },
+];
+
+const safetyNetPaths = [
+  { label: 'Path C: Progressive Enabling', score: 17.2 },
+  { label: 'Path B: State Action + Litigation', score: 17.0 },
+  { label: 'Path A: Comprehensive Reform', score: 13.6 },
+];
 ---
 
 <BaseLayout title={page.data.title} description={page.data.summary}>
@@ -28,6 +44,36 @@ const { Content } = await render(page);
       <h1>{page.data.title}</h1>
       <p class="lede">{page.data.summary}</p>
     </header>
+
+    {showCharts && (
+      <section class="chart-section" aria-label="Research summary visualizations">
+        <h2>Score Visualizations</h2>
+        <h3>Surviving Hypotheses</h3>
+        <p class="chart-note">
+          Five hypotheses survived discriminator evaluation. Scores reflect
+          empirical support, parsimony, chain integrity, predictive power, and scope.
+        </p>
+        <ScoreChart
+          client:visible
+          items={hypothesisSummary}
+          maxScore={25}
+          title="Surviving Hypothesis Scores"
+          showStatus={true}
+        />
+        <h3>Safety Net Restoration Paths</h3>
+        <p class="chart-note">
+          Three strategic paths evaluated for restoring economic safety nets
+          during AI-driven transition. Higher scores indicate stronger feasibility.
+        </p>
+        <ScoreChart
+          client:visible
+          items={safetyNetPaths}
+          maxScore={25}
+          title="Safety Net Path Scores"
+          showStatus={false}
+        />
+      </section>
+    )}
 
     <div class="content">
       <Content />
@@ -69,6 +115,18 @@ const { Content } = await render(page);
     font-size: 1.1rem;
     color: var(--color-text-muted);
     max-width: 36rem;
+  }
+
+  .chart-section {
+    margin: var(--space-xl) 0;
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .chart-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
   }
 
   .content {

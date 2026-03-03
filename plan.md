@@ -263,7 +263,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] E-prime audit pass — 7 violations corrected, license consistency fixed
 - [x] Downloadable educator resources — PrintLayout + 4 print pages (teacher guide + 3 student handouts)
 - [x] Full kashifshah.net style adaptation — colors, layout, spacing (f611985)
-- [ ] Deferred visualizations: Causal Chain (V3), Sankey Flow (V7) — captured per D013
+- [x] Visualization gap fill (D020) — ScoreChart + RadarChart on 4 content pages (differential-diagnosis, ratification-counterfactual, dignity-quotient, research-summary)
+- [ ] Deferred: Sankey Flow (V7) — no quantitative flow data exists per D013
 
 **Phase 4: Launch and Outreach** ← CURRENT
 - [x] README.md — project overview, tech stack, component table, editorial principles
@@ -277,6 +278,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] HN-style pipe separators in nav
 - [x] Light mode default + dark theme toggle (D018) — ThemeToggle.svelte, CSS variable restructure, map/chain colors on CSS vars
 - [x] Voter + politician lens content (D019) — CausalChain 5 render paths, ArticleLayout persona sections, lens.css rules
+- [x] Visualization gap fill (D020) — ScoreChart + RadarChart components, integrated on 4 content pages
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

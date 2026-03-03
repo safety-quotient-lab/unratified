@@ -61,6 +61,17 @@
   --color-node-text: #ffffff;
   --color-confidence-high: #33691e;
   --color-confidence-low: #78909c;
+
+  /* Chart colors (ScoreChart + RadarChart) */
+  --color-chart-survived: #558b2f;
+  --color-chart-eliminated: #c62828;
+  --color-chart-modulator: #f9a825;
+  --color-chart-neutral: #5c6bc0;
+  --color-chart-bar-bg: #eceff1;
+  --color-chart-profile-1: #00695c;
+  --color-chart-profile-2: #1565c0;
+  --color-chart-profile-3: #ad1457;
+  --color-chart-grid: #cfd8dc;
 }
 
 /* Dark terminal palette (kashifshah.net) */
@@ -102,6 +113,17 @@
   --color-node-text: #ffffff;
   --color-confidence-high: #819500;
   --color-confidence-low: #5b7279;
+
+  /* Chart colors (ScoreChart + RadarChart) */
+  --color-chart-survived: #819500;
+  --color-chart-eliminated: #f23749;
+  --color-chart-modulator: #ac8300;
+  --color-chart-neutral: #7d80d1;
+  --color-chart-bar-bg: #012430;
+  --color-chart-profile-1: #259d94;
+  --color-chart-profile-2: #2b90d8;
+  --color-chart-profile-3: #dd459d;
+  --color-chart-grid: #093946;
 }
 
 /* Reset */

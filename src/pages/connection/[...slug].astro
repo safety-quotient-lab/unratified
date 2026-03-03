@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CausalChain from '../../components/ui/CausalChain.svelte';
+import ScoreChart from '../../components/ui/ScoreChart.svelte';
+import RadarChart from '../../components/ui/RadarChart.svelte';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -14,6 +16,49 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const { Content } = await render(page);
 const showChain = page.id === 'differential-diagnosis' || page.id === 'higher-order-effects';
+const showHypothesisChart = page.id === 'differential-diagnosis';
+const showScenarioChart = page.id === 'ratification-counterfactual';
+const showRadar = page.id === 'dignity-quotient';
+
+const hypothesisItems = [
+  { label: 'H4: Bottleneck Migration', score: 20, status: 'survived' as const },
+  { label: 'H7: Bifurcated Economy', score: 19, status: 'survived' as const },
+  { label: 'H2: Constraint Removal', score: 17, status: 'survived' as const },
+  { label: 'H3: Jevons Explosion', score: 17, status: 'survived' as const },
+  { label: 'H6: Quality Erosion', score: 16, status: 'modulator' as const },
+  { label: 'H1: Productivity Multiplier', score: 0, status: 'eliminated' as const },
+  { label: 'H5: Recursive Acceleration', score: 0, status: 'eliminated' as const },
+];
+
+const scenarioItems = [
+  { label: 'R6: Compliance Theater', score: 18, status: 'survived' as const },
+  { label: 'R3: Institutional Capacity', score: 17, status: 'survived' as const },
+  { label: 'R5: Quality Floor', score: 17, status: 'survived' as const },
+  { label: 'R7: Litigation Explosion', score: 16, status: 'survived' as const },
+  { label: 'R4: Bifurcation Mitigation', score: 15, status: 'retained' as const },
+  { label: 'R1: Directed Acceleration', score: 13, status: 'eliminated' as const },
+  { label: 'R2: Channeled Explosion', score: 13, status: 'eliminated' as const },
+];
+
+const dqDimensions = [
+  { key: 'TE', label: 'Threat Exposure' },
+  { key: 'RC', label: 'Regulatory Capacity' },
+  { key: 'RB', label: 'Resilience Baseline' },
+  { key: 'TC', label: 'Trust Conditions' },
+  { key: 'HI', label: 'Hostility Index' },
+  { key: 'CC', label: 'Cooling Capacity' },
+  { key: 'ED', label: 'Energy Dissipation' },
+  { key: 'DA', label: 'Defensive Architecture' },
+  { key: 'AD', label: 'Authority Dynamics' },
+  { key: 'CO', label: 'Contractual Clarity' },
+];
+
+const dqProfiles = [
+  {
+    name: 'Full UDHR Average',
+    values: { TE: 6.3, RC: 5.3, RB: 6.4, TC: 5.8, HI: 6.6, CC: 4.3, ED: 4.3, DA: 6.6, AD: 4.9, CO: 6.7 },
+  },
+];
 ---
 
 <BaseLayout title={page.data.title} description={page.data.summary}>
@@ -50,6 +95,56 @@ const showChain = page.id === 'differential-diagnosis' || page.id === 'higher-or
       </section>
     )}
 
+    {showHypothesisChart && (
+      <section class="chart-section" aria-label="Hypothesis scoring visualization">
+        <h2>Hypothesis Scores</h2>
+        <p class="chart-note">
+          Each hypothesis underwent discriminator scoring across five dimensions
+          (empirical support, parsimony, chain integrity, predictive power, scope)
+          at 0–5 each, total out of 25.
+        </p>
+        <ScoreChart
+          client:visible
+          items={hypothesisItems}
+          maxScore={25}
+          title="Differential Diagnosis — Hypothesis Scores"
+          showStatus={true}
+        />
+      </section>
+    )}
+
+    {showScenarioChart && (
+      <section class="chart-section" aria-label="Ratification scenario scoring visualization">
+        <h2>Scenario Scores</h2>
+        <p class="chart-note">
+          Seven ratification scenarios evaluated through the same discriminator framework.
+        </p>
+        <ScoreChart
+          client:visible
+          items={scenarioItems}
+          maxScore={25}
+          title="Ratification Counterfactual — Scenario Scores"
+          showStatus={true}
+        />
+      </section>
+    )}
+
+    {showRadar && (
+      <section class="chart-section" aria-label="Dignity Quotient radar visualization">
+        <h2>PSQ Dimension Profile</h2>
+        <p class="chart-note">
+          The UDHR's dignity profile across 10 psychoemotional safety dimensions,
+          revealing peaks in boundary protection and valleys in stress processing.
+        </p>
+        <RadarChart
+          client:visible
+          dimensions={dqDimensions}
+          profiles={dqProfiles}
+          title="Dignity Quotient — UDHR PSQ Profile"
+        />
+      </section>
+    )}
+
     <div class="content">
       <Content />
     </div>
@@ -73,6 +168,18 @@ const showChain = page.id === 'differential-diagnosis' || page.id === 'higher-or
   }
 
   .chain-section-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .chart-section {
+    margin: var(--space-2xl) 0;
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .chart-note {
     font-size: 0.875rem;
     color: var(--color-text-muted);
     margin-bottom: var(--space-lg);

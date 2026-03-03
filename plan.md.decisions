@@ -588,3 +588,57 @@ ArticleLayout:
 - Politician sees policy framing + committee language + bipartisan alignment throughout
 - All new copy written in E-prime with fair witness framing
 - ObservatoryLink continues to hide for voter/politician (no architectural change needed)
+
+---
+
+## D020: Visualization Gap Fill — ScoreChart + RadarChart
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: D013 deferred V5 (bar charts, score 15/25) because "HTML tables serve
+the function adequately." Since D013, three changes shifted the calculus:
+1. D017 added the five-lens system — voter (default) lens users benefit from visual
+   comprehension over tabular scanning
+2. Four content pages (differential-diagnosis, ratification-counterfactual,
+   dignity-quotient, research-summary) contain 5-10 scored items each in dense tables
+3. The dignity-quotient page presents 10-dimension PSQ scoring that naturally maps
+   to radar/spider chart visualization
+
+V7 (Sankey) remains impractical — no quantitative flow data exists.
+
+**Decision**: Build two reusable Svelte visualization components and integrate them
+across 4 content pages:
+
+1. **ScoreChart.svelte** — horizontal bar chart for scored items (hypothesis scores,
+   ratification scenarios, safety net paths). Props: items[], maxScore, title, showStatus.
+   Pure SVG, no D3.
+
+2. **RadarChart.svelte** — radar/spider chart for multi-dimensional profiles (DQ PSQ
+   dimensions). Props: dimensions[], profiles[], title. Pure trigonometry, no D3.
+
+Integration:
+- `/connection/differential-diagnosis` → ScoreChart (7 hypothesis scores)
+- `/connection/ratification-counterfactual` → ScoreChart (7 scenario scores)
+- `/connection/dignity-quotient` → RadarChart (10 PSQ dimensions, UDHR profile)
+- `/evidence/research-summary` → ScoreChart ×2 (surviving hypotheses + safety net paths)
+
+| Design Choice | Rationale |
+|---------------|-----------|
+| Pure SVG, no D3 | Bars and radar need only `<rect>` and cos/sin — D3 adds zero value |
+| Data inline in Astro pages | 5-10 items per chart; co-location keeps maintenance simple |
+| Single UDHR radar profile | Only profile with full 10-dimension data; interpolating missing cluster values would violate fair witness |
+| `client:visible` | Matches all existing visualization components |
+| Theme-aware via MutationObserver | Same pattern as RatificationMap and CausalChain |
+| 9 new CSS variables in base.css | Chart colors for both light and dark themes |
+
+**Reasoning**:
+- ScoreChart (4.67KB gzipped ~2KB) and RadarChart (5.37KB gzipped ~2.3KB) add minimal bundle weight
+- Both components follow every established pattern: CSS variable theming, MutationObserver reactivity, SSR-safe guards, ARIA accessibility, `<details>` text alternatives
+- Data co-located in Astro page frontmatter avoids JSON duplication of MDX content
+- Fair witness honored: radar chart shows only the UDHR profile (the only one with full 10-dimension data)
+
+**What follows**:
+- 6 visualizations now active: RatificationMap, Timeline, CausalChain, Quiz, ScoreChart, RadarChart
+- Sankey (V7) remains deferred — requires quantitative flow data that does not exist
+- New components reusable for future scoring data (e.g., if additional hypothesis evaluations emerge)
+- Bundle profile: ScoreChart and RadarChart each smaller than Timeline (5.97KB)
