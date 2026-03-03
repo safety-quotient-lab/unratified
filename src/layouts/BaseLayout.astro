@@ -45,6 +45,11 @@ const structuredData: Record<string, unknown>[] = [
       "@type": "Organization",
       "name": "Safety Quotient Lab",
       "url": "https://github.com/safety-quotient-lab",
+      "founder": {
+        "@type": "Person",
+        "name": "Kashif Shah",
+        "url": "https://kashifshah.net",
+      },
     },
     "isPartOf": {
       "@type": "WebSite",
@@ -170,10 +175,13 @@ if (Astro.url.pathname !== '/glossary') {
         <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>
         &middot;
         A <a href="https://github.com/safety-quotient-lab" rel="noopener">Safety Quotient Lab</a> project
+        by <a href="https://kashifshah.net" rel="noopener">Kashif Shah</a>
         &middot;
         Analysis by <a href="https://www.anthropic.com/claude" rel="noopener">Claude (Anthropic)</a>
         &middot;
         <a href="https://observatory.unratified.org" rel="noopener">Observatory &nearr;</a>
+        &middot;
+        <a href="mailto:kashif&#64;kashifshah.net">Contact</a>
       </p>
       <p class="footer-note">
         Human Rights; Nothing More, Nothing Less.
