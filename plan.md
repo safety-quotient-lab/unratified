@@ -285,6 +285,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Verbosity roadmap (D022) — plan.md.verbosity documents future expansion needs across all 19 remaining files
 - [x] 5-lens homepage + reading level standards (D023) — voter/politician/developer/educator/researcher variants across 4 sections + 5 cards + 2 card visuals; per-persona Flesch-Kincaid grade targets integrated into verbosity roadmap
 - [x] Semantic web layer (D024) — glossary (50 terms), taxonomy (SKOS ConceptScheme), APA references (28 sources), JSON-LD endpoints, cross-referencing mesh, lens-aware reference lists, abbreviation expansion
+- [x] Agent inbox endpoint (D024) — `/.well-known/agent-inbox.json` symmetric to observatory
+- [x] Full verbosity expansion (D025) — 19 files expanded with worked examples, Order 0-4 knock-on analysis, consensus-or-pragmatism discriminator resolution, observatory links across all content
+- [ ] About page — project identity, methodology, licensing, lens system
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

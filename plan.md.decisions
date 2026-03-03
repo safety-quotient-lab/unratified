@@ -849,3 +849,46 @@ import for dynamic researcher observatory corpus count.
 - Glossary page accessible from main navigation
 - Future content expansion should link project-specific terms to glossary on first use per page
 - Future reference additions go into `references.ts` — automatically appear in glossary bibliography, article reference lists, and JSON-LD endpoint
+
+---
+
+## D025: Full Verbosity Expansion — 19 Files with Knock-On Analysis and Discriminator Resolution
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: D022 expanded the top 5 analytical files to verbosity standard and created `plan.md.verbosity` documenting 19 remaining files across 5 priority levels. The site carried ~26,000 words with significant variation in pedagogical depth — covenant articles ranged from 316 words (article-1) to 2,100 words (article-13). Gap, action, evidence, and connection sections showed similar compression. Analytical forks in the content remained unresolved — decision points where two or more outcomes could follow from the analysis lacked explicit resolution.
+
+**Decision**: Complete the full verbosity expansion across all 19 files in a single pass:
+
+1. **P1 — Covenant articles** (7 files): article-1, article-6, article-7, article-9, article-10, article-11, article-14. Each expanded with worked examples, Order 0-4 knock-on analysis at each analytical fork, and consensus-or-pragmatism discriminator resolution.
+
+2. **P2 — Gap section** (2 primary + 2 minor): arguments.mdx expanded with "How AI Transformation Tests These Arguments" — each of the 5 arguments re-evaluated under AI pressure. timeline.mdx expanded with "Structural Mechanisms of Inaction" — priority queue, bipartisan absence, AI inflection. not-really-rights.mdx and comparison.mdx received minor expansions (Berlin example, post-ratification evidence).
+
+3. **P3 — Action section** (3 primary + 2 minor): ratification-process.mdx expanded with ICCPR precedent and political feasibility assessment. talking-points.mdx expanded with LAPP usage guidance per audience. template-letters.mdx and educator-toolkit.mdx received assessment philosophy and personalization guidance.
+
+4. **P4+P5 — Evidence + Connection** (3 files): economic-landscape.mdx expanded with household-level compound pressure analysis. dignity-quotient.mdx expanded with Article 5 vs. Article 22 PSQ worked example. ratification-counterfactual.mdx expanded with ADA pattern applied to Article 12 (health) through all phases.
+
+**Methodology — Bare Fork Resolution**:
+- At each analytical decision point (bare fork), trace consequences through Orders 0-4
+- Apply discriminator: does the fork resolve through consensus (stakeholder agreement) or pragmatism (observable constraint-based evidence)?
+- Pragmatic resolutions cite observable data. Consensus resolutions cite cross-spectrum agreement.
+- 2x depth means each order gets explicit enumeration rather than summary
+
+**Observatory links**: Every expanded file received a "Live Evidence" observatory blockquote linking to `observatory.unratified.org/rights/articles`, with context-specific framing per page topic.
+
+**Word count impact**: Site expanded from ~26,000 to ~34,000 words (approximately φ-ratio of total content volume as projected in plan.md.verbosity).
+
+**Files modified**: 7 covenant articles, 4 gap files, 5 action files, 1 evidence file, 2 connection files = 19 total.
+
+**Reasoning**:
+- Completing full expansion in a single pass maintains consistency across all analytical forks
+- Each file's knock-on analysis follows the same Order 0-4 structure, making the methodology visible to readers who encounter it across multiple pages
+- Discriminator labels (pragmatic/consensus) make the analytical method transparent — fair witness principle applied to the analysis itself
+- Observatory links on every content page bring touchpoint count to 40+ (previously 25)
+- Worked examples ground each abstract concept in a reader-facing scenario
+
+**What follows**:
+- Build produces 44 pages with zero errors
+- plan.md.verbosity targets met across all 5 priority levels
+- About page remains as next content creation task
+- Site ready for deployment at full verbosity standard
