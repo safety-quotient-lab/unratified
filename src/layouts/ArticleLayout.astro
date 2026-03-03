@@ -71,6 +71,28 @@ const {
       </ul>
     </div>
 
+    <div class="voter-only personal-impact content-section" data-section="impact">
+      <h2>What This Means for You</h2>
+      <p>{aiConnection}</p>
+      <p>173 nations protect this right through binding law. The United States signed that commitment in 1977 and never followed through.</p>
+      <p><a href="/action" class="impact-action-link">Take action on this right &rarr;</a></p>
+    </div>
+
+    <div class="politician-only policy-summary content-section" data-section="policy">
+      <h2>Policy Summary</h2>
+      <dl>
+        <dt>Right Protected</dt>
+        <dd>ICESCR Article {articleNumber} — {rightName}</dd>
+        <dt>Current U.S. Status</dt>
+        <dd>Signed 1977, unratified. No domestic legal obligation.</dd>
+        <dt>AI Relevance</dt>
+        <dd>{aiConnection}</dd>
+        <dt>Committee</dt>
+        <dd>Senate Foreign Relations Committee</dd>
+      </dl>
+      <p><a href="/action/policy-brief" class="policy-action-link">View full policy brief &rarr;</a></p>
+    </div>
+
     <section class="legal-text-section">
       <details>
         <summary>Official Treaty Text</summary>
@@ -96,6 +118,8 @@ const {
             icesCrArticle={articleNumber}
           />
         )}
+        <a class="voter-only callout-action" href="/action">Take action on this right &rarr;</a>
+        <a class="politician-only callout-action" href="/action/policy-brief">View policy brief &rarr;</a>
       </div>
     </section>
 
@@ -235,6 +259,46 @@ const {
   .ai-connection-callout a {
     font-family: var(--font-heading);
     font-size: 0.875rem;
+  }
+
+  .callout-action {
+    font-weight: 600;
+  }
+
+  .impact-action-link {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .policy-action-link {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .policy-summary dl {
+    margin: var(--space-md) 0;
+  }
+
+  .policy-summary dt {
+    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin-top: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .policy-summary dt:first-child {
+    margin-top: 0;
+  }
+
+  .policy-summary dd {
+    margin: var(--space-xs) 0 0;
+    font-size: 0.875rem;
+    line-height: 1.55;
   }
 
   .article-nav {

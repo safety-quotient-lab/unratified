@@ -497,7 +497,109 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
-     STEP-THROUGH — Researcher view
+     IMPACT NARRATIVE — Voter view (personal framing, action CTA)
+     ═══════════════════════════════════════════════════════════════════════════ -->
+{:else if activeLens === 'voter'}
+<section class="chain-impact" aria-label="How AI affects your economic rights">
+  <p class="chain-intro">
+    AI-driven economic transformation affects your work, healthcare, education,
+    and economic security. The analysis below traces how these effects connect
+    to rights that 173 nations protect — and that the United States does not.
+  </p>
+
+  <div class="impact-cards">
+    <div class="impact-card">
+      <h3 class="impact-heading">Your Job</h3>
+      <p>AI restructures labor markets. Routine tasks automate; judgment-intensive
+        roles grow. Without legal protection for the right to work, market forces
+        alone determine who adapts and who falls behind.</p>
+      <a href="/covenant/articles/article-6" class="impact-link">Article 6: Right to Work &rarr;</a>
+    </div>
+
+    <div class="impact-card">
+      <h3 class="impact-heading">Your Healthcare</h3>
+      <p>AI creates two-tier healthcare: premium AI diagnostics for those who pay,
+        commodity quality for everyone else. Without a legal right to health, no
+        standard prevents this stratification.</p>
+      <a href="/covenant/articles/article-12" class="impact-link">Article 12: Right to Health &rarr;</a>
+    </div>
+
+    <div class="impact-card">
+      <h3 class="impact-heading">Your Education</h3>
+      <p>Judgment capability — the ability to evaluate, decide, and specify —
+        emerges as the economy's scarcest resource. Without a legal right to
+        education, the pipeline that develops judgment narrows to those who can
+        afford it.</p>
+      <a href="/covenant/articles/article-13" class="impact-link">Article 13: Right to Education &rarr;</a>
+    </div>
+
+    <div class="impact-card">
+      <h3 class="impact-heading">Your Rights to Scientific Progress</h3>
+      <p>AI represents the most significant scientific advance of the century.
+        Article 15 establishes that everyone holds a legal claim to benefit from
+        scientific progress. Without ratification, that claim carries no legal
+        force in the United States.</p>
+      <a href="/covenant/articles/article-15" class="impact-link">Article 15: Right to Science &rarr;</a>
+    </div>
+  </div>
+
+  <div class="impact-cta">
+    <p>Your economic rights lack binding legal protection. 173 nations committed
+      to these protections. The United States signed that commitment in 1977 and
+      never followed through.</p>
+    <a href="/action" class="impact-action-btn">Contact your senators &rarr;</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     EXECUTIVE BRIEF — Politician / legislative staff view
+     ═══════════════════════════════════════════════════════════════════════════ -->
+{:else if activeLens === 'politician'}
+<section class="chain-brief" aria-label="Executive summary: AI and ICESCR">
+  <h3 class="brief-header">Executive Summary: AI Economic Transformation and ICESCR</h3>
+
+  <dl class="brief-items">
+    <dt>Key Finding</dt>
+    <dd>AI functions as narrow superintelligence for software labor, restructuring
+      employment, healthcare delivery, education, and economic distribution. Effects
+      map directly onto ICESCR Articles 6, 9, 12, 13, and 15.</dd>
+
+    <dt>Fiscal Context</dt>
+    <dd>The One Big Beautiful Bill Act (P.L. 119-21) reduced Medicaid by $990 billion,
+      removing coverage for 10.9 million Americans during accelerating AI-driven
+      economic transition. No binding legal standard prevented this reduction.</dd>
+
+    <dt>International Position</dt>
+    <dd>173 nations ratified the ICESCR. The United States signed in 1977 but never
+      sought Senate consent. Companion non-ratifiers: Comoros, Cuba, Palau, Andorra.</dd>
+
+    <dt>Precedent</dt>
+    <dd>The Senate ratified the ICCPR (civil and political rights) in 1992 with
+      reservations. The same approach — ratification with appropriate reservations,
+      understandings, and declarations — applies to the ICESCR.</dd>
+  </dl>
+
+  <div class="brief-bipartisan">
+    <h4>Bipartisan Alignment</h4>
+    <p>The ICESCR protects family stability (Art. 10), property and living standards
+      (Art. 11) — conservative priorities. It also protects labor rights (Art. 6-7),
+      social security (Art. 9), healthcare (Art. 12) — progressive priorities.
+      Ratification with standard RUDs creates shared legal infrastructure, not a
+      partisan program.</p>
+  </div>
+
+  <p class="brief-committee">
+    <strong>Jurisdiction:</strong> Senate Foreign Relations Committee. The ICESCR
+    has received zero committee hearings since President Carter transmitted it in 1978.
+  </p>
+
+  <a href="/action/policy-brief" class="brief-cta">
+    Full policy brief with floor-speech talking points &rarr;
+  </a>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     STEP-THROUGH — Researcher view (analytical, confidence levels)
      ═══════════════════════════════════════════════════════════════════════════ -->
 {:else}
 <section
@@ -895,6 +997,160 @@
 
   .convergence-legend {
     background: var(--color-accent);
+  }
+
+  /* ── Impact Narrative (Voter) ────────────────────────────────────────────── */
+  .chain-impact {
+    margin: var(--space-xl) 0;
+  }
+
+  .impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .impact-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .impact-heading {
+    font-size: 1rem;
+    margin: 0;
+    color: var(--color-heading);
+  }
+
+  .impact-card p {
+    font-size: 0.875rem;
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+  }
+
+  .impact-link {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    align-self: flex-start;
+  }
+
+  .impact-cta {
+    background: var(--color-surface-alt);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+    padding: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .impact-cta p {
+    font-size: 0.9rem;
+    margin: 0 0 var(--space-md);
+  }
+
+  .impact-action-btn {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-bg);
+    background: var(--color-accent);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .impact-action-btn:hover {
+    opacity: 0.85;
+  }
+
+  /* ── Executive Brief (Politician) ──────────────────────────────────────── */
+  .chain-brief {
+    margin: var(--space-xl) 0;
+    max-width: 42rem;
+  }
+
+  .brief-header {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-lg);
+    color: var(--color-primary);
+  }
+
+  .brief-items {
+    margin: 0 0 var(--space-lg);
+    font-size: 0.875rem;
+  }
+
+  .brief-items dt {
+    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    margin-top: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .brief-items dt:first-child {
+    margin-top: 0;
+  }
+
+  .brief-items dd {
+    margin: var(--space-xs) 0 0;
+    line-height: 1.55;
+  }
+
+  .brief-bipartisan {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: var(--space-md) var(--space-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .brief-bipartisan h4 {
+    font-size: 0.875rem;
+    margin: 0 0 var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .brief-bipartisan p {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .brief-committee {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .brief-cta {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-bg);
+    background: var(--color-primary);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.15s;
+  }
+
+  .brief-cta:hover {
+    opacity: 0.85;
   }
 
   /* ── Step-through ─────────────────────────────────────────────────────────── */

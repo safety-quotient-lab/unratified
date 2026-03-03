@@ -104,13 +104,37 @@
 .discussion-prompt,
 .download-callout,
 .structured-abstract,
-.citation-apparatus {
+.citation-apparatus,
+.personal-impact,
+.policy-summary {
   display: none;
+}
+
+/* Voter lens — personal impact callout */
+[data-lens="voter"] .personal-impact {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+/* Politician lens — policy summary */
+[data-lens="politician"] .policy-summary {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 /* Section reordering per lens */
 [data-lens="educator"] .content-section[data-section="objectives"] { order: -1; }
 [data-lens="researcher"] .content-section[data-section="abstract"] { order: -1; }
+[data-lens="voter"] .content-section[data-section="impact"] { order: -1; }
+[data-lens="politician"] .content-section[data-section="policy"] { order: -1; }
 
 /* Lens toggle — visible in nav */
 .lens-toggle {

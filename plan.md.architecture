@@ -180,13 +180,24 @@ BaseLayout.astro
   │   │   [data-lens="educator"]   → learning-objective framing, downloads prominent
   │   │   [data-lens="researcher"] → structured abstracts, citations, BibTeX
   │   │
+  │   ├── Lens-specific content sections (ArticleLayout, D019):
+  │   │   voter:      .personal-impact  → "What This Means for You" + action CTA
+  │   │   politician: .policy-summary   → Policy brief (right, status, AI, committee)
+  │   │   educator:   .learning-objectives + .discussion-prompt
+  │   │   researcher: .structured-abstract
+  │   │
   │   ├── Section reordering via CSS order property
   │   ├── Conditional visibility via display: none/block
   │   └── View Transitions API for smooth switch animation
   │
   └── Interactive islands (Svelte, client:visible)
       ├── Receive lens as prop from LensProvider store
-      └── Render lens-appropriate visualization variant
+      └── CausalChain: 5 render paths per lens (D019)
+          ├── educator   → accordion (pedagogical, order-by-order)
+          ├── developer  → SVG flowchart (technical, interactive graph)
+          ├── voter      → impact narrative (personal cards, action CTA)
+          ├── politician → executive brief (one-screen policy summary)
+          └── researcher → step-through (analytical, confidence levels)
 ```
 
 ### Theme System Architecture (D018)
@@ -281,6 +292,7 @@ unratified/
 │   │       ├── Quiz.svelte         ← Svelte island: self-assessment quiz
 │   │       ├── Timeline.svelte     ← Svelte island: ratification history timeline
 │   │       ├── RatificationMap.svelte ← Svelte+D3: world map choropleth
+│   │       ├── CausalChain.svelte  ← Svelte: 5-lens causal chain viz (D019)
 │   │       ├── SharePrompt.astro   ← Share-after-action amplification (email/X/LinkedIn/copy)
 │   │       └── DownloadCard.astro  ← Print-page download links (level badges, type labels)
 │   ├── layouts/
@@ -326,7 +338,7 @@ unratified/
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D017)
+├── plan.md.decisions               ← Decision log (D001–D019)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
@@ -345,6 +357,7 @@ ThemeToggle.svelte    │   0.85 KB   │ client:load
 Quiz.svelte           │   2.60 KB   │ client:visible
 Timeline.svelte       │   2.31 KB   │ client:visible
 RatificationMap.svelte│  11.15 KB   │ client:visible
+CausalChain.svelte    │  10.55 KB   │ client:visible
 Svelte runtime        │   9.20 KB   │ shared
 D3-geo + topojson     │   2.61 KB   │ dynamic import
 ──────────────────────┼─────────────┼──────────────

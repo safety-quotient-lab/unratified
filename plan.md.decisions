@@ -530,3 +530,61 @@ selector. ThemeToggle.svelte component provides switching. Blocking `<script>` i
 - PrintLayout remains independent (loads zero base.css)
 - Light palette: #fafafa bg, #37474f text, #33691e headings, #00695c links
 - Dark palette: #002d38 bg, #98a8a8 text, #819500 headings, #259d94 links
+
+---
+
+## D019: Voter & Politician Lens Content — Five CausalChain Render Paths
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: D017 added voter and politician lenses but left them functionally empty.
+The CSS classes `.voter-only` and `.politician-only` existed in lens.css but zero HTML
+used them. CausalChain had 3 render paths (educator→accordion, developer→SVG flowchart,
+else→step-through); voter and politician fell through to the researcher's catch-all view.
+ArticleLayout had educator-only (learning objectives, discussion prompts) and
+researcher-only (structured abstract) sections but nothing for voter or politician.
+ObservatoryLink hid entirely for both personas.
+
+The default lens (voter) and advocacy target (politician) — the two highest-priority
+personas — received the least differentiated experience.
+
+**Methodology**: 2x knock-on analysis at each order + consensus-or-pragmatism discriminator.
+
+**Discriminator results**:
+
+| Decision | Winner | Reasoning |
+|----------|--------|-----------|
+| 5 explicit CausalChain render paths | Consensus | All lenses deserve differentiation; new views simpler than existing ones |
+| Voter: impact narrative view | Both agree | Personal framing needed for default persona; reuses existing data (~55 lines) |
+| Politician: executive brief view | Both agree | Staffers need genuinely different view; simplest of all 5 (~45 lines) |
+| ArticleLayout: voter .personal-impact section | Both agree | Follows existing educator/researcher pattern; derives from existing props |
+| ArticleLayout: politician .policy-summary section | Both agree | Staffers need policy framing; same architecture as educator section |
+| ObservatoryLink: no changes | Pragmatism | Keep component's single responsibility; add action CTAs in ArticleLayout instead |
+
+**Decision**: Build five explicit CausalChain render paths + voter/politician
+ArticleLayout sections + lens.css display rules.
+
+CausalChain render paths:
+- `educator` → accordion (pedagogical, order-by-order) — unchanged
+- `developer` → SVG flowchart (technical, interactive) — unchanged
+- `voter` → impact narrative (personal framing, 4 summary cards, action CTA) — NEW
+- `politician` → executive brief (one-screen policy summary, committee language) — NEW
+- `researcher` → step-through (analytical, confidence levels) — moved from catch-all to explicit check
+
+ArticleLayout:
+- `.voter-only .personal-impact` — "What This Means for You" + action CTA
+- `.politician-only .policy-summary` — Policy brief header (right, status, AI relevance, committee)
+- Voter/politician callout CTAs in AI Connection section (action / policy-brief links)
+
+**Reasoning**:
+- Voter view: personal-impact framing becomes the default site experience since voter = default lens. 2x knock-on: social sharing spreads personal frame → becomes primary frame for non-technical audiences → compound growth in advocacy volume.
+- Politician view: executive brief enables staffers to grasp the case in 2 minutes. 2x knock-on: staffer shares URL internally → site becomes de facto briefing source → increases chance of committee hearing.
+- Both new views remain the simplest of all 5 — net complexity increase moderate.
+- ObservatoryLink stays unchanged: observatory serves tech/academic audiences, not voter/politician. Action/policy-brief CTAs added as separate elements in ArticleLayout.
+
+**What follows**:
+- All five lenses now receive differentiated content across CausalChain + ArticleLayout
+- Voter (default lens) sees personal-impact framing + action CTAs throughout
+- Politician sees policy framing + committee language + bipartisan alignment throughout
+- All new copy written in E-prime with fair witness framing
+- ObservatoryLink continues to hide for voter/politician (no architectural change needed)
