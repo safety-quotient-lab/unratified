@@ -179,6 +179,37 @@
   font-size: 0.8rem;
 }
 
+/* Observatory callout — shared by section index pages (D022) */
+.observatory-callout {
+  margin-top: var(--space-2xl);
+  padding: var(--space-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 4px 4px 0;
+}
+
+.observatory-callout h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+}
+
+.observatory-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.observatory-links a {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  color: var(--color-accent);
+}
+
 /* Reset */
 *,
 *::before,
