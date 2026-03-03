@@ -51,6 +51,21 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
     </p>
   </section>
 
+  <section class="cross-section-nav">
+    <h2>These Numbers Connect to Your Rights</h2>
+    <p>
+      The evidence documented here directly informs the <a href="/covenant">ICESCR articles</a>
+      protecting your economic rights. The <a href="/connection">AI Connection</a> traces how
+      AI productivity data, tariff effects, and safety net cuts translate into rights-relevant
+      consequences through the <a href="/glossary#composite-a">Composite A</a> analytical model.
+    </p>
+    <p>
+      What has prevented ratification: <a href="/gap">The Gap</a> |
+      What you can do: <a href="/action">Take Action</a> |
+      <a href="/glossary">Glossary of terms</a>
+    </p>
+  </section>
+
   <section class="observatory-callout">
     <h2>Live Signal Dashboard</h2>
     <p>
@@ -100,5 +115,27 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
   .evidence-note {
     padding-top: var(--space-xl);
     border-top: 1px solid var(--color-border);
+  }
+
+  .cross-section-nav {
+    padding: var(--space-lg);
+    background: var(--color-surface-alt);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .cross-section-nav h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+
+  .cross-section-nav p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .cross-section-nav a {
+    font-weight: 500;
   }
 </style>

@@ -805,3 +805,47 @@ import for dynamic researcher observatory corpus count.
 - `plan.md.verbosity` now includes reading level standards table and jargon expansion convention
 - Future verbosity expansion targets developer reading level (Grade 13-14) for universal copy
 - Content pages continue using universal copy + ArticleLayout lens sections (the bridge pattern)
+
+---
+
+## D024: Semantic Web Layer — Glossary, Taxonomy, APA References, Cross-Referencing
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The site lacked machine-readable vocabulary, structured citation data, and systematic cross-referencing. Hub-and-spoke link topology left covenant articles isolated from the analytical sections. Project-specific abbreviations (HRCB, Composite A, discriminator score) appeared without inline definitions on pages that reference them.
+
+**Decision**: Build a semantic web layer comprising:
+1. TypeScript data modules — `glossary.ts` (50 terms with SKOS relationships) and `references.ts` (28 APA-structured sources)
+2. Machine-readable endpoints — `/.well-known/glossary.json` (Schema.org DefinedTermSet) and `/.well-known/taxonomy.json` (SKOS ConceptScheme in JSON-LD)
+3. Human-readable glossary page at `/glossary` with category navigation, progressive disclosure, and complete bibliography
+4. Enhanced BaseLayout JSON-LD — BreadcrumbList, DefinedTermSet reference, isPartOf WebSite
+5. Lens-aware reference lists on ArticleLayout — APA for educator/researcher, endnotes for politician, hidden for voter/developer
+6. Cross-referencing mesh — covenant articles linked to connection analysis, gap section linked outward to evidence/connection, section indexes with cross-section navigation callouts
+7. Abbreviation expansion — HRCB, Composite A, discriminator score, knock-on effects linked to glossary on first use
+8. Tagline standardized: "Human Rights; Nothing More, Nothing Less." (semicolon + period)
+
+**Architecture**:
+- Data layer: `src/data/glossary.ts` and `src/data/references.ts` serve as single source of truth
+- Endpoints: Astro static API routes generate JSON-LD at build time
+- Glossary page: Uses SectionLayout, organized by 8 categories, anchor IDs for deep linking
+- Reference rendering: `formatAPA()` utility produces APA 7th edition strings; lens CSS controls visibility
+- Cross-references: Inline markdown links in content files, cross-section callout pattern in section indexes
+
+**Reasoning**:
+- Machine-readable vocabulary serves the semantic open web as a meta-level audience (developer/researcher personas)
+- SKOS and Schema.org maximize interoperability with knowledge graphs and search engines
+- APA citation rendering per persona follows the five-lens model (D017) — voter sees clean prose, researcher sees full citations
+- Cross-referencing transforms hub-and-spoke topology into mesh, increasing discoverability and reducing bounce
+- Abbreviation expansion on first use follows the jargon expansion convention established in D023
+- CC BY-SA 4.0 license declaration in both endpoints maintains content licensing consistency (D014)
+
+**Files created**: `src/data/glossary.ts`, `src/data/references.ts`, `src/pages/.well-known/glossary.json.ts`, `src/pages/.well-known/taxonomy.json.ts`, `src/pages/glossary.astro`
+
+**Files modified**: `BaseLayout.astro` (enhanced JSON-LD, glossary nav link, tagline), `ArticleLayout.astro` (lens-aware reference list), `resources/index.astro` (HRCB glossary link), 7 covenant articles (cross-references), 4 gap pages (outward links), 3 section indexes (cross-section callouts), 2 connection files (glossary links), 1 evidence file (HRCB expansion)
+
+**What follows**:
+- Build produces 44 pages with zero errors (glossary added, .well-known endpoints generated)
+- Observatory touchpoints maintain at 25+ (no reduction from cross-referencing changes)
+- Glossary page accessible from main navigation
+- Future content expansion should link project-specific terms to glossary on first use per page
+- Future reference additions go into `references.ts` — automatically appear in glossary bibliography, article reference lists, and JSON-LD endpoint

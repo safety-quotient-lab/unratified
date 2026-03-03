@@ -25,7 +25,7 @@ Without a binding legal framework for economic, social, and cultural rights, the
 
 The recursive higher-order analysis reveals that bottlenecks migrate from technical capability toward human capacities — judgment, specification, curation, and ultimately values/meaning. Article 13 (Education) emerges as the most pivotal ICESCR provision across all analytical orders, because judgment capability (the new scarce resource) develops through practice and experience that AI cannot substitute.
 
-### Advocacy Framing: "Human Rights, Nothing More, Nothing Less"
+### Advocacy Framing: "Human Rights; Nothing More, Nothing Less."
 
 Every element of this analysis — quality floors, safety net reconstruction, litigation activation, educational reform — represents implementation of rights the United States already signed onto in 1977. Nothing here asks for anything beyond what 173 nations have already committed to.
 
@@ -184,7 +184,7 @@ See plan.md.marketing for complete user journeys, UX constraints, and the full p
 - [x] Persona lens system design (Developer / Educator / Researcher)
 - [x] Litigation activation deep dive — State AG mechanism through all orders
 - [x] Quality floor / safety net analysis — three paths (B/C/A) in post-OBBBA landscape
-- [x] Establish advocacy framing: "Human Rights, Nothing More, Nothing Less"
+- [x] Establish advocacy framing: "Human Rights; Nothing More, Nothing Less."
 - [x] PSQ evaluation of full UDHR — Dignity Quotient framework established
 - [x] Deploy repository to GitHub (safety-quotient-lab/unratified)
 - [x] Define organizational identity for unratified.org
@@ -284,6 +284,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Verbosity expansion (D022) — φ-ratio pedagogical expansion across 5 files (differential-diagnosis, higher-order-effects, research-summary, article-12, article-13)
 - [x] Verbosity roadmap (D022) — plan.md.verbosity documents future expansion needs across all 19 remaining files
 - [x] 5-lens homepage + reading level standards (D023) — voter/politician/developer/educator/researcher variants across 4 sections + 5 cards + 2 card visuals; per-persona Flesch-Kincaid grade targets integrated into verbosity roadmap
+- [x] Semantic web layer (D024) — glossary (50 terms), taxonomy (SKOS ConceptScheme), APA references (28 sources), JSON-LD endpoints, cross-referencing mesh, lens-aware reference lists, abbreviation expansion
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

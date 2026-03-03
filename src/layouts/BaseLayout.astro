@@ -20,8 +20,64 @@ const {
 
 const lensFromUrl = Astro.url.searchParams.get('lens') as Props['defaultLens'] | null;
 const activeLens = lensFromUrl ?? defaultLens;
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://unratified.org');
+const siteOrigin = Astro.site?.origin ?? 'https://unratified.org';
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
 const fullTitle = `${title} | Unratified`;
+
+// Build breadcrumb items from URL path
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
+const breadcrumbItems = [
+  { name: 'Home', url: `${siteOrigin}/` },
+  ...pathSegments.map((seg, i) => ({
+    name: seg.split('-').map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    url: `${siteOrigin}/${pathSegments.slice(0, i + 1).join('/')}/`,
+  })),
+];
+
+// Structured data graph
+const structuredData: Record<string, unknown>[] = [
+  {
+    "@type": ogType === 'article' ? 'Article' : 'WebSite',
+    "name": fullTitle,
+    "description": description,
+    "url": canonicalUrl.href,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Safety Quotient Lab",
+      "url": "https://github.com/safety-quotient-lab",
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Unratified",
+      "url": siteOrigin,
+    },
+    ...(ogType === 'article' ? {
+      "datePublished": "2026-03-02",
+      "inLanguage": "en-US",
+    } : {}),
+  },
+  {
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbItems.map((item, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": item.name,
+      "item": item.url,
+    })),
+  },
+];
+
+// Add DefinedTermSet reference on non-glossary pages
+if (Astro.url.pathname !== '/glossary') {
+  structuredData[0] = {
+    ...structuredData[0] as Record<string, unknown>,
+    "mentions": {
+      "@type": "DefinedTermSet",
+      "name": "Unratified Glossary",
+      "url": `${siteOrigin}/.well-known/glossary.json`,
+    },
+  };
+}
 ---
 
 <!doctype html>
@@ -74,15 +130,7 @@ const fullTitle = `${title} | Unratified`;
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": ogType === 'article' ? 'Article' : 'WebSite',
-      "name": fullTitle,
-      "description": description,
-      "url": canonicalUrl.href,
-      "publisher": {
-        "@type": "Organization",
-        "name": "Safety Quotient Lab",
-        "url": "https://github.com/safety-quotient-lab"
-      }
+      "@graph": structuredData,
     })} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -103,6 +151,7 @@ const fullTitle = `${title} | Unratified`;
           <li><a href="/educators">Educators</a></li>
           <li><a href="/action">Take Action</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/glossary">Glossary</a></li>
         </ul>
         <div class="nav-controls">
           <LensToggle client:load />
@@ -124,7 +173,7 @@ const fullTitle = `${title} | Unratified`;
         <a href="https://observatory.unratified.org" rel="noopener">Observatory &nearr;</a>
       </p>
       <p class="footer-note">
-        Human Rights, Nothing More, Nothing Less
+        Human Rights; Nothing More, Nothing Less.
       </p>
     </footer>
   </body>

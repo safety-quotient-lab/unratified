@@ -53,6 +53,22 @@ const cardStats: Record<string, { number: string; label: string }> = {
     </p>
   </section>
 
+  <section class="cross-section-nav">
+    <h2>What Ratification Would Change</h2>
+    <p>
+      The <a href="/connection/ratification-counterfactual">ratification counterfactual</a> models
+      what happens when the gap closes — using the <a href="/glossary#ada-pattern">ADA pattern</a>
+      to predict enforcement timelines, <a href="/glossary#quality-floor">quality floors</a> for AI
+      in rights-critical domains, and <a href="/glossary#state-ag-litigation">State AG litigation</a>
+      as the dominant enforcement mechanism.
+    </p>
+    <p>
+      What these rights protect: <a href="/covenant">The Covenant</a> |
+      The data behind the analysis: <a href="/evidence">Evidence</a> |
+      <a href="/glossary">Glossary of terms</a>
+    </p>
+  </section>
+
   <section class="observatory-callout">
     <h2>Live Evidence</h2>
     <p>
@@ -101,5 +117,27 @@ const cardStats: Record<string, { number: string; label: string }> = {
   .gap-summary {
     padding-top: var(--space-xl);
     border-top: 1px solid var(--color-border);
+  }
+
+  .cross-section-nav {
+    padding: var(--space-lg);
+    background: var(--color-surface-alt);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .cross-section-nav h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+
+  .cross-section-nav p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .cross-section-nav a {
+    font-weight: 500;
   }
 </style>

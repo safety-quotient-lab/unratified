@@ -1,6 +1,6 @@
 # Quality Floor Analysis: Rebuilding the Safety Net in the Post-OBBBA Landscape
 
-## Framing: Human Rights, Nothing More, Nothing Less
+## Framing: Human Rights; Nothing More, Nothing Less.
 
 The argument for ICESCR ratification and AI-era quality floors reduces to a simple assertion: **Human rights, nothing more, nothing less.**
 

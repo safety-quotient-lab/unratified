@@ -508,7 +508,7 @@ The PSQ evaluation of the UDHR provides an empirically-grounded framework for th
 
 4. **AI disruption widens the gap** — the PSQ dimensions most affected by AI-driven economic transformation (RB, ED, AD) overlap with the dimensions the ICESCR protects and the U.S. framework lacks
 
-5. **"Human Rights, Nothing More, Nothing Less"** — the PSQ evaluation demonstrates that ICESCR ratification does not add new rights but completes the psychoemotional safety profile that the UDHR intended from the beginning
+5. **"Human Rights; Nothing More, Nothing Less."** — the PSQ evaluation demonstrates that ICESCR ratification does not add new rights but completes the psychoemotional safety profile that the UDHR intended from the beginning
 
 ---
 

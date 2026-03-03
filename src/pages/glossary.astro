@@ -1,0 +1,293 @@
+---
+import SectionLayout from '../layouts/SectionLayout.astro';
+import {
+  glossary,
+  CATEGORY_ORDER,
+  CATEGORY_LABELS,
+  CATEGORY_DESCRIPTIONS,
+  getTermsByCategory,
+  getTerm,
+} from '../data/glossary';
+import {
+  references,
+  REFERENCE_CATEGORIES,
+  getReferencesByCategory,
+  formatAPA,
+} from '../data/references';
+---
+
+<SectionLayout
+  title="Glossary"
+  description="Definitions, taxonomy, and references for the analytical vocabulary used throughout this site."
+  section="glossary"
+>
+  <nav class="glossary-nav" aria-label="Glossary categories">
+    <ul>
+      {CATEGORY_ORDER.map((cat) => (
+        <li><a href={`#${cat}`}>{CATEGORY_LABELS[cat]}</a></li>
+      ))}
+      <li><a href="#references">References</a></li>
+    </ul>
+  </nav>
+
+  <div class="glossary-meta">
+    <p>
+      {glossary.length} terms across {CATEGORY_ORDER.length} categories.
+      Machine-readable formats available:
+      <a href="/.well-known/glossary.json">JSON-LD (Schema.org)</a> |
+      <a href="/.well-known/taxonomy.json">SKOS Taxonomy</a>
+    </p>
+  </div>
+
+  {CATEGORY_ORDER.map((cat) => {
+    const terms = getTermsByCategory(cat);
+    return (
+      <section class="glossary-category" id={cat}>
+        <h2>{CATEGORY_LABELS[cat]}</h2>
+        <p class="category-description">{CATEGORY_DESCRIPTIONS[cat]}</p>
+
+        <dl class="term-list">
+          {terms.map((t) => (
+            <div class="term-entry" id={t.id}>
+              <dt>
+                {t.term}
+                {t.abbreviation && (
+                  <span class="abbreviation">({t.abbreviation})</span>
+                )}
+              </dt>
+              <dd>
+                <p>{t.definition}</p>
+                <details class="term-details">
+                  <summary>Relationships and links</summary>
+                  <ul class="term-links">
+                    {t.seeAlso && (
+                      <li>
+                        Read more: <a href={t.seeAlso}>{t.seeAlso}</a>
+                      </li>
+                    )}
+                    {t.broader?.length ? (
+                      <li>
+                        Broader:{' '}
+                        {t.broader.map((id, i) => {
+                          const ref = getTerm(id);
+                          return (
+                            <>
+                              {i > 0 && ', '}
+                              <a href={`#${id}`}>{ref?.term ?? id}</a>
+                            </>
+                          );
+                        })}
+                      </li>
+                    ) : null}
+                    {t.narrower?.length ? (
+                      <li>
+                        Narrower:{' '}
+                        {t.narrower.map((id, i) => {
+                          const ref = getTerm(id);
+                          return (
+                            <>
+                              {i > 0 && ', '}
+                              <a href={`#${id}`}>{ref?.term ?? id}</a>
+                            </>
+                          );
+                        })}
+                      </li>
+                    ) : null}
+                    {t.related?.length ? (
+                      <li>
+                        Related:{' '}
+                        {t.related.map((id, i) => {
+                          const ref = getTerm(id);
+                          return (
+                            <>
+                              {i > 0 && ', '}
+                              <a href={`#${id}`}>{ref?.term ?? id}</a>
+                            </>
+                          );
+                        })}
+                      </li>
+                    ) : null}
+                  </ul>
+                </details>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    );
+  })}
+
+  <section class="glossary-references" id="references">
+    <h2>References</h2>
+    <p class="category-description">
+      Complete bibliography of sources cited throughout the analysis, formatted per APA 7th edition.
+    </p>
+
+    {REFERENCE_CATEGORIES.map(({ key, label }) => {
+      const refs = getReferencesByCategory(key);
+      if (!refs.length) return null;
+      return (
+        <div class="reference-group">
+          <h3>{label}</h3>
+          <ul class="reference-list">
+            {refs.map((r) => (
+              <li id={`ref-${r.id}`}>
+                <span class="ref-text">{formatAPA(r)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    })}
+  </section>
+</SectionLayout>
+
+<style>
+  .glossary-nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-md);
+    background: var(--color-surface-alt);
+    border-radius: 4px;
+  }
+
+  .glossary-nav a {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .glossary-nav a:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .glossary-meta {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .glossary-meta a {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+  }
+
+  .glossary-category {
+    margin-bottom: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .category-description {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .term-list {
+    margin: 0;
+  }
+
+  .term-entry {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-surface-alt);
+  }
+
+  .term-entry:last-child {
+    border-bottom: none;
+  }
+
+  .term-entry dt {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+
+  .abbreviation {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: var(--color-accent);
+    margin-left: var(--space-xs);
+  }
+
+  .term-entry dd {
+    margin: var(--space-xs) 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .term-entry dd p {
+    margin: 0;
+  }
+
+  .term-details {
+    margin-top: var(--space-sm);
+  }
+
+  .term-details summary {
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .term-links {
+    list-style: none;
+    margin: var(--space-sm) 0 0;
+    font-size: 0.85rem;
+  }
+
+  .term-links li {
+    padding: var(--space-xs) 0;
+  }
+
+  .term-links a {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+  }
+
+  .glossary-references {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 2px solid var(--color-border);
+  }
+
+  .reference-group {
+    margin-bottom: var(--space-xl);
+  }
+
+  .reference-group h3 {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .reference-list {
+    list-style: none;
+    margin: 0;
+  }
+
+  .reference-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-surface-alt);
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .reference-list li:last-child {
+    border-bottom: none;
+  }
+</style>
