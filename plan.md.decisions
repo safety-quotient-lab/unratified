@@ -991,3 +991,80 @@ import for dynamic researcher observatory corpus count.
 - All 45 pages now carry persona-specific framing visible in the active lens
 - LensPanel component reusable for any future content additions
 - developer-only CSS display rule added to lens.css (previously lacked default-hide rule)
+
+---
+
+## D029: Prohibition-Entitlement Asymmetry Reframing
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: Discriminator analysis (DA) identified gap 2.9 — the site used entitlement framing ("Everyone has the right to...") where prohibition framing ("No person should...") produces stronger reader response. Prohibition framing activates loss aversion; readers respond more strongly to "you should not lose this" than "you should gain this."
+
+**Decision**: Rewrite 23 passages across 8 files using "No person/worker/community should..." prohibition framing. Apply consistently to article pages, advocacy copy, and action toolkit.
+
+**Reasoning**:
+- Prohibition framing aligns with fair witness approach (observing violations, not aspirations)
+- Loss aversion research supports stronger behavioral activation from prohibition framing
+- The OBBBA context makes loss framing empirically grounded — people *did* lose coverage
+
+**What follows**: All new content should default to prohibition framing for advocacy copy.
+
+---
+
+## D030: Blog Architecture — blog.unratified.org
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: The project needed a blog for ongoing commentary and analysis — a place where AI agents and humans could contribute posts by dropping `.md` files into the repo. A separate subdomain (blog.unratified.org) keeps the blog's temporal content distinct from the main site's reference content.
+
+**Decision**: Same-repo, separate Astro build in `blog/` directory. Shares styles and components from main site via Vite `resolve.alias` (@main → ../src). Independent build and deployment to Cloudflare Pages as `unratified-blog` project.
+
+**Architecture**:
+- `blog/astro.config.mjs` with site: `https://blog.unratified.org`
+- Content schema: title, summary, publishedDate, author, tags, optional lensFraming
+- Layouts import shared base.css, lens.css, LensToggle, ThemeToggle from @main
+- Pages: index (reverse-chronological), [...slug] (individual posts), rss.xml, tags/[tag]
+- Agent-discoverable: `blog/public/.well-known/blog-spec.json` (JSON Schema + conventions)
+- Template: `blog/src/content/posts/_template.md` for agent/human reference
+- Seed post: `2026-03-03-welcome.md`
+
+**Why same-repo over alternatives**:
+- Separate repo duplicates styles (violates DRY)
+- Same build with path-based routing requires Cloudflare Workers for URL rewriting (fragile)
+- Monorepo workspaces require restructuring existing project (overkill)
+
+**What follows**:
+- DNS CNAME: `blog.unratified.org` → `unratified-blog.pages.dev`
+- Root package.json carries `dev:blog`, `build:blog`, `deploy:blog` scripts
+- Main site BaseLayout.astro carries "Blog" nav link (absolute URL)
+- Agent-inbox updated with blog as relatedSite
+
+---
+
+## D031: Six-Agent Content Audit + Fact-Check Corrections
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: Six parallel agents audited all 45 pages of content against authoritative sources. Found 14 verified errors, 20 warnings, and 15+ informational items. Key findings:
+- 1979 SFRC hearings on ICESCR had occurred (site claimed "no hearing")
+- 9 administrations, not 13 (direct count: Carter through Trump 2nd)
+- SCOTUS struck down IEEPA tariffs Feb 20, 2026 (site had pre-SCOTUS figures)
+- Multiple attribution errors (Tax Foundation vs. Yale Budget Lab, Faros 75% recharacterization)
+- NATO membership count outdated (31→32, Sweden joined March 2024)
+
+**Decision**: Fix all 14 errors and 20 warnings using additive approach — preserve existing facts as "before" context where pedagogically valuable, then add corrected figures. Add authoritative acronym linking (ICESCR→OHCHR, ICCPR→OHCHR, UDHR→UN, CESCR→OHCHR) on first mention per page across ~40 files.
+
+**Key corrections**:
+- Timeline: added 1979 SFRC hearings, corrected admin count to 9, added Carter CEDAW signing
+- Tariffs: restructured as pre-SCOTUS → SCOTUS ruling → post-SCOTUS Section 122 regime
+- ICCPR ratification: "unanimous consent" → "division vote" (138 Cong. Rec. S4781-S4783)
+- ICCPR death penalty: "general prohibition" → Article 6 restricts but permits for most serious crimes
+- Faros: "75% of organizations saw no gains" → "75% of engineers use AI tools, yet most organizations report no measurable productivity gains"
+- $990B Medicaid: qualified as "$990B gross (~$911B net)" throughout
+- Deloitte: two-tier (34/37) → three-tier (34% deep, 30% limited, 37% non-adoption)
+- Four Scarcities: standardized on "curation" (user rejected rename to "attention")
+
+**What follows**:
+- HN-curation connection documented in glossary (Observatory + Curation Scarcity entries)
+- All treaty acronyms link to authoritative sources on first mention per page
+- Blog spec includes same acronym-linking convention for agent-authored posts

@@ -284,7 +284,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Verbosity expansion (D022) — φ-ratio pedagogical expansion across 5 files (differential-diagnosis, higher-order-effects, research-summary, article-12, article-13)
 - [x] Verbosity roadmap (D022) — plan.md.verbosity documents future expansion needs across all 19 remaining files
 - [x] 5-lens homepage + reading level standards (D023) — voter/politician/developer/educator/researcher variants across 4 sections + 5 cards + 2 card visuals; per-persona Flesch-Kincaid grade targets integrated into verbosity roadmap
-- [x] Semantic web layer (D024) — glossary (50 terms), taxonomy (SKOS ConceptScheme), APA references (28 sources), JSON-LD endpoints, cross-referencing mesh, lens-aware reference lists, abbreviation expansion
+- [x] Semantic web layer (D024) — glossary (49 terms), taxonomy (SKOS ConceptScheme), APA references (28 sources), JSON-LD endpoints, cross-referencing mesh, lens-aware reference lists, abbreviation expansion
 - [x] Agent inbox endpoint (D024) — `/.well-known/agent-inbox.json` symmetric to observatory
 - [x] Full verbosity expansion (D025) — 19 files expanded with worked examples, Order 0-4 knock-on analysis, consensus-or-pragmatism discriminator resolution, observatory links across all content
 - [x] About page — project identity, methodology, licensing, lens system
@@ -297,6 +297,13 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] GitHub org profile — safety-quotient-lab/.github profile README, repo metadata, topics
 - [x] Individual attribution + contact — footer credits Kashif Shah, mailto link, JSON-LD founder schema, About page SQ Lab section reframed
 - [x] GitHub Discussions enabled — interaction layer via Issues, Discussions, email
+- [x] Blog architecture (D030) — blog/ directory with separate Astro build, shared styles via @main alias, content schema, layouts, pages, RSS feed, tag filtering, agent-discoverable blog-spec.json, seed post
+- [x] Six-agent content audit (D031) — 14 verified errors fixed, 20 warnings corrected, additive approach preserving pedagogical context
+- [x] Authoritative acronym linking — ICESCR/ICCPR/UDHR/CESCR linked to OHCHR/UN on first mention per page across ~40 files
+- [x] Post-SCOTUS tariff rewrite — pre-SCOTUS → SCOTUS ruling → Section 122 regime with verified figures
+- [x] Four Scarcities standardized on "curation" — user confirmed curation over attention; HN-curation connection documented in glossary
+- [x] Stay Informed section — Observatory homepage + blog RSS + Observatory RSS links on /action
+- [ ] Phase 0: Timeline completeness — Trump 2nd admin, per-administration ICESCR positions (from plan)
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

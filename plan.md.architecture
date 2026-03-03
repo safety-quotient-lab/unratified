@@ -86,6 +86,14 @@ unratified.org                          MAIN SITE — ICESCR, advocacy, educator
     ├── /.well-known/glossary.json      Schema.org DefinedTermSet (JSON-LD)
     └── /.well-known/taxonomy.json      SKOS ConceptScheme (JSON-LD)
 
+blog.unratified.org                     BLOG — Ongoing analysis and commentary (D030)
+│
+├── /                                   Blog home — reverse-chronological post listing
+├── /[slug]                             Individual post pages
+├── /tags/[tag]                         Tag-filtered listing
+├── /rss.xml                            RSS 2.0 feed
+└── /.well-known/blog-spec.json         Agent-discoverable post specification
+
 observatory.unratified.org              OBSERVATORY — "Human Rights Observatory, HN Edition"
 │
 ├── /                                   Observatory home — analysis overview
@@ -102,7 +110,7 @@ observatory.unratified.org              OBSERVATORY — "Human Rights Observator
 
 ```
 src/data/
-├── glossary.ts         50 terms, 8 categories, SKOS broader/narrower/related
+├── glossary.ts         49 terms, 8 categories, SKOS broader/narrower/related
 ├── references.ts       28 APA 7th sources, formatAPA() utility
 ├── observatory.ts      Build-time API fetch, typed interface, fallback snapshot
 ├── causal-chain.json   CausalChain visualization data
@@ -380,7 +388,7 @@ unratified/
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D027)
+├── plan.md.decisions               ← Decision log (D001–D031)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
