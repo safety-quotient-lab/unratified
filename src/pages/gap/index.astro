@@ -4,6 +4,14 @@ import { getCollection } from 'astro:content';
 
 const pages = await getCollection('gap');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+
+const cardStats: Record<string, { number: string; label: string }> = {
+  'timeline': { number: '49', label: 'Years' },
+  'arguments': { number: '5', label: 'Core Objections' },
+  'counterarguments': { number: '5', label: 'Rebuttals' },
+  'not-really-rights': { number: '3', label: 'Misconceptions' },
+  'comparison': { number: '173', label: 'Ratifying Nations' },
+};
 ---
 
 <SectionLayout
@@ -14,6 +22,12 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
   <div class="gap-grid">
     {sorted.map((page) => (
       <a href={`/gap/${page.id}`} class="gap-card">
+        {cardStats[page.id] && (
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">{cardStats[page.id].number}</span>
+            <span class="visual-label">{cardStats[page.id].label}</span>
+          </span>
+        )}
         <h2>{page.data.title}</h2>
         <p>{page.data.summary}</p>
       </a>

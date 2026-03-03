@@ -4,6 +4,11 @@ import { getCollection } from 'astro:content';
 
 const pages = await getCollection('evidence');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+
+const cardStats: Record<string, { number: string; label: string; variant?: string }> = {
+  'economic-landscape': { number: '$990B', label: 'Medicaid Cuts', variant: 'figure' },
+  'research-summary': { number: '5', label: 'Surviving Hypotheses' },
+};
 ---
 
 <SectionLayout
@@ -14,6 +19,12 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
   <div class="evidence-grid">
     {sorted.map((page) => (
       <a href={`/evidence/${page.id}`} class="evidence-card">
+        {cardStats[page.id] && (
+          <span class={`card-visual card-visual--${cardStats[page.id].variant || 'stat'}`}>
+            <span class="visual-number">{cardStats[page.id].number}</span>
+            <span class="visual-label">{cardStats[page.id].label}</span>
+          </span>
+        )}
         <h2>{page.data.title}</h2>
         <p>{page.data.summary}</p>
       </a>

@@ -126,6 +126,59 @@
   --color-chart-grid: #093946;
 }
 
+/* Card visuals — shared by homepage + section indexes (D021) */
+.card-visual {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-heading);
+}
+
+.visual-number {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.visual-label {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card-visual--bar {
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-xs);
+}
+
+.visual-bar-track {
+  height: 6px;
+  background: var(--color-surface-alt);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.visual-bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: 3px;
+}
+
+.card-visual--figure .visual-number {
+  color: var(--color-heading);
+}
+
+.card-visual--cta .visual-label {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
 /* Reset */
 *,
 *::before,

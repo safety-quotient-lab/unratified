@@ -25,6 +25,12 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
     {sorted.map((page) => (
       <a href={`/connection/${page.id}`} class="analysis-card">
         <span class="card-order">Part {page.data.order}</span>
+        {page.data.relatedArticles.length > 0 && (
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">{page.data.relatedArticles.length}</span>
+            <span class="visual-label">ICESCR Articles</span>
+          </span>
+        )}
         <h2>{page.data.title}</h2>
         <p>{page.data.summary}</p>
         {page.data.relatedArticles.length > 0 && (

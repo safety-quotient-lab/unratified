@@ -4,6 +4,14 @@ import { getCollection } from 'astro:content';
 
 const pages = await getCollection('action');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+
+const cardStats: Record<string, { number: string; label: string }> = {
+  'why-act': { number: '49', label: 'Years Overdue' },
+  'ratification-process': { number: '4', label: 'Steps' },
+  'talking-points': { number: '7', label: 'Key Points' },
+  'template-letters': { number: '3', label: 'Templates' },
+  'educator-toolkit': { number: '3', label: 'Lessons' },
+};
 ---
 
 <SectionLayout
@@ -25,6 +33,12 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
   <div class="action-grid">
     {sorted.map((page) => (
       <a href={`/action/${page.id}`} class="action-card">
+        {cardStats[page.id] && (
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">{cardStats[page.id].number}</span>
+            <span class="visual-label">{cardStats[page.id].label}</span>
+          </span>
+        )}
         <h2>{page.data.title}</h2>
         <p>{page.data.summary}</p>
       </a>

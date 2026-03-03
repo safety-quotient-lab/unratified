@@ -279,6 +279,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Light mode default + dark theme toggle (D018) — ThemeToggle.svelte, CSS variable restructure, map/chain colors on CSS vars
 - [x] Voter + politician lens content (D019) — CausalChain 5 render paths, ArticleLayout persona sections, lens.css rules
 - [x] Visualization gap fill (D020) — ScoreChart + RadarChart components, integrated on 4 content pages
+- [x] Per-card unique visuals (D021) — card-visual CSS pattern, homepage path-cards + 4 section indexes
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

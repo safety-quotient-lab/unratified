@@ -642,3 +642,49 @@ Integration:
 - Sankey (V7) remains deferred — requires quantitative flow data that does not exist
 - New components reusable for future scoring data (e.g., if additional hypothesis evaluations emerge)
 - Bundle profile: ScoreChart and RadarChart each smaller than Timeline (5.97KB)
+
+---
+
+## D021: Per-Card Unique Visuals — Homepage + Section Indexes
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: Homepage path-cards and section index cards showed only text (h3 + p).
+Each card lacked visual differentiation — visitors encountered a uniform wall of text
+cards across the homepage and every section index. The five path-cards each represent
+fundamentally different content types (covenant articles, historical gap, analytical
+connection, empirical evidence, advocacy toolkit) yet appeared visually identical.
+
+**Decision**: Add a `.card-visual` CSS pattern in `base.css` with type variants
+(stat, bar, figure, cta). Each homepage path-card gains a unique visual element
+above its title. Section index cards (connection, evidence, gap, action) gain
+stat callouts. Covenant and educator indexes skipped — already visually differentiated.
+
+Homepage visuals:
+- Covenant: stat — "10 Articles"
+- Gap: stat — "49 Years Unratified"
+- Connection: bar — 80% fill (20/25 Composite Score)
+- Evidence: figure — "$527B AI Capex 2026"
+- Action: cta — "Contact Your Senators →"
+
+Section index visuals:
+- Connection: dynamic `relatedArticles.length` count per card
+- Evidence: "$990B Medicaid Cuts" + "5 Surviving Hypotheses"
+- Gap: "49 Years" / "5 Core Objections" / "5 Rebuttals" / "3 Misconceptions" / "173 Ratifying Nations"
+- Action: "49 Years Overdue" / "4 Steps" / "7 Key Points" / "3 Templates" / "3 Lessons"
+
+**Reasoning**:
+- Pure HTML + CSS — zero JavaScript, zero new components, renders at build time
+- CSS classes in `base.css` shared across all index pages (DRY)
+- Visual type varies by content nature — stat for counts, bar for scores, figure for
+  currency amounts, cta for action prompts
+- Section index stats use lookup maps keyed by page slug — maintainable, explicit
+- Connection index uses dynamic `relatedArticles.length` — stays accurate as content evolves
+- Covenant index already has `.card-number` + pivotal badges; educator index has
+  level/duration/type badges — additional stats would add noise, not signal
+
+**What follows**:
+- Homepage immediately more scannable — visitors perceive five distinct content types
+- Section indexes gain preview information that aids navigation decisions
+- Pattern extensible: any future section index can add stats via the same CSS classes
+- All labels use noun phrases — no E-prime violations
