@@ -189,6 +189,50 @@ BaseLayout.astro
       └── Render lens-appropriate visualization variant
 ```
 
+### Theme System Architecture (D018)
+
+```
+<html data-theme="dark">                ← Set on <html>, not <body>
+  <head>
+    <script>                            ← Blocking (inline, runs before paint)
+      reads: localStorage('unratified-theme')
+      reads: prefers-color-scheme media query
+      fallback: light (no attribute = light default)
+      if dark: sets data-theme="dark" on <html>
+    </script>
+    <meta name="theme-color" content>   ← Updated by script + ThemeToggle
+  </head>
+  <body data-lens="voter">             ← Lens on body, theme on html (clean separation)
+    <nav>
+      <LensToggle client:load />
+      <ThemeToggle client:load />       ← Two-button radiogroup: Light | Dark
+    </nav>
+  </body>
+</html>
+
+CSS cascade:
+  :root {                              ← Light palette (default, no JS required)
+    --color-bg: #fafafa;
+    --color-text: #37474f;
+    --color-heading: #33691e;
+    --color-accent: #00695c;
+    --color-map-ratified: #2e7d32;
+    --color-node-root: #263238;
+    /* ... */
+  }
+  [data-theme="dark"] {                ← Dark terminal palette override
+    --color-bg: #002d38;
+    --color-text: #98a8a8;
+    --color-heading: #819500;
+    --color-accent: #259d94;
+    --color-map-ratified: #4a7c59;
+    --color-node-root: #8faaab;
+    /* ... */
+  }
+```
+
+Theme resolution priority: URL `?theme=` > localStorage > `prefers-color-scheme` > light
+
 ### Deployment Architecture
 
 NOTE: observatory.unratified.org lives in a separate project/agent,
@@ -232,6 +276,7 @@ unratified/
 │   │   └── ratification-status.json ← ICESCR ratification data (193 nations)
 │   ├── components/
 │   │   ├── lens/LensToggle.svelte  ← Svelte island: lens switching (ARIA radiogroup)
+│   │   ├── lens/ThemeToggle.svelte ← Svelte island: light/dark theme toggle (D018)
 │   │   └── ui/
 │   │       ├── Quiz.svelte         ← Svelte island: self-assessment quiz
 │   │       ├── Timeline.svelte     ← Svelte island: ratification history timeline
@@ -296,11 +341,12 @@ unratified/
 Component             │ Size (gzip) │ Load Strategy
 ──────────────────────┼─────────────┼──────────────
 LensToggle.svelte     │   0.95 KB   │ client:load
+ThemeToggle.svelte    │   0.85 KB   │ client:load
 Quiz.svelte           │   2.60 KB   │ client:visible
 Timeline.svelte       │   2.31 KB   │ client:visible
 RatificationMap.svelte│  11.15 KB   │ client:visible
 Svelte runtime        │   9.20 KB   │ shared
 D3-geo + topojson     │   2.61 KB   │ dynamic import
 ──────────────────────┼─────────────┼──────────────
-Total (max per page)  │  ~28 KB     │ progressive
+Total (max per page)  │  ~29 KB     │ progressive
 ```

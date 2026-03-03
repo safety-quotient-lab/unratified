@@ -9,6 +9,7 @@
   let countries = $state<any[]>([]);
   let hoveredCountry = $state<string | null>(null);
   let loaded = $state(false);
+  let themeVersion = $state(0);
 
   const ratifiedSet = new Set(ratificationData.ratified);
   const signedNotRatifiedSet = new Set(ratificationData.signed_not_ratified);
@@ -25,13 +26,34 @@
     return 'not_party';
   }
 
+  // SSR-safe fallbacks (light theme defaults — matches :root in base.css)
+  const ssrFallbacks: Record<string, string> = {
+    '--color-map-ratified': '#2e7d32',
+    '--color-map-signed': '#c62828',
+    '--color-map-not-party': '#9e9e9e',
+    '--color-map-default': '#e0e0e0',
+    '--color-map-stroke': '#fafafa',
+  };
+
+  function getCssVar(name: string): string {
+    if (typeof document === 'undefined') return ssrFallbacks[name] ?? '';
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
   function statusColor(status: string): string {
+    // Read from CSS variables to support light/dark themes
+    void themeVersion; // reactive dependency on theme changes
     switch (status) {
-      case 'ratified': return '#4a7c59';
-      case 'signed': return '#c44e3f';
-      case 'not_party': return '#8b8b8b';
-      default: return '#d4d0c8';
+      case 'ratified': return getCssVar('--color-map-ratified');
+      case 'signed': return getCssVar('--color-map-signed');
+      case 'not_party': return getCssVar('--color-map-not-party');
+      default: return getCssVar('--color-map-default');
     }
+  }
+
+  function mapStrokeColor(): string {
+    void themeVersion;
+    return getCssVar('--color-map-stroke');
   }
 
   function statusLabel(status: string): string {
@@ -70,27 +92,36 @@
     loadMap();
     handleResize();
 
-    const observer = new ResizeObserver(() => handleResize());
+    const resizeObserver = new ResizeObserver(() => handleResize());
     if (svgElement?.parentElement) {
-      observer.observe(svgElement.parentElement);
+      resizeObserver.observe(svgElement.parentElement);
     }
 
-    return () => observer.disconnect();
+    // Watch for theme changes to update map colors
+    const themeObserver = new MutationObserver(() => {
+      themeVersion++;
+    });
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => {
+      resizeObserver.disconnect();
+      themeObserver.disconnect();
+    };
   });
 </script>
 
 <div class="map-container">
   <div class="map-legend">
     <span class="legend-item">
-      <span class="legend-swatch" style="background: #4a7c59"></span>
+      <span class="legend-swatch" style="background: {statusColor('ratified')}"></span>
       Ratified ({ratificationData.summary.ratified})
     </span>
     <span class="legend-item">
-      <span class="legend-swatch" style="background: #c44e3f"></span>
+      <span class="legend-swatch" style="background: {statusColor('signed')}"></span>
       Signed, not ratified ({ratificationData.summary.signed_not_ratified})
     </span>
     <span class="legend-item">
-      <span class="legend-swatch" style="background: #8b8b8b"></span>
+      <span class="legend-swatch" style="background: {statusColor('not_party')}"></span>
       Not a party ({ratificationData.summary.not_party})
     </span>
   </div>
@@ -116,7 +147,7 @@
           <path
             {d}
             fill={statusColor(status)}
-            stroke="#002d38"
+            stroke={mapStrokeColor()}
             stroke-width="0.5"
             role="presentation"
             onmouseenter={() => { hoveredCountry = `${country.properties?.name ?? 'Unknown'}: ${statusLabel(status)}`; }}

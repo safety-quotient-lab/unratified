@@ -1,28 +1,28 @@
 /* Unratified — Base Styles */
-/* Color palette and typography inspired by kashifshah.net */
+/* Light mode default; dark terminal palette via [data-theme="dark"] */
 
 :root {
-  /* Color: dark terminal palette (kashifshah.net) */
-  --color-bg: #002d38;
-  --color-text: #98a8a8;
-  --color-text-muted: #5b7279;
-  --color-primary: #8faaab;          /* fg-emphasis — h1, site title */
-  --color-heading: #819500;          /* green — h2/h3/h4 */
-  --color-accent: #259d94;           /* cyan — links */
-  --color-accent-light: #2b90d8;     /* blue — hover states */
-  --color-border: #093946;           /* bg-highlight — borders */
-  --color-surface: #093946;          /* bg-highlight — card surfaces */
-  --color-surface-alt: #012430;      /* deeper dark — alt surfaces */
+  /* Color: light palette (default) */
+  --color-bg: #fafafa;
+  --color-text: #37474f;
+  --color-text-muted: #78909c;
+  --color-primary: #263238;            /* near-black — h1, site title */
+  --color-heading: #33691e;            /* dark green — h2/h3/h4 */
+  --color-accent: #00695c;             /* dark teal — links */
+  --color-accent-light: #0277bd;       /* dark blue — hover states */
+  --color-border: #cfd8dc;             /* light gray — borders */
+  --color-surface: #ffffff;            /* white — card surfaces */
+  --color-surface-alt: #eceff1;        /* off-white — alt surfaces */
 
-  /* Accent palette (full terminal spectrum) */
-  --color-yellow: #ac8300;
-  --color-orange: #d56500;
-  --color-red: #f23749;
-  --color-magenta: #dd459d;
-  --color-violet: #7d80d1;
-  --color-blue: #2b90d8;
-  --color-cyan: #259d94;
-  --color-green: #819500;
+  /* Accent palette (light-adapted spectrum) */
+  --color-yellow: #f9a825;
+  --color-orange: #ef6c00;
+  --color-red: #c62828;
+  --color-magenta: #ad1457;
+  --color-violet: #5c6bc0;
+  --color-blue: #1565c0;
+  --color-cyan: #00796b;
+  --color-green: #558b2f;
 
   /* Typography — Fira Code unified (D016) */
   --font-body: 'Fira Code', 'Cascadia Code', 'JetBrains Mono', monospace;
@@ -40,6 +40,68 @@
   /* Layout */
   --max-width-content: 69ch;
   --max-width-wide: 64rem;
+
+  /* Shadow */
+  --shadow-opacity: 0.08;
+
+  /* Map colors */
+  --color-map-ratified: #2e7d32;
+  --color-map-signed: #c62828;
+  --color-map-not-party: #9e9e9e;
+  --color-map-default: #e0e0e0;
+  --color-map-stroke: #fafafa;
+
+  /* CausalChain node colors */
+  --color-node-root: #263238;
+  --color-node-hypothesis: #33691e;
+  --color-node-survivor: #558b2f;
+  --color-node-interaction: #00695c;
+  --color-node-convergence: #5c6bc0;
+  --color-node-speculative: #78909c;
+  --color-node-text: #ffffff;
+  --color-confidence-high: #33691e;
+  --color-confidence-low: #78909c;
+}
+
+/* Dark terminal palette (kashifshah.net) */
+[data-theme="dark"] {
+  --color-bg: #002d38;
+  --color-text: #98a8a8;
+  --color-text-muted: #5b7279;
+  --color-primary: #8faaab;
+  --color-heading: #819500;
+  --color-accent: #259d94;
+  --color-accent-light: #2b90d8;
+  --color-border: #093946;
+  --color-surface: #093946;
+  --color-surface-alt: #012430;
+
+  --color-yellow: #ac8300;
+  --color-orange: #d56500;
+  --color-red: #f23749;
+  --color-magenta: #dd459d;
+  --color-violet: #7d80d1;
+  --color-blue: #2b90d8;
+  --color-cyan: #259d94;
+  --color-green: #819500;
+
+  --shadow-opacity: 0.62;
+
+  --color-map-ratified: #4a7c59;
+  --color-map-signed: #c44e3f;
+  --color-map-not-party: #8b8b8b;
+  --color-map-default: #d4d0c8;
+  --color-map-stroke: #002d38;
+
+  --color-node-root: #8faaab;
+  --color-node-hypothesis: #819500;
+  --color-node-survivor: #a0c070;
+  --color-node-interaction: #259d94;
+  --color-node-convergence: #7d80d1;
+  --color-node-speculative: #5b7279;
+  --color-node-text: #ffffff;
+  --color-confidence-high: #819500;
+  --color-confidence-low: #5b7279;
 }
 
 /* Reset */
@@ -95,7 +157,7 @@ h1 {
   font-size: 2.618rem;
   margin-bottom: var(--space-lg);
   color: var(--color-primary);
-  text-shadow: 0.31rem 0.31rem 0.5rem rgba(0, 0, 0, 0.62);
+  text-shadow: 0.31rem 0.31rem 0.5rem rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 h2 {
@@ -103,7 +165,7 @@ h2 {
   margin-top: var(--space-2xl);
   margin-bottom: var(--space-md);
   color: var(--color-heading);
-  text-shadow: 0.19rem 0.19rem 0.31rem rgba(0, 0, 0, 0.62);
+  text-shadow: 0.19rem 0.19rem 0.31rem rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 h3 {
@@ -111,14 +173,14 @@ h3 {
   margin-top: var(--space-xl);
   margin-bottom: var(--space-sm);
   color: var(--color-heading);
-  text-shadow: 0.19rem 0.19rem 0.31rem rgba(0, 0, 0, 0.62);
+  text-shadow: 0.19rem 0.19rem 0.31rem rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 h4, h5, h6 {
   margin-top: var(--space-lg);
   margin-bottom: var(--space-sm);
   color: var(--color-heading);
-  text-shadow: 0.11rem 0.11rem 0.19rem rgba(0, 0, 0, 0.62);
+  text-shadow: 0.11rem 0.11rem 0.19rem rgba(0, 0, 0, var(--shadow-opacity));
 }
 
 h4 { font-size: 1.1rem; }

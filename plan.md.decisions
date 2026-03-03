@@ -490,3 +490,43 @@ Voter serves as default. Lens toggle refactored from hardcoded buttons to array 
 - Content differentiation per lens will develop as content matures
 - CSS moved to Astro build pipeline (src/styles/) with content-hashed filenames
   to prevent cache staleness during lens evolution
+
+---
+
+## D018: Light Mode Default + Dark Theme Toggle
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The dark terminal palette (#002d38 background) from kashifshah.net
+works well for the developer/researcher audience but limits accessibility and feels
+unfamiliar to the primary voter and educator audiences. The marketing strategy targets
+voters first, educators second — both audiences expect light backgrounds. Printing
+from dark mode consumes excessive ink.
+
+**Alternatives considered**:
+- A: Keep dark-only, rely on PrintLayout for light needs — limits reach
+- B: Add light mode, keep dark as default — conservative, unclear user benefit
+- C: Add light mode, make light the default, dark available via toggle — centers
+  the advocacy audience while preserving the terminal aesthetic for developers
+
+**Decision**: Option C. Restructure CSS variables so `:root` contains light palette
+values (new default). Current dark terminal palette moved to `[data-theme="dark"]`
+selector. ThemeToggle.svelte component provides switching. Blocking `<script>` in
+`<head>` prevents flash-of-wrong-theme.
+
+**Reasoning**:
+- Light backgrounds read as more trustworthy to general/non-technical audiences
+- Voters and educators (primary personas) operate in light-mode environments
+- `prefers-color-scheme: dark` OS setting automatically triggers dark mode
+- Blocking script eliminates flash by setting `data-theme` before first paint
+- CSS custom properties make the switch zero-cost — all selectors use `var()`
+- RatificationMap and CausalChain hardcoded colors converted to CSS variables
+  with SSR-safe fallbacks (light defaults during build, resolved at runtime)
+
+**What follows**:
+- Map and chain colors now theme-aware via MutationObserver on `data-theme`
+- `meta[name="theme-color"]` updates dynamically per selected theme
+- Theme preference persists in localStorage (`unratified-theme`)
+- PrintLayout remains independent (loads zero base.css)
+- Light palette: #fafafa bg, #37474f text, #33691e headings, #00695c links
+- Dark palette: #002d38 bg, #98a8a8 text, #819500 headings, #259d94 links

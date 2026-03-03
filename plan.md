@@ -275,6 +275,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Five-lens audience model — voter (default), politician, developer, educator, researcher (D017)
 - [x] CSS build pipeline — moved to src/styles/, content-hashed via Astro bundler
 - [x] HN-style pipe separators in nav
+- [x] Light mode default + dark theme toggle (D018) — ThemeToggle.svelte, CSS variable restructure, map/chain colors on CSS vars
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

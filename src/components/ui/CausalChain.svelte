@@ -31,17 +31,25 @@
   }
   let { lens = 'developer' } = $props<Props>();
 
-  // Track body lens in case it changes at runtime
+  // Track body lens and html theme in case they change at runtime
   let activeLens = $state(lens);
+  let themeVersion = $state(0);
   $effect(() => {
     function onLensChange() {
       const bodyLens = document.body.getAttribute('data-lens');
       if (bodyLens) activeLens = bodyLens;
     }
     onLensChange();
-    const observer = new MutationObserver(onLensChange);
-    observer.observe(document.body, { attributes: true, attributeFilter: ['data-lens'] });
-    return () => observer.disconnect();
+    const lensObserver = new MutationObserver(onLensChange);
+    lensObserver.observe(document.body, { attributes: true, attributeFilter: ['data-lens'] });
+
+    const themeObserver = new MutationObserver(() => { themeVersion++; });
+    themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => {
+      lensObserver.disconnect();
+      themeObserver.disconnect();
+    };
   });
 
   // ── Shared state ───────────────────────────────────────────────────────────
@@ -103,16 +111,38 @@
     return { observed: 1, high: 0.95, moderate: 0.75, low: 0.5 }[c] ?? 0.7;
   }
 
+  // SSR-safe fallbacks (light theme defaults — matches :root in base.css)
+  const ssrFallbacks: Record<string, string> = {
+    '--color-node-root': '#263238',
+    '--color-node-hypothesis': '#33691e',
+    '--color-node-survivor': '#558b2f',
+    '--color-node-interaction': '#00695c',
+    '--color-node-convergence': '#5c6bc0',
+    '--color-node-speculative': '#78909c',
+    '--color-node-text': '#ffffff',
+  };
+
+  function getCssVar(name: string): string {
+    if (typeof document === 'undefined') return ssrFallbacks[name] ?? '';
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
   function nodeColor(type: NodeType): string {
+    void themeVersion; // reactive dependency on theme changes
     return {
-      root: '#8faaab',
-      composite: '#8faaab',
-      hypothesis: '#819500',
-      survivor: '#a0c070',
-      interaction: '#259d94',
-      convergence: '#7d80d1',
-      speculative: '#5b7279',
-    }[type] ?? '#5b7279';
+      root: getCssVar('--color-node-root'),
+      composite: getCssVar('--color-node-root'),
+      hypothesis: getCssVar('--color-node-hypothesis'),
+      survivor: getCssVar('--color-node-survivor'),
+      interaction: getCssVar('--color-node-interaction'),
+      convergence: getCssVar('--color-node-convergence'),
+      speculative: getCssVar('--color-node-speculative'),
+    }[type] ?? getCssVar('--color-node-speculative');
+  }
+
+  function nodeTextColor(): string {
+    void themeVersion;
+    return getCssVar('--color-node-text');
   }
 
   function isHighlighted(id: string): boolean {
@@ -399,7 +429,7 @@
               <text
                 text-anchor="middle"
                 dy="0.35em"
-                fill="white"
+                fill={nodeTextColor()}
                 font-size="9"
                 font-family="var(--font-heading)"
                 pointer-events="none"
@@ -458,10 +488,10 @@
   </div>
 
   <p class="flowchart-legend">
-    <span class="legend-dot" style="background:#819500"></span> Hypothesis
-    <span class="legend-dot" style="background:#259d94"></span> Interaction
-    <span class="legend-dot" style="background:#7d80d1"></span> Convergence
-    <span class="legend-dot" style="background:#5b7279"></span> Speculative
+    <span class="legend-dot" style="background: {nodeColor('hypothesis')}"></span> Hypothesis
+    <span class="legend-dot" style="background: {nodeColor('interaction')}"></span> Interaction
+    <span class="legend-dot" style="background: {nodeColor('convergence')}"></span> Convergence
+    <span class="legend-dot" style="background: {nodeColor('speculative')}"></span> Speculative
     <span class="legend-line convergence-legend"></span> Convergent validation
   </p>
 </section>
@@ -702,8 +732,8 @@
     color: var(--color-text-muted);
   }
 
-  .node-confidence[data-confidence="high"] { color: #819500; }
-  .node-confidence[data-confidence="low"] { color: #5b7279; }
+  .node-confidence[data-confidence="high"] { color: var(--color-confidence-high); }
+  .node-confidence[data-confidence="low"] { color: var(--color-confidence-low); }
 
   .node-sublabel {
     font-size: 0.8rem;
@@ -954,7 +984,7 @@
     background: var(--color-primary);
     color: var(--color-bg);
     border-color: var(--color-primary);
-    box-shadow: 0 2px 8px rgba(45, 48, 71, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, var(--shadow-opacity));
   }
 
   .step-node.visited .step-label {
@@ -1000,8 +1030,8 @@
     white-space: nowrap;
   }
 
-  .step-detail-confidence[data-confidence="high"] { color: #819500; }
-  .step-detail-confidence[data-confidence="low"] { color: #5b7279; }
+  .step-detail-confidence[data-confidence="high"] { color: var(--color-confidence-high); }
+  .step-detail-confidence[data-confidence="low"] { color: var(--color-confidence-low); }
 
   .step-detail-sublabel {
     color: var(--color-text-muted);

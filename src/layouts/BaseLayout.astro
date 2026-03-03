@@ -1,5 +1,6 @@
 ---
 import LensToggle from '../components/lens/LensToggle.svelte';
+import ThemeToggle from '../components/lens/ThemeToggle.svelte';
 import '../styles/base.css';
 import '../styles/lens.css';
 
@@ -29,7 +30,22 @@ const fullTitle = `${title} | Unratified`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#002d38" />
+    <meta name="theme-color" content="#fafafa" />
+
+    <!-- Blocking theme script: prevents flash of wrong theme -->
+    <script is:inline>
+      (function() {
+        var t = localStorage.getItem('unratified-theme');
+        if (!t) {
+          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#002d38');
+        }
+      })();
+    </script>
     <link rel="canonical" href={canonicalUrl.href} />
 
     <!-- Fira Code font -->
@@ -88,7 +104,10 @@ const fullTitle = `${title} | Unratified`;
           <li><a href="/action">Take Action</a></li>
           <li><a href="/resources">Resources</a></li>
         </ul>
-        <LensToggle client:load />
+        <div class="nav-controls">
+          <LensToggle client:load />
+          <ThemeToggle client:load />
+        </div>
       </nav>
     </header>
 
