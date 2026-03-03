@@ -317,6 +317,10 @@ unratified/
 │   │   └── action/                 ← 5 advocacy toolkit MDX files (why-act, ratification-process, talking-points, template-letters, educator-toolkit)
 │   ├── content.config.ts           ← Collection schemas (5 collections)
 │   ├── data/
+│   │   ├── glossary.ts              ← 50 terms, 8 categories, SKOS relationships (D024)
+│   │   ├── references.ts            ← 28 APA 7th sources, formatAPA() utility (D024)
+│   │   ├── observatory.ts           ← Build-time API fetch, typed interface, fallback (D022)
+│   │   ├── causal-chain.json        ← CausalChain visualization data
 │   │   └── ratification-status.json ← ICESCR ratification data (193 nations)
 │   ├── components/
 │   │   ├── lens/LensToggle.svelte  ← Svelte island: lens switching (ARIA radiogroup)
@@ -335,6 +339,7 @@ unratified/
 │   │   └── PrintLayout.astro       ← Light-theme print layout (no dark CSS, @media print rules)
 │   ├── pages/
 │   │   ├── index.astro             ← Home: "What Remains Unratified" + World Map
+│   │   ├── about/index.astro       ← About: mission, methodology, values, licensing
 │   │   ├── covenant/
 │   │   │   ├── index.astro         ← Covenant landing
 │   │   │   ├── history.astro       ← UDHR → ICESCR historical context
