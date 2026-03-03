@@ -688,3 +688,62 @@ Section index visuals:
 - Section indexes gain preview information that aids navigation decisions
 - Pattern extensible: any future section index can add stats via the same CSS classes
 - All labels use noun phrases — no E-prime violations
+
+---
+
+## D022: Inline Source Links + Observatory Surface × φ + Verbosity Expansion
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The site made 60+ factual claims citing specific studies, dollar figures,
+and statistics across 17 content files — but only 2 external hyperlinks existed in content
+MDX (braverangels.org, senate.gov). All source URLs already lived on the `/resources` page
+and in `plan.md`. The gap: claims named their sources inline but never linked to them.
+Separately, observatory.unratified.org cross-links sat at 14 touchpoints, concentrated
+in the covenant and connection sections. Gap, evidence, and action sections had zero
+observatory links.
+
+Additionally, `observatory.unratified.org/.well-known/agent-inbox.json` contained a
+structured inter-agent proposal requesting build-time API integration: live stats fetched
+during `npm run build` instead of hardcoded numbers. The proposal specified field paths,
+CORS enablement, and a 200 req/hr rate limit.
+
+Finally, the top 5 analytical files contained parenthetical expansions that added knowledge
+or abbreviated context — each of these represented an opportunity for φ-ratio pedagogical
+expansion with worked examples, historical analogies, and reader-facing scenarios.
+
+**Decision**: Three-phase implementation:
+
+1. **Source links**: Add inline hyperlinks to all 60+ factual claims across 14 content
+   files, linking each source on first occurrence per page.
+
+2. **Observatory surface × φ**: Expand observatory cross-links from 14 to 25 touchpoints
+   (14 × φ ≈ 23, exceeded target). Accept the agent-inbox proposal: build-time API fetch
+   from `/api/v1/signals` with graceful fallback to snapshot values. Created
+   `src/data/observatory.ts` with 5s timeout, module-level cache, typed interface.
+
+3. **Verbosity expansion**: Expand the 5 most compressed analytical files by φ-ratio
+   with pedagogical scaffolding (worked examples, reader-facing scenarios, historical
+   analogies). Created `plan.md.verbosity` documenting future expansion needs for all
+   remaining files.
+
+**Files expanded (Phase 3)**:
+- `differential-diagnosis.mdx` — ~600 words added: worked examples per hypothesis
+- `higher-order-effects.mdx` — ~300 words added: law firm example, specification gap
+- `research-summary.mdx` — ~200 words added: structural divergence, expectations management
+- `article-12.mdx` — ~250 words added: quality tier detail, compound gap, mental health
+- `article-13.mdx` — ~350 words added: junior pipeline industry examples, AI literacy critique
+
+**Reasoning**:
+- Source links transform claims from assertions into verifiable evidence chains
+- Observatory surface expansion follows the golden ratio growth principle established across the project
+- Build-time API integration accepted from the agent-inbox proposal with graceful fallback so builds never depend on network availability
+- Verbosity expansion adds pedagogical depth at the points where inline summaries already indicated compressed knowledge
+- `plan.md.verbosity` provides a roadmap for future expansion across ~5-6 development cycles
+
+**What follows**:
+- Every named source in analytical content now carries a working hyperlink
+- Observatory touchpoints: 25 total across all sections (footer, indexes, content pages)
+- Build fetches live observatory stats; falls back to snapshot if API unreachable
+- 5 files at expanded verbosity standard; 19 files documented for future expansion
+- Site word count: ~26,000 (up from ~24,400) with target ~31,000-34,000 at full expansion

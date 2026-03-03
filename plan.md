@@ -280,6 +280,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Voter + politician lens content (D019) — CausalChain 5 render paths, ArticleLayout persona sections, lens.css rules
 - [x] Visualization gap fill (D020) — ScoreChart + RadarChart components, integrated on 4 content pages
 - [x] Per-card unique visuals (D021) — card-visual CSS pattern, homepage path-cards + 4 section indexes
+- [x] Inline source links + observatory surface × φ (D022) — 60+ source hyperlinks, 25 observatory touchpoints, build-time API integration
+- [x] Verbosity expansion (D022) — φ-ratio pedagogical expansion across 5 files (differential-diagnosis, higher-order-effects, research-summary, article-12, article-13)
+- [x] Verbosity roadmap (D022) — plan.md.verbosity documents future expansion needs across all 19 remaining files
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

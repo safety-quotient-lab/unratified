@@ -1,0 +1,183 @@
+# Verbosity Roadmap — Unratified Content Files
+
+## Purpose
+
+This document tracks the pedagogical verbosity level of each content file and identifies what updates each file needs to reach consensus with the site's expanded content standard. The target verbosity level follows the golden ratio expansion principle: each file should carry enough pedagogical scaffolding — worked examples, historical analogies, reader-facing scenarios, and contextual bridging — to match the depth established in the top-tier analytical files.
+
+## Verbosity Tiers
+
+The site organizes content into three natural verbosity tiers based on purpose:
+
+| Tier | Word Range | Purpose | Target |
+|------|-----------|---------|--------|
+| **Tier 3: Comprehensive** | 1,200-2,100+ | Deep analytical content, pivotal articles, multi-order analysis | Already at target |
+| **Tier 2: Substantial** | 700-1,200 | Single-article deep dives, policy arguments, evidence pages | Expand to 1,000-1,600 |
+| **Tier 1: Entry** | 300-700 | Introductory content, reference articles, action tools | Expand to 500-1,000 |
+
+## Already Expanded (D022)
+
+These files received φ-ratio pedagogical expansion and serve as the verbosity standard:
+
+| File | Current Words | Expansion Type |
+|------|--------------|----------------|
+| `connection/differential-diagnosis.mdx` | ~1,700 | Worked examples per hypothesis, historical analogies, ICESCR connection detail |
+| `connection/higher-order-effects.mdx` | ~1,400 | Law firm example, specification gap scenario, digital divide comparison |
+| `evidence/research-summary.mdx` | ~2,100 | Structural divergence insight, expectations management, pragmatic assessment |
+| `covenant/article-12.mdx` | ~1,300 | Quality tier detail, compound gap mechanism, mental health specifics, litigation precedent |
+| `covenant/article-13.mdx` | ~2,100 | Junior pipeline industry examples, specification/judgment training detail, AI literacy critique |
+
+## Files Needing Expansion
+
+### Priority 1: Covenant Articles (Core Content)
+
+**`covenant/article-1.mdx`** (~316 words → target 600-800)
+- Needs: Concrete examples of how self-determination applies to AI policy decisions
+- Needs: Connection between national AI strategy choices and economic sovereignty
+- Needs: Worked example of a nation that exercised self-determination in AI regulation vs. one that did not
+- Pattern: Follow article-12/article-13 structure — "What This Means in Practice" section with scenario
+
+**`covenant/article-6.mdx`** (~569 words → target 900-1,100)
+- Needs: Expanded labor market restructuring examples beyond statistics
+- Needs: Worked example of a worker navigating AI-driven job transformation
+- Needs: More detail on the gap between "right to work" and actual employment conditions during transition
+- Pattern: Add a reader-facing "Consider your own workplace" scenario
+
+**`covenant/article-7.mdx`** (~473 words → target 800-1,000)
+- Needs: Examples of how AI changes working conditions (algorithmic management, surveillance, pace-setting)
+- Needs: Contrast between AI-enhanced good conditions and AI-degraded conditions
+- Needs: Connection to gig economy and platform labor as Article 7 test cases
+- Pattern: Two-scenario comparison (worker at AI-transformed vs. traditional workplace)
+
+**`covenant/article-9.mdx`** (~636 words → target 1,000-1,200)
+- Needs: More detail on how social security systems interact with AI-driven job transitions
+- Needs: Worked example of a displaced worker navigating benefit gaps
+- Needs: International comparison of how other nations adapted social security for technology transitions
+- Pattern: Follow the OBBBA impact analysis pattern from article-12
+
+**`covenant/article-10.mdx`** (~346 words → target 600-800)
+- Needs: Connection between family economic stability and AI transition stress
+- Needs: Examples of how AI-driven income volatility affects family formation, housing, childcare
+- Needs: Cross-reference to article-12 mental health and article-11 living standard
+- Pattern: Reader-facing scenario about family budgeting during economic transition
+
+**`covenant/article-11.mdx`** (~612 words → target 1,000-1,200)
+- Needs: More detail on how AI affects cost of living (housing, food, energy)
+- Needs: Energy scarcity connection — AI compute demand driving energy costs
+- Needs: Worked example of how tariff + AI transition creates compound living standard pressure
+- Pattern: Follow economic-landscape evidence style with specific household impact
+
+**`covenant/article-14.mdx`** (~354 words → target 600-800)
+- Needs: Connection between compulsory education and the judgment pipeline crisis from article-13
+- Needs: Examples of how fundamental education programs must adapt for AI era
+- Needs: Cross-reference to article-13's educational transformation framework
+- Pattern: Brief but substantive — this serves as article-13 companion
+
+**`covenant/article-15.mdx`** (~1,610 words — already substantial)
+- Lower priority — already at Tier 3 verbosity
+- Could expand: More concrete examples of "benefit from science" in the AI context
+- Could expand: Platform gatekeeping scenarios showing how access concentrates
+
+### Priority 2: Gap Section
+
+**`gap/arguments.mdx`** (~913 words → target 1,200-1,500)
+- Needs: Fuller presentation of each argument against ratification
+- Needs: Historical context for each argument (when it emerged, who advanced it, political context)
+- Needs: Fair witness treatment — present each argument at its strongest before the reader encounters counterarguments
+- Pattern: Each argument gets a "The strongest version of this argument" paragraph
+
+**`gap/timeline.mdx`** (~817 words → target 1,100-1,300)
+- Needs: More context per administration — what else occurred politically that affected ratification
+- Needs: Connection between each historical moment and current conditions
+- Needs: The "why it stalled" pattern — specific political mechanisms, not just dates
+- Pattern: Each administration entry gets a "The political dynamics" paragraph
+
+**`gap/not-really-rights.mdx`** (~1,072 words — near target)
+- Lower priority — already at Tier 2/3 boundary
+- Could expand: More accessible explanation of the Berlin positive/negative rights distinction
+- Could expand: Additional examples that make the philosophical argument concrete for non-academic readers
+
+**`gap/comparison.mdx`** (~1,073 words — near target)
+- Lower priority — already at Tier 2/3 boundary
+- Could expand: More detail on specific nations' implementation experiences
+- Could expand: The "what happened after ratification" evidence from comparable democracies
+
+**`gap/counterarguments.mdx`** (~1,303 words — already at target)
+- No expansion needed — serves as verbosity benchmark for the gap section
+
+### Priority 3: Action Section
+
+**`action/why-act.mdx`** (~299 words → target 500-700)
+- Needs: More motivational scaffolding — why NOW, not just why
+- Needs: Personal connection between reader's daily life and ICESCR provisions
+- Needs: The "five minutes" bridge — what concrete difference does knowing this make?
+- Pattern: Short, punchy, conversion-oriented — different style than analytical pages
+
+**`action/ratification-process.mdx`** (~447 words → target 700-900)
+- Needs: More detail on each step of the Senate process
+- Needs: Historical examples of how other treaties moved through the process
+- Needs: Realistic assessment of current political feasibility
+- Pattern: Process explanation with context — what makes each step hard or possible
+
+**`action/talking-points.mdx`** (~715 words → target 1,000-1,200)
+- Needs: More "how to use this talking point" guidance per point
+- Needs: Audience-specific framing (conservative-leaning, progressive-leaning, apolitical)
+- Needs: Connection to Braver Angels LAPP methodology for each point
+- Pattern: Each talking point gets a "How to use this" paragraph
+
+**`action/template-letters.mdx`** (~836 words — near target)
+- Lower priority — functional content, verbosity serves different purpose here
+- Could expand: More guidance on personalizing each template
+- Could expand: Follow-up actions after sending
+
+**`action/educator-toolkit.mdx`** (~953 words — near target)
+- Lower priority — functional content
+- Could expand: More detailed lesson plan scaffolding
+- Could expand: Assessment rubrics and discussion facilitation tips
+
+### Priority 4: Evidence Section
+
+**`evidence/economic-landscape.mdx`** (~930 words → target 1,300-1,500)
+- Needs: More narrative bridging between data points
+- Needs: "What this means for you" reader-facing interpretation per data cluster
+- Needs: Connection between economic landscape data and ICESCR provisions
+- Pattern: Follow research-summary style — evidence + interpretation + implication
+
+### Priority 5: Connection Section
+
+**`connection/dignity-quotient.mdx`** (~1,029 words → target 1,400-1,600)
+- Needs: More accessible explanation of the PSQ framework before applying it
+- Needs: Worked example of how one UDHR article scores on each PSQ dimension
+- Needs: The "what this number means" interpretation guide for non-technical readers
+- Pattern: Follow the ScoreChart/RadarChart integration pattern — data + narrative
+
+**`connection/ratification-counterfactual.mdx`** (~1,078 words → target 1,400-1,600)
+- Needs: More detail on the ADA pattern — specific examples of how litigation created change
+- Needs: Worked example of how a specific ICESCR provision might follow the ADA trajectory
+- Needs: More on the "tools not solutions" distinction with concrete illustrations
+- Pattern: Follow differential-diagnosis expansion style — examples at each step
+
+## Expansion Principles
+
+When expanding any file to meet verbosity consensus:
+
+1. **Add worked examples, not abstract explanation.** Each concept gets a concrete scenario the reader can picture.
+2. **Use reader-facing scenarios.** "Consider..." or "Imagine..." bridges connect analysis to lived experience.
+3. **Preserve E-prime.** Avoid all forms of "to be" in user-facing copy.
+4. **Maintain fair witness framing.** Report observations, not interpretations. Distinguish evidence from inference.
+5. **Cross-reference related content.** Each expansion should strengthen connections between pages.
+6. **Add observatory links where relevant.** Each expanded page gets a Live Evidence blockquote if it does not already have one.
+7. **One expansion pass per cycle.** Expand 3-5 files per development cycle to maintain consistency review capacity.
+8. **Build-check after every batch.** Verify 43 pages, zero errors before committing.
+
+## Estimated Effort
+
+| Priority | Files | Total Words to Add | Cycles Needed |
+|----------|-------|-------------------|---------------|
+| P1: Covenant | 7 files | ~3,000-4,000 | 2 cycles |
+| P2: Gap | 2 files (+ 2 minor) | ~1,000-1,500 | 1 cycle |
+| P3: Action | 3 files (+ 2 minor) | ~1,500-2,000 | 1 cycle |
+| P4: Evidence | 1 file | ~400-600 | 0.5 cycle |
+| P5: Connection | 2 files | ~800-1,200 | 1 cycle |
+| **Total** | **15 primary + 4 minor** | **~6,700-9,300** | **~5-6 cycles** |
+
+Site-wide expansion from current ~24,400 words to ~31,100-33,700 words (approximately φ-ratio expansion of the total content volume).
