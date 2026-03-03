@@ -195,8 +195,8 @@ See plan.md.marketing for complete user journeys, UX constraints, and the full p
 ### Future Paths (Dignity Quotient)
 These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Dignity Quotient measurement framework — formalize DQ as quantitative instrument; define scoring protocol; connect to PSQ validation pipeline
-- [ ] Advocacy messaging restructure — apply prohibition-entitlement asymmetry finding and procedural-declarative finding to rewrite all ICESCR article framing across site
-- [ ] **NEXT** Safety Quotient Lab organizational identity — how SQ Lab positions itself across all projects (unratified, PSQ, PJE, future); brand architecture; mission/vision alignment with dignity-as-axiom; website, GitHub org profile, and public presence
+- [x] Advocacy messaging restructure — prohibition-entitlement asymmetry applied across 8 files (D029); procedural-declarative finding deferred
+- [x] Safety Quotient Lab organizational identity — GitHub org profile complete; sql.unratified.org deferred (GitHub serves as homepage for now); individual attribution (Kashif Shah) on site
 - [ ] A/B testing infrastructure — hybrid vs. observational voice for content effectiveness measurement
 
 **Phase 1: Core Content Development** (COMPLETE)
@@ -292,7 +292,11 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Explore the Site (D027) — 8-card interactive showcase grid on About page, all components mapped with counts and links
 - [x] Claude attribution — footer link + About page badge with SVG icon
 - [x] Five-lens persona copy (D028) — lensFraming frontmatter on all 16 MDX files, LensPanel.astro component, lens panels on 5 section indexes, 4 route templates updated, content.config.ts schema
-- [x] Light mode default fix — removed prefers-color-scheme fallback from blocking script and ThemeToggle, light always defaults (D018)
+- [x] Light mode default fix — theme priority: localStorage > OS preference > light (D018)
+- [x] Prohibition-entitlement reframing (D029) — 23 passages across 8 files rewritten with "No person/worker/community should..." framing per DA gap 2.9 finding
+- [x] GitHub org profile — safety-quotient-lab/.github profile README, repo metadata, topics
+- [x] Individual attribution + contact — footer credits Kashif Shah, mailto link, JSON-LD founder schema, About page SQ Lab section reframed
+- [x] GitHub Discussions enabled — interaction layer via Issues, Discussions, email
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach
