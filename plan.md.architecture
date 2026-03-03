@@ -80,6 +80,7 @@ unratified.org                          MAIN SITE — ICESCR, advocacy, educator
 │   └── /resources/organizations        Organizations working on ratification
 │
 ├── /glossary                           Glossary — 50 terms, 8 categories, APA bibliography
+├── /about                              About — mission, methodology, values, licensing
 │
 └── /.well-known/                       Machine-readable semantic endpoints
     ├── /.well-known/glossary.json      Schema.org DefinedTermSet (JSON-LD)
@@ -378,7 +379,7 @@ unratified/
 └── tsconfig.json
 ```
 
-### Page Count: 43 static pages (39 main + 4 print/educator)
+### Page Count: 45 static pages (41 main + 4 print/educator)
 
 ### JS Bundle Profile
 ```

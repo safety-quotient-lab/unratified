@@ -1,0 +1,373 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getObservatoryStats } from '../../data/observatory';
+
+const obs = await getObservatoryStats();
+---
+
+<SectionLayout
+  title="About"
+  description="How this project connects ICESCR advocacy, AI economics, and evidence-based analysis."
+  section="about"
+>
+  <!-- Section 1: What Unratified Does -->
+  <section class="about-section" id="what-we-do">
+    <h2>What Unratified Does</h2>
+    <p>
+      In 1977, the United States signed the International Covenant on Economic, Social and Cultural Rights — a treaty
+      protecting the right to work, to health, to education, and to benefit from scientific progress. The Senate never
+      ratified it. For decades, that gap carried theoretical consequences. Now, with AI transforming the economy at a
+      pace that creates winners and losers faster than any previous technology, that gap carries practical ones.
+    </p>
+    <p>
+      Unratified connects AI's economic transformation to the human rights treaty the United States signed but never kept.
+      The site provides analysis, education, and advocacy tools so that visitors can understand what the
+      <a href="/glossary#icescr">ICESCR</a> protects, how AI-driven economic change makes ratification urgent, and what
+      concrete steps move toward ratification.
+    </p>
+    <p class="framing">
+      Human Rights; Nothing More, Nothing Less.
+    </p>
+    <p>
+      Every element of this analysis — quality floors, safety net reconstruction, litigation activation, educational
+      reform — represents implementation of rights 173 nations already committed to. Nothing here asks for anything
+      beyond what the United States signed in 1977.
+    </p>
+  </section>
+
+  <!-- Section 2: The Analysis -->
+  <section class="about-section" id="analysis">
+    <h2>The Analysis</h2>
+    <p>
+      The analytical engine behind this site uses <a href="/glossary#differential-diagnosis">differential diagnosis</a> — the
+      same methodology physicians use to evaluate competing explanations for symptoms. Seven hypotheses about AI's economic
+      impact get tested against empirical evidence, scored with a
+      <a href="/glossary#discriminator">consensus-or-pragmatism discriminator</a>, and evaluated through five analytical
+      orders.
+    </p>
+    <dl class="analysis-terms">
+      <dt>Order 0 — Direct Effects</dt>
+      <dd>AI removes constraints on software labor, triggering productivity gains in automatable tasks</dd>
+
+      <dt>Order 1 — Jevons Rebound</dt>
+      <dd>Cheaper production drives demand explosion, creating new work faster than AI eliminates old work</dd>
+
+      <dt>Order 2 — Bottleneck Migration</dt>
+      <dd>Constraints shift from technical capability to human judgment, specification, and curation</dd>
+
+      <dt>Order 3 — Institutional Response</dt>
+      <dd>Regulation, education, and social structures adapt — or fail to adapt — to new bottleneck locations</dd>
+
+      <dt>Order 4 — Productive Exhaustion</dt>
+      <dd>Each constraint-removal cycle shifts scarcity toward increasingly human capacities: values, meaning, dignity</dd>
+    </dl>
+    <p>
+      The <a href="/connection/differential-diagnosis">Composite A model</a> (H2+H3+H4+H7 mod H6) emerged from this
+      analysis: AI functions as narrow superintelligence for software labor, bounded by migrating bottlenecks, distributed
+      unevenly across adopters and non-adopters. The resulting economic bifurcation maps directly onto the rights the
+      ICESCR protects.
+    </p>
+    <p>
+      A fair witness principle governs the entire analysis: observe without interpretation, distinguish observation from
+      inference, present all arguments faithfully — including
+      <a href="/gap/arguments">arguments against ratification</a>.
+    </p>
+  </section>
+
+  <!-- Section 3: The Five Lenses -->
+  <section class="about-section" id="lenses">
+    <h2>The Five Lenses</h2>
+    <p>
+      Content on this site adapts to five audience personas. Each lens reshapes the same underlying analysis for a
+      different reader, adjusting emphasis, vocabulary, and presentation depth.
+    </p>
+    <dl class="lens-list">
+      <dt>Voter</dt>
+      <dd>Personal impact framing, action-oriented, plain language at approximately Grade 8 reading level. The default lens — because advocacy starts with individuals.</dd>
+
+      <dt>Politician</dt>
+      <dd>Policy brief format, legislative pathways, committee references, talking points at approximately Grade 10 reading level. Designed for legislative staff who evaluate and brief their senators.</dd>
+
+      <dt>Developer</dt>
+      <dd>Data-forward, dense tables, technical methodology, monospace formatting at approximately Grade 12 reading level. The entry point from <a href="https://observatory.unratified.org" rel="noopener">the Observatory</a>.</dd>
+
+      <dt>Educator</dt>
+      <dd>Learning objectives, discussion prompts, downloadable materials at approximately Grade 12 reading level. Resources for bringing ICESCR and AI economics into the classroom.</dd>
+
+      <dt>Researcher</dt>
+      <dd>Structured abstracts, full citations, methodology documentation at Grade 16+ reading level. Everything needed to evaluate, replicate, or extend the analysis.</dd>
+    </dl>
+    <p>
+      The lens system uses CSS visibility rules — not different content. Every reader sees the same analysis;
+      the lens determines which sections receive emphasis and which tuck behind progressive disclosure.
+      Switch lenses anytime using the toggle in the navigation bar.
+    </p>
+    <p>
+      Unfamiliar terms link to the <a href="/glossary">Glossary</a>, which provides definitions for
+      50 project-specific terms across 8 categories.
+    </p>
+  </section>
+
+  <!-- Section 4: The AI Meta-Layer -->
+  <section class="about-section" id="meta-layer">
+    <h2>The AI Meta-Layer</h2>
+    <p>
+      An AI — Claude, built by Anthropic — produced the core analysis on this site. An AI analyzing AI's own
+      economic impact on human rights creates a recursive meta-layer that deserves transparent acknowledgment.
+    </p>
+    <p>
+      This project treats that meta-layer as a feature, not a bug. The analysis invites scrutiny of both its
+      conclusions and its analyzer. Every claim links to external evidence. Every inference gets flagged as inference.
+      The <a href="/connection/differential-diagnosis">differential diagnosis methodology</a> documents its scoring,
+      its eliminated hypotheses, and its confidence degradation — so readers can evaluate the reasoning independently
+      of who (or what) produced it.
+    </p>
+    <p>
+      The companion project, the <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>,
+      extends this transparency by evaluating how the tech community discusses human rights — applying the same
+      evidence-first methodology to {obs.corpusSize.toLocaleString()}+ Hacker News stories scored against the 30
+      articles and Preamble of the Universal Declaration of Human Rights.
+    </p>
+  </section>
+
+  <!-- Section 5: Safety Quotient Lab -->
+  <section class="about-section" id="safety-quotient-lab">
+    <h2>Safety Quotient Lab</h2>
+    <p>
+      Unratified operates as a named project of
+      <a href="https://github.com/safety-quotient-lab" rel="noopener">Safety Quotient Lab</a> — an organization
+      that measures and improves psychological safety.
+    </p>
+    <p>
+      Safety Quotient Lab develops the Psychoemotional Safety Quotient (PSQ), a measurement instrument for
+      psychological safety. The PSQ evaluation of the Universal Declaration of Human Rights produced the
+      <a href="/connection/dignity-quotient">Dignity Quotient</a> — a framework measuring how effectively
+      legal systems operationalize dignity.
+    </p>
+    <p>
+      That measurement revealed a structural gap: the U.S. legal framework protects the threat-reduction
+      half of dignity (civil and political rights, via the ICCPR) but leaves the resilience-building half
+      (economic, social, and cultural rights, via the ICESCR) without binding legal protection. Unratified
+      demonstrates what that gap means in practice, especially as AI reshapes the economy.
+    </p>
+    <p>
+      The parent organization provides the measurement instrument. This project provides the finding.
+    </p>
+  </section>
+
+  <!-- Section 6: Values and Voice -->
+  <section class="about-section" id="values">
+    <h2>Values and Voice</h2>
+
+    <h3>Five Organizational Values</h3>
+    <ol class="values-list">
+      <li>
+        <strong>Intellectual Honesty</strong> — Present uncomfortable findings honestly. The ratification
+        counterfactual showed that ICESCR provides tools, not solutions, operating on a 10–20 year timeline
+        through litigation. The site says so. Overclaiming undermines credibility with every audience.
+      </li>
+      <li>
+        <strong>Dignity as Axiom</strong> — Dignity — the UDHR's and ICESCR's foundational concept — drives
+        every decision. The <a href="/connection/dignity-quotient">Dignity Quotient</a> measures how effectively
+        legal frameworks operationalize dignity. Unratified demonstrates what happens when the measurement shows a gap.
+      </li>
+      <li>
+        <strong>Epistemic Quality</strong> — Every claim links to evidence. Every inference gets flagged.
+        Confidence levels get stated. The differential diagnosis methodology — with its discriminator, its
+        eliminated hypotheses, its confidence degradation map — embodies this value.
+      </li>
+      <li>
+        <strong>Accessible Rigor</strong> — Rigor without accessibility serves only academics. Accessibility
+        without rigor serves nobody. Progressive disclosure achieves both: summary cards for quick understanding,
+        full analysis for deep engagement, methodology documentation for peer review.
+      </li>
+      <li>
+        <strong>Human Rights; Nothing More, Nothing Less.</strong> — Every element represents implementation of
+        rights 173 nations already committed to. This value constrains scope: the site advocates for ratification
+        of an existing treaty, not for novel political programs.
+      </li>
+    </ol>
+
+    <h3>Editorial Standards</h3>
+    <p>
+      All user-facing copy on this site follows
+      <a href="/glossary#e-prime">E-prime</a> — a constraint that eliminates all forms of "to be" (including
+      "is," "are," "was," "were"). E-prime forces active, precise language that conveys agency and avoids
+      hidden assumptions. "The United States signed the ICESCR in 1977" carries more force than "the ICESCR
+      was signed by the United States."
+    </p>
+    <p>
+      The <a href="/glossary#fair-witness">fair witness</a> editorial standard governs content across every section:
+      observe without interpretation, distinguish observation from inference, use precise language that avoids
+      assumptions, describe actions and behaviors rather than motivations.
+    </p>
+    <p>
+      <strong>Tools, not solutions.</strong> Ratification provides legal mechanisms — tools through which courts,
+      over time, bend economic transformation toward rights realization. The site never promises that ratification
+      fixes everything. It demonstrates that ratification provides the instruments through which progress happens.
+    </p>
+  </section>
+
+  <!-- Section 7: Licensing and Contribution -->
+  <section class="about-section" id="licensing">
+    <h2>Licensing and Contribution</h2>
+    <dl class="license-list">
+      <dt>Content</dt>
+      <dd>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a>
+        — Share and adapt freely with attribution. Educators, researchers, and advocates can use all content
+        without permission barriers.
+      </dd>
+
+      <dt>Code</dt>
+      <dd>
+        <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">Apache License 2.0</a>
+        — Open source. Fork, modify, and redistribute with patent protection.
+      </dd>
+    </dl>
+
+    <h3>Contribute</h3>
+    <p>
+      The project lives on GitHub at
+      <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">safety-quotient-lab/unratified</a>.
+      Contributions — factual corrections, accessibility improvements, translations, and feature proposals — follow
+      the guidelines in <code>CONTRIBUTING.md</code>.
+    </p>
+
+    <h3>Machine-Readable Endpoints</h3>
+    <ul class="endpoint-list">
+      <li><a href="/.well-known/glossary.json">glossary.json</a> — Schema.org DefinedTermSet (JSON-LD)</li>
+      <li><a href="/.well-known/taxonomy.json">taxonomy.json</a> — SKOS ConceptScheme (JSON-LD)</li>
+      <li><a href="/.well-known/agent-inbox.json">agent-inbox.json</a> — Structured capability advertisement for AI agents</li>
+    </ul>
+  </section>
+
+  <!-- Section 8: Observatory -->
+  <section class="about-section" id="observatory">
+    <h2>Live Evidence</h2>
+    <blockquote class="observatory-callout">
+      <p>
+        The <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a> evaluates
+        {obs.corpusSize.toLocaleString()}+ Hacker News stories against the Universal Declaration of Human Rights.
+        It provides the empirical foundation for understanding how the tech community discusses — and often
+        overlooks — economic, social, and cultural rights.
+      </p>
+      <p>
+        <a href="https://observatory.unratified.org" rel="noopener">Explore the Observatory &nearr;</a>
+      </p>
+    </blockquote>
+  </section>
+</SectionLayout>
+
+<style>
+  .about-section {
+    margin-bottom: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .about-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .about-section p {
+    max-width: var(--max-width-content);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+  }
+
+  .about-section h3 {
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .framing {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-heading);
+    padding: var(--space-md) 0;
+  }
+
+  .analysis-terms,
+  .lens-list,
+  .license-list {
+    max-width: var(--max-width-content);
+    margin: var(--space-lg) 0;
+  }
+
+  .analysis-terms dt,
+  .lens-list dt,
+  .license-list dt {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    margin-top: var(--space-md);
+  }
+
+  .analysis-terms dd,
+  .lens-list dd,
+  .license-list dd {
+    margin: var(--space-xs) 0 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+
+  .values-list {
+    max-width: var(--max-width-content);
+    margin: var(--space-lg) 0;
+    padding-left: var(--space-lg);
+  }
+
+  .values-list li {
+    margin-bottom: var(--space-md);
+    line-height: 1.65;
+  }
+
+  .values-list strong {
+    color: var(--color-heading);
+  }
+
+  .endpoint-list {
+    list-style: none;
+    margin: var(--space-md) 0;
+    max-width: var(--max-width-content);
+  }
+
+  .endpoint-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--color-surface-alt);
+    font-size: 0.9rem;
+  }
+
+  .endpoint-list li:last-child {
+    border-bottom: none;
+  }
+
+  .endpoint-list code {
+    font-size: 0.85rem;
+  }
+
+  .observatory-callout {
+    max-width: var(--max-width-content);
+    border-left: 3px solid var(--color-accent);
+    padding: var(--space-lg);
+    margin: var(--space-md) 0;
+    background: var(--color-surface-alt);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .observatory-callout p {
+    margin-bottom: var(--space-sm);
+  }
+
+  .observatory-callout p:last-child {
+    margin-bottom: 0;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+</style>
