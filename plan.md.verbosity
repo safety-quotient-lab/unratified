@@ -156,6 +156,36 @@ These files received φ-ratio pedagogical expansion and serve as the verbosity s
 - Needs: More on the "tools not solutions" distinction with concrete illustrations
 - Pattern: Follow differential-diagnosis expansion style — examples at each step
 
+## Reading Level Standards (D023)
+
+The homepage demonstrates the full 5-lens content pattern — each section carries 5 parallel content blocks, one per persona. Content pages (MDX) render universal copy with lens-specific sections via ArticleLayout.
+
+When expanding universal copy in content pages, target the **developer reading level** (Grade 13-14). When jargon blocks voter comprehension even with the ArticleLayout bridge, add inline expansion at first occurrence per page. Example: "the Jevons effect (when cheaper production triggers more demand, not less)."
+
+| Persona | Flesch-Kincaid Grade | Vocabulary |
+|---------|---------------------|------------|
+| **Voter** (default) | **Grade 8** | Zero jargon. All abbreviations expanded on first use. Active voice. Short sentences. |
+| **Educator** | **Grade 10-11** | Pedagogical terms acceptable (learning objectives, scaffolding, assessment). No policy or analytical jargon. |
+| **Politician** | **Grade 11-12** | Policy vocabulary acceptable (ratification, committee jurisdiction, constituent pressure). No analytical jargon. |
+| **Developer** | **Grade 13-14** | Analytical vocabulary acceptable (bifurcation, constraint removal, Jevons effect). Financial and economic terms acceptable. |
+| **Researcher** | **Grade 16+** | Full analytical vocabulary (differential diagnosis, discriminator scoring, confidence intervals, parsimony). Citation-ready prose. |
+
+### Jargon Expansion Convention
+
+Project-specific abbreviations and analytical terms receive inline expansion at first occurrence per page:
+- "Composite A" → context provided by accompanying score
+- "Order 3" → "(third analytical level)" or equivalent
+- "HRCB" → "(Human Rights Category Benchmark)"
+- "Jevons-style" → "(efficiency gains amplify total demand, not reduce it)"
+
+External abbreviations (CBO, SF Fed, METR) need not expand for researcher/developer personas but should expand for voter/educator content.
+
+### Pattern Reference
+
+- **Homepage** (`src/pages/index.astro`): Full 5-lens pattern — each section carries 5 CSS-switched content blocks
+- **Content pages** (MDX): Universal copy at developer level + ArticleLayout lens sections (voter: personal-impact, politician: policy-summary, educator: learning-objectives, researcher: structured-abstract)
+- **Section indexes** (`.astro`): May use lens-specific content where section framing differs significantly per persona
+
 ## Expansion Principles
 
 When expanding any file to meet verbosity consensus:
@@ -166,8 +196,9 @@ When expanding any file to meet verbosity consensus:
 4. **Maintain fair witness framing.** Report observations, not interpretations. Distinguish evidence from inference.
 5. **Cross-reference related content.** Each expansion should strengthen connections between pages.
 6. **Add observatory links where relevant.** Each expanded page gets a Live Evidence blockquote if it does not already have one.
-7. **One expansion pass per cycle.** Expand 3-5 files per development cycle to maintain consistency review capacity.
-8. **Build-check after every batch.** Verify 43 pages, zero errors before committing.
+7. **Expand project-specific abbreviations on first use.** Follow the jargon expansion convention above.
+8. **One expansion pass per cycle.** Expand 3-5 files per development cycle to maintain consistency review capacity.
+9. **Build-check after every batch.** Verify 43 pages, zero errors before committing.
 
 ## Estimated Effort
 

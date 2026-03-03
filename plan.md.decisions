@@ -747,3 +747,61 @@ expansion with worked examples, historical analogies, and reader-facing scenario
 - Build fetches live observatory stats; falls back to snapshot if API unreachable
 - 5 files at expanded verbosity standard; 19 files documented for future expansion
 - Site word count: ~26,000 (up from ~24,400) with target ~31,000-34,000 at full expansion
+
+---
+
+## D023: Full 5-Lens Homepage + Site-Wide Reading Level Standards
+**Date**: 2026-03-02
+**Status**: DECIDED
+
+**Observation**: The homepage carried ~300 words of prose with 8 jargon items that
+voters should never encounter ("bifurcation", "structural mechanism", "differential
+diagnosis", "knock-on effects", "composite score", "capex", "Hacker News"). The voter
+lens serves as the default persona — most visitors see jargon-laden copy first.
+Simultaneously, the D022 verbosity roadmap identified 19 files needing φ-ratio expansion
+but lacked per-persona reading level standards to guide that expansion.
+
+**Decision**: Two-part implementation:
+
+1. **5-lens homepage**: Replace hero explanation, why-now section, observatory callout,
+   and all 5 path card descriptions with lens-specific variants. Add lens-specific card
+   visual labels for Connection and Evidence cards (the only cards with jargon in their
+   visuals). Total: 4 sections × 5 lenses + 5 cards × 5 lenses + 2 card visuals × 5
+   lens variants = ~47 content blocks, CSS-switched via existing `lens.css` selectors.
+
+2. **Reading level standards**: Establish evidence-based Flesch-Kincaid grade targets
+   per persona (voter: Grade 8, educator: 10-11, politician: 11-12, developer: 13-14,
+   researcher: 16+). Integrated into `plan.md.verbosity` to govern all future expansion.
+
+**Copy voice per persona**:
+- **Voter**: Personal, direct, action-oriented. Zero jargon. Grade 8 max.
+- **Politician**: Policy-briefing, constituent-pressure. Legislative vocabulary.
+- **Developer**: Data-forward, evidence-dense. Analytical vocabulary. (Baseline — current site copy.)
+- **Educator**: Pedagogical, classroom-ready. Clear academic prose.
+- **Researcher**: Rigorous, citation-ready. Full analytical vocabulary with inline abbreviation expansion.
+
+**Architecture**: Each section renders 5 parallel content blocks at build time (static HTML).
+CSS hides 4, shows 1, matching `data-lens` on `<body>`. No new components, no layout
+changes, no CSS modifications — existing `lens.css` selectors handle all visibility.
+
+**Jargon expansion convention**: Project-specific abbreviations (Composite A, Order 3,
+HRCB, Jevons-style) receive inline expansion at first occurrence per page. This applies
+to all future content expansion, not just the homepage.
+
+**Files modified**: `src/pages/index.astro` (single file). Added `getObservatoryStats()`
+import for dynamic researcher observatory corpus count.
+
+**Reasoning**:
+- Average U.S. adult reads at Grade 7-8 (National Literacy Institute). 54% read below Grade 6.
+- Voter persona targets median American — jargon creates a comprehension barrier
+- Each persona needs vocabulary calibrated to their professional context
+- CSS-only switching preserves the zero-JS-for-content architecture
+- All 5 variants render at build time — no client-side template switching needed
+- Reading level standards provide measurable criteria for all future verbosity expansion
+
+**What follows**:
+- Homepage shows zero jargon for voter lens (default)
+- Each persona sees content calibrated to their reading level and professional vocabulary
+- `plan.md.verbosity` now includes reading level standards table and jargon expansion convention
+- Future verbosity expansion targets developer reading level (Grade 13-14) for universal copy
+- Content pages continue using universal copy + ArticleLayout lens sections (the bridge pattern)

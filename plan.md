@@ -283,6 +283,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Inline source links + observatory surface × φ (D022) — 60+ source hyperlinks, 25 observatory touchpoints, build-time API integration
 - [x] Verbosity expansion (D022) — φ-ratio pedagogical expansion across 5 files (differential-diagnosis, higher-order-effects, research-summary, article-12, article-13)
 - [x] Verbosity roadmap (D022) — plan.md.verbosity documents future expansion needs across all 19 remaining files
+- [x] 5-lens homepage + reading level standards (D023) — voter/politician/developer/educator/researcher variants across 4 sections + 5 cards + 2 card visuals; per-persona Flesch-Kincaid grade targets integrated into verbosity roadmap
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach
