@@ -17,8 +17,40 @@
 
   type Answer = 'yes' | 'partial' | 'no' | null;
 
-  let answers = $state<Answer[]>(new Array(questions.length).fill(null));
-  let showResults = $state(false);
+  const STORAGE_KEY = 'unratified-quiz';
+
+  interface SavedQuizState {
+    answers: Answer[];
+    showResults: boolean;
+  }
+
+  function loadState(): SavedQuizState | null {
+    if (typeof window === 'undefined') return null;
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed.answers) && parsed.answers.length === questions.length) {
+        return parsed as SavedQuizState;
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  }
+
+  const saved = loadState();
+  let answers = $state<Answer[]>(saved?.answers ?? new Array(questions.length).fill(null));
+  let showResults = $state(saved?.showResults ?? false);
+
+  $effect(() => {
+    const snapshot = { answers: [...answers], showResults };
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
+    } catch {
+      // Storage full or unavailable — degrade gracefully
+    }
+  });
 
   function answer(index: number, value: Answer) {
     answers[index] = value;
@@ -31,6 +63,11 @@
   function reset() {
     answers = new Array(questions.length).fill(null);
     showResults = false;
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Storage unavailable — degrade gracefully
+    }
   }
 
   let allAnswered = $derived(answers.every(a => a !== null));
@@ -47,7 +84,7 @@
         explore whether these protections show up in your own experience.
       </p>
       <p class="quiz-note">
-        This assessment does not collect or store any data. Your answers remain in your browser only.
+        Your answers stay in your browser's local storage — they persist across visits but never leave your device. No data gets collected or transmitted.
       </p>
     </div>
 
