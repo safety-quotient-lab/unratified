@@ -9,7 +9,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "astro": "astro"
+    "astro": "astro",
+    "dev:blog": "cd blog && npm run dev",
+    "build:blog": "cd blog && npm run build",
+    "deploy:blog": "cd blog && wrangler pages deploy dist --project-name unratified-blog"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",

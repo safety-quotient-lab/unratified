@@ -1,0 +1,128 @@
+---
+import LensToggle from '@main/components/lens/LensToggle.svelte';
+import ThemeToggle from '@main/components/lens/ThemeToggle.svelte';
+import '@main/styles/base.css';
+import '@main/styles/lens.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Blog — ICESCR advocacy and AI economics analysis',
+} = Astro.props;
+
+const siteOrigin = 'https://blog.unratified.org';
+const mainSite = 'https://unratified.org';
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
+const fullTitle = `${title} | Unratified Blog`;
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Unratified Blog',
+  description: 'Analysis, updates, and community contributions on ICESCR ratification and AI economics.',
+  url: siteOrigin,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Safety Quotient Lab',
+    url: 'https://github.com/safety-quotient-lab',
+    founder: {
+      '@type': 'Person',
+      name: 'Kashif Shah',
+      url: 'https://kashifshah.net',
+    },
+  },
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Unratified',
+    url: mainSite,
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#fafafa" />
+
+    <script is:inline>
+      (function() {
+        var t = localStorage.getItem('unratified-blog-theme');
+        if (!t && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          t = 'dark';
+        }
+        if (t === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', '#002d38');
+        }
+      })();
+    </script>
+
+    <link rel="canonical" href={canonicalUrl.href} />
+    <link rel="alternate" type="application/rss+xml" title="Unratified Blog RSS" href={`${siteOrigin}/rss.xml`} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:site_name" content="Unratified Blog" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+    <title>{fullTitle}</title>
+  </head>
+  <body data-lens="voter">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+      <nav aria-label="Main navigation">
+        <a href="/" class="site-title">Unratified Blog</a>
+        <ul class="nav-links">
+          <li><a href="/">Posts</a></li>
+          <li><a href="/rss.xml">RSS</a></li>
+          <li><a href={mainSite} rel="noopener">Main Site &nearr;</a></li>
+          <li><a href={`${mainSite}/action`} rel="noopener">Take Action &nearr;</a></li>
+        </ul>
+        <div class="nav-controls">
+          <LensToggle client:load />
+          <ThemeToggle client:load />
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>
+        &middot;
+        A <a href="https://github.com/safety-quotient-lab" rel="noopener">Safety Quotient Lab</a> project
+        by <a href="https://kashifshah.net" rel="noopener">Kashif Shah</a>
+        &middot;
+        <a href={mainSite} rel="noopener">unratified.org</a>
+        &middot;
+        <a href="mailto:kashif&#64;kashifshah.net">Contact</a>
+      </p>
+      <p class="footer-note">
+        Human Rights; Nothing More, Nothing Less.
+      </p>
+    </footer>
+  </body>
+</html>

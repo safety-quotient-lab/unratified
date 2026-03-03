@@ -14,6 +14,11 @@ dist/
 .DS_Store
 Thumbs.db
 
+# Blog build output
+blog/dist/
+blog/.astro/
+blog/node_modules/
+
 # IDE
 .vscode/
 .idea/

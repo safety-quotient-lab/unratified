@@ -1,0 +1,21 @@
+{
+  "name": "unratified-blog",
+  "description": "Blog for unratified.org — ICESCR advocacy and AI economics analysis",
+  "type": "module",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.0",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/svelte": "^7.2.5",
+    "astro": "^5.17.1",
+    "svelte": "^5.53.6",
+    "typescript": "^5.9.3"
+  }
+}

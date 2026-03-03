@@ -1,0 +1,152 @@
+---
+import BlogLayout from './BlogLayout.astro';
+
+interface Props {
+  title: string;
+  summary: string;
+  publishedDate: Date;
+  updatedDate?: Date;
+  author: string;
+  tags: string[];
+}
+
+const { title, summary, publishedDate, updatedDate, author, tags } = Astro.props;
+
+const mainSite = 'https://unratified.org';
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+// Estimate reading time from slot content (rough: 200 words/min)
+const content = await Astro.slots.render('default');
+const wordCount = content.replace(/<[^>]*>/g, '').split(/\s+/).length;
+const readingTime = Math.max(1, Math.ceil(wordCount / 200));
+---
+
+<BlogLayout title={title} description={summary}>
+  <article class="blog-post">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Blog</a></li>
+        <li aria-current="page">{title}</li>
+      </ol>
+    </nav>
+
+    <header class="post-header">
+      <h1>{title}</h1>
+      <div class="post-meta">
+        <time datetime={publishedDate.toISOString().split('T')[0]}>
+          {formatDate(publishedDate)}
+        </time>
+        {updatedDate && (
+          <span class="updated">
+            &middot; Updated <time datetime={updatedDate.toISOString().split('T')[0]}>
+              {formatDate(updatedDate)}
+            </time>
+          </span>
+        )}
+        <span class="author">&middot; {author}</span>
+        <span class="reading-time">&middot; {readingTime} min read</span>
+      </div>
+      {tags.length > 0 && (
+        <div class="post-tags">
+          {tags.map(tag => (
+            <a href={`/tags/${tag}`} class="tag">#{tag}</a>
+          ))}
+        </div>
+      )}
+    </header>
+
+    <div class="post-content">
+      <slot />
+    </div>
+
+    <footer class="post-footer">
+      <p>
+        <a href="/">← Back to all posts</a>
+        &middot;
+        <a href={`${mainSite}/action`} rel="noopener">Take Action on ICESCR →</a>
+      </p>
+    </footer>
+  </article>
+</BlogLayout>
+
+<style>
+  .blog-post {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .post-header {
+    margin-bottom: var(--space-2xl);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-meta {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-sm);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+  }
+
+  .tag:hover {
+    background: var(--color-surface-alt);
+  }
+
+  .post-content {
+    line-height: 1.7;
+  }
+
+  .post-footer {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+  }
+</style>

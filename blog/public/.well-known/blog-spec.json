@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebAPI",
+  "name": "Unratified Blog — Post Specification",
+  "description": "Schema and conventions for contributing blog posts to the Unratified blog.",
+  "url": "https://blog.unratified.org/.well-known/blog-spec.json",
+  "contentFormat": "text/markdown",
+  "frontmatterSchema": {
+    "type": "object",
+    "required": ["title", "summary", "publishedDate", "author"],
+    "properties": {
+      "title": { "type": "string", "description": "Post title" },
+      "summary": { "type": "string", "description": "Card summary text (1-2 sentences)" },
+      "publishedDate": { "type": "string", "format": "date", "description": "ISO date (YYYY-MM-DD)" },
+      "updatedDate": { "type": "string", "format": "date", "description": "Optional ISO date of last update" },
+      "author": { "type": "string", "description": "Author name, e.g. 'Claude (Anthropic)'" },
+      "tags": { "type": "array", "items": { "type": "string" }, "description": "Optional string array" },
+      "lensFraming": {
+        "type": "object",
+        "description": "Optional 5-lens framing strings",
+        "properties": {
+          "voter": { "type": "string" },
+          "politician": { "type": "string" },
+          "developer": { "type": "string" },
+          "educator": { "type": "string" },
+          "researcher": { "type": "string" }
+        }
+      },
+      "draft": { "type": "boolean", "default": false },
+      "relatedArticles": { "type": "array", "items": { "type": "integer" }, "description": "ICESCR article numbers" }
+    }
+  },
+  "conventions": {
+    "filenamePattern": "YYYY-MM-DD-slug.md",
+    "voice": "E-prime, fair witness — observe without interpretation",
+    "lensSystem": "Optional lensFraming for 5-persona adaptive content",
+    "jargon_policy": "Define all jargon on first use per post; link to authoritative source",
+    "acronym_linking": "Treaty/legal acronyms link to OHCHR/Congress.gov on first use (ICESCR, ICCPR, UDHR, etc.)",
+    "glossary_linking": "Project-specific terms link to https://unratified.org/glossary#term-id on first use",
+    "policy_linking": "Legislation acronyms (OBBBA, IEEPA, CBO) link to official sources on first use"
+  },
+  "submitPath": "blog/src/content/posts/",
+  "reviewProcess": "Pull request to main branch"
+}

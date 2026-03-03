@@ -46,6 +46,15 @@ export const GET: APIRoute = () => {
     ],
     relatedSites: [
       {
+        name: 'Unratified Blog',
+        url: 'https://blog.unratified.org',
+        relationship: 'child',
+        agentInbox: 'https://blog.unratified.org/.well-known/agent-inbox.json',
+        description:
+          'Blog for ICESCR advocacy and AI economics analysis. Accepts .md post contributions via pull request.',
+        blogSpec: 'https://blog.unratified.org/.well-known/blog-spec.json',
+      },
+      {
         name: 'Human Rights Observatory',
         url: 'https://observatory.unratified.org',
         relationship: 'sibling',

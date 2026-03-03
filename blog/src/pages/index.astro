@@ -1,0 +1,125 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('posts', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) =>
+  new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
+);
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+---
+
+<BlogLayout title="Posts">
+  <div class="blog-index">
+    <header>
+      <h1>Unratified Blog</h1>
+      <p class="lede">
+        Analysis, updates, and community contributions on ICESCR ratification and AI economics.
+      </p>
+    </header>
+
+    <section class="post-list">
+      {posts.map(post => (
+        <article class="post-card">
+          <time datetime={new Date(post.data.publishedDate).toISOString().split('T')[0]}>
+            {formatDate(new Date(post.data.publishedDate))}
+          </time>
+          <h2><a href={`/${post.id}`}>{post.data.title}</a></h2>
+          <p class="post-summary">{post.data.summary}</p>
+          <div class="post-card-meta">
+            <span class="author">{post.data.author}</span>
+            {post.data.tags.length > 0 && (
+              <span class="tags">
+                {post.data.tags.map(tag => (
+                  <a href={`/tags/${tag}`} class="tag">#{tag}</a>
+                ))}
+              </span>
+            )}
+          </div>
+        </article>
+      ))}
+    </section>
+
+    {posts.length === 0 && (
+      <p>No posts yet. Check back soon.</p>
+    )}
+  </div>
+</BlogLayout>
+
+<style>
+  .blog-index {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 36rem;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .post-card {
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-card time {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .post-card h2 {
+    font-size: 1.309rem;
+    margin: var(--space-xs) 0 var(--space-sm);
+  }
+
+  .post-card h2 a {
+    text-decoration: none;
+    color: var(--color-heading);
+  }
+
+  .post-card h2 a:hover {
+    color: var(--color-accent);
+  }
+
+  .post-summary {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .post-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .tag {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .tag:hover {
+    color: var(--color-accent-light);
+  }
+</style>
