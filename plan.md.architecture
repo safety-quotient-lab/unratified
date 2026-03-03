@@ -388,7 +388,7 @@ unratified/
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D031)
+├── plan.md.decisions               ← Decision log (D001–D032)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte

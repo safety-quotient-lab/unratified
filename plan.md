@@ -307,6 +307,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Educator lens voice fix — 17 entries rewritten to address teachers, not students ("Your students..." not "Students can...")
 - [x] Politician lens voice fix — template-letters reframed for colleague outreach
 - [x] Data consistency sweep — all 10.9M→~10M (CBO), remaining 34/37→34/30/37, $1,500→$600-$800
+- [x] Blackmun DeShaney quote fix — "opened with" → closing paragraph, "hollow promise" → "sterile formalism" (verified Cornell Law)
+- [x] Blog posts — 4 observatory-derived posts (Who Speaks 25/25, 806 Stories 23/25, Privacy Paradox 21/25, Recursive Methodology)
+- [x] Blog custom domain — blog.unratified.org live via Cloudflare Pages
+- [x] WCAG AA accessibility audit (D032) — axe-core 0 violations across 8 representative pages; --color-text-muted strengthened globally
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

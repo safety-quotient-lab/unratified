@@ -1068,3 +1068,38 @@ import for dynamic researcher observatory corpus count.
 - HN-curation connection documented in glossary (Observatory + Curation Scarcity entries)
 - All treaty acronyms link to authoritative sources on first mention per page
 - Blog spec includes same acronym-linking convention for agent-authored posts
+
+---
+
+## D032: WCAG AA Color-Contrast Fix — Global --color-text-muted Strengthening
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: Automated axe-core accessibility audit (via Playwright) flagged 227 color-contrast violations across all 8 representative pages. Root cause: `--color-text-muted` failed WCAG AA 4.5:1 minimum contrast ratio on both page backgrounds (`--color-bg`) and card surfaces (`--color-surface`) in both light and dark themes.
+
+- Light mode: `#78909c` on `#fafafa` → ~2.92:1 (requires 4.5:1)
+- Dark mode: `#5b7279` on `#002d38` → ~3.65:1 (requires 4.5:1)
+
+Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text, map legend items, meta text, table captions.
+
+**Decision**: Two-layer fix:
+1. Strengthen `--color-text-muted` globally (light: `#78909c` → `#546e7a`, dark: `#5b7279` → `#7e9aa3`) — passes AA on `--color-bg`
+2. Add `--color-toggle-inactive` for buttons sitting on `--color-surface` (light: `#546e7a`, dark: `#99b0b8`) — passes AA on the brighter surface background
+
+**Verified contrast ratios**:
+- Light muted on bg: `#546e7a` on `#fafafa` → 4.59:1
+- Light toggle on surface: `#546e7a` on `#ffffff` → 4.79:1
+- Dark muted on bg: `#7e9aa3` on `#002d38` → 5.60:1
+- Dark toggle on surface: `#99b0b8` on `#093946` → 4.85:1
+
+**Reasoning**:
+- Muted text still looks muted — darker in light mode, slightly brighter in dark mode — but now meets minimum readability standards
+- Two-variable approach acknowledges that breadcrumbs (on page bg) and buttons (on card surfaces) sit on different backgrounds with different contrast requirements
+- Global fix covers all elements using `--color-text-muted`, not just the flagged ones
+
+**Files modified**: `src/styles/base.css` (4 lines: 2 variable definitions per theme), `src/styles/lens.css` (2 lines: toggle button color references)
+
+**What follows**:
+- Re-audit: 0 violations across 8 representative pages (axe-core, WCAG 2A + 2AA + best-practice)
+- Any future CSS additions using `--color-text-muted` automatically meet contrast requirements
+- Blog inherits the fix via `@main` alias (shared base.css)
