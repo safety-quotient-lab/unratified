@@ -214,13 +214,13 @@
     {
       "id": "four-scarcities",
       "label": "Four Scarcities",
-      "sublabel": "Judgment · Specification · Attention · Energy",
+      "sublabel": "Judgment · Specification · Curation · Energy",
       "order": 3,
       "type": "convergence",
       "parents": ["int-a", "int-b", "int-c", "int-d"],
       "icescr": [6, 7, 9, 11, 13, 15],
       "confidence": "moderate",
-      "detail": "The post-constraint economy reorganizes around four scarce resources: Judgment (can this work? is this good?), Specification (what should we build?), Attention (which of a million options?), Energy (physical compute substrate). The first three are cognitive; the fourth is physical. Article 13 governs the development of the first three."
+      "detail": "The post-constraint economy reorganizes around four scarce resources: Judgment (can this work? is this good?), Specification (what should we build?), Curation (which of a million options?), Energy (physical compute substrate). The first three are cognitive; the fourth is physical. Article 13 governs the development of the first three."
     },
     {
       "id": "values-meaning",
