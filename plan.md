@@ -303,7 +303,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Post-SCOTUS tariff rewrite — pre-SCOTUS → SCOTUS ruling → Section 122 regime with verified figures
 - [x] Four Scarcities standardized on "curation" — user confirmed curation over attention; HN-curation connection documented in glossary
 - [x] Stay Informed section — Observatory homepage + blog RSS + Observatory RSS links on /action
-- [ ] Phase 0: Timeline completeness — Trump 2nd admin, per-administration ICESCR positions (from plan)
+- [x] Phase 0: Timeline completeness — all 9 administrations verified against primary sources (OHCHR, Congress.gov, CSIS, UPR records, White House EOs). Obama corrected (unverified claims → documented record). Trump 2nd enriched (EO 14199, Jan 2026 withdrawal memo).
+- [x] Educator lens voice fix — 17 entries rewritten to address teachers, not students ("Your students..." not "Students can...")
+- [x] Politician lens voice fix — template-letters reframed for colleague outreach
+- [x] Data consistency sweep — all 10.9M→~10M (CBO), remaining 34/37→34/30/37, $1,500→$600-$800
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach
