@@ -1,0 +1,68 @@
+---
+/**
+ * Renders per-lens framing panels above page body content.
+ * Uses existing CSS visibility classes from lens.css.
+ *
+ * The body prose stays identical across lenses; these panels
+ * provide persona-specific context, framing, and action links.
+ */
+
+interface LensFraming {
+  voter?:      string;
+  politician?: string;
+  developer?:  string;
+  educator?:   string;
+  researcher?: string;
+}
+
+interface Props {
+  lensFraming?: LensFraming;
+  section?: string;
+}
+
+const { lensFraming, section } = Astro.props;
+
+const actionLink = section === 'action' ? '/action/policy-brief' : '/action';
+const policyLink = '/action/policy-brief';
+---
+
+{lensFraming && (
+  <div class="lens-panels">
+    {lensFraming.voter && (
+      <div class="voter-only personal-impact content-lens-panel">
+        <h2>What This Means for You</h2>
+        <p>{lensFraming.voter}</p>
+        <p><a href={actionLink} class="lens-action-link">Take action &rarr;</a></p>
+      </div>
+    )}
+
+    {lensFraming.politician && (
+      <div class="politician-only policy-summary content-lens-panel">
+        <h2>Policy Context</h2>
+        <p>{lensFraming.politician}</p>
+        <p><a href={policyLink} class="lens-action-link">View policy brief &rarr;</a></p>
+      </div>
+    )}
+
+    {lensFraming.developer && (
+      <div class="developer-only content-lens-panel">
+        <h2>Technical Context</h2>
+        <p>{lensFraming.developer}</p>
+      </div>
+    )}
+
+    {lensFraming.educator && (
+      <div class="educator-only learning-objectives content-lens-panel">
+        <h2>Teaching Context</h2>
+        <p>{lensFraming.educator}</p>
+      </div>
+    )}
+
+    {lensFraming.researcher && (
+      <div class="researcher-only structured-abstract content-lens-panel">
+        <h2>Methodological Context</h2>
+        <p>{lensFraming.researcher}</p>
+      </div>
+    )}
+  </div>
+)}

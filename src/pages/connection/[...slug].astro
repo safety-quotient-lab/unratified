@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import CausalChain from '../../components/ui/CausalChain.svelte';
 import ScoreChart from '../../components/ui/ScoreChart.svelte';
 import RadarChart from '../../components/ui/RadarChart.svelte';
@@ -144,6 +145,8 @@ const dqProfiles = [
         />
       </section>
     )}
+
+    <LensPanel lensFraming={page.data.lensFraming} section="connection" />
 
     <div class="content">
       <Content />

@@ -1,11 +1,20 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import { getCollection } from 'astro:content';
 import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('action');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
 const obs = await getObservatoryStats();
+
+const lensFraming = {
+  voter: "Five minutes can shift the political calculation. This section provides everything you need — from understanding the ratification process to contacting your senators with ready-to-use templates. Personal letters carry more weight than form letters.",
+  politician: "Constituent engagement toolkit: ratification process documentation (Article II, Section 2), evidence-grounded talking points organized by ICESCR article, template correspondence for Senate offices, educator resources for curriculum integration, and a one-page policy brief for the staffing process.",
+  developer: "Action toolkit: 5 resources — process model (4-step pipeline), talking points (7 ICESCR articles x 3 audience types), template letters (4 templates with personalization vars), educator toolkit (3 lesson plans), policy brief (executive format). Contact tool at /action/contact. CC BY-SA 4.0.",
+  educator: "This section provides models of civic engagement writing and evidence-based advocacy. Students can analyze the persuasive structure of template letters, evaluate talking point frameworks, and practice adapting materials for different audiences. The educator toolkit connects directly to your curriculum.",
+  researcher: "Advocacy operationalization of the analytical framework. Materials translate empirical findings into audience-calibrated constituent communication, following established best practices for legislative correspondence effectiveness. Includes Braver Angels LAPP methodology for cross-partisan engagement.",
+};
 
 const cardStats: Record<string, { number: string; label: string }> = {
   'why-act': { number: '49', label: 'Years Overdue' },
@@ -22,6 +31,8 @@ const cardStats: Record<string, { number: string; label: string }> = {
   section="action"
   breadcrumbLabel="Take Action"
 >
+  <LensPanel lensFraming={lensFraming} section="action" />
+
   <section class="conversion-bridge">
     <h2>Start Here</h2>
     <p>

@@ -130,6 +130,45 @@
   margin-bottom: var(--space-lg);
 }
 
+/* Content lens panels — shown by respective lens, hidden by default */
+.content-lens-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.content-lens-panel h2 {
+  margin-top: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.content-lens-panel p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: var(--space-sm);
+}
+
+.content-lens-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.lens-action-link {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Developer panel — visible only in developer lens */
+[data-lens="developer"] .content-lens-panel.developer-only {
+  display: block;
+  border-left: 3px solid var(--color-accent);
+}
+
 /* Section reordering per lens */
 [data-lens="educator"] .content-section[data-section="objectives"] { order: -1; }
 [data-lens="researcher"] .content-section[data-section="abstract"] { order: -1; }

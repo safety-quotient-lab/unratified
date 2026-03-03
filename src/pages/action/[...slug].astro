@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import SharePrompt from '../../components/ui/SharePrompt.astro';
 import { getCollection, render } from 'astro:content';
 
@@ -30,6 +31,8 @@ const pageUrl = `https://unratified.org/action/${page.id}`;
       <h1>{page.data.title}</h1>
       <p class="lede">{page.data.summary}</p>
     </header>
+
+    <LensPanel lensFraming={page.data.lensFraming} section="action" />
 
     <div class="content">
       <Content />

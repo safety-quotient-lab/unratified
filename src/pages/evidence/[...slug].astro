@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import ScoreChart from '../../components/ui/ScoreChart.svelte';
 import { getCollection, render } from 'astro:content';
 
@@ -74,6 +75,8 @@ const safetyNetPaths = [
         />
       </section>
     )}
+
+    <LensPanel lensFraming={page.data.lensFraming} section="evidence" />
 
     <div class="content">
       <Content />

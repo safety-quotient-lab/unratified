@@ -196,7 +196,7 @@ See plan.md.marketing for complete user journeys, UX constraints, and the full p
 These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Dignity Quotient measurement framework — formalize DQ as quantitative instrument; define scoring protocol; connect to PSQ validation pipeline
 - [ ] Advocacy messaging restructure — apply prohibition-entitlement asymmetry finding and procedural-declarative finding to rewrite all ICESCR article framing across site
-- [ ] Safety Quotient Lab organizational identity — how SQ Lab positions itself across all projects (unratified, PSQ, PJE, future); brand architecture; mission/vision alignment with dignity-as-axiom
+- [ ] **NEXT** Safety Quotient Lab organizational identity — how SQ Lab positions itself across all projects (unratified, PSQ, PJE, future); brand architecture; mission/vision alignment with dignity-as-axiom; website, GitHub org profile, and public presence
 - [ ] A/B testing infrastructure — hybrid vs. observational voice for content effectiveness measurement
 
 **Phase 1: Core Content Development** (COMPLETE)
@@ -290,6 +290,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] About page — project identity, methodology, licensing, lens system
 - [x] Legislative Status Tracker (D026) — 4-step pipeline SVG, metrics panel, StatusTracker.svelte, legislative-status.ts, CSS vars, integrated into About page "Current Status" section
 - [x] Explore the Site (D027) — 8-card interactive showcase grid on About page, all components mapped with counts and links
+- [x] Claude attribution — footer link + About page badge with SVG icon
+- [x] Five-lens persona copy (D028) — lensFraming frontmatter on all 16 MDX files, LensPanel.astro component, lens panels on 5 section indexes, 4 route templates updated, content.config.ts schema
+- [x] Light mode default fix — removed prefers-color-scheme fallback from blocking script and ThemeToggle, light always defaults (D018)
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

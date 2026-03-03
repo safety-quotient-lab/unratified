@@ -1,6 +1,15 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
+/** Per-lens framing strings rendered as intro panels above page body content. */
+const lensFramingSchema = z.object({
+  voter:      z.string().optional(),
+  politician: z.string().optional(),
+  developer:  z.string().optional(),
+  educator:   z.string().optional(),
+  researcher: z.string().optional(),
+}).optional();
+
 const covenant = defineCollection({
   loader: glob({ pattern: '**/*.mdx', base: './src/content/covenant' }),
   schema: z.object({
@@ -21,6 +30,7 @@ const gap = defineCollection({
     title: z.string(),
     summary: z.string(),
     order: z.number(),
+    lensFraming: lensFramingSchema,
   }),
 });
 
@@ -31,6 +41,7 @@ const connection = defineCollection({
     summary: z.string(),
     relatedArticles: z.array(z.number()).default([]),
     order: z.number(),
+    lensFraming: lensFramingSchema,
   }),
 });
 
@@ -40,6 +51,7 @@ const evidence = defineCollection({
     title: z.string(),
     summary: z.string(),
     order: z.number(),
+    lensFraming: lensFramingSchema,
   }),
 });
 
@@ -49,6 +61,7 @@ const action = defineCollection({
     title: z.string(),
     summary: z.string(),
     order: z.number(),
+    lensFraming: lensFramingSchema,
   }),
 });
 

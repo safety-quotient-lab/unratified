@@ -962,3 +962,32 @@ import for dynamic researcher observatory corpus count.
 - About page now documents all 8 interactive components with direct navigation links
 - Serves as discoverable index for future components added to the site
 - No new components or routes required — purely navigational
+
+---
+
+## D028: Five-Lens Persona Copy — LensPanel + lensFraming Frontmatter
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: External audit revealed that while the homepage had 47 lens-specific content blocks and ArticleLayout rendered 4 persona-specific sections across 10 ICESCR articles, the remaining 16 MDX content files and 5 section index pages carried zero lens-specific copy. Visitors using politician, developer, educator, or researcher lenses received no persona-calibrated framing on gap, connection, action, or evidence pages.
+
+**Decision**: Implement hybrid approach (PA5 from discriminator analysis, 24/25):
+1. Add `lensFraming` schema to `content.config.ts` (5 optional persona strings per MDX file)
+2. Create `LensPanel.astro` — reusable component rendering per-lens framing panels
+3. Add lensFraming frontmatter to all 16 MDX content files (gap: 5, connection: 4, action: 5, evidence: 2)
+4. Update 4 route templates to render `<LensPanel />` before `<Content />`
+5. Add inline lens panels to 5 section index pages via imported LensPanel with inline data
+
+**Discriminator result**: PA5 (Hybrid) scored 24/25 — highest across empirical (5), parsimony (5), consensus (5), chain integrity (5), predictive power (4). Full analysis: `content/analysis/lens-copy-implementation-discriminator.md`
+
+**Content calibration by persona**:
+- **Voter** (Grade 8): Personal impact framing, household-level language, action link
+- **Politician** (Grade 10): Policy context, legislative references, brief link
+- **Developer** (Grade 12): Technical summary, data formats, architecture notes
+- **Educator** (Grade 12): Teaching context, curriculum connections, adaptability
+- **Researcher** (Grade 16+): Methodological context, citations, confidence levels
+
+**What follows**:
+- All 45 pages now carry persona-specific framing visible in the active lens
+- LensPanel component reusable for any future content additions
+- developer-only CSS display rule added to lens.css (previously lacked default-hide rule)

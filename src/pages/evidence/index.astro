@@ -1,11 +1,20 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import { getCollection } from 'astro:content';
 import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('evidence');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
 const obs = await getObservatoryStats();
+
+const lensFraming = {
+  voter: "The numbers behind the analysis — tariff costs, job projections, AI adoption rates, and safety net changes. These data points show how economic forces converge on your household budget, your healthcare, and your job market.",
+  politician: "Empirical dataset: tariff household costs ($1,500/yr, Yale Budget Lab), employment projections (-550K, Tax Foundation), AI capex ($527B, Goldman Sachs), OBBBA Medicaid reduction ($990B, CBO), AI adoption rates (34/37 split, Deloitte). Each data point connects to specific ICESCR provisions.",
+  developer: "Evidence corpus: 2 primary documents. Economic landscape — macro data (tariffs, AI capex, conflicts, supply chains) with source links. Research summary — 6-paper analytical chain with discriminator scores at each layer. Sources: Yale Budget Lab, Tax Foundation, Goldman Sachs, Deloitte, WEF, CBO.",
+  educator: "This section provides real-world data for classroom analysis. Students can trace causal chains from policy decisions to household outcomes, evaluate compound effects across multiple economic forces, and practice distinguishing empirical observation from inference.",
+  researcher: "Empirical evidence base: macroeconomic landscape (March 2026 snapshot) and meta-analytical research summary (six discriminator-scored analyses). Sources: Tax Foundation tariff tracker, Yale Budget Lab state-of-tariffs analysis, Goldman Sachs AI capex projections, WEF Global Risks Report 2026, Deloitte enterprise AI survey, CBO OBBBA scoring.",
+};
 
 const cardStats: Record<string, { number: string; label: string; variant?: string }> = {
   'economic-landscape': { number: '$990B', label: 'Medicaid Cuts', variant: 'figure' },
@@ -18,6 +27,8 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
   description="Empirical data and current conditions — the observable foundation for connecting AI-driven economic transformation to ICESCR-protected rights."
   section="evidence"
 >
+  <LensPanel lensFraming={lensFraming} section="evidence" />
+
   <div class="evidence-grid">
     {sorted.map((page) => (
       <a href={`/evidence/${page.id}`} class="evidence-card">

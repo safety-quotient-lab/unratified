@@ -1,11 +1,20 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import { getCollection } from 'astro:content';
 import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('gap');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
 const obs = await getObservatoryStats();
+
+const lensFraming = {
+  voter: "Why haven't you heard of the ICESCR? This section traces the 49-year gap between the U.S. signing this treaty and... nothing. Five pages explore why the Senate never voted and what that inaction costs you.",
+  politician: "The ICESCR remains pending before the SFRC since 1977 — 49 years without a committee hearing. This section documents the procedural history, analyzes the five core objections to ratification, and evaluates each against evidence. Reference: SFRC jurisdiction, Article II Section 2 process.",
+  developer: "ICESCR pipeline state: signed (1977), transmitted to SFRC, never scheduled. 5 subsections: timeline (49 years), arguments (5 objections), counterarguments (5 rebuttals), rights misconceptions (3), global comparison (173 ratifiers). Data: Senate.gov, OHCHR treaty body database.",
+  educator: "This section provides source material for teaching about treaty ratification and the gap between aspiration and commitment. Students can analyze why the U.S. ratified the ICCPR but not the ICESCR, evaluate the five core objections, and trace the 49-year procedural history.",
+  researcher: "Historical and comparative analysis of ICESCR non-ratification. Methodological approach: process tracing (49-year timeline), argument mapping (5 objections, 5 rebuttals), comparative treaty analysis (ICCPR precedent, 173-nation comparison). Sources: Senate Foreign Relations Committee records, OHCHR treaty body database, constitutional scholarship.",
+};
 
 const cardStats: Record<string, { number: string; label: string }> = {
   'timeline': { number: '49', label: 'Years' },
@@ -21,6 +30,8 @@ const cardStats: Record<string, { number: string; label: string }> = {
   description="The United States signed the ICESCR in 1977. Nearly five decades later, the Senate has never voted on ratification. This section examines why — and what that gap costs."
   section="gap"
 >
+  <LensPanel lensFraming={lensFraming} section="gap" />
+
   <div class="gap-grid">
     {sorted.map((page) => (
       <a href={`/gap/${page.id}`} class="gap-card">

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import Timeline from '../../components/ui/Timeline.svelte';
 import { getCollection, render } from 'astro:content';
 
@@ -38,6 +39,8 @@ const showTimeline = page.id === 'timeline';
         <Timeline client:visible />
       </section>
     )}
+
+    <LensPanel lensFraming={page.data.lensFraming} section="gap" />
 
     <div class="content">
       <Content />

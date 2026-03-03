@@ -92,9 +92,6 @@ if (Astro.url.pathname !== '/glossary') {
     <script is:inline>
       (function() {
         var t = localStorage.getItem('unratified-theme');
-        if (!t) {
-          t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        }
         if (t === 'dark') {
           document.documentElement.setAttribute('data-theme', 'dark');
           var m = document.querySelector('meta[name="theme-color"]');
@@ -170,6 +167,8 @@ if (Astro.url.pathname !== '/glossary') {
         <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>
         &middot;
         A <a href="https://github.com/safety-quotient-lab" rel="noopener">Safety Quotient Lab</a> project
+        &middot;
+        Analysis by <a href="https://www.anthropic.com/claude" rel="noopener">Claude (Anthropic)</a>
         &middot;
         <a href="https://observatory.unratified.org" rel="noopener">Observatory &nearr;</a>
       </p>

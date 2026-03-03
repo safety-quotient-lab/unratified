@@ -1,6 +1,15 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
 import DownloadCard from '../../components/ui/DownloadCard.astro';
+
+const lensFraming = {
+  voter: "Teachers bring this analysis into classrooms. Free lesson plans and student handouts help the next generation understand economic rights, AI's impact, and how to engage as citizens.",
+  politician: "Educational adoption amplifies the ratification pipeline: students who understand the ICESCR become voters who recognize the issue. These resources support civics, economics, and social studies curricula at secondary and post-secondary levels. CC BY-SA 4.0 — no approval needed for classroom use.",
+  developer: "Curriculum resource hub: 3 lesson plans (rights identification, AI economic analysis, OBBBA policy analysis), 4 downloadable resources (teacher guide + 3 student handouts), course-level routing (HS/intro university/advanced). PDF generation via browser print. CC BY-SA 4.0.",
+  educator: "Your landing page for teaching resources. Three lesson arcs build from rights identification through AI analysis to civic engagement, adaptable for social studies, economics, civics, and STS courses. All materials modify freely — adjust for your students' reading levels, course objectives, and available time.",
+  researcher: "Pedagogical resources operationalizing the site's analytical framework for educational settings. Materials follow backward design principles (Wiggins and McTighe): identify desired outcomes, determine assessment evidence, plan learning experiences. Three lesson arcs map to Bloom's taxonomy levels 4-6 (analysis, evaluation, creation).",
+};
 ---
 
 <SectionLayout
@@ -9,6 +18,8 @@ import DownloadCard from '../../components/ui/DownloadCard.astro';
   section="educators"
   breadcrumbLabel="Educators"
 >
+  <LensPanel lensFraming={lensFraming} section="educators" />
+
   <section class="educator-intro">
     <p>
       The ICESCR provides a framework for teaching students how technology, economics, and
