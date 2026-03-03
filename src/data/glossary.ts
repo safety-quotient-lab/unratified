@@ -158,7 +158,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'h1-productivity-multiplier',
     term: 'H1: Productivity Multiplier',
-    definition: 'The claim that AI doubles developer output, creating straightforward productivity gains. Eliminated by evidence: the METR study found experienced developers 19% slower with AI, and Faros AI reported 75% of organizations observing no measurable gains.',
+    definition: 'The claim that AI doubles developer output, creating straightforward productivity gains. Eliminated by evidence: the METR study found experienced developers 19% slower with AI, and Faros AI found that while 75% of engineers use AI tools, most organizations report no measurable productivity gains.',
     category: 'hypothesis',
     related: ['discriminator', 'composite-a'],
     seeAlso: '/connection/differential-diagnosis',
@@ -294,7 +294,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'ratification',
     term: 'Ratification',
-    definition: 'The formal process by which a state becomes a party to an international treaty. For the ICESCR in U.S. context, requires Senate advice and consent (67-vote supermajority). The U.S. signed in 1977 and has never held a committee hearing, committee vote, or floor vote on the treaty.',
+    definition: 'The formal process by which a state becomes a party to an international treaty. For the ICESCR in U.S. context, requires Senate advice and consent (67-vote supermajority). The U.S. signed in 1977. The Senate Foreign Relations Committee held hearings in 1979 but never advanced the treaty to a committee vote or floor vote.',
     category: 'treaty',
     related: ['signatory', 'states-parties', 'senate-consent'],
     seeAlso: '/action/ratification-process',
@@ -318,7 +318,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'senate-consent',
     term: 'Senate Advice and Consent',
-    definition: 'The U.S. constitutional requirement (Article II, Section 2) that the President obtain a two-thirds Senate supermajority before ratifying a treaty. The ICESCR has never reached this stage — no committee hearing, no committee vote, no floor vote.',
+    definition: 'The U.S. constitutional requirement (Article II, Section 2) that the President obtain a two-thirds Senate supermajority before ratifying a treaty. The ICESCR has never reached this stage — committee hearings occurred in 1979, but no committee vote or floor vote followed.',
     category: 'treaty',
     related: ['ratification'],
     seeAlso: '/action/ratification-process',

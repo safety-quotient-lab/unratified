@@ -53,7 +53,7 @@ export const PIPELINE_STEPS: PipelineStep[] = [
     label: 'Senate Foreign Relations Committee',
     shortLabel: 'Committee',
     description:
-      'The Senate Foreign Relations Committee never scheduled hearings on the ICESCR. Without committee action, the treaty cannot advance to the full Senate.',
+      'The Senate Foreign Relations Committee held hearings on the ICESCR in November 1979 (96th Congress) but never advanced the treaty to a committee vote. Without committee action, the treaty cannot advance to the full Senate.',
     status: 'stalled',
     dates: {
       stalledSince: '1978-01-01',
@@ -82,7 +82,7 @@ export const PIPELINE_STEPS: PipelineStep[] = [
 /** Current Congress and pending legislative activity. */
 export const CONGRESS_STATUS: CongressStatus = {
   number: 119,
-  session: 1,
+  session: 2,
   pendingBill: null,
   lastAction:
     'No ratification legislation introduced in the 119th Congress (2025–2026).',
@@ -146,7 +146,7 @@ export function nextRequiredStep(): string {
   const idx = currentStepIndex();
   const step = PIPELINE_STEPS[idx];
   if (step.status === 'stalled') {
-    return `Senate Foreign Relations Committee — schedule hearings`;
+    return `Senate Foreign Relations Committee — schedule a ratification vote`;
   }
   if (idx < PIPELINE_STEPS.length) {
     return step.label;
