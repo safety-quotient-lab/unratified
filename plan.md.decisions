@@ -892,3 +892,73 @@ import for dynamic researcher observatory corpus count.
 - plan.md.verbosity targets met across all 5 priority levels
 - About page remains as next content creation task
 - Site ready for deployment at full verbosity standard
+
+---
+
+## D026: Legislative Status Tracker — Horizontal Pipeline Visualization
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: An external evaluator noted the site lacked "progress tracking or legislative updates." The ICESCR ratification process has a clear 4-step pipeline (Signature → Committee → Senate Vote → Ratification) with one step stalled since 1978. This fact carries significant persuasive weight but appeared nowhere on the site.
+
+**Decision**: Build a horizontal 4-node pipeline SVG component (`StatusTracker.svelte`) backed by a typed data module (`legislative-status.ts`), integrated into the About page as a dedicated "Current Status" section.
+
+**Design choices**:
+- Horizontal layout (not vertical) — reads left-to-right like a progress bar
+- Step 1 (Signature): filled green circle + checkmark — visually complete
+- Step 2 (Committee): hatched yellow + "STALLED" badge — visually blocked
+- Steps 3-4: empty outline circles — visually unreached
+- 2×2 metrics panel beneath SVG: years since signing, nations ratified, Congress status, next required step
+- `<details>` text alternative table (accessibility parity)
+- Theme-aware via MutationObserver on `data-theme` (follows existing Svelte component pattern)
+- `client:visible` hydration — defers JS until component enters viewport
+- 4 CSS custom properties aliasing existing chart/accent vars (no new color values)
+
+**Reasoning**:
+- The stalled pipeline makes the 49-year delay viscerally legible — a diagram communicates faster than prose
+- Metrics panel grounds the abstract pipeline in concrete numbers (173/193 nations, 49 years)
+- Static data module keeps the component fast and avoids external API dependency for legislative data
+- Pattern consistency: same SSR-safe getCssVar + MutationObserver approach as ScoreChart, RadarChart
+
+**What follows**:
+- StatusTracker renders on About page at position 2 (between "What Unratified Does" and "The Analysis")
+- Data module (`legislative-status.ts`) exports typed interfaces + computed helpers for future reuse
+- CSS vars `--color-tracker-*` available for any future tracker-pattern component
+
+---
+
+## D027: Explore the Site — Interactive Component Showcase Grid
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: The same external evaluator noted a desire for "more interactive elements" despite the site containing 8 interactive Svelte components. Discovery gap: no page surfaces all interactive components together with navigation to each.
+
+**Decision**: Add an "Explore the Site" section to the About page — a responsive 8-card grid mapping every interactive component to its location. Inserted after "The Five Lenses" section.
+
+**Card inventory**:
+- Lens System (5 lenses → #lenses)
+- Theme Toggle (2 themes → #lenses)
+- Self-Assessment Quiz (7 questions → /covenant/quiz)
+- Ratification Map (173 nations → /)
+- Ratification Timeline (14 events → /gap/timeline)
+- Hypothesis Scores (7 hypotheses → /connection/differential-diagnosis)
+- Dignity Profile (10 dimensions → /connection/dignity-quotient)
+- Causal Chain (20 nodes → /connection/differential-diagnosis)
+
+**Design choices**:
+- `repeat(auto-fill, minmax(16rem, 1fr))` grid — 4 cols desktop, 2 tablet, 1 mobile
+- Full-card anchor links (block `<a>`) — entire card tappable
+- `card-visual--stat` pattern (number + label) — reuses existing CSS classes from base.css (D021)
+- Hover: border-color → accent, subtle box-shadow
+- Scoped CSS in About page `<style>` block
+
+**Reasoning**:
+- Discovery problem solved at the site's most descriptive page (About)
+- Reusing `card-visual--stat` maintains visual consistency with homepage and section indexes
+- Full-card links improve tap target size on mobile
+- Stat numbers (5, 2, 7, 173, 14, 7, 10, 20) make each component's scope immediately legible
+
+**What follows**:
+- About page now documents all 8 interactive components with direct navigation links
+- Serves as discoverable index for future components added to the site
+- No new components or routes required — purely navigational

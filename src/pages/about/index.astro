@@ -1,6 +1,7 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
 import { getObservatoryStats } from '../../data/observatory';
+import StatusTracker from '../../components/ui/StatusTracker.svelte';
 
 const obs = await getObservatoryStats();
 ---
@@ -35,7 +36,17 @@ const obs = await getObservatoryStats();
     </p>
   </section>
 
-  <!-- Section 2: The Analysis -->
+  <!-- Section 2: Current Status -->
+  <section class="about-section" id="current-status">
+    <h2>Current Status</h2>
+    <p>
+      The ICESCR ratification pipeline advances through four steps. The U.S. completed the first in 1977.
+      The second step — Senate Foreign Relations Committee approval — has not moved in nearly five decades.
+    </p>
+    <StatusTracker client:visible />
+  </section>
+
+  <!-- Section 3: The Analysis -->
   <section class="about-section" id="analysis">
     <h2>The Analysis</h2>
     <p>
@@ -108,7 +119,89 @@ const obs = await getObservatoryStats();
     </p>
   </section>
 
-  <!-- Section 4: The AI Meta-Layer -->
+  <!-- Section 5: Explore the Site -->
+  <section class="about-section" id="explore">
+    <h2>Explore the Site</h2>
+    <p>
+      The site includes eight interactive components. Each one opens a different analytical layer.
+      Explore them directly — or use the links to dive into the full context.
+    </p>
+    <div class="explore-grid">
+      <a href="#lenses" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">5</span>
+          <span class="visual-label">Lenses</span>
+        </div>
+        <h3>Lens System</h3>
+        <p>Five audience modes reshape the same analysis — voter, politician, developer, educator, researcher — switchable in the nav.</p>
+      </a>
+
+      <a href="#lenses" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">2</span>
+          <span class="visual-label">Themes</span>
+        </div>
+        <h3>Theme Toggle</h3>
+        <p>Light and dark palettes switch without a page reload. The dark theme mirrors a terminal aesthetic.</p>
+      </a>
+
+      <a href="/covenant/quiz" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">7</span>
+          <span class="visual-label">Questions</span>
+        </div>
+        <h3>Self-Assessment Quiz</h3>
+        <p>Seven questions map personal experience to ICESCR articles — connecting the treaty to everyday life.</p>
+      </a>
+
+      <a href="/" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">173</span>
+          <span class="visual-label">Nations</span>
+        </div>
+        <h3>Ratification Map</h3>
+        <p>An interactive world map renders every country's ICESCR status — ratified, signed only, or not party.</p>
+      </a>
+
+      <a href="/gap/timeline" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">14</span>
+          <span class="visual-label">Events</span>
+        </div>
+        <h3>Ratification Timeline</h3>
+        <p>An interactive timeline traces every U.S. administration's relationship with ICESCR from 1966 to the present.</p>
+      </a>
+
+      <a href="/connection/differential-diagnosis" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">7</span>
+          <span class="visual-label">Hypotheses</span>
+        </div>
+        <h3>Hypothesis Scores</h3>
+        <p>A bar chart scores seven competing hypotheses about AI's economic impact against the evidence.</p>
+      </a>
+
+      <a href="/connection/dignity-quotient" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">10</span>
+          <span class="visual-label">Dimensions</span>
+        </div>
+        <h3>Dignity Profile</h3>
+        <p>A radar chart maps ten dignity dimensions across three legal frameworks — revealing the U.S. gap.</p>
+      </a>
+
+      <a href="/connection/differential-diagnosis" class="explore-card">
+        <div class="card-visual card-visual--stat">
+          <span class="visual-number">20</span>
+          <span class="visual-label">Nodes</span>
+        </div>
+        <h3>Causal Chain</h3>
+        <p>An interactive graph traces AI's economic knock-on effects across five analytical orders to ICESCR articles.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Section 6: The AI Meta-Layer -->
   <section class="about-section" id="meta-layer">
     <h2>The AI Meta-Layer</h2>
     <p>
@@ -369,5 +462,51 @@ const obs = await getObservatoryStats();
     font-family: var(--font-heading);
     font-weight: 500;
     font-size: 0.9rem;
+  }
+
+  /* Explore the Site grid */
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .explore-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .explore-card:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, var(--shadow-opacity));
+    background: var(--color-surface);
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .explore-card:visited {
+    color: var(--color-text);
+  }
+
+  .explore-card h3 {
+    margin-top: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    font-size: 0.95rem;
+    color: var(--color-heading);
+  }
+
+  .explore-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    margin: 0;
+    max-width: none;
   }
 </style>

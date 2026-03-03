@@ -72,6 +72,12 @@
   --color-chart-profile-2: #1565c0;
   --color-chart-profile-3: #ad1457;
   --color-chart-grid: #cfd8dc;
+
+  /* Status Tracker colors (alias existing vars) */
+  --color-tracker-complete: var(--color-chart-survived);
+  --color-tracker-stalled: var(--color-yellow);
+  --color-tracker-pending: var(--color-chart-bar-bg);
+  --color-tracker-line: var(--color-border);
 }
 
 /* Dark terminal palette (kashifshah.net) */
@@ -124,6 +130,12 @@
   --color-chart-profile-2: #2b90d8;
   --color-chart-profile-3: #dd459d;
   --color-chart-grid: #093946;
+
+  /* Status Tracker colors (alias existing vars) */
+  --color-tracker-complete: var(--color-chart-survived);
+  --color-tracker-stalled: var(--color-yellow);
+  --color-tracker-pending: var(--color-chart-bar-bg);
+  --color-tracker-line: var(--color-border);
 }
 
 /* Card visuals — shared by homepage + section indexes (D021) */

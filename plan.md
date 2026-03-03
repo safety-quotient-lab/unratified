@@ -288,6 +288,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Agent inbox endpoint (D024) — `/.well-known/agent-inbox.json` symmetric to observatory
 - [x] Full verbosity expansion (D025) — 19 files expanded with worked examples, Order 0-4 knock-on analysis, consensus-or-pragmatism discriminator resolution, observatory links across all content
 - [x] About page — project identity, methodology, licensing, lens system
+- [x] Legislative Status Tracker (D026) — 4-step pipeline SVG, metrics panel, StatusTracker.svelte, legislative-status.ts, CSS vars, integrated into About page "Current Status" section
+- [x] Explore the Site (D027) — 8-card interactive showcase grid on About page, all components mapped with counts and links
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

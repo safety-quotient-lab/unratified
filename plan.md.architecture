@@ -320,6 +320,7 @@ unratified/
 │   │   ├── glossary.ts              ← 50 terms, 8 categories, SKOS relationships (D024)
 │   │   ├── references.ts            ← 28 APA 7th sources, formatAPA() utility (D024)
 │   │   ├── observatory.ts           ← Build-time API fetch, typed interface, fallback (D022)
+│   │   ├── legislative-status.ts    ← 4-step ratification pipeline state machine (D026)
 │   │   ├── causal-chain.json        ← CausalChain visualization data
 │   │   └── ratification-status.json ← ICESCR ratification data (193 nations)
 │   ├── components/
@@ -330,6 +331,9 @@ unratified/
 │   │       ├── Timeline.svelte     ← Svelte island: ratification history timeline
 │   │       ├── RatificationMap.svelte ← Svelte+D3: world map choropleth
 │   │       ├── CausalChain.svelte  ← Svelte: 5-lens causal chain viz (D019)
+│   │       ├── ScoreChart.svelte   ← Svelte: horizontal bar chart (D020)
+│   │       ├── RadarChart.svelte   ← Svelte: radar/spider chart (D020)
+│   │       ├── StatusTracker.svelte ← Svelte: ICESCR pipeline viz + metrics (D026)
 │   │       ├── SharePrompt.astro   ← Share-after-action amplification (email/X/LinkedIn/copy)
 │   │       └── DownloadCard.astro  ← Print-page download links (level badges, type labels)
 │   ├── layouts/
@@ -339,7 +343,7 @@ unratified/
 │   │   └── PrintLayout.astro       ← Light-theme print layout (no dark CSS, @media print rules)
 │   ├── pages/
 │   │   ├── index.astro             ← Home: "What Remains Unratified" + World Map
-│   │   ├── about/index.astro       ← About: mission, methodology, values, licensing
+│   │   ├── about/index.astro       ← About: mission, current status tracker, methodology, values, licensing, interactive showcase
 │   │   ├── covenant/
 │   │   │   ├── index.astro         ← Covenant landing
 │   │   │   ├── history.astro       ← UDHR → ICESCR historical context
@@ -376,7 +380,7 @@ unratified/
 │   └── favicon.ico
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D020)
+├── plan.md.decisions               ← Decision log (D001–D027)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
@@ -398,6 +402,7 @@ ScoreChart.svelte     │   1.98 KB   │ client:visible (D020)
 RadarChart.svelte     │   2.28 KB   │ client:visible (D020)
 RatificationMap.svelte│  11.39 KB   │ client:visible
 CausalChain.svelte    │  10.50 KB   │ client:visible
+StatusTracker.svelte  │   3.51 KB   │ client:visible (D026)
 Svelte runtime        │  10.90 KB   │ shared
 D3-geo + topojson     │   2.61 KB   │ dynamic import
 ──────────────────────┼─────────────┼──────────────
