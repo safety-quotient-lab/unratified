@@ -565,9 +565,9 @@
       map directly onto ICESCR Articles 6, 9, 12, 13, and 15.</dd>
 
     <dt>Fiscal Context</dt>
-    <dd>The One Big Beautiful Bill Act (P.L. 119-21) reduced Medicaid by $990 billion,
-      removing coverage for 10.9 million Americans during accelerating AI-driven
-      economic transition. No binding legal standard prevented this reduction.</dd>
+    <dd>The One Big Beautiful Bill Act (P.L. 119-21) reduced Medicaid by $990 billion (gross),
+      removing coverage for approximately 10 million Americans (CBO) during accelerating
+      AI-driven economic transition. No binding legal standard prevented this reduction.</dd>
 
     <dt>International Position</dt>
     <dd>173 nations ratified the ICESCR. The United States signed in 1977 but never
