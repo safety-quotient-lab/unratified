@@ -4,7 +4,7 @@
   const themes = ['light', 'dark'] as const;
 
   function init() {
-    // Priority: URL param > localStorage > light (D018: light default)
+    // Priority: URL param > localStorage > OS preference > light
     const url = new URL(window.location.href);
     const urlTheme = url.searchParams.get('theme');
     if (urlTheme && isValidTheme(urlTheme)) {
@@ -13,6 +13,8 @@
       const stored = localStorage.getItem('unratified-theme');
       if (stored && isValidTheme(stored)) {
         activeTheme = stored;
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        activeTheme = 'dark';
       }
     }
     applyTheme(activeTheme);
