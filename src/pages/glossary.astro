@@ -107,6 +107,17 @@ import {
                         })}
                       </li>
                     ) : null}
+                    {t.sources?.length ? (
+                      <li>
+                        Sources:{' '}
+                        {t.sources.map((src, i) => (
+                          <>
+                            {i > 0 && ' | '}
+                            <a href={src.url} target="_blank" rel="noopener noreferrer">{src.label}&nbsp;↗</a>
+                          </>
+                        ))}
+                      </li>
+                    ) : null}
                   </ul>
                 </details>
               </dd>

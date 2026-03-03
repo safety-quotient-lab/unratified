@@ -311,6 +311,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog posts — 4 observatory-derived posts (Who Speaks 25/25, 806 Stories 23/25, Privacy Paradox 21/25, Recursive Methodology)
 - [x] Blog custom domain — blog.unratified.org live via Cloudflare Pages
 - [x] WCAG AA accessibility audit (D032) — axe-core 0 violations across 8 representative pages; --color-text-muted strengthened globally
+- [x] Glossary external sources + validation (D033) — 19 terms with 25 source entries, 5 definition corrections via discriminator, JSON-LD sameAs/isBasedOn, SKOS exactMatch/closeMatch, blog RSS in agent-inbox
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach

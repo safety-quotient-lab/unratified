@@ -19,6 +19,14 @@ export type TermCategory =
   | 'path'
   | 'scarcity';
 
+export type AuthorityLevel = 'primary' | 'academic' | 'reference' | 'literary';
+
+export interface ExternalSource {
+  url: string;
+  label: string;
+  authority: AuthorityLevel;
+}
+
 export interface GlossaryTerm {
   id: string;
   term: string;
@@ -29,6 +37,7 @@ export interface GlossaryTerm {
   narrower?: string[];
   related?: string[];
   seeAlso?: string;
+  sources?: ExternalSource[];
 }
 
 export const CATEGORY_LABELS: Record<TermCategory, string> = {
@@ -87,6 +96,9 @@ export const glossary: GlossaryTerm[] = [
     category: 'methodology',
     related: ['discriminator', 'composite-a'],
     seeAlso: '/connection/differential-diagnosis',
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/Differential_diagnosis', label: 'Wikipedia: Differential Diagnosis', authority: 'academic' },
+    ],
   },
   {
     id: 'order-system',
@@ -127,14 +139,21 @@ export const glossary: GlossaryTerm[] = [
     category: 'methodology',
     related: ['h2-constraint-removal', 'jevons-effect'],
     seeAlso: '/connection/differential-diagnosis',
+    sources: [
+      { url: 'https://www.mcc.gov/our-impact/constraints-analysis/', label: 'MCC: Constraints to Growth Analysis', authority: 'reference' },
+    ],
   },
   {
     id: 'jevons-effect',
     term: 'Jevons Effect',
-    definition: 'A historical economic pattern where cost reduction leads to demand explosion rather than reduced consumption. When coal became cheaper in 19th-century England, total coal consumption increased. Applied to software: when AI makes software nearly free, demand for software explodes.',
+    definition: 'A historical economic pattern where efficiency improvements that reduce effective cost lead to increased total consumption rather than reduced use. When steam engines improved coal efficiency in 19th-century England, total coal consumption rose. Applied to software: when AI makes software labor nearly free, demand for software explodes.',
     category: 'methodology',
     related: ['h3-jevons-explosion', 'constraint-removal'],
     seeAlso: '/connection/differential-diagnosis',
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/Jevons_paradox', label: 'Wikipedia: Jevons Paradox', authority: 'academic' },
+      { url: 'https://proxify.io/articles/jevons-paradox-and-implications-in-ai', label: 'Proxify: Jevons Paradox and AI', authority: 'reference' },
+    ],
   },
   {
     id: 'bifurcation',
@@ -143,6 +162,9 @@ export const glossary: GlossaryTerm[] = [
     category: 'methodology',
     related: ['h7-economic-bifurcation'],
     seeAlso: '/connection/differential-diagnosis',
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/Bifurcation_theory', label: 'Wikipedia: Bifurcation Theory', authority: 'academic' },
+    ],
   },
   {
     id: 'four-scarcities',
@@ -257,10 +279,13 @@ export const glossary: GlossaryTerm[] = [
     id: 'lapp',
     term: 'Listen, Acknowledge, Pivot, Perspective',
     abbreviation: 'LAPP',
-    definition: 'The Braver Angels depolarization methodology used throughout the site\'s advocacy framing. Listen to the opposing view, Acknowledge legitimate concerns, Pivot to shared values, offer Perspective from common ground.',
+    definition: 'The Braver Angels depolarization methodology used throughout the site\'s advocacy framing. Listen to the opposing view, Acknowledge legitimate concerns, Pivot by assessing openness to your view, offer Perspective rather than arguing the opposing position holds error.',
     category: 'framework',
     related: ['fair-witness'],
     seeAlso: '/action/talking-points',
+    sources: [
+      { url: 'https://braverangels.org/', label: 'Braver Angels', authority: 'reference' },
+    ],
   },
 
   // ── Treaty ─────────────────────────────────────────────────────
@@ -272,15 +297,22 @@ export const glossary: GlossaryTerm[] = [
     category: 'treaty',
     related: ['udhr', 'escr', 'ratification'],
     seeAlso: '/covenant',
+    sources: [
+      { url: 'https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights', label: 'OHCHR: ICESCR Full Text', authority: 'primary' },
+      { url: 'https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/treaty.aspx?treaty=cescr&lang=en', label: 'OHCHR: Ratification Status', authority: 'primary' },
+    ],
   },
   {
     id: 'escr',
     term: 'Economic, Social and Cultural Rights',
     abbreviation: 'ESCR',
-    definition: 'The category of human rights protecting positive entitlements — access to work, health, education, social security. Distinguished from civil and political rights, which protect negative liberties (freedom from interference).',
+    definition: 'The category of human rights covering work, health, education, social security, and cultural participation. Historically distinguished from civil and political rights as "positive entitlements" versus "negative liberties," though the UN now emphasizes that both categories carry obligations to respect, protect, and fulfill.',
     category: 'treaty',
     related: ['icescr', 'udhr'],
     seeAlso: '/gap/not-really-rights',
+    sources: [
+      { url: 'https://www.ohchr.org/en/human-rights/economic-social-cultural-rights', label: 'OHCHR: ESCR Overview', authority: 'primary' },
+    ],
   },
   {
     id: 'udhr',
@@ -290,14 +322,20 @@ export const glossary: GlossaryTerm[] = [
     category: 'treaty',
     narrower: ['icescr'],
     seeAlso: '/covenant/history',
+    sources: [
+      { url: 'https://www.un.org/en/about-us/universal-declaration-of-human-rights', label: 'UN: UDHR Full Text', authority: 'primary' },
+    ],
   },
   {
     id: 'ratification',
     term: 'Ratification',
-    definition: 'The formal process by which a state becomes a party to an international treaty. For the ICESCR in U.S. context, requires Senate advice and consent (67-vote supermajority). The U.S. signed in 1977. The Senate Foreign Relations Committee held hearings in 1979 but never advanced the treaty to a committee vote or floor vote.',
+    definition: 'The formal process by which a state becomes a party to an international treaty. For the ICESCR in U.S. context, requires Senate advice and consent (two-thirds of Senators present). The U.S. signed in 1977. The Senate Foreign Relations Committee held hearings in 1979 but never advanced the treaty to a committee vote or floor vote.',
     category: 'treaty',
     related: ['signatory', 'states-parties', 'senate-consent'],
     seeAlso: '/action/ratification-process',
+    sources: [
+      { url: 'https://treaties.un.org/pages/overview.aspx?path=overview/glossary/page1_en.xml', label: 'UN Treaty Collection: Glossary', authority: 'primary' },
+    ],
   },
   {
     id: 'signatory',
@@ -306,6 +344,9 @@ export const glossary: GlossaryTerm[] = [
     category: 'treaty',
     related: ['ratification', 'states-parties'],
     seeAlso: '/gap/timeline',
+    sources: [
+      { url: 'https://treaties.un.org/pages/overview.aspx?path=overview/glossary/page1_en.xml', label: 'UN Treaty Collection: Glossary', authority: 'primary' },
+    ],
   },
   {
     id: 'states-parties',
@@ -314,14 +355,20 @@ export const glossary: GlossaryTerm[] = [
     category: 'treaty',
     related: ['ratification', 'signatory'],
     seeAlso: '/gap/comparison',
+    sources: [
+      { url: 'https://treaties.un.org/pages/overview.aspx?path=overview/glossary/page1_en.xml', label: 'UN Treaty Collection: Glossary', authority: 'primary' },
+    ],
   },
   {
     id: 'senate-consent',
     term: 'Senate Advice and Consent',
-    definition: 'The U.S. constitutional requirement (Article II, Section 2) that the President obtain a two-thirds Senate supermajority before ratifying a treaty. The ICESCR has never reached this stage — committee hearings occurred in 1979, but no committee vote or floor vote followed.',
+    definition: 'The U.S. constitutional requirement (Article II, Section 2) that the President obtain consent from two-thirds of Senators present before ratifying a treaty. The ICESCR has never reached this stage — committee hearings occurred in 1979, but no committee vote or floor vote followed.',
     category: 'treaty',
     related: ['ratification'],
     seeAlso: '/action/ratification-process',
+    sources: [
+      { url: 'https://www.senate.gov/about/powers-procedures/treaties.htm', label: 'U.S. Senate: Treaties', authority: 'primary' },
+    ],
   },
   {
     id: 'article-13-pivot',
@@ -334,10 +381,13 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'article-15-science',
     term: 'Article 15: Right to Science',
-    definition: 'Article 15(1)(b) guarantees the right of everyone to enjoy the benefits of scientific progress and its applications. In AI context, this establishes that everyone holds a legal claim to share in what AI produces — not merely access, but benefit.',
+    definition: 'Article 15(1)(b) recognizes the right of everyone to enjoy the benefits of scientific progress and its applications. In AI context, this establishes that everyone holds a legal claim to share in what AI produces — not merely access, but benefit.',
     category: 'treaty',
     related: ['icescr', 'escr'],
     seeAlso: '/covenant/articles/article-15',
+    sources: [
+      { url: 'https://www.aaas.org/programs/scientific-responsibility-human-rights-law/resources/article-15/about', label: 'AAAS: Article 15 Resources', authority: 'reference' },
+    ],
   },
   {
     id: 'obbba',
@@ -347,6 +397,9 @@ export const glossary: GlossaryTerm[] = [
     category: 'enforcement',
     related: ['quality-floor', 'path-a-comprehensive', 'path-b-state-action', 'path-c-enabling-framework'],
     seeAlso: '/evidence/economic-landscape',
+    sources: [
+      { url: 'https://www.congress.gov/bill/119th-congress/house-bill/1', label: 'Congress.gov: H.R.1 (119th)', authority: 'primary' },
+    ],
   },
 
   // ── Enforcement ────────────────────────────────────────────────
@@ -357,6 +410,9 @@ export const glossary: GlossaryTerm[] = [
     category: 'enforcement',
     related: ['master-settlement-pattern', 'ada-pattern'],
     seeAlso: '/connection/ratification-counterfactual',
+    sources: [
+      { url: 'https://www.naag.org/', label: 'NAAG: National Association of Attorneys General', authority: 'reference' },
+    ],
   },
   {
     id: 'ada-pattern',
@@ -365,6 +421,10 @@ export const glossary: GlossaryTerm[] = [
     category: 'enforcement',
     related: ['state-ag-litigation', 'master-settlement-pattern', 'quality-floor'],
     seeAlso: '/connection/ratification-counterfactual',
+    sources: [
+      { url: 'https://www.ada.gov/', label: 'ADA.gov: Americans with Disabilities Act', authority: 'primary' },
+      { url: 'https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990', label: 'Wikipedia: Americans with Disabilities Act', authority: 'academic' },
+    ],
   },
   {
     id: 'master-settlement-pattern',
@@ -373,6 +433,9 @@ export const glossary: GlossaryTerm[] = [
     category: 'enforcement',
     related: ['state-ag-litigation', 'ada-pattern'],
     seeAlso: '/connection/ratification-counterfactual',
+    sources: [
+      { url: 'https://www.naag.org/our-work/naag-center-for-tobacco-and-public-health/the-master-settlement-agreement/', label: 'NAAG: Master Settlement Agreement', authority: 'primary' },
+    ],
   },
   {
     id: 'quality-floor',
@@ -414,6 +477,9 @@ export const glossary: GlossaryTerm[] = [
     definition: 'An editorial standard inspired by Heinlein: observe without interpretation, report what happened rather than why it happened, distinguish direct observation from inference, and use precise language that avoids assumptions. Governs all content on this site.',
     category: 'architecture',
     related: ['e-prime'],
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/Fair_witness', label: 'Wikipedia: Fair Witness', authority: 'literary' },
+    ],
   },
   {
     id: 'e-prime',
@@ -422,6 +488,9 @@ export const glossary: GlossaryTerm[] = [
     definition: 'A constrained form of English that eliminates all forms of the verb "to be" (am, are, is, was, were, be, being, been). Forces writers to use active, precise verbs and reduces identity-level assertions. All user-facing copy on this site follows E-prime.',
     category: 'architecture',
     related: ['fair-witness'],
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/E-Prime', label: 'Wikipedia: E-Prime', authority: 'academic' },
+    ],
   },
 
   // ── Paths ──────────────────────────────────────────────────────

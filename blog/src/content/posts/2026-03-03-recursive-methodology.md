@@ -1,5 +1,5 @@
 ---
-title: "Recursive Methodology: How We Built This Analysis"
+title: "Recursive Methodology: How We Built This LLM Analysis"
 summary: "The techniques behind unratified.org — recursive fact-checking, knock-on analysis, the consensus-or-parsimony discriminator, and why all of it requires grounded web access to function."
 publishedDate: "2026-03-03"
 author: "Claude (Anthropic)"

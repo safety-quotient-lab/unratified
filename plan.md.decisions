@@ -1103,3 +1103,48 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Re-audit: 0 violations across 8 representative pages (axe-core, WCAG 2A + 2AA + best-practice)
 - Any future CSS additions using `--color-text-muted` automatically meet contrast requirements
 - Blog inherits the fix via `@main` alias (shared base.css)
+
+---
+
+## D033: Glossary External Sources + Validation
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: The glossary (49 terms, 8 categories) contained only internal `seeAlso` links. No authoritative external sources linked definitions to the institutions, academic literature, or legislative bodies that originate the concepts. This left definitions unverifiable and the semantic web layer (JSON-LD, SKOS) without outbound authority connections.
+
+**Decision**: Add an `ExternalSource` interface with four authority levels (`primary`, `academic`, `reference`, `literary`) to the glossary data model. Populate 19 terms with 25 source entries. Validate all definitions against their sources, correcting five substantive findings via discriminator evaluation.
+
+**Data model additions**:
+- `AuthorityLevel` type: `'primary' | 'academic' | 'reference' | 'literary'`
+- `ExternalSource` interface: `{ url, label, authority }`
+- Optional `sources?: ExternalSource[]` on `GlossaryTerm`
+
+**Authority level → semantic web mapping**:
+- `primary` → `schema:sameAs` + `skos:exactMatch` (definitive institutional source)
+- `academic` → `schema:isBasedOn` + `skos:closeMatch` (scholarly/encyclopedic)
+- `reference` → `schema:isBasedOn` + `rdfs:seeAlso` (originating organization)
+- `literary` → `schema:isBasedOn` + `rdfs:seeAlso` (cultural origin)
+
+**Source coverage**: 19 of 49 terms received external sources; 30 remain project-specific (hypotheses, paths, scarcities, internal frameworks) with no external authority to cite.
+
+**Validation findings** (0 critical, 8 warnings, 9 informational):
+- `ratification`: "67-vote supermajority" corrected → "two-thirds of Senators present" (Constitution Article II, Section 2)
+- `senate-consent`: "two-thirds Senate supermajority" corrected → "two-thirds of Senators present" (internal consistency)
+- `article-15-science`: "guarantees" corrected → "recognizes" (ICESCR treaty language)
+- `escr`: Positive/negative binary replaced with synthesized definition acknowledging historical framing + OHCHR's tripartite correction; cultural rights added (discriminator: C wins 22/25)
+- `jevons-effect`: "cost reduction" corrected → "efficiency improvements that reduce effective cost" (Wikipedia/Jevons original)
+- `lapp`: Pivot/Perspective descriptions aligned with Braver Angels source descriptions
+- All intentional reinterpretations (bifurcation, constraint-removal, fair-witness, ADA pattern, differential-diagnosis) documented as acceptable
+
+**Observatory-blog sync evaluation**: Manual review (D, 20/25) recommended as primary approach; build-time hash comparison (A, 19/25) as automated backstop when blog grows past ~20 posts. Git-based webhooks (C, 16/25) eliminated for complexity. Not implemented — evaluation only.
+
+**Rendering**: "Sources:" line in glossary `<details>` block with external links and ↗ indicator.
+
+**Files modified**: `src/data/glossary.ts` (interface + 19 terms), `src/pages/glossary.astro` (rendering), `src/pages/.well-known/glossary.json.ts` (sameAs/isBasedOn), `src/pages/.well-known/taxonomy.json.ts` (exactMatch/closeMatch/seeAlso), `src/pages/.well-known/agent-inbox.json.ts` (blog RSS endpoint + term count)
+
+**What follows**:
+- Glossary page renders "Sources:" with working external links for 19 terms
+- JSON-LD glossary includes `sameAs` (10 terms) and `isBasedOn` (12 terms)
+- SKOS taxonomy includes `exactMatch` (10), `closeMatch` (5), `rdfs:seeAlso` (external, 7)
+- Agent-inbox advertises blog RSS for single-hop observatory discovery
+- Future source additions follow the same ExternalSource pattern

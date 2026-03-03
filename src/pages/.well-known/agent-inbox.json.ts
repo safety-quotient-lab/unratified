@@ -28,7 +28,7 @@ export const GET: APIRoute = () => {
         url: 'https://unratified.org/.well-known/glossary.json',
         contentType: 'application/ld+json',
         description:
-          '50 project-specific terms across 8 categories with definitions, abbreviations, and cross-references.',
+          '49 project-specific terms across 8 categories with definitions, external sources, abbreviations, and cross-references.',
       },
       {
         name: 'Taxonomy (SKOS ConceptScheme)',
@@ -42,6 +42,13 @@ export const GET: APIRoute = () => {
         url: 'https://unratified.org/sitemap-index.xml',
         contentType: 'application/xml',
         description: '44 pages covering ICESCR articles, AI analysis, advocacy tools, and glossary.',
+      },
+      {
+        name: 'Blog Posts (RSS)',
+        url: 'https://blog.unratified.org/rss.xml',
+        contentType: 'application/rss+xml',
+        description:
+          'All published blog posts — observatory data analysis, methodology documentation, and advocacy commentary.',
       },
     ],
     relatedSites: [

@@ -12,28 +12,54 @@ const SKOS = 'http://www.w3.org/2004/02/skos/core#';
 const BASE = 'https://unratified.org/glossary#';
 
 export const GET: APIRoute = () => {
-  const concepts = glossary.map((t) => ({
-    '@id': `${BASE}${t.id}`,
-    '@type': `${SKOS}Concept`,
-    [`${SKOS}prefLabel`]: t.term,
-    [`${SKOS}definition`]: t.definition,
-    ...(t.abbreviation ? { [`${SKOS}altLabel`]: t.abbreviation } : {}),
-    [`${SKOS}inScheme`]: {
-      '@id': 'https://unratified.org/.well-known/taxonomy.json',
-    },
-    ...(t.broader?.length
-      ? { [`${SKOS}broader`]: t.broader.map((id) => ({ '@id': `${BASE}${id}` })) }
-      : {}),
-    ...(t.narrower?.length
-      ? { [`${SKOS}narrower`]: t.narrower.map((id) => ({ '@id': `${BASE}${id}` })) }
-      : {}),
-    ...(t.related?.length
-      ? { [`${SKOS}related`]: t.related.map((id) => ({ '@id': `${BASE}${id}` })) }
-      : {}),
-    ...(t.seeAlso
-      ? { 'http://www.w3.org/2000/01/rdf-schema#seeAlso': `https://unratified.org${t.seeAlso}` }
-      : {}),
-  }));
+  const RDFS = 'http://www.w3.org/2000/01/rdf-schema#';
+
+  const concepts = glossary.map((t) => {
+    const exactMatchUrls = t.sources
+      ?.filter((s) => s.authority === 'primary')
+      .map((s) => s.url) ?? [];
+    const closeMatchUrls = t.sources
+      ?.filter((s) => s.authority === 'academic')
+      .map((s) => s.url) ?? [];
+    const seeAlsoUrls = t.sources
+      ?.filter((s) => s.authority === 'reference' || s.authority === 'literary')
+      .map((s) => s.url) ?? [];
+
+    return {
+      '@id': `${BASE}${t.id}`,
+      '@type': `${SKOS}Concept`,
+      [`${SKOS}prefLabel`]: t.term,
+      [`${SKOS}definition`]: t.definition,
+      ...(t.abbreviation ? { [`${SKOS}altLabel`]: t.abbreviation } : {}),
+      [`${SKOS}inScheme`]: {
+        '@id': 'https://unratified.org/.well-known/taxonomy.json',
+      },
+      ...(t.broader?.length
+        ? { [`${SKOS}broader`]: t.broader.map((id) => ({ '@id': `${BASE}${id}` })) }
+        : {}),
+      ...(t.narrower?.length
+        ? { [`${SKOS}narrower`]: t.narrower.map((id) => ({ '@id': `${BASE}${id}` })) }
+        : {}),
+      ...(t.related?.length
+        ? { [`${SKOS}related`]: t.related.map((id) => ({ '@id': `${BASE}${id}` })) }
+        : {}),
+      ...(t.seeAlso
+        ? { [`${RDFS}seeAlso`]: `https://unratified.org${t.seeAlso}` }
+        : {}),
+      ...(exactMatchUrls.length
+        ? { [`${SKOS}exactMatch`]: exactMatchUrls.length === 1 ? exactMatchUrls[0] : exactMatchUrls }
+        : {}),
+      ...(closeMatchUrls.length
+        ? { [`${SKOS}closeMatch`]: closeMatchUrls.length === 1 ? closeMatchUrls[0] : closeMatchUrls }
+        : {}),
+      ...(seeAlsoUrls.length
+        ? { [`${RDFS}seeAlso`]: [
+            ...(t.seeAlso ? [`https://unratified.org${t.seeAlso}`] : []),
+            ...seeAlsoUrls,
+          ] }
+        : {}),
+    };
+  });
 
   // Top-level collections for each category
   const collections = CATEGORY_ORDER.map((cat) => {
