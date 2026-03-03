@@ -1,9 +1,11 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
 import { getCollection } from 'astro:content';
+import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('gap');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+const obs = await getObservatoryStats();
 
 const cardStats: Record<string, { number: string; label: string }> = {
   'timeline': { number: '49', label: 'Years' },
@@ -55,8 +57,8 @@ const cardStats: Record<string, { number: string; label: string }> = {
     <h2>Live Evidence</h2>
     <p>
       The <a href="https://observatory.unratified.org/factions" rel="noopener">Human Rights Observatory</a>
-      clusters news sources by editorial character — revealing how different outlets frame the very rights
-      this gap leaves unprotected. See which media factions champion economic rights and which dismiss them.
+      clusters news sources by editorial character across {obs.corpusSize.toLocaleString()}+ evaluated
+      stories — revealing how different outlets frame the very rights this gap leaves unprotected.
     </p>
   </section>
 </SectionLayout>

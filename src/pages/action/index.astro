@@ -1,9 +1,11 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
 import { getCollection } from 'astro:content';
+import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('action');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+const obs = await getObservatoryStats();
 
 const cardStats: Record<string, { number: string; label: string }> = {
   'why-act': { number: '49', label: 'Years Overdue' },
@@ -100,8 +102,8 @@ const cardStats: Record<string, { number: string; label: string }> = {
     <h2>Stay Informed</h2>
     <p>
       Subscribe to the <a href="https://observatory.unratified.org/feed.xml" rel="noopener">Observatory RSS feed</a>
-      for rights-evaluated tech stories — filtered by UDHR provision, stance, or domain. Every story
-      scored against the same rights framework the ICESCR protects.
+      for rights-evaluated tech stories — {obs.corpusSize.toLocaleString()}+ stories scored so far,
+      filtered by UDHR provision, stance, or domain.
     </p>
   </section>
 

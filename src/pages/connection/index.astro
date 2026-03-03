@@ -1,9 +1,11 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
 import { getCollection } from 'astro:content';
+import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('connection');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+const obs = await getObservatoryStats();
 ---
 
 <SectionLayout
@@ -62,9 +64,9 @@ const sorted = pages.sort((a, b) => a.data.order - b.data.order);
     <h2>Live Evidence</h2>
     <p>
       The <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>
-      tracks how the tech community discusses all 30 UDHR articles in real time — every story
-      on Hacker News evaluated against the Universal Declaration. The ICESCR rights analyzed
-      here map directly to observable discourse patterns in the Observatory.
+      tracks how the tech community discusses all 30 UDHR articles — {obs.corpusSize.toLocaleString()}+
+      stories evaluated so far. The ICESCR rights analyzed here map directly to observable
+      discourse patterns in the Observatory.
     </p>
     <p class="observatory-links">
       <a href="https://observatory.unratified.org/rights/articles" rel="noopener" class="lens-developer">

@@ -1,9 +1,11 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
 import { getCollection } from 'astro:content';
+import { getObservatoryStats } from '../../data/observatory';
 
 const pages = await getCollection('evidence');
 const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+const obs = await getObservatoryStats();
 
 const cardStats: Record<string, { number: string; label: string; variant?: string }> = {
   'economic-landscape': { number: '$990B', label: 'Medicaid Cuts', variant: 'figure' },
@@ -53,8 +55,9 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
     <h2>Live Signal Dashboard</h2>
     <p>
       The <a href="https://observatory.unratified.org/signals" rel="noopener">Human Rights Observatory</a>
-      evaluates every Hacker News story against the Universal Declaration — tracking transparency,
-      accessibility, persuasion techniques, and rights alignment across the tech community in real time.
+      has evaluated <strong>{obs.corpusSize.toLocaleString()}+</strong> Hacker News stories against the
+      Universal Declaration. Current findings: {obs.authorIdentifiedPct}% of authors identified,
+      {obs.highJargonPct}% use heavy jargon, and {obs.domainSpecificPct}% assume domain-specific knowledge.
     </p>
   </section>
 </SectionLayout>

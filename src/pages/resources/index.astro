@@ -1,5 +1,8 @@
 ---
 import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getObservatoryStats } from '../../data/observatory';
+
+const obs = await getObservatoryStats();
 ---
 
 <SectionLayout
@@ -42,7 +45,7 @@ import SectionLayout from '../../layouts/SectionLayout.astro';
     <ul>
       <li>
         <a href="https://observatory.unratified.org" rel="noopener">Observatory Home</a>
-        <span class="desc"> — Every Hacker News story evaluated against the 30 articles and Preamble of the Universal Declaration of Human Rights</span>
+        <span class="desc"> — {obs.corpusSize.toLocaleString()}+ Hacker News stories evaluated against the 30 articles and Preamble of the Universal Declaration of Human Rights</span>
       </li>
       <li>
         <a href="https://observatory.unratified.org/rights/articles" rel="noopener">UDHR Article Scores</a>
