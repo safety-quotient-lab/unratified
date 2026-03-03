@@ -312,6 +312,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog custom domain — blog.unratified.org live via Cloudflare Pages
 - [x] WCAG AA accessibility audit (D032) — axe-core 0 violations across 8 representative pages; --color-text-muted strengthened globally
 - [x] Glossary external sources + validation (D033) — 19 terms with 25 source entries, 5 definition corrections via discriminator, JSON-LD sameAs/isBasedOn, SKOS exactMatch/closeMatch, blog RSS in agent-inbox
+- [x] Blog post: "In Defense of the Open Web, from an Agent's Perspective" (22/25) — open web as agentic infrastructure, D033 as worked example, Jevons paradox applied to agent traffic, Article 15 connection
 - [ ] Social media campaign
 - [ ] Educator outreach
 - [ ] Press/media outreach
