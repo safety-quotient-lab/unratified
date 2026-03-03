@@ -74,10 +74,16 @@ unratified.org                          MAIN SITE — ICESCR, advocacy, educator
 │   ├── /action/letters                 Template letters and talking points
 │   └── /action/share                   Shareable graphics and social content
 │
-└── /resources                          Further Reading
-    ├── /resources/icescr               Full annotated ICESCR text
-    ├── /resources/research             Academic and research sources
-    └── /resources/organizations        Organizations working on ratification
+├── /resources                          Further Reading
+│   ├── /resources/icescr               Full annotated ICESCR text
+│   ├── /resources/research             Academic and research sources
+│   └── /resources/organizations        Organizations working on ratification
+│
+├── /glossary                           Glossary — 50 terms, 8 categories, APA bibliography
+│
+└── /.well-known/                       Machine-readable semantic endpoints
+    ├── /.well-known/glossary.json      Schema.org DefinedTermSet (JSON-LD)
+    └── /.well-known/taxonomy.json      SKOS ConceptScheme (JSON-LD)
 
 observatory.unratified.org              OBSERVATORY — "Human Rights Observatory, HN Edition"
 │
@@ -91,17 +97,44 @@ observatory.unratified.org              OBSERVATORY — "Human Rights Observator
 └── /data                               Downloads: datasets, BibTeX, citations
 ```
 
+#### Semantic Data Layer (D024)
+
+```
+src/data/
+├── glossary.ts         50 terms, 8 categories, SKOS broader/narrower/related
+├── references.ts       28 APA 7th sources, formatAPA() utility
+├── observatory.ts      Build-time API fetch, typed interface, fallback snapshot
+├── causal-chain.json   CausalChain visualization data
+└── ratification-status.json  World map ratification data
+```
+
+Glossary and references serve as single source of truth for:
+- Human-readable glossary page (`/glossary`)
+- Machine-readable JSON-LD endpoints (`/.well-known/`)
+- Lens-aware reference lists on ArticleLayout
+- BaseLayout structured data (@graph with BreadcrumbList, DefinedTermSet)
+
 #### Cross-Linking Strategy
+
+Topology: **mesh** (D024 transformed the original hub-and-spoke into cross-linked mesh)
 
 Every ICESCR article page links to:
 - The relevant AI analysis section showing how that right gets affected
 - The relevant evidence/data supporting the connection
 - The relevant action items (what to say to senators about THIS right)
+- Related ICESCR articles addressing connected rights
+- Glossary terms for project-specific vocabulary
 
 Every analysis page links to:
 - The ICESCR article(s) it connects to
 - The underlying evidence
 - The methodology explanation
+- Glossary definitions for first-use abbreviations
+
+Section indexes include cross-section navigation callouts:
+- Covenant → "See how AI affects these rights" → Connection
+- Gap → "What ratification would change" → Connection/Counterfactual
+- Evidence → "These numbers connect to your rights" → Covenant
 
 This creates a web of reinforcing content rather than a linear reading path.
 
