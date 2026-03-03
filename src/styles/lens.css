@@ -190,7 +190,7 @@
   padding: var(--space-xs) var(--space-sm);
   border: none;
   background: var(--color-surface);
-  color: var(--color-text-muted);
+  color: var(--color-toggle-inactive, #546e7a);
   cursor: pointer;
   transition: background-color 0.15s, color 0.15s;
 }
@@ -232,7 +232,7 @@
   padding: var(--space-xs) var(--space-sm);
   border: none;
   background: var(--color-surface);
-  color: var(--color-text-muted);
+  color: var(--color-toggle-inactive, #546e7a);
   cursor: pointer;
   transition: background-color 0.15s, color 0.15s;
 }

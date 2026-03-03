@@ -5,7 +5,8 @@
   /* Color: light palette (default) */
   --color-bg: #fafafa;
   --color-text: #37474f;
-  --color-text-muted: #78909c;
+  --color-text-muted: #546e7a;          /* WCAG AA 4.59:1 on #fafafa, 4.79:1 on #ffffff */
+  --color-toggle-inactive: #546e7a;    /* same in light mode */
   --color-primary: #263238;            /* near-black — h1, site title */
   --color-heading: #33691e;            /* dark green — h2/h3/h4 */
   --color-accent: #00695c;             /* dark teal — links */
@@ -84,7 +85,8 @@
 [data-theme="dark"] {
   --color-bg: #002d38;
   --color-text: #98a8a8;
-  --color-text-muted: #5b7279;
+  --color-text-muted: #7e9aa3;          /* WCAG AA 5.60:1 on #002d38 */
+  --color-toggle-inactive: #99b0b8;    /* WCAG AA 4.85:1 on #093946 (surface bg) */
   --color-primary: #8faaab;
   --color-heading: #819500;
   --color-accent: #259d94;
