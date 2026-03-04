@@ -50,6 +50,22 @@ const structuredData: Record<string, unknown>[] = [
         "name": "Kashif Shah",
         "url": "https://kashifshah.net",
       },
+      "knowsAbout": [
+        "International Covenant on Economic, Social and Cultural Rights (ICESCR)",
+        "Universal Declaration of Human Rights (UDHR)",
+        "U.S. treaty ratification process",
+        "AI economic impact analysis",
+        "Differential diagnosis methodology",
+        "Human rights advocacy",
+        "AI accuracy and confabulation patterns",
+        "Fair witness methodology",
+      ],
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "U.S. ratification of the ICESCR",
+      "description": "The United States signed the International Covenant on Economic, Social and Cultural Rights in 1977 but has never ratified it. 173 nations have ratified.",
+      "sameAs": "https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights",
     },
     "isPartOf": {
       "@type": "WebSite",
@@ -146,11 +162,17 @@ if (Astro.url.pathname !== '/glossary') {
     <meta property="og:url" content={canonicalUrl.href} />
     <meta property="og:site_name" content="Unratified" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={`${siteOrigin}/apple-touch-icon.png`} />
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="180" />
+    <meta property="og:image:alt" content="Unratified — ICESCR ratification advocacy" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteOrigin}/apple-touch-icon.png`} />
+    <meta name="twitter:image:alt" content="Unratified — ICESCR ratification advocacy" />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({

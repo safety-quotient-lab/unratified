@@ -3,6 +3,33 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LensPanel from '../components/LensPanel.astro';
 import ScoreChart from '../components/ui/ScoreChart.svelte';
 
+const faqData = [
+  {
+    question: "What does ICESCR ratification require?",
+    answer: "The ratification process requires a Senate Foreign Relations Committee hearing, committee vote, and two-thirds floor vote (Article II, Section 2 of the U.S. Constitution). The mechanism exists and requires no new legislation — only political will to schedule a vote that has waited since 1979.",
+  },
+  {
+    question: "Why has the U.S. not ratified the ICESCR?",
+    answer: "The U.S. signed the ICESCR in 1977 under President Carter, but the Senate has never sought consent for ratification. Key objections include concerns about positive rights enforcement, federalism implications, and the 'not really rights' framing that treats economic rights as aspirational rather than legally binding. The site addresses each objection with evidence-based counterarguments.",
+  },
+  {
+    question: "How many countries have ratified the ICESCR?",
+    answer: "173 nations have ratified the ICESCR as of 2026. The United States remains one of a handful of nations that signed but never ratified the Covenant.",
+  },
+  {
+    question: "What rights does the ICESCR protect?",
+    answer: "The ICESCR protects: the right to work (Article 6), just and favorable conditions of work (Article 7), social security (Article 9), an adequate standard of living (Article 11), health (Article 12), education (Article 13), and the right to benefit from scientific progress (Article 15).",
+  },
+  {
+    question: "What strategy would achieve ICESCR ratification?",
+    answer: "Analysis of seven ratification pathways using a consensus-or-parsimony discriminator identifies Composite P-A (scoring 22/25): a coalition-driven Senate pathway combining Coalition Assembly (P6, 19/25), State-First Strategy (P3, 18/25), Litigation Cascade (P4, 18/25), and Senate Revival (P1, 15/25). This mirrors the ADA's path from Section 504 (1973) through state experimentation to federal enactment (1990).",
+  },
+  {
+    question: "How does AI connect to ICESCR ratification?",
+    answer: "AI functions as narrow superintelligence for software labor, triggering a Jevons-style demand explosion bounded by new bottlenecks and distributed unevenly. The resulting economic bifurcation maps directly onto ICESCR-protected rights. Without a binding legal framework, the U.S. has no structural mechanism to ensure AI's benefits reach everyone. Article 15 (the right to benefit from scientific progress) provides direct legal grounding.",
+  },
+];
+
 const lensFraming = {
   voter: "This page answers the practical question: what combination of forces would actually achieve ICESCR ratification? Seven strategies tested, four survive, one composite model emerges. Your role maps directly to the winning strategy.",
   politician: "Strategic analysis of ratification pathways using the same discriminator protocol applied across the site. Seven mechanisms evaluated on empirical support, parsimony, consensus, chain integrity, and predictive power. The composite model identifies what activates the dormant Senate process.",
@@ -23,6 +50,18 @@ const pathwayScores = [
 ---
 
 <BaseLayout title="How Ratification Happens" description="Seven ratification pathways evaluated through differential diagnosis — discriminator scoring, higher-order analysis, and the composite model that emerges.">
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(({ question, answer }) => ({
+      "@type": "Question",
+      "name": question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": answer,
+      },
+    })),
+  })} />
   <div class="how-page">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>

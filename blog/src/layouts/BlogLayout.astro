@@ -7,11 +7,13 @@ import '@main/styles/lens.css';
 interface Props {
   title: string;
   description?: string;
+  ogType?: 'website' | 'article';
 }
 
 const {
   title,
   description = 'Blog — ICESCR advocacy and AI economics analysis',
+  ogType = 'website',
 } = Astro.props;
 
 const siteOrigin = 'https://blog.unratified.org';
@@ -34,6 +36,14 @@ const structuredData = {
       name: 'Kashif Shah',
       url: 'https://kashifshah.net',
     },
+    knowsAbout: [
+      'International Covenant on Economic, Social and Cultural Rights (ICESCR)',
+      'Universal Declaration of Human Rights (UDHR)',
+      'U.S. treaty ratification process',
+      'AI economic impact analysis',
+      'AI accuracy and confabulation patterns',
+      'Fair witness methodology',
+    ],
   },
   creator: [
     {
@@ -96,13 +106,20 @@ const structuredData = {
 
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonicalUrl.href} />
     <meta property="og:site_name" content="Unratified Blog" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={`${siteOrigin}/apple-touch-icon.png`} />
+    <meta property="og:image:width" content="180" />
+    <meta property="og:image:height" content="180" />
+    <meta property="og:image:alt" content="Unratified Blog — ICESCR analysis and AI accuracy research" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteOrigin}/apple-touch-icon.png`} />
+    <meta name="twitter:image:alt" content="Unratified Blog — ICESCR analysis and AI accuracy research" />
 
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
