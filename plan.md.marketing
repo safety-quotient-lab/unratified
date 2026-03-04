@@ -1047,6 +1047,96 @@ The analysis serves five audiences: voters looking to act, policymakers evaluati
 
 ---
 
+## Speculative Cartography Content Strategy (March 2026)
+
+### The Meta-Angle
+
+Phase 3 (Orders 5–9) and Phase 4 (quantitative consolidation) provide a marketing-ready narrative: **an AI analyzing the limits of its own analytical capacity**. This meta-angle appeals to all five personas:
+
+- **Voters**: The long-term questions reinforce the urgency of ratification — the effects compound across generations
+- **Politicians**: A mapped decision space for 10–40 year policy horizons, grounded in quantitative data
+- **Developers**: Methodology showcase — pushing a discriminator past productive exhaustion, then anchoring with empirical data
+- **Educators**: The confidence degradation curve teaches critical thinking about ANY analytical claim
+- **Researchers**: Replicable technique for any domain where long-horizon policy implications matter
+
+### Content Assets
+
+| Asset | Location | Status |
+|-------|----------|--------|
+| Phase 3 analysis (Orders 5–9) | content/analysis/higher-order-effects-phase3.md | Complete |
+| Phase 4 quantitative consolidation | content/analysis/higher-order-effects-phase4.md | Complete |
+| Blog post: "Where the Analysis Stops Trusting Itself" | blog/src/content/posts/2026-03-04-speculative-cartography.md | Live |
+
+### Key Marketing Messages
+
+**For AI/tech audiences (HN, Bluesky developers)**:
+> "An AI traced the 5th through 9th-order consequences of its own economic transformation — and told you exactly where its confidence ran out. Then we grounded every order with DOE, BLS, and OECD data."
+
+**For policy audiences**:
+> "Orders 0–4 inform legislation. Orders 5–7 inform institutional planning. Order 8 informs the normative discussion about values alignment. Each level marked with its actual confidence."
+
+**For education audiences**:
+> "The confidence degradation curve — from HIGH through SPECULATIVE to EXHAUSTED — teaches students how to evaluate any analytical claim, not just this one."
+
+### Bluesky Posts — Speculative Cartography Extension
+
+**Post 11 — The Speculative Cartography Hook (Week 3)**
+
+> What happens when an AI traces the 5th-order consequences of its own economic impact — and tells you where its confidence runs out?
+>
+> Answers at Orders 0–2. Frameworks at 3–4. Questions at 5–7. Productive exhaustion at 9.
+>
+> The map may prove wrong. But the questions it identifies matter regardless.
+>
+> blog.unratified.org/2026-03-04-speculative-cartography/
+
+**Post 12 — The CS Enrollment Signal (Week 3)**
+
+> Fall 2025: CS graduate enrollment dropped 14%.
+>
+> Our analysis predicted the judgment pipeline would contract as AI handles entry-level tasks. The labor market has already begun pricing it in.
+>
+> The question for policy: if fewer people develop software judgment, does AI compensate or does the gap compound across generations?
+>
+> ICESCR Article 13 provides the legal basis for either response.
+
+**Post 13 — The Energy Number (Week 3)**
+
+> US data centers consume 176 TWh — 4.4% of the entire US power grid.
+>
+> By 2028: 325–580 TWh (6.7–12.0% of grid capacity).
+>
+> Grid capacity grows ~1% annually. AI compute demand grows ~15%.
+>
+> Energy prices from AI compute cascade across ALL economic rights simultaneously — housing, healthcare, education, living standards.
+>
+> A treaty protecting economic rights becomes more relevant, not less, as energy constraints tighten.
+
+**Post 14 — The Productivity-Pay Gap (Week 4)**
+
+> Since 1979: productivity grew 59.7%. Median compensation grew 17.3%.
+>
+> The mechanism that failed to translate computing productivity into wages will apply to AI-driven productivity too.
+>
+> No person should face poverty wages while AI generates record corporate profits. The treaty that addresses this exists. 173 nations ratified it.
+>
+> unratified.org/connection/differential-diagnosis/
+
+### Quantitative Data as Content Hook
+
+Phase 4's six key findings each generate standalone social media content:
+
+1. **Adoption Speed Asymmetry** (3yr to 50% — fastest ever) → "Why institutions can't adapt fast enough"
+2. **CS Enrollment Inflection** (−14% grad) → "The market already prices in AI displacement"
+3. **Energy Constraint** (4.4% → 12% of grid) → "The physical bottleneck arrives within budget cycles"
+4. **Productivity-Pay Gap** (3.5x divergence, 44 years) → "The mechanism predates AI"
+5. **Education Spending Flat** (5.6% of GDP, stagnant) → "Rising demand, static investment"
+6. **China-US Patent Gap** (6x in GenAI families) → "The geopolitical dimension"
+
+Each data point earns its own post across platforms (Bluesky, Lemmy, future channels). The numbers anchor the abstract analysis in observable, verifiable data.
+
+---
+
 ## Key Messaging by Audience (Final)
 
 ### HN: Lead with the methodology

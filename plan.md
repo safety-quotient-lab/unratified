@@ -200,6 +200,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] A/B testing infrastructure — hybrid vs. observational voice for content effectiveness measurement
 - [x] Landing page buildout (D034) — /why, /start, /for/voters, /for/politicians, /for/educators, /for/researchers, /for/developers — 7 pages, 52 total build
 - [x] Phase 2 Mental Model: Full double-knock on all higher orders — re-ran complete higher-order analysis (Orders 0-4) using consensus-or-parsimony discriminator at every branching point; Composite A confirmed (20/25 both passes); all 8 Order 1 survivors hold or strengthen; Platform Recurrence elevated to VERY HIGH (22/25); three-layer scarcity architecture identified; 2 watch items (H7.3, H6.2 approach threshold); document at content/analysis/higher-order-effects-phase2.md
+- [x] Phase 3 + Phase 4 complete: Orders 5–9 speculative cartography + quantitative consolidation with 10 empirical data streams; full analysis chain now spans Orders 0–9 across 4 phases
 
 **Phase 1: Core Content Development** (COMPLETE)
 
@@ -318,6 +319,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog sorting/filtering + publication readiness — PostList.svelte (tag filter + sort), favicons, apple-touch-icon, CSP + HSTS headers, 404 page, welcome post author fix
 - [x] Review first blog post (welcome) — rewritten with mission-driven framing, prohibition language, urgency lead; git provenance links added to all posts
 - [x] iOS blank screen fix (D036) — non-render-blocking Google Fonts via media="print" onload pattern; both BaseLayout + BlogLayout
+- [x] Phase 3 speculative cartography (Orders 5–9) — content/analysis/higher-order-effects-phase3.md; institutional hybridization (16/25), cross-system resonance (3 patterns), generational compounding (indistinguishable scenarios), values-framework argument, productive exhaustion at Order 9; PROJECTION/SCENARIO/EXTRAPOLATION tagging system
+- [x] Phase 4 quantitative consolidation — content/analysis/higher-order-effects-phase4.md; 10 quantitative streams (DOE, BLS, OECD, WIPO, EPI, NSCR, CRA) mapped to all orders; CS grad enrollment −14% anchors judgment pipeline; energy 4.4%→12% of grid anchors R3; productivity-pay 3.5x gap grounds H7; six key quantitative findings
+- [x] Blog post: "Where the Analysis Stops Trusting Itself" — speculative cartography meta-angle, confidence degradation curve, AI analyzing its own limits
+- [x] Marketing update: speculative cartography strategy + Bluesky posts 11–14 (quantitative hooks)
 - [ ] Site monitor daemon — lightweight watchdog checking both unratified.org + blog.unratified.org; health checks (HTTP status, SSL cert expiry, build breakage), analytics anomaly detection (traffic spikes/drops via Cloudflare API), content integrity (page count regression, broken links), email alerts to kashif@kashifshah.net; candidates: Cloudflare Worker on cron trigger (free, already in ecosystem) or standalone script
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
