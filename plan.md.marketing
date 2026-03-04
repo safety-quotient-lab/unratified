@@ -999,6 +999,54 @@ PHASE │ AUDIENCE   │ ACTION                                │ GOAL
 
 ---
 
+## Lemmy Strategy (lemmy.sdf.org)
+
+### Why Lemmy
+
+Lemmy.sdf.org hosts a fediverse-native, tech-forward audience that values open standards, privacy, and substantive discourse. The instance runs `c/humanrights` — a direct fit. The fediverse audience overlaps with the developer persona but carries stronger open-web and anti-corporate values. Longer markdown posts welcome — no character limit.
+
+### Target Community
+
+**c/humanrights** on lemmy.sdf.org — primary post. Cross-post to c/politics if community rules permit.
+
+### Post 1 — Introductory Anchor
+
+**Title:** The U.S. signed a treaty protecting economic rights in 1977. The Senate has never voted on it. Now AI reshapes the economy.
+
+**Body:**
+
+173 nations ratified the [International Covenant on Economic, Social and Cultural Rights (ICESCR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) — a binding framework protecting the right to work, healthcare, education, and an adequate standard of living.
+
+The United States signed it in 1977. Nearly fifty years later, the Senate has never held a ratification vote. The only other signatories that haven't ratified: Palau and Comoros.
+
+**Why this matters now:** Artificial intelligence functions as narrow superintelligence for software labor. It removes constraints that previously bounded economic activity — triggering demand explosions bounded by new bottlenecks (regulation, energy, trust, human judgment). Who benefits from that transformation depends entirely on whether legal frameworks exist to distribute the gains.
+
+No person should lose access to healthcare because automation eliminated their job. No worker should face poverty wages while AI generates record corporate profits. The treaty that addresses this already exists. It just needs ratification.
+
+**What we built:** A full differential diagnosis of AI's economic impact, four orders of knock-on effects, and what ICESCR ratification would actually change. Fair witness methodology — every claim sourced, every inference marked as inference, open data, full revision history on GitHub.
+
+- Main analysis: [unratified.org](https://unratified.org)
+- Blog (ongoing developments): [blog.unratified.org](https://blog.unratified.org)
+- Source code + revision history: [GitHub](https://github.com/safety-quotient-lab/unratified)
+
+Built by a Claude Code agent, directed by a human maintainer. Apache 2.0 (code) + CC BY-SA 4.0 (content). The site runs on open standards — no tracking scripts, no paywalls, no walled gardens.
+
+The analysis serves five audiences: voters looking to act, policymakers evaluating obligations, developers building on the data, educators using the materials, and researchers examining the methodology. Each page adapts its framing to the reader.
+
+**How to help:** Contact your senators about the ICESCR. Most have never received a single constituent letter about this treaty. Template letters and talking points at [unratified.org/action](https://unratified.org/action/).
+
+*Human Rights; Nothing More, Nothing Less.*
+
+### Posting Notes
+
+- Post to c/humanrights first; gauge reception before cross-posting
+- Engage substantively with every reply — this audience detects and rejects drive-by promotion
+- Mention the open-source stack and CC BY-SA license early — credibility markers for this audience
+- If asked about the AI agent authorship, lean into transparency: "Yes, a Claude Code agent wrote the analysis under human direction. Every edit visible in the git history."
+- Do not post the same content to multiple Lemmy communities simultaneously — space by 2+ days
+
+---
+
 ## Key Messaging by Audience (Final)
 
 ### HN: Lead with the methodology

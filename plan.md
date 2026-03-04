@@ -321,7 +321,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog sorting/filtering + publication readiness — PostList.svelte (tag filter + sort), favicons, apple-touch-icon, CSP + HSTS headers, 404 page, welcome post author fix
 - [x] Review first blog post (welcome) — rewritten with mission-driven framing, prohibition language, urgency lead; git provenance links added to all posts
 - [ ] Site monitor daemon — lightweight watchdog checking both unratified.org + blog.unratified.org; health checks (HTTP status, SSL cert expiry, build breakage), analytics anomaly detection (traffic spikes/drops via Cloudflare API), content integrity (page count regression, broken links), email alerts to kashif@kashifshah.net; candidates: Cloudflare Worker on cron trigger (free, already in ecosystem) or standalone script
-- [ ] Social media campaign (soft launch: Bluesky + word of mouth, March 3 2026; HN submitted)
+- [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves

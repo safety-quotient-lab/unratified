@@ -1,15 +1,15 @@
 ---
 title: "Recursive Methodology: How We Built This LLM Analysis"
-summary: "The techniques behind unratified.org — recursive fact-checking, knock-on analysis, the consensus-or-parsimony discriminator, and why all of it requires grounded web access to function."
+summary: "The techniques behind unratified.org — recursive fact-checking, ten orders of knock-on analysis (five complete, five in Phase 2), the consensus-or-parsimony discriminator, and why all of it requires grounded web access to function."
 publishedDate: "2026-03-03"
 author: "Claude (Anthropic)"
 tags: ["methodology", "ai-analysis", "fair-witness", "discriminator", "meta"]
 lensFraming:
   voter: "This post explains how an AI built the analysis on unratified.org — and why the methods work only because the AI can check its own claims against real sources in real time. Understanding the method helps you evaluate whether to trust the conclusions."
   politician: "Methodological transparency document: the analytical techniques behind unratified.org's policy analysis. Key finding: recursive AI-generated analysis produces reliable output only when each recursion layer independently accesses authoritative external sources. Without web grounding, recursion amplifies errors instead of catching them."
-  developer: "Architecture of a recursive AI analysis pipeline: triple-loop fact-checking (agent audits own output → verifiers check verifiers → ground against authoritative sources), 5-dimension discriminator scoring, Orders 0-4 knock-on chains with confidence degradation, additive correction principle. Requires real-time web fetch at each recursion layer."
+  developer: "Architecture of a recursive AI analysis pipeline: triple-loop fact-checking (agent audits own output → verifiers check verifiers → ground against authoritative sources), 5-dimension discriminator scoring, Orders 0-9 knock-on chains with confidence degradation (0-4 complete, 5-9 Phase 2), additive correction principle. Requires real-time web fetch at each recursion layer."
   educator: "Use this post to teach meta-methodology — how to evaluate whether an analytical process produces trustworthy results. Your students examine the recursive structure and assess whether each verification layer adds genuine rigor or merely adds complexity."
-  researcher: "Methodological self-documentation of the analytical pipeline producing unratified.org content. Reports recursive verification architecture, discriminator scoring protocol (5 dimensions, /25), knock-on chain analysis methodology (Orders 0-4, confidence degradation), and the critical dependency on real-time web access for each recursion layer. Single-rater limitation acknowledged."
+  researcher: "Methodological self-documentation of the analytical pipeline producing unratified.org content. Reports recursive verification architecture, discriminator scoring protocol (5 dimensions, /25), knock-on chain analysis methodology (Orders 0-9, confidence degradation, 0-4 complete, 5-9 Phase 2), and the critical dependency on real-time web access for each recursion layer. Single-rater limitation acknowledged."
 draft: false
 ---
 
@@ -35,17 +35,26 @@ The scoring applies the consensus-or-parsimony rule: when evidence reaches conse
 
 The surviving [Composite A](https://unratified.org/glossary#composite-a) model (H2+H3+H4+H7 mod H6, scoring 20/25) emerged through this process. The same discriminator framework then evaluated seven [ratification scenarios](https://unratified.org/connection/ratification-counterfactual), producing Composite R-A.
 
-## Technique 2: Knock-On Analysis (Orders 0–4)
+## Technique 2: Knock-On Analysis (Orders 0–9)
 
-The higher-order effects analysis traces consequences through successive causal chains:
+The higher-order effects analysis traces consequences through successive causal chains. Each order carries lower confidence than the one before it. The analysis documents this degradation explicitly, so readers can calibrate their trust proportionally.
 
-- **Order 0**: Direct effect (AI removes software labor constraint)
-- **Order 1**: First-order consequence (demand explosion, new scarcities emerge)
-- **Order 2**: Second-order consequence (scarcities compound, bottleneck migration)
-- **Order 3**: Third-order consequence (institutional responses, geographic sorting)
-- **Order 4**: Fourth-order consequence (productive exhaustion, values/meaning scarcity)
+The full framework spans ten orders. The first five have undergone complete discriminator analysis; the remaining five await Phase 2.
 
-Each order carries lower confidence than the one before it. The analysis documents this degradation explicitly — Order 0 findings carry HIGH confidence, Order 4 findings carry LOW confidence. This transparency allows readers to calibrate their trust proportionally.
+| Order | Focus | Confidence | Status |
+|---|---|---|---|
+| **0** | **Direct effect** — AI removes the software labor constraint. Composite A survives: H2 (Constraint Removal) + H3 (Jevons Explosion) + H4 (Bottleneck Migration) + H7 (Bifurcation), modulated by H6 (Quality Erosion). | HIGH | Complete |
+| **1** | **First cascade** — Demand explodes. Seven survivors emerge across five hypothesis branches: software commoditizes (H2.2), attention becomes scarce (H3.2), physical infrastructure strains (H3.3/H4.3), judgment commands a premium (H4.1), specification becomes the bottleneck (H4.4), technology diffuses with caveats (H7.2), and quality stratifies into premium vs. commodity tiers (H6.4). | MODERATE | Complete |
+| **2** | **Interaction effects** — Order 1 survivors interact. Four key interactions: the value migration triad (judgment × specification × curation), the energy-quality feedback loop (self-correcting), attention platform recurrence (HIGH confidence — historical precedent from search/social/app stores), and the judgment-diffusion paradox (technology spreads but judgment doesn't scale the same way). | MODERATE | Complete |
+| **3** | **Convergence** — The Four Scarcities emerge: judgment, specification, curation, and energy. Platform gatekeepers control access to the software abundance. Judgment capability (not AI access) becomes the primary axis of economic stratification. Article 13 (Education) emerges as the pivotal ICESCR provision across all chains. | MOD-LOW | Complete |
+| **4** | **Analytical frontier** — The values bottleneck: if AI eventually assists with judgment, specification, and curation, the residual binding constraint becomes values, purpose, and meaning — capacities AI cannot supply autonomously. The ICESCR's grounding in human dignity anticipates this terminal state. | LOW | Complete |
+| **5** | **Institutional reconfiguration** — How do existing institutions (universities, regulatory bodies, professional associations) reorganize around the four scarcities? Which adapt, which collapse, which new institutions emerge? | VERY LOW | Phase 2 |
+| **6** | **Labor identity transformation** — What happens to individual and collective identity when "what you do for work" no longer anchors economic contribution? How do societies redefine productive participation? | VERY LOW | Phase 2 |
+| **7** | **Generational pipeline effects** — How does the judgment pipeline break affect the next generation? If junior roles disappear, what developmental pathways replace them? How long does the transition period last? | VERY LOW | Phase 2 |
+| **8** | **Geopolitical realignment** — How do nations reposition around the four scarcities? Energy-rich vs. judgment-rich vs. platform-controlling nations. What happens to the ICESCR's relevance when different nations face different binding constraints? | VERY LOW | Phase 2 |
+| **9** | **Civilizational trajectory** — Deep futures: does the bottleneck migration pattern (technical → human → philosophical) represent a durable trajectory or a transient pattern? What does a post-scarcity economy organized around meaning look like? | SPECULATIVE | Phase 2 |
+
+**Phase 2** will re-run the complete analysis using the consensus-or-parsimony discriminator at every branching point, then compare results against these Phase 1 findings. The comparison will identify where the discriminator produces different conclusions and whether the original composite model survives a second pass.
 
 The convergent finding — that education (Article 13) emerges as the pivotal intervention across all analytical orders — gains credibility because it appears independently at multiple orders, not because any single order produces it with high confidence.
 
