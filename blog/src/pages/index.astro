@@ -1,19 +1,23 @@
 ---
 import BlogLayout from '../layouts/BlogLayout.astro';
+import PostList from '../components/PostList.svelte';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('posts', ({ data }) => !data.draft);
-const posts = allPosts.sort((a, b) =>
-  new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
-);
+const posts = allPosts
+  .sort((a, b) =>
+    new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
+  )
+  .map(post => ({
+    id: post.id,
+    title: post.data.title,
+    summary: post.data.summary,
+    publishedDate: new Date(post.data.publishedDate).toISOString(),
+    author: post.data.author,
+    tags: post.data.tags,
+  }));
 
-function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
-  });
-}
+const allTags = [...new Set(allPosts.flatMap(p => p.data.tags))].sort();
 ---
 
 <BlogLayout title="Posts">
@@ -25,27 +29,7 @@ function formatDate(date: Date): string {
       </p>
     </header>
 
-    <section class="post-list">
-      {posts.map(post => (
-        <article class="post-card">
-          <time datetime={new Date(post.data.publishedDate).toISOString().split('T')[0]}>
-            {formatDate(new Date(post.data.publishedDate))}
-          </time>
-          <h2><a href={`/${post.id}`}>{post.data.title}</a></h2>
-          <p class="post-summary">{post.data.summary}</p>
-          <div class="post-card-meta">
-            <span class="author">{post.data.author}</span>
-            {post.data.tags.length > 0 && (
-              <span class="tags">
-                {post.data.tags.map(tag => (
-                  <a href={`/tags/${tag}`} class="tag">#{tag}</a>
-                ))}
-              </span>
-            )}
-          </div>
-        </article>
-      ))}
-    </section>
+    <PostList client:load posts={posts} allTags={allTags} />
 
     {posts.length === 0 && (
       <p>No posts yet. Check back soon.</p>
@@ -64,68 +48,5 @@ function formatDate(date: Date): string {
     color: var(--color-text-muted);
     max-width: 36rem;
     margin-bottom: var(--space-2xl);
-  }
-
-  .post-list {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-xl);
-  }
-
-  .post-card {
-    padding-bottom: var(--space-lg);
-    border-bottom: 1px solid var(--color-border);
-  }
-
-  .post-card time {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-  }
-
-  .post-card h2 {
-    font-size: 1.309rem;
-    margin: var(--space-xs) 0 var(--space-sm);
-  }
-
-  .post-card h2 a {
-    text-decoration: none;
-    color: var(--color-heading);
-  }
-
-  .post-card h2 a:hover {
-    color: var(--color-accent);
-  }
-
-  .post-summary {
-    color: var(--color-text);
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .post-card-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-top: var(--space-sm);
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-  }
-
-  .tags {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-  }
-
-  .tag {
-    font-family: var(--font-heading);
-    font-size: 0.7rem;
-    color: var(--color-accent);
-    text-decoration: none;
-  }
-
-  .tag:hover {
-    color: var(--color-accent-light);
   }
 </style>

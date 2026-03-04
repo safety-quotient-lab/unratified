@@ -1,0 +1,56 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+---
+
+<BlogLayout title="Page Not Found">
+  <div class="not-found">
+    <h1>404 — Page Not Found</h1>
+    <p>The page you requested does not exist or may have moved.</p>
+    <nav aria-label="Recovery navigation">
+      <ul>
+        <li><a href="/">Browse all posts</a></li>
+        <li><a href="/rss.xml">Subscribe via RSS</a></li>
+        <li><a href="https://unratified.org" rel="noopener">Return to main site</a></li>
+      </ul>
+    </nav>
+  </div>
+</BlogLayout>
+
+<style>
+  .not-found {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    text-align: center;
+    padding: var(--space-3xl) 0;
+  }
+
+  .not-found h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .not-found p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .not-found ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+  }
+
+  .not-found a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+  }
+
+  .not-found a:hover {
+    color: var(--color-accent-light);
+  }
+</style>
