@@ -237,13 +237,25 @@ const obs = await getObservatoryStats();
           Wolfram|Alpha
         </a>
       </div>
+      <div class="cloudflare-attribution">
+        <span class="claude-badge-label">Hosted on</span>
+        <a href="https://pages.cloudflare.com/" rel="noopener" class="claude-badge-link">
+          Cloudflare
+        </a>
+      </div>
     </div>
     <p class="vendor-note">
-      <a href="https://www.anthropic.com/" rel="noopener">Anthropic</a> provides the analytical engine.
+      <a href="https://www.anthropic.com/" rel="noopener">Anthropic</a> provides the analytical engine &mdash;
+      Claude produces the core analysis under human direction.
       <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a> (Wolfram Research, Inc.) provides computational knowledge &mdash;
       compound growth projections, intersection timelines, derived ratios, and reference data that ground the
       <a href="/connection/higher-order-effects">higher-order analysis</a> in verifiable arithmetic.
-      Both vendors' contributions carry full attribution throughout the site. Neither vendor endorses or has reviewed this project's conclusions.
+      <a href="https://www.cloudflare.com/" rel="noopener">Cloudflare</a> provides the hosting, CDN, DNS, and
+      privacy-respecting analytics infrastructure &mdash; both sites run on
+      <a href="https://pages.cloudflare.com/" rel="noopener">Cloudflare Pages</a> with
+      <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics</a>
+      (no tracking scripts, no cookies, no personal data collection).
+      No vendor endorses or has reviewed this project's conclusions. All contributions carry full attribution throughout the site.
     </p>
   </section>
 
@@ -508,7 +520,8 @@ const obs = await getObservatoryStats();
   }
 
   .claude-attribution,
-  .wolfram-attribution {
+  .wolfram-attribution,
+  .cloudflare-attribution {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);

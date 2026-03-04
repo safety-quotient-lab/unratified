@@ -164,6 +164,17 @@ export const references: Reference[] = [
     category: 'ai-economics',
   },
   {
+    id: 'cloudflare-pages',
+    authors: [{ family: 'Cloudflare, Inc.', isOrganization: true }],
+    year: 2026,
+    title: 'Cloudflare Pages: Full-Stack Application Platform',
+    source: 'Cloudflare, Inc., San Francisco, CA',
+    url: 'https://pages.cloudflare.com/',
+    accessDate: '2026-03-04',
+    type: 'report',
+    category: 'ai-economics',
+  },
+  {
     id: 'wolfram-alpha',
     authors: [{ family: 'Wolfram Research, Inc.', isOrganization: true }],
     year: 2026,
