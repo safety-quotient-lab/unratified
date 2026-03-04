@@ -1,0 +1,256 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
+
+const lensFraming = {
+  educator: "This page connects you to classroom-ready materials — lesson plans, discussion prompts, student handouts, and curriculum connections. Everything here aligns with civics, economics, and social studies standards.",
+};
+---
+
+<BaseLayout title="For Educators" description="Classroom-ready materials connecting AI economics to human rights — lesson plans, discussion prompts, and student handouts." defaultLens="educator">
+  <div class="persona-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/start">Start</a></li>
+        <li aria-current="page">For Educators</li>
+      </ol>
+    </nav>
+
+    <header class="persona-header">
+      <h1>For Educators</h1>
+      <p class="persona-lede">
+        No child should enter a workforce reshaped by AI without understanding the
+        rights framework that 173 nations built to protect economic security. These
+        materials bring that framework into your classroom.
+      </p>
+    </header>
+
+    <LensPanel lensFraming={lensFraming} />
+
+    <section class="materials">
+      <h2>Classroom Materials</h2>
+      <div class="material-grid">
+        <a href="/action/educator-toolkit" class="material-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">3</span>
+            <span class="visual-label">Lesson Plans</span>
+          </span>
+          <h3>Educator Toolkit</h3>
+          <p>Complete lesson arcs: rights identification, AI and the Four Scarcities, and the OBBBA policy analysis. Includes teacher guides and student handouts.</p>
+        </a>
+        <a href="/action/talking-points" class="material-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">7</span>
+            <span class="visual-label">Key Points</span>
+          </span>
+          <h3>Discussion Framework</h3>
+          <p>Seven talking points organized by ICESCR article &mdash; each with questions your students can debate, evaluate, and extend.</p>
+        </a>
+        <a href="/gap/arguments" class="material-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">2</span>
+            <span class="visual-label">Sides</span>
+          </span>
+          <h3>Arguments &amp; Counterarguments</h3>
+          <p>Structured debate material &mdash; your students analyze both sides of the ratification question using evidence-based reasoning.</p>
+        </a>
+        <a href="/glossary" class="material-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">49</span>
+            <span class="visual-label">Terms</span>
+          </span>
+          <h3>Glossary</h3>
+          <p>Key terms with authoritative external sources &mdash; use as vocabulary-building or research starting points.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="curriculum">
+      <h2>Curriculum Connections</h2>
+      <div class="connection-list">
+        <div class="connection">
+          <h3>Civics &amp; Government</h3>
+          <p>Treaty ratification process (Article II, Section 2), Senate procedures, separation of powers, and the role of international law in domestic governance.</p>
+        </div>
+        <div class="connection">
+          <h3>Economics</h3>
+          <p>AI's impact on labor markets, the Jevons paradox, bottleneck migration, and how technology transforms economic structures.</p>
+        </div>
+        <div class="connection">
+          <h3>Social Studies</h3>
+          <p>Human rights frameworks, comparative government (173 nations vs. U.S. approach), and the relationship between rights and economic security.</p>
+        </div>
+        <div class="connection">
+          <h3>Critical Thinking</h3>
+          <p>Hypothesis testing through the discriminator methodology, evaluating evidence quality, distinguishing observation from inference.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="deeper">
+      <h2>Explore the Full Analysis</h2>
+      <p>
+        The materials above draw from a comprehensive analysis available across the site.
+        Your students can explore the primary sources:
+      </p>
+      <div class="explore-grid">
+        <a href="/covenant" class="explore-card">
+          <h3>The Covenant</h3>
+          <p>Article-by-article explanation with AI relevance</p>
+        </a>
+        <a href="/connection/differential-diagnosis" class="explore-card">
+          <h3>The Methodology</h3>
+          <p>Seven hypotheses scored through differential diagnosis</p>
+        </a>
+        <a href="/connection/higher-order-effects" class="explore-card">
+          <h3>Higher-Order Effects</h3>
+          <p>Four orders of cascading consequences</p>
+        </a>
+        <a href="/educators" class="explore-card">
+          <h3>Educator Hub</h3>
+          <p>Full resources page with downloadable materials</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .persona-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .persona-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .persona-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .materials, .curriculum, .deeper {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .material-grid, .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .material-card, .explore-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .material-card:hover, .explore-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .material-card h3, .explore-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .material-card p, .explore-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .connection-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .connection {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-heading);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .connection h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .connection p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .material-grid, .explore-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

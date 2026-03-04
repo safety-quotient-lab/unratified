@@ -1,0 +1,258 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RatificationMap from '../components/ui/RatificationMap.svelte';
+---
+
+<BaseLayout title="Why Ratification Matters" description="The United States signed a treaty protecting economic rights in 1977. Nearly fifty years later, AI reshapes the economy — and the Senate has never voted.">
+  <div class="why-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Why</li>
+      </ol>
+    </nav>
+
+    <header class="why-header">
+      <h1>Why Ratification Matters</h1>
+      <p class="why-lede">
+        No person should face AI-driven economic disruption without legal protection.
+        The treaty already exists. The signature already happened. What remains: ratification.
+      </p>
+    </header>
+
+    <section class="the-gap">
+      <h2>The Promise</h2>
+      <p>
+        In 1977, the United States signed the
+        <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">International Covenant on Economic, Social and Cultural Rights (ICESCR)</a>
+        &mdash; a binding framework protecting the right to work, healthcare, education,
+        and an adequate standard of living.
+      </p>
+      <p>
+        173 nations ratified it. Every NATO ally. Every G7 member except the United States.
+        The Senate has never held a ratification vote.
+      </p>
+
+      <RatificationMap client:visible />
+    </section>
+
+    <section class="the-urgency">
+      <h2>The Urgency</h2>
+      <p>
+        Artificial intelligence reshapes the economy faster than any technology since
+        electrification. It removes constraints that previously bounded economic
+        activity &mdash; triggering demand explosions bounded by new bottlenecks:
+        regulation, energy, trust, human judgment.
+      </p>
+      <p>
+        Who benefits from that transformation depends entirely on whether legal
+        frameworks exist to distribute the gains. Without ratification, the United
+        States has no structural mechanism to ensure AI's benefits reach everyone.
+      </p>
+    </section>
+
+    <section class="the-stakes">
+      <h2>What Unratified Means</h2>
+      <div class="stakes-grid">
+        <div class="stake">
+          <h3>No Right to Work</h3>
+          <p>
+            No enforceable framework protects workers displaced by automation.
+            AI eliminates roles faster than new ones appear &mdash; and no
+            legal obligation requires transition support.
+          </p>
+        </div>
+        <div class="stake">
+          <h3>No Right to Healthcare</h3>
+          <p>
+            No binding commitment guarantees healthcare access. When
+            AI-driven productivity gains concentrate at the top, healthcare
+            becomes a market privilege rather than a protected right.
+          </p>
+        </div>
+        <div class="stake">
+          <h3>No Right to Education</h3>
+          <p>
+            The analysis identifies judgment as the pivotal scarcity in
+            an AI economy. Judgment develops through education and practice.
+            Without a binding educational rights framework, that pipeline breaks.
+          </p>
+        </div>
+        <div class="stake">
+          <h3>No Right to Share in Progress</h3>
+          <p>
+            Article 15 of the ICESCR protects the right to enjoy the benefits of
+            scientific progress. Without ratification, no legal mechanism ensures
+            AI's transformative gains reach beyond early adopters.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="what-next">
+      <h2>What You Can Do</h2>
+      <p>
+        Understanding leads to action. Choose your path:
+      </p>
+      <div class="path-grid">
+        <a href="/start" class="path-link">
+          <strong>New here?</strong>
+          <span>Take a guided tour of the site &rarr;</span>
+        </a>
+        <a href="/for/voters" class="path-link">
+          <strong>Ready to act?</strong>
+          <span>Five minutes, your senator, 173 nations &rarr;</span>
+        </a>
+        <a href="/for/educators" class="path-link">
+          <strong>Teaching?</strong>
+          <span>Classroom-ready materials &rarr;</span>
+        </a>
+        <a href="/for/researchers" class="path-link">
+          <strong>Researching?</strong>
+          <span>Methodology and data &rarr;</span>
+        </a>
+        <a href="/for/developers" class="path-link">
+          <strong>Building?</strong>
+          <span>Open source analysis framework &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .why-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .why-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .why-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .the-gap, .the-urgency, .the-stakes, .what-next {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .stakes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .stake {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .stake h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .stake p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .path-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .path-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .path-link:hover {
+    border-color: var(--color-accent);
+  }
+
+  .path-link strong {
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+
+  .path-link span {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .stakes-grid, .path-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

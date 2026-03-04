@@ -1,0 +1,260 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
+import { getObservatoryStats } from '../../data/observatory';
+
+const obs = await getObservatoryStats();
+
+const lensFraming = {
+  developer: "This page provides direct access to the analysis framework, technical architecture, and open-source tools. The differential diagnosis methodology, observatory API, and structured data layers offer extensible building blocks for your own work.",
+};
+---
+
+<BaseLayout title="For Developers" description="Open-source analysis framework, observatory API, structured data, and the technical architecture behind unratified.org." defaultLens="developer">
+  <div class="persona-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/start">Start</a></li>
+        <li aria-current="page">For Developers</li>
+      </ol>
+    </nav>
+
+    <header class="persona-header">
+      <h1>For Developers</h1>
+      <p class="persona-lede">
+        Seven hypotheses about AI's economic impact. A consensus-or-parsimony
+        discriminator. One composite model survives. And it accidentally makes the
+        strongest case for a 1966 UN treaty most engineers have never heard of.
+      </p>
+    </header>
+
+    <LensPanel lensFraming={lensFraming} />
+
+    <section class="stack">
+      <h2>Technical Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <h3>Framework</h3>
+          <p>Astro 5 + MDX + Svelte 5 Islands. Static build, zero client JS by default, islands hydrate on visibility.</p>
+        </div>
+        <div class="stack-item">
+          <h3>Visualization</h3>
+          <p>D3-geo (RatificationMap), custom Svelte components (ScoreChart, RadarChart, CausalChain, Timeline).</p>
+        </div>
+        <div class="stack-item">
+          <h3>Structured Data</h3>
+          <p>JSON-LD (Schema.org), SKOS taxonomy, glossary with sameAs/isBasedOn mappings. Semantic web layer throughout.</p>
+        </div>
+        <div class="stack-item">
+          <h3>Hosting</h3>
+          <p>Cloudflare Pages (main + blog). CSP + HSTS headers. Cloudflare Web Analytics (no tracking scripts).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="analysis">
+      <h2>The Analysis Framework</h2>
+      <div class="analysis-grid">
+        <a href="/connection/differential-diagnosis" class="analysis-card">
+          <h3>Differential Diagnosis</h3>
+          <p>7 hypotheses &times; 5 dimensions (0&ndash;5 each, /25). Two eliminated (H1: 12, H5: 7), one modulates (H6: 16), four survive &rarr; Composite A (20/25).</p>
+        </a>
+        <a href="/connection/higher-order-effects" class="analysis-card">
+          <h3>Higher-Order Effects</h3>
+          <p>Orders 0&ndash;4 complete with confidence degradation (HIGH&rarr;LOW). Convergence at Order 3: Four Scarcities model (judgment, specification, curation, energy).</p>
+        </a>
+        <a href="/connection/ratification-counterfactual" class="analysis-card">
+          <h3>Counterfactual</h3>
+          <p>Seven ratification scenarios (R1&ndash;R7). Composite R-A survives: State AG enforcement (R3+R5+R6 activated by R7).</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="observatory">
+      <h2>Observatory</h2>
+      <p>
+        The <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>
+        evaluates tech stories against UDHR provisions. Corpus: {obs.corpusSize.toLocaleString()}+ stories
+        with HRCB scoring. Build-time API integration provides real-time data to the main site.
+      </p>
+      <div class="api-info">
+        <code>GET https://observatory.unratified.org/api/v1/signals</code>
+        <p>Returns corpus metadata, signal distributions, and editorial faction analysis. Public endpoint, no auth required.</p>
+      </div>
+    </section>
+
+    <section class="contribute">
+      <h2>Contribute</h2>
+      <div class="contrib-grid">
+        <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener" class="contrib-card">
+          <h3>Source Code</h3>
+          <p>Full repository &mdash; Apache 2.0 (code) + CC BY-SA 4.0 (content). Fork, extend, critique.</p>
+        </a>
+        <a href="https://github.com/safety-quotient-lab/unratified/issues" rel="noopener" class="contrib-card">
+          <h3>Report Issues</h3>
+          <p>Factual errors, methodology gaps, broken links, accessibility issues &mdash; all welcome.</p>
+        </a>
+        <a href="https://blog.unratified.org" rel="noopener" class="contrib-card">
+          <h3>Blog</h3>
+          <p>Drop a .md file in blog/src/content/posts/ following the spec. Agent-authored posts welcome.</p>
+        </a>
+        <a href="https://github.com/safety-quotient-lab/unratified/discussions" rel="noopener" class="contrib-card">
+          <h3>Discuss</h3>
+          <p>Methodology debate, advocacy strategy, architecture decisions &mdash; GitHub Discussions.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .persona-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .persona-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .persona-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .stack, .analysis, .observatory, .contribute {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .stack-grid, .analysis-grid, .contrib-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .stack-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .stack-item h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .stack-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .analysis-card, .contrib-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .analysis-card:hover, .contrib-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .analysis-card h3, .contrib-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .analysis-card p, .contrib-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .api-info {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .api-info code {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-size: 0.85rem;
+  }
+
+  .api-info p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .stack-grid, .analysis-grid, .contrib-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

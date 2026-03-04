@@ -1,0 +1,269 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
+
+const lensFraming = {
+  researcher: "This page provides direct access to the methodology, datasets, and analytical framework behind unratified.org. All content carries explicit confidence assessments. Open access, full citations, downloadable data.",
+};
+---
+
+<BaseLayout title="For Researchers" description="Methodology documentation, discriminator scoring, open data, and the analytical framework behind unratified.org." defaultLens="researcher">
+  <div class="persona-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/start">Start</a></li>
+        <li aria-current="page">For Researchers</li>
+      </ol>
+    </nav>
+
+    <header class="persona-header">
+      <h1>For Researchers</h1>
+      <p class="persona-lede">
+        A differential diagnosis framework applied to AI economic impact, with
+        integral chain analysis connecting Jevons paradox and bottleneck migration
+        to ICESCR obligations. Open methodology, transparent confidence assessments.
+      </p>
+    </header>
+
+    <LensPanel lensFraming={lensFraming} />
+
+    <section class="methodology">
+      <h2>Analytical Framework</h2>
+      <p>
+        The analysis employs a consensus-or-parsimony discriminator scoring seven
+        competing hypotheses on five dimensions (empirical support, parsimony,
+        consensus, chain integrity, predictive power &mdash; each 0&ndash;5, total /25).
+        The surviving composite model (Composite A, 20/25) undergoes recursive
+        higher-order analysis through ten orders with explicit confidence degradation.
+      </p>
+      <div class="method-grid">
+        <a href="/connection/differential-diagnosis" class="method-card">
+          <h3>Differential Diagnosis</h3>
+          <p>Seven hypotheses (H1&ndash;H7), discriminator scoring, elimination rationale, composite model derivation</p>
+        </a>
+        <a href="/connection/higher-order-effects" class="method-card">
+          <h3>Higher-Order Effects</h3>
+          <p>Orders 0&ndash;4 complete (HIGH&rarr;LOW confidence), Orders 5&ndash;9 Phase 2. Four Scarcities convergence at Order 3.</p>
+        </a>
+        <a href="/connection/ratification-counterfactual" class="method-card">
+          <h3>Ratification Counterfactual</h3>
+          <p>Seven ratification scenarios (R1&ndash;R7), Composite R-A survivor, enforcement mechanism analysis</p>
+        </a>
+        <a href="/connection/dignity-quotient" class="method-card">
+          <h3>Dignity Quotient</h3>
+          <p>PSQ-UDHR evaluation framework (21/25), dignity as measurable construct</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="data-access">
+      <h2>Data Access</h2>
+      <div class="data-grid">
+        <div class="data-item">
+          <h3>Source Repository</h3>
+          <p>Full source code, content, and revision history:<br/>
+          <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">github.com/safety-quotient-lab/unratified</a></p>
+        </div>
+        <div class="data-item">
+          <h3>Observatory API</h3>
+          <p>HRCB-scored discourse analysis corpus:<br/>
+          <a href="https://observatory.unratified.org" rel="noopener">observatory.unratified.org</a></p>
+        </div>
+        <div class="data-item">
+          <h3>Structured Data</h3>
+          <p>JSON-LD (Schema.org), SKOS taxonomy, glossary with sameAs/isBasedOn mappings to authoritative sources</p>
+        </div>
+        <div class="data-item">
+          <h3>Licensing</h3>
+          <p>Apache 2.0 (code), CC BY-SA 4.0 (content). Cite, extend, critique &mdash; all welcomed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="limitations">
+      <h2>Known Limitations</h2>
+      <ul>
+        <li><strong>Single-rater analysis</strong> &mdash; one AI system generated all content under human direction. Inter-rater reliability not established.</li>
+        <li><strong>Confidence degradation</strong> &mdash; Orders 3&ndash;4 carry LOW confidence. Orders 5&ndash;9 (Phase 2) will carry VERY LOW to SPECULATIVE confidence.</li>
+        <li><strong>U.S.-centric scope</strong> &mdash; the analysis focuses on U.S. non-ratification. Comparative analysis of other non-ratifying states remains incomplete.</li>
+        <li><strong>Fair witness constraint</strong> &mdash; E-prime and fair witness protocols reduce interpretive bias but do not eliminate it.</li>
+      </ul>
+    </section>
+
+    <section class="explore">
+      <h2>Further Reading</h2>
+      <div class="explore-grid">
+        <a href="/glossary" class="explore-card">
+          <h3>Glossary</h3>
+          <p>49 terms with external sources mapped to 4 authority levels</p>
+        </a>
+        <a href="/about" class="explore-card">
+          <h3>About</h3>
+          <p>Project identity, methodology, licensing, and contact</p>
+        </a>
+        <a href="/resources" class="explore-card">
+          <h3>Resources</h3>
+          <p>Further reading and reference materials</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-recursive-methodology/" class="explore-card">
+          <h3>Methodology Blog Post</h3>
+          <p>Ten orders of knock-on analysis, discriminator protocol, recursive fact-checking architecture</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .persona-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .persona-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .persona-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .methodology, .data-access, .limitations, .explore {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .method-grid, .data-grid, .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .method-card, .explore-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .method-card:hover, .explore-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .method-card h3, .explore-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .method-card p, .explore-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .data-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .data-item h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .data-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .limitations ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+
+  .limitations li {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-text-muted);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .limitations li strong {
+    color: var(--color-text);
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .method-grid, .data-grid, .explore-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

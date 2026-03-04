@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
+
+const lensFraming = {
+  politician: "This page provides a structured overview of ICESCR ratification for legislative staff — political cover analysis, constituent signal data, committee pathway, and a one-page policy brief for the staffing process.",
+};
+---
+
+<BaseLayout title="For Policymakers" description="ICESCR ratification briefing — political cover, constituent signal, committee pathway, and policy brief for legislative staff." defaultLens="politician">
+  <div class="persona-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/start">Start</a></li>
+        <li aria-current="page">For Policymakers</li>
+      </ol>
+    </nav>
+
+    <header class="persona-header">
+      <h1>For Policymakers</h1>
+      <p class="persona-lede">
+        AI-driven economic transformation generates increasing constituent concern
+        about jobs, healthcare, and education. The ICESCR provides a bipartisan
+        framework &mdash; signed by a president, never voted on by the Senate.
+      </p>
+    </header>
+
+    <LensPanel lensFraming={lensFraming} />
+
+    <section class="executive-summary">
+      <h2>Executive Summary</h2>
+      <p>
+        The <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a>
+        protects the right to work, health, education, and an adequate standard of
+        living. 173 nations ratified it &mdash; including every NATO ally, every G7
+        member, and every EU member state. President Carter signed the treaty in 1977
+        and transmitted it to the Senate in 1978. The Senate Foreign Relations Committee
+        held hearings in November 1979 but never advanced a committee vote.
+      </p>
+    </section>
+
+    <section class="political-cover">
+      <h2>Political Cover</h2>
+      <div class="cover-grid">
+        <div class="cover-item">
+          <h3>International Alignment</h3>
+          <p>Every NATO ally ratified. Every G7 member except the U.S. Every EU member state. Every Five Eyes partner except the U.S.</p>
+        </div>
+        <div class="cover-item">
+          <h3>Bipartisan Framework</h3>
+          <p>Conservatives find property rights and family stability protections (Articles 10, 11). Progressives find labor rights and safety net provisions (Articles 6, 7, 9).</p>
+        </div>
+        <div class="cover-item">
+          <h3>RUDs Precedent</h3>
+          <p>Standard Reservations, Understandings, and Declarations (RUDs) address sovereignty concerns &mdash; the same tool used for ICCPR ratification in 1992.</p>
+        </div>
+        <div class="cover-item">
+          <h3>AI Urgency</h3>
+          <p>AI-driven economic disruption creates constituent pressure the ICESCR directly addresses. Ratification provides a framework without requiring new legislation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pathway">
+      <h2>Committee Pathway</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <div>
+            <strong>Senate Foreign Relations Committee</strong>
+            <p>Committee hearing and markup. Last hearing: November 1979 (96th Congress).</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <div>
+            <strong>Committee Vote</strong>
+            <p>Simple majority to advance to floor. Never achieved for ICESCR.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <div>
+            <strong>Floor Vote</strong>
+            <p>Two-thirds of senators present must consent to ratification (Article II, Section 2).</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <div>
+            <strong>Presidential Ratification</strong>
+            <p>President deposits instrument of ratification with the UN Secretary-General.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resources">
+      <h2>Staff Resources</h2>
+      <div class="resource-grid">
+        <a href="/action/policy-brief" class="resource-card">
+          <h3>Policy Brief</h3>
+          <p>One-page executive summary with floor-speech talking points, risk assessment, and constituent signal data</p>
+        </a>
+        <a href="/action/talking-points" class="resource-card">
+          <h3>Talking Points</h3>
+          <p>ICESCR talking points organized by article, audience, and political framing</p>
+        </a>
+        <a href="/gap/arguments" class="resource-card">
+          <h3>Arguments Against</h3>
+          <p>Common objections to ratification and evidence-based counterarguments</p>
+        </a>
+        <a href="/connection/ratification-counterfactual" class="resource-card">
+          <h3>Ratification Analysis</h3>
+          <p>What ratification would change &mdash; seven scenarios evaluated through discriminator scoring</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .persona-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .persona-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .persona-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .executive-summary, .political-cover, .pathway, .resources {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .cover-grid, .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .cover-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .cover-item h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .cover-item p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+    max-width: 36rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 50%;
+  }
+
+  .step strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+  }
+
+  .step p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .resource-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .resource-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .resource-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .resource-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .cover-grid, .resource-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

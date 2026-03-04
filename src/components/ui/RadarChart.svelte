@@ -54,9 +54,10 @@
   });
 
   // Layout constants
-  const svgSize = 400;
-  const cx = 200;
-  const cy = 200;
+  const padding = 60;
+  const svgSize = 400 + padding * 2;
+  const cx = svgSize / 2;
+  const cy = svgSize / 2;
   const radius = 140;
   const gridLevels = 5;
 

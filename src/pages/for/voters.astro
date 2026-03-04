@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
+
+const lensFraming = {
+  voter: "This page connects you to everything on the site that matters most for taking action — from understanding the treaty to contacting your senators. Five minutes can shift the political calculation.",
+};
+---
+
+<BaseLayout title="For Voters" description="How unratified economic rights affect your daily life — and what five minutes of your time can change." defaultLens="voter">
+  <div class="persona-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/start">Start</a></li>
+        <li aria-current="page">For Voters</li>
+      </ol>
+    </nav>
+
+    <header class="persona-header">
+      <h1>For Voters</h1>
+      <p class="persona-lede">
+        No person should lose access to work, healthcare, education, or an adequate
+        standard of living because their government never completed a signature
+        it made in 1977.
+      </p>
+    </header>
+
+    <LensPanel lensFraming={lensFraming} />
+
+    <section class="stakes">
+      <h2>What This Means for You</h2>
+      <p>
+        173 nations protect their citizens' economic rights under the
+        <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a>.
+        The United States does not. That means:
+      </p>
+      <ul>
+        <li>No enforceable right to work when AI displaces your job</li>
+        <li>No enforceable right to healthcare when employers cut coverage</li>
+        <li>No enforceable right to education that prepares you for an AI economy</li>
+        <li>No enforceable right to share in the benefits of scientific progress</li>
+      </ul>
+      <p>
+        Your senator has probably never received a single constituent letter about
+        the ICESCR. Most Americans don't know this treaty exists.
+      </p>
+    </section>
+
+    <section class="action-steps">
+      <h2>Five Minutes, Your Senator, 173 Nations</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <div>
+            <strong>Understand why now</strong>
+            <p>AI reshapes the economy faster than any previous technology. <a href="/action/why-act">Read why the timing matters &rarr;</a></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <div>
+            <strong>Find your senators</strong>
+            <p>Look up your senators at <a href="https://www.senate.gov/senators/" rel="noopener">senate.gov</a> or use our <a href="/action/contact">contact tool</a></p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <div>
+            <strong>Send a letter</strong>
+            <p>Use a <a href="/action/template-letters">template letter</a> or write your own. Personal letters carry the most weight.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore">
+      <h2>Explore the Analysis</h2>
+      <div class="explore-grid">
+        <a href="/covenant" class="explore-card">
+          <h3>The Treaty</h3>
+          <p>What rights the ICESCR protects and why they matter for AI-era economics</p>
+        </a>
+        <a href="/gap" class="explore-card">
+          <h3>The Gap</h3>
+          <p>Why the Senate has never voted &mdash; and what 49 years of inaction costs you</p>
+        </a>
+        <a href="/connection" class="explore-card">
+          <h3>The AI Connection</h3>
+          <p>How AI transforms jobs, healthcare, and education &mdash; and why enforceable rights matter</p>
+        </a>
+        <a href="/action" class="explore-card">
+          <h3>Take Action</h3>
+          <p>Templates, talking points, and everything you need to contact your senators</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .persona-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .persona-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .persona-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .stakes, .action-steps, .explore {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .stakes ul {
+    list-style: none;
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .stakes li {
+    padding-left: var(--space-lg);
+    position: relative;
+    color: var(--color-text-muted);
+  }
+
+  .stakes li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+    max-width: 36rem;
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    background: var(--color-primary);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.875rem;
+    border-radius: 50%;
+  }
+
+  .step strong {
+    display: block;
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+  }
+
+  .step p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .explore-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .explore-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .explore-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .explore-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .explore-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

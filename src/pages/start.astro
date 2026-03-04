@@ -1,0 +1,308 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Start Here" description="A guided tour of unratified.org — how to navigate the analysis, choose your lens, and find what matters to you.">
+  <div class="start-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Start Here</li>
+      </ol>
+    </nav>
+
+    <header class="start-header">
+      <h1>Start Here</h1>
+      <p class="start-lede">
+        This site analyzes how AI reshapes the economy &mdash; and why a 1966 treaty
+        the United States signed but never ratified holds the key to protecting
+        economic rights during that transformation.
+      </p>
+    </header>
+
+    <section class="how-it-works">
+      <h2>How This Site Works</h2>
+      <p>
+        Every page on this site adapts to your perspective. Five reading lenses
+        emphasize different aspects of the same analysis &mdash; from personal
+        impact to technical methodology. Use the lens toggle in the header to
+        switch between them, or visit a persona page to start with yours:
+      </p>
+
+      <div class="persona-grid">
+        <a href="/for/voters" class="persona-card">
+          <h3>Voters</h3>
+          <p>Personal stakes, action steps, senator contact tools. How unratified economic rights affect your daily life.</p>
+        </a>
+        <a href="/for/politicians" class="persona-card">
+          <h3>Policymakers</h3>
+          <p>Policy briefs, constituent data, political cover analysis. What legislative staff need to evaluate ratification.</p>
+        </a>
+        <a href="/for/educators" class="persona-card">
+          <h3>Educators</h3>
+          <p>Lesson plans, discussion prompts, student handouts. Classroom-ready materials connecting AI to human rights.</p>
+        </a>
+        <a href="/for/researchers" class="persona-card">
+          <h3>Researchers</h3>
+          <p>Methodology documentation, discriminator scoring, open data. The analytical framework behind every claim.</p>
+        </a>
+        <a href="/for/developers" class="persona-card">
+          <h3>Developers</h3>
+          <p>Technical analysis, open source, API access. The differential diagnosis framework and its applications.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="site-map">
+      <h2>The Analysis in Five Sections</h2>
+      <div class="section-cards">
+        <a href="/covenant" class="section-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">10</span>
+            <span class="visual-label">Articles</span>
+          </span>
+          <h3>The Covenant</h3>
+          <p>What the ICESCR protects &mdash; ten articles covering work, health, education, culture, and scientific progress.</p>
+        </a>
+        <a href="/gap" class="section-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">&frac12;</span>
+            <span class="visual-label">Century</span>
+          </span>
+          <h3>The Gap</h3>
+          <p>Why the Senate has never voted &mdash; nine administrations, forty-nine years, and the arguments on both sides.</p>
+        </a>
+        <a href="/connection" class="section-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">20</span>
+            <span class="visual-label">Score /25</span>
+          </span>
+          <h3>The AI Connection</h3>
+          <p>How AI transforms the economy &mdash; seven hypotheses, a differential diagnosis, and four orders of knock-on effects.</p>
+        </a>
+        <a href="/evidence" class="section-card">
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">$527B</span>
+            <span class="visual-label">AI Capex</span>
+          </span>
+          <h3>The Evidence</h3>
+          <p>The data behind the analysis &mdash; tariff impacts, AI investment, healthcare projections, and economic indicators.</p>
+        </a>
+        <a href="/action" class="section-card">
+          <span class="card-visual card-visual--cta">
+            <span class="visual-label">Take Action &rarr;</span>
+          </span>
+          <h3>Take Action</h3>
+          <p>Contact your senators, download templates, find talking points &mdash; everything needed to advocate for ratification.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="methodology-note">
+      <h2>How to Read This Analysis</h2>
+      <p>
+        This site follows <strong>fair witness</strong> principles &mdash; reporting
+        what the evidence shows, distinguishing observation from inference, and marking
+        confidence levels explicitly. The analysis uses
+        <a href="/glossary#e-prime">E-prime</a> (avoiding forms of "to be") to force
+        active, precise language.
+      </p>
+      <p>
+        Every claim traces back to a source. Every inference carries a confidence
+        marker. The full revision history lives on
+        <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">GitHub</a>.
+        A Claude Code agent wrote the analysis under human direction &mdash; every
+        editorial decision visible in the commit log.
+      </p>
+    </section>
+
+    <section class="ecosystem">
+      <h2>The Ecosystem</h2>
+      <div class="eco-grid">
+        <div class="eco-item">
+          <h3><a href="https://unratified.org">unratified.org</a></h3>
+          <p>The main analysis &mdash; the site you are reading now.</p>
+        </div>
+        <div class="eco-item">
+          <h3><a href="https://blog.unratified.org" rel="noopener">blog.unratified.org</a></h3>
+          <p>Ongoing updates &mdash; legislative developments, methodology explanations, advocacy strategy.</p>
+        </div>
+        <div class="eco-item">
+          <h3><a href="https://observatory.unratified.org" rel="noopener">observatory.unratified.org</a></h3>
+          <p>The Human Rights Observatory &mdash; tech stories scored against UDHR provisions in real time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .start-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .start-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .start-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .how-it-works, .site-map, .methodology-note, .ecosystem {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .persona-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .persona-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .persona-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .persona-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .section-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .section-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .section-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+  }
+
+  .section-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .eco-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+  }
+
+  .eco-item {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .eco-item h3 {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+  }
+
+  .eco-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .persona-grid, .section-cards, .eco-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
