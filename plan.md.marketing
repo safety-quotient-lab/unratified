@@ -1147,3 +1147,46 @@ Each data point earns its own post across platforms (Bluesky, Lemmy, future chan
 
 ### Academics: Lead with the novel contribution
 > "A differential diagnosis framework applied to AI economic impact, with integral chain analysis connecting Jevons paradox and bottleneck migration to ICESCR obligations under Article 15."
+
+---
+
+## Success Metrics (Added 2026-03-04)
+
+Extracted from external marketing strategy review. Metrics organized by what Cloudflare Web Analytics can surface vs. what requires manual observation.
+
+### Trackable via Cloudflare Web Analytics
+- **Time on educational content** — pages like /covenant/articles/*, /educators, /connection/* (indicates depth of engagement)
+- **Return visitor rates** — repeat visits signal trust and ongoing value
+- **Referrer diversity** — organic sharing shows up as direct or social referrers beyond initial HN spike
+- **Geographic distribution** — international interest validates the global framing
+- **Page flow** — entry → /action conversion path (do visitors reach the advocacy toolkit?)
+
+### Observable via External Signals
+- **Organic sharing** — Bluesky reposts, Lemmy upvotes, citation in other publications
+- **Academic citations** — Google Scholar mentions of unratified.org or methodology
+- **Media mentions** — press coverage citing the AI-ICESCR connection
+- **Educator adoption** — download patterns for print resources, educator hub traffic
+- **Community engagement depth** — GitHub Issues, Discussions, blog post PRs
+
+### Not Yet Trackable (Deferred)
+- User feedback on feeling respected and informed (requires survey mechanism)
+- Policy influence measurement (requires tracking legislative activity)
+- Cross-platform ecosystem health (requires unified analytics across 3 sites)
+
+---
+
+## External Review: Fair Witness Positive Psychology Strategy (2026-03-04)
+
+An external agent produced a "Dignity-Trust Nexus" marketing strategy. Fair witness assessment:
+
+**Validated**: The strategy correctly identifies fair witness principles, dignity-centered design, methodology transparency, bipartisan framing, and educational primacy as core values. All already implemented (D004, D015, D017, D029, D038).
+
+**Conflicts resolved — existing decisions hold**:
+1. "Positive psychology strengths-based framing" conflicts with prohibition framing (D029). *"No person should lack healthcare"* carries more advocacy urgency than *"The U.S. has strong healthcare foundations."* Fair witness reports the gap. Prohibition framing stands.
+2. "Behavioral influence disclosure" implies we use behavioral influence techniques. We do not. No action needed.
+
+**Extracted**: Success metrics vocabulary (see section above). Educational partnership initiatives concept (aligns with deferred educator outreach).
+
+**Deferred as out of scope**: Monthly/quarterly/annual audit cadence, bias detection systems, community oversight mechanisms — organizational overhead exceeding current project scale.
+
+**Observatory positioning note**: The strategy frames observatory.unratified.org as an "ethical AI showcase." We do this implicitly through transparent methodology and privacy-by-design. Worth naming explicitly in future observatory marketing copy.
