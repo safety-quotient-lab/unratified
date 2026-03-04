@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Colophon" description="How this site gets built — the vendors, tools, data sources, and principles behind unratified.org.">
+  <div class="colophon-page">
+    <header class="colophon-header">
+      <h1>Colophon</h1>
+      <p class="colophon-lede">
+        How this site gets built &mdash; and who makes it possible.
+      </p>
+    </header>
+
+    <section>
+      <h2>Three Vendors</h2>
+      <p>
+        This project relies on three vendors. Each provides a distinct capability.
+        None endorses or has reviewed the project's conclusions.
+      </p>
+
+      <div class="vendor-grid">
+        <div class="vendor-card">
+          <h3>Analysis</h3>
+          <p>
+            <a href="https://www.anthropic.com/claude" rel="noopener"><strong>Claude</strong></a>,
+            built by <a href="https://www.anthropic.com/" rel="noopener">Anthropic</a>,
+            produces the core analysis under human direction. The
+            <a href="/connection/differential-diagnosis">differential diagnosis</a>,
+            <a href="/connection/higher-order-effects">higher-order effects</a>, and
+            <a href="/connection/ratification-counterfactual">ratification counterfactual</a>
+            all emerged through structured dialogue between a human researcher and Claude.
+            Every editorial decision appears in the
+            <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">commit log</a>.
+          </p>
+        </div>
+
+        <div class="vendor-card">
+          <h3>Computational Data</h3>
+          <p>
+            <a href="https://www.wolframalpha.com/" rel="noopener"><strong>Wolfram|Alpha</strong></a>,
+            by Wolfram Research, Inc., provides computational knowledge &mdash;
+            compound growth projections, intersection timelines, derived ratios, and
+            reference data that ground the analysis in verifiable arithmetic.
+            Every computed value links to its
+            <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha result page</a>
+            for independent verification.
+            <a href="https://www.wolframalpha.com/termsofuse" rel="noopener">Terms of use</a>.
+          </p>
+        </div>
+
+        <div class="vendor-card">
+          <h3>Infrastructure</h3>
+          <p>
+            <a href="https://www.cloudflare.com/" rel="noopener"><strong>Cloudflare</strong></a>
+            hosts both sites on
+            <a href="https://pages.cloudflare.com/" rel="noopener">Cloudflare Pages</a>
+            with global CDN, DNS routing, SSL/TLS, and DDoS protection.
+            <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics</a>
+            provides traffic metrics with no tracking scripts, no cookies, and no personal data collection.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Open Source</h2>
+      <p>
+        All source code carries the <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">Apache 2.0</a> license.
+        All content carries <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>.
+        Fork, extend, critique, redistribute &mdash; with attribution.
+      </p>
+      <ul>
+        <li><a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">Source code on GitHub</a></li>
+        <li><a href="https://github.com/safety-quotient-lab/unratified/issues" rel="noopener">Report an issue</a></li>
+        <li><a href="https://github.com/safety-quotient-lab/unratified/discussions" rel="noopener">Join the discussion</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Technical Stack</h2>
+      <p>
+        <a href="https://astro.build/" rel="noopener">Astro 5</a> +
+        <a href="https://mdxjs.com/" rel="noopener">MDX</a> +
+        <a href="https://svelte.dev/" rel="noopener">Svelte 5</a> Islands +
+        <a href="https://d3js.org/" rel="noopener">D3-geo</a>.
+        Static build, zero client JavaScript by default.
+        Islands hydrate on visibility.
+        For technical depth, see <a href="/for/developers">For Developers</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data Sources</h2>
+      <p>
+        Every quantitative claim traces to a primary source. Key data providers include
+        the U.S. Department of Energy, Bureau of Labor Statistics, OECD, WIPO, Economic Policy Institute,
+        National Student Clearinghouse Research Center, and the Congressional Research Service.
+        Full source list on the <a href="/resources">Resources page</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Privacy</h2>
+      <p>
+        No tracking scripts. No cookies. No fingerprinting. No personal data collection.
+        <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics</a>
+        provides aggregated traffic metrics only.
+      </p>
+    </section>
+
+    <section class="closing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        A <a href="https://github.com/safety-quotient-lab" rel="noopener">Safety Quotient Lab</a> project
+        by <a href="https://kashifshah.net" rel="noopener">Kashif Shah</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .colophon-page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .colophon-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .colophon-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+  }
+
+  section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .vendor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .vendor-card {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .vendor-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .vendor-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  section ul {
+    padding-left: var(--space-lg);
+    line-height: 1.8;
+  }
+
+  .closing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .closing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+</style>

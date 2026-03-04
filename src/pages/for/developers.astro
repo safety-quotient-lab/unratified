@@ -53,6 +53,82 @@ const lensFraming = {
       </div>
     </section>
 
+    <section class="vendors">
+      <h2>Vendor Triad</h2>
+      <p>Three vendors power this project. None endorses or has reviewed its conclusions. All contributions carry full attribution.</p>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <h3><a href="https://www.anthropic.com/" rel="noopener">Anthropic</a></h3>
+          <p>Analytical engine. <a href="https://www.anthropic.com/claude" rel="noopener">Claude</a> produces the core analysis &mdash; differential diagnosis, higher-order effects, counterfactuals &mdash; under human direction. Every editorial decision visible in the <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">commit log</a>.</p>
+        </div>
+        <div class="stack-item">
+          <h3><a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a></h3>
+          <p>Computational knowledge. <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a> (Wolfram Research, Inc., Champaign, IL) provides compound growth projections, intersection timelines, derived ratios, and reference data. Free API tier. <a href="https://www.wolframalpha.com/termsofuse" rel="noopener">Terms of use</a>.</p>
+        </div>
+        <div class="stack-item">
+          <h3><a href="https://www.cloudflare.com/" rel="noopener">Cloudflare</a></h3>
+          <p>Infrastructure. <a href="https://pages.cloudflare.com/" rel="noopener">Cloudflare Pages</a> hosts both sites with global CDN, DNS, SSL/TLS, and DDoS protection. <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics</a> &mdash; no tracking scripts, no cookies, no personal data collection.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="licensing">
+      <h2>Licensing</h2>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <h3>Code &mdash; Apache 2.0</h3>
+          <p>All source code, components, build scripts, and configuration. Use, modify, distribute &mdash; with attribution. Patent grant included.</p>
+        </div>
+        <div class="stack-item">
+          <h3>Content &mdash; CC BY-SA 4.0</h3>
+          <p>All analysis, blog posts, educational materials, and documentation. Adapt and redistribute &mdash; with attribution and share-alike. Commercial use permitted.</p>
+        </div>
+        <div class="stack-item">
+          <h3>Data</h3>
+          <p>Primary data from DOE, BLS, OECD, WIPO, EPI, NSCR, CRA. Computed projections via Wolfram|Alpha. All sources cited. All computations link to verification pages.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="provenance">
+      <h2>Data Provenance</h2>
+      <p>Every quantitative claim in the analysis traces to a primary source. The <a href="/resources">Resources page</a> provides full links.</p>
+      <div class="stack-grid">
+        <div class="stack-item">
+          <h3>Economic Data</h3>
+          <p>BLS (labor), EPI (wages), FRED (Gini), CBO (healthcare), Yale Budget Lab (tariffs), Wharton PWBM (productivity).</p>
+        </div>
+        <div class="stack-item">
+          <h3>AI Research</h3>
+          <p>METR (developer productivity), Anthropic (estimating gains), SF Fed (AI policy), Deloitte (enterprise adoption), Faros AI (productivity paradox).</p>
+        </div>
+        <div class="stack-item">
+          <h3>Energy + Patents</h3>
+          <p>DOE/EIA (data center energy), S&amp;P Global (projections), WIPO (global patents), USPTO (AI patent dataset).</p>
+        </div>
+        <div class="stack-item">
+          <h3>Education + Labor</h3>
+          <p>NSCR (enrollment trends), CRA (CS enrollment), OECD (education spending), Barrero/Bloom/Davis (remote work).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <h2>Privacy</h2>
+      <p>
+        This site collects no personal data. No tracking scripts. No cookies. No fingerprinting.
+        <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics</a>
+        provides aggregated traffic metrics (page views, visit counts, referrer domains) without
+        identifying individual visitors. The analytics JavaScript runs client-side but transmits
+        only aggregated, anonymized data to Cloudflare.
+      </p>
+      <p>
+        CSP headers restrict script execution to same-origin and inline (required for Astro island hydration
+        and theme detection). HSTS enforces HTTPS. No third-party tracking pixels, beacons, or analytics
+        services beyond Cloudflare Web Analytics.
+      </p>
+    </section>
+
     <section class="analysis">
       <h2>The Analysis Framework</h2>
       <div class="analysis-grid">
@@ -160,7 +236,7 @@ const lensFraming = {
     max-width: 42rem;
   }
 
-  .stack, .analysis, .observatory, .contribute {
+  .stack, .vendors, .licensing, .provenance, .privacy, .analysis, .observatory, .contribute {
     margin-bottom: var(--space-2xl);
   }
 
