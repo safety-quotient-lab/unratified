@@ -1189,4 +1189,42 @@ An external agent produced a "Dignity-Trust Nexus" marketing strategy. Fair witn
 
 **Deferred as out of scope**: Monthly/quarterly/annual audit cadence, bias detection systems, community oversight mechanisms — organizational overhead exceeding current project scale.
 
-**Observatory positioning note**: The strategy frames observatory.unratified.org as an "ethical AI showcase." We do this implicitly through transparent methodology and privacy-by-design. Worth naming explicitly in future observatory marketing copy.
+**Observatory positioning note**: Extracted as standalone section below.
+
+---
+
+## Observatory as Ethical AI Showcase (Added 2026-03-04)
+
+The observatory demonstrates how AI can serve human dignity rather than exploit it. This positioning emerged from external review and names what the project already practices.
+
+### What the Observatory Already Does
+
+| Practice | Implementation |
+|----------|---------------|
+| AI analyzing discourse about human rights | HRCB scoring of HN stories against all 31 UDHR provisions |
+| Privacy by design | Cloudflare Web Analytics — no cookies, no tracking scripts, no personal data |
+| Transparent methodology | Dual-channel analysis, confidence scoring, editorial faction analysis visible |
+| Full AI attribution | "Built by Claude (Anthropic)" footer, JSON-LD creator, ai-generated meta tag (D038) |
+| Open source | Apache 2.0 code, CC BY-SA 4.0 content |
+| Machine-readable capability | agent-inbox.json, public API endpoint, RSS feed |
+| Recursive meta-layer | An AI evaluating how humans discuss the rights AI threatens — self-aware positioning |
+
+### Marketing Framing
+
+**For developers/HN**: "An ethical AI showcase — an AI evaluating how the tech community discusses human rights, with full methodology transparency, zero tracking, and every line of code open source."
+
+**For educators**: "A live demonstration of responsible AI — students can examine how an AI system analyzes human rights discourse, with every methodological choice visible and auditable."
+
+**For researchers**: "A reproducible, open-source AI discourse analysis pipeline with transparent HRCB scoring, no surveillance infrastructure, and full provenance chain from source data to published findings."
+
+### Where to Surface This on the Main Site
+
+1. **Homepage observatory callout** (developer lens) — add "ethical AI showcase" to the existing description
+2. **About page "Live Evidence" section** — strengthen with ethical AI framing
+3. **For Developers observatory section** — already technical; add ethical positioning
+
+### Where to Surface on the Observatory (Separate Repo — Queue for Next Session)
+
+1. Observatory homepage — add "ethical AI showcase" subtitle or tagline
+2. Observatory /methodology — frame the privacy-by-design and transparency choices as deliberate ethical commitments
+3. Observatory agent-inbox.json — add ethical AI positioning to description field
