@@ -36,6 +36,16 @@ const lensFraming = {
         consensus, chain integrity, predictive power &mdash; each 0&ndash;5, total /25).
         The surviving composite model (Composite A, 20/25) undergoes recursive
         higher-order analysis through ten orders with explicit confidence degradation.
+        The full methodology documentation lives in the
+        <a href="https://blog.unratified.org/2026-03-03-recursive-methodology/" rel="noopener">recursive methodology blog post</a>.
+      </p>
+      <p>
+        The discriminator protocol resolves ties through parsimony preference: when two candidates
+        score within 2 points of each other, the simpler model wins unless the more complex model
+        demonstrates stronger empirical support from multiple independent sources. This convention
+        produces falsifiable predictions and limits complexity creep. The protocol has been applied
+        seven times across the project (H1&ndash;H7 hypotheses, R1&ndash;R7 counterfactuals, LA1&ndash;LA5
+        litigation mechanisms, technology stack, landing page strategy, quality floor analysis, and PSQ-UDHR evaluation).
       </p>
       <div class="method-grid">
         <a href="/connection/differential-diagnosis" class="method-card">
@@ -59,56 +69,105 @@ const lensFraming = {
 
     <section class="data-access">
       <h2>Data Access</h2>
+      <p>
+        All data, analysis, and code carry open licenses. The project deliberately avoids paywalls,
+        gated APIs, and proprietary data dependencies. Every quantitative claim traces to a
+        <a href="/resources">primary source</a>.
+      </p>
       <div class="data-grid">
         <div class="data-item">
           <h3>Source Repository</h3>
-          <p>Full source code, content, and revision history:<br/>
+          <p>Full source code, content, and revision history. Every editorial decision visible in the commit log:<br/>
           <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">github.com/safety-quotient-lab/unratified</a></p>
         </div>
         <div class="data-item">
           <h3>Observatory API</h3>
-          <p>HRCB-scored discourse analysis corpus:<br/>
-          <a href="https://observatory.unratified.org" rel="noopener">observatory.unratified.org</a></p>
+          <p>HRCB-scored discourse analysis corpus. Public endpoint, no auth required, JSON response, CORS enabled:<br/>
+          <a href="https://observatory.unratified.org" rel="noopener">observatory.unratified.org</a><br/>
+          See the <a href="https://blog.unratified.org/2026-03-03-what-806-stories-reveal/" rel="noopener">corpus analysis</a> for methodology and findings.</p>
         </div>
         <div class="data-item">
           <h3>Structured Data</h3>
-          <p>JSON-LD (Schema.org), SKOS taxonomy, glossary with sameAs/isBasedOn mappings to authoritative sources</p>
+          <p>
+            <a href="https://json-ld.org/" rel="noopener">JSON-LD</a> (<a href="https://schema.org/" rel="noopener">Schema.org</a>)
+            on every page. <a href="https://www.w3.org/2004/02/skos/" rel="noopener">SKOS</a> taxonomy for the
+            <a href="/glossary">glossary</a>. 49 terms with <code>sameAs</code>/<code>isBasedOn</code> mappings
+            to authoritative sources across 4 authority levels (primary, academic, reference, literary).
+          </p>
+        </div>
+        <div class="data-item">
+          <h3>Primary Sources</h3>
+          <p>
+            Economic data from <a href="https://www.bls.gov/" rel="noopener">BLS</a>,
+            <a href="https://www.epi.org/" rel="noopener">EPI</a>,
+            <a href="https://fred.stlouisfed.org/" rel="noopener">FRED</a>,
+            <a href="https://www.cbo.gov/" rel="noopener">CBO</a>.
+            AI research from <a href="https://metr.org/" rel="noopener">METR</a>,
+            <a href="https://www.anthropic.com/research" rel="noopener">Anthropic</a>,
+            <a href="https://www.frbsf.org/" rel="noopener">SF Fed</a>.
+            Energy data from <a href="https://www.eia.gov/" rel="noopener">DOE/EIA</a>.
+            Patent data from <a href="https://www.wipo.int/portal/en/" rel="noopener">WIPO</a> and
+            <a href="https://www.uspto.gov/" rel="noopener">USPTO</a>.
+          </p>
         </div>
         <div class="data-item">
           <h3>Licensing</h3>
-          <p>Apache 2.0 (code), CC BY-SA 4.0 (content). Cite, extend, critique &mdash; all welcomed.</p>
+          <p>
+            <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">Apache 2.0</a> (code),
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (content).
+            Cite, extend, critique &mdash; all welcomed. Computed projections via
+            <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a> carry their own
+            <a href="https://www.wolframalpha.com/termsofuse" rel="noopener">terms of use</a>.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="limitations">
       <h2>Known Limitations</h2>
+      <p>
+        Transparency about analytical boundaries strengthens rather than weakens the work.
+        The following limitations apply to all conclusions drawn from this analysis.
+      </p>
       <ul>
-        <li><strong>Single-rater analysis</strong> &mdash; one AI system generated all content under human direction. Inter-rater reliability not established.</li>
-        <li><strong>Confidence degradation</strong> &mdash; Orders 3&ndash;4 carry LOW confidence. Orders 5&ndash;9 (Phase 2) will carry VERY LOW to SPECULATIVE confidence.</li>
-        <li><strong>U.S.-centric scope</strong> &mdash; the analysis focuses on U.S. non-ratification. Comparative analysis of other non-ratifying states remains incomplete.</li>
-        <li><strong>Fair witness constraint</strong> &mdash; E-prime and fair witness protocols reduce interpretive bias but do not eliminate it.</li>
+        <li><strong>Single-rater analysis</strong> &mdash; one AI system (<a href="https://www.anthropic.com/claude" rel="noopener">Claude</a>) generated all content under human direction. Inter-rater reliability remains unestablished. Independent replication using different AI systems or human analysts would strengthen confidence.</li>
+        <li><strong>Confidence degradation</strong> &mdash; Orders 0&ndash;2 carry HIGH to MODERATE confidence. Orders 3&ndash;4 carry LOW confidence. Orders 5&ndash;9 (Phase 2, completed) carry VERY LOW to SPECULATIVE confidence. Each order's claims should carry weight proportional to its confidence level.</li>
+        <li><strong>U.S.-centric scope</strong> &mdash; the analysis focuses on U.S. non-ratification. Comparative analysis of other non-ratifying states (Comoros, Cuba, Palau) remains incomplete. The <a href="/gap/comparison">international comparison</a> provides partial coverage.</li>
+        <li><strong>Fair witness constraint</strong> &mdash; <a href="https://en.wikipedia.org/wiki/E-Prime" rel="noopener">E-prime</a> and fair witness protocols reduce interpretive bias but do not eliminate it. The protocols operate at the language level; structural bias in source selection persists.</li>
+        <li><strong>Temporal snapshot</strong> &mdash; economic data, AI research findings, and legislative status reflect conditions at time of analysis (early 2026). Rapid changes in AI capabilities may alter scoring on empirical support and predictive power dimensions.</li>
       </ul>
     </section>
 
     <section class="explore">
       <h2>Further Reading</h2>
+      <p>
+        The analysis distributes across the main site, blog, and observatory. Each component
+        operates independently but cross-references the others through structured data and explicit citations.
+      </p>
       <div class="explore-grid">
         <a href="/glossary" class="explore-card">
           <h3>Glossary</h3>
-          <p>49 terms with external sources mapped to 4 authority levels</p>
-        </a>
-        <a href="/about" class="explore-card">
-          <h3>About</h3>
-          <p>Project identity, methodology, licensing, and contact</p>
+          <p>49 terms with external sources mapped to 4 authority levels (primary, academic, reference, literary). Machine-readable via <a href="/.well-known/glossary.json">glossary.json</a>.</p>
         </a>
         <a href="/resources" class="explore-card">
           <h3>Resources</h3>
-          <p>Further reading and reference materials</p>
+          <p>Curated external reading &mdash; primary sources from government agencies, academic institutions, and international organizations. Full citation data.</p>
         </a>
-        <a href="https://blog.unratified.org/2026-03-03-recursive-methodology/" class="explore-card">
-          <h3>Methodology Blog Post</h3>
-          <p>Ten orders of knock-on analysis, discriminator protocol, recursive fact-checking architecture</p>
+        <a href="https://blog.unratified.org/2026-03-03-recursive-methodology/" rel="noopener" class="explore-card">
+          <h3>Recursive Methodology</h3>
+          <p>Ten orders of knock-on analysis, the discriminator protocol, and the recursive fact-checking architecture that produced the site.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-what-806-stories-reveal/" rel="noopener" class="explore-card">
+          <h3>Observatory Findings</h3>
+          <p>What 806+ tech stories reveal about human rights discourse &mdash; corpus analysis, signal distributions, and editorial faction patterns.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-who-speaks-who-gets-spoken-about/" rel="noopener" class="explore-card">
+          <h3>Voice Analysis</h3>
+          <p>Who speaks, who gets spoken about &mdash; structural patterns in how media covers the intersection of technology and human rights.</p>
+        </a>
+        <a href="/about" class="explore-card">
+          <h3>About</h3>
+          <p>Project identity, methodology transparency, the meta-layer (an AI analyzing AI's impact on the rights AI disrupts), licensing, and contact.</p>
         </a>
       </div>
     </section>

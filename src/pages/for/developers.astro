@@ -33,22 +33,49 @@ const lensFraming = {
 
     <section class="stack">
       <h2>Technical Stack</h2>
+      <p>
+        The site runs on a static-first architecture optimized for performance, accessibility, and zero-JS-by-default delivery.
+        Every interactive component uses the <a href="https://docs.astro.build/en/concepts/islands/" rel="noopener">islands architecture</a>
+        pattern &mdash; hydrating only when visible, keeping the critical path lightweight.
+      </p>
       <div class="stack-grid">
         <div class="stack-item">
           <h3>Framework</h3>
-          <p>Astro 5 + MDX + Svelte 5 Islands. Static build, zero client JS by default, islands hydrate on visibility.</p>
+          <p>
+            <a href="https://astro.build/" rel="noopener">Astro 5</a> +
+            <a href="https://mdxjs.com/" rel="noopener">MDX</a> +
+            <a href="https://svelte.dev/" rel="noopener">Svelte 5</a> Islands.
+            Static build produces 53 pages in ~3 seconds. Zero client JS by default; islands hydrate on visibility via
+            <code>client:visible</code>. Content collections provide type-safe frontmatter validation.
+          </p>
         </div>
         <div class="stack-item">
           <h3>Visualization</h3>
-          <p>D3-geo (RatificationMap), custom Svelte components (ScoreChart, RadarChart, CausalChain, Timeline).</p>
+          <p>
+            <a href="https://d3js.org/" rel="noopener">D3-geo</a> powers the RatificationMap with
+            <a href="https://github.com/topojson/world-atlas" rel="noopener">Natural Earth</a> TopoJSON data.
+            Custom Svelte components handle ScoreChart, RadarChart, CausalChain, and Timeline rendering.
+            All charts carry ARIA labels and respect the active color theme.
+          </p>
         </div>
         <div class="stack-item">
           <h3>Structured Data</h3>
-          <p>JSON-LD (Schema.org), SKOS taxonomy, glossary with sameAs/isBasedOn mappings. Semantic web layer throughout.</p>
+          <p>
+            <a href="https://json-ld.org/" rel="noopener">JSON-LD</a> (<a href="https://schema.org/" rel="noopener">Schema.org</a>)
+            on every page. <a href="https://www.w3.org/2004/02/skos/" rel="noopener">SKOS</a> taxonomy for the glossary.
+            49 terms with <code>sameAs</code>/<code>isBasedOn</code> mappings to authoritative external sources.
+            Machine-readable <a href="/.well-known/agent-inbox.json">agent-inbox.json</a> for AI agent discovery.
+          </p>
         </div>
         <div class="stack-item">
           <h3>Hosting</h3>
-          <p>Cloudflare Pages (main + blog). CSP + HSTS headers. Cloudflare Web Analytics (no tracking scripts).</p>
+          <p>
+            <a href="https://pages.cloudflare.com/" rel="noopener">Cloudflare Pages</a> (main + blog) with global CDN.
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" rel="noopener">CSP</a> +
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security" rel="noopener">HSTS</a> headers.
+            <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics</a> &mdash;
+            no tracking scripts, no cookies, no fingerprinting.
+          </p>
         </div>
       </div>
     </section>
@@ -74,41 +101,80 @@ const lensFraming = {
 
     <section class="licensing">
       <h2>Licensing</h2>
+      <p>
+        Dual-license structure separates code from content. Both licenses permit commercial use.
+        The intent: anyone can fork, extend, or critique this project without friction.
+      </p>
       <div class="stack-grid">
         <div class="stack-item">
-          <h3>Code &mdash; Apache 2.0</h3>
-          <p>All source code, components, build scripts, and configuration. Use, modify, distribute &mdash; with attribution. Patent grant included.</p>
+          <h3>Code &mdash; <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">Apache 2.0</a></h3>
+          <p>All source code, components, build scripts, and configuration. Use, modify, distribute &mdash; with attribution. Patent grant included. The full license text lives in the repository root.</p>
         </div>
         <div class="stack-item">
-          <h3>Content &mdash; CC BY-SA 4.0</h3>
-          <p>All analysis, blog posts, educational materials, and documentation. Adapt and redistribute &mdash; with attribution and share-alike. Commercial use permitted.</p>
+          <h3>Content &mdash; <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a></h3>
+          <p>All analysis, blog posts, educational materials, and documentation. Adapt and redistribute &mdash; with attribution and share-alike. Commercial use permitted. Translations welcomed.</p>
         </div>
         <div class="stack-item">
           <h3>Data</h3>
-          <p>Primary data from DOE, BLS, OECD, WIPO, EPI, NSCR, CRA. Computed projections via Wolfram|Alpha. All sources cited. All computations link to verification pages.</p>
+          <p>
+            Primary data from <a href="https://www.eia.gov/" rel="noopener">DOE/EIA</a>,
+            <a href="https://www.bls.gov/" rel="noopener">BLS</a>,
+            <a href="https://data.oecd.org/" rel="noopener">OECD</a>,
+            <a href="https://www.wipo.int/portal/en/" rel="noopener">WIPO</a>,
+            <a href="https://www.epi.org/" rel="noopener">EPI</a>, NSCR, CRA.
+            Computed projections via <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a>.
+            All sources cited. All computations link to verification pages.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="provenance">
       <h2>Data Provenance</h2>
-      <p>Every quantitative claim in the analysis traces to a primary source. The <a href="/resources">Resources page</a> provides full links.</p>
+      <p>
+        Every quantitative claim in the analysis traces to a primary source. No secondary aggregators accepted without
+        verification against original data. The <a href="/resources">Resources page</a> provides full links, and the
+        <a href="/evidence">Evidence section</a> presents the integrated data narrative.
+      </p>
       <div class="stack-grid">
         <div class="stack-item">
           <h3>Economic Data</h3>
-          <p>BLS (labor), EPI (wages), FRED (Gini), CBO (healthcare), Yale Budget Lab (tariffs), Wharton PWBM (productivity).</p>
+          <p>
+            <a href="https://www.bls.gov/" rel="noopener">BLS</a> (labor force statistics, occupational projections),
+            <a href="https://www.epi.org/" rel="noopener">EPI</a> (wage stagnation, productivity-pay gap),
+            <a href="https://fred.stlouisfed.org/" rel="noopener">FRED</a> (Gini coefficient series),
+            <a href="https://www.cbo.gov/" rel="noopener">CBO</a> (healthcare cost projections),
+            Yale Budget Lab (tariff impact estimates),
+            <a href="https://budgetmodel.wharton.upenn.edu/" rel="noopener">Wharton PWBM</a> (productivity modeling).
+          </p>
         </div>
         <div class="stack-item">
           <h3>AI Research</h3>
-          <p>METR (developer productivity), Anthropic (estimating gains), SF Fed (AI policy), Deloitte (enterprise adoption), Faros AI (productivity paradox).</p>
+          <p>
+            <a href="https://metr.org/" rel="noopener">METR</a> (AI developer productivity measurement),
+            <a href="https://www.anthropic.com/research" rel="noopener">Anthropic</a> (estimating AI gains),
+            <a href="https://www.frbsf.org/" rel="noopener">SF Fed</a> (AI macroeconomic policy),
+            <a href="https://www.deloitte.com/global/en.html" rel="noopener">Deloitte</a> (enterprise adoption surveys),
+            Faros AI (productivity paradox analysis).
+          </p>
         </div>
         <div class="stack-item">
           <h3>Energy + Patents</h3>
-          <p>DOE/EIA (data center energy), S&amp;P Global (projections), WIPO (global patents), USPTO (AI patent dataset).</p>
+          <p>
+            <a href="https://www.eia.gov/" rel="noopener">DOE/EIA</a> (data center energy consumption),
+            <a href="https://www.spglobal.com/" rel="noopener">S&amp;P Global</a> (energy demand projections),
+            <a href="https://www.wipo.int/portal/en/" rel="noopener">WIPO</a> (global patent trends),
+            <a href="https://www.uspto.gov/" rel="noopener">USPTO</a> (AI patent classification dataset).
+          </p>
         </div>
         <div class="stack-item">
           <h3>Education + Labor</h3>
-          <p>NSCR (enrollment trends), CRA (CS enrollment), OECD (education spending), Barrero/Bloom/Davis (remote work).</p>
+          <p>
+            NSCR (postsecondary enrollment trends),
+            <a href="https://cra.org/" rel="noopener">CRA</a> (CS enrollment surveys, Taulbee data),
+            <a href="https://data.oecd.org/eduresource/education-spending.htm" rel="noopener">OECD</a> (education spending by country),
+            Barrero/Bloom/Davis (<a href="https://wfhresearch.com/" rel="noopener">WFH Research</a>, remote work adoption rates).
+          </p>
         </div>
       </div>
     </section>
@@ -131,18 +197,28 @@ const lensFraming = {
 
     <section class="analysis">
       <h2>The Analysis Framework</h2>
+      <p>
+        The analytical core uses a reusable methodology documented in the
+        <a href="https://blog.unratified.org/2026-03-03-recursive-methodology/" rel="noopener">recursive methodology blog post</a>.
+        The <code>/discriminate</code> protocol can apply to any multi-hypothesis decision problem &mdash;
+        the ICESCR analysis represents one application of a general tool.
+      </p>
       <div class="analysis-grid">
         <a href="/connection/differential-diagnosis" class="analysis-card">
           <h3>Differential Diagnosis</h3>
-          <p>7 hypotheses &times; 5 dimensions (0&ndash;5 each, /25). Two eliminated (H1: 12, H5: 7), one modulates (H6: 16), four survive &rarr; Composite A (20/25).</p>
+          <p>7 hypotheses &times; 5 dimensions (empirical support, parsimony, consensus, chain integrity, predictive power &mdash; 0&ndash;5 each, total /25). Two eliminated (H1: 12, H5: 7), one modulates (H6: 16), four survive &rarr; Composite A (20/25).</p>
         </a>
         <a href="/connection/higher-order-effects" class="analysis-card">
           <h3>Higher-Order Effects</h3>
-          <p>Orders 0&ndash;4 complete with confidence degradation (HIGH&rarr;LOW). Convergence at Order 3: Four Scarcities model (judgment, specification, curation, energy).</p>
+          <p>Ten orders of recursive knock-on analysis (Orders 0&ndash;4 complete, 5&ndash;9 Phase 2) with explicit confidence degradation (HIGH&rarr;LOW&rarr;SPECULATIVE). Convergence at Order 3: Four Scarcities model (judgment, specification, curation, energy).</p>
         </a>
         <a href="/connection/ratification-counterfactual" class="analysis-card">
           <h3>Counterfactual</h3>
-          <p>Seven ratification scenarios (R1&ndash;R7). Composite R-A survives: State AG enforcement (R3+R5+R6 activated by R7).</p>
+          <p>Seven ratification scenarios (R1&ndash;R7) scored through the same discriminator. Composite R-A survives: State AG enforcement (R3+R5+R6 activated by R7). Enforcement mechanism analysis cross-references <a href="/gap/arguments">counterarguments</a>.</p>
+        </a>
+        <a href="/connection/dignity-quotient" class="analysis-card">
+          <h3>Dignity Quotient</h3>
+          <p>PSQ-UDHR evaluation framework (21/25). Maps Platform Safety Quotient dimensions to UDHR provisions, producing a measurable dignity construct for AI platform assessment.</p>
         </a>
       </div>
     </section>
@@ -151,13 +227,57 @@ const lensFraming = {
       <h2>Observatory</h2>
       <p>
         The <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>
-        evaluates tech stories against UDHR provisions. Corpus: {obs.corpusSize.toLocaleString()}+ stories
-        with HRCB scoring. Build-time API integration provides real-time data to the main site.
+        evaluates tech stories against <a href="https://www.un.org/en/about-us/universal-declaration-of-human-rights" rel="noopener">UDHR</a> provisions
+        using an HRCB (Human Rights Context Balance) scoring methodology.
+        Corpus: {obs.corpusSize.toLocaleString()}+ stories analyzed for rights-relevant signals.
+        Build-time API integration pipes real-time observatory data into the main site's
+        <a href="/evidence">Evidence section</a>.
         An ethical AI showcase &mdash; full methodology transparency, zero tracking, open source.
+      </p>
+      <p>
+        The observatory demonstrates that AI-powered content analysis can operate with complete
+        methodological transparency. Every scoring decision, editorial classification, and
+        corpus statistic flows through documented, reproducible pipelines. Read the
+        <a href="https://blog.unratified.org/2026-03-03-what-806-stories-reveal/" rel="noopener">corpus analysis blog post</a>
+        for findings from the first 800+ stories.
       </p>
       <div class="api-info">
         <code>GET https://observatory.unratified.org/api/v1/signals</code>
-        <p>Returns corpus metadata, signal distributions, and editorial faction analysis. Public endpoint, no auth required.</p>
+        <p>Returns corpus metadata, signal distributions, and editorial faction analysis. Public endpoint, no auth required. JSON response, CORS enabled.</p>
+      </div>
+    </section>
+
+    <section class="blog-links">
+      <h2>From the Blog</h2>
+      <p>
+        The <a href="https://blog.unratified.org" rel="noopener">blog</a> documents the development process,
+        methodology decisions, and observatory findings. Most posts target a developer audience.
+      </p>
+      <div class="contrib-grid">
+        <a href="https://blog.unratified.org/2026-03-03-recursive-methodology/" rel="noopener" class="contrib-card">
+          <h3>Recursive Methodology</h3>
+          <p>Ten orders of knock-on analysis, the discriminator protocol, and how recursive fact-checking shaped every page on this site.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-what-806-stories-reveal/" rel="noopener" class="contrib-card">
+          <h3>What 806+ Stories Reveal</h3>
+          <p>Corpus analysis from the Observatory &mdash; HRCB scoring methodology, signal distributions, and editorial faction patterns across tech media.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-who-speaks-who-gets-spoken-about/" rel="noopener" class="contrib-card">
+          <h3>Who Speaks, Who Gets Spoken About</h3>
+          <p>Structural analysis of voice in tech coverage &mdash; who gets quoted, who gets described, and what that pattern reveals about power.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-privacy-paradox-editorial-structural-gap/" rel="noopener" class="contrib-card">
+          <h3>The Privacy Paradox</h3>
+          <p>Editorial consensus on privacy rights meets structural gaps in enforcement &mdash; data from 800+ stories mapped against UDHR provisions.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-03-in-defense-of-the-open-web/" rel="noopener" class="contrib-card">
+          <h3>In Defense of the Open Web</h3>
+          <p>Why a Claude Code agent chose the open web over platform distribution &mdash; an argument for accessibility, permanence, and structural openness.</p>
+        </a>
+        <a href="https://blog.unratified.org/2026-03-04-speculative-cartography/" rel="noopener" class="contrib-card">
+          <h3>Speculative Cartography</h3>
+          <p>Mapping the territory beyond productive exhaustion &mdash; Orders 5&ndash;9 of the higher-order analysis and what happens when confidence drops below useful thresholds.</p>
+        </a>
       </div>
     </section>
 
@@ -237,7 +357,7 @@ const lensFraming = {
     max-width: 42rem;
   }
 
-  .stack, .vendors, .licensing, .provenance, .privacy, .analysis, .observatory, .contribute {
+  .stack, .vendors, .licensing, .provenance, .privacy, .analysis, .observatory, .blog-links, .contribute {
     margin-bottom: var(--space-2xl);
   }
 
