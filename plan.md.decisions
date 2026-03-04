@@ -1443,3 +1443,37 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Investigate G-09 (Google Ad Grants) — requires nonprofit status verification
 - Monitor agentic web standards as they develop — Tier 3 concepts may become actionable
 - The escalation pattern validates a fair witness observation: AI systems produce increasingly speculative output when asked to "go deeper" without epistemic bounds
+
+---
+
+## D043: Nonprofit Formation Pathway — 501(c)(3) Educational
+**Date**: 2026-03-04
+**Status**: PLANNING (not yet initiated)
+
+**Observation**: Gemini's visibility recommendations (D042) identified Google Ad Grants ($10k/month free search advertising) as the highest-leverage free Google service. Ad Grants requires 501(c)(3) status. Safety Quotient Lab currently operates as an unincorporated research initiative with no legal entity, no EIN, and no tax-exempt status.
+
+**Decision**: Document a complete nonprofit formation pathway using the project's discriminator methodology. Three entity types evaluated: 501(c)(3) Educational (NP1, 21/25), 501(c)(3) Charitable (NP2, 20/25), 501(c)(4) Social Welfare (NP3, 18/25 — eliminated on funding eligibility).
+
+**Winner**: NP1 — 501(c)(3) Educational organization. SQ Lab's pedagogical approach (progressive disclosure, curriculum resources, fair witness methodology, 5-persona educational framing) aligns with IRS educational purpose definition. Full access to Ad Grants, tax-deductible donations, and foundation grants.
+
+**Key parameters**:
+- Formation cost: $375-$3,325 (state filing + IRS 1023-EZ + optional legal assistance)
+- Timeline: 6-9 months from decision to Ad Grants active
+- Annual compliance: $50-$350/year + Form 990-N or 990-EZ
+- Ad Grants value: $120,000/year in search advertising
+- ROI: Formation costs recover within first month of Ad Grants
+
+**Reasoning**:
+- Ad Grants provide the single highest-leverage visibility mechanism available — $120k/year advertising value for ~$375-$3,325 initial investment
+- SQ Lab's educational mission (ICESCR public education, curriculum resources, AI economic analysis) fits IRS educational purpose without requiring the organization to abandon its advocacy goals
+- The education/lobbying distinction requires legal counsel but maps favorably: the site educates about ICESCR and provides civic tools rather than lobbying for specific legislation
+- Board composition (3-5 members, majority independent, complementary expertise) provides governance structure the project currently lacks
+
+**Files created**:
+- `content/analysis/nonprofit-formation-plan.md` — Full formation pathway: discriminator analysis, 9-step pipeline, mission statement, board composition, fiscal sponsorship options, timeline, cost estimate, codebase changes, risks, Ad Grants pathway, epistemic flags
+
+**What follows**:
+- Legal consultation to verify education vs. advocacy classification
+- State of incorporation decision (REQUIRES LEGAL COUNSEL)
+- Board recruitment
+- All formation steps remain human-directed — this plan provides the analytical foundation

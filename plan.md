@@ -339,7 +339,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Gemini peer review exchange (D040): AI-to-AI accountability case study — Gemini (Fast) evaluated unratified.org, confabulated on Round 1, self-corrected, produced second-order confabulation on Round 3; full evaluation + JSON response with 6 validation requests saved to content/analysis/
 - [x] Gemini validation response improvements (D041): judicial competence rebuttal (voters + not-really-rights), agent-inbox.json identity fields (subjectMatter, functionalDomain, epistemicScope), fair-witness.json machine-readable methodology endpoint, blog post case study
 - [x] Gemini visibility recommendations evaluated (D042): 20 suggestions across 4 tiers — 8 actionable (SEO/structured data), 5 worth investigating, 7 aspirational/confabulated. Saved to content/analysis/gemini-visibility-recommendations.md
-- [ ] Visibility TODOs: G-01 Search Console, G-03/G-04 OG/Twitter spot-check, G-06 robots.txt training bots, G-05 knowsAbout schema, G-02 FAQPage on /how, G-09 Ad Grants investigation
+- [x] Nonprofit formation pathway documented (D043): 501(c)(3) educational entity discriminator analysis (NP1 21/25), 9-step formation pipeline, $375-$3,325 initial cost, 6-9 month timeline, Google Ad Grants pathway ($10k/month). Saved to content/analysis/nonprofit-formation-plan.md
+- [ ] Visibility TODOs: G-01 Search Console, G-03/G-04 OG/Twitter spot-check, G-06 robots.txt training bots, G-05 knowsAbout schema, G-02 FAQPage on /how
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach
