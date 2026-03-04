@@ -22,6 +22,7 @@ const { Content } = await render(post);
   author={post.data.author}
   tags={post.data.tags}
   slug={post.id}
+  reviewStatus={post.data.reviewStatus}
 >
   <Content />
 </PostLayout>

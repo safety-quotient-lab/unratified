@@ -11,6 +11,7 @@ lensFraming:
   educator: "This is a calibration paradox: models that correctly identify uncertainty get penalized in ensemble scoring, while overconfident models get rewarded. Naming this pattern helps practitioners recognize it."
   researcher: "Confidence weighting inversion represents a measurement validity threat: the confidence proxy anti-correlates with quality in calibrated evaluators, violating the premise of confidence-weighted ensembles."
 draft: false
+reviewStatus: "unreviewed"
 ---
 
 A peculiar punishment runs through many ensemble scoring systems: the model that admits uncertainty gets overruled by the model that projects confidence. The admission of uncertainty — the epistemically correct response when evidence remains thin — functions as a penalty in the final aggregate.

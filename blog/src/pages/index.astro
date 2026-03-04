@@ -15,6 +15,7 @@ const posts = allPosts
     publishedDate: new Date(post.data.publishedDate).toISOString(),
     author: post.data.author,
     tags: post.data.tags,
+    reviewStatus: post.data.reviewStatus ?? 'unreviewed',
   }));
 
 const allTags = [...new Set(allPosts.flatMap(p => p.data.tags))].sort();

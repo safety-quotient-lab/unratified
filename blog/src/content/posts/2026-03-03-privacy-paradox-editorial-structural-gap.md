@@ -11,6 +11,7 @@ lensFraming:
   educator: "Use this analysis to teach critical media literacy. Your students compare what publication platforms say about privacy rights with what those same platforms actually practice — quantified through the Observatory's structural-editorial measurement framework."
   researcher: "Novel SETL (Structural-Editorial Tension Level) metric applied across 31 UDHR provisions. Methodology: dual-channel HRCB scoring separating editorial content (author's expressed position) from structural behavior (platform's observable practices). Privacy (Art. 12) shows maximum channel divergence. Significance: operationalizes the gap between stated and revealed preferences in rights discourse."
 draft: false
+reviewStatus: "unreviewed"
 relatedArticles: [12]
 ---
 

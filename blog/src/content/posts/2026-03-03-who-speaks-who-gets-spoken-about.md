@@ -11,6 +11,7 @@ lensFraming:
   educator: "Use this analysis to teach media literacy through quantitative evidence. Your students examine who gets quoted versus who gets discussed in tech coverage — and evaluate what that asymmetry means for democratic discourse and economic policy."
   researcher: "Quantitative stakeholder representation analysis (n=806 stories, HN corpus). Speaker-subject asymmetry measured across demographic categories. Marginalized voice ratio: 13:92 (speaker:subject). Worker voice ratio: 13:129. Methodology: HRCB evaluation with structured stakeholder tagging per story."
 draft: false
+reviewStatus: "unreviewed"
 relatedArticles: [6, 7]
 ---
 

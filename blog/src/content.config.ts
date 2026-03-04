@@ -20,6 +20,7 @@ const posts = defineCollection({
     tags: z.array(z.string()).default([]),
     lensFraming: lensFramingSchema,
     draft: z.boolean().default(false),
+    reviewStatus: z.enum(["reviewed", "unreviewed"]).default("unreviewed"),
     relatedArticles: z.array(z.number()).default([]),
   }),
 });

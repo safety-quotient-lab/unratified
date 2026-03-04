@@ -11,6 +11,7 @@ lensFraming:
   educator: "Teaching AI literacy means naming the failure modes — including when clicking an option and questioning it simultaneously produces conflicting signals the AI misreads as confirmation."
   researcher: "The Byzantine fault model from distributed systems applies directly to human-AI dialogue, providing formal vocabulary for a class of interaction errors currently unnamed in HCI literature."
 draft: false
+reviewStatus: "unreviewed"
 ---
 
 The distributed systems literature names a specific failure mode: a node that doesn't simply go silent but instead sends contradictory signals to different parts of the system simultaneously. Leslie Lamport called this Byzantine failure in 1982.[^1] Modern AI interfaces recreate this failure mode on every interaction — and practitioners currently lack vocabulary to name it.

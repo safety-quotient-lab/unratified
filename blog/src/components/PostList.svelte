@@ -6,6 +6,7 @@
     publishedDate: string;
     author: string;
     tags: string[];
+    reviewStatus?: string;
   }
 
   interface Props {
@@ -120,6 +121,9 @@
       <p class="post-summary">{post.summary}</p>
       <div class="post-card-meta">
         <span class="author">{post.author}</span>
+        {#if post.reviewStatus === "unreviewed"}
+          <span class="review-badge">Pre-Review</span>
+        {/if}
         {#if post.tags.length > 0}
           <span class="tags">
             {#each post.tags as tag}
@@ -297,5 +301,16 @@
     .sort-control {
       margin-left: 0;
     }
+  }
+
+  .review-badge {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    color: #b58900;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: 1px solid #b5890044;
+    padding: 0.1rem 0.4rem;
+    border-radius: 2px;
   }
 </style>

@@ -9,9 +9,10 @@ interface Props {
   author: string;
   tags: string[];
   slug: string;
+  reviewStatus?: string;
 }
 
-const { title, summary, publishedDate, updatedDate, author, tags, slug } = Astro.props;
+const { title, summary, publishedDate, updatedDate, author, tags, slug, reviewStatus } = Astro.props;
 
 const mainSite = 'https://unratified.org';
 const repoBase = 'https://github.com/safety-quotient-lab/unratified';
@@ -56,6 +57,9 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
         )}
         <span class="author">&middot; {author}</span>
         <span class="reading-time">&middot; {readingTime} min read</span>
+        {reviewStatus === 'unreviewed' && (
+          <span class="review-badge">&middot; Pre-Review</span>
+        )}
       </div>
       {tags.length > 0 && (
         <div class="post-tags">
@@ -177,5 +181,13 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
   .post-provenance a:hover {
     color: var(--color-accent);
+  }
+
+  .review-badge {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: #b58900;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
   }
 </style>
