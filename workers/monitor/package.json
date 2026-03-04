@@ -1,0 +1,16 @@
+{
+  "name": "unratified-monitor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute unratified-monitor --file=./src/db/schema.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250301.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.0.0"
+  }
+}
