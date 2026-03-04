@@ -333,6 +333,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Three-column footer grid (Project, Built With, Links) — consistent across both sites, collapses on mobile
 - [x] Link text-shadow — subtle teal glow on all links, scales with light/dark shadow-opacity
 - [x] Page title suffix — "| unratified.org" (main) and "| blog.unratified.org" (blog)
+- [x] Persona page verbosity expansion — all 5 /for/* pages expanded 1.618x with external reference links (BLS, EPI, OECD, FRED, CBO, METR, WIPO, USPTO, OHCHR, senate.gov, etc.); developers page adds "From the Blog" section linking all 6 posts
+- [x] Card arrow indicator — global `→` on all link cards site-wide via `a[class*="-card"]::after`; gray default, teal+slide on hover
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach
