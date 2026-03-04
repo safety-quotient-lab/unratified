@@ -58,6 +58,17 @@ const cardStats: Record<string, { number: string; label: string }> = {
     ))}
   </div>
 
+  <section class="strategic-analysis">
+    <h2>Strategic Analysis</h2>
+    <p>
+      What combination of forces would actually achieve ratification? A discriminator
+      analysis of seven pathways reveals a composite model &mdash; coalition assembly,
+      state-first protections, litigation enforcement, and Senate revival &mdash;
+      that mirrors how the ADA moved from concept to law.
+    </p>
+    <a href="/how" class="brief-link">How Ratification Happens &rarr;</a>
+  </section>
+
   <section class="quick-action">
     <h2>Quick Action</h2>
     <p>
@@ -189,6 +200,21 @@ const cardStats: Record<string, { number: string; label: string }> = {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin: 0;
+  }
+
+  .strategic-analysis {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .strategic-analysis h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--color-accent);
   }
 
   .quick-action {

@@ -1,0 +1,954 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LensPanel from '../components/LensPanel.astro';
+import ScoreChart from '../components/ui/ScoreChart.svelte';
+
+const lensFraming = {
+  voter: "This page answers the practical question: what combination of forces would actually achieve ICESCR ratification? Seven strategies tested, four survive, one composite model emerges. Your role maps directly to the winning strategy.",
+  politician: "Strategic analysis of ratification pathways using the same discriminator protocol applied across the site. Seven mechanisms evaluated on empirical support, parsimony, consensus, chain integrity, and predictive power. The composite model identifies what activates the dormant Senate process.",
+  developer: "Discriminator analysis: 7 ratification pathways scored on 5 dimensions (/25). 3 eliminated (<15). 4 survivors converge through 3 orders of knock-on analysis into Composite P-A (22/25). Mirrors the H1-H7 and R1-R7 protocols applied elsewhere on the site.",
+  educator: "This page models the discriminator methodology your students can apply to any multi-hypothesis question. Seven ratification pathways scored, three eliminated, four converge into a composite model — the same analytical framework used across the site.",
+  researcher: "Full discriminator protocol applied to ratification strategy: seven pathways, five dimensions (0-5 each, /25), three-order higher analysis with explicit confidence degradation. Composite P-A (22/25) emerges through convergence analysis. Epistemic flags documented.",
+};
+
+const pathwayScores = [
+  { label: 'P6: Coalition Assembly', score: 19, status: 'survived' as const },
+  { label: 'P3: State-First Strategy', score: 18, status: 'survived' as const },
+  { label: 'P4: Litigation Cascade', score: 18, status: 'survived' as const },
+  { label: 'P1: Senate Revival', score: 15, status: 'retained' as const },
+  { label: 'P5: AI Crisis Catalyst', score: 14, status: 'eliminated' as const },
+  { label: 'P2: Executive Action', score: 10, status: 'eliminated' as const },
+  { label: "P7: Int'l Leverage", score: 8, status: 'eliminated' as const },
+];
+---
+
+<BaseLayout title="How Ratification Happens" description="Seven ratification pathways evaluated through differential diagnosis — discriminator scoring, higher-order analysis, and the composite model that emerges.">
+  <div class="how-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/start">Start</a></li>
+        <li aria-current="page">How</li>
+      </ol>
+    </nav>
+
+    <header class="how-header">
+      <h1>How Ratification Happens</h1>
+      <p class="how-lede">
+        No single action achieves ICESCR ratification. A differential diagnosis of seven
+        strategic pathways reveals that four survive scrutiny &mdash; and they converge into
+        a composite model that mirrors how the Americans with Disabilities Act moved from
+        concept to law.
+      </p>
+    </header>
+
+    <LensPanel lensFraming={lensFraming} />
+
+    <section class="the-question">
+      <h2>The Question</h2>
+      <p>
+        The <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a>
+        has waited 49 years for Senate action. The <a href="/action/ratification-process">ratification process</a>
+        requires a
+        <a href="https://www.foreign.senate.gov/" rel="noopener">Senate Foreign Relations Committee</a> hearing,
+        committee vote, and two-thirds floor vote (<a href="https://constitution.congress.gov/browse/article-2/section-2/" rel="noopener">Article II, Section 2</a>).
+        The mechanism exists. What strategic combination of forces would activate it?
+      </p>
+      <p>
+        This analysis applies the same
+        <a href="/connection/differential-diagnosis">consensus-or-parsimony discriminator</a>
+        used across the site &mdash; scoring seven competing pathways on five dimensions
+        (empirical support, parsimony, consensus, chain integrity, predictive power &mdash;
+        each 0&ndash;5, total /25). Pathways scoring below 15/25 face elimination.
+        Survivors undergo higher-order knock-on analysis to identify convergence patterns.
+      </p>
+    </section>
+
+    <section class="pathways">
+      <h2>Seven Ratification Pathways</h2>
+      <div class="pathway-grid">
+        <div class="pathway-card">
+          <span class="pathway-id">P1</span>
+          <h3>Senate Revival</h3>
+          <p>
+            Restart the stalled
+            <a href="https://www.foreign.senate.gov/" rel="noopener">Senate Foreign Relations Committee</a>
+            process directly. Request one hearing &mdash; the same committee that advanced
+            <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights" rel="noopener">ICCPR</a>
+            ratification in 1992. The constitutional mechanism requires no new legislation,
+            only political will to schedule a vote that has waited since November 1979.
+          </p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-id">P2</span>
+          <h3>Executive Implementation</h3>
+          <p>
+            Presidential executive orders directing federal agencies to implement
+            ICESCR-equivalent standards without formal Senate ratification. Functional
+            compliance through administrative action &mdash; bypassing the treaty process
+            entirely through the executive branch.
+          </p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-id">P3</span>
+          <h3>State-First Strategy</h3>
+          <p>
+            Individual states adopt ICESCR-equivalent protections through state legislation,
+            building momentum toward federal action. Follows the pattern that produced
+            marriage equality, cannabis legalization, and minimum wage increases &mdash;
+            states as laboratories of democracy creating proof points for federal policy.
+          </p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-id">P4</span>
+          <h3>Litigation Cascade</h3>
+          <p>
+            State attorneys general and federal courts enforce ICESCR-equivalent standards
+            through existing law. The <a href="/connection/ratification-counterfactual">ratification counterfactual</a>
+            identified state AG enforcement as the strongest litigation mechanism
+            (LA4, 20/25). Court decisions create compliance pressure and legal precedent
+            that makes formal ratification a codification of existing practice.
+          </p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-id">P5</span>
+          <h3>AI Crisis Catalyst</h3>
+          <p>
+            AI-driven economic disruption &mdash; mass displacement, healthcare collapse,
+            education failure &mdash; creates political urgency that forces rapid
+            ratification. Follows the Great Depression &rarr; New Deal pattern:
+            crisis generates political will that normal conditions cannot produce.
+          </p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-id">P6</span>
+          <h3>Coalition Assembly</h3>
+          <p>
+            Build an organized cross-partisan constituency that demands ratification.
+            Tech workers + educators + healthcare workers + faith communities + labor unions
+            create the sustained advocacy pressure absent for 49 years. Political science
+            consensus holds that organized constituencies drive policy change more reliably
+            than any other mechanism.
+          </p>
+        </div>
+        <div class="pathway-card">
+          <span class="pathway-id">P7</span>
+          <h3>International Leverage</h3>
+          <p>
+            Diplomatic or trade pressure from allies, treaty partners, or international
+            institutions makes non-ratification costly. The
+            <a href="https://www.ohchr.org/en/hr-bodies/upr/upr-main" rel="noopener">Universal Periodic Review</a>
+            process at the UN Human Rights Council provides a recurring forum for
+            recommendations, but lacks enforcement mechanisms against the U.S.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scoring">
+      <h2>Discriminator Scoring</h2>
+      <p>
+        Each pathway scored on five dimensions (0&ndash;5 each, total /25).
+        Pathways below 15/25 face elimination. The discriminator resolves ties through
+        parsimony preference: when two candidates score within 2 points, the simpler
+        model wins unless the more complex model demonstrates stronger empirical support.
+      </p>
+
+      <div class="chart-container">
+        <ScoreChart
+          client:visible
+          items={pathwayScores}
+          maxScore={25}
+          title="Ratification Pathway Discriminator (Order 0)"
+          showStatus={true}
+        />
+      </div>
+
+      <div class="score-table-wrapper">
+        <table class="score-table">
+          <thead>
+            <tr>
+              <th>Pathway</th>
+              <th>Empirical</th>
+              <th>Parsimony</th>
+              <th>Consensus</th>
+              <th>Chain</th>
+              <th>Predictive</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-survived">
+              <td>P6: Coalition Assembly</td>
+              <td>4</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td>4</td>
+              <td><strong>19/25</strong></td>
+            </tr>
+            <tr class="row-survived">
+              <td>P3: State-First Strategy</td>
+              <td>4</td>
+              <td>3</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td><strong>18/25</strong></td>
+            </tr>
+            <tr class="row-survived">
+              <td>P4: Litigation Cascade</td>
+              <td>4</td>
+              <td>3</td>
+              <td>3</td>
+              <td>4</td>
+              <td>4</td>
+              <td><strong>18/25</strong></td>
+            </tr>
+            <tr class="row-retained">
+              <td>P1: Senate Revival</td>
+              <td>3</td>
+              <td>5</td>
+              <td>2</td>
+              <td>3</td>
+              <td>2</td>
+              <td><strong>15/25</strong></td>
+            </tr>
+            <tr class="row-eliminated">
+              <td>P5: AI Crisis Catalyst</td>
+              <td>4</td>
+              <td>2</td>
+              <td>3</td>
+              <td>3</td>
+              <td>2</td>
+              <td><strong>14/25</strong></td>
+            </tr>
+            <tr class="row-eliminated">
+              <td>P2: Executive Implementation</td>
+              <td>2</td>
+              <td>2</td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td><strong>10/25</strong></td>
+            </tr>
+            <tr class="row-eliminated">
+              <td>P7: International Leverage</td>
+              <td>2</td>
+              <td>2</td>
+              <td>1</td>
+              <td>2</td>
+              <td>1</td>
+              <td><strong>8/25</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="eliminations">
+      <h2>Elimination Reasoning</h2>
+      <div class="elimination-list">
+        <div class="elimination">
+          <h3>P2: Executive Implementation <span class="score-badge eliminated">10/25</span></h3>
+          <p>
+            No precedent exists for unilateral treaty compliance without ratification.
+            Executive orders lack durability &mdash; each administration can reverse the previous one.
+            Constitutional scholars across the political spectrum contest the legitimacy of
+            bypassing the Senate's treaty power. The approach creates a parallel compliance
+            structure without treaty force, producing complexity without permanence.
+          </p>
+        </div>
+        <div class="elimination">
+          <h3>P5: AI Crisis Catalyst <span class="score-badge eliminated">14/25</span></h3>
+          <p>
+            Strong empirical support from historical crisis-response patterns (New Deal, ACA),
+            but the pathway depends on unpredictable timing and magnitude of disruption.
+            Low parsimony (requires specific crisis conditions) and low predictive power
+            (cannot forecast when or whether AI disruption reaches the political action threshold).
+            The Great Depression took three years to produce the New Deal &mdash; the gap between
+            crisis and response generates significant human cost.
+          </p>
+        </div>
+        <div class="elimination">
+          <h3>P7: International Leverage <span class="score-badge eliminated">8/25</span></h3>
+          <p>
+            No precedent for allies successfully pressuring the U.S. on domestic treaty
+            ratification. The <a href="https://www.ohchr.org/en/hr-bodies/upr/upr-main" rel="noopener">Universal Periodic Review</a>
+            recommendations carry no enforcement mechanism. The U.S. holds sufficient
+            economic and military leverage to resist diplomatic pressure on sovereignty
+            questions. International relations scholars assess external pressure on U.S.
+            domestic policy as among the weakest available levers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="survivors">
+      <h2>Surviving Pathways</h2>
+      <p>
+        Four pathways survive Order 0 scoring. P1 (Senate Revival, 15/25) survives on
+        maximum parsimony &mdash; the simplest possible pathway using the constitutional
+        mechanism that already exists. P3, P4, and P6 each score 18&ndash;19/25 with
+        strong empirical support and predictive power. Higher-order analysis reveals
+        how these four interact.
+      </p>
+    </section>
+
+    <section class="higher-order">
+      <h2>Higher-Order Analysis</h2>
+
+      <div class="order-block">
+        <h3>Order 1: Activation Effects <span class="confidence-badge high">HIGH confidence</span></h3>
+        <p>
+          P6 (Coalition Assembly) activates P1 (Senate Revival). The ICESCR stalled
+          because no organized constituency demanded ratification &mdash; the
+          <a href="https://www.foreign.senate.gov/" rel="noopener">Senate Foreign Relations Committee</a>
+          chair controls the hearing schedule, and constituent pressure drives scheduling
+          decisions. P6 provides the missing input that P1 requires.
+        </p>
+        <p>
+          P3 (State-First) provides P6 (Coalition) with proof points. State-level
+          adoption of economic rights protections demonstrates viability, generates media
+          coverage, and creates a base of experienced advocates who understand the policy
+          territory. Each state success makes the federal case stronger.
+        </p>
+        <p>
+          P4 (Litigation) creates compliance pressure independent of the Senate timeline.
+          Court decisions enforcing ICESCR-equivalent standards through existing law
+          (the <a href="/connection/ratification-counterfactual">LA4 state AG mechanism</a>,
+          scored 20/25) produce functional change while formal ratification proceeds.
+        </p>
+      </div>
+
+      <div class="order-block">
+        <h3>Order 2: Mutual Reinforcement <span class="confidence-badge moderate">MODERATE confidence</span></h3>
+        <p>
+          The four survivors enter a reinforcement cycle:
+        </p>
+        <ul>
+          <li><strong>State legislation (P3) provides legal foundation for litigation (P4)</strong> &mdash; state economic rights statutes give courts explicit statutory authority to enforce, reducing reliance on constitutional or common-law theories</li>
+          <li><strong>Litigation victories (P4) mobilize constituencies (P6)</strong> &mdash; court wins demonstrate that economic rights claims succeed in American courts, attracting advocates and donors to the ratification cause</li>
+          <li><strong>Coalition growth (P6) pressures the Senate committee (P1)</strong> &mdash; organized contact from tech workers, educators, healthcare workers, and faith communities creates the constituent signal that has remained absent since 1979</li>
+          <li><strong>Senate hearings (P1) validate state efforts (P3)</strong> &mdash; federal engagement signals that state-level investment in economic rights protections aligns with emerging federal direction</li>
+        </ul>
+      </div>
+
+      <div class="order-block">
+        <h3>Order 3: Convergence <span class="confidence-badge low">LOW confidence</span></h3>
+        <p>
+          All four survivors converge on a single pattern. No pathway achieves
+          ratification alone &mdash; each activates or amplifies the others.
+          The convergence produces <strong>Composite P-A</strong>.
+        </p>
+      </div>
+    </section>
+
+    <section class="composite">
+      <h2>Composite P-A: The Surviving Model</h2>
+      <div class="composite-model">
+        <h3>Coalition-Driven Senate Pathway with State and Litigation Amplifiers</h3>
+        <div class="composite-formula">
+          <span class="formula-item survived">P6 (Coalition)</span>
+          <span class="formula-op">&rarr; activates</span>
+          <span class="formula-item retained">P1 (Senate)</span>
+          <span class="formula-op">|</span>
+          <span class="formula-item survived">P3 (State)</span>
+          <span class="formula-op">+ </span>
+          <span class="formula-item survived">P4 (Litigation)</span>
+          <span class="formula-op">amplify</span>
+        </div>
+        <p class="composite-description">
+          An organized cross-partisan constituency (P6) provides the sustained political
+          pressure that activates the dormant Senate Foreign Relations Committee process (P1).
+          State-level adoption (P3) and litigation enforcement (P4) run in parallel,
+          creating proof points, legal precedent, and compliance pressure that make the
+          federal case progressively stronger.
+        </p>
+
+        <div class="trajectory">
+          <h4>Score Trajectory</h4>
+          <table class="trajectory-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Order 0</th>
+                <th>Order 1</th>
+                <th>Order 2</th>
+                <th>Order 3</th>
+                <th>Trajectory</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Composite P-A</strong></td>
+                <td>19/25</td>
+                <td>21/25</td>
+                <td>22/25</td>
+                <td>21/25</td>
+                <td><strong>STABLE-RISING</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="ada-pattern">
+      <h2>The ADA Pattern</h2>
+      <p>
+        Composite P-A mirrors the trajectory that produced the
+        <a href="https://www.ada.gov/" rel="noopener">Americans with Disabilities Act</a> (1990):
+      </p>
+      <div class="pattern-comparison">
+        <div class="pattern-col">
+          <h3>ADA (1973&ndash;1990)</h3>
+          <ul>
+            <li><strong>State protections</strong> &mdash; Section 504 of the Rehabilitation Act (1973) established federal precedent; states built on it</li>
+            <li><strong>Organized movement</strong> &mdash; disability rights organizations (ADAPT, National Council on Disability) sustained advocacy over 17 years</li>
+            <li><strong>Litigation</strong> &mdash; Section 504 lawsuits demonstrated that enforceable economic rights work in American courts</li>
+            <li><strong>Senate action</strong> &mdash; bipartisan passage (76-8) once constituency + precedent + political cover aligned</li>
+          </ul>
+        </div>
+        <div class="pattern-col">
+          <h3>ICESCR (Composite P-A)</h3>
+          <ul>
+            <li><strong>State protections (P3)</strong> &mdash; state economic rights legislation creates the same proof-point foundation</li>
+            <li><strong>Organized movement (P6)</strong> &mdash; cross-partisan coalition builds the constituency absent since 1977</li>
+            <li><strong>Litigation (P4)</strong> &mdash; state AG enforcement + federal court precedent demonstrate enforceability</li>
+            <li><strong>Senate action (P1)</strong> &mdash; committee hearing + floor vote once coalition + precedent + cover align</li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        The ADA required 17 years from Section 504 to passage. The ICESCR has waited 49.
+        The discriminator analysis suggests that what has remained absent throughout those
+        49 years corresponds to P6 &mdash; no organized constituency has ever demanded ratification.
+        Building that constituency activates every other surviving mechanism.
+      </p>
+    </section>
+
+    <section class="what-you-can-do">
+      <h2>Where You Fit</h2>
+      <p>
+        Each component of Composite P-A maps to actions you can take today.
+        The <a href="/action">Take Action</a> section provides the tools.
+      </p>
+      <div class="action-map">
+        <a href="/action/contact" class="action-map-card">
+          <span class="pathway-tag">P1 + P6</span>
+          <h3>Contact Your Senators</h3>
+          <p>One constituent letter shifts the political calculation. The SFRC chair has likely never received a letter about ICESCR ratification. Phone calls to district offices carry the most weight.</p>
+        </a>
+        <a href="/action/talking-points" class="action-map-card">
+          <span class="pathway-tag">P6</span>
+          <h3>Build the Coalition</h3>
+          <p>Share evidence-based <a href="/action/talking-points">talking points</a> with colleagues, faith communities, and advocacy organizations. Every new voice strengthens the missing constituency.</p>
+        </a>
+        <a href="/action/educator-toolkit" class="action-map-card">
+          <span class="pathway-tag">P6 + P3</span>
+          <h3>Teach the Framework</h3>
+          <p>The <a href="/action/educator-toolkit">educator toolkit</a> brings ICESCR into classrooms. Students who understand economic rights become voters who recognize the issue.</p>
+        </a>
+        <a href="/gap/arguments" class="action-map-card">
+          <span class="pathway-tag">P4</span>
+          <h3>Know the Arguments</h3>
+          <p>The <a href="/gap/arguments">arguments page</a> documents objections in their strongest form. The <a href="/gap/counterarguments">counterarguments</a> provide evidence-based responses for every context.</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="epistemic-flags">
+      <h2>Epistemic Flags</h2>
+      <ul>
+        <li><strong>Single-rater analysis</strong> &mdash; one AI system (<a href="https://www.anthropic.com/claude" rel="noopener">Claude</a>) generated this analysis under human direction. Independent replication using different analysts would strengthen confidence in the scoring.</li>
+        <li><strong>U.S.-centric scope</strong> &mdash; the analysis does not model how other nations' implementation experiences transfer to the U.S. context. Comparative ratification studies would strengthen the empirical dimension.</li>
+        <li><strong>Temporal snapshot</strong> &mdash; political conditions as of early 2026. Rapid changes in AI capabilities, economic conditions, or political alignment may alter scoring on multiple dimensions.</li>
+        <li><strong>ADA analogy limitations</strong> &mdash; the disability rights movement operated in a different political environment with different coalition dynamics. The analogy identifies structural parallels but does not predict timeline or outcome with precision.</li>
+        <li><strong>Confidence degradation</strong> &mdash; Order 0&ndash;1 carry HIGH confidence. Order 2 carries MODERATE confidence. Order 3 carries LOW confidence. The composite model reflects convergence patterns, not certainty.</li>
+      </ul>
+    </section>
+
+    <section class="framing">
+      <blockquote>
+        Human Rights; Nothing More, Nothing Less.
+      </blockquote>
+      <p>
+        Every element of this analysis represents implementation of rights 173 nations
+        already committed to. Nothing here asks for anything beyond what the United
+        States signed in 1977.
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .how-page {
+    max-width: var(--max-width-wide);
+    margin: 0 auto;
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .how-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .how-lede {
+    font-size: 1.309rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    max-width: 42rem;
+  }
+
+  .the-question, .pathways, .scoring, .eliminations, .survivors, .higher-order, .composite, .ada-pattern, .what-you-can-do, .epistemic-flags {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .pathway-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .pathway-card {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .pathway-id {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+    margin-bottom: var(--space-xs);
+  }
+
+  .pathway-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .pathway-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .chart-container {
+    margin: var(--space-lg) 0;
+  }
+
+  .score-table-wrapper {
+    overflow-x: auto;
+    margin-top: var(--space-lg);
+  }
+
+  .score-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .score-table th {
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+    font-weight: 600;
+    color: var(--color-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .score-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .score-table td:first-child {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .row-survived td {
+    background: rgba(85, 139, 47, 0.06);
+  }
+
+  .row-retained td {
+    background: rgba(249, 168, 37, 0.06);
+  }
+
+  .row-eliminated td {
+    background: rgba(198, 40, 40, 0.04);
+    color: var(--color-text-muted);
+  }
+
+  .row-eliminated td:first-child {
+    color: var(--color-text-muted);
+  }
+
+  .elimination-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+
+  .elimination {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-text-muted);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .elimination h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .elimination p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .score-badge {
+    font-size: 0.7rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 2px var(--space-xs);
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .score-badge.eliminated {
+    background: rgba(198, 40, 40, 0.1);
+    color: #c62828;
+  }
+
+  .order-block {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    margin-bottom: var(--space-lg);
+  }
+
+  .order-block h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--color-heading);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+  }
+
+  .confidence-badge {
+    font-size: 0.65rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    padding: 2px var(--space-xs);
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .confidence-badge.high {
+    background: rgba(85, 139, 47, 0.1);
+    color: #558b2f;
+  }
+
+  .confidence-badge.moderate {
+    background: rgba(249, 168, 37, 0.15);
+    color: #f57f17;
+  }
+
+  .confidence-badge.low {
+    background: rgba(198, 40, 40, 0.08);
+    color: #c62828;
+  }
+
+  .order-block ul {
+    list-style: none;
+    margin: var(--space-md) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .order-block li {
+    padding-left: var(--space-lg);
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .order-block li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .order-block li strong {
+    color: var(--color-text);
+  }
+
+  .composite-model {
+    padding: var(--space-xl);
+    background: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    border-radius: 4px;
+  }
+
+  .composite-model h3 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+  }
+
+  .composite-formula {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+  }
+
+  .formula-item {
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  .formula-item.survived {
+    background: rgba(85, 139, 47, 0.1);
+    color: #558b2f;
+  }
+
+  .formula-item.retained {
+    background: rgba(249, 168, 37, 0.12);
+    color: #f57f17;
+  }
+
+  .formula-op {
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+
+  .composite-description {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+  }
+
+  .trajectory-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  .trajectory-table th, .trajectory-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    text-align: center;
+  }
+
+  .trajectory-table th {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-heading);
+  }
+
+  .trajectory-table td:first-child, .trajectory-table th:first-child {
+    text-align: left;
+  }
+
+  .trajectory h4 {
+    font-size: 0.85rem;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .pattern-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+  }
+
+  .pattern-col h3 {
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--color-heading);
+  }
+
+  .pattern-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: 0;
+  }
+
+  .pattern-col li {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    padding-left: var(--space-lg);
+    position: relative;
+  }
+
+  .pattern-col li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+  }
+
+  .pattern-col li strong {
+    color: var(--color-text);
+  }
+
+  .action-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .action-map-card {
+    display: block;
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .action-map-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .pathway-tag {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px var(--space-xs);
+    background: rgba(0, 105, 92, 0.08);
+    color: var(--color-accent);
+    border-radius: 3px;
+    margin-bottom: var(--space-xs);
+  }
+
+  .action-map-card h3 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+  }
+
+  .action-map-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .epistemic-flags ul {
+    list-style: none;
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .epistemic-flags li {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-text-muted);
+    border-radius: 0 4px 4px 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .epistemic-flags li strong {
+    color: var(--color-text);
+  }
+
+  .framing {
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .framing blockquote {
+    font-size: 1.309rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 768px) {
+    .pathway-grid, .action-map {
+      grid-template-columns: 1fr;
+    }
+
+    .pattern-comparison {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

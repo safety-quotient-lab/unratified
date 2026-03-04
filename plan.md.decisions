@@ -1297,3 +1297,46 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Every page on both sites now declares AI generation through visible copy, structured data, and meta tag
 - When EU AI Act Article 50 technical standard finalizes (expected May–June 2026), evaluate compliance and adopt if different from current implementation
 - Monitor WHATWG issue #9479 for browser-level support of the ai-generated meta tag
+
+---
+
+## D039: Ratification Pathway Discriminator — Composite P-A
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: The site documented what the ICESCR covers (/covenant), why it matters (/gap, /connection, /evidence), and what individuals can do (/action). No page consolidated the strategic question: what combination of forces would actually achieve ratification? The existing /action/ratification-process.mdx covers the 4-step procedural mechanism, but not the political/strategic landscape. The /connection/ratification-counterfactual analyzed what happens *after* ratification (R1-R7), not how to *achieve* it.
+
+**Decision**: Create `/how` page with a full discriminator analysis of seven ratification pathways (P1-P7), scored on the standard five dimensions (empirical support, parsimony, consensus, chain integrity, predictive power — each 0–5, total /25). Three eliminated (P2: Executive 10/25, P5: Crisis 14/25, P7: International 8/25). Four survivors converge through three orders of higher analysis into **Composite P-A: Coalition-Driven Senate Pathway with State and Litigation Amplifiers** (22/25, STABLE-RISING trajectory).
+
+**Scoring summary**:
+
+| Pathway | Score | Status |
+|---------|-------|--------|
+| P6: Coalition Assembly | 19/25 | Survived |
+| P3: State-First Strategy | 18/25 | Survived |
+| P4: Litigation Cascade | 18/25 | Survived |
+| P1: Senate Revival | 15/25 | Retained (max parsimony) |
+| P5: AI Crisis Catalyst | 14/25 | Eliminated |
+| P2: Executive Implementation | 10/25 | Eliminated |
+| P7: International Leverage | 8/25 | Eliminated |
+
+**Composite P-A**: P6 (coalition) → activates P1 (Senate); P3 (state) + P4 (litigation) amplify. Mirrors the ADA trajectory: organized movement + state protections + enforcement litigation → federal legislation.
+
+**Reasoning**:
+- Political science consensus: organized constituencies drive policy change more reliably than any other mechanism (P6 scores highest on consensus dimension)
+- The 49-year gap traces directly to the absence of organized demand — no constituency ever asked for ICESCR ratification
+- State-first (P3) and litigation (P4) patterns have strong empirical support from marriage equality, cannabis legalization, ADA enforcement
+- Senate Revival (P1) survives on maximum parsimony — the constitutional mechanism already exists — but lacks activation energy without P6
+- Convergence at Order 3: all four survivors reinforce each other in a feedback cycle
+
+**Files created/modified** (5):
+- `src/pages/how.astro` — NEW: full discriminator analysis with ScoreChart visualization
+- `src/layouts/BaseLayout.astro` — nav link added between "Take Action" and "Resources"
+- `src/pages/start.astro` — /how card in site map section (6 sections)
+- `src/pages/action/index.astro` — strategic analysis callout linking to /how
+- `src/pages/for/politicians.astro` — Committee Pathway links to /how for strategic context
+
+**What follows**:
+- The /how page provides the strategic framework; /action provides the tactical tools
+- Coalition Assembly (P6) maps directly to constituent contact (/action/contact), sharing (/action/talking-points), and teaching (/action/educator-toolkit)
+- Future work: state-level ICESCR adoption tracker, litigation case database, coalition membership metrics
