@@ -198,6 +198,11 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Advocacy messaging restructure — prohibition-entitlement asymmetry applied across 8 files (D029); procedural-declarative finding deferred
 - [x] Safety Quotient Lab organizational identity — GitHub org profile complete; sql.unratified.org deferred (GitHub serves as homepage for now); individual attribution (Kashif Shah) on site
 - [ ] A/B testing infrastructure — hybrid vs. observational voice for content effectiveness measurement
+- [ ] Landing page buildout — three tiers, all active:
+  - [ ] /why — single-page emotional case ("why should I care?"), prohibition framing, one scroll, ends with CTA; upstream of persona selection; primary social sharing URL
+  - [ ] /start or /howto — guided tour for first-time visitors; explains site structure, five-lens system, how to navigate covenant→gap→connection→evidence→action; onboarding ramp for cold traffic
+  - [ ] /for/voters, /for/politicians, /for/educators, /for/researchers, /for/developers — five persona entry points matching the five-lens model; each sets defaultLens, speaks the audience's language, routes to relevant sections; build order: voters → politicians → educators → researchers → developers; discriminator scored 21/25 — oriented walkthrough for first-time visitors explaining the site's structure, the five-lens system, progressive disclosure layers, how to navigate covenant→gap→connection→evidence→action pipeline, how to switch personas, where to find educator materials, how the observatory connects, and how to contribute via GitHub; serves as an onboarding ramp for visitors who arrive without context (especially from social media or word-of-mouth links that land on the homepage)
+- [ ] Phase 2 Mental Model: Full double-knock on all higher orders — re-run the complete higher-order analysis (Orders 0-4) using the consensus-or-pragmatism discriminator at every branching point; compare Phase 2 results against Phase 1 findings; identify where the discriminator produces different conclusions; document divergences and convergences; assess whether the original composite model (H2+H3+H4+H7 mod H6) survives the second pass or requires revision
 
 **Phase 1: Core Content Development** (COMPLETE)
 
