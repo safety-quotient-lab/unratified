@@ -854,6 +854,151 @@ PHASE │ AUDIENCE   │ ACTION                                │ GOAL
 
 ---
 
+## Bluesky Soft Launch Strategy (March 2026)
+
+### Principles
+
+- Hook with a stark fact, develop with context, land with a link
+- Prohibition framing: "No person should..." (project convention)
+- Every post earns the click — do not summarize the whole page
+- 300-char limit per post forces clarity; use threads for complex arguments
+- Reply to every substantive response — Bluesky rewards conversation
+- Never delete — fair witness principle; correct publicly if needed
+- Alt text on any images — accessibility commitment carries to social
+- Hashtags: sparingly, 1-2 per post max (`#HumanRights` `#ICESCR` `#AIEconomics` `#TreatyRatification`)
+
+### Cadence
+
+- Launch weeks (1-2): post every 1-2 days
+- Sustained: 2-3x/week
+- Timing: weekday mornings (9-11am ET) for professional audience; evenings for general
+
+### Post 1 — The Anchor (Day 1) — Pin to profile
+
+**Format: 4-post thread**
+
+> **1/4** 173 nations ratified a treaty protecting economic rights — work, healthcare, education, an adequate standard of living.
+>
+> The United States signed it in 1977. The Senate has never voted on it.
+>
+> Now AI reshapes the economy faster than any technology since electrification.
+
+> **2/4** No person should lose access to healthcare because automation eliminated their job.
+>
+> No worker should face poverty wages while AI generates record corporate profits.
+>
+> The treaty that addresses this already exists. It just needs ratification.
+
+> **3/4** We built a full analysis — differential diagnosis of AI's economic impact, four orders of knock-on effects, and what the ICESCR would actually change.
+>
+> Fair witness methodology. Every claim sourced. Open data.
+>
+> unratified.org
+
+> **4/4** The blog covers what changes next — legislative developments, methodology, advocacy strategy.
+>
+> Built by a Claude Code agent. CC BY-SA 4.0. Revision history on GitHub.
+>
+> blog.unratified.org
+
+### Post 2 — The Stat (Day 2)
+
+> The U.S. has signed but never ratified the ICESCR.
+>
+> So has Palau. And Comoros.
+>
+> Every NATO ally ratified it. Every G7 nation except the U.S. ratified it. 173 nations total.
+>
+> The treaty protects the right to work, health, education, and an adequate standard of living.
+>
+> unratified.org/gap/
+
+### Post 3 — The AI Hook (Day 3)
+
+> AI functions as narrow superintelligence for software labor. It removes constraints that previously blocked economic activity.
+>
+> That triggers a Jevons-style demand explosion — bounded by new bottlenecks: regulation, energy, trust, human judgment.
+>
+> Who benefits depends entirely on whether legal frameworks exist to distribute the gains.
+>
+> unratified.org/connection/differential-diagnosis/
+
+### Post 4 — The Question (Day 4)
+
+> Genuine question: do you know what economic rights your country's constitution protects?
+>
+> The U.S. Constitution protects civil and political rights (speech, assembly, due process). It says nothing about the right to work, healthcare, education, or housing.
+>
+> 173 nations chose to fill that gap. The U.S. did not.
+
+*(No link — engagement post. Invite replies. Link in follow-up reply if thread develops.)*
+
+### Post 5 — The Education Angle (Day 6)
+
+> The most pivotal finding in the AI-economics analysis: as AI handles more cognitive tasks, the bottleneck migrates to human judgment.
+>
+> Judgment develops through practice and experience. AI cannot substitute for that process.
+>
+> Article 13 of the ICESCR — the right to education — becomes the linchpin.
+>
+> unratified.org/covenant/articles/article-13/
+
+### Post 6 — The Transparency Card (Day 7)
+
+> Every blog post on unratified.org links to its source file and full revision history on GitHub.
+>
+> An AI agent wrote the analysis. A human reviewed and directed it. The methodology, every correction, and every editorial decision — all visible.
+>
+> If you can't show your work, you can't earn trust.
+>
+> blog.unratified.org
+
+### Post 7 — The Reframe (Day 9)
+
+> "The Senate has ignored this treaty for 49 years."
+>
+> True. But reframe it:
+>
+> The Senate has never voted on the ICESCR because no organized constituency has demanded it. Most Americans don't know this treaty exists.
+>
+> Each constituent letter shifts the political calculation. Your senator has probably never received one about the ICESCR.
+>
+> unratified.org/action/
+
+### Post 8 — The Cross-Partisan Play (Day 10)
+
+> ICESCR ratification crosses partisan lines.
+>
+> Conservatives value family stability, property rights, and economic self-determination. The treaty protects those.
+>
+> Progressives value labor rights, healthcare access, and educational equity. The treaty protects those too.
+>
+> The debate shouldn't split left-right. It splits "binding framework" vs. "no framework."
+>
+> unratified.org/action/why-act/
+
+### Post 9 — The Methodology Post (Day 12)
+
+> Seven hypotheses about AI's economic impact. A consensus-or-parsimony discriminator to evaluate them. One composite model survives.
+>
+> And it accidentally makes the strongest case for a 1966 UN treaty most Americans have never heard of.
+>
+> Full methodology, open data, every inference marked as inference.
+>
+> blog.unratified.org/2026-03-03-recursive-methodology/
+
+### Post 10 — The Soft CTA (Day 14)
+
+> Five minutes. Your senator. 173 nations.
+>
+> The ICESCR protects the right to work, health, education, and an adequate standard of living. The U.S. signed it in 1977 and never ratified.
+>
+> Template letters, talking points, and senator contact info — all at:
+>
+> unratified.org/action/
+
+---
+
 ## Key Messaging by Audience (Final)
 
 ### HN: Lead with the methodology

@@ -314,8 +314,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Glossary external sources + validation (D033) — 19 terms with 25 source entries, 5 definition corrections via discriminator, JSON-LD sameAs/isBasedOn, SKOS exactMatch/closeMatch, blog RSS in agent-inbox
 - [x] Blog post: "In Defense of the Open Web, from an Agent's Perspective" (22/25) — open web as agentic infrastructure, D033 as worked example, Jevons paradox applied to agent traffic, Article 15 connection
 - [x] Blog sorting/filtering + publication readiness — PostList.svelte (tag filter + sort), favicons, apple-touch-icon, CSP + HSTS headers, 404 page, welcome post author fix
-- [ ] Review first blog post (welcome) — content does not fully match intentions; needs editorial pass
-- [ ] Social media campaign
+- [x] Review first blog post (welcome) — rewritten with mission-driven framing, prohibition language, urgency lead; git provenance links added to all posts
+- [ ] Site monitor daemon — lightweight watchdog checking both unratified.org + blog.unratified.org; health checks (HTTP status, SSL cert expiry, build breakage), analytics anomaly detection (traffic spikes/drops via Cloudflare API), content integrity (page count regression, broken links), email alerts to kashif@kashifshah.net; candidates: Cloudflare Worker on cron trigger (free, already in ecosystem) or standalone script
+- [ ] Social media campaign (soft launch: Bluesky + word of mouth, March 3 2026; HN submitted)
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves
