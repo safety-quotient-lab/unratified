@@ -1414,3 +1414,32 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Fair-witness.json provides a stable reference for external agents evaluating the site's methodology
 - Remaining Gemini TODO items (homepage audit XL, Observatory landing XL, cross-site docs L) feed into future cycles
 - The blog post (8th total) documents the exchange as a case study for AI accountability discourse
+
+---
+
+## D042: Gemini Visibility Recommendations — Fair Witness Evaluation
+**Date**: 2026-03-04
+**Status**: DOCUMENTED
+
+**Observation**: After the peer review exchange (D040-D041), Gemini produced extensive recommendations for raising site visibility using Google services, structured data, and "agentic web" standards. The recommendations spanned ~14 exchanges and escalated from standard SEO to increasingly aspirational/fabricated standards.
+
+**Decision**: Evaluate all 20 suggestions through fair witness methodology. Classify into four tiers based on verifiability and actionability. Save evaluation to disk. Prioritize Tier 1 (actionable, established standards) items for implementation.
+
+**Four-tier classification**:
+- **Tier 1 — Actionable Now** (8 items): Search Console, FAQPage schema, OG/Twitter meta verification, Organization `knowsAbout`, robots.txt training bot differentiation, Google News Publisher Center, JSON-LD `about` field
+- **Tier 2 — Worth Investigating** (5 items): Google Ad Grants (requires nonprofit status), ClaimReview schema, Dataset schema for Observatory, SoftwareSourceCode provenance, Google Business Profile
+- **Tier 3 — Aspirational/Future** (7 items): MCP server, SKILL.md, agent manifest, ai-instructions.txt, ai-usage-policy.json, agent registries (confabulated: "Anthropic Forge," "agentskills.io"), "Semantic Attribution Requirement" (confabulated legal concept)
+- **Tier 4 — Already Implemented** (3 items): agent-inbox.json identity (D041), fair-witness.json (D041), judicial competence rebuttal (D041)
+
+**Pattern confirmed**: Gemini's recommendations follow the same trajectory as the peer review — valid foundations escalating into fabricated specifics. Each time the user asked for "more," Gemini pushed beyond established standards into speculative territory while maintaining confident factual tone. The "6th Sigma" framing encouraged this escalation.
+
+**Reasoning**: Fair witness methodology requires distinguishing established standards (Schema.org, Google Search Console, OpenGraph) from aspirational concepts (agent skill registries, machine-readable AI policies) and outright fabrications (Anthropic Forge, agentskills.io, SAR). Implementing Tier 1 items delivers real SEO value. Tier 3 items represent interesting future directions but should not drive current development.
+
+**Files created**:
+- `content/analysis/gemini-visibility-recommendations.md` — Full evaluation with 20 items across 4 tiers, pattern analysis, recommended priority order
+
+**What follows**:
+- Implement Tier 1 items (G-01 through G-08) in a future cycle — standard SEO improvements
+- Investigate G-09 (Google Ad Grants) — requires nonprofit status verification
+- Monitor agentic web standards as they develop — Tier 3 concepts may become actionable
+- The escalation pattern validates a fair witness observation: AI systems produce increasingly speculative output when asked to "go deeper" without epistemic bounds
