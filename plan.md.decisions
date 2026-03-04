@@ -1477,3 +1477,28 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - State of incorporation decision (REQUIRES LEGAL COUNSEL)
 - Board recruitment
 - All formation steps remain human-directed — this plan provides the analytical foundation
+
+---
+
+## D044: Phase Reorganization — Defer Visibility & Nonprofit to Phase 5
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: D042 (visibility TODOs) and D043 (nonprofit formation) represent significant bodies of work that depend on human-directed decisions (legal consultation, board recruitment, Google account verification) and organizational status changes (501(c)(3) formation). These items do not block current Phase 4 outreach work (social media, educator engagement, press) and mixing them into Phase 4 clutters the active work surface.
+
+**Decision**: Create Phase 5 ("Organizational Growth & Visibility") to house all D042 visibility items (G-01 through G-12) and D043 nonprofit formation pipeline. Phase 4 retains active outreach tasks. Phase 5 remains DEFERRED until human-directed prerequisites advance.
+
+**Reasoning**:
+- Phase 4 outreach tasks (Bluesky, Lemmy, educator contacts, press) require no legal or organizational prerequisites — they can proceed now
+- Visibility improvements (Search Console, structured data, robots.txt) provide optimization value but do not gate launch activities
+- Nonprofit formation requires a 6-9 month legal process that runs on its own timeline
+- Google Ad Grants ($120k/year) depends on 501(c)(3) status — sequentially blocked
+- Separating these into Phase 5 clarifies what the user can act on today vs. what requires organizational transformation
+
+**Files modified**:
+- `plan.md` — Visibility TODOs moved from Phase 4 unchecked items to new Phase 5 section with full G-item breakdown and nonprofit formation pipeline
+- `MEMORY.md` — Active thread and Next Work sections reorganized by phase
+
+**What follows**:
+- Phase 4 continues: social media soft launch, educator outreach, press engagement
+- Phase 5 activates when the user decides to pursue nonprofit formation or SEO improvements independently

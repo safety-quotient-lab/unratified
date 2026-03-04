@@ -340,11 +340,45 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Gemini validation response improvements (D041): judicial competence rebuttal (voters + not-really-rights), agent-inbox.json identity fields (subjectMatter, functionalDomain, epistemicScope), fair-witness.json machine-readable methodology endpoint, blog post case study
 - [x] Gemini visibility recommendations evaluated (D042): 20 suggestions across 4 tiers — 8 actionable (SEO/structured data), 5 worth investigating, 7 aspirational/confabulated. Saved to content/analysis/gemini-visibility-recommendations.md
 - [x] Nonprofit formation pathway documented (D043): 501(c)(3) educational entity discriminator analysis (NP1 21/25), 9-step formation pipeline, $375-$3,325 initial cost, 6-9 month timeline, Google Ad Grants pathway ($10k/month). Saved to content/analysis/nonprofit-formation-plan.md
-- [ ] Visibility TODOs: G-01 Search Console, G-03/G-04 OG/Twitter spot-check, G-06 robots.txt training bots, G-05 knowsAbout schema, G-02 FAQPage on /how
+- [x] Gemini visibility recommendations evaluated (D042): 20 items across 4 tiers. Saved to content/analysis/gemini-visibility-recommendations.md
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves
+
+**Phase 5: Organizational Growth & Visibility** ← DEFERRED
+*Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
+
+Visibility — SEO & Structured Data (from D042 Tier 1):
+- [ ] G-01: Google Search Console — verify site, submit sitemaps for all subdomains
+- [ ] G-02: FAQPage schema on /how page (triggers "People Also Ask" boxes)
+- [ ] G-03: OpenGraph meta tags — spot-check og:title, og:description, og:image on key pages
+- [ ] G-04: Twitter Card meta tags — verify twitter:card, twitter:title, twitter:description
+- [ ] G-05: Organization schema — add `knowsAbout` array (ICESCR, UDHR, AI topics)
+- [ ] G-06: robots.txt — differentiate search bots from training bots (GPTBot, Google-Extended)
+- [ ] G-07: Google News Publisher Center submission
+- [ ] G-08: JSON-LD `about` field on homepage for entity disambiguation
+
+Visibility — Worth Investigating (from D042 Tier 2):
+- [ ] G-09: Google for Nonprofits / Ad Grants ($10k/month) — requires 501(c)(3)
+- [ ] G-10: ClaimReview schema (Fact Check badge) — requires editorial standards review
+- [ ] G-11: Dataset schema for Observatory — belongs in observatory project
+- [ ] G-12: SoftwareSourceCode schema linking audits to GitHub commits
+
+Nonprofit Formation (from D043):
+- [ ] Legal consultation — education vs. advocacy/lobbying distinction
+- [ ] Choose state of incorporation
+- [ ] Draft Articles of Incorporation + bylaws
+- [ ] File with Secretary of State
+- [ ] Organizational meeting (board of 3+, officers, policies)
+- [ ] Obtain EIN
+- [ ] IRS 1023-EZ filing ($275)
+- [ ] State charitable registration
+- [ ] Google for Nonprofits → Ad Grants application
+- [ ] Codebase updates post-formation: JSON-LD NonprofitType/EIN, footer designation, /privacy page, Google Analytics
+
+See: content/analysis/nonprofit-formation-plan.md (full pathway)
+See: content/analysis/gemini-visibility-recommendations.md (full evaluation)
 
 ---
 
