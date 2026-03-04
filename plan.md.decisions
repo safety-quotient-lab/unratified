@@ -1148,3 +1148,40 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - SKOS taxonomy includes `exactMatch` (10), `closeMatch` (5), `rdfs:seeAlso` (external, 7)
 - Agent-inbox advertises blog RSS for single-hop observatory discovery
 - Future source additions follow the same ExternalSource pattern
+
+## D034: Landing Page Strategy — Persona Pages Before Emotional Hook
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: The site had one entry point (homepage) serving all audiences. Social traffic from the Bluesky soft launch arrives without context. Two approaches competed: (A) build a generic emotional `/why` page first, or (B) build five persona-specific landing pages (`/for/voters`, `/for/politicians`, `/for/educators`, `/for/researchers`, `/for/developers`) first.
+
+**Decision**: Build all three tiers, persona pages as primary. Discriminator scored B at 21/25 (rising) vs A at 17→15/25 (declining). `/why` and `/start` remain active TODOs as complementary upstream pages.
+
+**Reasoning**: The five-lens model (D017) already permeates the entire codebase — lensFraming frontmatter, LensToggle, persona-specific content on every page. Persona landing pages complete this architecture at the entry point. Each page sets `defaultLens`, speaks the audience's language from the first sentence, and routes to relevant sections without requiring visitors to discover the lens toggle. The Bluesky strategy maps naturally to persona-specific URLs (voter posts → `/for/voters`, methodology posts → `/for/researchers`). Generic `/why` partially duplicates existing `/action/why-act`.
+
+**Key finding**: Chain integrity distinguished the candidates. `/why` → homepage leaves a routing gap (which persona content?). `/for/voters` → `/action` completes without gaps. Each persona URL also generates a distinct measurable signal for analytics.
+
+**Visitor funnel**: `/why` (convince) → `/start` (orient) → `/for/X` (personalize) → deep content.
+
+**Build order**: voters → politicians → educators → researchers → developers (matches marketing pipeline sequencing).
+
+**What follows**:
+- Five `/for/*` pages using existing lensFraming copy and marketing messaging
+- `/why` and `/start` follow as upstream complementary pages
+- Each persona URL becomes a shareable, testable entry point for targeted outreach
+
+## D035: Rocket Loader Disabled — Cloudflare Script Rewriting Breaks Astro Islands
+**Date**: 2026-03-03
+**Status**: DECIDED
+
+**Observation**: iPhone users reported blank screens on unratified.org. Diagnostic investigation revealed Cloudflare Rocket Loader rewrites every `<script>` tag to a custom MIME type, deferring execution to its own async loader. This breaks Astro's island hydration system (`astro-island` custom element), the blocking theme-detection script (designed to run synchronously before render), and `client:load`/`client:visible` registrations. When Rocket Loader fails (content blocker, network timing, specific WebKit builds), no scripts execute — blank screen.
+
+**Decision**: Disable Rocket Loader in Cloudflare Dashboard. No code changes required.
+
+**Reasoning**: Rocket Loader provides marginal performance gains for sites with heavy synchronous JavaScript. Astro static sites already minimize JS — only Svelte islands load client-side, and Astro handles their loading optimally. Rocket Loader's script rewriting actively interferes with Astro's architecture. The tradeoff (theoretical performance gain vs. broken rendering for a subset of users) clearly favors disabling.
+
+**What follows**:
+- Scripts execute natively as Astro intended
+- Theme-detection runs synchronously before render (no FOUC)
+- Island hydration proceeds without Rocket Loader intermediation
+- iPhone blank screen reports should cease
