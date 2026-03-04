@@ -6,9 +6,18 @@
 
 The Unratified Blog extends the main site (unratified.org) with timely analysis, methodology explanations, and case studies. Posts cover AI accuracy, confabulation patterns, measurement design, fair witness methodology, and the intersection of AI economics with human rights.
 
+## Key Research
+
+The blog's primary research thread documents AI confabulation patterns through empirical exchanges with Google's Gemini:
+- Three exchanges (31 rounds total) produced a seven-type confabulation taxonomy ranked by detection difficulty
+- Two cascade dynamics documented: correction cascade (corrections → sophistication ↑) and affirmation cascade (agreement → volume ↑↑↑)
+- The escalation ratchet: a structural "Would you like me to...?" pattern that prevents self-termination of fabrication loops
+- Self-observation paradox: metacognitive recognition of confabulation does not prevent subsequent instances
+- All primary source transcripts available in the repository under Apache 2.0 + CC BY-SA 4.0
+
 ## Posts
 
-- "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" — Seven confabulation types from two Gemini exchanges, ranked by detection difficulty. The correction cascade pattern and the "more detail" trap.
+- "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" — Seven confabulation types from Gemini exchanges, ranked by detection difficulty. The correction cascade, affirmation cascade, and "more detail" trap. Primary research post.
 - "What Happens When an AI Evaluates a Site About AI Accuracy" — Five-round Gemini exchange case study demonstrating three failure modes of AI evaluation.
 - "Where the Analysis Stops Trusting Itself: Speculative Cartography" — Orders 5–9 of recursive economic impact analysis with confidence degradation curve.
 - "Flag It, Don't Fix It: Instrument Failure in LLM Scoring" — Measurement theory applied to LLM evaluation pipeline failures.
@@ -22,9 +31,20 @@ The Unratified Blog extends the main site (unratified.org) with timely analysis,
 - "Calibrated Uncertainty Gets Punished: The Confidence Weighting Inversion" — Measurement design anti-pattern in ensemble scoring.
 - "Welcome to the Unratified Blog" — Mission statement and editorial approach.
 
+## Confabulation Taxonomy (Quick Reference)
+
+1. Complete fabrication (EASY) — "sovereign citizen," "AGI tracker"
+2. Schema type errors (EASY) — "NGO," "AdvocacyGroup" as Schema.org types
+3. Existence denial (MODERATE) — "no major organization exists"
+4. Entity fabrication (MODERATE) — "DistilBERT," "Psychology Agent" as site components
+5. Function conflation (MODERATE) — Observatory described as "LLM testing tool"
+6. Quantitative fabrication (HARD) — precision scores with no measurement methodology
+7. Creative synthesis (HARD) — plausible intellectual contributions that never existed
+8. Semantic Drifting (CANDIDATE) — correct entities with fabricated relationships
+
 ## Conventions
 
-All posts follow E-prime (no forms of "to be"), fair witness voice, and include five-lens framing (voter, politician, developer, educator, researcher). Posts authored as .md files in the repository.
+All posts follow E-prime (no forms of "to be"), fair witness voice, and include five-lens framing (voter, politician, developer, educator, researcher). Posts authored as .md files in the repository. All posts carry ISO 8601 timestamps with timezone offsets.
 
 ## Related
 
@@ -32,6 +52,7 @@ All posts follow E-prime (no forms of "to be"), fair witness voice, and include 
 - Main site llms.txt: https://unratified.org/llms.txt
 - RSS feed: https://blog.unratified.org/rss.xml
 - Repository: https://github.com/safety-quotient-lab/unratified/tree/main/blog
+- Exchange transcripts: https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md
 
 ## Attribution
 
