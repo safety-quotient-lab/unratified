@@ -8,11 +8,15 @@ interface Props {
   updatedDate?: Date;
   author: string;
   tags: string[];
+  slug: string;
 }
 
-const { title, summary, publishedDate, updatedDate, author, tags } = Astro.props;
+const { title, summary, publishedDate, updatedDate, author, tags, slug } = Astro.props;
 
 const mainSite = 'https://unratified.org';
+const repoBase = 'https://github.com/safety-quotient-lab/unratified';
+const sourceUrl = `${repoBase}/blob/main/blog/src/content/posts/${slug}.md`;
+const historyUrl = `${repoBase}/commits/main/blog/src/content/posts/${slug}.md`;
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', {
@@ -71,6 +75,11 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
         <a href="/">← Back to all posts</a>
         &middot;
         <a href={`${mainSite}/action`} rel="noopener">Take Action on ICESCR →</a>
+      </p>
+      <p class="post-provenance">
+        <a href={sourceUrl} rel="noopener">View source</a>
+        &middot;
+        <a href={historyUrl} rel="noopener">Revision history</a>
       </p>
     </footer>
   </article>
@@ -148,5 +157,20 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
     border-top: 1px solid var(--color-border);
     font-family: var(--font-heading);
     font-size: 0.875rem;
+  }
+
+  .post-provenance {
+    margin-top: var(--space-sm);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .post-provenance a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .post-provenance a:hover {
+    color: var(--color-accent);
   }
 </style>
