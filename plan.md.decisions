@@ -1528,3 +1528,37 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 **What follows**:
 - Implement llms.txt (small, immediate)
 - The confabulation taxonomy provides material for a follow-up blog post or an update to the existing AI accuracy case study
+
+---
+
+## D046: Strategic Priority Discriminator — Across All Gemini Findings
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: D040–D045 accumulated significant findings: confabulation persistence across exchanges, 7-type confabulation taxonomy, correction cascade pattern, machine identity limitations (.well-known/ doesn't reach inference), llms.txt as an emerging standard, nonprofit formation pathway, and SEO/visibility TODOs across 4 tiers. Five competing strategies for where to invest attention next.
+
+**Decision**: S5 (Research Publication) wins at 21/25 with RISING→STABLE trajectory, leading S2 (Human Outreach) by 4+ points at Order 1. S5 functions as a force multiplier — publishing research creates the compelling content outreach needs AND generates backlinks that make machine identity improvements more effective.
+
+**Scoring summary**:
+- S5 Research Publication: 19→21→21 (STABLE) ★★
+- S2 Human Outreach: 18→17→16 (DECLINING)
+- S4 Organizational Foundation: 18→15 (ELIMINATED — prerequisite-blocked, deferred D044)
+- S1 Machine Identity: 16→15 (ELIMINATED — chain integrity failure, but llms.txt as small addendum to S5)
+- S3 Content Remediation: 13 (ELIMINATED at Order 0 — XL effort from confabulating source)
+
+**Recommended sequence**: S5 (publish findings) → S1 (llms.txt alongside) → S2 (outreach with fresh content) → S4 (own timeline)
+
+**Reasoning**:
+- S5 leverages existing documented observations with minimal new effort
+- Every link in S5's causal chain has been demonstrated (blog → HN → traffic → awareness)
+- S2 without fresh content performs worse than S2 with it — S5 enables S2
+- S1 at 15/25 fails as a standalone strategy but succeeds as a small addendum
+- The confabulation findings represent original research no other site has published
+
+**Files created**:
+- `content/analysis/gemini-findings-discriminator.md` — full discriminator analysis with Order 0-2 scoring, knock-on analysis, trajectory table, epistemic flags
+
+**What follows**:
+- Write blog post on confabulation taxonomy + correction cascade (the S5 deliverable)
+- Implement llms.txt alongside (S1 addendum)
+- Use fresh publication as the hook for Bluesky/Lemmy soft launch (S2)

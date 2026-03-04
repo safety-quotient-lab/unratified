@@ -342,6 +342,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Nonprofit formation pathway documented (D043): 501(c)(3) educational entity discriminator analysis (NP1 21/25), 9-step formation pipeline, $375-$3,325 initial cost, 6-9 month timeline, Google Ad Grants pathway ($10k/month). Saved to content/analysis/nonprofit-formation-plan.md
 - [x] Gemini visibility recommendations evaluated (D042): 20 items across 4 tiers. Saved to content/analysis/gemini-visibility-recommendations.md
 - [x] Gemini GEO exchange evaluated (D045): 6 rounds, same confabulation pattern (different fabrication each time), llms.txt identified as actionable. Appended to content/analysis/gemini-feedback-evaluation.md
+- [x] Strategic priority discriminator across all Gemini findings (D046): S5 Research Publication wins (21/25) — publish confabulation taxonomy and correction cascade findings. S5 functions as force multiplier enabling S2 (outreach) and S1 (machine identity). Recommended sequence: S5 → S1 (llms.txt) → S2 (outreach).
+- [ ] Blog post: confabulation taxonomy + correction cascade research (S5 from D046)
 - [ ] llms.txt — machine-readable site summary at root level (G-21, from D045). Complements agent-inbox.json; addresses domain-name confabulation that .well-known/ endpoints do not prevent
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
