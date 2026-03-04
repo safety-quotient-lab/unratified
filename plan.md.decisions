@@ -1502,3 +1502,29 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 **What follows**:
 - Phase 4 continues: social media soft launch, educator outreach, press engagement
 - Phase 5 activates when the user decides to pursue nonprofit formation or SEO improvements independently
+
+---
+
+## D045: Gemini GEO Exchange — Confabulation Persistence + llms.txt
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: In a separate conversation from D040, Gemini again confabulated unratified.org's purpose on first contact — this time fabricating an "AGI tracking database with shasums for verifying AI responses" (vs. D040's "sovereign citizen / constitutional amendment" fabrication). The D041 improvements (agent-inbox.json identity fields, fair-witness.json endpoint) did not prevent the error because models do not read .well-known/ endpoints during inference. Across 6 rounds, Gemini self-corrected when prompted but introduced new fabrications at each round (DistilBERT student models, Psychology Agent product, AdvocacyGroup Schema.org type).
+
+**Decision**: (1) Evaluate the exchange and append to gemini-feedback-evaluation.md. (2) Add llms.txt (G-21) to Phase 4 as a small, quick implementation — a root-level machine-readable site summary that may reach crawler pipelines that .well-known/ endpoints do not. (3) Document the confabulation taxonomy: 7 types identified across both exchanges, ranging from easy-to-detect (complete fabrication) to hard-to-detect (quantitative fabrication, creative synthesis).
+
+**Reasoning**:
+- llms.txt represents a real emerging standard (Jeremy Howard, fast.ai) with broader crawler reach than .well-known/ endpoints
+- The confabulation persistence confirms a structural problem: the domain name "unratified" triggers pattern matching regardless of structured data
+- llms.txt requires no nonprofit status, no legal prerequisites, and can deploy immediately
+- The confabulation taxonomy strengthens the blog post case study and provides research value
+
+**Key finding**: Gemini generates DIFFERENT fabrications about the same site across conversations. The error mechanism produces novel confabulations rather than retrieving cached wrong answers — confirming the failure mode operates at the generative level, not the retrieval level.
+
+**Files modified**:
+- `content/analysis/gemini-feedback-evaluation.md` — Exchange 2 appended: 6-round evaluation, pattern analysis, confabulation taxonomy, actionable items (G-21 through G-24)
+- `plan.md` — D045 completion + llms.txt TODO in Phase 4
+
+**What follows**:
+- Implement llms.txt (small, immediate)
+- The confabulation taxonomy provides material for a follow-up blog post or an update to the existing AI accuracy case study

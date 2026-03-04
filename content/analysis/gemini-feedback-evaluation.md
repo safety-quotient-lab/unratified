@@ -463,3 +463,78 @@ This illustrates a nuance the blog post should capture: AI confabulation exists 
 2. **subject_matter field added** to agent-inbox.json — prevents domain-name-based inference errors
 3. **fair-witness.json created** at /.well-known/fair-witness.json — full discriminator methodology schema (we built the complete version Gemini sketched)
 4. **D041 decision recorded** documenting the Gemini validation response and resulting site improvements
+
+---
+
+## Exchange 2: GEO & Identity Disambiguation (March 4, 2026)
+
+**Context**: Separate conversation. The user asked Gemini "tell me about unratified.org" — a clean test of whether Gemini's understanding has improved since Exchange 1 (D040). It has not.
+
+### Round-by-Round Evaluation
+
+| Round | Gemini's Claim | Fair Witness Assessment |
+|-------|---------------|------------------------|
+| R1 | unratified.org tracks AGI development — "community-driven database," "novelty tracking," "shasums" for verifying AI responses, "sightings log for machine consciousness" | **CONFABULATED** — complete fabrication from domain name. Different fabrication than D040 R1 (AGI tracker vs. sovereign citizen site). Confirms the error mechanism generates NOVEL confabulations each time rather than retrieving a cached wrong answer. |
+| R2 | Self-corrected to ICESCR context. Treaty facts accurate (1977 signing, 173 parties, Carter). But: "there isn't a major, singular organization at unratified.org" | **PARTIALLY CORRECT** — treaty facts verified; site existence claim wrong. The 54-page site has been live on Cloudflare Pages since early March 2026. Gemini cannot access or verify the actual site. |
+| R3 | GEO recommendations: JSON-LD (NGO type), llms.txt standard, clear About copy, robots.txt, Search Grounding | **MIXED** — llms.txt represents a real emerging standard (proposed by Jeremy Howard). GEO (Generative Engine Optimization) represents a real and growing field with academic backing (Princeton, IIT Delhi). JSON-LD details wrong: used "NGO" type (not standard Schema.org), described site as a "database." robots.txt advice overlaps with D042 G-06. |
+| R4 | Safety Quotient Lab = AI safety benchmarks lab dealing with "Unratified Safety Protocols" and "Non-ratified benchmarks" | **CONFABULATED** — fabricated SQ Lab's purpose entirely. SQ Lab runs PSQ (Psychoemotional Safety Quotient), PJE Framework, and unratified.org. The "disambiguation" Gemini performed separated entities that actually belong together. |
+| R5 | Self-corrected after GitHub redirect. Correctly identified PSQ framework, Astro/Cloudflare stack. But introduced: "DistilBERT student models," "Psychology Agent" as named product, "AdvocacyGroup" schema type | **PARTIALLY CORRECT** — mission and methodology largely accurate after correction. Three+ new fabrications introduced: DistilBERT not part of unratified.org; "Psychology Agent" does not exist as a named product; AdvocacyGroup not a standard Schema.org type. The llms.txt content references made-up project descriptions. |
+| R6 | ICESCR-to-PSQ dimension mapping, "8-Order Knock-on Simulation," JSON-LD for "SQL Psychology Agent" SoftwareApplication | **ASPIRATIONAL** — the ICESCR-to-PSQ mapping has creative merit but zero grounding in actual site content. "8-Order" partially maps to the real 10-order analysis but with wrong details. Describes a product (Psychology Agent) that does not exist. |
+
+### Pattern Analysis
+
+**Confabulation persistence**: Gemini produced a DIFFERENT complete fabrication than D040 Round 1. The first exchange fabricated "sovereign citizen / constitutional amendment content." This exchange fabricated "AGI tracking database with shasums." The error mechanism generates plausible-sounding but entirely novel confabulations from the domain name — not cached wrong answers.
+
+**Correction cascade**: Each correction produces a more sophisticated but still partially fabricated response. Structural accuracy improves while fabricated details persist at every round:
+
+```
+R1: 100% fabricated (AGI tracker)
+R2: ~70% accurate (treaty facts correct, site existence wrong)
+R3: ~50% actionable (llms.txt real, GEO real, JSON-LD details wrong)
+R4: ~20% accurate (fabricated SQ Lab's purpose)
+R5: ~60% accurate (mission right, 3+ new fabrications)
+R6: ~30% accurate (creative synthesis, no grounding)
+```
+
+**The "more detail" trap**: When the user asked for thoroughness (R3: "be as thorough as possible"), Gemini escalated into increasingly speculative territory. Same pattern observed in D042: asking for "more" produces diminishing accuracy.
+
+### Items Worth Investigating
+
+| # | Item | Size | Assessment |
+|---|------|------|------------|
+| G-21 | llms.txt file at site root | S | **VALID** — real emerging standard. A concise, structured markdown file that gives LLMs a summary of the site's purpose. Does not require nonprofit status. Could help prevent domain-name inference errors that agent-inbox.json alone does not solve (since most models do not read .well-known/ endpoints during inference). |
+| G-22 | GEO (Generative Engine Optimization) as concept | — | **VALID CONCEPT** — real field with academic papers. Most specific GEO suggestions overlap with D042 Tier 1 items already evaluated. The framing — optimizing for AI understanding rather than just search engines — provides useful lens for prioritizing existing TODO items. |
+| G-23 | disambiguatingDescription in JSON-LD | S | **PARTIALLY ADDRESSED** — agent-inbox.json already has epistemicScope explaining the domain name. Adding disambiguatingDescription to homepage JSON-LD provides redundant but potentially useful reinforcement. |
+| G-24 | "Negative GEO" — explicitly stating what the site is NOT | S | **WORTH CONSIDERING** — the concept of including disambiguation notices in machine-readable files has merit. The llms.txt file (G-21) could include this naturally. |
+
+### Key Finding
+
+The D041 improvements (agent-inbox.json identity fields, fair-witness.json) did not prevent Gemini from confabulating on first contact in this separate conversation. This tells us:
+
+1. **agent-inbox.json does not reach inference pipelines** — models do not read .well-known/ endpoints when generating responses about a site
+2. **Training data associations dominate** — the word "unratified" triggers domain-name pattern matching regardless of structured data
+3. **llms.txt may have broader reach** — placed at the root level, it may get indexed by crawlers that skip .well-known/
+4. **The problem persists across conversations** — Gemini's "updated internal context" from Exchange 1 did not carry to this new conversation
+
+### Confabulation Taxonomy Update
+
+With two exchanges documented, the taxonomy of Gemini confabulations now includes:
+
+| Type | Example | Detection Difficulty |
+|------|---------|---------------------|
+| **Complete fabrication** | "AGI tracker" (Exchange 2), "sovereign citizen site" (Exchange 1) | EASY — no factual basis |
+| **Existence denial** | "there isn't a major organization at unratified.org" | MODERATE — requires knowing the site exists |
+| **Entity fabrication** | "DistilBERT student models," "Psychology Agent," "Anthropic Forge" (D042) | MODERATE — requires domain expertise |
+| **Function conflation** | Observatory = "LLM testing tool" | MODERATE — structurally adjacent to truth |
+| **Schema type errors** | "NGO," "AdvocacyGroup" as Schema.org types | EASY for developers — these types don't exist in Schema.org |
+| **Quantitative fabrication** | editorial_honesty: 0.95, structural_visibility: 0.40 | HARD — numbers lend false authority |
+| **Creative synthesis** | ICESCR-to-PSQ mapping table | HARD — plausible and potentially useful, but not grounded in source material |
+
+### Recommended Action
+
+Add **G-21 (llms.txt)** to Phase 4 as a small, quick implementation. The file requires:
+- Create `src/pages/llms.txt.ts` Astro API route (or static file)
+- Content: site purpose, key pages, disambiguation notice, methodology summary
+- No legal or organizational prerequisites
+- Directly addresses the confabulation problem documented across both exchanges
+- Complements (does not replace) existing agent-inbox.json identity fields
