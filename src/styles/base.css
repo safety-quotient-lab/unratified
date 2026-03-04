@@ -543,6 +543,7 @@ main {
 /* Card link arrow indicator */
 a[class*="-card"] {
   position: relative;
+  padding-bottom: calc(var(--space-lg) + 1rem);
 }
 
 a[class*="-card"]::after {
@@ -550,14 +551,14 @@ a[class*="-card"]::after {
   position: absolute;
   bottom: var(--space-sm);
   right: var(--space-sm);
-  font-size: 0.85rem;
-  color: var(--color-border);
+  font-size: 1rem;
+  color: var(--color-text-muted);
   transition: color 0.15s, transform 0.15s;
 }
 
 a[class*="-card"]:hover::after {
   color: var(--color-accent);
-  transform: translateX(2px);
+  transform: translateX(3px);
 }
 
 /* Focus styles — global */
