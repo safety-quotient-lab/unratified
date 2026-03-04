@@ -13,6 +13,24 @@ export const GET: APIRoute = () => {
       name: 'Safety Quotient Lab',
       url: 'https://github.com/safety-quotient-lab',
     },
+    creator: [
+      {
+        '@type': 'SoftwareApplication',
+        name: 'Claude',
+        url: 'https://www.anthropic.com/claude',
+        applicationCategory: 'Artificial Intelligence',
+        provider: {
+          '@type': 'Organization',
+          name: 'Anthropic',
+          url: 'https://www.anthropic.com',
+        },
+      },
+      {
+        '@type': 'Person',
+        name: 'Kashif Shah',
+        url: 'https://kashifshah.net',
+      },
+    ],
     license: 'https://creativecommons.org/licenses/by-sa/4.0/',
     endpoints: [
       {
@@ -56,6 +74,9 @@ export const GET: APIRoute = () => {
     ],
     blogSpec: 'https://blog.unratified.org/.well-known/blog-spec.json',
     capabilities: {
+      aiGenerated: true,
+      aiGenerator: 'Claude (Anthropic)',
+      humanDirector: 'Kashif Shah',
       contentLicense: 'CC BY-SA 4.0',
       codeLicense: 'Apache-2.0',
       contributionMethod: 'Pull request with .md file to blog/src/content/posts/',

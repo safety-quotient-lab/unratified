@@ -49,6 +49,14 @@ const obs = await getObservatoryStats();
       ratification (signed October 5, 1977; Senate consent never sought).
     </p>
 
+    <p class="ai-disclosure">
+      An AI built this site.
+      <a href="https://www.anthropic.com/claude" rel="noopener">Claude</a>, by Anthropic,
+      generated the analysis, copy, and code under human direction by
+      <a href="https://kashifshah.net" rel="noopener">Kashif Shah</a>.
+      <a href="/about#meta-layer">The meta-layer &rarr;</a>
+    </p>
+
     <RatificationMap client:visible />
   </section>
 
@@ -279,6 +287,14 @@ const obs = await getObservatoryStats();
 <style>
   .hero {
     margin-bottom: var(--space-2xl);
+  }
+
+  .ai-disclosure {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    max-width: 36rem;
   }
 
   .hero-lede {

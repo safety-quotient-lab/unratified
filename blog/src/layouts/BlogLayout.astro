@@ -35,6 +35,24 @@ const structuredData = {
       url: 'https://kashifshah.net',
     },
   },
+  creator: [
+    {
+      '@type': 'SoftwareApplication',
+      name: 'Claude',
+      url: 'https://www.anthropic.com/claude',
+      applicationCategory: 'Artificial Intelligence',
+      provider: {
+        '@type': 'Organization',
+        name: 'Anthropic',
+        url: 'https://www.anthropic.com',
+      },
+    },
+    {
+      '@type': 'Person',
+      name: 'Kashif Shah',
+      url: 'https://kashifshah.net',
+    },
+  ],
   isPartOf: {
     '@type': 'WebSite',
     name: 'Unratified',
@@ -120,7 +138,7 @@ const structuredData = {
           <p><a href={mainSite} rel="noopener">unratified.org</a> &middot; <a href="https://unratified.org/colophon" rel="noopener">Colophon</a> &middot; <a href="mailto:kashif&#64;kashifshah.net">Contact</a></p>
         </div>
         <div class="footer-col">
-          <p>Analysis by <a href="https://www.anthropic.com/claude" rel="noopener">Claude (Anthropic)</a></p>
+          <p>Built by <a href="https://www.anthropic.com/claude" rel="noopener">Claude (Anthropic)</a></p>
           <p>Data by <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a></p>
           <p>Hosted on <a href="https://pages.cloudflare.com/" rel="noopener">Cloudflare</a></p>
         </div>
