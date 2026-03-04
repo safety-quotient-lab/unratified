@@ -540,6 +540,26 @@ main {
   }
 }
 
+/* Card link arrow indicator */
+a[class*="-card"] {
+  position: relative;
+}
+
+a[class*="-card"]::after {
+  content: '→';
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--color-border);
+  transition: color 0.15s, transform 0.15s;
+}
+
+a[class*="-card"]:hover::after {
+  color: var(--color-accent);
+  transform: translateX(2px);
+}
+
 /* Focus styles — global */
 :focus-visible {
   outline: 2px solid var(--color-accent);
