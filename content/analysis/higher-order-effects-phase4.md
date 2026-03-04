@@ -8,7 +8,7 @@ Phases 1–3 built the qualitative architecture: Composite A → Four Scarcities
 
 **What this document does NOT do**: Replace the confidence assessments from Phases 1–3. Quantitative data at speculative orders provides anchoring, not validation. A number attached to a SPECULATIVE claim remains SPECULATIVE.
 
-**Note on Wolfram Alpha**: The original plan called for Wolfram Alpha API queries to compute derived quantities. No API key existed in the environment. The quantitative data below comes from primary sources (DOE, BLS, OECD, WIPO, EPI, CRA, NSCR) and aggregators (Statista, McKinsey, S&P Global). A Wolfram Alpha API integration could refine computed projections in future iterations — the data foundation below supports that extension.
+**Wolfram Alpha Integration**: Computed projections (compound growth rates, intersection timelines, derived ratios) use the Wolfram Alpha Short Answers API. Raw quantitative data comes from primary sources (DOE, BLS, OECD, WIPO, EPI, CRA, NSCR) and aggregators (Statista, McKinsey, S&P Global). Wolfram Alpha verifies arithmetic and computes derived quantities the raw data does not state directly. See Appendix A for all computed results.
 
 ---
 
@@ -545,9 +545,124 @@ Every row describes a system that cannot expand fast enough to meet the demands 
    the continuation of pre-existing trends. This represents an inherent
    limitation of any contemporaneous analysis.
 
-7. WOLFRAM ALPHA ABSENT: Computed projections (compound growth rates,
-   intersection points, trend extrapolations) used arithmetic rather
-   than Wolfram Alpha's computational engine. A future iteration with
-   API access could refine derived quantities — particularly energy-
-   demand intersection timelines and compound inequality projections.
+7. COMPUTED PROJECTIONS: Wolfram Alpha API (AppID: REDACTED) provided
+   computed projections for compound growth, intersection timelines, and
+   derived ratios (see Appendix A). These computations verify the
+   arithmetic but do not validate the assumptions. A compound growth
+   projection assumes constant growth rate — real systems rarely maintain
+   constant exponential growth over the projected timescales.
 ```
+
+---
+
+## Appendix A: Wolfram Alpha Computed Projections
+
+All values computed via the Wolfram Alpha Short Answers API. Inputs derive from the ten quantitative streams above. Computations verify arithmetic and provide derived quantities the raw data does not state directly.
+
+### Energy Demand Intersection Timelines
+
+Starting from 176 TWh (2024 baseline), at 15% CAGR:
+
+```
+TARGET       │ FORMULA              │ RESULT    │ CALENDAR YEAR
+─────────────┼──────────────────────┼───────────┼──────────────
+325 TWh      │ ln(325/176)/ln(1.15) │ 4.39 yrs  │ ~2028 (DOE low)
+480 TWh      │ ln(480/176)/ln(1.15) │ 7.18 yrs  │ ~2031 (12% of grid)
+580 TWh      │ ln(580/176)/ln(1.15) │ 8.53 yrs  │ ~2032 (DOE high)
+```
+
+At 15% CAGR, data center demand reaches DOE's low estimate (~325 TWh) by 2028 and the 12%-of-grid threshold (~480 TWh) by 2031. Grid capacity at 1% annual growth reaches only 4,162 TWh by 2028 — the gap widens at 15x the rate.
+
+**Computed verification**: 176 × 1.15⁴ = 307.8 TWh (2028). Grid: 4,000 × 1.01⁴ = 4,162 TWh. Data center share in 2028: 307.8 / 4,162 = 7.4% — consistent with DOE's 6.7–12.0% range.
+
+### AI Market Trajectory
+
+```
+METRIC                          │ RESULT
+────────────────────────────────┼────────────
+$254.5B at 27.67% CAGR, 5 yrs  │ $863.2B (2030)
+Years from $254.5B to $1T       │ 5.60 yrs → ~2030-2031
+US GDP (2025, Wolfram Alpha)    │ $31.49T
+AI market as % of US GDP (2025) │ 0.81%
+AI market as % of US GDP (2030) │ ~2.74%
+```
+
+### Productivity-Pay Divergence
+
+```
+METRIC                            │ RESULT
+──────────────────────────────────┼────────────
+Productivity ÷ Median comp ratio  │ 3.45x (59.7% / 17.3%)
+Years for productivity to double  │ 35.0 yrs at 2% annual
+  at 2% annual growth             │
+Cumulative wage growth at 0.6%    │ 23.3% over 35 years
+  over same 35 years              │   (1.006^35 = 1.233)
+Productivity doubles while wages  │ 2x vs 1.23x — gap of 77%
+  grow 23%                        │   over one generation
+```
+
+**Implication**: Over a single 35-year generational span, productivity approximately doubles while median wages grow roughly one-quarter. The gap between capability and compensation widens by 77 percentage points per generation at current rates.
+
+### CS Enrollment Projection
+
+```
+METRIC                            │ RESULT
+──────────────────────────────────┼────────────
+5 years at −14% annual (grad)     │ 47.0% of current level
+                                  │   (0.86^5 = 0.470)
+```
+
+If the fall 2025 CS graduate enrollment decline (−14%) persists for five years, graduate CS enrollment falls to 47% of current levels — a halving of the pipeline that feeds judgment-capable software practitioners into the workforce. The analysis does NOT predict this rate persists — enrollment rates respond to market signals and may stabilize or reverse. The computation establishes the magnitude of the risk if the trend continues uncorrected.
+
+### Confidence Degradation (Computed)
+
+```
+ORDER │ CUMULATIVE CONFIDENCE │ INTERPRETATION
+──────┼───────────────────────┼─────────────────────
+  0   │ 1.000 (100%)          │ Empirical base
+  1   │ 0.800 (80%)           │ Strong inference
+  2   │ 0.640 (64%)           │ Moderate inference
+  3   │ 0.512 (51%)           │ Marginal
+  4   │ 0.410 (41%)           │ Below coinflip
+  5   │ 0.328 (33%)           │ Speculative
+  6   │ 0.262 (26%)           │ Speculative
+  7   │ 0.210 (21%)           │ Near floor
+  8   │ 0.168 (17%)           │ Analytical floor
+  9   │ 0.134 (13%)           │ Exhausted
+```
+
+**Assumption**: Each order preserves 80% of the previous order's confidence (0.8 multiplier per link in the causal chain). This represents an OPTIMISTIC estimate — real causal chains often degrade faster due to branching scenarios and compounding uncertainty. Even at 80% preservation, cumulative confidence falls below 50% by Order 3 and below useful thresholds (20%) by Order 7.
+
+The confidence degradation computation validates the Phase 3 assessment: productive exhaustion at Order 9 (13% cumulative) represents a methodological finding, not a failure. The analysis cannot sustain useful confidence through nine successive inferential links regardless of the quality of reasoning at each step.
+
+### Inequality Projection
+
+```
+METRIC                            │ RESULT
+──────────────────────────────────┼────────────
+US Gini (Wolfram Alpha, current)  │ 0.482
+US Gini % increase (1990–2024)    │ 14.0% (0.430 → 0.490)
+Gini at 0.5% annual growth, 20yr │ 0.541
+  from 0.490 baseline             │   (0.490 × 1.005^20)
+China-US GenAI patent ratio       │ 6.03x (38,000 / 6,300)
+```
+
+A Gini of 0.541 would place the US near South Africa's current inequality level (~0.63) — among the highest in any developed economy. The analysis does NOT predict this outcome. It computes the trajectory if the 1990–2024 trend continues at its observed rate for another generation.
+
+### Key Ratios
+
+```
+RATIO                             │ VALUE  │ SOURCE
+──────────────────────────────────┼────────┼────────────────
+Energy demand vs grid growth      │ 15x    │ 15% CAGR / 1%
+Remote work structural shift      │ 5x     │ 25% / 5% pre-COVID
+Top 1% vs Bottom 90% wage growth  │ 4.16x  │ 181.7% / 43.7%
+US labor force participation      │ 62%    │ Wolfram Alpha (BLS)
+US Gini coefficient               │ 0.482  │ Wolfram Alpha
+```
+
+### Computation Notes
+
+All computations use the Wolfram Alpha Short Answers API (v1/result endpoint). Input parameters derive from the primary data sources documented in the Sources section. Computed results verify arithmetic and provide derived quantities — they do not independently validate the source data or the analytical framework that interprets it.
+
+**API**: Wolfram Alpha AppID REDACTED. Queries executed March 4, 2026.
