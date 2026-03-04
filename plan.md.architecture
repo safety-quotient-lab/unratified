@@ -386,9 +386,30 @@ unratified/
 │   ├── _headers                    ← Cloudflare Pages security + cache headers
 │   ├── favicon.svg
 │   └── favicon.ico
+├── workers/
+│   └── monitor/                       ← Site monitor Cloudflare Worker (D037)
+│       ├── package.json
+│       ├── tsconfig.json
+│       ├── wrangler.toml              ← Cron triggers: */5, hourly, 6h, daily
+│       └── src/
+│           ├── index.ts               ← Entry: scheduled + fetch handlers
+│           ├── types.ts               ← Env, CheckResult, Alert, SiteStatus
+│           ├── config.ts              ← Endpoints, thresholds, check definitions
+│           ├── status.ts              ← GET /status JSON response
+│           ├── checks/
+│           │   ├── health.ts          ← HTTP status + response time (every 5 min)
+│           │   ├── content.ts         ← Expected text verification (hourly)
+│           │   └── sitemap.ts         ← Page count regression (daily)
+│           ├── analytics/
+│           │   └── snapshot.ts        ← CF Web Analytics (deferred — needs API token)
+│           ├── alerts/
+│           │   └── email.ts           ← Resend email with cooldown deduplication
+│           └── db/
+│               ├── schema.sql         ← D1 migration (4 tables + indexes)
+│               └── queries.ts         ← D1 CRUD operations
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D032)
+├── plan.md.decisions               ← Decision log (D001–D037)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte
@@ -396,7 +417,7 @@ unratified/
 └── tsconfig.json
 ```
 
-### Page Count: 45 static pages (41 main + 4 print/educator)
+### Page Count: 53 static pages (main site)
 
 ### JS Bundle Profile
 ```

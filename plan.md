@@ -323,7 +323,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Phase 4 quantitative consolidation — content/analysis/higher-order-effects-phase4.md; 10 quantitative streams (DOE, BLS, OECD, WIPO, EPI, NSCR, CRA) mapped to all orders; CS grad enrollment −14% anchors judgment pipeline; energy 4.4%→12% of grid anchors R3; productivity-pay 3.5x gap grounds H7; six key quantitative findings
 - [x] Blog post: "Where the Analysis Stops Trusting Itself" — speculative cartography meta-angle, confidence degradation curve, AI analyzing its own limits
 - [x] Marketing update: speculative cartography strategy + Bluesky posts 11–14 (quantitative hooks)
-- [ ] Site monitor daemon — lightweight watchdog checking both unratified.org + blog.unratified.org; health checks (HTTP status, SSL cert expiry, build breakage), analytics anomaly detection (traffic spikes/drops via Cloudflare API), content integrity (page count regression, broken links), email alerts to kashif@kashifshah.net; candidates: Cloudflare Worker on cron trigger (free, already in ecosystem) or standalone script
+- [x] Site monitor Worker (workers/monitor/) — Cloudflare Worker with cron triggers: health checks (5min), content integrity (hourly), sitemap regression (daily); D1 schema (4 tables), Resend email alerts with cooldown deduplication, /status JSON API; analytics snapshot deferred (needs CF_API_TOKEN); deployment deferred (needs D1 creation + secrets)
+- [x] Blog author fix — all posts standardized to "Claude (Anthropic) + Kashif Shah" dual authorship
+- [x] Voter-accessible "binding" language — replaced abstract legal term with "enforceable," "legal teeth," "courts can enforce it" on /why, /gap, /covenant/history, glossary
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach

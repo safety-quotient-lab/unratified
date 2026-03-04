@@ -1218,3 +1218,39 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Brief FOUT visible on slow connections (system monospace → Fira Code swap)
 - Combined with D035 (Rocket Loader disabled), eliminates both known causes of iOS blank screen
 - Future consideration: self-host Fira Code to eliminate external font dependency entirely
+
+---
+
+## D037: Site Monitor Worker — Cloudflare Worker with Cron Triggers
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: Three sites now operate in production (unratified.org, blog.unratified.org, observatory.unratified.org) with no automated health monitoring. Failures would go unnoticed until manual discovery. The project already uses Cloudflare infrastructure (Pages, DNS), making a Cloudflare Worker the natural monitoring choice — free tier, same ecosystem, cron trigger support.
+
+**Decision**: Build a Cloudflare Worker (`workers/monitor/`) with four cron triggers: health checks every 5 minutes (HTTP status + response time), content integrity every hour (expected text present on pages), sitemap page count regression daily at 6 AM UTC, and analytics snapshots every 6 hours (deferred until CF API credentials available). Store time-series data in D1. Send email alerts via Resend API with 4-hour cooldown deduplication. Expose `/status` JSON endpoint.
+
+**Architecture**:
+- `workers/monitor/src/index.ts` — scheduled + fetch handler routing by cron pattern
+- `workers/monitor/src/checks/` — health.ts, content.ts, sitemap.ts
+- `workers/monitor/src/alerts/email.ts` — Resend integration with cooldown
+- `workers/monitor/src/analytics/snapshot.ts` — stub (deferred)
+- `workers/monitor/src/db/` — D1 schema (4 tables) + query helpers
+- `workers/monitor/src/status.ts` — public health summary
+
+**Reasoning**:
+- Cloudflare Worker cron: free, zero infrastructure, already in ecosystem
+- D1 over KV: relational queries needed for time-series health data and alert deduplication
+- Resend over native Cloudflare: simpler API, free tier sufficient (3,000/mo), branded emails
+- Four cron frequencies: match monitoring urgency (health > content > analytics > sitemap)
+- Alert cooldown (4 hours): prevents alert storms during sustained outages
+- Graceful degradation: each feature works independently when secrets not configured
+
+**Deferred**:
+- Analytics snapshot (needs CF_API_TOKEN + CF_ACCOUNT_ID)
+- Analytics dashboard page (src/pages/analytics.astro — needs site tags)
+- Deployment (needs D1 database creation + `wrangler secret put` for RESEND_API_KEY)
+
+**What follows**:
+- Worker code complete and type-checks cleanly
+- Deploy when Cloudflare API credentials and Resend API key available
+- Analytics page becomes feasible once snapshot cron populates D1 data
