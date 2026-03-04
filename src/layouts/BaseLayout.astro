@@ -22,7 +22,7 @@ const lensFromUrl = Astro.url.searchParams.get('lens') as Props['defaultLens'] |
 const activeLens = lensFromUrl ?? defaultLens;
 const siteOrigin = Astro.site?.origin ?? 'https://unratified.org';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
-const fullTitle = `${title} | Unratified`;
+const fullTitle = `${title} | unratified.org`;
 
 // Build breadcrumb items from URL path
 const pathSegments = Astro.url.pathname.split('/').filter(Boolean);

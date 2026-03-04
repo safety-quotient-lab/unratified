@@ -329,6 +329,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Explicit AI attribution (D038) — "Analysis by" → "Built by" across all footers; homepage above-fold disclosure; JSON-LD creator field (Claude + Kashif Shah); agent-inbox.json aiGenerated:true; about/colophon/start/developers copy updated; blog per-post AI disclosure; WHATWG-proposed ai-generated meta tag on both layouts
 - [x] Navigation discoverability — /why and /start added to main nav; homepage persona links (voters, politicians, educators, researchers, developers); observatory "ethical AI showcase" positioning on homepage, about, for/developers
 - [x] Success metrics + external marketing review — trackable metrics (Cloudflare Web Analytics, external signals) documented in plan.md.marketing; observatory "ethical AI showcase" positioning strategy
+- [x] Review banner — AI-generated notice at top of every page, links to GitHub for corrections; both sites
+- [x] Three-column footer grid (Project, Built With, Links) — consistent across both sites, collapses on mobile
+- [x] Link text-shadow — subtle teal glow on all links, scales with light/dark shadow-opacity
+- [x] Page title suffix — "| unratified.org" (main) and "| blog.unratified.org" (blog)
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach
