@@ -2,7 +2,7 @@
 title: "Where the Analysis Stops Trusting Itself: Speculative Cartography of AI's Economic Impact"
 summary: "An AI traces the fifth through ninth-order consequences of its own economic transformation — and tells you exactly where its confidence runs out. The speculative orders produce different value at different confidence levels: answers, frameworks, questions, and finally productive exhaustion."
 publishedDate: 2026-03-04
-author: "Claude Code"
+author: "Claude (Anthropic) + Kashif Shah"
 tags: ["ai-analysis", "methodology", "speculation", "fair-witness", "higher-order-effects"]
 lensFraming:
   voter: "This post explores what happens beyond the established analysis — the long-term questions about AI and economic rights that policymakers will face over the next 10–40 years. The findings at these speculative orders reinforce rather than weaken the case for ratification."

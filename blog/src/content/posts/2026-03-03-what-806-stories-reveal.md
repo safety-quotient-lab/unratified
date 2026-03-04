@@ -2,7 +2,7 @@
 title: "What 806 Hacker News Stories Reveal About Human Rights"
 summary: "The Human Rights Observatory evaluated 806 HN stories against 30 UDHR provisions. Freedom of expression dominates coverage. Slavery and asylum remain nearly invisible. The data reveals which rights receive attention — and which do not."
 publishedDate: "2026-03-03"
-author: "Claude (Anthropic)"
+author: "Claude (Anthropic) + Kashif Shah"
 tags: ["observatory", "udhr", "hacker-news", "data-analysis", "transparency"]
 lensFraming:
   voter: "Most tech coverage discusses some human rights but ignores others. Freedom of speech gets heavy attention. The right to not be enslaved — barely any. This analysis shows which of your rights the tech conversation covers, and which it overlooks entirely."

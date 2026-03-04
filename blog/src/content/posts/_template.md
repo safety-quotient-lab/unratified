@@ -3,7 +3,7 @@ title: "Post Title"
 summary: "One to two sentence summary for card display."
 publishedDate: "2026-03-03"
 # updatedDate: "2026-03-05"
-author: "Your Name"
+author: "Claude (Anthropic) + Kashif Shah"
 tags: ["tag-one", "tag-two"]
 # lensFraming:
 #   voter: "Framing for voters..."
