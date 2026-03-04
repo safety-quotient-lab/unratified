@@ -329,7 +329,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'ratification',
     term: 'Ratification',
-    definition: 'The formal process by which a state becomes a party to an international treaty. For the ICESCR in U.S. context, requires Senate advice and consent (two-thirds of Senators present). The U.S. signed in 1977. The Senate Foreign Relations Committee held hearings in 1979 but never advanced the treaty to a committee vote or floor vote.',
+    definition: 'The formal process by which a state becomes a party to an international treaty — giving the treaty legal teeth so courts can enforce it. For the ICESCR in U.S. context, requires Senate advice and consent (two-thirds of Senators present). Signing alone signals intent but carries no enforcement power. Ratification makes the protections enforceable. The U.S. signed in 1977. The Senate Foreign Relations Committee held hearings in 1979 but never advanced the treaty to a committee vote or floor vote.',
     category: 'treaty',
     related: ['signatory', 'states-parties', 'senate-consent'],
     seeAlso: '/action/ratification-process',
