@@ -119,14 +119,68 @@ const lensFraming = {
       </div>
     </section>
 
+    <section class="objection">
+      <h2>The Most Common Objection</h2>
+      <p class="objection-lead">
+        Many people hear "economic rights" and think: those sound like political wishes,
+        not real rights. Free speech constrains the government. Healthcare access depends
+        on funding decisions. Doesn't that make them different things entirely?
+      </p>
+      <p>
+        This distinction collapses under examination. Five points clarify why:
+      </p>
+      <ol class="objection-list">
+        <li>
+          <strong>All rights carry costs.</strong>
+          Free speech requires courts, police, and a legal system to function.
+          Property rights require registries, enforcement, and fire departments.
+          The negative/positive distinction describes a spectrum, not a binary
+          — Holmes &amp; Sunstein documented this in <em>The Cost of Rights</em> (1999).
+        </li>
+        <li>
+          <strong>The U.S. already enforces economic rights selectively.</strong>
+          Bankruptcy protection, FDIC insurance, Medicare, Social Security, public
+          education, and minimum wage all represent codified economic rights. The
+          real question: should they exist as a coherent, enforceable framework —
+          or remain scattered, ad hoc, and politically vulnerable?
+        </li>
+        <li>
+          <strong>The OBBBA demonstrated the cost of no framework.</strong>
+          The One Big Beautiful Bill Act (July 2025) slashed $990B from Medicaid
+          and eliminated coverage for roughly 10 million Americans. Without
+          ICESCR's non-retrogression principle, no legal mechanism existed to
+          prevent or challenge that retrogression. Courts had nothing to enforce.
+        </li>
+        <li>
+          <strong>173 nations manage enforcement.</strong>
+          South Africa, India, and Colombia maintain robust economic rights
+          jurisprudence. The claim that economic rights "can't work" contradicts
+          observable practice across most of the world.
+        </li>
+        <li>
+          <strong>The "basic rights only" view carries Cold War origins.</strong>
+          The UDHR drafters rejected a rights hierarchy. The split into twin covenants
+          — one for civil/political rights, one for economic/social/cultural rights
+          — happened for Cold War political reasons in the 1950s, not philosophical ones.
+          No inherent logic separates the two categories.
+        </li>
+      </ol>
+      <p class="objection-links">
+        The full intellectual history of this argument and its rebuttals live at
+        <a href="/gap/not-really-rights">Not Really Rights &rarr;</a>
+        and <a href="/gap/arguments">Arguments &amp; Counterarguments &rarr;</a>.
+      </p>
+    </section>
+
     <section class="framing">
       <blockquote>
         Human Rights; Nothing More, Nothing Less.
       </blockquote>
       <p>
-        Every element of this analysis represents implementation of rights 173 nations
-        already committed to. Nothing here asks for anything beyond what the United
-        States signed in 1977.
+        No framework for freedom, justice, or peace has ever survived without human
+        rights at its foundation. Every element of this analysis represents implementation
+        of rights 173 nations already committed to. Nothing here asks for anything beyond
+        what the United States signed in 1977.
       </p>
     </section>
   </div>
@@ -272,6 +326,76 @@ const lensFraming = {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin: 0;
+  }
+
+  .objection {
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-xl);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 4px;
+  }
+
+  .objection-lead {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: var(--space-md);
+  }
+
+  .objection-list {
+    list-style: none;
+    counter-reset: objection-counter;
+    margin: var(--space-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: 0;
+  }
+
+  .objection-list li {
+    counter-increment: objection-counter;
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .objection-list li::before {
+    content: counter(objection-counter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    margin-top: 0.1rem;
+  }
+
+  .objection-list li strong {
+    color: var(--color-primary);
+  }
+
+  .objection-links {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  .objection-links a {
+    display: inline-block;
+    margin-left: var(--space-xs);
   }
 
   .framing {
