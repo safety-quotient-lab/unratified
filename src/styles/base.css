@@ -476,9 +476,37 @@ main {
   font-size: min(6vmin, calc(0.8125rem + 0.125vmax));
 }
 
+.footer-columns {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2xl);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer-col {
+  text-align: center;
+}
+
+.footer-col p {
+  margin: 0 0 var(--space-xs) 0;
+  line-height: 1.6;
+}
+
+.footer-col p:last-child {
+  margin-bottom: 0;
+}
+
 .footer-note {
   font-style: italic;
-  margin-top: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 600px) {
+  .footer-columns {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
 }
 
 /* Focus styles — global */
