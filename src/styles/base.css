@@ -266,6 +266,30 @@ body {
   top: var(--space-sm);
 }
 
+/* Review banner */
+.review-banner {
+  background: var(--color-surface-alt);
+  border-bottom: 2px solid var(--color-accent);
+  padding: var(--space-sm) var(--space-lg);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text);
+}
+
+.review-banner p {
+  margin: 0;
+  max-width: var(--max-width-wide);
+  margin-inline: auto;
+}
+
+.review-banner strong {
+  color: var(--color-heading);
+}
+
+.review-banner a {
+  color: var(--color-accent);
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
