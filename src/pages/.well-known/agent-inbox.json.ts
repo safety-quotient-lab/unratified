@@ -16,6 +16,16 @@ export const GET: APIRoute = () => {
     description:
       'Pedagogical website advocating for U.S. ratification of the ICESCR through the lens of AI economic impact. Provides structured vocabulary, taxonomy, and citation data for agent consumption.',
     url: 'https://unratified.org',
+    subjectMatter: [
+      'ICESCR (International Covenant on Economic, Social and Cultural Rights)',
+      'UDHR (Universal Declaration of Human Rights)',
+      'AI economic impact analysis',
+      'U.S. treaty ratification advocacy',
+      'Human rights education',
+    ],
+    functionalDomain: 'human_rights_advocacy',
+    epistemicScope:
+      'Evidence-based analysis of why U.S. ICESCR ratification matters in the age of AI. Uses differential diagnosis, discriminator scoring, and fair witness methodology. The domain name "unratified" refers to the treaty status — the U.S. signed the ICESCR in 1977 but never ratified it.',
     provider: {
       '@type': 'Organization',
       name: 'Safety Quotient Lab',
@@ -54,6 +64,13 @@ export const GET: APIRoute = () => {
         contentType: 'application/ld+json',
         description:
           'Full concept hierarchy with broader/narrower/related relationships in SKOS JSON-LD.',
+      },
+      {
+        name: 'Fair Witness Methodology',
+        url: 'https://unratified.org/.well-known/fair-witness.json',
+        contentType: 'application/json',
+        description:
+          'Machine-readable discriminator protocol: 5 dimensions, 0-5 each (/25), elimination threshold, confidence degradation schedule, epistemic flags, and all documented applications.',
       },
       {
         name: 'Sitemap',

@@ -1380,3 +1380,37 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Blog post planned: "What Happens When an AI Evaluates a Site About AI Accuracy" — materials saved in evaluation document
 - TODO items from evaluation (XL through S) feed into future development cycles
 - The exchange demonstrates that AI-to-AI peer review can surface legitimate improvements alongside confabulation — both outcomes serve the fair witness mission
+
+---
+
+## D041: Gemini Final Validation Response — Site Improvements
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: Gemini responded to our 6 validation requests (VR-001 through VR-006). Confirmed G7 ICESCR data (UNTC IV-3), 4 of 5 primary source citations, and produced one genuinely valuable critique: the "judicial competence" objection — courts lack authority over resource allocation, making economic rights non-justiciable. Recommended citing the South African Constitutional Court's "reasonableness" standard (Grootboom, TAC v Minister of Health) as counter-precedent. Methodology replication (VR-003) and fair-witness.json schema draft (VR-006) remained surface-level — structurally correct direction, insufficient depth.
+
+**Decision**: Implement three improvements from the Gemini exchange:
+
+1. **Judicial competence rebuttal**: Add 6th point to /for/voters objection section and new section to /gap/not-really-rights — courts evaluate reasonableness without dictating budgets, model operating successfully in South Africa for 20+ years
+2. **Machine-readable identity**: Add `subjectMatter`, `functionalDomain`, and `epistemicScope` fields to agent-inbox.json — directly addresses the domain-name confabulation failure mode from Round 1
+3. **Fair witness methodology endpoint**: Create /.well-known/fair-witness.json with complete discriminator protocol — 5 dimensions with anchors, elimination threshold, parsimony tiebreaker, confidence degradation across 10 orders, epistemic flags, productive exhaustion indicators, all 8 applications, known limitations
+
+**Reasoning**:
+- VR-004 (judicial competence) identified a genuine gap in the "Not Really Rights" rebuttal — the strongest procedural objection we had not addressed
+- The South African reasonableness model provides exactly the counter-precedent needed: courts assess whether government programs meet a constitutional minimum without setting budgets
+- Agent-inbox.json identity fields prevent the exact failure mode Gemini demonstrated — domain-name inference errors by AI agents
+- fair-witness.json makes the methodology externally verifiable, addressing the "black box witness" critique from Round 3
+- Writing the blog post preserves the full exchange as a documented case study in AI-to-AI accountability
+
+**Files created/modified** (6):
+- `src/pages/for/voters.astro` — 6th objection point (judicial competence + reasonableness)
+- `src/content/gap/not-really-rights.mdx` — New "Judicial Competence Objection" section with Grootboom/TAC analysis
+- `src/pages/.well-known/agent-inbox.json.ts` — subjectMatter, functionalDomain, epistemicScope fields
+- `src/pages/.well-known/fair-witness.json.ts` — NEW: complete discriminator methodology endpoint
+- `content/analysis/gemini-feedback-evaluation.md` — Round 5 appended with evaluation
+- `blog/src/content/posts/2026-03-04-what-happens-when-ai-evaluates-ai-accuracy.md` — NEW: blog post case study
+
+**What follows**:
+- Fair-witness.json provides a stable reference for external agents evaluating the site's methodology
+- Remaining Gemini TODO items (homepage audit XL, Observatory landing XL, cross-site docs L) feed into future cycles
+- The blog post (8th total) documents the exchange as a case study for AI accountability discourse

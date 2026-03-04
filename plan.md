@@ -337,6 +337,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Card arrow indicator — global `→` on all link cards site-wide via `a[class*="-card"]::after`; gray default, teal+slide on hover
 - [x] /how page — ratification pathway discriminator (D039): 7 pathways (P1-P7) scored, 3 eliminated, Composite P-A (Coalition + Senate + State + Litigation, 22/25); ScoreChart visualization; ADA pattern precedent mapping; cross-linked from nav, /start, /action, /for/politicians
 - [x] Gemini peer review exchange (D040): AI-to-AI accountability case study — Gemini (Fast) evaluated unratified.org, confabulated on Round 1, self-corrected, produced second-order confabulation on Round 3; full evaluation + JSON response with 6 validation requests saved to content/analysis/
+- [x] Gemini validation response improvements (D041): judicial competence rebuttal (voters + not-really-rights), agent-inbox.json identity fields (subjectMatter, functionalDomain, epistemicScope), fair-witness.json machine-readable methodology endpoint, blog post case study
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach

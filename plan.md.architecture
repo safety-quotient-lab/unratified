@@ -85,8 +85,10 @@ unratified.org                          MAIN SITE — ICESCR, advocacy, educator
 ├── /about                              About — mission, methodology, values, licensing
 │
 └── /.well-known/                       Machine-readable semantic endpoints
+    ├── /.well-known/agent-inbox.json   WebAPI discovery + identity (D041: subjectMatter, epistemicScope)
     ├── /.well-known/glossary.json      Schema.org DefinedTermSet (JSON-LD)
-    └── /.well-known/taxonomy.json      SKOS ConceptScheme (JSON-LD)
+    ├── /.well-known/taxonomy.json      SKOS ConceptScheme (JSON-LD)
+    └── /.well-known/fair-witness.json  Discriminator methodology (D041: 5 dimensions, scoring, applications)
 
 blog.unratified.org                     BLOG — Ongoing analysis and commentary (D030)
 │
