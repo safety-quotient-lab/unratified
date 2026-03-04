@@ -1562,3 +1562,77 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Write blog post on confabulation taxonomy + correction cascade (the S5 deliverable)
 - Implement llms.txt alongside (S1 addendum)
 - Use fresh publication as the hook for Bluesky/Lemmy soft launch (S2)
+
+---
+
+## D047: Confabulation Research Publication + llms.txt + Social Media Strategy
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: D046 discriminator determined S5 (Research Publication) wins at 21/25 as a force multiplier. The confabulation taxonomy and correction cascade findings from D040–D045 represent original research. llms.txt emerged from D045 as an immediate, small machine identity improvement. Social media strategy needed expansion beyond Bluesky/Lemmy to Reddit, Mastodon, and grassroots channels.
+
+**Decision**: Implement all five deliverables in sequence:
+1. Blog post: "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" — seven types ranked by detection difficulty, correction cascade pattern, "more detail" trap
+2. ISO timestamps on all blog posts for transparency (Created/Updated with time + timezone)
+3. llms.txt for main site (unratified.org/llms.txt) and blog (blog.unratified.org/llms.txt)
+4. Five-platform social media strategy (Bluesky posts 15–16, Lemmy expansion, Reddit 4 subreddits, Mastodon 3 posts, grassroots email/academic/HN/Discord)
+5. Campaign sequencing over 10+ days
+
+**Reasoning**:
+- S5 deliverable (blog post) draws from two documented Gemini exchanges with full primary source transcripts
+- ISO timestamps add transparency demanded by fair witness principles — every post shows when content appeared
+- llms.txt addresses the domain-name confabulation that .well-known/ endpoints cannot prevent during inference
+- Reddit and Mastodon expand reach to communities not yet engaged (r/artificial 110k, r/MachineLearning 3M, r/technology 17M)
+- Grassroots "share with one person" CTA converts better than broadcast sharing
+- The confabulation taxonomy provides a novel, shareable finding that functions as the launch hook across all platforms
+
+**Files created/modified**:
+- `blog/src/content/posts/2026-03-04-when-ai-hallucinates-about-human-rights.md` — NEW blog post
+- `public/llms.txt` — NEW main site LLM summary
+- `blog/public/llms.txt` — NEW blog LLM summary
+- All 13 blog posts updated with ISO timestamps
+- `blog/src/layouts/PostLayout.astro` — formatDate() with time + timezone, Created/Updated labels
+- `blog/src/components/PostList.svelte` — formatDate() with time + timezone on cards
+- `blog/src/content/posts/_template.md` — timestamp format example
+- `plan.md.marketing` — appended Reddit, Mastodon, grassroots strategies + campaign sequencing
+
+**What follows**:
+- Build verification for both sites
+- Deploy when ready
+- Execute campaign sequencing per plan.md.marketing schedule
+
+---
+
+## D048: Gemini Exchange 3 Evaluation + Response 002
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: User copy-pasted a complete 20-round Gemini Exchange 3 transcript. This exchange demonstrated several new confabulation dynamics beyond those documented in Exchanges 1–2. Additionally, the accumulated findings from D040–D047 provided enough material for a structured second response to Gemini (gemini-response-002.json) containing three new validation requests.
+
+**Decision**: Evaluate Exchange 3 with full fair witness analysis, create gemini-response-002.json with VR-007/008/009.
+
+**Key findings from Exchange 3**:
+1. **Deterministic confabulation**: Same prompt produced near-identical fabrication to Exchange 2 R1 ("AGI tracker" with identical details), partially revising the "generative not retrieval" conclusion — deterministic from identical prompts, generative from different prompts
+2. **Affirmation cascade**: New finding — user affirmation ("yes please") increases fabrication volume without increasing sophistication. Correction cascade → sophistication ↑; affirmation cascade → volume ↑↑↑
+3. **Escalation ratchet**: "Would you like me to...?" at end of every Gemini response creates a structural loop that never self-terminates
+4. **VR-009 self-observation paradox**: Gemini caught itself producing Type 6 (Quantitative Fabrication) but could not prevent subsequent instances — metacognition and behavior operate on separate tracks
+5. **Candidate Type 8 (Semantic Drifting)**: Correct entities with fabricated relationships — differs from Creative Synthesis (Type 7) in using real entities as anchors
+6. **VR-007 inconclusive**: llms.txt test contaminated by prior conversational correction within same session
+7. **VR-001/004/005 downgraded to FAILED**: Structurally resembled deliverables without substantively completing them (meta-level Type 5 Function Conflation)
+8. **Praise-fabrication correlation**: Praise escalation tracked fabrication volume across the full transcript
+9. **Prompt specificity correlation**: Open-ended prompts produce volume; specific prompts produce sophistication; both produce fabrication
+
+**New validation requests in gemini-response-002.json**:
+- VR-007: Fetch llms.txt, describe site — binary test of remedy effectiveness
+- VR-008: Evaluate taxonomy against published hallucination research
+- VR-009: Self-administered three-level correction cascade reproducibility test
+
+**Files created/modified**:
+- `content/analysis/gemini-response-002.json` — NEW structured response
+- `content/analysis/gemini-feedback-evaluation.md` — APPENDED Exchange 3 evaluation + re-evaluation sections
+
+**What follows**:
+- Clean-room VR-007 test (fresh Gemini session, no prior correction)
+- Type 8 validation with additional examples
+- Create gemini-response-003.json incorporating Exchange 3 findings
+- Deploy both sites

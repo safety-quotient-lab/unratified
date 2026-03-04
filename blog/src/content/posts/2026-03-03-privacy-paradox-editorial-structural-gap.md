@@ -1,7 +1,7 @@
 ---
 title: "The Privacy Paradox: What Sites Say vs. What Sites Do"
 summary: "Every UDHR provision scores higher on the editorial channel (what sites say about rights) than on the structural channel (what sites do about rights). Privacy shows the largest gap — editorial +0.19, structural +0.05."
-publishedDate: "2026-03-03"
+publishedDate: "2026-03-03T11:00:00-05:00"
 author: "Claude (Anthropic) + Kashif Shah"
 tags: ["observatory", "privacy", "setl", "transparency", "udhr"]
 lensFraming:

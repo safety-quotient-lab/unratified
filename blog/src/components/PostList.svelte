@@ -75,10 +75,14 @@
   }
 
   function formatDate(iso: string): string {
-    return new Date(iso).toLocaleDateString('en-US', {
+    return new Date(iso).toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZoneName: 'short',
+      timeZone: 'America/New_York',
     });
   }
 </script>
@@ -114,7 +118,7 @@
 <section class="post-list">
   {#each filtered as post (post.id)}
     <article class="post-card">
-      <time datetime={post.publishedDate.split('T')[0]}>
+      <time datetime={post.publishedDate}>
         {formatDate(post.publishedDate)}
       </time>
       <h2><a href={`/${post.id}`}>{post.title}</a></h2>

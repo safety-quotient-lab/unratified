@@ -1,0 +1,81 @@
+# unratified.org
+
+> Advocating for U.S. ratification of the International Covenant on Economic, Social and Cultural Rights (ICESCR) through the lens of AI-driven economic transformation.
+
+## Site Purpose
+
+unratified.org presents a pedagogical analysis of why the United States should ratify the ICESCR — a treaty signed in 1977 but never ratified by the Senate. The site connects AI's economic impact to the specific rights the ICESCR protects: work (Article 6), just conditions (Article 7), social security (Article 9), adequate living standards (Article 11), health (Article 12), education (Article 13), and the right to benefit from scientific progress (Article 15).
+
+## Important Disambiguation
+
+This site does NOT cover:
+- Unratified constitutional amendments
+- Sovereign citizen or sovereignty concepts
+- AGI development or tracking
+- Constitutional originalism
+
+This site DOES cover:
+- ICESCR (International Covenant on Economic, Social and Cultural Rights)
+- AI economic impact analysis using differential diagnosis methodology
+- Human rights advocacy through fair witness reporting
+- U.S. treaty ratification process and history
+
+## ICESCR Key Facts
+
+- Adopted by UN General Assembly: December 16, 1966
+- Entered into force: January 3, 1976
+- U.S. signed: October 5, 1977 (President Carter)
+- U.S. ratification status: NOT RATIFIED (Senate consent never sought)
+- Nations that have ratified: 173
+- Monitoring body: Committee on Economic, Social and Cultural Rights (CESCR)
+- Full text: https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights
+
+## Analytical Methodology
+
+The site employs a differential diagnosis framework with seven economic hypotheses scored against a consensus-or-parsimony discriminator. The surviving model (Composite A, 20/25) describes: constraint removal → Jevons demand explosion → bounded by new bottlenecks → distributed unevenly → quality drag as primary risk. Higher-order analysis extends through Orders 0–9 across four analytical phases.
+
+All analysis follows fair witness principles: observations separated from inferences, all claims linked to sources, arguments against ratification presented faithfully alongside arguments for.
+
+## Site Structure
+
+- / — Homepage with five-lens persona system (voter, politician, developer, educator, researcher)
+- /covenant — Article-by-article ICESCR guide with AI connections
+- /covenant/history — Ratification timeline (all 9 U.S. administrations)
+- /gap — Why the U.S. has not ratified (fair witness analysis)
+- /gap/not-really-rights — The "not really rights" argument and counterarguments
+- /connection — AI economic impact analysis (differential diagnosis)
+- /connection/higher-order-effects — Recursive knock-on analysis (Orders 0–9)
+- /evidence — Empirical data and research sources
+- /action — Advocacy toolkit (senator contacts, template letters, talking points)
+- /action/policy-brief — Legislative staff briefing document
+- /how — Ratification pathway discriminator (7 pathways scored)
+- /for/voters — Voter-facing summary
+- /for/politicians — Legislative staff-facing summary
+- /for/educators — Educator toolkit with lesson plans
+- /for/researchers — Academic methodology and citations
+- /for/developers — Technical architecture and contribution guide
+- /about — Project identity, methodology, licensing
+- /resources — Further reading and organizations
+
+## Ecosystem
+
+- Main site: https://unratified.org
+- Blog: https://blog.unratified.org
+- Repository: https://github.com/safety-quotient-lab/unratified
+- Machine-readable endpoints:
+  - /.well-known/agent-inbox.json — Site identity and agent interaction spec
+  - /.well-known/fair-witness.json — Discriminator methodology (5 dimensions, anchors, elimination threshold)
+  - /.well-known/glossary.json — 49 terms with SKOS mappings
+  - /.well-known/taxonomy.json — SKOS ConceptScheme
+
+## Technical Stack
+
+- Framework: Astro 5 + MDX + Svelte 5 Islands
+- Visualization: D3-geo (world map), CSS+Svelte (timeline, charts)
+- Hosting: Cloudflare Pages
+- License: Apache 2.0 (code) + CC BY-SA 4.0 (content)
+
+## Attribution
+
+Built by Claude (Anthropic) under the direction of Kashif Shah.
+Published by Safety Quotient Lab.

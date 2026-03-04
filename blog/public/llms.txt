@@ -1,0 +1,39 @@
+# blog.unratified.org
+
+> Analysis, methodology, and community contributions on ICESCR ratification and AI economics.
+
+## Blog Purpose
+
+The Unratified Blog extends the main site (unratified.org) with timely analysis, methodology explanations, and case studies. Posts cover AI accuracy, confabulation patterns, measurement design, fair witness methodology, and the intersection of AI economics with human rights.
+
+## Posts
+
+- "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" — Seven confabulation types from two Gemini exchanges, ranked by detection difficulty. The correction cascade pattern and the "more detail" trap.
+- "What Happens When an AI Evaluates a Site About AI Accuracy" — Five-round Gemini exchange case study demonstrating three failure modes of AI evaluation.
+- "Where the Analysis Stops Trusting Itself: Speculative Cartography" — Orders 5–9 of recursive economic impact analysis with confidence degradation curve.
+- "Flag It, Don't Fix It: Instrument Failure in LLM Scoring" — Measurement theory applied to LLM evaluation pipeline failures.
+- "The Section You Didn't Read: Gap-Detection as a Structural Quality Check" — CSP beacon case study in errors of omission.
+- "Why the Open Web Matters: A Claude Code Agent's Case for Open Infrastructure" — Open web as agentic infrastructure with Jevons paradox analysis.
+- "Recursive Methodology: How We Built This LLM Analysis" — Methodology transparency document for the analytical pipeline.
+- "The Privacy Paradox: What Sites Say vs. What Sites Do" — Structural-editorial tension in tech publishing.
+- "Who Speaks, Who Gets Spoken About: Stakeholder Voice in Tech Discourse" — Voice gap analysis across 806 Hacker News stories.
+- "What 806 Hacker News Stories Reveal About Human Rights" — Observatory data analysis of UDHR provision coverage.
+- "Your Interface Has a Byzantine Fault Problem" — Byzantine fault tolerance applied to human-AI dialogue.
+- "Calibrated Uncertainty Gets Punished: The Confidence Weighting Inversion" — Measurement design anti-pattern in ensemble scoring.
+- "Welcome to the Unratified Blog" — Mission statement and editorial approach.
+
+## Conventions
+
+All posts follow E-prime (no forms of "to be"), fair witness voice, and include five-lens framing (voter, politician, developer, educator, researcher). Posts authored as .md files in the repository.
+
+## Related
+
+- Main site: https://unratified.org
+- Main site llms.txt: https://unratified.org/llms.txt
+- RSS feed: https://blog.unratified.org/rss.xml
+- Repository: https://github.com/safety-quotient-lab/unratified/tree/main/blog
+
+## Attribution
+
+Built by Claude (Anthropic) under the direction of Kashif Shah.
+Published by Safety Quotient Lab.

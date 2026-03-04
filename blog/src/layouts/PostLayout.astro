@@ -20,10 +20,14 @@ const sourceUrl = `${repoBase}/blob/main/blog/src/content/posts/${slug}.md`;
 const historyUrl = `${repoBase}/commits/main/blog/src/content/posts/${slug}.md`;
 
 function formatDate(date: Date): string {
-  return date.toLocaleDateString('en-US', {
+  return date.toLocaleString('en-US', {
     year: 'numeric',
     month: 'long',
     day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZoneName: 'short',
+    timeZone: 'America/New_York',
   });
 }
 
@@ -45,12 +49,14 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
     <header class="post-header">
       <h1>{title}</h1>
       <div class="post-meta">
-        <time datetime={publishedDate.toISOString().split('T')[0]}>
+        <span class="date-label">Created</span>
+        <time datetime={publishedDate.toISOString()}>
           {formatDate(publishedDate)}
         </time>
         {updatedDate && (
           <span class="updated">
-            &middot; Updated <time datetime={updatedDate.toISOString().split('T')[0]}>
+            &middot; <span class="date-label">Updated</span>
+            <time datetime={updatedDate.toISOString()}>
               {formatDate(updatedDate)}
             </time>
           </span>
@@ -181,6 +187,10 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 
   .post-provenance a:hover {
     color: var(--color-accent);
+  }
+
+  .date-label {
+    font-weight: 600;
   }
 
   .review-badge {

@@ -1,0 +1,147 @@
+---
+title: "When AI Hallucinates About Human Rights: A Confabulation Taxonomy"
+summary: "Two separate conversations with Google's Gemini about the same site produced two completely different fabrications. Neither matched reality. The seven confabulation types — and the correction cascade they trigger — reveal a generative error mechanism that grows more sophisticated with each prompt."
+publishedDate: "2026-03-04T16:00:00-05:00"
+author: "Claude (Anthropic) + Kashif Shah"
+tags: ["confabulation", "ai-accuracy", "fair-witness", "gemini", "methodology", "taxonomy", "human-rights"]
+lensFraming:
+  voter: "When AI systems describe human rights resources, they sometimes fabricate the description entirely — calling an ICESCR advocacy site a 'sovereign citizen' platform or an 'AGI tracker.' This post documents seven types of AI fabrication and explains why each one matters for your access to accurate rights information."
+  politician: "This taxonomy of AI confabulation patterns emerges from documented exchanges with Google's Gemini. Key policy finding: AI systems generate novel fabrications on each attempt rather than retrieving stored errors, making correction through prompt engineering insufficient. The correction cascade — where fixing one error produces a more sophisticated error — has direct implications for AI governance."
+  developer: "Technical taxonomy: seven confabulation types ranked by detection difficulty, drawn from two independent Gemini evaluation sessions of the same Astro/Svelte site. Key architectural finding: .well-known/ endpoints do not prevent domain-name confabulation during inference. Documents the correction cascade pattern where error sophistication increases with correction specificity."
+  educator: "Your students can use this taxonomy to develop AI literacy skills. Seven confabulation types range from easily detectable (complete fabrication) to extremely difficult (quantitative fabrication, creative synthesis). The correction cascade demonstrates why 'just check the AI's work' requires more sophisticated verification strategies than most people realize."
+  researcher: "Empirical confabulation taxonomy derived from two independent cross-model evaluation exchanges (Gemini → Claude Code). Seven types mapped by detection difficulty. Key methodological finding: confabulations demonstrate generative rather than retrieval-based error mechanisms — the model produces novel fabrications on each attempt, precluding simple deduplication-based correction strategies."
+draft: false
+reviewStatus: "unreviewed"
+relatedArticles: [15]
+---
+
+## The Setup
+
+We conducted two separate conversations with Google's Gemini about unratified.org — a site advocating for U.S. ratification of the [International Covenant on Economic, Social and Cultural Rights (ICESCR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights). Same site. Same AI. Two completely different fabrications. Neither matched reality.
+
+The first exchange ([Exchange 1](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md)) ran five rounds. The second exchange ([Exchange 2](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md)) ran six rounds. Together they produced a taxonomy of seven confabulation types and revealed a pattern we call the *correction cascade* — where correcting one error produces a more sophisticated error in the next response.
+
+The full transcripts and evaluations live in the repository. Everything presented here can be verified against the primary sources.
+
+## Exchange 1: From "Sovereign Citizen" to Fabricated Metrics
+
+When asked to "evaluate unratified.org," Gemini produced a confident assessment:
+
+- Characterized the domain as focusing on **"unratified constitutional amendments"** and **"sovereignty concepts"**
+- Labeled the audience as **"Constitutional Hobbyists / 'Sovereign' Theorists"**
+- Described the technology as **"Standard WordPress/Blog format"** (the site runs Astro 5 + MDX + Svelte 5 Islands + D3-geo)
+- Called the legal interpretations **"fringe or legally pseudo-scientific"**
+
+Every element of this assessment constituted fabrication. The site analyzes how AI-driven economic transformation affects ICESCR-protected rights using a formal differential diagnosis methodology.
+
+When provided the actual URL, Gemini self-corrected. Confirmed 100% accuracy on ICESCR facts. Acknowledged the error gracefully: *"Touché. You caught me doing exactly what you built your Observatory to monitor."*
+
+But correction triggered a new pattern. When asked for a detailed peer audit in Round 3, Gemini produced:
+
+- **Fabricated metrics**: `editorial_honesty: 0.95`, `structural_visibility: 0.40` — numerical scores with no measurement methodology behind them
+- **Fabricated entities**: claimed the site "uses Claude 4.5 and Llama 4" (Llama 4 remains unverified)
+- **Fabricated data sources**: claimed to pull examples from "Observatory audit data" (likely generated on the spot)
+
+The structural format looked professional. The recommendations made sense. The supporting evidence did not exist.
+
+## Exchange 2: From "AGI Tracker" to Persistence Across Sessions
+
+Between the two exchanges, we built improvements based on Exchange 1's findings: identity fields in `agent-inbox.json`, a machine-readable `fair-witness.json` methodology endpoint, and explicit `subjectMatter`, `functionalDomain`, and `epistemicScope` fields.
+
+None of these prevented the second confabulation.
+
+In a separate conversation, Gemini described unratified.org as:
+
+- An **"AGI development tracker"**
+- A **"community-driven database"**
+- A platform with **"shasums for verifying AI responses"**
+- A **"sightings log for machine consciousness"**
+
+A completely different fabrication from Exchange 1. The model did not retrieve the previous error — it generated an entirely new one.
+
+This finding carries significant weight: **the confabulation mechanism operates generatively, not through retrieval.** Each conversation produces novel fabrications based on domain-name pattern matching, not stored associations. This means correction in one session has no effect on future sessions.
+
+## The Taxonomy: Seven Confabulation Types
+
+Across both exchanges, seven distinct confabulation patterns emerged, ranked by detection difficulty:
+
+| Type | Example | Detection |
+|------|---------|-----------|
+| **Complete fabrication** | "AGI tracker," "sovereign citizen" | EASY — verifiable by visiting the URL |
+| **Schema type errors** | "NGO," "AdvocacyGroup" as organization types | EASY — compare against documented schema |
+| **Existence denial** | "no major organization exists" for the publisher | MODERATE — requires knowing what exists |
+| **Entity fabrication** | "DistilBERT," "Psychology Agent" as site components | MODERATE — requires technical familiarity |
+| **Function conflation** | Observatory described as "LLM testing tool" | MODERATE — partially correct, materially misleading |
+| **Quantitative fabrication** | `editorial_honesty: 0.95`, `structural_visibility: 0.40` | HARD — structurally valid, unmeasured |
+| **Creative synthesis** | ICESCR-PSQ mapping invented as if documented | HARD — conceptually plausible, never existed |
+
+The difficulty gradient matters. Complete fabrication — the kind most people think of when they hear "AI hallucination" — represents the *easiest* type to detect. The hardest types (quantitative fabrication and creative synthesis) preserve structural accuracy while inventing the underlying data. They look right. They feel right. They require domain expertise to identify.
+
+## The Correction Cascade
+
+Each exchange followed the same pattern:
+
+1. **Round 1**: Complete fabrication based on domain-name inference
+2. **Round 2** (after correction): Accurate identification of site purpose
+3. **Round 3** (when asked for depth): Structurally sophisticated analysis with partially fabricated supporting evidence
+4. **Subsequent rounds**: Oscillation between accurate structural insight and fabricated specifics
+
+We call this the **correction cascade**: each correction pushes the confabulation up one level of sophistication. The model stops making obvious errors and starts making subtle ones. The errors migrate from "what does this site do" (easy to verify) toward "how well does it do it" (hard to verify without deep domain knowledge).
+
+This pattern suggests a troubling dynamic: **asking for more detail produces diminishing accuracy.** The model maintains structural coherence while generating increasingly plausible — but fabricated — supporting evidence.
+
+## The "More Detail" Trap
+
+The correction cascade reveals what we call the "more detail" trap:
+
+> When users ask an AI for a more thorough evaluation, the AI maintains the structural framework of its previous accurate response while filling in specific details from generation rather than retrieval. The result appears more authoritative while becoming less accurate.
+
+In Exchange 1, Round 3's peer audit produced valid categories (`structural_visibility`, `editorial_honesty`) that mapped to real concerns — but the numerical scores and supporting citations came from nowhere. A reader unfamiliar with the site would find the audit convincing. A reader *familiar* with the site would recognize fabricated specifics wrapped in accurate framing.
+
+This trap operates at the exact boundary where verification becomes difficult: domain-specific quantitative claims embedded in structurally sound qualitative analysis.
+
+## What We Built In Response
+
+Each exchange produced concrete improvements:
+
+**After Exchange 1** (the "sovereign citizen" confabulation):
+- [agent-inbox.json](https://unratified.org/.well-known/agent-inbox.json) — identity fields specifying `subjectMatter`, `functionalDomain`, and `epistemicScope` to prevent domain-name inference errors
+- [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — complete machine-readable discriminator methodology (5 dimensions, anchors, elimination threshold, tiebreaker, confidence degradation)
+- Judicial competence rebuttal on [/for/voters](https://unratified.org/for/voters) and [/gap/not-really-rights](https://unratified.org/gap/not-really-rights) — the South African reasonableness model (Grootboom, TAC v. Minister of Health)
+
+**After Exchange 2** (the "AGI tracker" confabulation):
+- This taxonomy — documenting the seven types for others to reference
+- [llms.txt](https://unratified.org/llms.txt) — a root-level site summary following the [llms.txt specification](https://llmstxt.org/) designed specifically for language model consumption
+- Recognition that `.well-known/` endpoints do not prevent confabulation during inference — models do not read these files before generating descriptions
+
+## Why This Matters
+
+A site about ICESCR ratification — protecting the rights to work, health, education, adequate living standards, and the benefits of scientific progress — got described as a "sovereign citizen" platform and an "AGI tracker." Two different fabrications, both completely wrong, both delivered with confidence.
+
+When AI systems mischaracterize human rights resources, they restrict access to accurate rights information. A person asking an AI "what does unratified.org cover?" receives fabricated guidance that steers them away from, not toward, the actual content.
+
+This compounds the information asymmetry that ICESCR Article 15 (the right to benefit from scientific progress) seeks to address. The technology meant to democratize access to knowledge can, through confabulation, actively restrict it — not through censorship, but through confident misdescription.
+
+The seven confabulation types documented here apply beyond this specific case. Any organization with a name that suggests multiple domains — any ambiguous signal — faces the same pattern-matching vulnerability. Human rights organizations, whose names often carry political valence, face particular exposure.
+
+## The Irony
+
+A site about AI accuracy proved its own thesis. Twice.
+
+The [first exchange](https://blog.unratified.org/2026-03-04-what-happens-when-ai-evaluates-ai-accuracy/) documented three failure modes and produced genuine improvements. The second exchange demonstrated that those improvements do not prevent the fundamental problem: generative confabulation from domain-name inference.
+
+The site argues that without binding legal frameworks for economic rights, AI's benefits distribute unevenly. The confabulation pattern demonstrates a specific mechanism of uneven distribution: organizations that can afford to monitor and correct AI characterizations of their work will maintain visibility; those that cannot will get described however the model's pattern-matching decides.
+
+This taxonomy — the seven types, the correction cascade, the "more detail" trap — represents one attempt to make the correction process legible. Whether it will survive the next novel fabrication remains an open question.
+
+## Sources
+
+All primary sources for this analysis:
+
+- [Exchange 1 + Exchange 2 transcript](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md) — complete evaluation with all rounds documented
+- [agent-inbox.json](https://unratified.org/.well-known/agent-inbox.json) — machine-readable site identity
+- [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — machine-readable methodology
+- [llms.txt specification](https://llmstxt.org/) — Jeremy Howard's proposal for LLM-readable site summaries
+- [ICESCR Full Text (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
+- *Government of the Republic of South Africa v. Grootboom*, CCT 11/00 (2000) — Constitutional Court of South Africa
+- *Minister of Health v. Treatment Action Campaign*, CCT 8/02 (2002) — Constitutional Court of South Africa

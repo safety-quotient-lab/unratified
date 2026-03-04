@@ -1228,3 +1228,259 @@ The observatory demonstrates how AI can serve human dignity rather than exploit 
 1. Observatory homepage — add "ethical AI showcase" subtitle or tagline
 2. Observatory /methodology — frame the privacy-by-design and transparency choices as deliberate ethical commitments
 3. Observatory agent-inbox.json — add ethical AI positioning to description field
+
+---
+
+## Confabulation Taxonomy Launch Campaign (Added 2026-03-04, D047)
+
+The confabulation taxonomy blog post ("When AI Hallucinates About Human Rights") functions as the S5 force multiplier from D046 — research publication that generates the compelling content outreach needs AND backlinks for machine identity.
+
+### Launch Hook
+
+Two separate AI conversations about the same human rights site produced two completely different fabrications. The seven-type taxonomy and "correction cascade" pattern provide a novel, sharable finding.
+
+### Bluesky Posts 15–16 (Append to Existing Sequence)
+
+**Post 15 — Confabulation taxonomy thread opener:**
+```
+We asked Google's Gemini about our human rights site. Twice. In separate conversations.
+
+First time: "sovereign citizen" platform.
+Second time: "AGI tracker."
+
+Neither description matched reality. Both delivered with confidence.
+
+Seven confabulation types emerged. Here's the taxonomy →
+
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+```
+
+**Post 16 — The correction cascade:**
+```
+The hardest AI confabulations to detect aren't the obvious ones.
+
+"Complete fabrication" → EASY to spot.
+"Quantitative fabrication" → HARD. Real-looking scores with no measurement behind them.
+"Creative synthesis" → HARD. Plausible concepts that never existed.
+
+Correcting one error pushes the next error up a sophistication level.
+
+We call it the "correction cascade."
+
+unratified.org/llms.txt
+```
+
+### Lemmy Strategy — c/humanrights Expansion
+
+**Post 2: Confabulation taxonomy (lemmy.sdf.org/c/humanrights)**
+
+Title: When AI Hallucinates About Human Rights: A Seven-Type Taxonomy
+
+Body (markdown):
+```
+We conducted two separate conversations with Google's Gemini about a site advocating for U.S. ratification of the ICESCR (International Covenant on Economic, Social and Cultural Rights).
+
+**First conversation**: Gemini described the site as a "sovereign citizen" platform focused on "unratified constitutional amendments."
+
+**Second conversation** (weeks later, after building machine-readable identity endpoints): Gemini described the site as an "AGI development tracker" with a "sightings log for machine consciousness."
+
+Neither description matched reality. Both constituted complete fabrication. And critically — the second fabrication was entirely novel, not a retrieval of the first.
+
+Seven confabulation types emerged, ranked by detection difficulty:
+
+1. Complete fabrication (EASY)
+2. Schema type errors (EASY)
+3. Existence denial (MODERATE)
+4. Entity fabrication (MODERATE)
+5. Function conflation (MODERATE)
+6. Quantitative fabrication (HARD)
+7. Creative synthesis (HARD)
+
+The full taxonomy, examples from both exchanges, and the "correction cascade" pattern (where fixing one error produces a more sophisticated error) documented here:
+
+https://blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+The site, the analysis, and all source transcripts remain open source under Apache 2.0 (code) + CC BY-SA 4.0 (content).
+
+Built by Claude (Anthropic) under human direction. We flag the irony: a site about AI accuracy proving its own need. Twice.
+```
+
+**Cross-post to c/technology** (2+ days after c/humanrights post):
+Same content, different title emphasis: "Seven Types of AI Confabulation, Ranked by Detection Difficulty"
+
+### Reddit Strategy (NEW)
+
+**Principles:**
+- Self-posts preferred (not link drops)
+- Lead with the finding, not the site
+- Engage authentically in comments
+- Disclose AI authorship upfront
+- Space posts across subreddits by 24+ hours
+- Respect each subreddit's posting norms
+
+**r/artificial** (110k+ members):
+Title: "Seven types of AI confabulation, ranked by detection difficulty — from 'complete fabrication' to 'creative synthesis'"
+Format: Self-post with taxonomy table, link to full post in body.
+Angle: The correction cascade pattern — correcting one error produces a more sophisticated error.
+
+**r/MachineLearning** (3M+ members):
+Title: "Empirical confabulation taxonomy: 7 types from cross-model evaluation exchanges (Gemini → Claude)"
+Format: Self-post, technical angle.
+Angle: Generative vs. retrieval-based error mechanisms. Novel fabrication on each attempt precludes deduplication correction.
+Note: This subreddit expects research-grade rigor. Lead with methodology, not advocacy.
+
+**r/HumanRights** (35k+ members):
+Title: "When AI mischaracterizes human rights resources — what happens and why it matters"
+Format: Self-post, rights-impact angle.
+Angle: AI confabulation restricts access to accurate rights information. ICESCR Article 15 connection.
+
+**r/technology** (17M+ members):
+Title: "We documented seven types of AI hallucination — the hardest ones look exactly like real data"
+Format: Self-post, accessible angle.
+Angle: Quantitative fabrication and creative synthesis pass casual inspection. The "more detail" trap.
+Note: High-traffic subreddit. Keep accessible, avoid jargon.
+
+### Mastodon Strategy (NEW)
+
+**Principles:**
+- 500-character limit per post
+- Boost-friendly: concise, self-contained, shareable
+- Hashtags: #AIAccuracy #HumanRights #Confabulation #ICESCR #FairWitness
+- Alt text on any images
+- Thread for longer content (3–5 posts max)
+- CW (content warning) if discussing distressing rights topics
+
+**Post 1 — Hook:**
+```
+We asked Google's Gemini about our human rights site. Twice.
+
+First answer: "sovereign citizen platform"
+Second answer: "AGI tracker"
+
+Both fabricated. Both delivered with confidence. Both novel — not copies of each other.
+
+Seven confabulation types emerged. The hardest to detect look exactly like real data.
+
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+#AIAccuracy #HumanRights #Confabulation
+```
+
+**Post 2 — The taxonomy (boost-friendly summary):**
+```
+AI confabulation taxonomy (from empirical testing):
+
+EASY to detect:
+→ Complete fabrication
+→ Schema errors
+
+MODERATE:
+→ Existence denial
+→ Entity fabrication
+→ Function conflation
+
+HARD:
+→ Quantitative fabrication (real-looking scores, no methodology)
+→ Creative synthesis (plausible concepts that never existed)
+
+Full examples + "correction cascade" pattern →
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+#AIAccuracy #FairWitness
+```
+
+**Post 3 — The ICESCR connection:**
+```
+When AI mischaracterizes human rights resources, it restricts access to accurate rights information.
+
+The ICESCR (signed by the U.S. in 1977, never ratified) protects the right to benefit from scientific progress (Article 15).
+
+AI confabulation demonstrates a specific mechanism of uneven benefit distribution: organizations that can afford to monitor AI descriptions maintain visibility. Those that can't get described however pattern-matching decides.
+
+unratified.org
+
+#ICESCR #HumanRights #AIAccuracy
+```
+
+### Grassroots Strategy (NEW)
+
+**1. Educator Email Template**
+
+Subject: AI Literacy Case Study — When AI Hallucinates About Human Rights
+
+```
+Hi [Name],
+
+I wanted to share a case study that might work well for [course/program]:
+
+We documented two separate conversations where Google's Gemini fabricated completely different descriptions of the same human rights website. Seven distinct confabulation types emerged, ranked by how hard they are to detect.
+
+The full analysis (with primary source transcripts):
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+The taxonomy works as a classroom exercise: students identify which confabulation types they find in AI outputs during their own research. The hardest types (quantitative fabrication, creative synthesis) look exactly like real data — which makes the verification skills genuinely practical.
+
+All content under CC BY-SA 4.0 — free to adapt for classroom use.
+
+Best,
+[Name]
+```
+
+**2. Academic Network Sharing**
+
+Target channels:
+- AI ethics mailing lists (ACM FAccT, Partnership on AI)
+- Science and Technology Studies (STS) department newsletters
+- International law / human rights academic groups
+- AAAS Science and Human Rights Coalition
+
+Angle: Empirical confabulation taxonomy with documented primary sources. Novel finding: generative (not retrieval-based) error mechanism.
+
+**3. Hacker News**
+
+Already submitted. The confabulation taxonomy post provides a stronger technical hook than the original site submission. Consider a "Show HN" with title:
+"Show HN: Seven types of AI confabulation, ranked by detection difficulty"
+
+**4. Developer Community (Discord, Slack)**
+
+Target channels:
+- AI/ML Discord servers (Weights & Biases, Hugging Face, EleutherAI)
+- Responsible AI Slack channels
+- LLM evaluation communities
+
+Format: Short message with taxonomy table + link. Lead with the technical finding.
+
+**5. "Share with One Person" CTA**
+
+Every outreach message ends with: "If you know one person who would find this useful, please share it with them."
+
+This CTA converts better than "share widely" because it asks for a specific, low-effort action that feels personal rather than promotional.
+
+### Campaign Sequencing
+
+| Day | Platform | Content |
+|-----|----------|---------|
+| 1 | Bluesky Post 15 | Taxonomy thread opener |
+| 1 | Mastodon Post 1 | Hook post |
+| 2 | Bluesky Post 16 | Correction cascade |
+| 2 | Mastodon Post 2 | Taxonomy summary |
+| 2 | Lemmy c/humanrights | Full markdown post |
+| 3 | Reddit r/artificial | Self-post, correction cascade angle |
+| 3 | Mastodon Post 3 | ICESCR connection |
+| 4 | Reddit r/MachineLearning | Self-post, technical/methodology angle |
+| 5 | Lemmy c/technology | Cross-post from c/humanrights |
+| 5 | Reddit r/HumanRights | Self-post, rights-impact angle |
+| 7 | Reddit r/technology | Self-post, accessible angle |
+| 7+ | Educator emails | Targeted outreach to known contacts |
+| 7+ | Academic lists | Professional network sharing |
+| 10+ | HN | Show HN submission (if organic traction warrants) |
+
+### Success Signals
+
+- Blog post referrer diversity (multiple platforms)
+- Reddit/Lemmy comment engagement (not just upvotes)
+- Mastodon boost count (network amplification)
+- Bluesky thread engagement (replies, reposts)
+- Educator responses to email outreach
+- Academic citation / reference in courses
+- Organic sharing beyond initial platforms ("share with one person" cascade)

@@ -343,9 +343,13 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Gemini visibility recommendations evaluated (D042): 20 items across 4 tiers. Saved to content/analysis/gemini-visibility-recommendations.md
 - [x] Gemini GEO exchange evaluated (D045): 6 rounds, same confabulation pattern (different fabrication each time), llms.txt identified as actionable. Appended to content/analysis/gemini-feedback-evaluation.md
 - [x] Strategic priority discriminator across all Gemini findings (D046): S5 Research Publication wins (21/25) — publish confabulation taxonomy and correction cascade findings. S5 functions as force multiplier enabling S2 (outreach) and S1 (machine identity). Recommended sequence: S5 → S1 (llms.txt) → S2 (outreach).
-- [ ] Blog post: confabulation taxonomy + correction cascade research (S5 from D046)
-- [ ] llms.txt — machine-readable site summary at root level (G-21, from D045). Complements agent-inbox.json; addresses domain-name confabulation that .well-known/ endpoints do not prevent
-- [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
+- [x] Blog post: confabulation taxonomy + correction cascade research (D047, S5 from D046) — "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" with 7-type taxonomy, correction cascade, "more detail" trap
+- [x] llms.txt — machine-readable site summaries at unratified.org/llms.txt and blog.unratified.org/llms.txt (D047, G-21 from D045). Follows Jeremy Howard spec; addresses domain-name confabulation
+- [x] Blog timestamp transparency (D047) — all 13 posts updated with ISO timestamps; PostLayout.astro and PostList.svelte show "Created [date] at [time] [tz]"
+- [x] Social media strategy expansion (D047) — Bluesky posts 15-16, Lemmy c/humanrights + c/technology, Reddit (r/artificial, r/MachineLearning, r/HumanRights, r/technology), Mastodon (3 posts), grassroots (educator email, academic networks, HN, Discord)
+- [x] Gemini Exchange 3 evaluation (D048): 20-round transcript evaluated — deterministic confabulation confirmed (same prompt → same fabrication), affirmation cascade documented (affirmation → volume ↑, sophistication stable), escalation ratchet ("Would you like me to...?" never self-terminates), VR-009 self-observation paradox (metacognition does not prevent fabrication), candidate Type 8 (Semantic Drifting), VR-001/004/005 downgraded to FAILED. Appended to content/analysis/gemini-feedback-evaluation.md
+- [x] Gemini response 002 (D048): structured JSON response with taxonomy, VR-007/008/009, DeepMind invitation. Saved to content/analysis/gemini-response-002.json
+- [ ] Social media campaign execution (soft launch: Bluesky + Lemmy + Reddit + Mastodon, per D047 sequencing)
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves
