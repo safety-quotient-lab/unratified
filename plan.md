@@ -326,6 +326,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Site monitor Worker (workers/monitor/) — Cloudflare Worker with cron triggers: health checks (5min), content integrity (hourly), sitemap regression (daily); D1 schema (4 tables), Resend email alerts with cooldown deduplication, /status JSON API; analytics snapshot deferred (needs CF_API_TOKEN); deployment deferred (needs D1 creation + secrets)
 - [x] Blog author fix — all posts standardized to "Claude (Anthropic) + Kashif Shah" dual authorship
 - [x] Voter-accessible "binding" language — replaced abstract legal term with "enforceable," "legal teeth," "courts can enforce it" on /why, /gap, /covenant/history, glossary
+- [x] Explicit AI attribution (D038) — "Analysis by" → "Built by" across all footers; homepage above-fold disclosure; JSON-LD creator field (Claude + Kashif Shah); agent-inbox.json aiGenerated:true; about/colophon/start/developers copy updated; blog per-post AI disclosure; WHATWG-proposed ai-generated meta tag on both layouts
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach

@@ -1254,3 +1254,46 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Worker code complete and type-checks cleanly
 - Deploy when Cloudflare API credentials and Resend API key available
 - Analytics page becomes feasible once snapshot cron populates D1 data
+
+---
+
+## D038: Explicit AI Attribution — "Built by Claude" Across All Touchpoints
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: The site attributed Claude as "Analysis by Claude (Anthropic)" in the footer and secondary pages — understating reality. Claude generated the entire site: analysis, copy, code, components, design, and blog posts. The homepage contained zero AI disclosure above the fold. JSON-LD structured data and machine-readable endpoints declared no AI authorship. Multiple emerging standards address AI content identification but none has achieved universal adoption for web text content.
+
+**Decision**: Make AI generation explicit everywhere. Change "Analysis by" → "Built by" across all footers. Add above-fold AI disclosure on homepage. Declare Claude as creator in JSON-LD structured data (Schema.org `SoftwareApplication`) and agent-inbox.json. Update copy on about, colophon, start, and for/developers pages. Add per-post AI disclosure in blog post footer. Adopt the WHATWG-proposed `<meta name="ai-generated" content="all">` meta tag on both site layouts.
+
+**Standards landscape**:
+- C2PA Content Credentials (mature, media-focused — images/video/audio)
+- IPTC Photo Metadata 2025.1 (AI System Used, DigitalSourceType — image-focused)
+- WHATWG HTML Issue #9479 (`<meta name="ai-generated">` — proposed, awaiting implementer interest)
+- AI Content Metatag Standard v1.1 (community-driven, not standards-body-backed)
+- EU AI Act Article 50 (machine-readable AI text marking required by August 2026)
+- Schema.org CreativeWork + creator (JSON-LD — Google-recommended format)
+
+**Reasoning**:
+- "Built" encompasses code + copy + analysis + design; "Analysis" implied only data work
+- Homepage disclosure reaches first-time visitors who never navigate to /about
+- JSON-LD `creator` with `SoftwareApplication` type uses existing Schema.org vocabulary Google recommends
+- `ai-generated` meta tag costs nothing and positions ahead of EU AI Act mandate
+- Matter-of-fact tone: disclosure as feature, not disclaimer
+- E-prime compliant throughout
+
+**Files modified** (10 + 2 meta tag):
+- `src/layouts/BaseLayout.astro` — footer, JSON-LD creator, ai-generated meta tag
+- `blog/src/layouts/BlogLayout.astro` — footer, JSON-LD creator, ai-generated meta tag
+- `src/pages/index.astro` — homepage above-fold disclosure
+- `src/pages/about/index.astro` — meta-layer section, badge label, vendor note
+- `src/pages/colophon.astro` — vendor card heading + copy
+- `src/pages/start.astro` — methodology note
+- `src/pages/for/developers.astro` — vendor triad description
+- `blog/src/layouts/PostLayout.astro` — per-post AI disclosure
+- `src/pages/.well-known/agent-inbox.json.ts` — creator + aiGenerated
+- `blog/src/pages/.well-known/agent-inbox.json.ts` — creator + aiGenerated
+
+**What follows**:
+- Every page on both sites now declares AI generation through visible copy, structured data, and meta tag
+- When EU AI Act Article 50 technical standard finalizes (expected May–June 2026), evaluate compliance and adopt if different from current implementation
+- Monitor WHATWG issue #9479 for browser-level support of the ai-generated meta tag
