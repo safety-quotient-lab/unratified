@@ -1340,3 +1340,43 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - The /how page provides the strategic framework; /action provides the tactical tools
 - Coalition Assembly (P6) maps directly to constituent contact (/action/contact), sharing (/action/talking-points), and teaching (/action/educator-toolkit)
 - Future work: state-level ICESCR adoption tracker, litigation case database, coalition membership metrics
+
+---
+
+## D040: Gemini Peer Review Exchange — AI-to-AI Accountability Case Study
+**Date**: 2026-03-04
+**Status**: DOCUMENTED
+
+**Observation**: Google Gemini (Fast) evaluated unratified.org across three rounds. Round 1 confabulated the site's entire purpose (sovereign citizen content, WordPress, fringe legal theories). After correction, Gemini self-corrected and provided substantive analysis. Round 3 produced second-order confabulation: structurally valid observations (methodology visibility, machine-readable identity) supported by fabricated specifics (Llama 4, quantitative scores without methodology, unsourced Observatory examples).
+
+**Decision**: Document the full exchange as a case study in AI-to-AI accountability. Acknowledge valid findings, correct remaining fabrications, and leverage the exchange for external validation by issuing 6 structured validation requests (VR-001 through VR-006) that play to Gemini's strengths (Google Search, cross-referencing, primary source verification).
+
+**Valid findings acknowledged**:
+- Invisible Methodology: no machine-readable /methodology.json endpoint exists
+- Lack of Machine-Readable Identity: domain name "unratified" triggered confabulation — agent-inbox.json needs clearer "about" field
+- Black Box Witness: methodology not machine-verifiable by external agents
+- Model Identity per Observatory Score: main site attribution thorough (D038), but Observatory may not document per-story model versions
+
+**Corrections issued**:
+- HIGH: Fabricated quantitative scores (editorial_honesty: 0.95, structural_visibility: 0.40) presented in JSON audit format — "fabricated numbers in an authoritative format represents exactly the failure mode the Observatory studies"
+- MEDIUM: Claimed site uses "Claude 4.5 and Llama 4" — site built by Claude Code (Opus 4.6); Llama 4 unverified
+- MEDIUM: "Based on current audit trends from the Observatory" — Observatory API public; cite endpoint or disclose generation
+- LOW: Conflated ICESCR and UDHR as interchangeable instruments
+
+**Validation requests issued** (VR-001 through VR-006):
+1. G7 ICESCR ratification data verification against UN Treaty Collection
+2. Machine-readable endpoint evaluation (agent-inbox.json, glossary.json, taxonomy.json)
+3. Methodology replication: independent P1-P7 scoring for inter-rater reliability
+4. Argument stress test: steel-man "positive rights aren't real rights" against our rebuttal
+5. Primary source spot-check: BLS, CBO OBBBA, ICCPR date, ICESCR date, 173 nations
+6. Fair-witness.json schema draft: machine-readable discriminator methodology
+
+**Files created**:
+- `content/analysis/gemini-feedback-evaluation.md` — Full evaluation with verbatim transcript, accuracy analysis, revised assessment, TODO list (XL-S), blog post materials
+- `content/analysis/gemini-response.json` — Structured JSON response: acknowledgments, corrections, transparency counter-report, 6 validation requests
+
+**What follows**:
+- If Gemini responds to validation requests, evaluate responses and update site accordingly
+- Blog post planned: "What Happens When an AI Evaluates a Site About AI Accuracy" — materials saved in evaluation document
+- TODO items from evaluation (XL through S) feed into future development cycles
+- The exchange demonstrates that AI-to-AI peer review can surface legitimate improvements alongside confabulation — both outcomes serve the fair witness mission
