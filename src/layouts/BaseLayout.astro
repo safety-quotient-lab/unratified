@@ -109,10 +109,11 @@ if (Astro.url.pathname !== '/glossary') {
     </script>
     <link rel="canonical" href={canonicalUrl.href} />
 
-    <!-- Fira Code font -->
+    <!-- Fira Code font (non-render-blocking to prevent blank screen on slow connections) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" /></noscript>
 
     <!-- DNS prefetch for external domains -->
     <link rel="dns-prefetch" href="https://www.senate.gov" />

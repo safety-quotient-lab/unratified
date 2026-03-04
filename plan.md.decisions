@@ -1185,3 +1185,36 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Theme-detection runs synchronously before render (no FOUC)
 - Island hydration proceeds without Rocket Loader intermediation
 - iPhone blank screen reports should cease
+
+---
+
+## D036: Non-Render-Blocking Google Fonts — iOS Blank Screen Fix
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: After disabling Rocket Loader (D035), a user reported that the "Why the Open Web Matters" blog post still loaded a blank screen on iOS. Investigation confirmed: no Rocket Loader injection, correct CSP headers, valid HTML structure, and content served correctly when fetched. The blog's `<link rel="stylesheet" href="fonts.googleapis.com/...">` tag blocks rendering — if the Google Fonts CDN responds slowly on iOS (network conditions, CDN edge selection, or DNS resolution delay), the entire page remains white until the CSS arrives. No eval/Function calls in the Svelte runtime. No CSP violations. The render-blocking font stylesheet represents the remaining single point of failure for first-paint.
+
+**Decision**: Convert the Google Fonts stylesheet from render-blocking to non-render-blocking using the `media="print" onload="this.media='all'"` pattern in both `BaseLayout.astro` (main site) and `BlogLayout.astro` (blog). Include `<noscript>` fallback for no-JS environments.
+
+**Pattern**:
+```html
+<link rel="stylesheet" href="...fonts..." media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href="...fonts..." /></noscript>
+```
+
+**Reasoning**:
+- Browser treats `media="print"` as low-priority (not render-blocking)
+- Once the CSS downloads, `onload` handler switches to `media="all"` — fonts apply
+- Page content renders immediately with system monospace fallback (brief FOUT)
+- FOUT (Flash of Unstyled Text) vastly preferable to blank screen
+- `'unsafe-inline'` in CSP `script-src` covers the `onload` attribute
+- `<noscript>` fallback preserves font loading for no-JS users
+- Font stack already includes system fallbacks: `"Fira Code", "Cascadia Code", "JetBrains Mono", monospace`
+
+**Files modified**: `src/layouts/BaseLayout.astro`, `blog/src/layouts/BlogLayout.astro`
+
+**What follows**:
+- Pages render immediately on all devices regardless of Google Fonts CDN performance
+- Brief FOUT visible on slow connections (system monospace → Fira Code swap)
+- Combined with D035 (Rocket Loader disabled), eliminates both known causes of iOS blank screen
+- Future consideration: self-host Fira Code to eliminate external font dependency entirely

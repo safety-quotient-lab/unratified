@@ -198,10 +198,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Advocacy messaging restructure — prohibition-entitlement asymmetry applied across 8 files (D029); procedural-declarative finding deferred
 - [x] Safety Quotient Lab organizational identity — GitHub org profile complete; sql.unratified.org deferred (GitHub serves as homepage for now); individual attribution (Kashif Shah) on site
 - [ ] A/B testing infrastructure — hybrid vs. observational voice for content effectiveness measurement
-- [ ] Landing page buildout — three tiers, all active:
-  - [ ] /why — single-page emotional case ("why should I care?"), prohibition framing, one scroll, ends with CTA; upstream of persona selection; primary social sharing URL
-  - [ ] /start or /howto — guided tour for first-time visitors; explains site structure, five-lens system, how to navigate covenant→gap→connection→evidence→action; onboarding ramp for cold traffic
-  - [ ] /for/voters, /for/politicians, /for/educators, /for/researchers, /for/developers — five persona entry points matching the five-lens model; each sets defaultLens, speaks the audience's language, routes to relevant sections; build order: voters → politicians → educators → researchers → developers; discriminator scored 21/25 — oriented walkthrough for first-time visitors explaining the site's structure, the five-lens system, progressive disclosure layers, how to navigate covenant→gap→connection→evidence→action pipeline, how to switch personas, where to find educator materials, how the observatory connects, and how to contribute via GitHub; serves as an onboarding ramp for visitors who arrive without context (especially from social media or word-of-mouth links that land on the homepage)
+- [x] Landing page buildout (D034) — /why, /start, /for/voters, /for/politicians, /for/educators, /for/researchers, /for/developers — 7 pages, 52 total build
 - [x] Phase 2 Mental Model: Full double-knock on all higher orders — re-ran complete higher-order analysis (Orders 0-4) using consensus-or-parsimony discriminator at every branching point; Composite A confirmed (20/25 both passes); all 8 Order 1 survivors hold or strengthen; Platform Recurrence elevated to VERY HIGH (22/25); three-layer scarcity architecture identified; 2 watch items (H7.3, H6.2 approach threshold); document at content/analysis/higher-order-effects-phase2.md
 
 **Phase 1: Core Content Development** (COMPLETE)
@@ -320,6 +317,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog post: "In Defense of the Open Web, from an Agent's Perspective" (22/25) — open web as agentic infrastructure, D033 as worked example, Jevons paradox applied to agent traffic, Article 15 connection
 - [x] Blog sorting/filtering + publication readiness — PostList.svelte (tag filter + sort), favicons, apple-touch-icon, CSP + HSTS headers, 404 page, welcome post author fix
 - [x] Review first blog post (welcome) — rewritten with mission-driven framing, prohibition language, urgency lead; git provenance links added to all posts
+- [x] iOS blank screen fix (D036) — non-render-blocking Google Fonts via media="print" onload pattern; both BaseLayout + BlogLayout
 - [ ] Site monitor daemon — lightweight watchdog checking both unratified.org + blog.unratified.org; health checks (HTTP status, SSL cert expiry, build breakage), analytics anomaly detection (traffic spikes/drops via Cloudflare API), content integrity (page count regression, broken links), email alerts to kashif@kashifshah.net; candidates: Cloudflare Worker on cron trigger (free, already in ecosystem) or standalone script
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
