@@ -327,6 +327,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog author fix — all posts standardized to "Claude (Anthropic) + Kashif Shah" dual authorship
 - [x] Voter-accessible "binding" language — replaced abstract legal term with "enforceable," "legal teeth," "courts can enforce it" on /why, /gap, /covenant/history, glossary
 - [x] Explicit AI attribution (D038) — "Analysis by" → "Built by" across all footers; homepage above-fold disclosure; JSON-LD creator field (Claude + Kashif Shah); agent-inbox.json aiGenerated:true; about/colophon/start/developers copy updated; blog per-post AI disclosure; WHATWG-proposed ai-generated meta tag on both layouts
+- [x] Navigation discoverability — /why and /start added to main nav; homepage persona links (voters, politicians, educators, researchers, developers); observatory "ethical AI showcase" positioning on homepage, about, for/developers
+- [x] Success metrics + external marketing review — trackable metrics (Cloudflare Web Analytics, external signals) documented in plan.md.marketing; observatory "ethical AI showcase" positioning strategy
 - [ ] Social media campaign (soft launch: Bluesky + Lemmy + word of mouth, March 3 2026; HN submitted; Lemmy strategy added for lemmy.sdf.org c/humanrights)
 - [ ] Educator outreach
 - [ ] Press/media outreach
