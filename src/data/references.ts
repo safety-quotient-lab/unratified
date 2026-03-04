@@ -164,6 +164,17 @@ export const references: Reference[] = [
     category: 'ai-economics',
   },
   {
+    id: 'wolfram-alpha',
+    authors: [{ family: 'Wolfram Research, Inc.', isOrganization: true }],
+    year: 2026,
+    title: 'Wolfram|Alpha Computational Knowledge Engine',
+    source: 'Wolfram Research, Inc., Champaign, IL',
+    url: 'https://www.wolframalpha.com/',
+    accessDate: '2026-03-04',
+    type: 'report',
+    category: 'ai-economics',
+  },
+  {
     id: 'wharton-pwbm',
     authors: [{ family: 'Penn Wharton Budget Model', isOrganization: true }],
     year: 2025,
