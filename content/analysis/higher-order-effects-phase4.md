@@ -545,7 +545,7 @@ Every row describes a system that cannot expand fast enough to meet the demands 
    the continuation of pre-existing trends. This represents an inherent
    limitation of any contemporaneous analysis.
 
-7. COMPUTED PROJECTIONS: Wolfram Alpha API (AppID: REDACTED) provided
+7. COMPUTED PROJECTIONS: Wolfram Alpha API provided
    computed projections for compound growth, intersection timelines, and
    derived ratios (see Appendix A). These computations verify the
    arithmetic but do not validate the assumptions. A compound growth
@@ -665,4 +665,4 @@ US Gini coefficient               │ 0.482  │ Wolfram Alpha
 
 All computations use the Wolfram Alpha Short Answers API (v1/result endpoint). Input parameters derive from the primary data sources documented in the Sources section. Computed results verify arithmetic and provide derived quantities — they do not independently validate the source data or the analytical framework that interprets it.
 
-**API**: Wolfram Alpha AppID REDACTED. Queries executed March 4, 2026.
+**API**: Wolfram Alpha Short Answers API (v1/result). Queries executed March 4, 2026.
