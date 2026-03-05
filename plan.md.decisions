@@ -1767,3 +1767,27 @@ unratified-bot queue show <id>
 **Educator template focus**: Article 13, AI judgment development, equity in educational quality, professional standing as educator, SFRC hearing ask.
 
 **What follows**: Update educator outreach emails to include the deep link `unratified.org/action/template-letters#educator-letter`.
+
+---
+
+## D053: Full Persona Coverage for Template Letters
+**Date**: 2026-03-05
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: template-letters.mdx had 5 templates covering voter/general, healthcare, education, economic impact, and educator personas. Developer, researcher, and politician (Dear Colleague) personas had lensFraming descriptions but no corresponding template written from their professional standing.
+
+**Decision**: Add three persona-specific templates: Developer Letter (Article 15, AI practitioners as constituent-experts), Researcher Letter (empirical framing, 173-nation natural experiment, productivity-pay gap data), Dear Colleague Letter (legislator-to-legislator, bipartisan hearings ask, 49-year deliberation gap).
+
+**Reasoning**:
+- Developer persona arrives with technical credibility — a letter from someone who builds AI systems carries distinct weight on AI-specific economic rights questions
+- Researcher persona brings empirical framing — citing EPI productivity-pay gap, 4-decade natural experiment, methodological rigor matches researcher identity
+- Politician Dear Colleague differs structurally from constituent letters — peer framing, no constituent identification required, co-sponsorship ask rather than committee pressure
+- All 5 site personas now have a dedicated template; full persona coverage closes the gap between site identity and advocacy toolkit
+- Deep link index updated to include all 8 templates (3 new + 5 existing)
+
+**Deep links added**:
+- `unratified.org/action/template-letters#developer-letter`
+- `unratified.org/action/template-letters#researcher-letter`
+- `unratified.org/action/template-letters#dear-colleague-letter`
+
+**What follows**: Promote persona-specific deep links in outreach — developer letter in HN/tech community posts, researcher letter in academic network emails, Dear Colleague in any legislative staff outreach.
