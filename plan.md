@@ -385,6 +385,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves
+- [x] TOC + deep-link anchors — rehype-slug + rehype-autolink-headings on all MDX content; TableOfContents.svelte on action, gap, connection, evidence, covenant article pages; heading-anchor styles in base.css
+- [x] Educator template letter (Template 5) added to template-letters.mdx with clean slug-friendly heading IDs; inline deep-link index added
+- [ ] IDEA: ICESCR vs. ICE — how ICESCR ratification would constrain deportation practices (surface scan done 2026-03-05, see below); place under /connection/deportation
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*

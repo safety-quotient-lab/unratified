@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LensPanel from '../../components/LensPanel.astro';
 import Timeline from '../../components/ui/Timeline.svelte';
+import TableOfContents from '../../components/ui/TableOfContents.svelte';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings } = await render(page);
 const showTimeline = page.id === 'timeline';
 ---
 
@@ -41,6 +42,8 @@ const showTimeline = page.id === 'timeline';
     )}
 
     <LensPanel lensFraming={page.data.lensFraming} section="gap" />
+
+    <TableOfContents headings={headings} client:load />
 
     <div class="content">
       <Content />

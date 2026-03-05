@@ -4,6 +4,7 @@ import LensPanel from '../../components/LensPanel.astro';
 import CausalChain from '../../components/ui/CausalChain.svelte';
 import ScoreChart from '../../components/ui/ScoreChart.svelte';
 import RadarChart from '../../components/ui/RadarChart.svelte';
+import TableOfContents from '../../components/ui/TableOfContents.svelte';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -15,7 +16,7 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings } = await render(page);
 const showChain = page.id === 'differential-diagnosis' || page.id === 'higher-order-effects';
 const showHypothesisChart = page.id === 'differential-diagnosis';
 const showScenarioChart = page.id === 'ratification-counterfactual';
@@ -147,6 +148,8 @@ const dqProfiles = [
     )}
 
     <LensPanel lensFraming={page.data.lensFraming} section="connection" />
+
+    <TableOfContents headings={headings} client:load />
 
     <div class="content">
       <Content />

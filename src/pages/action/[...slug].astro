@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LensPanel from '../../components/LensPanel.astro';
 import SharePrompt from '../../components/ui/SharePrompt.astro';
+import TableOfContents from '../../components/ui/TableOfContents.svelte';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings } = await render(page);
 const pageUrl = `https://unratified.org/action/${page.id}`;
 ---
 
@@ -33,6 +34,8 @@ const pageUrl = `https://unratified.org/action/${page.id}`;
     </header>
 
     <LensPanel lensFraming={page.data.lensFraming} section="action" />
+
+    <TableOfContents headings={headings} client:load />
 
     <div class="content">
       <Content />

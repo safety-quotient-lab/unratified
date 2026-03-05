@@ -162,6 +162,8 @@ CausalChain.svelte         │ SVG+Svelte   │ /connection (2 pages)        │
 Quiz.svelte                │ CSS+Svelte   │ /covenant/quiz               │ Hardcoded questions  │ ✓
 ScoreChart.svelte          │ Pure SVG     │ /connection (2) /evidence (1)│ Inline Astro props   │ ✓ D020
 RadarChart.svelte          │ Pure SVG     │ /connection/dignity-quotient │ Inline Astro props   │ ✓ D020
+TableOfContents.svelte     │ client:load  │ action/gap/connection/       │ headings[] from      │ ✓ D051
+                           │              │ evidence/covenant articles   │ render() API         │
 Sankey (V7)                │ —            │ —                            │ No flow data exists  │ Deferred
 ```
 
@@ -185,8 +187,10 @@ Selected via full differential diagnosis through Orders 0–4. See plan.md.decis
 ```
 LAYER              │ TECHNOLOGY          │ PURPOSE
 ───────────────────┼─────────────────────┼──────────────────────────────
-Static generation  │ Astro 4+            │ Content-first SSG; zero JS default
+Static generation  │ Astro 5+            │ Content-first SSG; zero JS default
 Content authoring  │ MDX                 │ Markdown + component embedding
+Heading anchors    │ rehype-slug +       │ Auto-generate id attrs + # anchor links
+                   │ rehype-autolink     │ on all MDX headings (D051)
 Interactive islands│ Svelte 5            │ Compiled components, no runtime
 Visualizations     │ D3.js + Layercake   │ Full viz power + Svelte-native charts
 Styling            │ TBD (CSS/Tailwind)  │ CSS-driven lens layout transformation

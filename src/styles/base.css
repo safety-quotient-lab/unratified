@@ -604,3 +604,24 @@ a[class*="-card"]:hover::after {
     gap: var(--space-md);
   }
 }
+
+/* Heading anchors (rehype-autolink-headings) */
+.heading-anchor {
+  margin-left: var(--space-sm);
+  color: var(--color-border);
+  text-decoration: none;
+  font-size: 0.8em;
+  opacity: 0;
+  transition: opacity 0.15s;
+  border-bottom: none;
+}
+
+h2:hover .heading-anchor,
+h3:hover .heading-anchor,
+h4:hover .heading-anchor {
+  opacity: 1;
+}
+
+.heading-anchor:hover {
+  color: var(--color-accent);
+}

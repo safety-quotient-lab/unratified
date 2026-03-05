@@ -1719,3 +1719,51 @@ unratified-bot queue show <id>
 - `github.com/olekukonko/tablewriter` — engagement tables
 
 **What follows**: Initialize repo `safety-quotient-lab/unratified-bot`. Build slice 1 (scaffold) first.
+
+---
+
+## D051: TOC + Deep-Link Anchors Across All MDX Content Pages
+**Date**: 2026-03-05
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: No heading `id` attributes existed on any MDX-rendered pages, making it impossible to deep-link to specific sections (educator template letters, ICESCR article subsections, etc.). HN UX constraints already documented this as a MEDIUM priority need. The educator template letter was the triggering use case — no way to share a direct link to it.
+
+**Decision**: Add `rehype-slug` + `rehype-autolink-headings` to astro.config.mjs (applied to both .md and .mdx via shared `rehypePlugins` array), create `TableOfContents.svelte` island, wire TOC into all content slug page templates.
+
+**Reasoning**:
+- rehype-slug auto-generates stable `id` attributes from heading text at build time — zero per-file MDX changes required
+- rehype-autolink-headings appends a `#` anchor link to every heading — hover-reveal pattern keeps UI clean
+- Astro's `render()` API returns a `headings` array (`[{depth, slug, text}]`) usable at build time for TOC generation
+- `<details open>` pattern for TOC: collapses on mobile, open by default on desktop, no JS layout dependency
+- Heading text drives the slug — stable heading names = stable URLs; renamed template-letters headings NOW before promoting deep links publicly
+
+**Pages affected**: action/[...slug], gap/[...slug], connection/[...slug], evidence/[...slug], covenant/articles/[...slug] (via ArticleLayout)
+
+**Deep link examples now functional**:
+- `unratified.org/action/template-letters#educator-letter`
+- `unratified.org/action/template-letters#general-letter`
+- `unratified.org/action/template-letters#healthcare-letter`
+- `unratified.org/action/template-letters#education-letter`
+- `unratified.org/action/template-letters#economic-impact-letter`
+
+**What follows**: Promote deep links in social copy (Bluesky templates), educator outreach emails, and any future reply template guidance.
+
+---
+
+## D052: Educator Template Letter Added
+**Date**: 2026-03-05
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: `template-letters.mdx` had four templates (general, healthcare, education, economic impact) plus an educator *framing* via lensFraming frontmatter. No template existed written from an educator's professional perspective. Educators are a primary entry persona (Tier 1) and the most likely audience to share deep links to specific templates with colleagues.
+
+**Decision**: Add Template 5 (Educator Letter) written from a teacher/professor standpoint, anchored at `#educator-letter`. Also renamed all template headings from verbose numbered format ("Template 2: Healthcare Focus (Article 12)") to clean slug-friendly names ("Healthcare Letter") and added an inline deep-link index at the top of the instructions section.
+
+**Reasoning**:
+- Educator persona arrives with a different professional framing than constituent-as-voter — "I teach students who will live in this economy" carries distinct credibility with Senate offices
+- Article 13 (education) + AI judgment development argument is the educator's native terrain
+- Clean heading slugs produce stable, shareable URLs — verbose numbered headings produce fragile URLs that break when templates are reordered
+- Inline deep-link index makes the page self-documenting for social sharing
+
+**Educator template focus**: Article 13, AI judgment development, equity in educational quality, professional standing as educator, SFRC hearing ask.
+
+**What follows**: Update educator outreach emails to include the deep link `unratified.org/action/template-letters#educator-letter`.
