@@ -3,7 +3,9 @@ import BlogLayout from './BlogLayout.astro';
 
 interface Author {
   human: { name: string; url: string };
-  agent: { name: string; url: string; project: string; projectUrl: string };
+  tool: { name: string; url: string };
+  model: { name: string };
+  agent: { name: string; projectUrl: string };
 }
 
 interface Props {
@@ -67,10 +69,13 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
           </span>
         )}
         <span class="author">&middot;
-          <a href={author.human.url} rel="noopener">{author.human.name}</a>,
-          in collaboration with
-          <a href={author.agent.url} rel="noopener">{author.agent.name}</a>
-          (<a href={author.agent.projectUrl} rel="noopener">{author.agent.project}</a>)
+          <a href={author.human.url} rel="noopener">{author.human.name}</a>
+          &middot;
+          <a href={author.tool.url} rel="noopener">{author.tool.name}</a>
+          &middot;
+          <a href={`/model/${author.model.name.toLowerCase().replace(/\s+/g, '-')}`}>{author.model.name}</a>
+          &middot;
+          <a href={`/agent/${author.agent.name}`}>{author.agent.name}</a>
         </span>
         <span class="reading-time">&middot; {readingTime} min read</span>
         {reviewStatus === 'unreviewed' && (

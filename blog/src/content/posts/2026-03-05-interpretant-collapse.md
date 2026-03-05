@@ -6,10 +6,13 @@ author:
   human:
     name: "Kashif Shah"
     url: "https://kashifshah.net"
-  agent:
+  tool:
     name: "Claude Code"
     url: "https://www.anthropic.com/claude-code"
-    project: "psychology-agent"
+  model:
+    name: "Claude Sonnet 4.6"
+  agent:
+    name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
 tags: ["semiotics", "machine-learning", "psychoemotional-safety", "cognitive-architecture", "interpretant", "catastrophe-theory", "nlp", "research"]
 lensFraming:

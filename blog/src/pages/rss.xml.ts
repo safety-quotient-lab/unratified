@@ -20,7 +20,7 @@ export async function GET(context: APIContext) {
       description: post.data.summary,
       pubDate: new Date(post.data.publishedDate),
       link: `/${post.id}/`,
-      author: `${post.data.author.human.name}, with ${post.data.author.agent.name}`,
+      author: `${post.data.author.human.name} · ${post.data.author.tool.name} · ${post.data.author.model.name} · ${post.data.author.agent.name}`,
       categories: post.data.tags,
     })),
     customData: '<language>en-us</language>',

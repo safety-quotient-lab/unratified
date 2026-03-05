@@ -1,7 +1,9 @@
 <script lang="ts">
   interface Author {
     human: { name: string; url: string };
-    agent: { name: string; url: string; project: string; projectUrl: string };
+    tool: { name: string; url: string };
+    model: { name: string };
+    agent: { name: string; projectUrl: string };
   }
 
   interface Post {
@@ -166,8 +168,12 @@
       <div class="post-card-meta">
         <span class="author">
           <a href={post.author.human.url} rel="noopener">{post.author.human.name}</a>
-          with
-          <a href={post.author.agent.projectUrl} rel="noopener">{post.author.agent.name}</a>
+          &middot;
+          <a href={post.author.tool.url} rel="noopener">{post.author.tool.name}</a>
+          &middot;
+          <a href={`/model/${post.author.model.name.toLowerCase().replace(/\s+/g, '-')}`}>{post.author.model.name}</a>
+          &middot;
+          <a href={`/agent/${post.author.agent.name}`}>{post.author.agent.name}</a>
         </span>
         {#if post.reviewStatus === "unreviewed"}
           <span class="review-badge">Pre-Review</span>

@@ -4,13 +4,14 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  const tags = [...new Set(posts.flatMap(p => p.data.tags))];
-  return tags.map(tag => ({
-    params: { tag },
+  const agents = [...new Set(posts.map(p => p.data.author.agent.name))];
+  return agents.map(agent => ({
+    params: { slug: agent },
     props: {
-      tag,
+      agent,
+      projectUrl: posts.find(p => p.data.author.agent.name === agent)!.data.author.agent.projectUrl,
       posts: posts
-        .filter(p => p.data.tags.includes(tag))
+        .filter(p => p.data.author.agent.name === agent)
         .sort((a, b) =>
           new Date(b.data.publishedDate).getTime() -
           new Date(a.data.publishedDate).getTime()
@@ -19,7 +20,7 @@ export async function getStaticPaths() {
   }));
 }
 
-const { tag, posts } = Astro.props;
+const { agent, projectUrl, posts } = Astro.props;
 
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', {
@@ -30,11 +31,14 @@ function formatDate(date: Date): string {
 }
 ---
 
-<BlogLayout title={`Posts tagged #${tag}`}>
-  <div class="tag-page">
+<BlogLayout title={`Posts from ${agent}`}>
+  <div class="filter-page">
     <header>
-      <h1>#{tag}</h1>
-      <p class="lede">{posts.length} post{posts.length !== 1 ? 's' : ''} tagged with <strong>#{tag}</strong></p>
+      <h1>{agent}</h1>
+      <p class="lede">
+        {posts.length} post{posts.length !== 1 ? 's' : ''} from <strong>{agent}</strong>
+        &middot; <a href={projectUrl} rel="noopener">View project →</a>
+      </p>
     </header>
 
     <section class="post-list">
@@ -45,15 +49,6 @@ function formatDate(date: Date): string {
           </time>
           <h2><a href={`/${post.id}`}>{post.data.title}</a></h2>
           <p>{post.data.summary}</p>
-          <span class="author">
-            <a href={post.data.author.human.url} rel="noopener">{post.data.author.human.name}</a>
-            &middot;
-            <a href={post.data.author.tool.url} rel="noopener">{post.data.author.tool.name}</a>
-            &middot;
-            <a href={`/model/${post.data.author.model.name.toLowerCase().replace(/\s+/g, '-')}`}>{post.data.author.model.name}</a>
-            &middot;
-            <a href={`/agent/${post.data.author.agent.name}`}>{post.data.author.agent.name}</a>
-          </span>
         </article>
       ))}
     </section>
@@ -65,7 +60,7 @@ function formatDate(date: Date): string {
 </BlogLayout>
 
 <style>
-  .tag-page {
+  .filter-page {
     max-width: var(--max-width-content);
     margin: 0 auto;
   }
@@ -73,6 +68,15 @@ function formatDate(date: Date): string {
   .lede {
     color: var(--color-text-muted);
     margin-bottom: var(--space-2xl);
+  }
+
+  .lede a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .lede a:hover {
+    text-decoration: underline;
   }
 
   .post-list {
@@ -103,20 +107,6 @@ function formatDate(date: Date): string {
   }
 
   .post-card h2 a:hover {
-    color: var(--color-accent);
-  }
-
-  .author {
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-  }
-
-  .author a {
-    color: var(--color-text-muted);
-    text-decoration: none;
-  }
-
-  .author a:hover {
     color: var(--color-accent);
   }
 

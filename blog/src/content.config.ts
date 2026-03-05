@@ -21,10 +21,15 @@ const posts = defineCollection({
         name: z.string(),
         url: z.string().url(),
       }),
-      agent: z.object({
+      tool: z.object({
         name: z.string(),
         url: z.string().url(),
-        project: z.string(),
+      }),
+      model: z.object({
+        name: z.string(),
+      }),
+      agent: z.object({
+        name: z.string(),
         projectUrl: z.string().url(),
       }),
     }),
