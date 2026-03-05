@@ -21,13 +21,12 @@ import {
   description="Definitions, taxonomy, and references for the analytical vocabulary used throughout this site."
   section="glossary"
 >
-  <nav class="glossary-nav" aria-label="Glossary categories">
-    <ul>
-      {CATEGORY_ORDER.map((cat) => (
-        <li><a href={`#${cat}`}>{CATEGORY_LABELS[cat]}</a></li>
-      ))}
-      <li><a href="#references">References</a></li>
-    </ul>
+  <nav class="hub-jump" aria-label="Jump to section">
+    <span class="hub-jump-label">Jump to:</span>
+    {CATEGORY_ORDER.map((cat) => (
+      <a href={`#${cat}`}>{CATEGORY_LABELS[cat]}</a>
+    ))}
+    <a href="#references">References</a>
   </nav>
 
   <div class="glossary-meta">
@@ -154,33 +153,6 @@ import {
 </SectionLayout>
 
 <style>
-  .glossary-nav ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-xl);
-    padding: var(--space-md);
-    background: var(--color-surface-alt);
-    border-radius: 4px;
-  }
-
-  .glossary-nav a {
-    font-family: var(--font-heading);
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-decoration: none;
-    padding: var(--space-xs) var(--space-sm);
-    border: 1px solid var(--color-border);
-    border-radius: 3px;
-    transition: border-color 0.15s, color 0.15s;
-  }
-
-  .glossary-nav a:hover {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-  }
-
   .glossary-meta {
     font-size: 0.875rem;
     color: var(--color-text-muted);
