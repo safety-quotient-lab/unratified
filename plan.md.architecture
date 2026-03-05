@@ -441,3 +441,138 @@ D3-geo + topojson     │   2.61 KB   │ dynamic import
 ──────────────────────┼─────────────┼──────────────
 Total (max per page)  │  ~31 KB     │ progressive
 ```
+
+---
+
+## unratified-bot — Bluesky CLI Client (D049, D050)
+**Date**: 2026-03-04
+**Repo**: safety-quotient-lab/unratified-bot (separate repo)
+**Language**: Go
+**Status**: DESIGNED — not yet built
+
+### Package Structure
+
+```
+unratified-bot/
+├── cmd/unratified-bot/
+│   └── main.go              # cobra root + subcommand wiring
+├── internal/
+│   ├── bsky/                # indigo wrapper
+│   │   ├── client.go        # auth, session cache (~/.unratified-bot/session.json)
+│   │   ├── post.go          # create post/thread/quote/reply + grapheme validation + link card OG
+│   │   └── notifications.go # fetch + parse + dedup notifications
+│   ├── claude/
+│   │   └── drafter.go       # Anthropic SDK, mission system prompt, context budget
+│   ├── queue/
+│   │   ├── db.go            # SQLite init + migrations (modernc/sqlite pure-Go)
+│   │   └── models.go        # Notification, Draft, CampaignPost, DeadLetter types
+│   ├── daemon/
+│   │   └── daemon.go        # polling loop, backoff/jitter, signal handling, health HTTP
+│   └── review/
+│       └── review.go        # interactive approval: [A]pprove [E]dit [S]kip [D]iscard
+├── Makefile
+├── go.mod
+└── README.md
+```
+
+### SQLite Schema (4 tables)
+
+```
+notifications   — raw AT Protocol notification + processed flag + seen_at
+drafts          — linked to notification, Claude draft text, status (pending/approved/discarded)
+campaign_posts  — URIs of own posts for engagement tracking, registered at post time
+dead_letter     — failed items after 3 attempts, surfaced by queue list --failed
+```
+
+### Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| github.com/bluesky-social/indigo | AT Protocol client |
+| github.com/anthropics/anthropic-sdk-go | Claude API |
+| github.com/spf13/cobra | CLI framework |
+| modernc.org/sqlite | Pure-Go SQLite (no CGo) |
+| github.com/olekukonko/tablewriter | Engagement metrics tables |
+
+### Auth (env vars only)
+
+```
+BSKY_HANDLE          kashfshah.bsky.social
+BSKY_PASSWORD        <app-password>
+ANTHROPIC_API_KEY    <key>
+BSKY_POLL_INTERVAL   60  (seconds, optional, default 60)
+```
+
+### Config File
+
+`~/.unratified-bot/config.toml` — poll interval, reply depth limit, max auto-reply/hour,
+log path, D1 sync toggle. Secrets stay in env vars only.
+
+### Data Directory
+
+```
+~/.unratified-bot/
+├── queue.db              # SQLite queue (all 4 tables)
+└── session.json          # cached Bluesky JWT (refreshed automatically)
+```
+
+### Command Surface
+
+```
+unratified-bot post "text"                   # single post
+unratified-bot thread "p1" "p2" "p3"        # thread
+unratified-bot thread --file thread.json    # thread from JSON file
+unratified-bot quote <URI|URL> "text"       # quote-post
+unratified-bot reply <URI|URL> "text"       # reply
+unratified-bot notifications                 # one-shot: show recent
+unratified-bot engagement                    # one-shot: campaign post metrics table
+unratified-bot daemon                        # polling loop: queue + draft
+unratified-bot review                        # interactive approval gate
+unratified-bot queue list [--failed]         # list pending / dead-letter items
+unratified-bot queue show <id>              # show item + Claude draft
+```
+
+### Thread JSON Schema (--file format)
+
+```json
+{
+  "posts": [
+    { "text": "...", "images": [], "delay_ms": 0 },
+    { "text": "...", "images": [], "delay_ms": 0 }
+  ]
+}
+```
+
+### Daemon Polling Flow
+
+```
+poll Bluesky /xrpc/app.bsky.notification.listNotifications every N seconds
+  cursor persisted in SQLite (prevents reprocessing on restart)
+  → new mention or reply?
+    → fetch full thread context (max depth 3)
+    → call Claude API with mission system prompt (fair witness + e-prime + ICESCR scope)
+    → write {notification + draft} to SQLite drafts table
+    → log to stdout
+  → 429 response? exponential backoff with jitter
+  → SIGTERM/SIGINT? drain in-flight, flush SQLite, exit clean
+  → health check HTTP optional: --health-port 8080 → GET /health returns JSON
+```
+
+### Claude Mission System Prompt (design intent)
+
+- Voice: fair witness + e-prime + progressive disclosure
+- Mission scope: ICESCR, AI economic impact, advocacy — decline engagement outside scope
+- Tone calibration per notification type (curious question vs challenge vs harassment)
+- Max reply depth: 3 in any reply chain
+- Output: reply text only, ≤280 graphemes, no filler phrases
+- Context window budget: last 5 posts in thread + own profile bio
+
+### Future Extensions (extrapolated)
+
+- E-1: Confabulation probe mode — actively test other AI accounts using Exchange methodology
+- E-2: Keyword-wide mention monitoring — search "ICESCR", "unratified.org" across all Bluesky
+- E-3: Thread-from-blog — blog URL → Claude-generated thread summary
+- E-4: Cross-platform relay — simultaneous Mastodon post via ActivityPub
+- E-5: Optimal post timing intelligence — engagement histogram → posting recommendations
+- E-6: Cloudflare D1 backend — sync SQLite queue to D1 for cloud daemon deployment
+- E-7: Engagement export — campaign metrics → Markdown or CSV report

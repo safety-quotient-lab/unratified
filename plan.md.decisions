@@ -1636,3 +1636,86 @@ Affected elements: lens/theme toggle buttons, breadcrumb links, breadcrumb text,
 - Type 8 validation with additional examples
 - Create gemini-response-003.json incorporating Exchange 3 findings
 - Deploy both sites
+
+---
+
+## D049: unratified-bot — Dedicated Bluesky CLI Client in Go
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: `scripts/bsky-post.mjs` handles single posts and threads but has no feed reading, engagement tracking, notification monitoring, or bot/daemon capabilities. The campaign requires a more capable tool as Bluesky activity grows. Node.js startup overhead and credential handling (file-based .dev.vars) add friction.
+
+**Decision**: Build a dedicated Go CLI client in a separate repo (`safety-quotient-lab/unratified-bot`). Single binary, multiple subcommands, daemon mode with Claude-powered reply drafting and human approval gate.
+
+**Reasoning**:
+- Go produces a single static binary — fast startup, easy deployment, no runtime dependency
+- Separate repo allows independent versioning and potential reuse across campaigns
+- `github.com/bluesky-social/indigo` (official Bluesky Go library) provides full AT Protocol support
+- Daemon mode enables continuous monitoring without manual polling
+- SQLite (modernc/sqlite — pure Go, no CGo) provides zero-ops persistent queue
+- Human approval gate prevents unintended autonomous posting on sensitive advocacy content
+- Claude API integration via `github.com/anthropics/anthropic-sdk-go` enables mission-aligned reply drafting
+
+**Auth**: Env vars only (`BSKY_HANDLE`, `BSKY_PASSWORD`, `ANTHROPIC_API_KEY`, `BSKY_POLL_INTERVAL`)
+
+**Data directory**: `~/.unratified-bot/` (queue.db + campaign-posts tracking)
+
+**What follows**: See D050 for full architecture. Build in 12 slices, credit-constrained minimum viable path is slices 1–5 + 7 (skip Claude drafter initially).
+
+---
+
+## D050: unratified-bot Architecture
+**Date**: 2026-03-04
+**Status**: DECIDED
+
+**Observation**: Designing the full unratified-bot system required resolving six key questions: language (Go), library (indigo), repo location (separate), bot behavior (queue + Claude drafting), approval gate (human), and persistence (SQLite).
+
+**Decision**: 12-slice build plan. Critical path (slices 1–7, ~2,400 LOC). Full roadmap (1–12, ~4,050 LOC).
+
+**Command surface**:
+```
+unratified-bot post "text"
+unratified-bot thread "p1" "p2" "p3"
+unratified-bot thread --file thread.json
+unratified-bot quote <URI|URL> "text"
+unratified-bot reply <URI|URL> "text"
+unratified-bot notifications
+unratified-bot engagement
+unratified-bot daemon
+unratified-bot review
+unratified-bot queue list
+unratified-bot queue show <id>
+```
+
+**Daemon flow**: Poll Bluesky every N seconds → new mention/reply → fetch thread context → Claude API draft → write to SQLite queue → log.
+
+**Review flow**: List queue items → show original + Claude draft → [A]pprove/[E]dit/$EDITOR/[S]kip/[D]iscard → post on approve → mark replied in SQLite.
+
+**12 build slices** (S=small ~200 LOC, M=medium ~350 LOC, L=large ~500 LOC):
+1. scaffold (S) — go.mod, cobra, config.toml, Makefile
+2. bsky-client (L) — auth + session cache + post/thread/quote/reply + validation + link cards
+3. queue + migrations (M) — SQLite 4-table schema, CRUD, cursor, dead letter
+4. notifications (S) — one-shot fetch + dedup + display
+5. daemon (M) — polling loop + backoff + graceful shutdown + health endpoint
+6. claude-drafter (M) — Anthropic SDK + mission system prompt + context budget
+7. review (M) — interactive approval TUI + $EDITOR + SQLite updates
+8. engagement (S) — metrics table + CSV export
+9. keyword monitor (S) — search-index polling via daemon
+10. thread-from-blog (M) — blog URL → Claude thread summary
+11. confabulation probe (L) — active AI testing instrument
+12. cross-platform relay (L) — Mastodon simultaneous post
+
+**Key interpolations resolved**: session token caching, notification cursor/dedup, Claude system prompt design, post grapheme validation, auto-register campaign posts, rate limit backoff, graceful shutdown, dead letter queue, $EDITOR review integration, thread JSON schema, link card OG fetch, health check endpoint, test suite shape, migration from bsky-post.mjs.
+
+**Key extrapolations identified**: confabulation probe mode (E-1), keyword-wide mention monitoring (E-2), thread-from-blog (E-3), cross-platform Mastodon relay (E-4), optimal post timing intelligence (E-5), Cloudflare D1 backend option (E-6), engagement export/report (E-7).
+
+**Credit-constrained minimum viable path**: Slices 1, 2, 3, 4, 7 (~1,350 LOC) — post/thread/reply/quote from CLI + notifications + SQLite queue + human review. No daemon, no Claude. Add 5 + 6 when credits recover.
+
+**Dependencies**:
+- `github.com/bluesky-social/indigo` — AT Protocol
+- `github.com/anthropics/anthropic-sdk-go` — Claude API
+- `github.com/spf13/cobra` — CLI framework
+- `modernc.org/sqlite` — pure-Go SQLite
+- `github.com/olekukonko/tablewriter` — engagement tables
+
+**What follows**: Initialize repo `safety-quotient-lab/unratified-bot`. Build slice 1 (scaffold) first.
