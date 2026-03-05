@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title,
-  description = 'Advocating for U.S. ratification of the ICESCR through the lens of AI\'s economic impact',
+  description = '173 nations ratified the ICESCR. The U.S. signed in 1977 and never followed through. Now AI reshapes the economy \u2014 and the treaty matters more than ever.',
   defaultLens = 'voter',
   ogType = 'website',
 } = Astro.props;
@@ -165,14 +165,14 @@ if (Astro.url.pathname !== '/glossary') {
     <meta property="og:image" content={`${siteOrigin}/og-image`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Unratified — ICESCR ratification advocacy" />
+    <meta property="og:image:alt" content="Unratified \u2014 173 nations ratified the ICESCR. The U.S. signed it and never followed through." />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${siteOrigin}/og-image`} />
-    <meta name="twitter:image:alt" content="Unratified — ICESCR ratification advocacy" />
+    <meta name="twitter:image:alt" content="Unratified \u2014 173 nations ratified the ICESCR. The U.S. signed it and never followed through." />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({

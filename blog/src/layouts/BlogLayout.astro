@@ -12,7 +12,7 @@ interface Props {
 
 const {
   title,
-  description = 'Blog — ICESCR advocacy and AI economics analysis',
+  description = 'AI confabulation research, ICESCR ratification advocacy, and the intersection of artificial intelligence with economic rights. Seven confabulation types documented across 31 rounds of testing.',
   ogType = 'website',
 } = Astro.props;
 
@@ -25,7 +25,7 @@ const structuredData = {
   '@context': 'https://schema.org',
   '@type': 'Blog',
   name: 'Unratified Blog',
-  description: 'Analysis, updates, and community contributions on ICESCR ratification and AI economics.',
+  description: 'AI confabulation research, ICESCR ratification advocacy, and fair witness methodology. Documenting seven confabulation types across 31 rounds of empirical testing.',
   url: siteOrigin,
   publisher: {
     '@type': 'Organization',
@@ -113,13 +113,13 @@ const structuredData = {
     <meta property="og:image" content={`${mainSite}/og-image`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Unratified Blog — ICESCR analysis and AI accuracy research" />
+    <meta property="og:image:alt" content="Unratified Blog \u2014 AI confabulation taxonomy, ICESCR ratification advocacy, and fair witness methodology" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={`${mainSite}/og-image`} />
-    <meta name="twitter:image:alt" content="Unratified Blog — ICESCR analysis and AI accuracy research" />
+    <meta name="twitter:image:alt" content="Unratified Blog \u2014 AI confabulation taxonomy, ICESCR ratification advocacy, and fair witness methodology" />
 
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
