@@ -7,7 +7,9 @@
 
   let { headings }: { headings: Heading[] } = $props();
 
-  const tocHeadings = headings.filter(h => h.depth === 2 || h.depth === 3);
+  const tocHeadings = headings
+    .filter(h => h.depth === 2 || h.depth === 3)
+    .map(h => ({ ...h, text: h.text.replace(/#$/, '').trim() }));
 </script>
 
 {#if tocHeadings.length > 1}

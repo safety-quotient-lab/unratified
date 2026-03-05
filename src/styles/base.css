@@ -631,7 +631,7 @@ h4:hover .heading-anchor {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-sm) var(--space-md);
+  gap: 0;
   margin-bottom: var(--space-2xl);
   padding: var(--space-md) var(--space-lg);
   background: var(--color-surface);
@@ -647,6 +647,7 @@ h4:hover .heading-anchor {
   letter-spacing: 0.05em;
   color: var(--color-text-muted);
   white-space: nowrap;
+  margin-right: var(--space-md);
 }
 
 .hub-jump a {
@@ -661,4 +662,11 @@ h4:hover .heading-anchor {
 
 .hub-jump a:hover {
   border-bottom-color: var(--color-accent);
+}
+
+.hub-jump a + a::before {
+  content: '|';
+  padding: 0 var(--space-sm);
+  color: var(--color-text-muted);
+  pointer-events: none;
 }
