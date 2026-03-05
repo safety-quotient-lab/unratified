@@ -10,20 +10,19 @@ const obs = await getObservatoryStats();
   title="About"
   description="How this project connects ICESCR advocacy, AI economics, and evidence-based analysis."
   section="about"
+  sections={[
+    { id: 'what-we-do', label: 'What We Do' },
+    { id: 'current-status', label: 'Status' },
+    { id: 'analysis', label: 'The Analysis' },
+    { id: 'lenses', label: 'Five Lenses' },
+    { id: 'explore', label: 'Explore' },
+    { id: 'meta-layer', label: 'AI Meta-Layer' },
+    { id: 'safety-quotient-lab', label: 'Safety Quotient Lab' },
+    { id: 'values', label: 'Values' },
+    { id: 'licensing', label: 'Licensing' },
+    { id: 'observatory', label: 'Observatory' },
+  ]}
 >
-  <nav class="hub-jump" aria-label="Jump to section">
-    <span class="hub-jump-label">Jump to:</span>
-    <a href="#what-we-do">What We Do</a>
-    <a href="#current-status">Status</a>
-    <a href="#analysis">The Analysis</a>
-    <a href="#lenses">Five Lenses</a>
-    <a href="#explore">Explore</a>
-    <a href="#meta-layer">AI Meta-Layer</a>
-    <a href="#safety-quotient-lab">Safety Quotient Lab</a>
-    <a href="#values">Values</a>
-    <a href="#licensing">Licensing</a>
-    <a href="#observatory">Observatory</a>
-  </nav>
 
   <!-- Section 1: What Unratified Does -->
   <section class="about-section" id="what-we-do">

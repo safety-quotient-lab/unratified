@@ -11,7 +11,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </header>
 
-    <section>
+    <nav class="hub-jump" aria-label="Jump to section">
+      <span class="hub-jump-label">Jump to:</span>
+      <a href="#vendors">Three Vendors</a>
+      <a href="#open-source">Open Source</a>
+      <a href="#tech-stack">Technical Stack</a>
+      <a href="#data-sources">Data Sources</a>
+      <a href="#privacy">Privacy</a>
+    </nav>
+
+    <section id="vendors">
       <h2>Three Vendors</h2>
       <p>
         This project relies on three vendors. Each provides a distinct capability.
@@ -62,7 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
 
-    <section>
+    <section id="open-source">
       <h2>Open Source</h2>
       <p>
         All source code carries the <a href="https://www.apache.org/licenses/LICENSE-2.0" rel="noopener">Apache 2.0</a> license.
@@ -76,7 +85,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </ul>
     </section>
 
-    <section>
+    <section id="tech-stack">
       <h2>Technical Stack</h2>
       <p>
         <a href="https://astro.build/" rel="noopener">Astro 5</a> +
@@ -89,7 +98,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </section>
 
-    <section>
+    <section id="data-sources">
       <h2>Data Sources</h2>
       <p>
         Every quantitative claim traces to a primary source. Key data providers include
@@ -99,7 +108,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </section>
 
-    <section>
+    <section id="privacy">
       <h2>Privacy</h2>
       <p>
         No tracking scripts. No cookies. No fingerprinting. No personal data collection.

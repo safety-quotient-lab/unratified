@@ -54,19 +54,17 @@ const lensFraming = {
   description="The same analysis, five ways. Each lens frames the ICESCR ratification question through the value system most relevant to a different kind of reader — while the underlying claim stays constant."
   section="for"
   breadcrumbLabel="The Perspectives"
+  sections={[
+    { id: 'voters', label: 'Voters' },
+    { id: 'politicians', label: 'Politicians' },
+    { id: 'developers', label: 'Developers' },
+    { id: 'educators', label: 'Educators' },
+    { id: 'researchers', label: 'Researchers' },
+    { id: 'what-an-ai-noticed', label: 'Behind the Architecture' },
+    { id: 'how-the-lens-works', label: 'How the Lens Works' },
+  ]}
 >
   <LensPanel lensFraming={lensFraming} section="for" />
-
-  <nav class="hub-jump" aria-label="Jump to section">
-    <span class="hub-jump-label">Jump to:</span>
-    <a href="#voters">Voters</a>
-    <a href="#politicians">Politicians</a>
-    <a href="#developers">Developers</a>
-    <a href="#educators">Educators</a>
-    <a href="#researchers">Researchers</a>
-    <a href="#what-an-ai-noticed">Behind the Architecture</a>
-    <a href="#how-the-lens-works">How the Lens Works</a>
-  </nav>
 
   <section class="lens-note" id="how-the-lens-works">
     <h2>How the Lens Toggle Works</h2>

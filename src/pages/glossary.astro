@@ -14,20 +14,19 @@ import {
   getReferencesByCategory,
   formatAPA,
 } from '../data/references';
+
+const sections = [
+  ...CATEGORY_ORDER.map(cat => ({ id: cat, label: CATEGORY_LABELS[cat] })),
+  { id: 'references', label: 'References' },
+];
 ---
 
 <SectionLayout
   title="Glossary"
   description="Definitions, taxonomy, and references for the analytical vocabulary used throughout this site."
   section="glossary"
+  sections={sections}
 >
-  <nav class="hub-jump" aria-label="Jump to section">
-    <span class="hub-jump-label">Jump to:</span>
-    {CATEGORY_ORDER.map((cat) => (
-      <a href={`#${cat}`}>{CATEGORY_LABELS[cat]}</a>
-    ))}
-    <a href="#references">References</a>
-  </nav>
 
   <div class="glossary-meta">
     <p>

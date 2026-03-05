@@ -26,10 +26,16 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
   title="The Evidence"
   description="Empirical data and current conditions — the observable foundation for connecting AI-driven economic transformation to ICESCR-protected rights."
   section="evidence"
+  sections={[
+    { id: 'evidence-documents', label: 'Documents' },
+    { id: 'methodology', label: 'Methodology' },
+    { id: 'connections', label: 'Your Rights' },
+    { id: 'observatory', label: 'Live Signal' },
+  ]}
 >
   <LensPanel lensFraming={lensFraming} section="evidence" />
 
-  <div class="evidence-grid">
+  <div class="evidence-grid" id="evidence-documents">
     {sorted.map((page) => (
       <a href={`/evidence/${page.id}`} class="evidence-card">
         {cardStats[page.id] && (
@@ -44,7 +50,7 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
     ))}
   </div>
 
-  <section class="evidence-note">
+  <section class="evidence-note" id="methodology">
     <h2>Methodology</h2>
     <p>
       Every claim on this site traces back to observable data — empirical studies,
@@ -62,7 +68,7 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
     </p>
   </section>
 
-  <section class="cross-section-nav">
+  <section class="cross-section-nav" id="connections">
     <h2>These Numbers Connect to Your Rights</h2>
     <p>
       The evidence documented here directly informs the <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a> <a href="/covenant">articles</a>
@@ -77,7 +83,7 @@ const cardStats: Record<string, { number: string; label: string; variant?: strin
     </p>
   </section>
 
-  <section class="observatory-callout">
+  <section class="observatory-callout" id="observatory">
     <h2>Live Signal Dashboard</h2>
     <p>
       The <a href="https://observatory.unratified.org/signals" rel="noopener">Human Rights Observatory</a>

@@ -20,7 +20,15 @@ import RatificationMap from '../components/ui/RatificationMap.svelte';
       </p>
     </header>
 
-    <section class="the-gap">
+    <nav class="hub-jump" aria-label="Jump to section">
+      <span class="hub-jump-label">Jump to:</span>
+      <a href="#the-promise">The Promise</a>
+      <a href="#the-urgency">The Urgency</a>
+      <a href="#what-it-means">What It Means</a>
+      <a href="#what-you-can-do">What You Can Do</a>
+    </nav>
+
+    <section class="the-gap" id="the-promise">
       <h2>The Promise</h2>
       <p>
         In 1977, the United States signed the
@@ -37,7 +45,7 @@ import RatificationMap from '../components/ui/RatificationMap.svelte';
       <RatificationMap client:visible />
     </section>
 
-    <section class="the-urgency">
+    <section class="the-urgency" id="the-urgency">
       <h2>The Urgency</h2>
       <p>
         Artificial intelligence reshapes the economy faster than any technology since
@@ -52,7 +60,7 @@ import RatificationMap from '../components/ui/RatificationMap.svelte';
       </p>
     </section>
 
-    <section class="the-stakes">
+    <section class="the-stakes" id="what-it-means">
       <h2>What Unratified Means</h2>
       <div class="stakes-grid">
         <div class="stake">
@@ -90,7 +98,7 @@ import RatificationMap from '../components/ui/RatificationMap.svelte';
       </div>
     </section>
 
-    <section class="what-next">
+    <section class="what-next" id="what-you-can-do">
       <h2>What You Can Do</h2>
       <p>
         Understanding leads to action. Choose your path:

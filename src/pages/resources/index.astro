@@ -9,19 +9,18 @@ const obs = await getObservatoryStats();
   title="Resources"
   description="Further reading, research sources, and organizations working on ICESCR ratification and economic rights."
   section="resources"
+  sections={[
+    { id: 'icescr', label: 'ICESCR & Human Rights' },
+    { id: 'observatory', label: 'Observatory' },
+    { id: 'ai-economics', label: 'AI Economics' },
+    { id: 'computational-data', label: 'Computational Data' },
+    { id: 'infrastructure', label: 'Infrastructure' },
+    { id: 'geopolitical-context', label: 'Geopolitical Context' },
+    { id: 'economic-theory', label: 'Economic Theory' },
+    { id: 'pedagogical-design', label: 'Pedagogical Design' },
+    { id: 'organizations', label: 'Organizations' },
+  ]}
 >
-  <nav class="hub-jump" aria-label="Jump to section">
-    <span class="hub-jump-label">Jump to:</span>
-    <a href="#icescr">ICESCR &amp; Human Rights</a>
-    <a href="#observatory">Observatory</a>
-    <a href="#ai-economics">AI Economics</a>
-    <a href="#computational-data">Computational Data</a>
-    <a href="#infrastructure">Infrastructure</a>
-    <a href="#geopolitical-context">Geopolitical Context</a>
-    <a href="#economic-theory">Economic Theory</a>
-    <a href="#pedagogical-design">Pedagogical Design</a>
-    <a href="#organizations">Organizations</a>
-  </nav>
 
   <section class="resource-section" id="icescr">
     <h2>ICESCR and International Human Rights</h2>

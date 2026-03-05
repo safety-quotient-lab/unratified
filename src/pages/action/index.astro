@@ -30,10 +30,19 @@ const cardStats: Record<string, { number: string; label: string }> = {
   description="The ICESCR has waited 49 years for Senate action. These tools help you change that — from understanding the ratification process to contacting your senators."
   section="action"
   breadcrumbLabel="Take Action"
+  sections={[
+    { id: 'start-here', label: 'Start Here' },
+    { id: 'action-tools', label: 'Action Tools' },
+    { id: 'strategy', label: 'Strategy' },
+    { id: 'quick-action', label: 'Quick Action' },
+    { id: 'legislative-staff', label: 'Legislative Staff' },
+    { id: 'depolarization', label: 'Beyond Partisan Lines' },
+    { id: 'observatory', label: 'Stay Informed' },
+  ]}
 >
   <LensPanel lensFraming={lensFraming} section="action" />
 
-  <section class="conversion-bridge">
+  <section class="conversion-bridge" id="start-here">
     <h2>Start Here</h2>
     <p>
       The <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a> has waited 49 years. Understanding why &mdash; and what you can do
@@ -43,7 +52,7 @@ const cardStats: Record<string, { number: string; label: string }> = {
     <a href="/action/why-act" class="bridge-link">Why Act Now &rarr;</a>
   </section>
 
-  <div class="action-grid">
+  <div class="action-grid" id="action-tools">
     {sorted.map((page) => (
       <a href={`/action/${page.id}`} class="action-card">
         {cardStats[page.id] && (
@@ -58,7 +67,7 @@ const cardStats: Record<string, { number: string; label: string }> = {
     ))}
   </div>
 
-  <section class="strategic-analysis">
+  <section class="strategic-analysis" id="strategy">
     <h2>Strategic Analysis</h2>
     <p>
       What combination of forces would actually achieve ratification? A discriminator
@@ -69,7 +78,7 @@ const cardStats: Record<string, { number: string; label: string }> = {
     <a href="/how" class="brief-link">How Ratification Happens &rarr;</a>
   </section>
 
-  <section class="quick-action">
+  <section class="quick-action" id="quick-action">
     <h2>Quick Action</h2>
     <p>
       The most impactful action: contact your senators. The ICESCR stalled because no
@@ -92,7 +101,7 @@ const cardStats: Record<string, { number: string; label: string }> = {
     </div>
   </section>
 
-  <section class="legislative-staff">
+  <section class="legislative-staff" id="legislative-staff">
     <h2>For Legislative Staff</h2>
     <p>
       A one-page executive summary of the ICESCR &mdash; what it covers, what
@@ -102,7 +111,7 @@ const cardStats: Record<string, { number: string; label: string }> = {
     <a href="/action/policy-brief" class="brief-link">ICESCR Policy Brief &rarr;</a>
   </section>
 
-  <section class="depolarization">
+  <section class="depolarization" id="depolarization">
     <h2>Beyond Partisan Lines</h2>
     <p>
       Economic rights cross the partisan divide. Conservatives value property rights
@@ -120,7 +129,7 @@ const cardStats: Record<string, { number: string; label: string }> = {
     </p>
   </section>
 
-  <section class="observatory-callout">
+  <section class="observatory-callout" id="observatory">
     <h2>Stay Informed</h2>
     <p>
       Follow the <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>

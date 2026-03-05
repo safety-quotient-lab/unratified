@@ -10,15 +10,21 @@ const sortedArticles = articles.sort((a, b) => a.data.order - b.data.order);
   title="The Covenant"
   description="The International Covenant on Economic, Social and Cultural Rights protects fundamental economic rights. 173 nations ratified it. The United States signed — and stopped there."
   section="covenant"
+  sections={[
+    { id: 'history', label: 'Historical Context' },
+    { id: 'articles', label: 'The Articles' },
+    { id: 'connections', label: 'AI Connections' },
+    { id: 'quiz', label: 'Self-Assessment' },
+  ]}
 >
-  <section class="history-link">
+  <section class="history-link" id="history">
     <a href="/covenant/history" class="feature-card">
       <h2>Historical Context</h2>
       <p>From the Universal Declaration to the twin covenants — how the world agreed to protect economic rights, and why the United States walked a different path.</p>
     </a>
   </section>
 
-  <section class="articles-grid">
+  <section class="articles-grid" id="articles">
     <h2>The Articles</h2>
     <p>Each article protects a specific economic, social, or cultural right. Select any article to explore what it protects, what it means in practice, and how AI-driven economic transformation makes it more relevant than ever.</p>
 
@@ -34,7 +40,7 @@ const sortedArticles = articles.sort((a, b) => a.data.order - b.data.order);
     </div>
   </section>
 
-  <section class="cross-section-nav">
+  <section class="cross-section-nav" id="connections">
     <h2>See How AI Affects These Rights</h2>
     <p>
       The <a href="/connection">AI Connection</a> section traces how constraint removal, economic bifurcation, and the four scarcities connect directly to the rights protected above.
@@ -47,7 +53,7 @@ const sortedArticles = articles.sort((a, b) => a.data.order - b.data.order);
     </p>
   </section>
 
-  <section class="quiz-teaser">
+  <section class="quiz-teaser" id="quiz">
     <h2>Do You Experience These Rights?</h2>
     <p>
       The <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a> protects rights that affect daily life — employment, housing, healthcare, education.
