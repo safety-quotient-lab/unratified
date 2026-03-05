@@ -388,7 +388,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] TOC + deep-link anchors — rehype-slug + rehype-autolink-headings on all MDX content; TableOfContents.svelte on action, gap, connection, evidence, covenant article pages; heading-anchor styles in base.css
 - [x] Educator template letter (Template 5) added to template-letters.mdx with clean slug-friendly heading IDs; inline deep-link index added
 - [x] Developer, Researcher, and Dear Colleague letters added to template-letters.mdx (all 5 personas now have dedicated templates; 8 total letters)
-- [ ] IDEA: ICESCR vs. ICE — how ICESCR ratification would constrain deportation practices (surface scan done 2026-03-05, see below); place under /connection/deportation
+- [x] /connection/deportation — ICESCR vs. ICE case study (D054): 6-article mapping, jurisdictional foundation, enforcement pathway, AI compounding effect; 55 pages total
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*

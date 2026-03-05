@@ -1791,3 +1791,42 @@ unratified-bot queue show <id>
 - `unratified.org/action/template-letters#dear-colleague-letter`
 
 **What follows**: Promote persona-specific deep links in outreach — developer letter in HN/tech community posts, researcher letter in academic network emails, Dear Colleague in any legislative staff outreach.
+
+---
+
+## D054: /connection/deportation — ICESCR vs. ICE Case Study
+**Date**: 2026-03-05
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: The surface scan (2026-03-05) identified immigration enforcement as a high-leverage second case study applying the same ICESCR framework. Two mechanisms — AI-driven labor displacement and enforcement-driven displacement — both sever economic and social ties without a legal framework to constrain the process. The deportation case maps onto 6 ICESCR articles directly.
+
+**Decision**: Build `/connection/deportation` as Part 5 of the AI Connection analysis chain. Frame as a case study extension of the differential diagnosis methodology, not as immigration advocacy.
+
+**Framing discipline**: Not "ICESCR would stop deportations." Sovereignty over immigration enforcement remains intact under ratification. The argument: a ratified ICESCR would require enforcement processes to weigh six categories of protected rights before severing established economic and social ties.
+
+**Six-article mapping**:
+- Article 10: Family protection — family separation as systematic enforcement outcome
+- Articles 6/7: Right to work — established employment severed without process
+- Article 9: Social security — contributions paid, benefits inaccessible, lost on deportation
+- Article 12: Health — ongoing care severed, compounded by OBBBA Medicaid cuts
+- Article 13: Education — children's schooling disrupted, AI-era judgment pipeline broken
+- Article 2(2): Non-discrimination — documented disparities by national origin
+
+**Legal foundation**: ICESCR jurisdictional scope (CESCR General Comment No. 20) — Covenant applies to all persons within a state's territory regardless of status. Treaty text, not novel claim.
+
+**Enforcement pathway**: State AG litigation (Composite R-A, 20/25 from ratification counterfactual) applies here — state AGs with ICESCR-aligned state legislation can challenge enforcement actions in mixed-status communities.
+
+**AI compounding**: Bidirectional — AI enhances enforcement capacity (H2 constraint removal applies to ICE operations) and AI-era economy compounds the harm of enforcement displacement.
+
+**Files created/modified**:
+- `src/content/connection/deportation.mdx` — NEW (10 sections, 6 article anchors)
+- `src/pages/connection/index.astro` — reading guide + lensFraming updated for 5 analyses
+- Build: 55 pages (was 54)
+
+**Deep links**:
+- `unratified.org/connection/deportation#the-family-separation-problem-article-10`
+- `unratified.org/connection/deportation#the-social-security-problem-article-9`
+- `unratified.org/connection/deportation#the-enforcement-pathway`
+- `unratified.org/connection/deportation#the-ai-compounding-effect`
+
+**What follows**: Bluesky posts using deportation angle; cross-link from covenant article pages (Art. 10, 9, 6, 12, 13) to this page; consider educator outreach framing around the family separation angle.
