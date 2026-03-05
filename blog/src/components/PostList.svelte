@@ -16,13 +16,22 @@
 
   let { posts, allTags }: Props = $props();
 
-  let activeTag = $state('all');
+  let selectedTags = $state<Set<string>>(new Set());
   let sortOrder = $state('newest');
+  let dropdownOpen = $state(false);
+
+  const allSelected = $derived(selectedTags.size === 0);
+
+  const filterLabel = $derived.by(() => {
+    if (allSelected) return 'All tags';
+    if (selectedTags.size === 1) return `#${[...selectedTags][0]}`;
+    return `${selectedTags.size} tags selected`;
+  });
 
   const filtered = $derived.by(() => {
     let result = posts;
-    if (activeTag !== 'all') {
-      result = result.filter(p => p.tags.includes(activeTag));
+    if (!allSelected) {
+      result = result.filter(p => p.tags.some(t => selectedTags.has(t)));
     }
     switch (sortOrder) {
       case 'oldest':
@@ -44,34 +53,36 @@
   });
 
   const announcement = $derived(
-    activeTag === 'all'
-      ? `Showing ${filtered.length} post${filtered.length !== 1 ? 's' : ''}`
-      : `Showing ${filtered.length} post${filtered.length !== 1 ? 's' : ''} tagged #${activeTag}`
+    allSelected
+      ? `Showing all ${filtered.length} post${filtered.length !== 1 ? 's' : ''}`
+      : `Showing ${filtered.length} post${filtered.length !== 1 ? 's' : ''} for ${filterLabel}`
   );
 
-  const allChips = $derived(['all', ...allTags]);
-
-  function selectTag(tag: string) {
-    activeTag = tag;
+  function toggleTag(tag: string) {
+    const next = new Set(selectedTags);
+    if (next.has(tag)) {
+      next.delete(tag);
+    } else {
+      next.add(tag);
+    }
+    selectedTags = next;
   }
 
-  function handleChipKeydown(event: KeyboardEvent, index: number) {
-    let nextIndex = index;
+  function clearAll() {
+    selectedTags = new Set();
+  }
 
-    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
-      event.preventDefault();
-      nextIndex = (index + 1) % allChips.length;
-    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
-      event.preventDefault();
-      nextIndex = (index - 1 + allChips.length) % allChips.length;
-    } else {
-      return;
+  function closeOnOutsideClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.tag-filter-dropdown')) {
+      dropdownOpen = false;
     }
+  }
 
-    selectTag(allChips[nextIndex]);
-    const container = (event.currentTarget as HTMLElement).closest('.tag-filter');
-    const buttons = container?.querySelectorAll('button');
-    (buttons?.[nextIndex] as HTMLElement)?.focus();
+  function handleDropdownKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      dropdownOpen = false;
+    }
   }
 
   function formatDate(iso: string): string {
@@ -87,20 +98,44 @@
   }
 </script>
 
+<svelte:window onclick={closeOnOutsideClick} />
+
 <div class="post-controls">
-  <div class="tag-filter" role="radiogroup" aria-label="Filter by tag">
-    {#each allChips as tag, i}
-      <button
-        onclick={() => selectTag(tag)}
-        onkeydown={(e) => handleChipKeydown(e, i)}
-        role="radio"
-        aria-checked={activeTag === tag}
-        tabindex={activeTag === tag ? 0 : -1}
-        class:active={activeTag === tag}
-      >
-        {tag === 'all' ? 'All' : `#${tag}`}
-      </button>
-    {/each}
+  <div class="tag-filter-dropdown" role="none" onkeydown={handleDropdownKeydown}>
+    <button
+      class="filter-trigger"
+      class:active={!allSelected}
+      aria-haspopup="listbox"
+      aria-expanded={dropdownOpen}
+      onclick={(e) => { e.stopPropagation(); dropdownOpen = !dropdownOpen; }}
+    >
+      <span class="filter-label">{filterLabel}</span>
+      <span class="filter-caret" aria-hidden="true">{dropdownOpen ? '▴' : '▾'}</span>
+    </button>
+
+    {#if dropdownOpen}
+      <div class="filter-menu" role="listbox" aria-multiselectable="true" aria-label="Filter by tag">
+        <label class="filter-option filter-option--all">
+          <input
+            type="checkbox"
+            checked={allSelected}
+            onchange={clearAll}
+          />
+          <span>All tags</span>
+        </label>
+        <div class="filter-divider" role="separator"></div>
+        {#each allTags as tag}
+          <label class="filter-option" class:checked={selectedTags.has(tag)}>
+            <input
+              type="checkbox"
+              checked={selectedTags.has(tag)}
+              onchange={() => toggleTag(tag)}
+            />
+            <span>#{tag}</span>
+          </label>
+        {/each}
+      </div>
+    {/if}
   </div>
 
   <div class="sort-control">
@@ -153,38 +188,99 @@
     margin-bottom: var(--space-xl);
   }
 
-  .tag-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
+  .tag-filter-dropdown {
+    position: relative;
   }
 
-  .tag-filter button {
+  .filter-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
     font-family: var(--font-heading);
     font-size: 0.75rem;
     padding: 0.25rem 0.65rem;
     border: 1px solid var(--color-border);
-    border-radius: 1rem;
+    border-radius: 0.25rem;
     background: transparent;
     color: var(--color-text-muted);
     cursor: pointer;
-    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    transition: border-color 0.15s, color 0.15s;
+    white-space: nowrap;
   }
 
-  .tag-filter button:hover {
+  .filter-trigger:hover,
+  .filter-trigger[aria-expanded="true"] {
     border-color: var(--color-accent);
     color: var(--color-accent);
   }
 
-  .tag-filter button:focus-visible {
+  .filter-trigger.active {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  }
+
+  .filter-trigger:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
   }
 
-  .tag-filter button.active {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-    color: var(--color-bg);
+  .filter-caret {
+    font-size: 0.6rem;
+    line-height: 1;
+  }
+
+  .filter-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    z-index: 100;
+    min-width: 11rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 0.25rem 0;
+  }
+
+  .filter-option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 0.3rem 0.75rem;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .filter-option:hover {
+    color: var(--color-text);
+    background: var(--color-surface-alt);
+  }
+
+  .filter-option.checked {
+    color: var(--color-accent);
+  }
+
+  .filter-option--all {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .filter-option input[type="checkbox"] {
+    width: 0.8rem;
+    height: 0.8rem;
+    accent-color: var(--color-accent);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .filter-divider {
+    height: 1px;
+    background: var(--color-border);
+    margin: 0.25rem 0;
   }
 
   .sort-control {
