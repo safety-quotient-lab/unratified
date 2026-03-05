@@ -1,6 +1,7 @@
 ---
 import LensToggle from '@main/components/lens/LensToggle.svelte';
 import ThemeToggle from '@main/components/lens/ThemeToggle.svelte';
+import { SITE_AUTHOR } from '@main/consts';
 import '@main/styles/base.css';
 import '@main/styles/lens.css';
 
@@ -104,6 +105,9 @@ const structuredData = {
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" /></noscript>
 
+    <meta name="author" content={SITE_AUTHOR} />
+    <meta property="article:modified_time" content={new Date().toISOString()} />
+
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content={ogType} />
@@ -156,6 +160,12 @@ const structuredData = {
     <main id="main-content">
       <slot />
     </main>
+
+    {ogType !== 'article' && (
+      <div class="page-meta" role="contentinfo" aria-label="Page information">
+        <p>By {SITE_AUTHOR} &middot; Last updated {new Date().toISOString().split('T')[0]}</p>
+      </div>
+    )}
 
     <footer class="site-footer">
       <div class="footer-grid">

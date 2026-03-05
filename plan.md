@@ -358,6 +358,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Golden ratio social media copy — all platforms (Reddit 4 subreddits, Mastodon 4 posts, grassroots, campaign sequencing) lead with Exchange 3 "yes please" experiment
 - [x] OG/Twitter meta descriptions and image alt text strengthened — main site leads with "173 nations" stat, blog leads with confabulation research
 - [ ] Social media campaign execution (soft launch: Bluesky + Lemmy + Reddit + Mastodon, per D047 sequencing)
+- [x] Bluesky Post 1 (The Anchor — 4-post thread) — posted manually Mar 4
+- [x] Bluesky ad hoc posts — @hrw.org mention, HN link, peer review request, @therealjackhopkins mention
+- [x] Bluesky CLI posting script (scripts/bsky-post.mjs) — auth, single post, thread, dry-run modes
+- [ ] Build dedicated Bluesky CLI client (separate tool — feed reading, reply tracking, notifications, full account management)
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves

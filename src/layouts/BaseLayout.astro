@@ -1,6 +1,7 @@
 ---
 import LensToggle from '../components/lens/LensToggle.svelte';
 import ThemeToggle from '../components/lens/ThemeToggle.svelte';
+import { SITE_AUTHOR } from '../consts';
 import '../styles/base.css';
 import '../styles/lens.css';
 
@@ -23,6 +24,7 @@ const activeLens = lensFromUrl ?? defaultLens;
 const siteOrigin = Astro.site?.origin ?? 'https://unratified.org';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin);
 const fullTitle = `${title} | unratified.org`;
+const buildDate = new Date().toISOString().split('T')[0];
 
 // Build breadcrumb items from URL path
 const pathSegments = Astro.url.pathname.split('/').filter(Boolean);
@@ -167,6 +169,9 @@ if (Astro.url.pathname !== '/glossary') {
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Unratified \u2014 173 nations ratified the ICESCR. The U.S. signed it and never followed through." />
 
+    <meta name="author" content={SITE_AUTHOR} />
+    <meta property="article:modified_time" content={new Date().toISOString()} />
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
@@ -225,6 +230,10 @@ if (Astro.url.pathname !== '/glossary') {
     <main id="main-content">
       <slot />
     </main>
+
+    <div class="page-meta" role="contentinfo" aria-label="Page information">
+      <p>By {SITE_AUTHOR} &middot; Last updated {buildDate}</p>
+    </div>
 
     <footer class="site-footer">
       <div class="footer-grid">

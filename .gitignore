@@ -9,6 +9,10 @@ dist/
 .env
 .env.*
 !.env.example
+.dev.vars
+
+# Cloudflare
+.wrangler/
 
 # OS
 .DS_Store
