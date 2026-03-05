@@ -1731,3 +1731,63 @@ All posts lead with the "yes please" experiment — the strongest hook across ev
 - Organic sharing beyond initial platforms ("share with one person" cascade)
 - Cross-platform discussion (same findings discussed on multiple platforms independently)
 - "Yes please" experiment becoming a reference point (cited in other AI discussions)
+
+---
+
+## Bluesky Reply Templates — Wage / Economic Policy Posts
+
+**Context**: For engaging political and policy accounts posting about wage increases, salary negotiations, minimum wage, labor rights. Bridges the wage conversation to ICESCR Article 7 without partisan framing.
+
+**Technical**: All templates run 280–298 graphemes with 2 links counted at 27 graphemes each (Bluesky's fixed URL cost). Safe within 300-grapheme limit.
+
+**Links used**:
+- `unratified.org` — homepage
+- `unratified.org/gap` — why U.S. hasn't ratified
+- `unratified.org/action` — take action
+- `unratified.org/connection` — AI + economic rights connection
+- `unratified.org/covenant/articles/7` — Article 7 (fair wages, just work conditions)
+
+### Template A — The Treaty Gap
+*Use for*: General wage promise posts, any platform/party
+
+> Wage promises come and go with each administration. 173 nations answered this differently — ICESCR Article 7 makes fair wages an enforceable legal right, not a negotiating outcome. The U.S. signed in 1977, never ratified. That gap sits behind every wage conversation.
+> unratified.org/gap unratified.org/covenant/articles/7
+
+### Template B — The Framework Question
+*Use for*: Posts about sustained wage policy, legislation, long-term commitments
+
+> What holds wage gains after the next administration? 173 nations answer with ICESCR Article 7 — legally enforceable fair wages that don't expire with election cycles. The U.S. signed in 1977, never ratified. A binding treaty outlasts any negotiation.
+> unratified.org/gap unratified.org/action
+
+### Template C — The Hookiest (shortest, cold audiences)
+*Use for*: Cold engagement, unfamiliar accounts, high-traffic threads
+
+> The U.S. signed a treaty guaranteeing fair wages for every worker in 1977. The Senate never ratified it. 173 nations did — making fair compensation a legal right, not a political promise. That's the structural gap behind every wage debate.
+> unratified.org unratified.org/covenant/articles/7
+
+### Template D — Promise vs. Floor
+*Use for*: Posts framing wage increases as political victories or negotiating wins
+
+> Negotiated increases help — until the next administration, recession, or restructuring. A ratified ICESCR makes fair wages a legal standard: Article 7 mandates them, courts enforce them. The U.S. signed in 1977, never ratified. 173 nations went further.
+> unratified.org/gap unratified.org/covenant/articles/7
+
+### Template E — The AI Angle
+*Use for*: Posts touching automation, productivity, tech companies, AI and labor
+
+> AI accelerates this gap: companies capture productivity gains while workers negotiate from the same unprotected floor as 1977. ICESCR Article 7 — binding fair wages, 173 nations committed — still awaits U.S. ratification. AI reshapes who captures the gains.
+> unratified.org/connection unratified.org/covenant/articles/7
+
+### Selection Guide
+
+| Situation | Template |
+|-----------|----------|
+| Cold audience, unfamiliar account | C |
+| Active policy / legislation thread | B or D |
+| AI / tech / automation thread | E |
+| General wage promise post | A |
+| Post framing wins as negotiation | D |
+
+### Source Post (triggering example)
+AU-NY @usa2727.bsky.social: "I will negotiate with companies and with your bosses to get you salary and wage increases that go beyond just minimum wage... Even people at incomes of like $170,000 a year will benefit."
+
+Response sent: Template C (cold engagement baseline)
