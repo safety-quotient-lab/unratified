@@ -1,0 +1,202 @@
+---
+import SectionLayout from '../../../layouts/SectionLayout.astro';
+import LensPanel from '../../../components/LensPanel.astro';
+import { getCollection } from 'astro:content';
+
+const allPages = await getCollection('connection');
+const pages = allPages
+  .filter(p => p.id.startsWith('international/'))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const lensFraming = {
+  voter: "The United States holds a Security Council veto AND has not ratified the ICESCR. Two separate accountability mechanisms — disabled simultaneously. When conflict disrupts economic and social rights anywhere in the world, U.S. foreign policy choices face neither binding UN enforcement nor ICESCR periodic review. This gap does not take sides in any conflict. It applies wherever U.S. arms, vetoes, and non-ratification intersect.",
+  politician: "The international domain identifies a structural double gap: U.S. SC veto prevents binding UN enforcement in any conflict where the U.S. chooses to block action. U.S. ICESCR non-ratification means CESCR periodic review examines no U.S. foreign policy choice — arms transfers, aid conditions, diplomatic posture — as it affects ICESCR-protected populations. The argument is structural, not targeted: Ukraine and Yemen parallels establish that the same mechanism applies regardless of which side U.S. policy supports.",
+  developer: "Third empirical domain for the accountability gap pattern. Mechanism: double loop severance — SC veto disables the UN enforcement loop; ICESCR non-ratification disables the CESCR periodic review loop. Article mapping: 6 (right to work, documented unemployment), 11 (adequate standard of living, blockade-induced food insecurity), 12 (right to health, healthcare infrastructure degradation), 13 (right to education, school destruction and displacement). Primary sources: UN voting database, ICJ Wall opinion (2004), CESCR General Comment No. 24 (2017).",
+  educator: "Use this domain to teach structural accountability analysis in international law. The veto gap argument does not require students to take a position on any underlying conflict — it asks only whether U.S. foreign policy choices should face economic rights review. Key discussion questions: What makes an accountability mechanism effective? How does the ICESCR's periodic review process differ from the Security Council's enforcement mechanism? Why does the Ukraine parallel matter for the argument's credibility?",
+  researcher: "This domain applies CESCR General Comment No. 24 (2017) extraterritorial obligations framework to U.S. foreign policy choices in conflict zones. The ICJ Wall opinion (2004) establishes ICESCR applicability in occupied territories as a matter of established international law, not a novel claim. The veto gap argument is structural rather than adjudicative: it identifies the absence of review mechanisms rather than determining conflict outcomes. Two further arguments — A (occupation under IHL) and C (AI systems in conflict zones) — remain deferred pending specialist review.",
+};
+---
+
+<SectionLayout
+  title="International & Accountability"
+  description="The U.S. holds a Security Council veto and has not ratified the ICESCR. Two accountability mechanisms disabled simultaneously — no binding enforcement, no periodic rights review of U.S. foreign policy choices."
+  section="connection"
+  breadcrumbLabel="International & Accountability"
+>
+  <nav class="domain-breadcrumb" aria-label="Domain navigation">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/connection">The Connections</a></li>
+      <li aria-current="page">International &amp; Accountability</li>
+    </ol>
+  </nav>
+
+  <LensPanel lensFraming={lensFraming} section="connection" />
+
+  <section class="domain-intro">
+    <blockquote>
+      The veto gap: two accountability mechanisms severed simultaneously, by the same
+      nation that signed the treaty 49 years ago
+    </blockquote>
+    <p class="domain-note">
+      This domain applies the analytical framework to a third empirical case: how U.S.
+      non-ratification of the ICESCR combines with U.S. Security Council veto power to
+      create a structural double gap in economic rights accountability. The argument is
+      structural rather than targeted — the same mechanism applies wherever U.S. foreign
+      policy intersects with conflict-zone economic rights.
+    </p>
+  </section>
+
+  <div class="analysis-grid">
+    {pages.map((page) => (
+      <a href={`/connection/international/${page.id.replace('international/', '')}`} class="analysis-card">
+        {page.data.relatedArticles.length > 0 && (
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">{page.data.relatedArticles.length}</span>
+            <span class="visual-label">ICESCR Articles</span>
+          </span>
+        )}
+        <h2>{page.data.title}</h2>
+        <p>{page.data.summary}</p>
+        {page.data.relatedArticles.length > 0 && (
+          <div class="related-articles">
+            {page.data.relatedArticles.map((num: number) => (
+              <span class="article-tag">Article {num}</span>
+            ))}
+          </div>
+        )}
+      </a>
+    ))}
+  </div>
+
+  <section class="reading-guide">
+    <h2>The Structural Argument</h2>
+    <p>
+      This domain does not adjudicate any underlying conflict. People who hold any position
+      on Israel-Palestine, Ukraine, Yemen, or any other conflict can evaluate the structural
+      question independently: should U.S. foreign policy choices — arms transfers, veto use,
+      aid conditions — face review under the economic rights framework the U.S. signed in 1977?
+    </p>
+    <p>
+      The analysis rests on established international law: treaty text (ICESCR Article 2(2)),
+      CESCR General Comment No. 24 (extraterritorial obligations), and the ICJ Advisory
+      Opinion on the Wall (2004). These are primary sources, not novel claims.
+    </p>
+    <p>
+      Two further arguments remain deferred for specialist review: Argument A (occupation and
+      economic rights under international humanitarian law) and Argument C (AI-enhanced systems
+      in conflict-zone economic rights). See <a href="/connection">The Connections</a> hub for
+      the deferred work documentation.
+    </p>
+    <p>
+      This domain is one of three. See also:
+      <a href="/connection/ai">AI &amp; Economic Rights</a> and
+      <a href="/connection/enforcement">Enforcement &amp; Economic Rights</a> — both produce
+      the same ICESCR accountability gap through different mechanisms.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .domain-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .domain-breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .domain-breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .domain-breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .domain-intro {
+    margin-bottom: var(--space-2xl);
+    max-width: var(--max-width-content);
+  }
+
+  .domain-intro blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    border-left-color: var(--color-accent);
+  }
+
+  .domain-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .analysis-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .analysis-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .analysis-card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .analysis-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .related-articles {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .article-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 2px var(--space-xs);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    color: var(--color-text-muted);
+  }
+
+  .reading-guide {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .reading-guide p {
+    margin-bottom: var(--space-md);
+  }
+</style>

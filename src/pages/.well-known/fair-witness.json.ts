@@ -197,13 +197,13 @@ export const GET: APIRoute = () => {
         id: 'H1-H7',
         label: 'Economic Impact Hypotheses',
         result: 'Composite A (H2+H3+H4+H7 mod H6)',
-        page: '/connection/differential-diagnosis',
+        page: '/connection/ai/differential-diagnosis',
       },
       {
         id: 'R1-R7',
         label: 'Ratification Counterfactual',
         result: 'Composite R-A (R3+R5+R6 activated by R7)',
-        page: '/connection/ratification-counterfactual',
+        page: '/connection/ai/ratification-counterfactual',
       },
       {
         id: 'LA1-LA5',
@@ -233,7 +233,7 @@ export const GET: APIRoute = () => {
         id: 'PSQ-UDHR',
         label: 'Dignity Quotient Evaluation',
         result: 'Dignity Quotient framework (21/25)',
-        page: '/connection/dignity-quotient',
+        page: '/connection/ai/dignity-quotient',
       },
       {
         id: 'LP-1-2',

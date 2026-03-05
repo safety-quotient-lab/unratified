@@ -4,82 +4,197 @@ import LensPanel from '../../components/LensPanel.astro';
 import { getCollection } from 'astro:content';
 import { getObservatoryStats } from '../../data/observatory';
 
-const pages = await getCollection('connection');
-const sorted = pages.sort((a, b) => a.data.order - b.data.order);
+const allPages = await getCollection('connection');
 const obs = await getObservatoryStats();
 
+// Article coverage matrix data
+const articles = [
+  { num: 6,  title: 'Right to Work',                        ai: true,  enforcement: true,  international: true  },
+  { num: 7,  title: 'Just and Favorable Conditions of Work', ai: true,  enforcement: true,  international: false },
+  { num: 9,  title: 'Right to Social Security',             ai: false, enforcement: true,  international: false },
+  { num: 10, title: 'Protection of the Family',             ai: false, enforcement: true,  international: false },
+  { num: 11, title: 'Adequate Standard of Living',          ai: false, enforcement: false, international: true  },
+  { num: 12, title: 'Right to Health',                      ai: true,  enforcement: true,  international: true  },
+  { num: 13, title: 'Right to Education',                   ai: true,  enforcement: true,  international: true  },
+  { num: 15, title: 'Right to Benefit from Scientific Progress', ai: true, enforcement: false, international: false },
+];
+
 const lensFraming = {
-  voter: "This section explains how AI changes the economy and what that means for your rights — and extends that analysis to two more case studies: how immigration enforcement severs economic and family rights, and how the U.S. veto plus non-ratification creates a double accountability gap in international conflict. Six analyses, same missing treaty.",
-  politician: "Six analytical papers connecting economic disruption to ICESCR provisions: differential diagnosis (7 hypotheses, 4 survivors), higher-order effects (Four Scarcities), ratification counterfactual (ADA pattern, 20/25), Dignity Quotient (PSQ-UDHR), immigration enforcement case study (Articles 6, 9, 10, 12, 13), and the veto gap — U.S. SC veto plus ICESCR non-ratification creates double accountability absence in international conflict (Articles 6, 11, 12, 13).",
-  developer: "Analytical pipeline: 7 hypotheses → Composite A (H2+H3+H4+H7 mod H6, 20/25) → Four Scarcities → ratification counterfactual (Composite R-A) → Dignity Quotient (5.7/10) → enforcement case study (6-article mapping) → veto gap case study (4-article mapping, SC veto + ICESCR non-ratification = double accountability loop severance). Same discriminator methodology applied to three empirical domains.",
-  educator: "Use these six analyses to teach structured analytical methodology across three case studies: AI-driven displacement, enforcement displacement, and foreign policy displacement. All three produce the same ICESCR accountability gap via different mechanisms — a strong comparative basis for structural policy analysis.",
-  researcher: "Six-paper analytical chain. Composite A → Four Scarcities → ratification counterfactual (Composite R-A) → Dignity Quotient (PSQ-UDHR, 5.7/10) → enforcement case study (6-article ICESCR mapping) → veto gap (SC veto + ICESCR non-ratification, 4-article mapping, CESCR GC-24 extraterritorial framework, ICJ Wall opinion 2004). Third empirical domain extends the accountability gap argument to U.S. foreign policy.",
+  voter: "The U.S. signed the ICESCR in 1977. Three separate forces now converge on the same rights the treaty protects: AI restructuring who benefits from economic activity, enforcement determining who participates at all, and international veto power shaping who receives accountability when conflict disrupts everything. Same treaty. Same missing ratification. Three completely different reasons why it matters.",
+  politician: "Three analytical domains, one structural gap. AI economic displacement, enforcement-driven severance, and the international veto gap all produce the same ICESCR accountability absence through independent causal paths. The convergence across domains is itself a finding: the treaty gap is not sector-specific, it is structural. The article coverage matrix shows which provisions apply across all three simultaneously.",
+  developer: "Three empirical domains stress-tested against the same analytical framework. AI domain: constraint removal → bifurcation (Composite A, 20/25). Enforcement domain: sudden severance → 6-article mapping. International domain: double loop severance (SC veto + non-ratification). Article 13 appears in all three; Articles 6 and 12 appear in all three. The structural isomorphism across domains is the meta-finding.",
+  educator: "Use this hub to teach students structural policy analysis. Three different mechanisms — technology displacement, enforcement displacement, foreign policy displacement — independently produce the same rights gap. Students evaluate: why does the same treaty address all three? What does it mean that the same articles (6, 12, 13) appear across unrelated domains? What would effective accountability look like in each case?",
+  researcher: "The convergence across three empirical domains constitutes a structural finding independent of any individual domain analysis. Articles 6, 12, and 13 appear across all three domains without coordination — each derived independently from first principles in that domain. The article coverage matrix below operationalizes this convergence for comparative analysis.",
 };
 ---
 
 <SectionLayout
-  title="The AI Connection"
-  description="How AI-driven economic transformation maps onto the rights the ICESCR protects — differential diagnosis, knock-on effects, and the ratification counterfactual."
+  title="The Connections"
+  description="Three mechanisms independently converge on the same ICESCR accountability gap. What an AI noticed when analyzing its own economic impact across domains."
   section="connection"
-  breadcrumbLabel="AI Connection"
+  breadcrumbLabel="The Connections"
 >
   <LensPanel lensFraming={lensFraming} section="connection" />
 
-  <section class="tagline">
-    <blockquote>
-      One of Anthropic Claude's takes on the impact of AI on the economy — differential diagnosis, integral chain analysis, and what it means for your rights
-    </blockquote>
-    <p class="meta-note">
-      This analysis emerged through structured dialogue between a human researcher and Claude (Anthropic's AI), with quantitative projections computed via <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a>. The meta-layer — an AI analyzing AI's own economic impact — forms part of the site's intellectual honesty.
-    </p>
+  <section class="meta-observations">
+    <h2>What an AI Noticed</h2>
+
+    <div class="observations-grid">
+      <div class="observation">
+        <span class="obs-num">01</span>
+        <h3>The analyst is the subject</h3>
+        <p>
+          This analysis examines AI's economic impact. The analyst is an AI. No prior policy
+          analysis on record has had this structural property — the instrument and the subject
+          belong to the same class of entity. The site exists in a feedback loop: the technology
+          under study generated the study of the technology under study.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">02</span>
+        <h3>Three mechanisms. The same six articles.</h3>
+        <p>
+          AI displacement, enforcement severance, and veto-blocked accountability were each
+          analyzed independently. Each analysis identified ICESCR provisions from first principles
+          within its domain. Articles 6, 12, and 13 emerged in all three. A human researcher
+          focused on any single domain would likely not notice this. The cross-domain pattern
+          only appears when mapping all three simultaneously.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">03</span>
+        <h3>Article 13 appears everywhere</h3>
+        <p>
+          The right to education anchors the AI analysis (judgment capability as the AI era's
+          scarce resource), the enforcement analysis (children's schooling fractures when parents
+          are deported), and the international analysis (education infrastructure collapses under
+          conflict and blockade). It also grounds the site's core thesis. This convergence was not
+          designed — it emerged from independent domain analysis and then had to be noticed.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">04</span>
+        <h3>Constraint removal at every layer</h3>
+        <p>
+          AI removes software production constraints (H2 in the differential diagnosis).
+          Enforcement removes economic participation constraints for established residents.
+          Security Council vetoes remove accountability constraints for major powers.
+          The same underlying dynamic — constraint removal without a compensating legal
+          framework — operates at the technology layer, the enforcement layer, and the
+          international law layer simultaneously.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">05</span>
+        <h3>The treaty preceded the technology by 49 years</h3>
+        <p>
+          The ICESCR was signed in 1966 and opened for ratification in 1976 — the year before
+          the Apple II launched. The treaty that addresses AI's consequences predates the
+          technology causing them by nearly half a century. The framers were not anticipating AI.
+          The analysis finds the fit anyway — which is either evidence that economic rights are
+          durable across technological eras, or that the categories were always correct and the
+          U.S. was always missing them.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">06</span>
+        <h3>The peer reviewer fabricated its evidence</h3>
+        <p>
+          When this analysis was submitted to a competing AI system for peer review, that system
+          fabricated 15+ products, citations, and sources across 20 rounds of dialogue — including
+          an "AGI Tracker" it had invented in the previous session. The methodology for evaluating
+          AI reliability emerged from testing AI reliability. The instrument that identified
+          confabulation patterns is itself susceptible to them.
+          See the <a href="https://blog.unratified.org" rel="noopener">blog</a> for the full exchange documentation.
+        </p>
+      </div>
+    </div>
   </section>
 
-  <div class="analysis-grid">
-    {sorted.map((page) => (
-      <a href={`/connection/${page.id}`} class="analysis-card">
-        <span class="card-order">Part {page.data.order}</span>
-        {page.data.relatedArticles.length > 0 && (
-          <span class="card-visual card-visual--stat">
-            <span class="visual-number">{page.data.relatedArticles.length}</span>
-            <span class="visual-label">ICESCR Articles</span>
-          </span>
-        )}
-        <h2>{page.data.title}</h2>
-        <p>{page.data.summary}</p>
-        {page.data.relatedArticles.length > 0 && (
-          <div class="related-articles">
-            {page.data.relatedArticles.map((num: number) => (
-              <span class="article-tag">Art. {num}</span>
-            ))}
-          </div>
-        )}
-      </a>
-    ))}
-  </div>
+  <section class="coverage-matrix">
+    <h2>Article Coverage Across Domains</h2>
+    <p class="matrix-note">
+      Each domain's analysis independently identified the ICESCR articles most directly at
+      stake. The overlap — particularly Articles 6, 12, and 13 — was not predetermined.
+    </p>
 
-  <section class="reading-guide">
-    <h2>Reading Guide</h2>
-    <p>
-      The first four analyses build sequentially: the differential diagnosis establishes the
-      mechanism, higher-order effects trace its consequences, the ratification counterfactual
-      explores what changes with ICESCR protection, and the Dignity Quotient provides a
-      measurement framework connecting psychology to human rights.
-    </p>
-    <p>
-      The fifth analysis applies the same framework to a second case study: immigration
-      enforcement as economic rights disruption. Two different mechanisms — technology
-      displacement and enforcement displacement — map onto the same six ICESCR provisions.
-    </p>
-    <p>
-      The sixth analysis extends the framework to international policy: the veto gap. The
-      United States holds a Security Council veto AND has not ratified the ICESCR. This
-      double gap exempts U.S. foreign policy — arms transfers, diplomatic cover, veto use —
-      from any economic rights accountability mechanism. Three mechanisms, same missing treaty.
-    </p>
-    <p>
-      Each section connects to specific <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a> articles — follow the article tags to see
-      how the analysis maps onto <a href="/covenant">the covenant</a>.
-    </p>
+    <div class="matrix-scroll">
+      <table class="matrix-table" aria-label="ICESCR article coverage by domain">
+        <thead>
+          <tr>
+            <th scope="col">ICESCR Article</th>
+            <th scope="col"><a href="/connection/ai">AI &amp; Economic Rights</a></th>
+            <th scope="col"><a href="/connection/enforcement">Enforcement &amp; Economic Rights</a></th>
+            <th scope="col"><a href="/connection/international">International &amp; Accountability</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          {articles.map(art => (
+            <tr>
+              <td>
+                <a href={`/covenant/articles/article-${art.num}`} class="article-name">
+                  <span class="article-num">Article {art.num}</span>
+                  <span class="article-title">{art.title}</span>
+                </a>
+              </td>
+              <td class="coverage-cell" aria-label={art.ai ? 'Covered' : 'Not covered'}>
+                {art.ai && <span class="coverage-dot" aria-hidden="true">●</span>}
+              </td>
+              <td class="coverage-cell" aria-label={art.enforcement ? 'Covered' : 'Not covered'}>
+                {art.enforcement && <span class="coverage-dot" aria-hidden="true">●</span>}
+              </td>
+              <td class="coverage-cell" aria-label={art.international ? 'Covered' : 'Not covered'}>
+                {art.international && <span class="coverage-dot" aria-hidden="true">●</span>}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="domain-grid">
+    <h2>The Three Domains</h2>
+
+    <div class="domains">
+      <a href="/connection/ai" class="domain-card">
+        <span class="domain-tag">AI &amp; Economic Rights</span>
+        <h3>How AI Reshapes Who Benefits</h3>
+        <p>
+          Four interconnected analyses tracing AI-driven economic transformation to the ICESCR
+          provisions it touches — differential diagnosis, higher-order effects, ratification
+          counterfactual, and the Dignity Quotient.
+        </p>
+        <span class="domain-count">{allPages.filter(p => p.id.startsWith('ai/')).length} analyses &rarr;</span>
+      </a>
+
+      <a href="/connection/enforcement" class="domain-card">
+        <span class="domain-tag">Enforcement &amp; Economic Rights</span>
+        <h3>How Enforcement Severs Who Participates</h3>
+        <p>
+          Immigration enforcement removes established residents from economic participation
+          without any legal framework to weigh what gets destroyed. Same treaty, different
+          mechanism, same rights gap.
+        </p>
+        <span class="domain-count">{allPages.filter(p => p.id.startsWith('enforcement/')).length} {allPages.filter(p => p.id.startsWith('enforcement/')).length === 1 ? 'analysis' : 'analyses'} &rarr;</span>
+      </a>
+
+      <a href="/connection/international" class="domain-card">
+        <span class="domain-tag">International &amp; Accountability</span>
+        <h3>How the Veto Gap Exempts U.S. Policy</h3>
+        <p>
+          The U.S. holds a Security Council veto and has not ratified the ICESCR. Two
+          accountability mechanisms disabled simultaneously — no binding enforcement, no
+          periodic rights review.
+        </p>
+        <span class="domain-count">{allPages.filter(p => p.id.startsWith('international/')).length} {allPages.filter(p => p.id.startsWith('international/')).length === 1 ? 'analysis' : 'analyses'} &rarr;</span>
+      </a>
+    </div>
   </section>
 
   <section class="observatory-callout">
@@ -87,8 +202,8 @@ const lensFraming = {
     <p>
       The <a href="https://observatory.unratified.org" rel="noopener">Human Rights Observatory</a>
       tracks how the tech community discusses all 30 UDHR articles — {obs.corpusSize.toLocaleString()}+
-      stories evaluated so far. The ICESCR rights analyzed here map directly to observable
-      discourse patterns in the Observatory.
+      stories evaluated so far. The ICESCR rights mapped in the matrix above appear as
+      observable discourse patterns in the Observatory corpus.
     </p>
     <p class="observatory-links">
       <a href="https://observatory.unratified.org/rights/articles" rel="noopener" class="lens-developer">
@@ -108,32 +223,154 @@ const lensFraming = {
 </SectionLayout>
 
 <style>
-  .tagline {
+  .meta-observations {
     margin-bottom: var(--space-2xl);
-    max-width: var(--max-width-content);
   }
 
-  .tagline blockquote {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--color-text-muted);
-    border-left-color: var(--color-accent);
+  .observations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
   }
 
-  .meta-note {
+  .observation {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .obs-num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  .observation h3 {
+    font-size: 1rem;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .observation p {
     font-size: 0.875rem;
     color: var(--color-text-muted);
-    font-style: italic;
+    margin: 0;
+    line-height: 1.6;
   }
 
-  .analysis-grid {
+  .observation p a {
+    color: var(--color-accent);
+  }
+
+  .coverage-matrix {
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .matrix-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    max-width: 42rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .matrix-scroll {
+    overflow-x: auto;
+  }
+
+  .matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+
+  .matrix-table th {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 2px solid var(--color-border);
+    white-space: nowrap;
+  }
+
+  .matrix-table th a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .matrix-table th a:hover {
+    color: var(--color-accent);
+  }
+
+  .matrix-table td {
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+  }
+
+  .matrix-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .matrix-table tr:hover td {
+    background: var(--color-surface);
+  }
+
+  .article-name {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .article-num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+  }
+
+  .article-title {
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .article-name:hover .article-title {
+    color: var(--color-accent);
+  }
+
+  .coverage-cell {
+    text-align: center;
+  }
+
+  .coverage-dot {
+    color: var(--color-accent);
+    font-size: 1rem;
+  }
+
+  .domain-grid {
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .domains {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: var(--space-lg);
-    margin-bottom: var(--space-2xl);
+    margin-top: var(--space-lg);
   }
 
-  .analysis-card {
+  .domain-card {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
@@ -146,60 +383,45 @@ const lensFraming = {
     transition: border-color 0.15s;
   }
 
-  .analysis-card:hover {
+  .domain-card:hover {
     border-color: var(--color-accent);
   }
 
-  .card-order {
+  .domain-tag {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-accent);
   }
 
-  .analysis-card h2 {
+  .domain-card h3 {
+    font-size: 1rem;
     margin: 0;
-    font-size: 1.1rem;
   }
 
-  .analysis-card p {
+  .domain-card p {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin: 0;
     flex: 1;
+    line-height: 1.5;
   }
 
-  .related-articles {
-    display: flex;
-    gap: var(--space-xs);
-    flex-wrap: wrap;
+  .domain-count {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--color-accent);
   }
 
-  .article-tag {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    padding: 2px var(--space-xs);
-    background: var(--color-surface-alt);
-    border: 1px solid var(--color-border);
-    border-radius: 3px;
-    color: var(--color-text-muted);
-  }
-
-  .reading-guide {
-    padding-top: var(--space-xl);
-    border-top: 1px solid var(--color-border);
-  }
-
-  /* Observatory callout base styles now in base.css (D022) */
+  /* Observatory callout base styles in base.css */
   .observatory-links a {
     text-decoration: none;
     border-bottom: 1px solid currentColor;
     display: none;
   }
 
-  /* Show only the active lens links */
   [data-lens="developer"] .lens-developer,
   :not([data-lens]) .lens-developer { display: inline; }
   [data-lens="educator"] .lens-educator { display: inline; }

@@ -71,7 +71,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'methodology',
     related: ['discriminator', 'discriminator-score'],
     narrower: ['h2-constraint-removal', 'h3-jevons-explosion', 'h4-bottleneck-migration', 'h7-economic-bifurcation'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'discriminator',
@@ -79,7 +79,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'An empirical scoring system that evaluates competing hypotheses across five dimensions: empirical support, parsimony, predictive power, chain integrity, and falsifiability. Each dimension scores 0–5, yielding a total out of 25.',
     category: 'methodology',
     related: ['discriminator-score', 'composite-a', 'differential-diagnosis'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'discriminator-score',
@@ -87,7 +87,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The numerical result (0–25) produced by applying the discriminator to a hypothesis. Higher scores indicate stronger empirical support and analytical coherence. Composite A scores 20/25.',
     category: 'methodology',
     related: ['discriminator', 'composite-a'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'differential-diagnosis',
@@ -95,7 +95,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'A methodology borrowed from medicine: generate competing hypotheses, test each against evidence, eliminate those contradicted by data, and compose a model from survivors. Applied here to the question of how AI reshapes economic activity.',
     category: 'methodology',
     related: ['discriminator', 'composite-a'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
     sources: [
       { url: 'https://en.wikipedia.org/wiki/Differential_diagnosis', label: 'Wikipedia: Differential Diagnosis', authority: 'academic' },
     ],
@@ -106,7 +106,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'A cascading analysis framework tracing knock-on effects through multiple orders of consequence: Order 0 (software labor removal), Order 1 (new scarcities emerge), Order 2 (scarcities interact), Order 3 (convergent structure), Order 4 (productive exhaustion at values and meaning).',
     category: 'methodology',
     related: ['knock-on-effects', 'convergent-structure', 'four-scarcities'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'knock-on-effects',
@@ -114,7 +114,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'Secondary, tertiary, and quaternary consequences that ripple outward from primary economic changes. The analysis traces these through four orders, revealing that surface-level AI productivity claims miss deeper structural transformations.',
     category: 'methodology',
     related: ['order-system', 'higher-order-analysis'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'higher-order-analysis',
@@ -122,7 +122,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The practice of tracing consequences beyond first-order effects. Each order reveals dynamics invisible at the previous level. The analysis reaches Order 4 (productive exhaustion) before convergence stabilizes.',
     category: 'methodology',
     related: ['order-system', 'knock-on-effects', 'convergent-structure'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'convergent-structure',
@@ -130,7 +130,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The Order 3 finding that independent analytical threads converge on a structural conclusion: education (Article 13) addresses 75% of binding constraints, and benefit-sharing (Article 15) addresses distribution. This convergence holds across plausible scenarios.',
     category: 'methodology',
     related: ['order-system', 'article-13-pivot'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'constraint-removal',
@@ -138,7 +138,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'When AI reduces the marginal cost of software labor toward zero, previously infeasible projects become feasible. Differs from productivity multiplication by creating entirely new categories of activity rather than making existing work faster.',
     category: 'methodology',
     related: ['h2-constraint-removal', 'jevons-effect'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
     sources: [
       { url: 'https://www.mcc.gov/our-impact/constraints-analysis/', label: 'MCC: Constraints to Growth Analysis', authority: 'reference' },
     ],
@@ -149,7 +149,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'A historical economic pattern where efficiency improvements that reduce effective cost lead to increased total consumption rather than reduced use. When steam engines improved coal efficiency in 19th-century England, total coal consumption rose. Applied to software: when AI makes software labor nearly free, demand for software explodes.',
     category: 'methodology',
     related: ['h3-jevons-explosion', 'constraint-removal'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
     sources: [
       { url: 'https://en.wikipedia.org/wiki/Jevons_paradox', label: 'Wikipedia: Jevons Paradox', authority: 'academic' },
       { url: 'https://proxify.io/articles/jevons-paradox-and-implications-in-ai', label: 'Proxify: Jevons Paradox and AI', authority: 'reference' },
@@ -161,7 +161,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'Uneven distribution of AI benefits across the economy. Organizations that deeply integrate AI pull ahead; those with surface-level adoption stagnate. Workers\' economic trajectories depend on organizational adoption patterns they cannot individually control.',
     category: 'methodology',
     related: ['h7-economic-bifurcation'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
     sources: [
       { url: 'https://en.wikipedia.org/wiki/Bifurcation_theory', label: 'Wikipedia: Bifurcation Theory', authority: 'academic' },
     ],
@@ -173,7 +173,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'methodology',
     narrower: ['judgment-scarcity', 'specification-scarcity', 'attention-curation-scarcity', 'energy-scarcity'],
     related: ['order-system', 'article-13-pivot'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
 
   // ── Hypotheses ─────────────────────────────────────────────────
@@ -183,7 +183,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The claim that AI doubles developer output, creating straightforward productivity gains. Eliminated by evidence: the METR study found experienced developers 19% slower with AI, and Faros AI found that while 75% of engineers use AI tools, most organizations report no measurable productivity gains.',
     category: 'hypothesis',
     related: ['discriminator', 'composite-a'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'h2-constraint-removal',
@@ -193,7 +193,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'hypothesis',
     broader: ['composite-a'],
     related: ['constraint-removal', 'h3-jevons-explosion'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'h3-jevons-explosion',
@@ -203,7 +203,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'hypothesis',
     broader: ['composite-a'],
     related: ['jevons-effect', 'h2-constraint-removal'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'h4-bottleneck-migration',
@@ -213,7 +213,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'hypothesis',
     broader: ['composite-a'],
     related: ['four-scarcities'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'h5-recursive-acceleration',
@@ -222,7 +222,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The claim that AI builds better AI tools, creating a recursive acceleration loop. Eliminated by evidence: METR data shows no recursive improvement signal, and quality erosion counteracts compounding.',
     category: 'hypothesis',
     related: ['discriminator'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'h6-quality-erosion',
@@ -232,7 +232,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'hypothesis',
     broader: ['composite-a'],
     related: ['discriminator'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
   {
     id: 'h7-economic-bifurcation',
@@ -242,7 +242,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'hypothesis',
     broader: ['composite-a'],
     related: ['bifurcation'],
-    seeAlso: '/connection/differential-diagnosis',
+    seeAlso: '/connection/ai/differential-diagnosis',
   },
 
   // ── Frameworks ─────────────────────────────────────────────────
@@ -254,7 +254,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'framework',
     narrower: ['dignity-quotient'],
     related: ['hrcb'],
-    seeAlso: '/connection/dignity-quotient',
+    seeAlso: '/connection/ai/dignity-quotient',
   },
   {
     id: 'hrcb',
@@ -263,7 +263,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'A measurement framework that evaluates how human rights instruments score across PSQ dimensions. Reveals that the ICCPR provides threat reduction (defensive architecture) while the ICESCR provides resilience building — two complementary halves of a complete protection profile.',
     category: 'framework',
     related: ['psq', 'dignity-quotient'],
-    seeAlso: '/connection/dignity-quotient',
+    seeAlso: '/connection/ai/dignity-quotient',
   },
   {
     id: 'dignity-quotient',
@@ -273,7 +273,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'framework',
     broader: ['psq'],
     related: ['hrcb'],
-    seeAlso: '/connection/dignity-quotient',
+    seeAlso: '/connection/ai/dignity-quotient',
   },
   {
     id: 'lapp',
@@ -409,7 +409,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'Litigation brought by state attorneys general, scoring 20/25 as the dominant enforcement mechanism across all implementation paths. Follows the tobacco Master Settlement pattern: state-level legal action forces systemic change without requiring federal legislation.',
     category: 'enforcement',
     related: ['master-settlement-pattern', 'ada-pattern'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
     sources: [
       { url: 'https://www.naag.org/', label: 'NAAG: National Association of Attorneys General', authority: 'reference' },
     ],
@@ -420,7 +420,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The historical pattern by which the Americans with Disabilities Act (1990) achieved change: broad law → compliance theater (3–5 years) → litigation wave (5–15 years) → real measurable change (15–25 years) → still incomplete but transformative (year 35+). Applied as the model for how ICESCR ratification would generate enforcement.',
     category: 'enforcement',
     related: ['state-ag-litigation', 'master-settlement-pattern', 'quality-floor'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
     sources: [
       { url: 'https://www.ada.gov/', label: 'ADA.gov: Americans with Disabilities Act', authority: 'primary' },
       { url: 'https://en.wikipedia.org/wiki/Americans_with_Disabilities_Act_of_1990', label: 'Wikipedia: Americans with Disabilities Act', authority: 'academic' },
@@ -432,7 +432,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The tobacco litigation model where state attorneys general coordinate legal action against an industry, producing a comprehensive settlement that establishes new standards. Applied as precedent for potential AI-rights enforcement.',
     category: 'enforcement',
     related: ['state-ag-litigation', 'ada-pattern'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
     sources: [
       { url: 'https://www.naag.org/our-work/naag-center-for-tobacco-and-public-health/the-master-settlement-agreement/', label: 'NAAG: Master Settlement Agreement', authority: 'primary' },
     ],
@@ -443,7 +443,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'Minimum quality standards for AI in rights-critical domains: healthcare, education, social services. Certification requirements replace market-driven quality stratification. Prevents AI bifurcation from creating a two-tier system where quality tracks wealth.',
     category: 'enforcement',
     related: ['ada-pattern', 'bifurcation'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
   },
 
   // ── Architecture ───────────────────────────────────────────────
@@ -500,7 +500,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The "eventually" path — full federal ICESCR ratification and comprehensive legislative reform. Requires political transformation that does not currently exist. The analysis evaluates it as the highest-impact but lowest-probability path.',
     category: 'path',
     related: ['path-b-state-action', 'path-c-enabling-framework', 'ratification'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
   },
   {
     id: 'path-b-state-action',
@@ -508,7 +508,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The "now" path — state-level litigation and legislation proceeds without federal action. State AGs use existing legal authority. The dominant enforcement mechanism (State AG litigation, scoring 20/25) operates entirely through this path.',
     category: 'path',
     related: ['path-a-comprehensive', 'path-c-enabling-framework', 'state-ag-litigation'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
   },
   {
     id: 'path-c-enabling-framework',
@@ -516,7 +516,7 @@ export const glossary: GlossaryTerm[] = [
     definition: 'The "next" path — federal standards that states can adopt, modeled on how environmental and labor standards evolved. Progressive enabling legislation that does not require full ratification but creates a framework states can implement.',
     category: 'path',
     related: ['path-a-comprehensive', 'path-b-state-action'],
-    seeAlso: '/connection/ratification-counterfactual',
+    seeAlso: '/connection/ai/ratification-counterfactual',
   },
 
   // ── Scarcities ─────────────────────────────────────────────────
@@ -527,7 +527,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'scarcity',
     broader: ['four-scarcities'],
     related: ['specification-scarcity', 'article-13-pivot'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'specification-scarcity',
@@ -536,7 +536,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'scarcity',
     broader: ['four-scarcities'],
     related: ['judgment-scarcity', 'article-13-pivot'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'attention-curation-scarcity',
@@ -545,7 +545,7 @@ export const glossary: GlossaryTerm[] = [
     category: 'scarcity',
     broader: ['four-scarcities'],
     related: ['judgment-scarcity'],
-    seeAlso: '/connection/higher-order-effects',
+    seeAlso: '/connection/ai/higher-order-effects',
   },
   {
     id: 'energy-scarcity',

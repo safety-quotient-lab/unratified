@@ -1,0 +1,208 @@
+---
+import SectionLayout from '../../../layouts/SectionLayout.astro';
+import LensPanel from '../../../components/LensPanel.astro';
+import { getCollection } from 'astro:content';
+
+const allPages = await getCollection('connection');
+const pages = allPages
+  .filter(p => p.id.startsWith('ai/'))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const lensFraming = {
+  voter: "This section shows why the AI economy makes the 1977 treaty more urgent than ever. Four interconnected analyses — from 'what is AI actually doing to the economy?' to 'how do we measure dignity under pressure?' — trace the path from AI adoption to your economic rights. Each paper builds on the last, but each stands on its own.",
+  politician: "Four analytical papers building a sequential case: differential diagnosis (7 hypotheses, 4 survivors, Composite A model), higher-order effects (Four Scarcities, Article 13 pivot), ratification counterfactual (ADA pattern, 20/25 for state AG litigation), and Dignity Quotient (PSQ-UDHR mapping, 5.7/10). Each paper can be excerpted independently for policy briefings. The ratification counterfactual identifies State AG litigation as the dominant enforcement mechanism across all ratification scenarios.",
+  developer: "The AI analysis pipeline: constraint removal (H2, 17/25) + Jevons explosion (H3, 17/25) + bottleneck migration (H4, 20/25) + bifurcation (H7, 19/25) modulated by quality erosion (H6, 16/25). Discriminator scoring across 5 dimensions (empirical support, parsimony, chain integrity, predictive power, scope) at 0–5 each. Output: Composite A → Four Scarcities → Composite R-A → Dignity Quotient = 5.7/10. Full scoring in each paper.",
+  educator: "Four papers building from mechanism to measurement: what AI does to economic structures (differential diagnosis), what follows from that across four orders of analysis (higher-order effects), what changes when legal protection exists (ratification counterfactual), and how to measure whether human dignity is protected by a legal framework (Dignity Quotient). Use them sequentially or as independent case studies. The discriminator methodology in the first paper teaches analytical thinking directly.",
+  researcher: "Composite A (H2+H3+H4+H7 mod H6, discriminator score 20/25) → Four Scarcities (judgment, specification, curation, meaning) → Composite R-A (ratification counterfactual, 7 scenarios, 20/25 for state AG litigation path) → Dignity Quotient (PSQ-UDHR mapping, 5.7/10 average). Full scoring methodology documented in each paper. Replication data and source citations available in the research summary (/evidence/research-summary).",
+};
+---
+
+<SectionLayout
+  title="AI & Economic Rights"
+  description="Four interconnected analyses tracing AI-driven economic transformation to the ICESCR provisions it touches — from differential diagnosis to the Dignity Quotient."
+  section="connection"
+  breadcrumbLabel="AI & Economic Rights"
+>
+  <nav class="domain-breadcrumb" aria-label="Domain navigation">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/connection">The Connections</a></li>
+      <li aria-current="page">AI &amp; Economic Rights</li>
+    </ol>
+  </nav>
+
+  <LensPanel lensFraming={lensFraming} section="connection" />
+
+  <section class="domain-intro">
+    <blockquote>
+      An AI analyzing AI's own economic impact — differential diagnosis, integral chain
+      analysis, and what it means for your rights
+    </blockquote>
+    <p class="meta-note">
+      This analysis emerged through structured dialogue between a human researcher and Claude
+      (Anthropic's AI), with quantitative projections computed via
+      <a href="https://www.wolframalpha.com/" rel="noopener">Wolfram|Alpha</a>. The recursive
+      layer — an AI analyzing AI's own economic impact — forms part of the site's intellectual honesty.
+    </p>
+  </section>
+
+  <div class="analysis-grid">
+    {pages.map((page) => (
+      <a href={`/connection/ai/${page.id.replace('ai/', '')}`} class="analysis-card">
+        <span class="card-order">Part {page.data.order}</span>
+        {page.data.relatedArticles.length > 0 && (
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">{page.data.relatedArticles.length}</span>
+            <span class="visual-label">ICESCR Articles</span>
+          </span>
+        )}
+        <h2>{page.data.title}</h2>
+        <p>{page.data.summary}</p>
+        {page.data.relatedArticles.length > 0 && (
+          <div class="related-articles">
+            {page.data.relatedArticles.map((num: number) => (
+              <span class="article-tag">Article {num}</span>
+            ))}
+          </div>
+        )}
+      </a>
+    ))}
+  </div>
+
+  <section class="reading-guide">
+    <h2>Reading Guide</h2>
+    <p>
+      The four analyses build sequentially. The differential diagnosis establishes the
+      mechanism — which of seven competing hypotheses about AI's economic impact survive
+      rigorous scoring. Higher-order effects trace what follows from those surviving
+      mechanisms across four analytical orders. The ratification counterfactual models
+      what changes when ICESCR protection exists. The Dignity Quotient provides a
+      measurement framework connecting psychology to human rights.
+    </p>
+    <p>
+      Each analysis connects to specific <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights" rel="noopener">ICESCR</a>
+      articles — follow the article tags to trace how the analysis maps onto
+      <a href="/covenant">the covenant</a>.
+    </p>
+    <p>
+      This domain is one of three. See also:
+      <a href="/connection/enforcement">Enforcement &amp; Economic Rights</a> and
+      <a href="/connection/international">International &amp; Accountability</a> — both
+      apply the same analytical framework to different mechanisms producing the same rights gap.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .domain-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .domain-breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .domain-breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .domain-breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .domain-intro {
+    margin-bottom: var(--space-2xl);
+    max-width: var(--max-width-content);
+  }
+
+  .domain-intro blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    border-left-color: var(--color-accent);
+  }
+
+  .meta-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .analysis-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .analysis-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .card-order {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+  }
+
+  .analysis-card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .analysis-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .related-articles {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .article-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 2px var(--space-xs);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    color: var(--color-text-muted);
+  }
+
+  .reading-guide {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .reading-guide p {
+    margin-bottom: var(--space-md);
+  }
+</style>

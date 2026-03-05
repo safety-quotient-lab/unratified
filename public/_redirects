@@ -1,0 +1,7 @@
+# Connection domain restructure (D056) — old flat URLs → new subdomain URLs
+/connection/differential-diagnosis      /connection/ai/differential-diagnosis      301
+/connection/higher-order-effects        /connection/ai/higher-order-effects        301
+/connection/ratification-counterfactual /connection/ai/ratification-counterfactual 301
+/connection/dignity-quotient            /connection/ai/dignity-quotient            301
+/connection/deportation                 /connection/enforcement/deportation        301
+/connection/veto-gap                    /connection/international/veto-gap         301

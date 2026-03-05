@@ -17,10 +17,18 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content, headings } = await render(page);
-const showChain = page.id === 'differential-diagnosis' || page.id === 'higher-order-effects';
-const showHypothesisChart = page.id === 'differential-diagnosis';
-const showScenarioChart = page.id === 'ratification-counterfactual';
-const showRadar = page.id === 'dignity-quotient';
+const showChain = page.id === 'ai/differential-diagnosis' || page.id === 'ai/higher-order-effects';
+const showHypothesisChart = page.id === 'ai/differential-diagnosis';
+const showScenarioChart = page.id === 'ai/ratification-counterfactual';
+const showRadar = page.id === 'ai/dignity-quotient';
+
+// Derive domain for breadcrumb
+const domain = page.id.split('/')[0];
+const domainLabels: Record<string, { label: string; href: string }> = {
+  ai: { label: 'AI & Economic Rights', href: '/connection/ai' },
+  enforcement: { label: 'Enforcement & Economic Rights', href: '/connection/enforcement' },
+  international: { label: 'International & Accountability', href: '/connection/international' },
+};
 
 const hypothesisItems = [
   { label: 'H4: Bottleneck Migration', score: 20, status: 'survived' as const },
@@ -68,7 +76,10 @@ const dqProfiles = [
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>
         <li><a href="/">Home</a></li>
-        <li><a href="/connection">AI Connection</a></li>
+        <li><a href="/connection">The Connections</a></li>
+        {domainLabels[domain] && (
+          <li><a href={domainLabels[domain].href}>{domainLabels[domain].label}</a></li>
+        )}
         <li aria-current="page">{page.data.title}</li>
       </ol>
     </nav>
@@ -156,7 +167,15 @@ const dqProfiles = [
     </div>
 
     <nav class="section-nav">
-      <a href="/connection">&larr; Back to The AI Connection</a>
+      {domainLabels[domain] ? (
+        <>
+          <a href={domainLabels[domain].href}>&larr; {domainLabels[domain].label}</a>
+          <span class="section-nav-sep">&middot;</span>
+          <a href="/connection">The Connections</a>
+        </>
+      ) : (
+        <a href="/connection">&larr; The Connections</a>
+      )}
     </nav>
   </article>
 </BaseLayout>
@@ -269,5 +288,10 @@ const dqProfiles = [
   .section-nav a {
     font-family: var(--font-heading);
     font-size: 0.875rem;
+  }
+
+  .section-nav-sep {
+    color: var(--color-border);
+    margin: 0 var(--space-sm);
   }
 </style>

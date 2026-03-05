@@ -1,0 +1,197 @@
+---
+import SectionLayout from '../../../layouts/SectionLayout.astro';
+import LensPanel from '../../../components/LensPanel.astro';
+import { getCollection } from 'astro:content';
+
+const allPages = await getCollection('connection');
+const pages = allPages
+  .filter(p => p.id.startsWith('enforcement/'))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const lensFraming = {
+  voter: "Immigration enforcement affects your neighbors, your coworkers, your community's economy. The United States signed a treaty in 1977 committing to protect economic and family rights for everyone within its jurisdiction. It never ratified it. This section documents what that gap means when enforcement severs established lives — and what the treaty would require if it existed.",
+  politician: "The enforcement domain applies the differential diagnosis framework to a second empirical domain: enforcement displacement vs. technology displacement. Same six ICESCR provisions apply independently — Articles 6, 9, 10, 12, and 13 map onto documented enforcement harms through distinct pathways. The dominant enforcement mechanism remains state AG litigation. Ratification does not prohibit deportation; it requires that enforcement processes weigh six categories of protected rights.",
+  developer: "Second empirical domain for the ICESCR accountability gap pattern. Enforcement severance maps onto Articles 6 (labor), 9 (social security contributions paid but inaccessible), 10 (family dissolution), 12 (healthcare severance), and 13 (children's educational disruption). Mechanism: sudden severance vs. AI's gradual restructuring. Same discriminator methodology; different causal pathway; same treaty gap. AI compounding: constraint removal (H2) applies to enforcement capacity as well as software production.",
+  educator: "Use this domain alongside the AI domain to teach comparative policy analysis: two mechanisms — technology displacement and enforcement displacement — independently producing similar rights gaps. Students evaluate which ICESCR articles apply in each domain, why the mechanisms differ, whether the same legal framework addresses both, and what effective accountability would require in each case. The family separation case study connects directly to Article 10 and raises Article 13 questions about children's educational continuity.",
+  researcher: "This domain extends the ratification counterfactual (Composite R-A) to enforcement displacement. The ICESCR's jurisdictional scope grounds the legal argument in treaty text: CESCR General Comment No. 20 confirms the Covenant applies to all persons within a state's territory regardless of immigration status. The six-article mapping provides a structured basis for empirical work on enforcement impact measurement. The $25B annual Social Security contribution figure (SSA 2022 Trustees Report) grounds the Article 9 argument in primary source data.",
+};
+---
+
+<SectionLayout
+  title="Enforcement & Economic Rights"
+  description="Immigration enforcement removes established residents from economic participation without any legal framework to weigh what gets destroyed. The ICESCR would require that six categories of protected rights receive consideration before proceeding."
+  section="connection"
+  breadcrumbLabel="Enforcement & Economic Rights"
+>
+  <nav class="domain-breadcrumb" aria-label="Domain navigation">
+    <ol>
+      <li><a href="/">Home</a></li>
+      <li><a href="/connection">The Connections</a></li>
+      <li aria-current="page">Enforcement &amp; Economic Rights</li>
+    </ol>
+  </nav>
+
+  <LensPanel lensFraming={lensFraming} section="connection" />
+
+  <section class="domain-intro">
+    <blockquote>
+      Two different mechanisms — technology displacement and enforcement displacement —
+      map onto the same ICESCR provisions through independent causal pathways
+    </blockquote>
+    <p class="domain-note">
+      This domain applies the same analytical framework developed in the AI domain to a
+      second empirical case: immigration enforcement as economic rights disruption. The
+      mechanism differs (sudden severance vs. gradual restructuring) but the rights gap
+      remains the same missing treaty.
+    </p>
+  </section>
+
+  <div class="analysis-grid">
+    {pages.map((page) => (
+      <a href={`/connection/enforcement/${page.id.replace('enforcement/', '')}`} class="analysis-card">
+        {page.data.relatedArticles.length > 0 && (
+          <span class="card-visual card-visual--stat">
+            <span class="visual-number">{page.data.relatedArticles.length}</span>
+            <span class="visual-label">ICESCR Articles</span>
+          </span>
+        )}
+        <h2>{page.data.title}</h2>
+        <p>{page.data.summary}</p>
+        {page.data.relatedArticles.length > 0 && (
+          <div class="related-articles">
+            {page.data.relatedArticles.map((num: number) => (
+              <span class="article-tag">Article {num}</span>
+            ))}
+          </div>
+        )}
+      </a>
+    ))}
+  </div>
+
+  <section class="reading-guide">
+    <h2>The Enforcement Framework</h2>
+    <p>
+      The ICESCR's jurisdictional scope — persons within a state's territory regardless of
+      immigration status — grounds this analysis in treaty text, not policy preference.
+      CESCR General Comment No. 20 confirms this reading. The legal argument does not rest
+      on a novel claim; it rests on the interpretive consensus of 173 ratifying nations over
+      49 years.
+    </p>
+    <p>
+      Ratification would not prohibit deportation. It would require that enforcement processes
+      weigh the economic and social rights of long-term residents before severing them — the
+      same standard 173 nations already apply.
+    </p>
+    <p>
+      This domain is one of three. See also:
+      <a href="/connection/ai">AI &amp; Economic Rights</a> — the technology displacement
+      analysis — and <a href="/connection/international">International &amp; Accountability</a> —
+      the veto gap analysis. The same six ICESCR provisions appear across all three domains
+      through independent analytical paths.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .domain-breadcrumb ol {
+    list-style: none;
+    display: flex;
+    gap: var(--space-sm);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+  }
+
+  .domain-breadcrumb li + li::before {
+    content: '/';
+    margin-right: var(--space-sm);
+    color: var(--color-border);
+  }
+
+  .domain-breadcrumb a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .domain-breadcrumb a:hover {
+    color: var(--color-accent);
+  }
+
+  .domain-intro {
+    margin-bottom: var(--space-2xl);
+    max-width: var(--max-width-content);
+  }
+
+  .domain-intro blockquote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+    border-left-color: var(--color-accent);
+  }
+
+  .domain-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .analysis-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .analysis-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .analysis-card h2 {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .analysis-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+  }
+
+  .related-articles {
+    display: flex;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+  }
+
+  .article-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    padding: 2px var(--space-xs);
+    background: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    color: var(--color-text-muted);
+  }
+
+  .reading-guide {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .reading-guide p {
+    margin-bottom: var(--space-md);
+  }
+</style>
