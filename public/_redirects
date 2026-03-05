@@ -1,3 +1,6 @@
+# Persona hub (D057) — /educators was broken nav target, now /for/educators
+/educators  /for/educators  301
+
 # Connection domain restructure (D056) — old flat URLs → new subdomain URLs
 /connection/differential-diagnosis      /connection/ai/differential-diagnosis      301
 /connection/higher-order-effects        /connection/ai/higher-order-effects        301

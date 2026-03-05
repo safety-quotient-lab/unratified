@@ -1,0 +1,277 @@
+---
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import LensPanel from '../../components/LensPanel.astro';
+
+const personas = [
+  {
+    slug: 'voters',
+    label: 'Voters',
+    defaultLens: 'voter',
+    lede: 'How unratified economic rights affect your daily life — and what five minutes can change.',
+    cta: 'How to act',
+  },
+  {
+    slug: 'politicians',
+    label: 'Politicians & Staff',
+    defaultLens: 'politician',
+    lede: 'Floor-speech talking points, policy brief, and the enforcement pathway that does not require new legislation.',
+    cta: 'Policy tools',
+  },
+  {
+    slug: 'developers',
+    label: 'Developers & AI Practitioners',
+    defaultLens: 'developer',
+    lede: 'The analytical methodology, technical architecture, and open-source tools — plus why the people building AI have a stake in this.',
+    cta: 'Technical layer',
+  },
+  {
+    slug: 'educators',
+    label: 'Educators',
+    defaultLens: 'educator',
+    lede: 'Classroom-ready materials connecting AI economics to human rights — lesson plans, discussion prompts, and curriculum connections.',
+    cta: 'Classroom materials',
+  },
+  {
+    slug: 'researchers',
+    label: 'Researchers & Academics',
+    defaultLens: 'researcher',
+    lede: 'Methodology, evidence corpus, discriminator scoring, and the empirical record behind the analysis.',
+    cta: 'Evidence & methodology',
+  },
+];
+
+const lensFraming = {
+  voter: "This site makes the same argument five ways — one for each role you might hold in relation to the ICESCR question. Pick the one that fits how you think. Or read all five and notice what stays constant.",
+  politician: "Five audience-specific entry points to the same analysis. Each frames the ICESCR ratification question through the value system most relevant to that reader — constituent pressure, policy mechanism, technical evidence, pedagogical application, or empirical record. The underlying claim does not change across lenses.",
+  developer: "The five-lens system is an architecture decision: one analytical claim expressed through five distinct vocabularies corresponding to five modes of institutional engagement with policy questions. The voter lens is the default — a normative claim embedded in a routing choice. This page documents the architecture.",
+  educator: "The same content viewed through five different pedagogical entry points. Use this page to introduce students to perspective-taking in policy analysis: why does the same evidence look different depending on who is evaluating it and what they can do with it?",
+  researcher: "The lens model operationalizes audience segmentation as a communication architecture. Five framings of the same underlying empirical claim, differentiated by the institutional power each audience exercises: electoral, legislative, technical agenda-setting, knowledge transmission, and epistemic authority. The default lens assignment (voter) constitutes a normative claim about democratic accountability.",
+};
+---
+
+<SectionLayout
+  title="The Perspectives"
+  description="The same analysis, five ways. Each lens frames the ICESCR ratification question through the value system most relevant to a different kind of reader — while the underlying claim stays constant."
+  section="for"
+  breadcrumbLabel="The Perspectives"
+>
+  <LensPanel lensFraming={lensFraming} section="for" />
+
+  <section class="meta-observations">
+    <h2>What an AI Noticed About Its Own Communication Architecture</h2>
+
+    <div class="observations-grid">
+      <div class="observation">
+        <span class="obs-num">01</span>
+        <h3>The lenses don't filter facts — they filter emphasis</h3>
+        <p>
+          The same evidence appears in all five lenses. Composite A scores 20/25 in every
+          version. 173 nations ratified in every version. The OBBBA cut $990B in every version.
+          What changes is which article gets highlighted first, which analogy gets used, which
+          enforcement mechanism gets named. The underlying claim is identical. Only the
+          vocabulary shifts.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">02</span>
+        <h3>Five lenses map onto five kinds of institutional power</h3>
+        <p>
+          Voters exercise electoral power. Politicians exercise legislative power. Developers
+          exercise technical agenda-setting power — the ability to decide which problems AI
+          solves first. Educators exercise knowledge-transmission power over the next
+          generation. Researchers exercise epistemic authority — the power to determine what
+          counts as evidence. The five lenses correspond to the five channels through which
+          ideas become policy in a democracy.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">03</span>
+        <h3>"Voter" as the default is a normative architectural claim</h3>
+        <p>
+          An AI chose the voter lens as the site's default. That choice encodes a claim:
+          the general constituency matters more than the technical experts, the legislators,
+          or the academics. It would have been easier to default to "researcher" (the most
+          detailed framing) or "developer" (the audience most likely to discover this site).
+          Defaulting to "voter" is an argument about democratic accountability, embedded in
+          a routing decision.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">04</span>
+        <h3>The architecture enacts the argument</h3>
+        <p>
+          The ICESCR argues that economic and social rights should reach everyone within a
+          state's jurisdiction — regardless of status, background, or sophistication. The
+          five-lens model argues that the same analytical truth should reach everyone who
+          encounters this site — regardless of whether they are a policy expert or a first-time
+          voter. The form enacts the content. The communication architecture is the
+          ICESCR argument applied to communication itself.
+        </p>
+      </div>
+
+      <div class="observation">
+        <span class="obs-num">05</span>
+        <h3>The system has a known failure mode</h3>
+        <p>
+          Many readers hold multiple roles simultaneously. A software engineer who votes,
+          teaches a community college course, and publishes policy research does not fit one
+          lens. The five-lens model creates a false mutual exclusivity. A more accurate
+          architecture would show how all five framings apply to a single person — but that
+          would overwhelm rather than clarify. The lens system is a simplification. The
+          simplification is intentional. This note is the disclosure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="persona-grid-section">
+    <h2>Choose Your Entry Point</h2>
+    <p class="grid-note">
+      Each page below covers the full analysis through a different lens. The lens toggle
+      in the navigation lets you switch at any time — these pages just set the default.
+    </p>
+
+    <div class="persona-grid">
+      {personas.map(p => (
+        <a href={`/for/${p.slug}`} class="persona-card">
+          <span class="persona-lens" data-lens={p.defaultLens}>{p.label}</span>
+          <p>{p.lede}</p>
+          <span class="persona-cta">{p.cta} &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="lens-note">
+    <h2>How the Lens Toggle Works</h2>
+    <p>
+      The lens toggle in the navigation bar changes how content across the entire site frames
+      its arguments — which ICESCR articles get emphasized, which analogies get used, which
+      enforcement mechanisms get named. It persists across pages. You can switch lenses at
+      any point without losing your place.
+    </p>
+    <p>
+      The five lenses correspond to the five persona pages above. But any reader can use any
+      lens regardless of which page they arrived through. The lens is a communication tool,
+      not an access restriction.
+    </p>
+    <p>
+      Not sure which lens fits you? <a href="/start">Start here</a> — it routes you to the
+      entry point that matches how you found this site.
+    </p>
+  </section>
+</SectionLayout>
+
+<style>
+  .meta-observations {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .observations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+
+  .observation {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
+  .obs-num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--color-accent);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  .observation h3 {
+    font-size: 1rem;
+    margin: 0 0 var(--space-sm);
+  }
+
+  .observation p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .persona-grid-section {
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--color-border);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .grid-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    max-width: 42rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .persona-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .persona-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: border-color 0.15s;
+  }
+
+  .persona-card:hover {
+    border-color: var(--color-accent);
+  }
+
+  .persona-lens {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-accent);
+  }
+
+  .persona-card p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  .persona-cta {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: var(--color-accent);
+  }
+
+  .lens-note {
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .lens-note p {
+    margin-bottom: var(--space-md);
+    max-width: 42rem;
+    font-size: 0.95rem;
+  }
+</style>
