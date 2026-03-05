@@ -2,7 +2,7 @@
   interface Author {
     human: { name: string; url: string };
     tool: { name: string; url: string };
-    model: { name: string };
+    model: { name: string; url: string };
     agent: { name: string; projectUrl: string };
   }
 
@@ -171,9 +171,9 @@
           &middot;
           <a href={post.author.tool.url} rel="noopener">{post.author.tool.name}</a>
           &middot;
-          <a href={`/model/${post.author.model.name.toLowerCase().replace(/\s+/g, '-')}`}>{post.author.model.name}</a>
+          <a href={post.author.model.url} rel="noopener">{post.author.model.name}</a>
           &middot;
-          <a href={`/agent/${post.author.agent.name}`}>{post.author.agent.name}</a>
+          <a href={post.author.agent.projectUrl} rel="noopener">{post.author.agent.name}</a>
         </span>
         {#if post.reviewStatus === "unreviewed"}
           <span class="review-badge">Pre-Review</span>

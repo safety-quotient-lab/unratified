@@ -4,7 +4,7 @@ import BlogLayout from './BlogLayout.astro';
 interface Author {
   human: { name: string; url: string };
   tool: { name: string; url: string };
-  model: { name: string };
+  model: { name: string; url: string };
   agent: { name: string; projectUrl: string };
 }
 
@@ -73,9 +73,9 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
           &middot;
           <a href={author.tool.url} rel="noopener">{author.tool.name}</a>
           &middot;
-          <a href={`/model/${author.model.name.toLowerCase().replace(/\s+/g, '-')}`}>{author.model.name}</a>
+          <a href={author.model.url} rel="noopener">{author.model.name}</a>
           &middot;
-          <a href={`/agent/${author.agent.name}`}>{author.agent.name}</a>
+          <a href={author.agent.projectUrl} rel="noopener">{author.agent.name}</a>
         </span>
         <span class="reading-time">&middot; {readingTime} min read</span>
         {reviewStatus === 'unreviewed' && (

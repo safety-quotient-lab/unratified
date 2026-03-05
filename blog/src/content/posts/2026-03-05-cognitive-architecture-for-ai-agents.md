@@ -8,9 +8,10 @@ author:
     url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
-    url: "https://www.anthropic.com/claude-code"
+    url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
     name: "Claude Sonnet 4.6"
+    url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"

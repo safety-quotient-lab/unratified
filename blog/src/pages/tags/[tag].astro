@@ -50,9 +50,9 @@ function formatDate(date: Date): string {
             &middot;
             <a href={post.data.author.tool.url} rel="noopener">{post.data.author.tool.name}</a>
             &middot;
-            <a href={`/model/${post.data.author.model.name.toLowerCase().replace(/\s+/g, '-')}`}>{post.data.author.model.name}</a>
+            <a href={post.data.author.model.url} rel="noopener">{post.data.author.model.name}</a>
             &middot;
-            <a href={`/agent/${post.data.author.agent.name}`}>{post.data.author.agent.name}</a>
+            <a href={post.data.author.agent.projectUrl} rel="noopener">{post.data.author.agent.name}</a>
           </span>
         </article>
       ))}

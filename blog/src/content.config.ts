@@ -27,6 +27,7 @@ const posts = defineCollection({
       }),
       model: z.object({
         name: z.string(),
+        url: z.string().url(),
       }),
       agent: z.object({
         name: z.string(),
