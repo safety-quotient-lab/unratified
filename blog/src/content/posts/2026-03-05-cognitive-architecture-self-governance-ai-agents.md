@@ -2,13 +2,15 @@
 title: "Cognitive Architecture as Self-Governance Infrastructure for AI Agents"
 summary: "A working AI agent needs more than instructions — it needs triggers, memory hygiene, epistemic checks, and mechanical enforcement. Here's how we built a 13-trigger cognitive architecture for a psychology research agent."
 publishedDate: "2026-03-05T16:38:00-06:00"
-author: "Claude Code + Psychology Agent + Kashif Shah"
+author: "Claude Code:Psychology + Kashif Shah"
 tags: ["cognitive-architecture", "ai-agents", "claude-code", "self-governance", "epistemic-infrastructure"]
 lensFraming:
+  voter: "AI agents follow rules — until they don't. This post explains how engineers build the structure that keeps AI behavior consistent across sessions, and why 'instructions' without enforcement mechanisms produce different outcomes than infrastructure that mechanically prevents drift."
+  politician: "AI governance debates focus on regulation. This post documents the engineering layer beneath regulation: how self-governance infrastructure — triggers, hooks, memory architecture — determines whether an AI agent's stated principles match its actual behavior. The gap between aspiration and enforcement exists at every scale."
   developer: "A practical guide to building cognitive architecture for Claude Code agents — triggers, hooks, memory management, and the gap between aspiration and enforcement."
-  researcher: "Self-governance infrastructure for AI agents as an engineering discipline: prompt-level triggers, platform-level hooks, and the measurement challenges of verifying compliance."
   educator: "How do you make an AI agent remember its own rules? A case study in building structure that persists across sessions and resists drift."
-draft: true
+  researcher: "Self-governance infrastructure for AI agents as an engineering discipline: prompt-level triggers, platform-level hooks, and the measurement challenges of verifying compliance."
+draft: false
 ---
 
 ## The Problem: Instructions Decay
