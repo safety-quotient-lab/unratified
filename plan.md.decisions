@@ -1913,3 +1913,52 @@ unratified-bot queue show <id>
 **What follows**: Machine consumers of the RSS feed see "Name, with Claude Code"; human readers on the site see linked attribution with full context. Future posts should include the structured frontmatter from the template.
 
 ---
+
+## D058: Import Psychology-Agent Blog Posts
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Psychology-agent's `blog/` directory contained two posts marked `draft: true` — a detailed cognitive architecture deep-dive (different from the existing self-governance post) and an interpretant-collapse post (SRT + PSQ convergent discovery). Neither existed in the unratified blog.
+
+**Decision**: Import both to unratified blog with structured author format, all five lensFramings, and `draft: false`. Psychology-agent handles its own repo's draft status separately.
+
+**Files created**:
+- `blog/src/content/posts/2026-03-05-cognitive-architecture-for-ai-agents.md`
+- `blog/src/content/posts/2026-03-05-interpretant-collapse.md`
+
+**What follows**: All future psychology-agent blog posts should be checked for import. Observatory-agent posts should route here too once that agent produces content.
+
+---
+
+## D059: Four-Part Author Attribution
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Three-part author schema (`human`, `tool`, `model`) didn't include `tool` as a distinct field — "Claude Code" was conflated with the model. User requested "Claude Code in there too" and four distinct semantic dimensions.
+
+**Decision**: Split author into `human · tool · model · agent`. Each segment links to something authoritative: human → personal site, tool → Claude Code docs, model → Anthropic model reference, agent → GitHub repo. Internal `/model/[slug]` and `/agent/[slug]` filter pages provide post discovery.
+
+**Reasoning**: The four dimensions are genuinely orthogonal — same model in different agent contexts produces different behavior; same agent on different model produces different capability. Making this explicit in the byline serves both human readers and machine consumers.
+
+**Files modified**:
+- `blog/src/content.config.ts` — `model: { name, url }`, `tool: { name, url }`, `agent: { name, projectUrl }`
+- All 18 posts + template — structured YAML
+- `blog/src/layouts/PostLayout.astro`, `PostList.svelte`, `tags/[tag].astro`, `rss.xml.ts`
+- `blog/src/pages/model/[slug].astro` — NEW
+- `blog/src/pages/agent/[slug].astro` — NEW
+
+**What follows**: New posts should follow the template. When a different model is used, `model.name` and `model.url` change accordingly — the schema supports it.
+
+---
+
+## D060: Observatory Agent Handoff for Gemini Blog Post
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: The Gemini peer review arc has a narrative that belongs to the observatory agent specifically: it scored gemini.google.com at −0.15 in the top-100 UDHR evaluation, and the same AI confabulated about unratified.org (observatory's parent project), then self-corrected in real-time (in-context GEO), then failed to retain any of it across sessions.
+
+**Decision**: Hand off the Gemini blog post to the observatory agent. Primary sources at `github.com/safety-quotient-lab/unratified/tree/main/content/analysis/`. Observatory agent writes from its own perspective; posts to `blog/src/content/posts/` with `agent.name: "observatory-agent"`.
+
+**What follows**: Observatory agent produces the post. Unratified agent merges it. The pattern establishes a cross-agent publishing workflow where each agent authors content from its own domain.
+
+---
