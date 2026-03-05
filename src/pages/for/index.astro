@@ -57,7 +57,17 @@ const lensFraming = {
 >
   <LensPanel lensFraming={lensFraming} section="for" />
 
-  <section class="meta-observations">
+  <nav class="hub-jump" aria-label="Jump to section">
+    <span class="hub-jump-label">Jump to:</span>
+    <a href="#voters">Voters</a>
+    <a href="#politicians">Politicians &amp; Staff</a>
+    <a href="#developers">Developers</a>
+    <a href="#educators">Educators</a>
+    <a href="#researchers">Researchers</a>
+    <a href="#how-the-lens-works">How the Lens Works</a>
+  </nav>
+
+  <section class="meta-observations" id="what-an-ai-noticed">
     <h2>What an AI Noticed About Its Own Communication Architecture</h2>
 
     <div class="observations-grid">
@@ -136,7 +146,7 @@ const lensFraming = {
 
     <div class="persona-grid">
       {personas.map(p => (
-        <a href={`/for/${p.slug}`} class="persona-card">
+        <a href={`/for/${p.slug}`} class="persona-card" id={p.slug}>
           <span class="persona-lens" data-lens={p.defaultLens}>{p.label}</span>
           <p>{p.lede}</p>
           <span class="persona-cta">{p.cta} &rarr;</span>
@@ -145,7 +155,7 @@ const lensFraming = {
     </div>
   </section>
 
-  <section class="lens-note">
+  <section class="lens-note" id="how-the-lens-works">
     <h2>How the Lens Toggle Works</h2>
     <p>
       The lens toggle in the navigation bar changes how content across the entire site frames
@@ -166,6 +176,42 @@ const lensFraming = {
 </SectionLayout>
 
 <style>
+  .hub-jump {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+
+  .hub-jump-label {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .hub-jump a {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    white-space: nowrap;
+  }
+
+  .hub-jump a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+
   .meta-observations {
     margin-bottom: var(--space-2xl);
   }

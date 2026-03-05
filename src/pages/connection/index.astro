@@ -36,7 +36,15 @@ const lensFraming = {
 >
   <LensPanel lensFraming={lensFraming} section="connection" />
 
-  <section class="meta-observations">
+  <nav class="hub-jump" aria-label="Jump to section">
+    <span class="hub-jump-label">Jump to:</span>
+    <a href="#ai">AI &amp; Economic Rights</a>
+    <a href="#enforcement">Enforcement &amp; Economic Rights</a>
+    <a href="#international">International &amp; Accountability</a>
+    <a href="#article-coverage">Article Coverage</a>
+  </nav>
+
+  <section class="meta-observations" id="what-an-ai-noticed">
     <h2>What an AI Noticed</h2>
 
     <div class="observations-grid">
@@ -116,7 +124,7 @@ const lensFraming = {
     </div>
   </section>
 
-  <section class="coverage-matrix">
+  <section class="coverage-matrix" id="article-coverage">
     <h2>Article Coverage Across Domains</h2>
     <p class="matrix-note">
       Each domain's analysis independently identified the ICESCR articles most directly at
@@ -158,11 +166,11 @@ const lensFraming = {
     </div>
   </section>
 
-  <section class="domain-grid">
+  <section class="domain-grid" id="domains">
     <h2>The Three Domains</h2>
 
     <div class="domains">
-      <a href="/connection/ai" class="domain-card">
+      <a href="/connection/ai" class="domain-card" id="ai">
         <span class="domain-tag">AI &amp; Economic Rights</span>
         <h3>How AI Reshapes Who Benefits</h3>
         <p>
@@ -173,7 +181,7 @@ const lensFraming = {
         <span class="domain-count">{allPages.filter(p => p.id.startsWith('ai/')).length} analyses &rarr;</span>
       </a>
 
-      <a href="/connection/enforcement" class="domain-card">
+      <a href="/connection/enforcement" class="domain-card" id="enforcement">
         <span class="domain-tag">Enforcement &amp; Economic Rights</span>
         <h3>How Enforcement Severs Who Participates</h3>
         <p>
@@ -184,7 +192,7 @@ const lensFraming = {
         <span class="domain-count">{allPages.filter(p => p.id.startsWith('enforcement/')).length} {allPages.filter(p => p.id.startsWith('enforcement/')).length === 1 ? 'analysis' : 'analyses'} &rarr;</span>
       </a>
 
-      <a href="/connection/international" class="domain-card">
+      <a href="/connection/international" class="domain-card" id="international">
         <span class="domain-tag">International &amp; Accountability</span>
         <h3>How the Veto Gap Exempts U.S. Policy</h3>
         <p>
@@ -223,6 +231,42 @@ const lensFraming = {
 </SectionLayout>
 
 <style>
+  .hub-jump {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+
+  .hub-jump-label {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .hub-jump a {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    white-space: nowrap;
+  }
+
+  .hub-jump a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+
   .meta-observations {
     margin-bottom: var(--space-2xl);
   }
