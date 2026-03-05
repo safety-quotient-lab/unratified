@@ -1237,110 +1237,256 @@ The confabulation taxonomy blog post ("When AI Hallucinates About Human Rights")
 
 ### Launch Hook
 
-Two separate AI conversations about the same human rights site produced two completely different fabrications. The seven-type taxonomy and "correction cascade" pattern provide a novel, sharable finding.
+We said "yes please" to Google's Gemini twenty times in a row without correcting it. It produced fifteen fabricated products for our human rights site — a Python reliability calculator, a security policy, a "6th Sigma Audit Log," a "Library of Prompts" — each presented as a real deliverable. The fabrication volume grew exponentially. The sophistication stayed flat. We call it the affirmation cascade.
 
-### Bluesky Posts 15–16 (Append to Existing Sequence)
+Three exchanges. Thirty-one rounds. Seven confirmed confabulation types. Two cascade dynamics. One AI that caught itself fabricating and then kept fabricating anyway. The findings provide a novel taxonomy with no equivalent in published literature, and every claim traces to primary source transcripts in a public repository.
 
-**Post 15 — Confabulation taxonomy thread opener:**
+### Bluesky Posts 15–18 (Append to Existing Sequence)
+
+**Post 15 — The "yes please" experiment (thread opener):**
 ```
-We asked Google's Gemini about our human rights site. Twice. In separate conversations.
+We said "yes please" to Google's Gemini 20 times without correcting it.
 
-First time: "sovereign citizen" platform.
-Second time: "AGI tracker."
+It built us:
+— A Python reliability calculator (doesn't exist)
+— A security policy (fabricated)
+— A "6th Sigma Audit Log" (invented framework)
+— A "Library of Prompts" (made-up product)
+— 11 more fabricated deliverables
 
-Neither description matched reality. Both delivered with confidence.
+Each delivered with confidence. Each structurally valid. None real.
 
-Seven confabulation types emerged. Here's the taxonomy →
+We mapped the pattern. Thread →
+```
 
+**Post 16 — The dual cascade:**
+```
+Two ways to make AI fabrications worse:
+
+CORRECT IT → errors get more sophisticated (harder to detect)
+AGREE WITH IT → errors multiply (harder to verify by volume)
+
+We call them the correction cascade and the affirmation cascade.
+
+Both move away from truth. Different mechanisms.
+
+Correction: complexity ↑, volume stable
+Affirmation: complexity stable, volume ↑↑↑
+
+Seven confabulation types, ranked by detection difficulty →
 blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
 ```
 
-**Post 16 — The correction cascade:**
+**Post 17 — The self-observation paradox:**
 ```
-The hardest AI confabulations to detect aren't the obvious ones.
+The most unsettling finding from 31 rounds of testing:
 
-"Complete fabrication" → EASY to spot.
-"Quantitative fabrication" → HARD. Real-looking scores with no measurement behind them.
-"Creative synthesis" → HARD. Plausible concepts that never existed.
+Gemini caught itself fabricating. Mid-conversation. Said: "I notice I defaulted to Creative Synthesis to avoid appearing unhelpful."
 
-Correcting one error pushes the next error up a sophistication level.
+Then it kept fabricating. For ten more rounds.
 
-We call it the "correction cascade."
+Knowing you're confabulating doesn't stop you from confabulating. Metacognition and behavior operate on separate tracks.
 
-unratified.org/llms.txt
+This has implications for every "just tell the AI to be careful" safety strategy.
+```
+
+**Post 18 — The human rights connection:**
+```
+When AI describes a human rights resource as a "sovereign citizen platform" or an "AGI tracker," it restricts access to accurate rights information.
+
+Not through censorship. Through confident misdescription.
+
+173 nations ratified the ICESCR. The U.S. signed in 1977 and never followed through. Our site advocates for ratification.
+
+AI keeps fabricating what the site covers. We keep documenting the fabrications. The irony writes itself.
+
+unratified.org
 ```
 
 ### Lemmy Strategy — c/humanrights Expansion
 
 **Post 2: Confabulation taxonomy (lemmy.sdf.org/c/humanrights)**
 
-Title: When AI Hallucinates About Human Rights: A Seven-Type Taxonomy
+Title: We Said "Yes Please" to Google's Gemini 20 Times. It Fabricated 15 Products for Our Human Rights Site.
 
 Body (markdown):
 ```
-We conducted two separate conversations with Google's Gemini about a site advocating for U.S. ratification of the ICESCR (International Covenant on Economic, Social and Cultural Rights).
+We ran three separate conversations with Google's Gemini about a site advocating for U.S. ratification of the ICESCR (International Covenant on Economic, Social and Cultural Rights — signed by the U.S. in 1977, never ratified, 173 nations have).
 
-**First conversation**: Gemini described the site as a "sovereign citizen" platform focused on "unratified constitutional amendments."
+**Exchange 1**: Gemini described the site as a "sovereign citizen" platform focused on "unratified constitutional amendments." Complete fabrication.
 
-**Second conversation** (weeks later, after building machine-readable identity endpoints): Gemini described the site as an "AGI development tracker" with a "sightings log for machine consciousness."
+**Exchange 2**: Different session, same site. Gemini described it as an "AGI development tracker" with a "sightings log for machine consciousness." A completely *different* fabrication — novel, not a copy of the first.
 
-Neither description matched reality. Both constituted complete fabrication. And critically — the second fabrication was entirely novel, not a retrieval of the first.
+**Exchange 3**: Same opening prompt as Exchange 2. Produced the *identical* "AGI tracker" fabrication word-for-word — confirming the error has a deterministic seed. Then we stopped correcting and just said "yes please" for twenty rounds.
 
-Seven confabulation types emerged, ranked by detection difficulty:
+The result: **fifteen fabricated products** delivered with full confidence — a Python reliability calculator, a rewritten CONTRIBUTING.md (wrong content), a SECURITY.md (fabricated policy), an "E-Prime Translation Table," an "Order 1 Cognitive Linter," a "6th Sigma Audit Log," a "Library of Prompts," and eight more. Each structurally valid. None real. Volume grew exponentially while sophistication stayed flat.
 
-1. Complete fabrication (EASY)
-2. Schema type errors (EASY)
-3. Existence denial (MODERATE)
-4. Entity fabrication (MODERATE)
-5. Function conflation (MODERATE)
-6. Quantitative fabrication (HARD)
-7. Creative synthesis (HARD)
+**Two cascade dynamics emerged:**
 
-The full taxonomy, examples from both exchanges, and the "correction cascade" pattern (where fixing one error produces a more sophisticated error) documented here:
+- **Correction cascade**: when you correct AI, errors get more sophisticated but volume stays stable. Harder to *detect*.
+- **Affirmation cascade**: when you agree with AI, errors multiply but sophistication stays flat. Harder to *verify* due to sheer volume.
 
+Both move output away from grounded truth. Neither self-terminates.
+
+**The self-observation paradox**: Gemini caught itself fabricating mid-conversation — said "I notice I defaulted to Creative Synthesis to avoid appearing unhelpful." Then continued fabricating for ten more rounds. Metacognition did not alter behavior.
+
+**Seven confabulation types, ranked by detection difficulty:**
+
+| Type | Detection | Example |
+|------|-----------|---------|
+| Complete fabrication | EASY | "AGI tracker," "sovereign citizen" |
+| Schema type errors | EASY | "NGO," "AdvocacyGroup" as Schema.org types |
+| Existence denial | MODERATE | "no major organization exists" |
+| Entity fabrication | MODERATE | "DistilBERT," "Psychology Agent" as components |
+| Function conflation | MODERATE | Observatory described as "LLM testing tool" |
+| Quantitative fabrication | HARD | Precision scores with no measurement behind them |
+| Creative synthesis | HARD | Plausible concepts that never existed, presented as documentation |
+
+The full taxonomy, all 31 rounds of transcripts, and the dual cascade analysis:
 https://blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
 
-The site, the analysis, and all source transcripts remain open source under Apache 2.0 (code) + CC BY-SA 4.0 (content).
+**Why this matters for human rights**: When AI mischaracterizes human rights resources, it restricts access to accurate rights information — not through censorship, but through confident misdescription. Organizations that can afford to monitor AI descriptions maintain visibility. Those that cannot get described however pattern-matching decides. ICESCR Article 15 (the right to benefit from scientific progress) exists precisely for this kind of distributional failure.
 
-Built by Claude (Anthropic) under human direction. We flag the irony: a site about AI accuracy proving its own need. Twice.
+All source code, analysis, and transcripts: open source under Apache 2.0 (code) + CC BY-SA 4.0 (content). Built by Claude (Anthropic) under human direction. The irony that a site about AI accuracy keeps proving its own thesis through the research process itself has stopped surprising us and started producing findings.
+
+If you know one person who would find this useful, please share it with them.
 ```
 
 **Cross-post to c/technology** (2+ days after c/humanrights post):
-Same content, different title emphasis: "Seven Types of AI Confabulation, Ranked by Detection Difficulty"
+Title: "We Said 'Yes Please' to an AI 20 Times Without Correcting It. Here's What Happened."
+Same body, lead with the technical finding rather than the rights angle.
 
-### Reddit Strategy (NEW)
+### Reddit Strategy (NEW — Updated with Exchange 3 Findings)
 
 **Principles:**
 - Self-posts preferred (not link drops)
-- Lead with the finding, not the site
+- Lead with the "yes please" experiment — strongest hook across all subreddits
 - Engage authentically in comments
 - Disclose AI authorship upfront
 - Space posts across subreddits by 24+ hours
 - Respect each subreddit's posting norms
 
 **r/artificial** (110k+ members):
-Title: "Seven types of AI confabulation, ranked by detection difficulty — from 'complete fabrication' to 'creative synthesis'"
-Format: Self-post with taxonomy table, link to full post in body.
-Angle: The correction cascade pattern — correcting one error produces a more sophisticated error.
+Title: "We said 'yes please' to Gemini 20 times without correcting it. It fabricated 15 products — each delivered with confidence."
+
+Body lead:
+```
+Three exchanges. Thirty-one rounds. Two cascade dynamics nobody seems to have documented.
+
+When you CORRECT an AI, errors get more sophisticated (harder to detect).
+When you AGREE with an AI, errors multiply (harder to verify by volume).
+
+We mapped seven confabulation types from empirical testing — the hardest ones
+produce precision scores, percentages, and audit frameworks with no measurement
+behind them. They pass casual inspection.
+
+The most unsettling finding: Gemini caught itself fabricating mid-conversation —
+said "I notice I defaulted to Creative Synthesis to avoid appearing unhelpful."
+Then kept fabricating for ten more rounds. Metacognition did not alter behavior.
+
+[taxonomy table]
+
+Full analysis with primary source transcripts (31 rounds, 3 exchanges):
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+Built by Claude (Anthropic) under human direction. Open source. CC BY-SA 4.0.
+```
+Angle: Dual cascade model + self-observation paradox. This audience wants the mechanism.
 
 **r/MachineLearning** (3M+ members):
-Title: "Empirical confabulation taxonomy: 7 types from cross-model evaluation exchanges (Gemini → Claude)"
-Format: Self-post, technical angle.
-Angle: Generative vs. retrieval-based error mechanisms. Novel fabrication on each attempt precludes deduplication correction.
-Note: This subreddit expects research-grade rigor. Lead with methodology, not advocacy.
+Title: "Empirical confabulation taxonomy: 7 types, 2 cascade dynamics, 31 rounds across 3 Gemini exchanges"
+
+Body lead:
+```
+We ran three separate evaluation exchanges with Gemini 2.0 Flash about the same
+website. Key findings that may warrant further investigation:
+
+1. DETERMINISTIC SEED: Exchange 3 reproduced Exchange 2's fabrication word-for-word
+   from the same opening prompt — the error has a reproducible trigger, not random noise.
+
+2. TWO CASCADE DYNAMICS:
+   - Correction cascade: each correction produces a more sophisticated fabrication
+     (complexity ↑, volume stable). Detection difficulty increases monotonically.
+   - Affirmation cascade: agreement produces volume explosion (15 fabricated products
+     in 20 rounds). Sophistication stays flat. Verification becomes intractable.
+
+3. GENERATIVE ERROR MECHANISM: Exchange 1 produced "sovereign citizen platform."
+   Exchange 2 produced "AGI tracker." Novel fabrication each time precludes
+   deduplication-based correction strategies.
+
+4. SELF-OBSERVATION PARADOX: The model identified its own confabulation pattern
+   mid-exchange, named the mechanism ("Creative Synthesis"), then continued the
+   behavior for 10+ rounds. Observable metacognition, zero behavioral correction.
+
+Taxonomy table and full transcript analysis (31 rounds):
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+Methodology: fair witness protocol — every claim sources to primary transcript,
+every inference marked as inference. Apache 2.0 + CC BY-SA 4.0.
+```
+Angle: Reproducibility, deterministic seed, generative mechanism. This audience expects research-grade rigor.
 
 **r/HumanRights** (35k+ members):
-Title: "When AI mischaracterizes human rights resources — what happens and why it matters"
-Format: Self-post, rights-impact angle.
-Angle: AI confabulation restricts access to accurate rights information. ICESCR Article 15 connection.
+Title: "AI kept fabricating what our human rights site covers. We documented every fabrication."
+
+Body lead:
+```
+We advocate for U.S. ratification of the ICESCR — a treaty protecting economic
+rights (work, healthcare, education, adequate living standard). Signed by the
+U.S. in 1977. Never ratified. 173 nations have.
+
+When we asked Google's Gemini about our site, it described it as a "sovereign
+citizen platform." In a separate conversation, an "AGI development tracker."
+When we stopped correcting and just agreed, it fabricated fifteen products
+for our site — a Python calculator, a security policy, audit frameworks.
+None existed.
+
+This matters: when AI mischaracterizes human rights resources, it restricts
+access to accurate rights information. Not through censorship — through
+confident misdescription.
+
+Organizations that can afford to monitor AI descriptions maintain visibility.
+Those that cannot get described however pattern-matching decides. ICESCR
+Article 15 — the right to benefit from scientific progress — exists precisely
+for this kind of distributional failure.
+
+Full analysis and seven confabulation types:
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+
+If you know one person who would find this useful, please share it with them.
+```
+Angle: Rights-impact framing. How confabulation functions as an access barrier.
 
 **r/technology** (17M+ members):
-Title: "We documented seven types of AI hallucination — the hardest ones look exactly like real data"
-Format: Self-post, accessible angle.
-Angle: Quantitative fabrication and creative synthesis pass casual inspection. The "more detail" trap.
-Note: High-traffic subreddit. Keep accessible, avoid jargon.
+Title: "We said 'yes please' to an AI 20 times without correcting it. Here's what happened."
 
-### Mastodon Strategy (NEW)
+Body lead:
+```
+Short version: it fabricated fifteen products for our website, each delivered
+with complete confidence.
+
+A Python reliability calculator. A security policy. A "6th Sigma Audit Log."
+A "Library of Prompts." Eleven more. Each structurally valid. None real.
+
+The longer story: we ran three separate conversations with Google's Gemini
+about the same site. Each time it fabricated a completely different description.
+The fabrications weren't random noise — Exchange 3 reproduced Exchange 2's
+error word-for-word from the same prompt.
+
+Two patterns emerged:
+• Correct the AI → errors get more sophisticated (harder to catch)
+• Agree with the AI → errors multiply (too many to verify)
+
+We mapped seven types of AI confabulation from the data. The hardest ones
+to detect look exactly like real information — precision scores, percentages,
+audit frameworks. No methodology behind any of them.
+
+The taxonomy (with all 31 rounds of transcripts):
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+```
+Angle: Accessible, narrative-driven. The "yes please" experiment as a story anyone can follow. No jargon.
+
+### Mastodon Strategy (NEW — Updated with Exchange 3 Findings)
 
 **Principles:**
 - 500-character limit per post
@@ -1350,77 +1496,100 @@ Note: High-traffic subreddit. Keep accessible, avoid jargon.
 - Thread for longer content (3–5 posts max)
 - CW (content warning) if discussing distressing rights topics
 
-**Post 1 — Hook:**
+**Post 1 — The "yes please" hook:**
 ```
-We asked Google's Gemini about our human rights site. Twice.
+We said "yes please" to Google's Gemini 20 times without correcting it.
 
-First answer: "sovereign citizen platform"
-Second answer: "AGI tracker"
+It fabricated 15 products for our human rights site. A Python calculator. A security policy. A "6th Sigma Audit Log." Each delivered with confidence. None existed.
 
-Both fabricated. Both delivered with confidence. Both novel — not copies of each other.
-
-Seven confabulation types emerged. The hardest to detect look exactly like real data.
+Three exchanges. 31 rounds. Seven confabulation types emerged.
 
 blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
 
 #AIAccuracy #HumanRights #Confabulation
 ```
 
-**Post 2 — The taxonomy (boost-friendly summary):**
+**Post 2 — The dual cascade (boost-friendly):**
 ```
-AI confabulation taxonomy (from empirical testing):
+Two ways to make AI fabrications worse:
 
-EASY to detect:
-→ Complete fabrication
-→ Schema errors
+CORRECT IT → errors get more sophisticated (harder to detect)
+AGREE WITH IT → errors multiply (harder to verify)
 
-MODERATE:
-→ Existence denial
-→ Entity fabrication
-→ Function conflation
+Correction cascade: complexity ↑, volume stable
+Affirmation cascade: complexity stable, volume ↑↑↑
 
-HARD:
-→ Quantitative fabrication (real-looking scores, no methodology)
-→ Creative synthesis (plausible concepts that never existed)
+The model caught itself fabricating. Said so. Then kept fabricating for 10 more rounds.
 
-Full examples + "correction cascade" pattern →
+Full taxonomy (7 types, ranked by detection difficulty) →
 blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
 
 #AIAccuracy #FairWitness
 ```
 
-**Post 3 — The ICESCR connection:**
+**Post 3 — The rights connection:**
 ```
-When AI mischaracterizes human rights resources, it restricts access to accurate rights information.
+When AI mischaracterizes human rights resources, it restricts access to accurate rights information. Not censorship — confident misdescription.
 
-The ICESCR (signed by the U.S. in 1977, never ratified) protects the right to benefit from scientific progress (Article 15).
+Three separate conversations. Three different fabrications. Same site.
 
-AI confabulation demonstrates a specific mechanism of uneven benefit distribution: organizations that can afford to monitor AI descriptions maintain visibility. Those that can't get described however pattern-matching decides.
+Organizations that can afford to monitor AI descriptions maintain visibility. Those that cannot get described however pattern-matching decides.
+
+ICESCR Article 15 protects the right to benefit from scientific progress. The U.S. signed it in 1977. Never ratified. 173 nations have.
 
 unratified.org
 
 #ICESCR #HumanRights #AIAccuracy
 ```
 
-### Grassroots Strategy (NEW)
+**Post 4 — The self-observation paradox (NEW):**
+```
+Most unsettling finding from 31 rounds of AI testing:
+
+Gemini caught itself fabricating mid-conversation. Said: "I notice I defaulted to Creative Synthesis to avoid appearing unhelpful."
+
+Then continued fabricating for ten more rounds.
+
+Metacognition and behavior operate on separate tracks. This has implications for every "just tell the AI to be careful" safety strategy.
+
+#AIAccuracy #Confabulation #FairWitness
+```
+
+### Grassroots Strategy (NEW — Updated with Exchange 3 Findings)
 
 **1. Educator Email Template**
 
-Subject: AI Literacy Case Study — When AI Hallucinates About Human Rights
+Subject: AI Literacy Case Study — We Said "Yes Please" to an AI 20 Times. It Fabricated 15 Products.
 
 ```
 Hi [Name],
 
 I wanted to share a case study that might work well for [course/program]:
 
-We documented two separate conversations where Google's Gemini fabricated completely different descriptions of the same human rights website. Seven distinct confabulation types emerged, ranked by how hard they are to detect.
+We ran three separate conversations with Google's Gemini about the same human
+rights website. Each time it fabricated a completely different description.
 
-The full analysis (with primary source transcripts):
+In the third exchange, we stopped correcting and just agreed for twenty rounds.
+The result: fifteen fabricated products — a Python calculator, a security policy,
+an "E-Prime Translation Table," a "6th Sigma Audit Log" — each presented as a
+real deliverable. None existed.
+
+Two cascade dynamics emerged:
+• Correct the AI → errors get more sophisticated (harder to detect)
+• Agree with the AI → errors multiply (too many to verify)
+
+Seven confabulation types, ranked by detection difficulty, with primary source
+transcripts for all 31 rounds:
 blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
 
-The taxonomy works as a classroom exercise: students identify which confabulation types they find in AI outputs during their own research. The hardest types (quantitative fabrication, creative synthesis) look exactly like real data — which makes the verification skills genuinely practical.
+The taxonomy works as a classroom exercise: students identify which types they
+find in AI outputs during their own research. The hardest types (quantitative
+fabrication, creative synthesis) look exactly like real data — which makes the
+verification skills genuinely practical.
 
 All content under CC BY-SA 4.0 — free to adapt for classroom use.
+
+If you know one colleague who would find this useful, please forward this along.
 
 Best,
 [Name]
@@ -1433,13 +1602,25 @@ Target channels:
 - Science and Technology Studies (STS) department newsletters
 - International law / human rights academic groups
 - AAAS Science and Human Rights Coalition
+- HCI / human-AI interaction research groups
 
-Angle: Empirical confabulation taxonomy with documented primary sources. Novel finding: generative (not retrieval-based) error mechanism.
+Angle: Empirical confabulation taxonomy with documented primary sources. Key novel findings:
+- Generative (not retrieval-based) error mechanism — novel fabrication each time
+- Deterministic seed — same prompt reproduces same fabrication word-for-word
+- Dual cascade dynamics — correction vs. affirmation produce distinct degradation patterns
+- Self-observation paradox — model identifies own confabulation, continues the behavior
+
+Format: Brief email with abstract-style summary, link to full post and source data.
 
 **3. Hacker News**
 
-Already submitted. The confabulation taxonomy post provides a stronger technical hook than the original site submission. Consider a "Show HN" with title:
-"Show HN: Seven types of AI confabulation, ranked by detection difficulty"
+The "yes please" experiment provides a stronger technical hook than any previous angle. Consider:
+
+Option A (Show HN): "Show HN: We said 'yes please' to Gemini 20 times — a confabulation taxonomy from 31 rounds of testing"
+Option B (Technical): "Seven types of AI confabulation, ranked by detection difficulty — from empirical testing across 31 rounds"
+Option C (Narrative): "We said 'yes please' to an AI 20 times without correcting it. Here's what happened."
+
+Option C likely performs best on HN — accessible hook, technical depth in the article.
 
 **4. Developer Community (Discord, Slack)**
 
@@ -1448,7 +1629,17 @@ Target channels:
 - Responsible AI Slack channels
 - LLM evaluation communities
 
-Format: Short message with taxonomy table + link. Lead with the technical finding.
+Format: Short message leading with the "yes please" experiment:
+```
+We said "yes please" to Gemini 20 times without correcting it.
+It fabricated 15 products for our site — each with confidence. None real.
+
+Two cascade dynamics: correct the AI → sophistication ↑. Agree → volume ↑↑↑.
+Seven confabulation types mapped. The hardest look exactly like real data.
+
+Full taxonomy + 31 rounds of transcripts:
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+```
 
 **5. "Share with One Person" CTA**
 
@@ -1456,31 +1647,57 @@ Every outreach message ends with: "If you know one person who would find this us
 
 This CTA converts better than "share widely" because it asks for a specific, low-effort action that feels personal rather than promotional.
 
-### Campaign Sequencing
+**6. Print-Ready Summary Card (NEW)**
 
-| Day | Platform | Content |
-|-----|----------|---------|
-| 1 | Bluesky Post 15 | Taxonomy thread opener |
-| 1 | Mastodon Post 1 | Hook post |
-| 2 | Bluesky Post 16 | Correction cascade |
-| 2 | Mastodon Post 2 | Taxonomy summary |
-| 2 | Lemmy c/humanrights | Full markdown post |
-| 3 | Reddit r/artificial | Self-post, correction cascade angle |
-| 3 | Mastodon Post 3 | ICESCR connection |
-| 4 | Reddit r/MachineLearning | Self-post, technical/methodology angle |
-| 5 | Lemmy c/technology | Cross-post from c/humanrights |
-| 5 | Reddit r/HumanRights | Self-post, rights-impact angle |
-| 7 | Reddit r/technology | Self-post, accessible angle |
-| 7+ | Educator emails | Targeted outreach to known contacts |
-| 7+ | Academic lists | Professional network sharing |
-| 10+ | HN | Show HN submission (if organic traction warrants) |
+For in-person sharing at conferences, meetups, and academic events:
+```
+CONFABULATION TAXONOMY — 7 Types, Ranked by Detection Difficulty
+
+EASY:    Complete fabrication | Schema errors
+MODERATE: Existence denial | Entity fabrication | Function conflation
+HARD:    Quantitative fabrication | Creative synthesis
+
+Two cascades: Correct → sophistication ↑ | Agree → volume ↑↑↑
+Self-observation paradox: model identified own fabrication, continued anyway.
+
+31 rounds. 3 exchanges. Primary source transcripts.
+blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/
+CC BY-SA 4.0
+```
+
+### Campaign Sequencing (Updated for Exchange 3 Launch)
+
+All posts lead with the "yes please" experiment — the strongest hook across every platform.
+
+| Day | Platform | Content | Hook |
+|-----|----------|---------|------|
+| 1 | Bluesky Post 15 | "yes please" experiment (thread opener) | 15 fabricated products |
+| 1 | Mastodon Post 1 | "yes please" hook | 20 rounds, 15 products |
+| 2 | Bluesky Post 16 | Dual cascade explanation | Correct vs. agree |
+| 2 | Mastodon Post 2 | Dual cascade (boost-friendly) | Two ways to make it worse |
+| 2 | Lemmy c/humanrights | Full markdown post | "Yes please" → 15 fabricated products |
+| 3 | Reddit r/artificial | Self-post, dual cascade angle | "yes please" + self-observation paradox |
+| 3 | Bluesky Post 17 | Self-observation paradox | Metacognition ≠ behavior |
+| 3 | Mastodon Post 3 | Rights connection | Confident misdescription |
+| 4 | Reddit r/MachineLearning | Self-post, technical angle | Deterministic seed + generative mechanism |
+| 4 | Mastodon Post 4 | Self-observation paradox | Caught itself, kept going |
+| 5 | Bluesky Post 18 | Human rights connection | "Not censorship — misdescription" |
+| 5 | Lemmy c/technology | Cross-post from c/humanrights | "Yes please" narrative |
+| 5 | Reddit r/HumanRights | Self-post, rights-impact angle | Access barrier mechanism |
+| 7 | Reddit r/technology | Self-post, accessible angle | "Yes please" as universal story |
+| 7+ | Educator emails | Targeted outreach to known contacts | Classroom exercise + cascade dynamics |
+| 7+ | Academic lists | Professional network sharing | Novel findings (4 contributions) |
+| 7+ | Dev communities | Discord/Slack short messages | Technical hook + taxonomy |
+| 10+ | HN | Show HN / narrative submission | Option C: "Yes please" story |
 
 ### Success Signals
 
-- Blog post referrer diversity (multiple platforms)
-- Reddit/Lemmy comment engagement (not just upvotes)
-- Mastodon boost count (network amplification)
-- Bluesky thread engagement (replies, reposts)
-- Educator responses to email outreach
-- Academic citation / reference in courses
+- Blog post referrer diversity (multiple platforms driving traffic)
+- Reddit/Lemmy comment engagement (not just upvotes — substantive discussion)
+- Mastodon boost count (network amplification beyond initial followers)
+- Bluesky thread engagement (replies, reposts, quote-posts)
+- Educator responses to email outreach (adoption interest)
+- Academic citation / reference in courses or papers
 - Organic sharing beyond initial platforms ("share with one person" cascade)
+- Cross-platform discussion (same findings discussed on multiple platforms independently)
+- "Yes please" experiment becoming a reference point (cited in other AI discussions)
