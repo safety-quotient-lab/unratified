@@ -389,6 +389,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Educator template letter (Template 5) added to template-letters.mdx with clean slug-friendly heading IDs; inline deep-link index added
 - [x] Developer, Researcher, and Dear Colleague letters added to template-letters.mdx (all 5 personas now have dedicated templates; 8 total letters)
 - [x] /connection/deportation — ICESCR vs. ICE case study (D054): 6-article mapping, jurisdictional foundation, enforcement pathway, AI compounding effect; 55 pages total
+- [x] /connection/veto-gap — Veto Gap: U.S. SC veto + ICESCR non-ratification double accountability gap (D055): 4-article mapping (6,11,12,13), ICJ Wall opinion, CESCR GC-24, depolarization via Ukraine/Yemen parallels; 56 pages total
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
@@ -423,6 +424,13 @@ Nonprofit Formation (from D043):
 
 See: content/analysis/nonprofit-formation-plan.md (full pathway)
 See: content/analysis/gemini-visibility-recommendations.md (full evaluation)
+
+### Deferred Analysis — Middle East × ICESCR
+
+Surface scan (2026-03-05, D055) produced three arguments. Argument B (Veto Gap) built and live at /connection/veto-gap. Two arguments deferred:
+
+- **Argument A — Occupation and Economic Rights**: Addresses ICESCR obligations under international humanitarian law in occupied territories. Requires specialist review — contested IHL jurisdictional doctrine, extraterritorial ICESCR application under Article 2 vs. IHL lex specialis principle. Refer to: international humanitarian law specialist or psychology agent with IHL domain model.
+- **Argument C — AI Systems in Conflict-Zone Economic Rights**: Addresses AI-enhanced weapons systems and their documented effects on ICESCR-protected populations in conflict zones. Requires sourcing: arms transfer records, AI system deployment documentation, economic impact data in conflict zones. Refer to: psychology agent or specialist researcher with access to arms transfer databases.
 
 ---
 

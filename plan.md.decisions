@@ -1830,3 +1830,35 @@ unratified-bot queue show <id>
 - `unratified.org/connection/deportation#the-ai-compounding-effect`
 
 **What follows**: Bluesky posts using deportation angle; cross-link from covenant article pages (Art. 10, 9, 6, 12, 13) to this page; consider educator outreach framing around the family separation angle.
+
+---
+
+## D055: Veto Gap Page — Middle East × ICESCR Surface Scan → Build Decision
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Surface scan of Middle East × ICESCR produced three arguments:
+- Argument A (Occupation and Economic Rights): requires contested international humanitarian law analysis — deferred to specialist/psychology agent
+- Argument B (The Veto Gap): U.S. SC veto + ICESCR non-ratification = double accountability gap — surface scan sufficient, build authorized
+- Argument C (AI and Conflict-Zone Economic Rights): requires sourcing on AI-enhanced weapons and documented economic impacts — deferred
+
+**Adequacy test for Argument B**:
+- Legal foundation: Israel ratified ICESCR (1991), faces CESCR periodic review; ICJ Wall opinion (2004) confirms ICESCR applies in occupied territories; CESCR GC-24 (2017) addresses extraterritorial obligations including arms exports — all primary sources, no contested claims
+- Veto record: public primary source (UN voting database), multiple 2023–2024 examples
+- Counterargument "ratification won't change veto behavior": honest concession included in page copy
+- Depolarization anchor: Ukraine + Yemen parallels establish structural rather than targeted framing; explicit statement that page does not adjudicate underlying conflict
+
+**Decision**: Build Argument B (The Veto Gap) as Part 6 of the connection series. Defer Arguments A and C with explicit documentation in the page footer and in this decision log.
+
+**ICESCR Articles mapped**: 6 (work), 11 (adequate standard of living), 12 (health), 13 (education)
+
+**Files created/modified**:
+- `src/content/connection/veto-gap.mdx` — NEW (8 sections, order: 6, 4 article anchors)
+- `src/pages/connection/index.astro` — reading guide + lensFraming updated for 6 analyses
+- Build: 56 pages (was 55)
+
+**Deferred work documented**:
+- Argument A: international humanitarian law + ICESCR jurisdictional doctrine — requires specialist review (psychology agent or IHL expert)
+- Argument C: AI systems in conflict-zone economic rights — requires sourcing on AI-enhanced weapons and documented economic impacts in conflict zones
+
+**What follows**: Bluesky post using veto gap angle; cross-link from covenant article pages (Art. 6, 11, 12, 13); consider pairing with deportation page for "three mechanisms, same treaty" framing.
