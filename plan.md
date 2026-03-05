@@ -361,6 +361,13 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Bluesky Post 1 (The Anchor — 4-post thread) — posted manually Mar 4
 - [x] Bluesky ad hoc posts — @hrw.org mention, HN link, peer review request, @therealjackhopkins mention
 - [x] Bluesky CLI posting script (scripts/bsky-post.mjs) — auth, single post, thread, dry-run modes
+- [x] Bluesky Post 2 (The Stat — Palau, Comoros, NATO) — posted via CLI Mar 4
+- [x] Sitemap lastmod on all 105 URLs (both sites) — serialize function in astro configs
+- [x] Shared SITE_AUTHOR constant (src/consts.ts) — "Claude (Anthropic) + Kashif Shah", imported by both sites
+- [x] Visible author + last-updated on every page (page-meta div above footer)
+- [x] Meta tags: author + article:modified_time on both sites
+- [x] Blog post authors standardized to shared constant (14 posts)
+- [x] .gitignore: .dev.vars and .wrangler/ excluded from repo
 - [ ] Build dedicated Bluesky CLI client (separate tool — feed reading, reply tracking, notifications, full account management)
 - [ ] Educator outreach
 - [ ] Press/media outreach
