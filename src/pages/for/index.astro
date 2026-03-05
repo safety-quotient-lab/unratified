@@ -60,12 +60,31 @@ const lensFraming = {
   <nav class="hub-jump" aria-label="Jump to section">
     <span class="hub-jump-label">Jump to:</span>
     <a href="#voters">Voters</a>
-    <a href="#politicians">Politicians &amp; Staff</a>
+    <a href="#politicians">Politicians</a>
     <a href="#developers">Developers</a>
     <a href="#educators">Educators</a>
     <a href="#researchers">Researchers</a>
+    <a href="#what-an-ai-noticed">Behind the Architecture</a>
     <a href="#how-the-lens-works">How the Lens Works</a>
   </nav>
+
+  <section class="persona-grid-section">
+    <h2>Choose Your Entry Point</h2>
+    <p class="grid-note">
+      Each page below covers the full analysis through a different lens. The lens toggle
+      in the navigation lets you switch at any time — these pages just set the default.
+    </p>
+
+    <div class="persona-grid">
+      {personas.map(p => (
+        <a href={`/for/${p.slug}`} class="persona-card" id={p.slug}>
+          <span class="persona-lens" data-lens={p.defaultLens}>{p.label}</span>
+          <p>{p.lede}</p>
+          <span class="persona-cta">{p.cta} &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
 
   <section class="meta-observations" id="what-an-ai-noticed">
     <h2>What an AI Noticed About Its Own Communication Architecture</h2>
@@ -134,24 +153,6 @@ const lensFraming = {
           simplification is intentional. This note is the disclosure.
         </p>
       </div>
-    </div>
-  </section>
-
-  <section class="persona-grid-section">
-    <h2>Choose Your Entry Point</h2>
-    <p class="grid-note">
-      Each page below covers the full analysis through a different lens. The lens toggle
-      in the navigation lets you switch at any time — these pages just set the default.
-    </p>
-
-    <div class="persona-grid">
-      {personas.map(p => (
-        <a href={`/for/${p.slug}`} class="persona-card" id={p.slug}>
-          <span class="persona-lens" data-lens={p.defaultLens}>{p.label}</span>
-          <p>{p.lede}</p>
-          <span class="persona-cta">{p.cta} &rarr;</span>
-        </a>
-      ))}
     </div>
   </section>
 
@@ -252,9 +253,12 @@ const lensFraming = {
   }
 
   .persona-grid-section {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .meta-observations {
     padding-top: var(--space-2xl);
     border-top: 1px solid var(--color-border);
-    margin-bottom: var(--space-2xl);
   }
 
   .grid-note {
