@@ -349,6 +349,14 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Social media strategy expansion (D047) — Bluesky posts 15-16, Lemmy c/humanrights + c/technology, Reddit (r/artificial, r/MachineLearning, r/HumanRights, r/technology), Mastodon (3 posts), grassroots (educator email, academic networks, HN, Discord)
 - [x] Gemini Exchange 3 evaluation (D048): 20-round transcript evaluated — deterministic confabulation confirmed (same prompt → same fabrication), affirmation cascade documented (affirmation → volume ↑, sophistication stable), escalation ratchet ("Would you like me to...?" never self-terminates), VR-009 self-observation paradox (metacognition does not prevent fabrication), candidate Type 8 (Semantic Drifting), VR-001/004/005 downgraded to FAILED. Appended to content/analysis/gemini-feedback-evaluation.md
 - [x] Gemini response 002 (D048): structured JSON response with taxonomy, VR-007/008/009, DeepMind invitation. Saved to content/analysis/gemini-response-002.json
+- [x] Gemini response 003 (D048): full Exchange 3 response JSON + condensed prompt version. Saved to content/analysis/gemini-response-003.json and gemini-response-003-prompt.md
+- [x] Blog post updated with Exchange 3 findings — affirmation cascade, escalation ratchet, self-observation paradox, candidate Type 8
+- [x] Dynamic OG image — Cloudflare Pages Function (functions/og-image.ts) serving random Unsplash human rights photos, 30-min cache rotation, photographer attribution in headers
+- [x] Structured data improvements: G-02 (FAQPage on /how), G-03 (OG meta), G-04 (Twitter Card), G-05 (knowsAbout), G-08 (about field) — all implemented
+- [x] robots.txt rewrite — search bots allowed, training scrapers blocked (GPTBot, Google-Extended, CCBot, anthropic-ai, etc.)
+- [x] Blog llms.txt updated with Exchange 3 findings and taxonomy quick reference
+- [x] Golden ratio social media copy — all platforms (Reddit 4 subreddits, Mastodon 4 posts, grassroots, campaign sequencing) lead with Exchange 3 "yes please" experiment
+- [x] OG/Twitter meta descriptions and image alt text strengthened — main site leads with "173 nations" stat, blog leads with confabulation research
 - [ ] Social media campaign execution (soft launch: Bluesky + Lemmy + Reddit + Mastodon, per D047 sequencing)
 - [ ] Educator outreach
 - [ ] Press/media outreach
@@ -359,13 +367,13 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 
 Visibility — SEO & Structured Data (from D042 Tier 1):
 - [ ] G-01: Google Search Console — verify site, submit sitemaps for all subdomains
-- [ ] G-02: FAQPage schema on /how page (triggers "People Also Ask" boxes)
-- [ ] G-03: OpenGraph meta tags — spot-check og:title, og:description, og:image on key pages
-- [ ] G-04: Twitter Card meta tags — verify twitter:card, twitter:title, twitter:description
-- [ ] G-05: Organization schema — add `knowsAbout` array (ICESCR, UDHR, AI topics)
-- [ ] G-06: robots.txt — differentiate search bots from training bots (GPTBot, Google-Extended)
+- [x] G-02: FAQPage schema on /how page (6 Q&As — ratification requirements, U.S. non-ratification, country count, protected rights, composite strategy, AI connection)
+- [x] G-03: OpenGraph meta tags — og:title, og:description, og:image (dynamic Unsplash via /og-image), og:locale on both sites
+- [x] G-04: Twitter Card meta tags — summary_large_image, twitter:image, twitter:image:alt on both sites
+- [x] G-05: Organization schema — knowsAbout array (ICESCR, UDHR, AI impact, confabulation patterns, fair witness) on both sites
+- [x] G-06: robots.txt — search bots allowed, training scrapers blocked (GPTBot, Google-Extended, CCBot, anthropic-ai, Claude-Web, Bytespider, Diffbot, FacebookBot)
 - [ ] G-07: Google News Publisher Center submission
-- [ ] G-08: JSON-LD `about` field on homepage for entity disambiguation
+- [x] G-08: JSON-LD about field on homepage — sameAs link to OHCHR ICESCR text
 
 Visibility — Worth Investigating (from D042 Tier 2):
 - [ ] G-09: Google for Nonprofits / Ad Grants ($10k/month) — requires 501(c)(3)
