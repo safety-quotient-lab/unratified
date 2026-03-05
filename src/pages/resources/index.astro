@@ -10,7 +10,20 @@ const obs = await getObservatoryStats();
   description="Further reading, research sources, and organizations working on ICESCR ratification and economic rights."
   section="resources"
 >
-  <section class="resource-section">
+  <nav class="hub-jump" aria-label="Jump to section">
+    <span class="hub-jump-label">Jump to:</span>
+    <a href="#icescr">ICESCR &amp; Human Rights</a>
+    <a href="#observatory">Observatory</a>
+    <a href="#ai-economics">AI Economics</a>
+    <a href="#computational-data">Computational Data</a>
+    <a href="#infrastructure">Infrastructure</a>
+    <a href="#geopolitical-context">Geopolitical Context</a>
+    <a href="#economic-theory">Economic Theory</a>
+    <a href="#pedagogical-design">Pedagogical Design</a>
+    <a href="#organizations">Organizations</a>
+  </nav>
+
+  <section class="resource-section" id="icescr">
     <h2>ICESCR and International Human Rights</h2>
     <ul>
       <li>
@@ -40,7 +53,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="observatory">
     <h2>Human Rights Observatory</h2>
     <ul>
       <li>
@@ -58,7 +71,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="ai-economics">
     <h2>AI Economics Research</h2>
     <ul>
       <li>
@@ -88,7 +101,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="computational-data">
     <h2>Computational and Quantitative Data</h2>
     <ul>
       <li>
@@ -118,7 +131,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="infrastructure">
     <h2>Infrastructure and Hosting</h2>
     <ul>
       <li>
@@ -136,7 +149,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="geopolitical-context">
     <h2>Geopolitical and Economic Context</h2>
     <ul>
       <li>
@@ -158,7 +171,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="pedagogical-design">
     <h2>Pedagogical Design and Human Rights Education</h2>
     <ul>
       <li>
@@ -176,7 +189,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="economic-theory">
     <h2>Economic Theory</h2>
     <ul>
       <li>
@@ -194,7 +207,7 @@ const obs = await getObservatoryStats();
     </ul>
   </section>
 
-  <section class="resource-section">
+  <section class="resource-section" id="organizations">
     <h2>Organizations Working on Ratification</h2>
     <ul>
       <li>
@@ -218,6 +231,42 @@ const obs = await getObservatoryStats();
 </SectionLayout>
 
 <style>
+  .hub-jump {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm) var(--space-md);
+    margin-bottom: var(--space-2xl);
+    padding: var(--space-md) var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+
+  .hub-jump-label {
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .hub-jump a {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    white-space: nowrap;
+  }
+
+  .hub-jump a:hover {
+    border-bottom-color: var(--color-accent);
+  }
+
   .resource-section {
     margin-bottom: var(--space-2xl);
   }
