@@ -1791,3 +1791,63 @@ All posts lead with the "yes please" experiment — the strongest hook across ev
 AU-NY @usa2727.bsky.social: "I will negotiate with companies and with your bosses to get you salary and wage increases that go beyond just minimum wage... Even people at incomes of like $170,000 a year will benefit."
 
 Response sent: Template C (cold engagement baseline)
+
+---
+
+## Bluesky Reply Templates — Deportation / Immigration Enforcement Posts
+
+**Context**: For engaging posts about immigration enforcement, deportation, family separation, ICE, OBBBA cuts, immigrant rights, AI surveillance. Bridges enforcement debates to ICESCR rights framework without taking a position on deportation policy itself.
+
+**Technical**: All templates run 280–298 graphemes with 2 links counted at 27 graphemes each. Safe within 300-grapheme limit.
+
+**Framing discipline**: Never claim "ICESCR would stop deportations." Always lead with the legal process argument: ratification adds a requirement to weigh rights, not a prohibition on enforcement.
+
+**Links used**:
+- `unratified.org/connection/deportation` — main case study
+- `unratified.org/connection/deportation#the-social-security-problem-article-9`
+- `unratified.org/connection/deportation#the-family-separation-problem-article-10`
+- `unratified.org/connection/deportation#the-jurisdictional-foundation`
+- `unratified.org/connection/deportation#the-ai-compounding-effect`
+- `unratified.org/covenant/articles/9` — Article 9 (social security)
+- `unratified.org/covenant/articles/10` — Article 10 (family protection)
+- `unratified.org/action` — take action
+
+### Template A — The Social Security Hook
+*Use for*: Budget threads, tax policy, OBBBA cuts, Social Security debates
+
+> Undocumented workers paid ~$25B into Social Security in 2022. They can't claim it. When deported, they lose it entirely. The U.S. signed a treaty in 1977 protecting the right to social security for everyone in its jurisdiction. Never ratified.
+> unratified.org/connection/deportation#the-social-security-problem-article-9 unratified.org/covenant/articles/9
+
+### Template B — The Family Separation Hook
+*Use for*: Family separation policy threads, humanitarian arguments, child welfare
+
+> The ICESCR requires "the widest possible protection" for the family — Article 10, signed 1977, never ratified. 173 nations enforce it. Family separation as systematic enforcement would face legal scrutiny under a ratified treaty. It currently faces none.
+> unratified.org/connection/deportation#the-family-separation-problem-article-10 unratified.org/covenant/articles/10
+
+### Template C — The Jurisdiction Hook
+*Use for*: Threads debating whether immigrants have legal rights, constitutional arguments
+
+> The ICESCR doesn't protect only citizens — it applies to everyone in a state's jurisdiction regardless of status. The U.S. signed in 1977. 173 nations ratified. That gap isn't passive: it's the missing legal floor behind every enforcement debate.
+> unratified.org/connection/deportation#the-jurisdictional-foundation unratified.org
+
+### Template D — The AI Compounding Hook
+*Use for*: AI policy, surveillance tech, AI in government, tech ethics threads
+
+> AI removes operational constraints on enforcement the same way it removes constraints on software output — same mechanism, different domain. AI-era economics then compound the harm of enforcement displacement. Two forces, one missing treaty.
+> unratified.org/connection/deportation#the-ai-compounding-effect unratified.org/connection/deportation
+
+### Template E — The Framing Hook
+*Use for*: Immigration policy debates across the spectrum — disarms the "open borders" counter
+
+> Ratifying the ICESCR wouldn't stop deportations — sovereignty over enforcement stays intact. What it adds: a legal requirement to weigh six categories of economic and family rights before severing them. The same standard 173 nations already apply.
+> unratified.org/connection/deportation unratified.org/action
+
+### Selection Guide
+
+| Context | Template |
+|---------|----------|
+| Budget / tax / OBBBA / Social Security threads | A |
+| Family separation policy threads | B |
+| "Immigrants have no rights" arguments | C |
+| AI / tech / surveillance threads | D |
+| Immigration policy debate (any side) | E |
