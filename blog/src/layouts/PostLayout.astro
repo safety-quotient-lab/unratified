@@ -1,12 +1,17 @@
 ---
 import BlogLayout from './BlogLayout.astro';
 
+interface Author {
+  human: { name: string; url: string };
+  agent: { name: string; url: string; project: string; projectUrl: string };
+}
+
 interface Props {
   title: string;
   summary: string;
   publishedDate: Date;
   updatedDate?: Date;
-  author: string;
+  author: Author;
   tags: string[];
   slug: string;
   reviewStatus?: string;
@@ -61,7 +66,12 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
             </time>
           </span>
         )}
-        <span class="author">&middot; {author}</span>
+        <span class="author">&middot;
+          <a href={author.human.url} rel="noopener">{author.human.name}</a>,
+          in collaboration with
+          <a href={author.agent.url} rel="noopener">{author.agent.name}</a>
+          (<a href={author.agent.projectUrl} rel="noopener">{author.agent.project}</a>)
+        </span>
         <span class="reading-time">&middot; {readingTime} min read</span>
         {reviewStatus === 'unreviewed' && (
           <span class="review-badge">&middot; Pre-Review</span>
@@ -186,6 +196,15 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
   }
 
   .post-provenance a:hover {
+    color: var(--color-accent);
+  }
+
+  .author a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .author a:hover {
     color: var(--color-accent);
   }
 

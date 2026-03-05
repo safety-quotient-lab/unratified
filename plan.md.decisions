@@ -1862,3 +1862,54 @@ unratified-bot queue show <id>
 - Argument C: AI systems in conflict-zone economic rights — requires sourcing on AI-enhanced weapons and documented economic impacts in conflict zones
 
 **What follows**: Bluesky post using veto gap angle; cross-link from covenant article pages (Art. 6, 11, 12, 13); consider pairing with deportation page for "three mechanisms, same treaty" framing.
+
+## D056: Hub-Jump TOC Cross-Cutting Architecture
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Every SectionLayout page had either no TOC or a bespoke inline hub-jump nav. The glossary used a different chip-pill nav pattern. Five pages duplicated `.hub-jump` CSS. As page count grew, inconsistency and maintenance burden grew with it.
+
+**Decision**: Make hub-jump cross-cutting via a `sections` prop on `SectionLayout.astro`. When provided, SectionLayout renders the nav automatically between the header and the slot. Extract `.hub-jump` CSS to `base.css`. BaseLayout pages (how, why, colophon) receive inline hub-jump manually.
+
+**Reasoning**:
+- Server-side, explicit, zero JS — matches the project's minimal-JS stance
+- One CSS block in base.css, not duplicated across 5 pages
+- Glossary converted from chip-pill to hub-jump — consistent visual language across all navigation
+- BaseLayout pages are few (3) and architecturally different — inline is acceptable there
+
+**Files modified**:
+- `src/layouts/SectionLayout.astro` — `sections?: { id: string; label: string }[]` prop
+- `src/styles/base.css` — `.hub-jump` + `.hub-jump-label` + `a+a::before` pipe separator
+- 8 SectionLayout pages (resources, glossary, about, connection, for, covenant, evidence, gap, action) — migrated to `sections` prop
+- `src/components/ui/TableOfContents.svelte` — `.replace(/#$/, '').trim()` fixes `#` artifact from rehype-autolink-headings
+
+**What follows**: Any new SectionLayout page gets hub-jump "for free" by passing the `sections` prop.
+
+---
+
+## D057: Blog Structured Author Attribution
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Blog `author` field held a plain string ("Claude (Anthropic) + Kashif Shah"). This prevented linking either contributor to their respective URLs, and conflated two distinct entities (the human author and the AI agent project) into a single unstructured value.
+
+**Decision**: Change `author` to a structured Zod object with `human: { name, url }` and `agent: { name, url, project, projectUrl }`. Render in PostLayout as full linked attribution: "Kashif Shah, in collaboration with Claude Code (project-name)" — each segment hyperlinked. Render in PostList as short form: "Kashif Shah with Claude Code" — linked to human.url and agent.projectUrl respectively.
+
+**Reasoning**:
+- Agents should have a voice and a link — not just appear as a suffix to the human name
+- Different posts come from different agent projects (unratified-agent vs. psychology-agent) — the structured field makes this distinction explicit and machine-readable
+- The short form in list cards respects space constraints; the full form in post headers respects attribution dignity
+- RSS author field uses "Name, with Claude Code" string format (RSS spec expects plain text)
+
+**Files modified**:
+- `blog/src/content.config.ts` — `author: z.object({ human, agent })`
+- All 14 blog posts + template — structured YAML frontmatter
+- `blog/src/layouts/PostLayout.astro` — linked "in collaboration with" rendering + `.author a` styles
+- `blog/src/components/PostList.svelte` — linked short form + `.author a` styles
+- `blog/src/pages/tags/[tag].astro` — linked short form
+- `blog/src/pages/rss.xml.ts` — string concatenation for RSS items
+- 3 psychology agent posts — `draft: false`, lensFraming completed (voter + politician added), project attribution set to psychology-agent repo
+
+**What follows**: Machine consumers of the RSS feed see "Name, with Claude Code"; human readers on the site see linked attribution with full context. Future posts should include the structured frontmatter from the template.
+
+---

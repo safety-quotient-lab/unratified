@@ -2,7 +2,15 @@
 title: "Calibrated Uncertainty Gets Punished: The Confidence Weighting Inversion"
 summary: "A measurement design anti-pattern: weighting schemes that favor high-confidence scores systematically disadvantage calibrated models, allowing confidently wrong assessments to outweigh honestly uncertain ones."
 publishedDate: "2026-03-03T16:00:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["measurement-design", "ensemble-scoring", "calibration", "llm-evaluation", "cognitive-architecture"]
 lensFraming:
   voter: "Systems designed to weight expert opinions can accidentally do the opposite — giving more authority to less reliable sources when reliability correlates with honest uncertainty."

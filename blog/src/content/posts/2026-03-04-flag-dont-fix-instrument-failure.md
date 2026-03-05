@@ -2,7 +2,15 @@
 title: "Flag It, Don't Fix It: Instrument Failure in LLM Scoring"
 summary: "When an LLM produces a structurally suspicious score — confident zero when a real signal likely exists — the right response preserves the original value and marks the observation as unreliable."
 publishedDate: "2026-03-04T13:30:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["measurement-design", "llm-evaluation", "instrumentation", "lazy-neutral", "cognitive-architecture"]
 reviewStatus: "unreviewed"
 draft: false

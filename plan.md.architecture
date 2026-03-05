@@ -98,6 +98,12 @@ blog.unratified.org                     BLOG — Ongoing analysis and commentary
 ├── /rss.xml                            RSS 2.0 feed
 └── /.well-known/blog-spec.json         Agent-discoverable post specification
 
+Blog content schema (D057):
+  author: { human: { name, url }, agent: { name, url, project, projectUrl } }
+  Rendered: "Kashif Shah, in collaboration with Claude Code (project)" — linked
+  RSS: plain string "Name, with Claude Code" (RSS spec constraint)
+  SectionLayout: sections prop → hub-jump nav (D056); base.css owns .hub-jump CSS
+
 observatory.unratified.org              OBSERVATORY — "Human Rights Observatory, HN Edition"
 │
 ├── /                                   Observatory home — analysis overview

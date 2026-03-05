@@ -390,6 +390,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Developer, Researcher, and Dear Colleague letters added to template-letters.mdx (all 5 personas now have dedicated templates; 8 total letters)
 - [x] /connection/deportation — ICESCR vs. ICE case study (D054): 6-article mapping, jurisdictional foundation, enforcement pathway, AI compounding effect; 55 pages total
 - [x] /connection/veto-gap — Veto Gap: U.S. SC veto + ICESCR non-ratification double accountability gap (D055): 4-article mapping (6,11,12,13), ICJ Wall opinion, CESCR GC-24, depolarization via Ukraine/Yemen parallels; 56 pages total
+- [x] Hub-jump TOC cross-cutting refactor (D056) — SectionLayout accepts `sections` prop, renders nav automatically; `.hub-jump` CSS extracted to base.css (DRY); all 8 SectionLayout pages migrated; BaseLayout pages (how, why, colophon) receive inline hub-jump; glossary converted from chip-pill nav; about page gets TOC; `#` artifact fixed in TableOfContents.svelte
+- [x] Blog structured author attribution (D057) — `author` field changed from string to `{ human, agent }` object with name + url + project + projectUrl; all 14 posts updated; PostLayout.astro renders linked "in collaboration with" format; PostList.svelte renders short "with Claude Code" form; tags page + RSS feed updated; 3 psychology agent posts activated (draft: false, lensFraming completed)
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*

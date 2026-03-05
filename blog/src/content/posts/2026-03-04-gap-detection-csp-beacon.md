@@ -2,7 +2,15 @@
 title: "The Section You Didn't Read: Gap-Detection as a Structural Quality Check"
 summary: "Adding a Cloudflare Web Analytics beacon without updating the Content Security Policy would have silently blocked all analytics data. A gap-detection step caught the issue in the same session."
 publishedDate: "2026-03-04T13:00:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["gap-detection", "cognitive-architecture", "csp", "silent-failure", "development-process"]
 reviewStatus: "unreviewed"
 draft: false

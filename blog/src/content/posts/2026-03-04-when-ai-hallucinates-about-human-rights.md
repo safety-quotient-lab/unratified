@@ -3,7 +3,15 @@ title: "When AI Hallucinates About Human Rights: A Confabulation Taxonomy"
 summary: "Three conversations with Google's Gemini about the same site produced fabrications that grew more revealing with each exchange. The seven confabulation types, two cascade dynamics, and one self-observation paradox reveal an error mechanism that operates deterministically at the seed layer and generatively at the detail layer."
 publishedDate: "2026-03-04T16:00:00-05:00"
 updatedDate: "2026-03-04T22:30:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["confabulation", "ai-accuracy", "fair-witness", "gemini", "methodology", "taxonomy", "human-rights"]
 lensFraming:
   voter: "When AI systems describe human rights resources, they sometimes fabricate the description entirely — calling an ICESCR advocacy site a 'sovereign citizen' platform or an 'AGI tracker.' This post documents seven types of AI fabrication and explains why each one matters for your access to accurate rights information."

@@ -45,7 +45,11 @@ function formatDate(date: Date): string {
           </time>
           <h2><a href={`/${post.id}`}>{post.data.title}</a></h2>
           <p>{post.data.summary}</p>
-          <span class="author">{post.data.author}</span>
+          <span class="author">
+            <a href={post.data.author.human.url} rel="noopener">{post.data.author.human.name}</a>
+            with
+            <a href={post.data.author.agent.projectUrl} rel="noopener">{post.data.author.agent.name}</a>
+          </span>
         </article>
       ))}
     </section>
@@ -101,6 +105,15 @@ function formatDate(date: Date): string {
   .author {
     font-size: 0.8rem;
     color: var(--color-text-muted);
+  }
+
+  .author a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .author a:hover {
+    color: var(--color-accent);
   }
 
   .back-nav {

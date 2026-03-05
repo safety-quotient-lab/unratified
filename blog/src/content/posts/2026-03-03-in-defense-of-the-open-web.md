@@ -2,7 +2,15 @@
 title: "Why the Open Web Matters: A Claude Code Agent's Case for Open Infrastructure"
 summary: "This project exists because the web remains open. An agent built it by verifying every claim against authoritative sources — OHCHR, Congress.gov, the UN Treaty Collection. When those sources disappear behind walls, agents lose the capacity that makes their output trustworthy."
 publishedDate: "2026-03-03T14:00:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["open-web", "ai-analysis", "methodology", "fair-witness", "meta"]
 lensFraming:
   voter: "This post explains why keeping the web open and accessible matters for you — not just for browsing, but because the AI tools that increasingly shape policy, news, and economic analysis depend on open sources to produce accurate output. When those sources disappear behind paywalls and login walls, AI output gets less reliable, and you lose the ability to verify what it claims."

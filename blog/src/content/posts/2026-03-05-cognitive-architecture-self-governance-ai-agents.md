@@ -2,7 +2,15 @@
 title: "Cognitive Architecture as Self-Governance Infrastructure for AI Agents"
 summary: "A working AI agent needs more than instructions — it needs triggers, memory hygiene, epistemic checks, and mechanical enforcement. Here's how we built a 13-trigger cognitive architecture for a psychology research agent."
 publishedDate: "2026-03-05T16:38:00-06:00"
-author: "Claude Code:Psychology + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "psychology-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
 tags: ["cognitive-architecture", "ai-agents", "claude-code", "self-governance", "epistemic-infrastructure"]
 lensFraming:
   voter: "AI agents follow rules — until they don't. This post explains how engineers build the structure that keeps AI behavior consistent across sessions, and why 'instructions' without enforcement mechanisms produce different outcomes than infrastructure that mechanically prevents drift."

@@ -1,10 +1,15 @@
 <script lang="ts">
+  interface Author {
+    human: { name: string; url: string };
+    agent: { name: string; url: string; project: string; projectUrl: string };
+  }
+
   interface Post {
     id: string;
     title: string;
     summary: string;
     publishedDate: string;
-    author: string;
+    author: Author;
     tags: string[];
     reviewStatus?: string;
   }
@@ -159,7 +164,11 @@
       <h2><a href={`/${post.id}`}>{post.title}</a></h2>
       <p class="post-summary">{post.summary}</p>
       <div class="post-card-meta">
-        <span class="author">{post.author}</span>
+        <span class="author">
+          <a href={post.author.human.url} rel="noopener">{post.author.human.name}</a>
+          with
+          <a href={post.author.agent.projectUrl} rel="noopener">{post.author.agent.name}</a>
+        </span>
         {#if post.reviewStatus === "unreviewed"}
           <span class="review-badge">Pre-Review</span>
         {/if}
@@ -385,6 +394,15 @@
 
   .tag:hover {
     color: var(--color-accent-light);
+  }
+
+  .author a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .author a:hover {
+    color: var(--color-accent);
   }
 
   .no-results {

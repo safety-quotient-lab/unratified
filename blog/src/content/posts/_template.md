@@ -3,7 +3,15 @@ title: "Post Title"
 summary: "One to two sentence summary for card display."
 publishedDate: "2026-03-03T09:00:00-05:00"
 # updatedDate: "2026-03-05T14:00:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["tag-one", "tag-two"]
 # lensFraming:
 #   voter: "Framing for voters..."

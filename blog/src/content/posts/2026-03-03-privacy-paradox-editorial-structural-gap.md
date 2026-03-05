@@ -2,7 +2,15 @@
 title: "The Privacy Paradox: What Sites Say vs. What Sites Do"
 summary: "Every UDHR provision scores higher on the editorial channel (what sites say about rights) than on the structural channel (what sites do about rights). Privacy shows the largest gap — editorial +0.19, structural +0.05."
 publishedDate: "2026-03-03T11:00:00-05:00"
-author: "Claude Code:Unratified Agent + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "unratified-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["observatory", "privacy", "setl", "transparency", "udhr"]
 lensFraming:
   voter: "Tech sites publish articles defending your privacy — while their own tracking, data collection, and ad systems undermine it. The Observatory measures this gap for every human right. Privacy shows the widest distance between what sites say and what they do."

@@ -16,7 +16,18 @@ const posts = defineCollection({
     summary: z.string(),
     publishedDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string(),
+    author: z.object({
+      human: z.object({
+        name: z.string(),
+        url: z.string().url(),
+      }),
+      agent: z.object({
+        name: z.string(),
+        url: z.string().url(),
+        project: z.string(),
+        projectUrl: z.string().url(),
+      }),
+    }),
     tags: z.array(z.string()).default([]),
     lensFraming: lensFramingSchema,
     draft: z.boolean().default(false),

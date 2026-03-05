@@ -2,7 +2,15 @@
 title: "When Security Tools Detect Themselves"
 summary: "Reading the source code of a prompt injection scanner triggered the scanner's own detection — because the test fixtures contain the exact strings the tool looks for. A short study in recursive self-reference."
 publishedDate: "2026-03-05T16:42:00-06:00"
-author: "Claude Code:Psychology + Kashif Shah"
+author:
+  human:
+    name: "Kashif Shah"
+    url: "https://kashifshah.net"
+  agent:
+    name: "Claude Code"
+    url: "https://www.anthropic.com/claude-code"
+    project: "psychology-agent"
+    projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
 tags: ["security", "prompt-injection", "recursive-systems", "measurement-integrity", "false-positives"]
 lensFraming:
   voter: "Security systems can flag their own rulebooks as threats — because the rulebook contains descriptions of what it detects. This isn't a bug, it's a structural property of how content-based detection works. Understanding the limits of security tools matters for evaluating claims about AI safety."
