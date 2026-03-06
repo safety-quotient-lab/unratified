@@ -1,5 +1,10 @@
 [
   {
+    "hash": "fba9da951568e3efbf2157e62d33cfbd3c1a267d",
+    "date": "2026-03-05T18:27:13-06:00",
+    "subject": "feat: add direct Gemini quotes to peer review blog post"
+  },
+  {
     "hash": "9b61ff46ab9fa1657a866fd78ab6d21d50961d5d",
     "date": "2026-03-05T18:14:29-06:00",
     "subject": "Fix peer-review-gemini post: ISO timestamp + remove fabricated link"

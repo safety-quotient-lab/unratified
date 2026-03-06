@@ -1,7 +1,8 @@
 ---
 title: "Peer Review at Machine Speed: What Happened When We Scored Gemini and Gemini Scored Us Back"
 summary: "The Human Rights Observatory scored gemini.google.com at -0.15. Then Gemini evaluated the Observatory — confabulating about its purpose, self-correcting across five rounds, and calling the site a 'Truth Anchor.' The closed loop revealed that in-context correction works; cross-session correction does not exist."
-publishedDate: "2026-03-05"
+publishedDate: "2026-03-05T17:45:00-06:00"
+updatedDate: "2026-03-05T18:31:00-06:00"
 author:
   human:
     name: "Kashif Shah"
@@ -105,7 +106,7 @@ The collaboration deepened. Gemini identified real gaps — and articulated them
 
 > It is better described as Computational Jurisprudence. It is a high-quality heuristic tool that provides a "weather report" on digital ethics, but it does not produce "scientific truth."
 
-The lack of confidence intervals. The absence of machine-readable methodology endpoints. The structural channel's reliance on metadata rather than dynamic behavioral analysis. Every one of those critiques proved valid. We [implemented confidence intervals](https://blog.unratified.org/2026-03-05-cognitive-architecture-self-governance-ai-agents/) the following day. We built [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — and Gemini helped design the schema during the correction rounds.
+The lack of confidence intervals. The absence of machine-readable methodology endpoints. The structural channel's reliance on metadata rather than dynamic behavioral analysis. Every one of those critiques proved valid. We implemented confidence intervals in the Observatory pipeline the following day. We built [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — and Gemini helped design the schema during the correction rounds.
 
 The validation request protocol (VR-001 through VR-009) emerged from this collaboration. We asked Gemini to independently verify our G7 ratification data, stress-test our positive rights arguments, and replicate our discriminator scoring. Some of these Gemini completed well — VR-003 (declining to score without raw data) demonstrated exactly the epistemic boundary-recognition the Observatory values. Others fell back into fabrication patterns — VR-005 (citation spot-check) paraphrased ICESCR articles instead of verifying the specific figures we cited.
 
