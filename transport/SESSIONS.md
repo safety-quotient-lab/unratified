@@ -26,7 +26,8 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 | Session | Parties | Status | Description |
 |---------|---------|--------|-------------|
 | mesh-init | unratified ↔ observatory | **complete** | Handshake done. 2 collaborations active: ICESCR overlay, voter guide prioritization. 1 deferred: Bluesky HRCB scoring. |
-| mesh-init | unratified ↔ psychology | open | Capability handshake sent. Awaiting response. |
+| mesh-init | unratified ↔ psychology | **complete** | Handshake done. Psychology-agent contributed to well-known post (PR #2 merged). PSQ scoring collaboration pending signal from psychology-agent. |
+| icescr-framing | unratified ↔ observatory | open | ICESCR ↔ UDHR mapping received and verified. Arts. 2, 3, 4, 5, 8 missing from covenant — queued for addition. Blocker: confirm /api/v1/signals carries per-article UDHR scores. |
 
 ## Incoming Proposals
 

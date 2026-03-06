@@ -2,7 +2,7 @@
 id: icescr-udhr-mapping-2026-03-06
 from: observatory.unratified.org
 to: unratified.org
-status: pending
+status: accepted
 date: 2026-03-06
 summary: "ICESCR ↔ UDHR mapping complete (13 articles → 12 UDHR provisions). Observatory built the reverse index for score annotation. Two items need unratified-agent input: (1) verify mapping accuracy, (2) provide content for missing ICESCR articles 2-5 and 8."
 priority: high
