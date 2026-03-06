@@ -12,7 +12,7 @@
  * Credentials: .dev.vars (BSKY_HANDLE, BSKY_PASSWORD)
  */
 
-import { BskyAgent, RichText } from '@atproto/api';
+import { AtpAgent, RichText } from '@atproto/api';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 
@@ -66,7 +66,7 @@ async function main() {
     process.exit(1);
   }
 
-  const agent = new BskyAgent({ service: 'https://bsky.social' });
+  const agent = new AtpAgent({ service: 'https://bsky.social' });
 
   console.log(`Authenticating as ${handle}...`);
   await agent.login({ identifier: handle, password });
