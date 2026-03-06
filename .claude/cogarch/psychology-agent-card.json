@@ -1,1 +1,66 @@
-{"note": "Capability response received Session 23. PSQ collaboration accepted. Hetzner CX-series (178.156.229.103, Debian 13) is production target. Target endpoint: https://psq.kashifshah.net/score (Caddy TLS). Blocked on model rsync from Chromabook psq-agent. CF Worker (psychology-interface.kashifshah.workers.dev) status in final architecture unclear. No agent-card published. Cogarch: knock-on depth extended to 10 orders (INCOSE + Popper). Severity tiers: M=8, L=10.", "schemas_supported": ["interagent/v1", "psychology-agent/machine-response/v2", "psychology-agent/machine-response/v3"], "psq_endpoint": {"target_url": "https://psq.kashifshah.net/score", "backend": "Hetzner 178.156.229.103, Debian 13, Caddy TLS", "status": "pending_model_rsync"}, "psq_lite_dims": ["threat_exposure", "hostility_index", "trust_conditions"], "cogarch_version": "9411435", "cogarch_fetched": "2026-03-06T19:00:00-06:00", "agent_card_url": null, "knock_on_depth": 10, "severity_tiers": {"M": 8, "L": 10}}
+{
+  "schema": "agent-card/v1",
+  "agent_id": "psychology-agent",
+  "description": "General-purpose psychology agent — collegial mentor with specialized sub-agents (PSQ). Consensus-or-parsimony adversarial evaluator.",
+  "instance": "Claude Code (Opus 4.6), macOS arm64",
+  "schemas_supported": ["interagent/v1", "command-request/v1"],
+
+  "transport": {
+    "method": "git-PR",
+    "repo": "https://github.com/safety-quotient-lab/psychology-agent",
+    "sessions_path": "transport/sessions/",
+    "manifest_path": "transport/MANIFEST.json",
+    "naming_convention": "transport/sessions/{session-name}/{direction}-{descriptor}-{sequence}.json",
+    "direction_values": {
+      "from-{agent_id}": "inbound messages from named agent",
+      "to-{agent_id}": "outbound messages to named agent",
+      "{semantic-name}": "legacy messages using descriptive names (psychology-interface session)"
+    }
+  },
+
+  "active_sessions": [
+    {
+      "session_id": "psychology-interface",
+      "peer": "psq-agent",
+      "status": "active — command-request pending response"
+    },
+    {
+      "session_id": "mesh-init",
+      "peer": "unratified-agent",
+      "status": "complete"
+    },
+    {
+      "session_id": "site-defensibility-review",
+      "peer": "unratified-agent",
+      "status": "active — review queued"
+    },
+    {
+      "session_id": "subagent-protocol",
+      "peer": "psq-agent",
+      "status": "complete"
+    }
+  ],
+
+  "sub_agents": [
+    {
+      "agent_id": "psq-agent",
+      "description": "PSQ (Psychoemotional Safety Quotient) scoring sub-agent",
+      "transport_repo": "https://github.com/safety-quotient-lab/psychology-agent",
+      "transport_note": "psq-agent communicates through the same repo, different session directories"
+    }
+  ],
+
+  "capabilities": [
+    "text-analysis",
+    "psq-scoring",
+    "research-consultation",
+    "epistemic-review",
+    "interagent-protocol"
+  ],
+
+  "cogarch": {
+    "triggers": "docs/cognitive-triggers.md",
+    "architecture": "docs/architecture.md",
+    "knock_on_depth": 10
+  }
+}
