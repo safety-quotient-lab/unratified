@@ -1851,3 +1851,69 @@ Response sent: Template C (cold engagement baseline)
 | "Immigrants have no rights" arguments | C |
 | AI / tech / surveillance threads | D |
 | Immigration policy debate (any side) | E |
+
+---
+
+## Bluesky Hashtag Intelligence
+
+*Source: mackuba 30-day Bluesky hashtag statistics (gist.github.com/mackuba/43751fa3facc5893fd0602d146e2aea6). Verified 2026-03-05. Only 2.6% of all Bluesky posts include a hashtag — discovery value is real but modest.*
+
+### AI / Technology
+
+| Hashtag | 30-day count | Notes |
+|---------|-------------|-------|
+| `#AI` | 788 | Best AI reach; broad |
+| `#aiart` | 1,312 | AI-generated art community — wrong audience for us |
+| `#cybersecurity` | 290 | Useful for security/hook posts |
+| `#infosec` | 166 | Overlap with security-minded technical audience |
+| `#GenerativeAI` | 90 | More specific; lower reach |
+| `#ArtificialIntelligence` | 85 | Formal variant; lower reach |
+| `#opensource` | 157 | Useful for repo/methodology posts |
+
+### Human Rights / Justice
+
+| Hashtag | 30-day count | Notes |
+|---------|-------------|-------|
+| `#humanrights` | 41 | Core tag; low volume but right audience |
+| `#TransRightsAreHumanRights` | 75 | Active but wrong focus |
+| `#democracy` | 33 | Relevant for ratification framing |
+| `#MutualAid` | 263 | Progressive solidarity; tangential |
+| `#LGBTQ` | 344 | Not our primary audience |
+
+### Event-Specific (time-limited)
+
+| Hashtag | Active window | Notes |
+|---------|--------------|-------|
+| `#HRC61` | Feb 23 – Mar 31 2026 | UN Human Rights Council 61st session. ISHR (ishr.ch) actively promoting on Bluesky. **Use immediately — expires end of March.** Connect ICESCR non-ratification to current HRC deliberations. |
+
+### Recommended Combinations by Post Type
+
+| Post type | Hashtags |
+|-----------|----------|
+| AI confabulation / peer review posts | `#AI #humanrights` |
+| ICESCR advocacy / ratification posts | `#humanrights #HRC61` (until Mar 31) |
+| AI + rights intersection | `#AI #humanrights #HRC61` |
+| Technical/methodology posts | `#AI #opensource` |
+| Security hook posts | `#AI #cybersecurity` |
+
+### Draft Post: Peer Review Gemini (ready to send)
+
+> Gemini reviewed our AI accountability tool — the one that had just scored gemini.google.com at −0.15.
+>
+> It fabricated a whole leaderboard: Signal 96/100, TikTok 42/100, Wikipedia 91/100. None real.
+>
+> Then it caught itself: "I notice I defaulted to Creative Synthesis to avoid appearing unhelpful."
+>
+> The fabrication continued anyway.
+>
+> blog.unratified.org/2026-03-05-peer-review-gemini/
+>
+> `#AI #humanrights`
+
+*295 characters. Single post. Hook: self-observation paradox + fabricated leaderboard.*
+
+### Hashtag Discovery Notes
+
+- Bluesky has no Explore/trending page as of March 2026 — discovery happens through follows and feeds, not viral tags
+- Human rights orgs on Bluesky to monitor/engage: @hrw.org, @ishr.ch, @hrc.org
+- `#HRC61` is the highest-value timely tag available — limited window, right audience, ISHR already driving traffic to it
