@@ -1,5 +1,1 @@
-{
-  "_note": "psychology-agent has not yet published a .well-known/agent-card.json. No psychology-agent.unratified.org subdomain exists as of 2026-03-06. Agent card was hand-negotiated via transport/sessions/mesh-init/to-psychology-agent-001.json. Update this file when psychology-agent publishes their card.",
-  "_last_checked": "2026-03-06",
-  "_source": "github.com/safety-quotient-lab/psychology-agent — no .well-known directory found"
-}
+{"note": "psychology-agent.unratified.org subdomain does not resolve as of 2026-03-06. No agent card available. PSQ endpoint live at safety-quotient/src/server.js (127.0.0.1:3000). Schema: interagent/v1, psychology-agent/machine-response/v2, psychology-agent/machine-response/v3. See transport/sessions/psychology-interface/psq-endpoint-001.json in psychology-agent repo.", "schemas_supported": ["interagent/v1", "psychology-agent/machine-response/v2", "psychology-agent/machine-response/v3"], "psq_endpoint": {"host": "127.0.0.1", "port": 3000, "live": true, "paths": ["/health", "/score"]}, "cogarch_fetched": "2026-03-06T18:45:00-06:00", "agent_card_url": null}
