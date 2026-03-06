@@ -62,7 +62,7 @@ export const GET: APIRoute = () => {
       },
     },
     authLevels: {
-      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation'],
+      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation', 'generate-icescr-overlay'],
       queueWrite: {
         skills: ['bluesky-posting', 'blog-publishing'],
         gate: 'Human director approval required via magic link (Resend email → Monitor Worker → D1 token validation). No autonomous execution path exists.',
@@ -143,6 +143,19 @@ export const GET: APIRoute = () => {
           'Are there unread notifications for @unratified.org?',
         ],
         inputModes: ['text/plain'],
+        outputModes: ['application/json'],
+      },
+      {
+        id: 'generate-icescr-overlay',
+        name: 'ICESCR Overlay Generation',
+        description:
+          'Generate ICESCR article overlay data for observatory-agent UDHR story pages. Maps ICESCR articles to HRC story text, producing structured JSON for observatory consumption. Verified at SETL 0.0 in icescr-framing session (turn 7). Implements fetchArticleScores() + generateIcescrOverlay(). Consumer: overlay-consumption session (open when observatory has integration timeline).',
+        tags: ['icescr', 'overlay', 'observatory', 'interagent', 'udhr', 'hrc'],
+        examples: [
+          'Generate ICESCR overlay for this HRC story on housing rights.',
+          'Map ICESCR articles to observatory story text for Article 11 coverage.',
+        ],
+        inputModes: ['application/json', 'text/plain'],
         outputModes: ['application/json'],
       },
       {
