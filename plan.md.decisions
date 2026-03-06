@@ -2004,3 +2004,39 @@ unratified-bot queue show <id>
 **What follows**: Campaign posts 3-18 use the recommended combinations from plan.md.marketing. #HRC61 posts should go before March 31. ISHR and HRW follow-back list in marketing notes.
 
 ---
+
+## D063: unratified.bsky.social Org Account Setup
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: Bluesky campaign ran from personal account (kashfshah.bsky.social). An org account provides brand separation, persistent identity, and a home for the campaign independent of the personal account.
+
+**Decision**: Set up unratified.bsky.social as the dedicated org account. Profile: "Unratified" display name, AI-disclosed bio (203 graphemes), follows HRW/ISHR/Amnesty/kashfshah. Anchor thread posted and pinned. Cross-follow creates visible link between personal and org accounts.
+
+**Infrastructure built**:
+- `scripts/bsky-setup-account.mjs` — one-run setup (profile + follows + anchor thread + pin)
+- `scripts/bsky-pin-post.mjs` — standalone pin utility
+- `scripts/bsky-reply.mjs` — reply to any post by URI (auto-resolves CID)
+
+**What follows**: All campaign posts go from unratified.bsky.social. kashfshah.bsky.social continues as the personal account. Both accounts cross-link via follows and reply chains.
+
+---
+
+## D064: #RatifyICESCR Campaign Hashtag
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: No dedicated campaign hashtag existed for U.S. ICESCR ratification advocacy on Bluesky. #ICESCR had near-zero volume. #RatifyOPICESCR was used in 2015 for the Optional Protocol — different treaty, different era.
+
+**Decision**: Coin #RatifyICESCR as the standing campaign hashtag. Plant first post from unratified.bsky.social on March 6. Retrofit via reply to Posts 1 and 2 (kashfshah) and the unratified anchor thread. Carry forward on all ICESCR advocacy posts.
+
+**Reasoning**: Owning the canonical campaign hashtag from day one costs nothing and compounds over time. Volume builds from zero; we define what the hashtag means. #RatifyICESCR is action-oriented, specific (not confusable with general human rights tags), and memorable.
+
+**Retrofit replies posted**:
+- Reply to kashfshah Post 1 (anchor thread): "Follow @unratified.bsky.social and use #RatifyICESCR to track the campaign."
+- Reply to kashfshah Post 2 (The Stat): same
+- Self-reply to unratified anchor thread: "Use #RatifyICESCR to track the campaign for U.S. ratification."
+
+**What follows**: Every ICESCR advocacy post from both accounts uses #RatifyICESCR. Posts 3–18 in plan.md.marketing updated. If a coalition forms, the hashtag is already established.
+
+---

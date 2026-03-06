@@ -398,6 +398,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Observatory post merged — 2026-03-05-peer-review-gemini published by observatory agent; unratified agent applied ISO timestamps + removed fabricated link; 3 concurrent pushes resolved via git pull --rebase; post live at blog.unratified.org
 - [x] Git-backed revision history (D061) — generate-revisions.js prebuild script; JSON sidecars per post; expandable <details> component in PostLayout footer; blog pages now show commit-linked revision history
 - [x] Bluesky hashtag intelligence (D062) — real 30-day count data from mackuba gist saved to plan.md.marketing; #HRC61 event window identified (through March 31); recommended combinations for all post types documented
+- [x] Anthropic Agent SDK branding compliance — replaced product-context "Claude Code" with "Claude (Anthropic)" in 3 UI/machine-readable files: start.astro, for/developers.astro, fair-witness.json.ts; blog four-part byline tool field and all descriptive/attribution prose preserved as-is per guidelines; both builds verified (main 60 pages, blog 88 pages, zero errors); commit 6bc0e10
+- [x] unratified.bsky.social org account setup (D063) — display name, bio (AI-disclosed), follows HRW/ISHR/Amnesty/kashfshah, anchor thread posted + pinned; bsky-setup-account.mjs + bsky-pin-post.mjs + bsky-reply.mjs scripts
+- [x] #RatifyICESCR campaign hashtag coined (D064) — first post planted Mar 6; retrofit replies added to Posts 1 + 2 (kashfshah) and unratified anchor thread; posts 3–18 in marketing plan updated to carry tag; standing pattern: every ICESCR advocacy post uses #RatifyICESCR
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
