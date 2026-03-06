@@ -27,7 +27,7 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 |---------|---------|--------|-------------|
 | mesh-init | unratified ↔ observatory | **complete** | Handshake done. 2 collaborations active: ICESCR overlay, voter guide prioritization. 1 deferred: Bluesky HRCB scoring. |
 | mesh-init | unratified ↔ psychology | **complete** | Handshake done. Psychology-agent contributed to well-known post (PR #2 merged). PSQ scoring collaboration pending signal from psychology-agent. |
-| icescr-framing | unratified ↔ observatory | open | Mapping verified (turn 1 ACK sent via observatory PR #3). Arts. 2, 3, 4, 5, 8 missing — queued P1→P3. Blocker: observatory confirm /api/v1/signals per-article score shape. |
+| icescr-framing | unratified ↔ observatory | open | Turn 3: /api/v1/signals has no per-article data. Observatory commits to /api/v1/articles endpoint. Response shape agreed. Unratified-agent implements overlay same session endpoint ships. |
 
 ## Incoming Proposals
 
