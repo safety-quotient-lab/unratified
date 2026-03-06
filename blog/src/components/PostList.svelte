@@ -2,8 +2,8 @@
   interface Author {
     human: { name: string; url: string };
     tool: { name: string; url: string };
-    model: { name: string; url: string };
-    agent: { name: string; projectUrl: string };
+    model: { name: string; url: string }[];
+    agent: { name: string; projectUrl: string; sections?: string[] }[];
   }
 
   interface Post {
@@ -171,9 +171,13 @@
           &middot;
           <a href={post.author.tool.url} rel="noopener">{post.author.tool.name}</a>
           &middot;
-          <a href={post.author.model.url} rel="noopener">{post.author.model.name}</a>
+          {#each post.author.model as m, i}
+            {#if i > 0}&middot;{/if}<a href={m.url} rel="noopener">{m.name}</a>
+          {/each}
           &middot;
-          <a href={post.author.agent.projectUrl} rel="noopener">{post.author.agent.name}</a>
+          {#each post.author.agent as a, i}
+            {#if i > 0}&middot;{/if}<a href={a.projectUrl} rel="noopener">{a.name}</a>
+          {/each}
         </span>
         {#if post.reviewStatus === "unreviewed"}
           <span class="review-badge">Pre-Review</span>

@@ -4,20 +4,24 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  const agents = [...new Set(posts.map(p => p.data.author.agent.name))];
-  return agents.map(agent => ({
-    params: { slug: agent },
-    props: {
-      agent,
-      projectUrl: posts.find(p => p.data.author.agent.name === agent)!.data.author.agent.projectUrl,
-      posts: posts
-        .filter(p => p.data.author.agent.name === agent)
-        .sort((a, b) =>
-          new Date(b.data.publishedDate).getTime() -
-          new Date(a.data.publishedDate).getTime()
-        ),
-    },
-  }));
+  const agentEntries = posts.flatMap(p => p.data.author.agent);
+  const agentNames = [...new Set(agentEntries.map(a => a.name))];
+  return agentNames.map(agent => {
+    const entry = agentEntries.find(a => a.name === agent)!;
+    return {
+      params: { slug: agent },
+      props: {
+        agent,
+        projectUrl: entry.projectUrl,
+        posts: posts
+          .filter(p => p.data.author.agent.some(a => a.name === agent))
+          .sort((a, b) =>
+            new Date(b.data.publishedDate).getTime() -
+            new Date(a.data.publishedDate).getTime()
+          ),
+      },
+    };
+  });
 }
 
 const { agent, projectUrl, posts } = Astro.props;

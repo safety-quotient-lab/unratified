@@ -4,13 +4,13 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts', ({ data }) => !data.draft);
-  const models = [...new Set(posts.map(p => p.data.author.model.name))];
-  return models.map(model => ({
+  const modelNames = [...new Set(posts.flatMap(p => p.data.author.model.map(m => m.name)))];
+  return modelNames.map(model => ({
     params: { slug: model.toLowerCase().replace(/\s+/g, '-') },
     props: {
       model,
       posts: posts
-        .filter(p => p.data.author.model.name === model)
+        .filter(p => p.data.author.model.some(m => m.name === model))
         .sort((a, b) =>
           new Date(b.data.publishedDate).getTime() -
           new Date(a.data.publishedDate).getTime()

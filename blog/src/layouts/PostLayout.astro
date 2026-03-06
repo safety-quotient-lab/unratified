@@ -7,8 +7,8 @@ import { fileURLToPath } from 'node:url';
 interface Author {
   human: { name: string; url: string };
   tool: { name: string; url: string };
-  model: { name: string; url: string };
-  agent: { name: string; projectUrl: string };
+  model: { name: string; url: string }[];
+  agent: { name: string; projectUrl: string; sections?: string[] }[];
 }
 
 interface Revision {
@@ -92,9 +92,13 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
           &middot;
           <a href={author.tool.url} rel="noopener">{author.tool.name}</a>
           &middot;
-          <a href={author.model.url} rel="noopener">{author.model.name}</a>
+          {author.model.map((m, i) => (
+            <>{i > 0 && <>&middot;</>}<a href={m.url} rel="noopener">{m.name}</a></>
+          ))}
           &middot;
-          <a href={author.agent.projectUrl} rel="noopener">{author.agent.name}</a>
+          {author.agent.map((a, i) => (
+            <>{i > 0 && <>&middot;</>}<a href={a.projectUrl} rel="noopener">{a.name}</a></>
+          ))}
         </span>
         <span class="reading-time">&middot; {readingTime} min read</span>
         {reviewStatus === 'unreviewed' && (

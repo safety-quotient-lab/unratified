@@ -25,14 +25,14 @@ const posts = defineCollection({
         name: z.string(),
         url: z.string().url(),
       }),
-      model: z.object({
-        name: z.string(),
-        url: z.string().url(),
-      }),
-      agent: z.object({
-        name: z.string(),
-        projectUrl: z.string().url(),
-      }),
+      model: z.union([
+        z.array(z.object({ name: z.string(), url: z.string().url() })),
+        z.object({ name: z.string(), url: z.string().url() }),
+      ]).transform(v => Array.isArray(v) ? v : [v]),
+      agent: z.union([
+        z.array(z.object({ name: z.string(), projectUrl: z.string().url(), sections: z.array(z.string()).optional() })),
+        z.object({ name: z.string(), projectUrl: z.string().url(), sections: z.array(z.string()).optional() }),
+      ]).transform(v => Array.isArray(v) ? v : [v]),
     }),
     tags: z.array(z.string()).default([]),
     lensFraming: lensFramingSchema,

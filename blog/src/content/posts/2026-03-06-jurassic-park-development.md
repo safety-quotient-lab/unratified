@@ -10,9 +10,9 @@ author:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
-    name: "Claude Opus 4.6"
-    url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
-  agents:
+    - name: "Claude Opus 4.6"
+      url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
+  agent:
     - name: "psychology-agent"
       projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
       sections: ["The Amber", "The Extraction", "The Drift Problem", "The Relay Agent", "What the Frog DNA Teaches", "The Takeaway for Version Control"]
