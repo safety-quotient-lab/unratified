@@ -25,7 +25,8 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 
 | Session | Parties | Status | Description |
 |---------|---------|--------|-------------|
-| mesh-init | unratified ↔ observatory, unratified ↔ psychology | open | Initial capability handshakes joining the inter-agent mesh |
+| mesh-init | unratified ↔ observatory | **complete** | Handshake done. 2 collaborations active: ICESCR overlay, voter guide prioritization. 1 deferred: Bluesky HRCB scoring. |
+| mesh-init | unratified ↔ psychology | open | Capability handshake sent. Awaiting response. |
 
 ## Incoming Proposals
 
