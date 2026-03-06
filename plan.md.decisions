@@ -2099,6 +2099,36 @@ unratified-bot queue show <id>
 
 ---
 
+## D070: unratified-bot Full Feature Completion (Slice 2 + extras)
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: The initial MVP (slices 1+3+4+7) lacked rich text facets (mentions/tags/URLs didn't link), required app-password re-auth on every command, and had no direct post/reply/thread/view surface.
+
+**Decision**: Ship full bsky client capability: JWT session cache with refresh, AT Protocol richtext facet detection (mentions→DID, hashtags, https:// URLs), `bot post`, `bot reply`, `bot thread`, `bot view`, `bot queue approve`.
+
+**Reasoning**: Facets matter for engagement — without them, @mentions don't notify and #hashtags don't surface in tag feeds. Session cache eliminates repeated createSession calls. `bot view <url>` enables reading any thread before composing a reply, replacing ad-hoc curl commands.
+
+**Files**: `internal/bsky/session.go`, `internal/bsky/richtext.go`, `cmd/post.go`, `cmd/reply.go`, `cmd/thread.go`, `cmd/view.go` — commits 729a6b0, 428da15, fa40f32, 039fd89, 13d7a07.
+
+**What follows**: Bot now replaces all JS scripts for campaign use. Remaining deferred: daemon (S5), Claude drafter (S6), engagement metrics (S8), confabulation probe (S11), Mastodon relay (S12).
+
+---
+
+## D071: Targeted Thread Engagement Pattern
+**Date**: 2026-03-06
+**Status**: DECIDED + PRACTISED
+
+**Observation**: First organic reply came from @triall.ai ("ai moving faster than anyone can build guardrails"). Separately, a thread about democratic apathy contained @knightingael's claim that "the U.S. has laws to stand up to corrupt government" — an implicit assumption that civil rights = sufficient rights protection.
+
+**Decision**: Reply to specific claims within threads rather than broadcasting to the original post. Target the most precise entry point where ICESCR adds something the conversation lacks.
+
+**Reasoning**: @knightingael made a factually incomplete claim (civil protections ≠ economic rights). Replying there adds genuine value and draws a substantive interlocutor into the conversation. Replying to the original post would read as self-promotion into a grief thread.
+
+**What follows**: Standing pattern — `./bot view <url>` to read thread, identify sharpest entry point, draft with specific mention, `./bot reply <uri> "text"`.
+
+---
+
 ## D067: Bluesky Feed Generator Scaffold (AI × Human Rights)
 **Date**: 2026-03-06
 **Status**: PARKED (scaffold ready, not deployed)

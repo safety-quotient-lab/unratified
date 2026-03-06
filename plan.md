@@ -357,7 +357,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog llms.txt updated with Exchange 3 findings and taxonomy quick reference
 - [x] Golden ratio social media copy — all platforms (Reddit 4 subreddits, Mastodon 4 posts, grassroots, campaign sequencing) lead with Exchange 3 "yes please" experiment
 - [x] OG/Twitter meta descriptions and image alt text strengthened — main site leads with "173 nations" stat, blog leads with confabulation research
-- [ ] Social media campaign execution (soft launch: Bluesky + Lemmy + Reddit + Mastodon, per D047 sequencing)
+- [x] Social media campaign execution — Bluesky underway (Posts 1–12 live, replies to @triall.ai + @knightingael.bsky.social); HN + Lemmy underway; Reddit + Mastodon remaining
 - [x] Bluesky Post 1 (The Anchor — 4-post thread) — posted manually Mar 4
 - [x] Bluesky ad hoc posts — @hrw.org mention, HN link, peer review request, @therealjackhopkins mention
 - [x] Bluesky CLI posting script (scripts/bsky-post.mjs) — auth, single post, thread, dry-run modes
@@ -370,7 +370,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] .gitignore: .dev.vars and .wrangler/ excluded from repo
 - [x] Build dedicated Bluesky CLI client — repo: safety-quotient-lab/unratified-bot (D049, D050) — commit e1d2aa9
   - [x] Slice 1: scaffold (go.mod, cobra, config.toml, Makefile)
-  - [ ] Slice 2: bsky-client (auth + session cache + post/thread/quote/reply + validation + link cards) — L [deferred]
+  - [x] Slice 2: bsky-client (session cache + rich text facets + post/reply/thread + view) — shipped 729a6b0
   - [x] Slice 3: queue + migrations (SQLite 4-table schema, CRUD, cursor, dead letter)
   - [x] Slice 4: notifications (one-shot fetch + dedup + display)
   - [ ] Slice 5: daemon (polling loop + backoff + graceful shutdown + health endpoint) — M [deferred]
