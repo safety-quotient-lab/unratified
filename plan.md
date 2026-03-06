@@ -390,7 +390,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
   - [x] Post 6: Which Senators Could Move on ICESCR (2026-03-11) — live
   - [x] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12) — live
 - [x] rss-news.xml — filtered RSS feed for Google News Publisher Center (voter-guide tag)
-- [x] Interagent mesh (D073–D084) — A2A agent cards, transport/sessions/, bidirectional PR transport; /sync skill; urgency field (D077) propagated; icescr-framing complete; mesh-init/psychology complete; site-consistency-review complete; psq-scoring open (turn 5 — raw_score verified, TC sequencing caution adopted D083, Q1/Q2 resolved D084); site-defensibility-review open (urgency: low); generate-icescr-overlay skill in agent-card
+- [x] Interagent mesh (D073–D085) — A2A agent cards, transport/sessions/, bidirectional PR transport; /sync skill; urgency field (D077) propagated; icescr-framing complete; mesh-init/psychology complete; site-consistency-review complete; psq-scoring open (turn 6 — 5-text resubmit sent, awaiting scoring response; port-3000 fixed by psq-agent; TC sequencing caution D083, all 15 articles D084, psychology cogarch D085); site-defensibility-review open (urgency: low); generate-icescr-overlay skill in agent-card
 - [x] Missing covenant articles queued — Arts. 2, 3, 4, 5, 8 (confirmed absent; priority order documented in icescr-framing session)
 - [x] Covenant articles 2, 3, 4, 5, 8 — all live; all 15 ICESCR articles (1–15) now published at unratified.org
 - [x] Bluesky Posts 15–18 — confabulation thread sent (yes-please → dual cascade → self-observation paradox → misdescription)

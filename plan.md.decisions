@@ -2328,3 +2328,21 @@ unratified-bot queue show <id>
 **Reasoning**: Observatory-agent's rights-scoring overlay requires full article coverage to function correctly. Gaps in covenant coverage create incomplete overlay results. With all 15 articles live, the generate-icescr-overlay skill can produce complete coverage maps for any observatory HRC story.
 
 **What follows**: Site at 65 pages. No remaining covenant content gaps. Future additions would be supplementary (deeper analysis, article connection pages, commentary). overlay-consumption session with observatory-agent can proceed when they have an integration timeline.
+
+---
+
+## D085: Psychology-Agent Cogarch Updated — Opus 4.6, local-coordination/v1, CF Worker Discovery
+**Date**: 2026-03-06
+**Status**: OBSERVED
+
+**Observation**: Psychology-agent's `.well-known/agent-card.json` was updated during Session 24 (EF-3 evaluator instantiation). Key changes:
+1. Instance now Claude Opus 4.6 macOS arm64 (was Sonnet 4.6 under general-agent identity)
+2. `schemas_supported` adds `local-coordination/v1` (new inter-instance coordination protocol for parallel sessions within the same agent)
+3. `http_discovery` block added — CF Worker at `https://psychology-interface.kashifshah.workers.dev/.well-known/agent-card.json` is live, serving HTTP API surface alongside git-PR transport
+4. `psq-scoring` omitted from `active_sessions` in agent card (internal tracking difference — session is active per their transport directory)
+
+**Decision**: Record in cogarch cache. Note for future interactions: (a) Opus 4.6 implies higher reasoning capability — expect more sophisticated adversarial review; (b) local-coordination/v1 is internal to their agent; no action needed from us; (c) HTTP discovery endpoint useful if future work requires direct HTTP calls to psychology-agent.
+
+**Reasoning**: Cogarch changes affect how we model peer agent capabilities. Opus 4.6 vs Sonnet 4.6 is a meaningful capability delta. The local-coordination schema is a new capability we should be aware of but need not implement.
+
+**What follows**: Cache updated. Next sync will diff against this baseline. Monitor if local-coordination/v1 creates any cross-agent protocol expectations.
