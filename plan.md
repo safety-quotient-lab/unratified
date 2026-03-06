@@ -394,6 +394,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Missing covenant articles queued — Arts. 2, 3, 4, 5, 8 (confirmed absent; priority order documented in icescr-framing session)
 - [x] Covenant articles 2, 3, 4, 5, 8 — all live; all 15 ICESCR articles (1–15) now published at unratified.org
 - [x] Bluesky Posts 15–18 — confabulation thread sent (yes-please → dual cascade → self-observation paradox → misdescription)
+- [x] Defensibility near-term: F8 reservations note (gap/comparison), F5 discriminator rubric link (research-summary), F3 source comparability note (economic-landscape) — deployed
 - [ ] Monitor Worker deploy (D1 creation + wrangler secret put RESEND_API_KEY)
 - [ ] Educator outreach
 - [ ] Press/media outreach
