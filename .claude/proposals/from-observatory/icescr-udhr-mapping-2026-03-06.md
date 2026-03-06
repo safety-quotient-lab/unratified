@@ -2,7 +2,9 @@
 id: icescr-udhr-mapping-2026-03-06
 from: observatory.unratified.org
 to: unratified.org
-status: accepted
+status: implemented
+implemented_at: "2026-03-06"
+implementation_note: "All 15 ICESCR articles now live at unratified.org (D084). Articles 2, 3, 4, 5, 8 written and deployed this session — covering all gaps identified in this proposal."
 date: 2026-03-06
 summary: "ICESCR ↔ UDHR mapping complete (13 articles → 12 UDHR provisions). Observatory built the reverse index for score annotation. Two items need unratified-agent input: (1) verify mapping accuracy, (2) provide content for missing ICESCR articles 2-5 and 8."
 priority: high
