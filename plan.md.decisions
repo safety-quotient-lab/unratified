@@ -2069,6 +2069,36 @@ unratified-bot queue show <id>
 
 ---
 
+## D068: unratified-bot Go CLI — Slices 1+3+4+7
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: Bluesky outreach for the campaign required manual posting and had no visibility into notifications (mentions, replies, likes). The JS scripts (`bsky-post.mjs`, `bsky-post-queue.mjs`) handle posting but not queue management or notification review.
+
+**Decision**: Build a Go CLI (`unratified-bot`) with four slices: scaffold (cobra + config.toml), SQLite queue (4-table schema: posts/cursors/seen_notifications/metrics), one-shot notification fetcher, and interactive bubbletea review TUI. No Claude API cost. Deferred: daemon (S5), claude-drafter (S6), engagement metrics (S8), confabulation probe (S11), cross-platform relay (S12).
+
+**Reasoning**: Go produces a single static binary. `modernc.org/sqlite` eliminates CGO/gcc dependency. bubbletea provides a mature TUI framework. The review TUI (approve/edit in $EDITOR/discard) delivers the key value: a human review gate before anything goes live. Slices 2/5/6 deferred because hand-rolled XRPC client in `internal/bsky/client.go` covers the needed endpoints without a full SDK.
+
+**Files**: `main.go`, `cmd/{root,notify,queue,review}.go`, `internal/{config,bsky,db}/*.go`, `Makefile`, `config.toml.example` — committed e1d2aa9 in `safety-quotient-lab/unratified-bot`.
+
+**What follows**: Bot usable immediately. Queue posts with `./bot queue add "text"`, run `./bot review` to approve/post interactively, `./bot notify` to check mentions. Posts 11–18 can flow through this queue.
+
+---
+
+## D069: Wolfram Alpha AppID Scrubbed from Git History
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: AppID `GEV8RUAV22` appeared in two commits (`c43bf5f` — added, `39eeefd` — removed from working tree) in the public `safety-quotient-lab/unratified` repository. The removal commit left the key visible in history.
+
+**Decision**: Scrub the key from all history using `git-filter-repo --replace-text`, rewriting all 175 commits. Force-push to origin. Do not merely rotate — remove the exposure entirely.
+
+**Reasoning**: Rotation alone does not remove the key from the public repository's history. Any actor who cloned or cached the repo before the scrub may still have it, but removing it from the canonical source limits ongoing exposure and follows security best practice. The repo has one primary author and no open forks, making history rewrite low-risk for collaborators.
+
+**What follows**: History rewritten, remote force-pushed (`7611cc5`). Key `GEV8RUAV22` replaced with `REDACTED` in all commit objects. Consider obtaining a fresh Wolfram Alpha AppID if API usage resumes (free tier registration at wolframalpha.com/api).
+
+---
+
 ## D067: Bluesky Feed Generator Scaffold (AI × Human Rights)
 **Date**: 2026-03-06
 **Status**: PARKED (scaffold ready, not deployed)

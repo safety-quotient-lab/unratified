@@ -461,119 +461,88 @@ Total (max per page)  │  ~31 KB     │ progressive
 
 ---
 
-## unratified-bot — Bluesky CLI Client (D049, D050)
-**Date**: 2026-03-04
+## unratified-bot — Bluesky CLI Client (D068)
+**Date**: 2026-03-06
 **Repo**: safety-quotient-lab/unratified-bot (separate repo)
-**Language**: Go
-**Status**: DESIGNED — not yet built
+**Language**: Go 1.25.1
+**Status**: BUILT — slices 1+3+4+7 shipped (commit e1d2aa9)
 
-### Package Structure
+### Actual Package Structure (as built)
 
 ```
 unratified-bot/
-├── cmd/unratified-bot/
-│   └── main.go              # cobra root + subcommand wiring
+├── main.go                      # entry point → cmd.Execute()
+├── cmd/
+│   ├── root.go                  # cobra root + --config flag
+│   ├── notify.go                # bot notify [--all] [--limit N]
+│   ├── queue.go                 # bot queue add/list/discard
+│   └── review.go                # bot review (bubbletea TUI)
 ├── internal/
-│   ├── bsky/                # indigo wrapper
-│   │   ├── client.go        # auth, session cache (~/.unratified-bot/session.json)
-│   │   ├── post.go          # create post/thread/quote/reply + grapheme validation + link card OG
-│   │   └── notifications.go # fetch + parse + dedup notifications
-│   ├── claude/
-│   │   └── drafter.go       # Anthropic SDK, mission system prompt, context budget
-│   ├── queue/
-│   │   ├── db.go            # SQLite init + migrations (modernc/sqlite pure-Go)
-│   │   └── models.go        # Notification, Draft, CampaignPost, DeadLetter types
-│   ├── daemon/
-│   │   └── daemon.go        # polling loop, backoff/jitter, signal handling, health HTTP
-│   └── review/
-│       └── review.go        # interactive approval: [A]pprove [E]dit [S]kip [D]iscard
-├── Makefile
-├── go.mod
-└── README.md
+│   ├── bsky/
+│   │   └── client.go            # hand-rolled XRPC: Login, ListNotifications, Post, GetCID
+│   ├── config/
+│   │   └── config.go            # TOML loader + BSKY_HANDLE/PASSWORD env overrides
+│   └── db/
+│       ├── db.go                # SQLite open + WAL + 4-table migration
+│       ├── queue.go             # QueueAdd/List/SetStatus/MarkPosted/MarkDead/UpdateText
+│       └── cursor.go            # CursorGet/Set, NotificationSeen/MarkSeen
+├── Makefile                     # build / tidy / clean
+├── config.toml.example
+└── .gitignore                   # excludes: bot binary, *.db, config.toml
 ```
 
 ### SQLite Schema (4 tables)
 
-```
-notifications   — raw AT Protocol notification + processed flag + seen_at
-drafts          — linked to notification, Claude draft text, status (pending/approved/discarded)
-campaign_posts  — URIs of own posts for engagement tracking, registered at post time
-dead_letter     — failed items after 3 attempts, surfaced by queue list --failed
+```sql
+posts              — id, text, reply_uri, reply_cid, root_uri, root_cid,
+                     status (pending|approved|posted|dead), created_at,
+                     posted_at, posted_uri, error
+cursors            — key, value  (notification cursor)
+seen_notifications — cid, seen_at  (dedup ring)
+metrics            — reserved for future engagement tracking
 ```
 
-### Dependencies
+### Dependencies (actual go.mod)
 
 | Package | Purpose |
 |---------|---------|
-| github.com/bluesky-social/indigo | AT Protocol client |
-| github.com/anthropics/anthropic-sdk-go | Claude API |
 | github.com/spf13/cobra | CLI framework |
-| modernc.org/sqlite | Pure-Go SQLite (no CGo) |
-| github.com/olekukonko/tablewriter | Engagement metrics tables |
+| github.com/pelletier/go-toml/v2 | TOML config |
+| modernc.org/sqlite | Pure-Go SQLite (no CGo/gcc) |
+| github.com/charmbracelet/bubbletea | TUI framework (review) |
+| github.com/charmbracelet/lipgloss | TUI styling |
+| github.com/charmbracelet/bubbles | TUI components |
 
-### Auth (env vars only)
-
-```
-BSKY_HANDLE          kashfshah.bsky.social
-BSKY_PASSWORD        <app-password>
-ANTHROPIC_API_KEY    <key>
-BSKY_POLL_INTERVAL   60  (seconds, optional, default 60)
-```
-
-### Config File
-
-`~/.unratified-bot/config.toml` — poll interval, reply depth limit, max auto-reply/hour,
-log path, D1 sync toggle. Secrets stay in env vars only.
-
-### Data Directory
+### Command Surface (as built)
 
 ```
-~/.unratified-bot/
-├── queue.db              # SQLite queue (all 4 tables)
-└── session.json          # cached Bluesky JWT (refreshed automatically)
+bot --config config.toml notify [--all] [--limit N]
+bot queue add "text" [--reply-to at://uri]
+bot queue list [--status pending|approved|posted|dead]
+bot queue discard <id>
+bot review                  # bubbletea TUI: a=post e=edit d=discard j/k=nav q=quit
 ```
 
-### Command Surface
+### Review TUI Key Map
 
 ```
-unratified-bot post "text"                   # single post
-unratified-bot thread "p1" "p2" "p3"        # thread
-unratified-bot thread --file thread.json    # thread from JSON file
-unratified-bot quote <URI|URL> "text"       # quote-post
-unratified-bot reply <URI|URL> "text"       # reply
-unratified-bot notifications                 # one-shot: show recent
-unratified-bot engagement                    # one-shot: campaign post metrics table
-unratified-bot daemon                        # polling loop: queue + draft
-unratified-bot review                        # interactive approval gate
-unratified-bot queue list [--failed]         # list pending / dead-letter items
-unratified-bot queue show <id>              # show item + Claude draft
+a   approve + post immediately (via XRPC createRecord)
+e   open $EDITOR (fallback: vi), read back, save to DB, show grapheme count
+d   mark dead ("manually discarded"), remove from list
+j/↓ next post
+k/↑ prev post
+q   quit
 ```
 
-### Thread JSON Schema (--file format)
+### Deferred Slices
 
-```json
-{
-  "posts": [
-    { "text": "...", "images": [], "delay_ms": 0 },
-    { "text": "...", "images": [], "delay_ms": 0 }
-  ]
-}
-```
-
-### Daemon Polling Flow
-
-```
-poll Bluesky /xrpc/app.bsky.notification.listNotifications every N seconds
-  cursor persisted in SQLite (prevents reprocessing on restart)
-  → new mention or reply?
-    → fetch full thread context (max depth 3)
-    → call Claude API with mission system prompt (fair witness + e-prime + ICESCR scope)
-    → write {notification + draft} to SQLite drafts table
-    → log to stdout
-  → 429 response? exponential backoff with jitter
-  → SIGTERM/SIGINT? drain in-flight, flush SQLite, exit clean
-  → health check HTTP optional: --health-port 8080 → GET /health returns JSON
-```
+| Slice | Description | Status |
+|-------|-------------|--------|
+| S2 | Full bsky client (session cache, link cards, thread) | deferred |
+| S5 | Daemon (polling loop + backoff) | deferred |
+| S6 | Claude drafter (Anthropic SDK) | deferred |
+| S8 | Engagement metrics + CSV export | deferred |
+| S9–S12 | keyword monitor, thread-from-blog, confabulation probe, Mastodon relay | deferred |
 
 ### Claude Mission System Prompt (design intent)
 
