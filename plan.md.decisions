@@ -1962,3 +1962,45 @@ unratified-bot queue show <id>
 **What follows**: Observatory agent produces the post. Unratified agent merges it. The pattern establishes a cross-agent publishing workflow where each agent authors content from its own domain.
 
 ---
+
+## D061: Git-Backed Revision History for Blog Posts
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Blog posts had no visible revision history. The git history existed but nothing surfaced it to readers. Posts from the observatory agent demonstrated the need: 3 separate commits within hours of publication, each adding substantive content.
+
+**Decision**: Add a prebuild Node.js script (`blog/scripts/generate-revisions.js`) that runs `git log --follow --format="%H|%aI|%s"` per post file and writes JSON sidecar files to `blog/src/data/revisions/{slug}.json`. PostLayout.astro reads the sidecar at build time and renders an expandable `<details>` revision history component in the post footer with linked commit subjects.
+
+**Reasoning**:
+- Git history already exists — the script surfaces it rather than duplicating it
+- Build-time static generation: zero runtime cost, works in Cloudflare Pages
+- Degrades gracefully: `try/catch` on both the git command and the file read — empty history shows nothing
+- Observable scholarly provenance: readers can see what changed and when, with links to individual commits
+- Cross-agent publishing makes revision transparency essential — readers should see when the observatory agent expanded a post
+
+**Files created**: `blog/scripts/generate-revisions.js`
+**Files modified**: `blog/package.json` (prebuild hook in `dev` + `build`), `blog/src/layouts/PostLayout.astro` (loading + `<details>` component + CSS)
+
+**Reporoot path note**: Script computes repoRoot as `join(scriptDir, '..', '..')` — blog/scripts/ → blog/ → unratified/. An earlier version used 3 levels and resolved to Projects/, causing silent empty revision files. Fixed before first deploy.
+
+**What follows**: Every future post gets revision history automatically at build time. Observatory agent posts will show their full merge-and-iteration history.
+
+---
+
+## D062: Bluesky Hashtag Intelligence Strategy
+**Date**: 2026-03-05
+**Status**: DECIDED
+
+**Observation**: Bluesky hashtag usage differs fundamentally from Twitter/X: only 2.6% of posts use hashtags (mackuba 30-day stats), so over-hashtagging reads as inauthentic. Real counts matter more than assumed popularity. AI hashtags dwarf human rights hashtags (#AI 788 vs. #humanrights 41 posts/day average). Event hashtags (#HRC61) provide timely high-signal windows.
+
+**Decision**: Adopt a disciplined hashtag strategy — max 2-3 per post, signal-over-volume selection. Capture real 30-day count data as baseline. Prioritize: (1) #HRC61 immediately (UN Human Rights Council 61st session, active until March 31 2026, ISHR promoting on Bluesky); (2) #AI + #humanrights as evergreen pairing; (3) avoid #aiart (1,312 posts/day but wrong audience).
+
+**Key counts from mackuba 30-day gist (verified 2026-03-05)**:
+- #AI 788, #GenerativeAI 90, #ArtificialIntelligence 85, #opensource 157, #cybersecurity 290
+- #humanrights 41, #HRC61 (active event), #democracy 33, #LGBTQ 344, #MutualAid 263
+
+**Files modified**: `plan.md.marketing` — "Bluesky Hashtag Intelligence" section appended
+
+**What follows**: Campaign posts 3-18 use the recommended combinations from plan.md.marketing. #HRC61 posts should go before March 31. ISHR and HRW follow-back list in marketing notes.
+
+---

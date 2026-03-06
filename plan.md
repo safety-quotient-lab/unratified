@@ -395,6 +395,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Import psychology-agent blog posts (D058) — 2 posts: cognitive-architecture deep-dive (triggers/recovery/antiregression comparison) + interpretant-collapse (SRT + PSQ convergent discovery); structured author, all 5 lenses, draft: false
 - [x] Four-part author attribution (D059) — `human · tool · model · agent` byline; schema split into 4 fields; all 18 posts updated; all four segments link to authoritative external sources (kashifshah.net, Claude Code docs, Anthropic model reference, GitHub repo); /model/[slug] + /agent/[slug] filter pages; blog 82 pages
 - [x] Observatory agent handoff — prompt + primary sources (gemini-*.json/md) handed to observatory agent for Gemini peer review blog post; observatory scored gemini.google.com at −0.15, owns the closed-loop narrative
+- [x] Observatory post merged — 2026-03-05-peer-review-gemini published by observatory agent; unratified agent applied ISO timestamps + removed fabricated link; 3 concurrent pushes resolved via git pull --rebase; post live at blog.unratified.org
+- [x] Git-backed revision history (D061) — generate-revisions.js prebuild script; JSON sidecars per post; expandable <details> component in PostLayout footer; blog pages now show commit-linked revision history
+- [x] Bluesky hashtag intelligence (D062) — real 30-day count data from mackuba gist saved to plan.md.marketing; #HRC61 event window identified (through March 31); recommended combinations for all post types documented
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
