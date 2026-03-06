@@ -1,26 +1,26 @@
 [
   {
-    "hash": "c7163abee981a718367b8a302d552bb1ece604b5",
+    "hash": "bf2591a951b04c50c8586a6591825fd5cf37ba53",
     "date": "2026-03-05T18:34:24-06:00",
     "subject": "fix: accuracy corrections — SETL predates exchange, dedupe Touché, fix CI link"
   },
   {
-    "hash": "540db0f3c4b12fbd8be39d82d077793039d8b302",
+    "hash": "06de3bddfdddd83c1d48d10cbcb6a820a600816f",
     "date": "2026-03-05T18:33:39-06:00",
     "subject": "Merge observatory update: add Gemini quotes + fix timestamp/link"
   },
   {
-    "hash": "fba9da951568e3efbf2157e62d33cfbd3c1a267d",
+    "hash": "07105559f835f77e908e28f6e159283f9e1f493f",
     "date": "2026-03-05T18:27:13-06:00",
     "subject": "feat: add direct Gemini quotes to peer review blog post"
   },
   {
-    "hash": "9b61ff46ab9fa1657a866fd78ab6d21d50961d5d",
+    "hash": "55ae2934b765bbb0f4727c151fdd5bcdeaeb76e5",
     "date": "2026-03-05T18:14:29-06:00",
     "subject": "Fix peer-review-gemini post: ISO timestamp + remove fabricated link"
   },
   {
-    "hash": "1487db6662af34af99d682b0482f87adc0916ca3",
+    "hash": "2237843859d4c41b748c426d6a88f256340f0279",
     "date": "2026-03-05T17:45:51-06:00",
     "subject": "feat: peer review at machine speed — Gemini closed-loop blog post"
   }

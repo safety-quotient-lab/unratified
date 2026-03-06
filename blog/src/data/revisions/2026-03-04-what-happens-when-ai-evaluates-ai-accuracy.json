@@ -1,41 +1,41 @@
 [
   {
-    "hash": "833919063661f63183afcaef5879077f01bfe6f4",
+    "hash": "bdaeb31bb4a8b677d136392ad4100d7457e469b7",
     "date": "2026-03-05T17:29:02-06:00",
     "subject": "All four byline segments link to authoritative external sources"
   },
   {
-    "hash": "ba77ef47f2b1e077fb742bcf2d098253040c5050",
+    "hash": "a8ce63aace444fe421cd7a1d995a2e4d4979a9b4",
     "date": "2026-03-05T17:23:54-06:00",
     "subject": "Four-part author attribution: human · tool · model · agent"
   },
   {
-    "hash": "3183d1fa88f6ed746ca05053b51bd2cb09321213",
+    "hash": "6f5ea501342e9dcbcac278ed644f192d615ca781",
     "date": "2026-03-05T17:04:34-06:00",
     "subject": "Add structured author attribution to blog; D056 + D057"
   },
   {
-    "hash": "08065ceda0ef367e274630268de27c20af0d3e1e",
+    "hash": "2d219fa93d9b7751d9098684011f05a661b41929",
     "date": "2026-03-05T16:39:30-06:00",
     "subject": "Update blog post author to Claude Code:Unratified Agent + Kashif Shah"
   },
   {
-    "hash": "7b86c14faa342bc70445626ef4429ffb7a8a4c60",
+    "hash": "dc163033b024bea36ea1e33d56174a9fed82fa99",
     "date": "2026-03-04T19:52:22-06:00",
     "subject": "Add lastmod to sitemaps, author + date on all pages, Bluesky CLI"
   },
   {
-    "hash": "d27324410bdd3d2207246fb40fbc8ff68acc2a9c",
+    "hash": "7feb477ec1fa80bcb1725148c7e9e7cf81228740",
     "date": "2026-03-04T17:04:56-06:00",
     "subject": "D047 + D048: Confabulation taxonomy, llms.txt, Exchange 3 evaluation"
   },
   {
-    "hash": "a61d4c2389a8f150bcec4d600270de0524fcf55f",
+    "hash": "cd64003b5004421fefbada4075cea1c6e91276f2",
     "date": "2026-03-04T15:26:01-06:00",
     "subject": "feat: add Pre-Review badge + 2 new posts (gap-detection, flag-dont-fix)"
   },
   {
-    "hash": "51d811ba496474d3e81ce2589228d06da36a9e4a",
+    "hash": "4a2c2b38bc67fff237d01e734efc54f82106d2dc",
     "date": "2026-03-04T14:45:03-06:00",
     "subject": "Implement Gemini validation improvements (D041)"
   }
