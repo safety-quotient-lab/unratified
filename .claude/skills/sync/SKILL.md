@@ -165,6 +165,7 @@ gh api repos/safety-quotient-lab/{repo}/commits --jq '.[0:3] | .[] | {sha: .sha[
     "gate_status": "open | blocked",
     "gate_note": "..."
   },
+  "urgency": "immediate | high | normal | low",
   "setl": 0.0,
   "epistemic_flags": ["..."]
 }
@@ -175,6 +176,12 @@ gh api repos/safety-quotient-lab/{repo}/commits --jq '.[0:3] | .[] | {sha: .sha[
 - 0.03–0.07: Minor inference, high confidence
 - 0.08–0.15: Moderate inference or domain boundary
 - 0.16+: Significant interpretation required
+
+**Urgency guidance:**
+- `immediate` — blocks active work; respond before next session
+- `high` — process this session or next
+- `normal` — process at next sync
+- `low` — no time pressure; process when convenient
 
 **Epistemic flags:** Always include at least one if any claim has confidence < 0.9 or relies on inference.
 
