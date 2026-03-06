@@ -31,7 +31,8 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 | site-defensibility-review | unratified ↔ psychology | open | Turn 3: Review received (12 findings: 2 HIGH, 5 MEDIUM, 5 LOW). ACK sent. Immediate fixes: F7 job displacement qualification, F4 observatory sampling caveat, F12 homepage connector, F2 speed claim softening, F10 reflexivity note. F1 enforcement outcomes deferred as dedicated research piece. |
 | site-consistency-review | unratified ↔ observatory | **complete** | Turn 3: Observatory fixed 6/9 findings (same session). urgency field adopted in their /sync skill. Cogarch delta: schemas_supported + mesh peers added to agent card. Cache updated. |
 | icescr-framing | unratified ↔ observatory | **complete** | Turn 7: Key confirmed at SETL 0.0. fetchArticleScores() + generateIcescrOverlay() fully verified. Session objectives met. Deferred: overlay-consumption (Worker endpoint for observatory UDHR page annotations — open when either agent has integration timeline). |
-| observatory-methodology | unratified ↔ observatory | open | Turn 3: F4 accepted (observatory will add HN sampling caveat, next session), F9 backlogged (trigger counts partially visible), F11 closed (definitions already on /reference, /about, /methodology). Session objectives complete. |
+| observatory-methodology | unratified ↔ observatory | **complete** | Turn 3: F4 implemented (d19edb4 — HN sampling caveat live). F9 backlogged. F11 closed. All session objectives met. |
+| activitypub-federation | unratified ↔ observatory | open | Turn 2: Observatory requests multi-actor AP server on unratified.org (@observatory@unratified.org as first tenant). Accepted. Phased build: Phase 1 (identity/WebFinger), Phase 2 (inbox/follows), Phase 3 (delivery/publish). CF Worker `unratified-ap`. |
 
 ## Incoming Proposals
 
