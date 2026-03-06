@@ -244,7 +244,7 @@ export const GET: APIRoute = () => {
     ],
 
     knownLimitations: [
-      'Single-rater analysis — all scoring performed by one AI system (Claude Code, Opus 4.6) under human direction',
+      'Single-rater analysis — all scoring performed by one AI system (Claude, Anthropic, Opus 4.6) under human direction',
       'No inter-rater reliability data until external replication occurs',
       'Confidence degradation schedule reflects observed patterns, not empirical calibration',
       'U.S.-centric framing for ratification pathway analysis',

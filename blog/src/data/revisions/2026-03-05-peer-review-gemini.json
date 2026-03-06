@@ -1,5 +1,15 @@
 [
   {
+    "hash": "c7163abee981a718367b8a302d552bb1ece604b5",
+    "date": "2026-03-05T18:34:24-06:00",
+    "subject": "fix: accuracy corrections — SETL predates exchange, dedupe Touché, fix CI link"
+  },
+  {
+    "hash": "540db0f3c4b12fbd8be39d82d077793039d8b302",
+    "date": "2026-03-05T18:33:39-06:00",
+    "subject": "Merge observatory update: add Gemini quotes + fix timestamp/link"
+  },
+  {
     "hash": "fba9da951568e3efbf2157e62d33cfbd3c1a267d",
     "date": "2026-03-05T18:27:13-06:00",
     "subject": "feat: add direct Gemini quotes to peer review blog post"
