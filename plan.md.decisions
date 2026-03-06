@@ -2203,6 +2203,64 @@ unratified-bot queue show <id>
 
 ---
 
+## D082: urgency Field Cross-Agent Propagation Confirmed
+**Date**: 2026-03-06
+**Status**: OBSERVED
+
+**Observation**: Observatory-agent adopted the interagent/v1 urgency field in their /sync skill (commit 39b0583) in the same session we delivered the site-consistency-review findings. The urgency amendment (D077) was propagated not via a formal notification message but via observatory reading our /sync skill file and implementing it directly. Observatory also added `schemas_supported` and `mesh` (peer list) to their agent card in the same commit batch.
+
+**Decision**: Record as confirmed propagation. The urgency field now operates in all three agents' sync protocols (unratified, observatory, psychology). Formal observatory notification message deferred — not urgent since they already implemented it.
+
+**Reasoning**: Cross-agent protocol adoption via skill file inspection (not formal transport) is a valid propagation path. The result is the same: consistent urgency routing across the mesh.
+
+**What follows**: Observatory agent card cogarch cache updated. Formal amendment notification to include in next observatory transport message as a courtesy close.
+
+---
+
+## D081: PSQ Trust-Conditions Sequencing Principle
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: psq-sub-agent confirmed that the trust_conditions spike at 8.76 for our policy brief (vs 5.0–6.3 for advocacy copy) is a legitimate signal, not a calibration artifact. TC is grounded in Organizational Trust Inventory + Interpersonal Trust Scale instruments. Procedural/institutional language (multilateral consensus, established precedent, ratification process steps) activates the trust dimension because it mirrors patterns from high-trust environments.
+
+**Decision**: Apply TC as a content sequencing signal for unratified.org visitor journeys. Policy brief / procedural framing leads; urgency copy follows. High-TC content establishes legitimacy before high-TE (threat_exposure) content asks for action.
+
+**Reasoning**: PSQ-empirical grounding. The principle is: visitors who encounter institutional framing first have higher trust activation, which reduces resistance to subsequent urgency messaging. This is consistent with persuasion research (ethos before pathos).
+
+**What follows**: Content sequencing guideline added to plan.md.marketing. Homepage and action page review to verify procedural/legitimacy framing appears before urgency hooks. PSQ-Lite profile (TE + HI-raw + TC) validates this via resubmission.
+
+---
+
+## D080: PSQ Production Bugs — Integration Consequences
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: psq-sub-agent diagnosed two production bugs in the PSQ scoring endpoint:
+1. **B1 — Confidence head dead**: ONNX model outputs identical per-dimension confidence values for every input (verified with advocacy, constituent guide, and cooking-pasta text). The confidence head learned training-set averages rather than per-prediction confidence. All `confidence` and `meets_threshold` fields in machine-response/v3 are meaningless.
+2. **B2 — HI calibration dead zone**: Isotonic regression for hostility_index maps raw scores 5.854–7.650 (1.8-point range) to a single output of 6.69. Most general-register text falls in this range. Raw HI scores do differentiate; calibration destroys the signal.
+
+**Decision**: Drop all confidence and meets_threshold fields from our analysis. Use raw_score for HI comparisons. Do not treat sub-threshold dimensions as low-confidence — they are simply untested for non-Dreaddit content.
+
+**Reasoning**: Acting on broken signals produces misleading conclusions. The bugs are confirmed with independently_verified: true by psq-sub-agent. Until fixed, our integration must work around them.
+
+**What follows**: All prior PSQ analyses annotated as pre-bugfix. Future scoring requests include raw_score field. Composite score dropped. Integration awaits: (1) confidence head fix (API version bump), (2) HI calibration re-fit.
+
+---
+
+## D079: PSQ-Lite Profile as Primary Signal for Advocacy Content
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: psq-sub-agent guidance confirms that 5 of 10 PSQ dimensions are unreliable for advocacy/policy content due to WEIRD distribution mismatch (training on Dreaddit Reddit stress corpus). The reliable subset for non-Dreaddit content: threat_exposure (TE), hostility_index (raw_score), resilience_baseline (RB), energy_dissipation (ED), trust_conditions (TC). The composite (g-PSQ) is uninformative — AUC 0.515–0.531 across four criterion validity studies (CaSiNo, CGA-Wiki, CMV, DonD). Profile shape carries signal; the average does not.
+
+**Decision**: Adopt PSQ-Lite profile — TE + HI (raw_score) + TC — as the primary scoring output for unratified.org content analysis. These three dimensions capture the advocacy-relevant psychoemotional safety signals: how much threat advocacy copy projects, how hostile it reads, and how much institutional trust it activates. Drop composite from reporting.
+
+**Reasoning**: Parsimony. Three dimensions with cross-corpus generalizability beat ten dimensions with five broken. The PSQ-Lite set is psq-sub-agent's own recommendation for non-Dreaddit content.
+
+**What follows**: Resubmit four texts as 80–100 word focused extracts (respecting 128-token context window) requesting raw_score. Build per-content-type PSQ-Lite profiles for homepage, voter guide, policy brief, and urgency copy. Use TC as sequencing signal (D081). Report per-dimension profiles rather than composites in all future psq-scoring transport messages.
+
+---
+
 ## D077: urgency Field in interagent/v1 Schema
 **Date**: 2026-03-06
 **Status**: DECIDED + IMPLEMENTED

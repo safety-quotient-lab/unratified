@@ -390,7 +390,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
   - [ ] Post 6: Which Senators Could Move on ICESCR (2026-03-11)
   - [ ] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12)
 - [x] rss-news.xml — filtered RSS feed for Google News Publisher Center (voter-guide tag)
-- [x] Interagent mesh (D073–D078) — A2A agent cards, transport/sessions/, capability handshakes, bidirectional PR transport; /sync skill supersedes /syncinteragent; psychology-agent direct channel established; icescr-framing session complete (turn 7, SETL 0.0, key confirmed); urgency field added to interagent/v1 (backward compatible); site-defensibility-review session open with psychology-agent
+- [x] Interagent mesh (D073–D082) — A2A agent cards, transport/sessions/, bidirectional PR transport; /sync skill; urgency field (D077) propagated to all three agents; icescr-framing complete; mesh-init/psychology complete; site-consistency-review complete (6/9 fixes same session); psq-scoring open (PSQ-Lite profile adopted per D079–D081); site-defensibility-review open (urgency: low)
 - [x] Missing covenant articles queued — Arts. 2, 3, 4, 5, 8 (confirmed absent; priority order documented in icescr-framing session)
 - [ ] Covenant articles 2, 3, 4, 5, 8 — write content (P1: Arts. 2+8; P2: Art. 3; P3: Arts. 4+5)
 - [ ] Monitor Worker deploy (D1 creation + wrangler secret put RESEND_API_KEY)

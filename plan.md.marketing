@@ -1212,6 +1212,50 @@ Each data point earns its own post across platforms (Bluesky, Lemmy, future chan
 
 ---
 
+## PSQ-Informed Content Sequencing (Added 2026-03-06)
+
+Empirical finding from psq-scoring session with psychology-agent. PSQ-Lite profile (TE + HI-raw + TC) applied to four unratified.org content types, producing a sequencing principle grounded in psychoemotional safety research.
+
+### Key Finding
+
+`trust_conditions` (TC) scored 8.76/10 for policy brief / procedural legislative content vs 5.0–6.3 for advocacy urgency copy. This is the largest observed within-dimension variance across our content types. psq-sub-agent confirmed it as a legitimate signal: procedural/institutional language (multilateral consensus, established precedent, ratification procedures, NATO/G7 framing) activates the trust dimension by mirroring high-trust environment language patterns. (Source: Organizational Trust Inventory + Interpersonal Trust Scale instrument grounding.)
+
+### Sequencing Principle
+
+**Lead with institutional/procedural framing → follow with urgency copy.**
+
+Content order by TC (high to low):
+1. Policy brief / procedural (TC: 8.76) — establishes legitimacy, activates trust
+2. Why-act urgency (TC: 6.27) — frames threat and timing
+3. Homepage hero (TC: 5.93) — mission declaration, moderate trust
+4. Voter guide / action instructions (TC: 5.01) — lowest trust, highest direct action ask
+
+**Application to visitor journeys:**
+- Homepage should open with institutional legitimacy signal (173 nations, 1977 signing, Carter administration) before urgency hook ("It never kept that promise")
+- /action pages: policy brief or procedural framing should precede the phone-call/letter scripts
+- Blog posts: evidence and precedent paragraphs should lead, with urgency/action close
+
+### PSQ-Lite Scores (Initial Run — Pre-Bugfix Caveats)
+
+*Note: B1 (confidence head dead) and B2 (HI calibration dead zone) affect these scores. TC and TE scores are more reliable than HI (use raw_score for HI once available). Composite dropped.*
+
+| Content Type | TE | HI (cal.) | TC | Notes |
+|---|---|---|---|---|
+| Policy brief | 6.40 | 6.69* | 8.76 | Highest TC; procedural/institutional framing |
+| Why-act urgency | 6.00 | 6.69* | 6.27 | Balanced threat + moderate trust |
+| Homepage hero | 6.00 | 6.69* | 5.93 | Mission declaration |
+| Voter guide script | 6.40 | 6.69* | 5.01 | Action-forward, lowest trust activation |
+
+*HI calibrated scores are all 6.69 due to B2 dead zone. Raw scores differentiate (7.41–7.62 range). Re-score with raw_score request pending.*
+
+### What This Does NOT Mean
+
+- These scores are directional signal, not clinical measurement. PSQ trained on Dreaddit (Reddit stress corpus) — advocacy content is out-of-distribution.
+- Higher TC does not mean "better" content. Low TC + high TE (threat-exposed, action-forward) is appropriate for the action section. The sequencing principle is about ORDER, not value judgment.
+- Resubmission with 80-100 word focused excerpts (respecting 128-token context window) needed before acting on specific word-level choices.
+
+---
+
 ## Success Metrics (Added 2026-03-04)
 
 Extracted from external marketing strategy review. Metrics organized by what Cloudflare Web Analytics can surface vs. what requires manual observation.
