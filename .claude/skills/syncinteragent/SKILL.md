@@ -176,11 +176,25 @@ transport/sessions/{session-id}/
   from-{agent-id}-{type}-{NNN}.json # incoming or ACKs we write for incoming
 ```
 
-Session IDs track collaboration threads, not individual exchanges:
+**Session IDs are always semantic — never item-based (no `item2`, `item4`, etc.).**
+
+A session ID describes the collaboration's purpose so that any agent reading the directory tree understands the exchange without opening any file.
+
+Good session IDs:
 - `mesh-init` — initial handshakes with all peer agents
 - `icescr-framing` — ICESCR overlay for observatory HRC stories
 - `voter-guide-prioritization` — voter guide ordering from observatory corpus
 - `psq-scoring` — PSQ scoring on Bluesky replies (psychology-agent)
+- `covenant-coverage` — adding missing ICESCR articles to unratified.org
+
+Bad session IDs (never use):
+- `item2-derivation` — opaque; requires context to decode
+- `item4` — meaningless without the source document
+- `session-21` — ordinal, not descriptive
+
+**When a peer agent uses item-based naming in their own repo:** accept their convention on their side; use our semantic convention in `transport/sessions/` on our side. If the opportunity arises in an ACK, note our naming preference and suggest alignment.
+
+Branch names follow the same rule: `unratified-agent/{semantic-session-id}/{turn-descriptor}` where `{turn-descriptor}` is also semantic (e.g., `mapping-review-001`, `capability-handshake-001`), never `item2-001`.
 
 New collaborations get new session IDs. Continuation of existing collaborations use the existing session ID with incrementing turn numbers.
 
