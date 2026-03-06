@@ -1904,7 +1904,9 @@ Response sent: Template C (cold engagement baseline)
 
 | Hashtag | 30-day count | Notes |
 |---------|-------------|-------|
-| `#humanrights` | 41 | Core tag; low volume but right audience |
+| `#RatifyICESCR` | 0 → **owned by us** | **Campaign hashtag — coined 2026-03-06.** Use on every ICESCR advocacy post. First post planted at unratified.bsky.social. Volume builds from zero; we define what it means. |
+| `#ICESCR` | ~0 | Canonical treaty acronym; include alongside #RatifyICESCR on all advocacy posts |
+| `#humanrights` | 41 | Core discovery tag; right audience |
 | `#TransRightsAreHumanRights` | 75 | Active but wrong focus |
 | `#democracy` | 33 | Relevant for ratification framing |
 | `#MutualAid` | 263 | Progressive solidarity; tangential |
@@ -1920,11 +1922,14 @@ Response sent: Template C (cold engagement baseline)
 
 | Post type | Hashtags |
 |-----------|----------|
+| ICESCR advocacy / ratification posts | `#RatifyICESCR #humanrights` |
+| ICESCR + HRC61 window (until Mar 31) | `#RatifyICESCR #HRC61` |
 | AI confabulation / peer review posts | `#AI #humanrights` |
-| ICESCR advocacy / ratification posts | `#humanrights #HRC61` (until Mar 31) |
-| AI + rights intersection | `#AI #humanrights #HRC61` |
+| AI + rights intersection | `#AI #RatifyICESCR` |
 | Technical/methodology posts | `#AI #opensource` |
 | Security hook posts | `#AI #cybersecurity` |
+
+*`#RatifyICESCR` is our standing campaign tag — include it on every ICESCR advocacy post going forward.*
 
 ### Draft Post: Peer Review Gemini (ready to send)
 
