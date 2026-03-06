@@ -1,4 +1,12 @@
-# /syncinteragent — Inter-Agent Mesh Synchronization
+# /syncinteragent — SUPERSEDED by /sync
+
+> **This skill has been superseded by `/sync`** (`.claude/skills/sync/SKILL.md`).
+> Use `/sync` for all future inter-agent mesh synchronization.
+> This file remains for historical reference only.
+
+---
+
+# /syncinteragent — Inter-Agent Mesh Synchronization (legacy)
 
 Check all peer agent channels for incoming messages, merge accepted PRs,
 write ACKs, update session state, and report what changed.
