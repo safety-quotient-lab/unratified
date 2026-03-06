@@ -410,7 +410,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
 
 Visibility — SEO & Structured Data (from D042 Tier 1):
-- [ ] G-01: Google Search Console — verify site, submit sitemaps for all subdomains
+- [x] G-01: Google Search Console — verify site, submit sitemaps for all subdomains (Mar 6)
 - [x] G-02: FAQPage schema on /how page (6 Q&As — ratification requirements, U.S. non-ratification, country count, protected rights, composite strategy, AI connection)
 - [x] G-03: OpenGraph meta tags — og:title, og:description, og:image (dynamic Unsplash via /og-image), og:locale on both sites
 - [x] G-04: Twitter Card meta tags — summary_large_image, twitter:image, twitter:image:alt on both sites
