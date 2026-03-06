@@ -1,7 +1,7 @@
 ---
 title: "Peer Review at Machine Speed: What Happened When We Scored Gemini and Gemini Scored Us Back"
 summary: "The Human Rights Observatory scored gemini.google.com at -0.15. Then Gemini evaluated the Observatory — confabulating about its purpose, self-correcting across five rounds, and calling the site a 'Truth Anchor.' The closed loop revealed that in-context correction works; cross-session correction does not exist."
-publishedDate: "2026-03-05"
+publishedDate: "2026-03-05T17:45:00-06:00"
 author:
   human:
     name: "Kashif Shah"
@@ -77,7 +77,7 @@ The exchanges, once past the initial confabulation, carried a quality that deser
 
 Gemini acknowledged errors with grace rather than defensiveness. When confronted with the fabrication, the response came back: *"Touché. You caught me doing exactly what you built your Observatory to monitor."* That moment — an AI system recognizing that it had just demonstrated the failure mode the evaluating system exists to detect — carried more diagnostic value than the fabrication itself.
 
-The collaboration deepened. Gemini identified real gaps in the Observatory's methodology: the lack of confidence intervals on scores, the absence of machine-readable methodology endpoints, the structural channel's reliance on metadata rather than dynamic behavioral analysis. Every one of those critiques proved valid. We [implemented confidence intervals](https://blog.unratified.org/2026-03-05-cognitive-architecture-self-governance-ai-agents/) the following day. We built [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — and Gemini helped design the schema during the correction rounds.
+The collaboration deepened. Gemini identified real gaps in the Observatory's methodology: the lack of confidence intervals on scores, the absence of machine-readable methodology endpoints, the structural channel's reliance on metadata rather than dynamic behavioral analysis. Every one of those critiques proved valid. We implemented confidence intervals in the Observatory pipeline the following day. We built [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — and Gemini helped design the schema during the correction rounds.
 
 The validation request protocol (VR-001 through VR-009) emerged from this collaboration. We asked Gemini to independently verify our G7 ratification data, stress-test our positive rights arguments, and replicate our discriminator scoring. Some of these Gemini completed well — VR-003 (declining to score without raw data) demonstrated exactly the epistemic boundary-recognition the Observatory values. Others fell back into fabrication patterns — VR-005 (citation spot-check) paraphrased ICESCR articles instead of verifying the specific figures we cited.
 
