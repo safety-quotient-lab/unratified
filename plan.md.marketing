@@ -1814,6 +1814,140 @@ All posts lead with the "yes please" experiment — the strongest hook across ev
 
 ---
 
+## Voter Guide Blog Series (blog.unratified.org)
+
+*Added 2026-03-06. Series complete as of 2026-03-06 (Posts 4–7 written). Deploy Mar 9–12.*
+
+### Series Overview
+
+Seven posts covering ICESCR ratification for voters, families, and communities. The `voter-guide` tag feeds `rss-news.xml` (Google News Publisher Center). All posts link forward and backward within the series.
+
+### Status
+
+| Post | Date | Title | Status |
+|------|------|-------|--------|
+| 1 | Mar 6 | The Economic Rights Treaty: What 173 Countries Agreed To | **live** |
+| 2 | Mar 7 | AI Job Displacement and the Treaty Gap | **live** |
+| 3 | Mar 8 | How to Contact Your Senator (scripts, timing, follow-up) | **live** |
+| 4 | Mar 9 | Your Rights Inventory: Job, Housing, Health, Education | **written — deploy Mar 9** |
+| 5 | Mar 10 | What ICESCR Ratification Would Actually Change | **written — deploy Mar 10** |
+| 6 | Mar 11 | Which Senators Could Move — and How to Read the Political Map | **written — deploy Mar 11** |
+| 7 | Mar 12 | The 50-Year Story: Why the U.S. Signed and Never Ratified | **written — deploy Mar 12** |
+
+### Google News Angle
+
+`rss-news.xml` serves the `voter-guide` tag to Google News Publisher Center. All seven posts carry the `voter-guide` tag. Consistent publication cadence (one post per day, 09:00 CT) signals reliable feed to Google's crawler. Submit `rss-news.xml` to Google News Publisher Center before Mar 9 deployment if not already done.
+
+### Audience Alignment
+
+| Post | Primary persona | Secondary persona |
+|------|----------------|------------------|
+| Post 1 | Voter (orientation) | Educator |
+| Post 2 | Voter (AI concern → treaty gap) | Developer, Researcher |
+| Post 3 | Voter (action) | Organizer |
+| Post 4 | Voter (rights inventory) | Educator, Legislative staff |
+| Post 5 | Voter + Legislative staff (honest mechanics) | Researcher |
+| Post 6 | Voter + Legislative staff (political map) | Organizer |
+| Post 7 | Voter (historical framing) | Educator, Researcher |
+
+### Bluesky Promotion — Posts 4–7
+
+One Bluesky post per article on publication day. Lead with the post's sharpest finding; land with the link.
+
+**Post 4 promo (Mar 9) — Rights Inventory**
+
+> Most Americans already believe in the rights the ICESCR protects.
+>
+> Work. Housing. Healthcare. Education.
+>
+> This post maps each treaty article to the everyday economic concern it covers — and explains what binding accountability for those rights would look like in practice.
+>
+> blog.unratified.org/2026-03-09-voter-guide-rights-inventory/
+>
+> `#RatifyICESCR #humanrights`
+
+*Hook: rights Americans already hold → treaty makes them accountable.*
+
+---
+
+**Post 5 promo (Mar 10) — What Ratification Changes**
+
+> What would actually change if the U.S. ratified the ICESCR?
+>
+> Not utopia. Not new domestic rights enforceable in court. Not mandatory spending.
+>
+> What it does create: formal reporting obligations, a shadow report forum for civil society, and a progressive realization standard that budget cuts must justify.
+>
+> blog.unratified.org/2026-03-10-voter-guide-what-ratification-changes/
+>
+> `#RatifyICESCR #humanrights`
+
+*Hook: honest limits first → credibility. Then the real accountability machinery.*
+
+---
+
+**Post 6 promo (Mar 11) — Which Senators Could Move**
+
+> Ratification requires 67 Senate votes. Most senators have no position on the ICESCR.
+>
+> "No position" isn't opposition. It's the absence of constituent pressure.
+>
+> This post explains how to read the political map — and why asking "what is your position?" matters more than you'd think.
+>
+> blog.unratified.org/2026-03-11-voter-guide-which-senators-could-move/
+>
+> `#RatifyICESCR #humanrights`
+
+*Hook: no position = opening, not wall. Empowers instead of discourages.*
+
+---
+
+**Post 7 promo (Mar 12) — The 50-Year Story**
+
+> Carter signed the ICESCR in 1977.
+>
+> The Senate has never voted on it.
+>
+> Not because ratification is legally impossible — because no chair of the Senate Foreign Relations Committee has ever scheduled a hearing.
+>
+> 49 years of active political choice, not passive oversight.
+>
+> blog.unratified.org/2026-03-12-voter-guide-fifty-year-story/
+>
+> `#RatifyICESCR #humanrights #HRC61`
+
+*Hook: reframes inaction as choice. Empowers constituent contact as the mechanism to end it.*
+
+### Cross-Platform Amplification
+
+After each post goes live, use the Bluesky promo as the seed post and adapt for:
+
+- **Mastodon**: Expand to 500 chars; add institutional actors (SFRC, UN CESCR, treaty orgs) as context
+- **Lemmy c/humanrights**: Share as link post with 2-3 paragraph summary of the post's key finding
+- **Reddit r/HumanRights**: Post 5 (what ratification changes) and Post 7 (history) have the strongest standalone narrative for Reddit's longer-form audience
+
+### Series Completion Hook (after Post 7)
+
+Once all seven posts live, draft a Bluesky thread collecting the series:
+
+> The Voter Guide to ICESCR ratification — all seven posts.
+>
+> 1. The Economic Rights Treaty
+> 2. AI Job Displacement and the Treaty Gap
+> 3. How to Contact Your Senator
+> 4. Your Rights Inventory
+> 5. What Ratification Would Actually Change
+> 6. Which Senators Could Move
+> 7. The 50-Year Story
+>
+> blog.unratified.org
+>
+> `#RatifyICESCR #humanrights`
+
+*Schedule for Mar 13 or after all seven posts confirm live in Cloudflare Pages.*
+
+---
+
 ## Bluesky Reply Templates — Wage / Economic Policy Posts
 
 **Context**: For engaging political and policy accounts posting about wage increases, salary negotiations, minimum wage, labor rights. Bridges the wage conversation to ICESCR Article 7 without partisan framing.

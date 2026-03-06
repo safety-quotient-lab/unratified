@@ -385,10 +385,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
   - [x] Post 1: What Is the ICESCR? (2026-03-06)
   - [x] Post 2: AI Job Displacement and the Treaty Gap (2026-03-07)
   - [x] Post 3: How to Contact Your Senator About ICESCR (2026-03-08)
-  - [ ] Post 4: Rights Inventory — Job, Health, Housing, Education (2026-03-09)
-  - [ ] Post 5: What Ratification Would Actually Change (2026-03-10)
-  - [ ] Post 6: Which Senators Could Move on ICESCR (2026-03-11)
-  - [ ] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12)
+  - [x] Post 4: Rights Inventory — Job, Health, Housing, Education (2026-03-09) — written
+  - [x] Post 5: What Ratification Would Actually Change (2026-03-10) — written
+  - [x] Post 6: Which Senators Could Move on ICESCR (2026-03-11) — written
+  - [x] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12) — written
 - [x] rss-news.xml — filtered RSS feed for Google News Publisher Center (voter-guide tag)
 - [x] Interagent mesh (D073–D082) — A2A agent cards, transport/sessions/, bidirectional PR transport; /sync skill; urgency field (D077) propagated to all three agents; icescr-framing complete; mesh-init/psychology complete; site-consistency-review complete (6/9 fixes same session); psq-scoring open (PSQ-Lite profile adopted per D079–D081); site-defensibility-review open (urgency: low)
 - [x] Missing covenant articles queued — Arts. 2, 3, 4, 5, 8 (confirmed absent; priority order documented in icescr-framing session)
