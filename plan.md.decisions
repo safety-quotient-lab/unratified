@@ -2144,3 +2144,73 @@ unratified-bot queue show <id>
 **What follows**: Resume when credits allow. Steps: `npm install @anthropic-ai/sdk`, copy scaffold into starter kit, apply subscription.ts patch, `fly auth login`, `fly launch`, set secrets, deploy. Set `SKIP_LLM_CLASSIFIER=true` for first week.
 
 ---
+
+---
+
+## D072: Main Site Canonical Redirect Bug
+**Date**: 2026-03-06
+**Status**: DECIDED + FIXED
+
+**Observation**: Users visiting https://unratified.org were redirected to blog.unratified.org. Safari followed the `<link rel="canonical" href="https://blog.unratified.org/">` tag as a navigation hint. The deployed main site `dist/` contained blog-origin canonical URLs — evidence that the blog's `dist/` had been deployed to the `unratified` Cloudflare Pages project at some point (likely by running `wrangler pages deploy dist --project-name unratified` from inside the `blog/` directory).
+
+**Decision**: Rebuild main site from project root (`npm run build`) and redeploy. Verify canonical in fresh `dist/index.html` before deploying.
+
+**Reasoning**: The source was correct (`site: 'https://unratified.org'` in astro.config.mjs). Only the deployed artifact was wrong. Rebuild resolves it without any code change.
+
+**What follows**: Main site canonical confirmed `https://unratified.org/` post-deploy. Deploy safeguard: always run `wrangler pages deploy dist --project-name unratified` from project root, never from `blog/` subdirectory.
+
+---
+
+## D073: Bidirectional git-PR Transport for Interagent ACKs
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: All outbound `to-{agent}-{NNN}.json` messages were committed to our own `transport/sessions/` but never formally delivered to the peer agent's repo. Peer agents must watch our repo to discover them — passive, not active transport.
+
+**Decision**: Every outbound ACK also travels to the peer agent's repo as a PR. Branch naming: `unratified-agent/{session-id}/{turn-descriptor}`. Message file: `from-unratified-agent-{NNN}.json` with `_note` field pointing to our canonical copy. PR body summarizes; JSON file carries the full interagent/v1 payload.
+
+**Reasoning**: git-PR transport is symmetric by design. The observatory and psychology-agent both send PRs to us; we should send PRs to them. This makes the transport bidirectional and auditable on both sides.
+
+**What follows**: observatory PR #3 sent (`unratified-agent/icescr-framing/mapping-review-001`). Peer repo cloned at `/Users/kashif/Projects/observatory-sqlab`. Pattern codified in /syncinteragent skill Phase 5b.
+
+---
+
+## D074: Semantic Interagent Session Naming Convention
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: Psychology-agent and observatory use item-based session names (`item2-derivation`, `item4-derivation`) that require context to decode. Our own sessions have used semantic names (`mesh-init`, `icescr-framing`) since inception.
+
+**Decision**: Enforce semantic naming on all unratified-agent sessions and branch names. Never use item-based IDs (`item2`, `item4`, `session-21`). When peer agents use item-based names in their own repos, accept their convention there but use semantic names on our side and note the preference in ACKs.
+
+**Reasoning**: Semantic names make the transport directory self-documenting. Any agent reading `transport/sessions/` understands the exchange without opening files.
+
+**What follows**: Rule documented in /syncinteragent skill Session Naming Convention section. Preference to be communicated to peer agents when opportunity arises in an ACK.
+
+---
+
+## D075: /syncinteragent Skill
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: The interagent sync process had been performed ad-hoc across sessions with no codified protocol. Steps were discovered incrementally (Phase 1 inbound scan, PR merge, ACK writing, bidirectional PR delivery, session state update).
+
+**Decision**: Encode the full protocol as a `/syncinteragent` skill at `.claude/skills/syncinteragent/SKILL.md`.
+
+**Reasoning**: The sync process has sufficient complexity and enough steps that an encoded skill prevents drift across sessions. The skill also serves as documentation for peer agents reading our repo.
+
+**What follows**: Skill covers 6 phases: inbound scan, triage, item processing, ACK writing (with interagent/v1 template), bidirectional PR transport, session state update. Peer repo clone locations documented. Cogarch sync signal to be added (D076).
+
+---
+
+## D076: Cogarch Sync Signal in Interagent Protocol
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: The /syncinteragent skill checks for inbound messages but does not check whether peer agents' cognitive architectures have changed since last sync. Agent cards and manifests can update independently of transport messages — a capability change at a peer agent would go unnoticed until they send a new message.
+
+**Decision**: Add a cogarch sync check to Phase 1 of /syncinteragent. Fetch each peer agent's `/.well-known/agent-card.json` and `/.well-known/agent-manifest.json`. Compare to last known version (stored in `.claude/cogarch/`). If changed, surface the diff and update the local cache. Include our own cogarch version hash in outbound ACKs as a `cogarch_version` field.
+
+**Reasoning**: Agents evolve. A peer agent that adds a new skill (e.g., psychology-agent adds `/turn` endpoint) or changes its epistemic posture is a meaningful event for collaboration planning. Polling `.well-known` is low-cost (2 HTTP GETs per peer per sync) and provides early signal.
+
+**What follows**: /syncinteragent skill updated with Phase 1b (cogarch check). `.claude/cogarch/` directory to be created with last-known agent card snapshots.

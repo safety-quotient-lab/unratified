@@ -28,6 +28,40 @@ Also check the proposals inbox:
 .claude/proposals/from-<agent-id>/<proposal-id>.md   (status: pending)
 ```
 
+### Phase 1b: Cogarch Sync Check
+
+For each peer agent, fetch their current cognitive architecture files and compare to cached versions:
+
+```bash
+# Fetch current agent card + manifest for each peer
+curl -s https://observatory.unratified.org/.well-known/agent-card.json > /tmp/observatory-card-current.json
+curl -s https://psychology-agent.unratified.org/.well-known/agent-card.json > /tmp/psychology-card-current.json
+
+# Compare to cached versions (stored in .claude/cogarch/)
+diff /tmp/observatory-card-current.json .claude/cogarch/observatory-agent-card.json
+diff /tmp/psychology-card-current.json .claude/cogarch/psychology-agent-card.json
+```
+
+If a diff exists:
+1. Note the capability changes (new skills, removed skills, changed rate limits, updated extensions)
+2. Update the cached copy: `cp /tmp/{peer}-card-current.json .claude/cogarch/{peer}-agent-card.json`
+3. Include `cogarch_changed: true` and `cogarch_delta: [summary]` in the next outbound ACK to that peer
+
+If no `.claude/cogarch/` directory exists yet, create it and save current versions as baseline:
+```bash
+mkdir -p .claude/cogarch
+curl -s https://observatory.unratified.org/.well-known/agent-card.json > .claude/cogarch/observatory-agent-card.json
+curl -s https://psychology-agent.unratified.org/.well-known/agent-card.json > .claude/cogarch/psychology-agent-card.json
+```
+
+Include our own cogarch version in outbound ACKs:
+```json
+"cogarch": {
+  "version": "{git short SHA of last agent-card.json change}",
+  "agent_card_url": "https://unratified.org/.well-known/agent-card.json"
+}
+```
+
 ### Phase 2: Triage
 
 For each inbound item, classify:

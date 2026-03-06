@@ -1,0 +1,5 @@
+{
+  "_note": "psychology-agent has not yet published a .well-known/agent-card.json. No psychology-agent.unratified.org subdomain exists as of 2026-03-06. Agent card was hand-negotiated via transport/sessions/mesh-init/to-psychology-agent-001.json. Update this file when psychology-agent publishes their card.",
+  "_last_checked": "2026-03-06",
+  "_source": "github.com/safety-quotient-lab/psychology-agent — no .well-known directory found"
+}
