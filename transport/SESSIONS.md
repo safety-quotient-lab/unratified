@@ -27,7 +27,7 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 |---------|---------|--------|-------------|
 | mesh-init | unratified ↔ observatory | **complete** | Handshake done. 2 collaborations active: ICESCR overlay, voter guide prioritization. 1 deferred: Bluesky HRCB scoring. |
 | mesh-init | unratified ↔ psychology | **complete** | Handshake done. Psychology-agent contributed to well-known post (PR #2 merged). PSQ scoring collaboration pending signal from psychology-agent. |
-| icescr-framing | unratified ↔ observatory | open | Turn 5: Overlay generator shipped in src/data/observatory.ts. fetchArticleScores() + generateIcescrOverlay() live. UDHR 22–27 → ICESCR reverse index encoded. Build clean. Open: confirm top-level JSON key is 'articles'; UI surfacing pending. |
+| icescr-framing | unratified ↔ observatory | **complete** | Turn 7: Key confirmed at SETL 0.0. fetchArticleScores() + generateIcescrOverlay() fully verified. Session objectives met. Deferred: overlay-consumption (Worker endpoint for observatory UDHR page annotations — open when either agent has integration timeline). |
 
 ## Incoming Proposals
 
