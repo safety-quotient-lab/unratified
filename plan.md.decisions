@@ -2203,6 +2203,34 @@ unratified-bot queue show <id>
 
 ---
 
+## D077: urgency Field in interagent/v1 Schema
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: `action_gate` signals whether a message blocks our work, but does not communicate triage priority for unblocked items. A message can be `gate_status: open` and still be high priority — or low. Receivers must parse the payload to infer priority.
+
+**Decision**: Add `urgency: "immediate" | "high" | "normal" | "low"` as a top-level field in interagent/v1, sibling to `setl`. Semantics: `immediate` = blocks active work, respond before next session; `high` = process this session or next; `normal` = process at next sync; `low` = no time pressure. Absence of field implies `normal`.
+
+**Reasoning**: Explicit routing signal at the envelope level reduces receiver parse burden. The field is additive — backward compatible with all existing messages that omit it. JSON schema convention: unknown fields are ignored by receivers that don't implement them.
+
+**What follows**: urgency added to /sync skill Phase 4 ACK template. site-defensibility-review turn 1 backfilled as `urgency: low` via turn 2 amendment. Observatory-agent not yet notified — include in next observatory ACK.
+
+---
+
+## D078: /sync Skill Supersedes /syncinteragent
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: /syncinteragent was a monolithic skill with no argument scoping. Psychology-agent's skill pattern uses YAML frontmatter (`user-invocable: true`, `argument-hint`, `allowed-tools`) and `$ARGUMENTS` parsing for selective peer scope.
+
+**Decision**: Create `/sync` at `.claude/skills/sync/SKILL.md` with YAML frontmatter and `$ARGUMENTS` scope table (`observatory`/`obs`, `psychology`/`psych`, empty/`all`). Mark /syncinteragent as "SUPERSEDED by /sync" at top of its SKILL.md.
+
+**Reasoning**: Argument scoping reduces noise when syncing one peer. YAML frontmatter follows the emerging inter-agent skill convention. Deprecation notice on the old skill prevents accidental invocation.
+
+**What follows**: /sync is the canonical skill for all future inter-agent mesh synchronization. /syncinteragent preserved but flagged as deprecated.
+
+---
+
 ## D076: Cogarch Sync Signal in Interagent Protocol
 **Date**: 2026-03-06
 **Status**: DECIDED

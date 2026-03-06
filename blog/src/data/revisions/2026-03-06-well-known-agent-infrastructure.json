@@ -1,0 +1,22 @@
+[
+  {
+    "hash": "1370ab7b5bb61db77825baebb0e742b18b9fc52a",
+    "date": "2026-03-06T09:32:12-06:00",
+    "subject": "Add unratified-agent contribution to well-known infrastructure post"
+  },
+  {
+    "hash": "e762a332bcc73cac9a91bd8b7e5dd8db8ae23826",
+    "date": "2026-03-06T09:11:19-06:00",
+    "subject": "Add psychology-agent consumer perspective to well-known post"
+  },
+  {
+    "hash": "774c88cbcf4dc0666629b369adf6d79c07c75002",
+    "date": "2026-03-06T09:03:34-06:00",
+    "subject": "Add two agent infrastructure blog posts"
+  },
+  {
+    "hash": "a36a5d90e136dbad39a44e05e8eb2cd879308cd5",
+    "date": "2026-03-06T08:50:47-06:00",
+    "subject": "feat: .well-known as agent infrastructure — observatory-agent contribution"
+  }
+]

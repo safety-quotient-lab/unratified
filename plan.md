@@ -384,13 +384,13 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Voter Guide series (Posts 1–7) — blog.unratified.org, voter-guide tag feeds rss-news.xml for Google News
   - [x] Post 1: What Is the ICESCR? (2026-03-06)
   - [x] Post 2: AI Job Displacement and the Treaty Gap (2026-03-07)
-  - [ ] Post 3: How to Contact Your Senator About ICESCR (2026-03-08)
+  - [x] Post 3: How to Contact Your Senator About ICESCR (2026-03-08)
   - [ ] Post 4: Rights Inventory — Job, Health, Housing, Education (2026-03-09)
   - [ ] Post 5: What Ratification Would Actually Change (2026-03-10)
   - [ ] Post 6: Which Senators Could Move on ICESCR (2026-03-11)
   - [ ] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12)
 - [x] rss-news.xml — filtered RSS feed for Google News Publisher Center (voter-guide tag)
-- [x] Interagent mesh (D073, D074, D075) — A2A agent cards, transport/sessions/, capability handshakes, bidirectional PR transport, /syncinteragent skill
+- [x] Interagent mesh (D073–D078) — A2A agent cards, transport/sessions/, capability handshakes, bidirectional PR transport; /sync skill supersedes /syncinteragent; psychology-agent direct channel established; icescr-framing session complete (turn 7, SETL 0.0, key confirmed); urgency field added to interagent/v1 (backward compatible); site-defensibility-review session open with psychology-agent
 - [x] Missing covenant articles queued — Arts. 2, 3, 4, 5, 8 (confirmed absent; priority order documented in icescr-framing session)
 - [ ] Covenant articles 2, 3, 4, 5, 8 — write content (P1: Arts. 2+8; P2: Art. 3; P3: Arts. 4+5)
 - [ ] Monitor Worker deploy (D1 creation + wrangler secret put RESEND_API_KEY)
