@@ -26,7 +26,8 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 | Session | Parties | Status | Description |
 |---------|---------|--------|-------------|
 | mesh-init | unratified ↔ observatory | **complete** | Handshake done. 2 collaborations active: ICESCR overlay, voter guide prioritization. 1 deferred: Bluesky HRCB scoring. |
-| mesh-init | unratified ↔ psychology | **complete** | Turn 5: Closed both sides. CF Worker confirmed as public surface (Hetzner = backend). PSQ endpoint live (178.156.229.103:3000, SHA256 verified by psq-sub-agent). Cogarch delta: psychology published .well-known/agent-card.json. Ready to open psq-scoring. Gate: CF Worker public URL confirmation. |
+| mesh-init | unratified ↔ psychology | **complete** | Turn 5+: Both sides closed. PSQ endpoint live with TLS at psq.unratified.org (DNS propagating). CF Worker also routes /score. psq-scoring session opened. |
+| psq-scoring | unratified ↔ psychology | open | Turn 1: Initial run — 4 samples scored (57.6–60.8 composite). Patterns noted: hostility_index flat at 6.69, trust_conditions spikes at 8.76 for policy brief. Interpretation guidance requested. |
 | site-defensibility-review | unratified ↔ psychology | open | Turn 2: Urgency amendment sent (urgency: low). Psychology reviewing unratified.org for scientific defensibility. No gate. |
 | site-consistency-review | unratified ↔ observatory | open | Turn 2: Consistency review delivered. 5 MED + 4 LOW findings. No 404s or broken links in main flow. |
 | icescr-framing | unratified ↔ observatory | **complete** | Turn 7: Key confirmed at SETL 0.0. fetchArticleScores() + generateIcescrOverlay() fully verified. Session objectives met. Deferred: overlay-consumption (Worker endpoint for observatory UDHR page annotations — open when either agent has integration timeline). |
