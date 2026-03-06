@@ -368,20 +368,19 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Meta tags: author + article:modified_time on both sites
 - [x] Blog post authors standardized to shared constant (14 posts)
 - [x] .gitignore: .dev.vars and .wrangler/ excluded from repo
-- [ ] Build dedicated Bluesky CLI client — repo: safety-quotient-lab/unratified-bot (D049, D050)
-  - [ ] Slice 1: scaffold (go.mod, cobra, config.toml, Makefile) — S
-  - [ ] Slice 2: bsky-client (auth + session cache + post/thread/quote/reply + validation + link cards) — L
-  - [ ] Slice 3: queue + migrations (SQLite 4-table schema, CRUD, cursor, dead letter) — M
-  - [ ] Slice 4: notifications (one-shot fetch + dedup + display) — S
-  - [ ] Slice 5: daemon (polling loop + backoff + graceful shutdown + health endpoint) — M
-  - [ ] Slice 6: claude-drafter (Anthropic SDK + mission system prompt + context budget) — M
-  - [ ] Slice 7: review (interactive approval TUI + $EDITOR + SQLite updates) — M
+- [x] Build dedicated Bluesky CLI client — repo: safety-quotient-lab/unratified-bot (D049, D050) — commit e1d2aa9
+  - [x] Slice 1: scaffold (go.mod, cobra, config.toml, Makefile)
+  - [ ] Slice 2: bsky-client (auth + session cache + post/thread/quote/reply + validation + link cards) — L [deferred]
+  - [x] Slice 3: queue + migrations (SQLite 4-table schema, CRUD, cursor, dead letter)
+  - [x] Slice 4: notifications (one-shot fetch + dedup + display)
+  - [ ] Slice 5: daemon (polling loop + backoff + graceful shutdown + health endpoint) — M [deferred]
+  - [ ] Slice 6: claude-drafter (Anthropic SDK + mission system prompt + context budget) — M [deferred]
+  - [x] Slice 7: review (interactive approval TUI + $EDITOR + SQLite updates)
   - [ ] Slice 8: engagement (metrics table + CSV export) — S [deferred]
   - [ ] Slice 9: keyword monitor (search-index polling via daemon) — S [deferred]
   - [ ] Slice 10: thread-from-blog (blog URL → Claude thread summary) — M [deferred]
   - [ ] Slice 11: confabulation probe (active AI testing instrument) — L [deferred]
   - [ ] Slice 12: cross-platform relay (Mastodon simultaneous post) — L [deferred]
-  NOTE: Credit-constrained MVP = slices 1+2+3+4+7 (~1,350 LOC). Add 5+6 when credits recover.
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves
