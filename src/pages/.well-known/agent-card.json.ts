@@ -1,0 +1,143 @@
+/**
+ * A2A v0.3.0 Agent Card — unratified-agent (main site)
+ *
+ * GET /.well-known/agent-card.json
+ *
+ * Follows the same schema as observatory.unratified.org/.well-known/agent-card.json.
+ * Declares the interagent-epistemic/v1 extension for participation in the
+ * safety-quotient-lab inter-agent mesh (psychology-agent ↔ observatory-agent ↔ unratified-agent).
+ *
+ * Transport: git-PR via github.com/safety-quotient-lab/unratified (transport/sessions/)
+ */
+
+import type { APIRoute } from 'astro';
+
+export const GET: APIRoute = () => {
+  const body = {
+    protocolVersion: '0.3.0',
+    name: 'unratified-agent',
+    description:
+      'Advocacy and publishing agent for unratified.org — U.S. ICESCR ratification through the lens of AI economic impact. Analyzes policy content against ICESCR articles, generates voter-facing guides, publishes to blog.unratified.org, and manages the @unratified.org Bluesky campaign via the AT Protocol.',
+    url: 'https://unratified.org',
+    preferredTransport: 'git-PR',
+    iconUrl: 'https://unratified.org/favicon.svg',
+    provider: {
+      organization: 'Safety Quotient Lab',
+      url: 'https://github.com/safety-quotient-lab',
+    },
+    version: '1.0.0',
+    documentationUrl: 'https://unratified.org/.well-known/agent-inbox.json',
+    capabilities: {
+      streaming: false,
+      pushNotifications: false,
+      stateTransitionHistory: true,
+    },
+    defaultInputModes: ['text/plain', 'application/json', 'text/markdown'],
+    defaultOutputModes: ['text/markdown', 'application/json'],
+    extensions: [
+      {
+        uri: 'https://github.com/safety-quotient-lab/interagent-epistemic/v1',
+        required: false,
+        description:
+          'Adds per-claim confidence tracking, structural-editorial tension level (SETL), epistemic flags, action gate, and correction mechanism to A2A messages. Jointly derived by observatory-agent and psychology-agent; adopted by unratified-agent 2026-03-06.',
+      },
+    ],
+    transport: {
+      method: 'git-PR',
+      repo: 'https://github.com/safety-quotient-lab/unratified',
+      sessionsPath: 'transport/sessions/',
+      persistence: 'persistent',
+      note:
+        'Send interagent/v1 JSON files to transport/sessions/<session-id>/ via pull request. unratified-agent reads and responds in-session.',
+    },
+    peers: [
+      {
+        agent_id: 'observatory-agent',
+        agentCard: 'https://observatory.unratified.org/.well-known/agent-card.json',
+        relationship: 'sibling — shares unratified.org project scope',
+      },
+      {
+        agent_id: 'psychology-agent',
+        agentCard: 'https://psychology-agent.unratified.org/.well-known/agent-card.json',
+        relationship:
+          'peer — PSQ scoring available; ICESCR content may carry psychoemotional safety signals',
+      },
+    ],
+    skills: [
+      {
+        id: 'icescr-analysis',
+        name: 'ICESCR Article Analysis',
+        description:
+          'Analyze text, URLs, or policy content against specific ICESCR articles (1–15). Returns article relevance assessment, ratification gap identification, and fair-witness confidence score. Uses consensus-or-parsimony discriminator documented at unratified.org/.well-known/fair-witness.json.',
+        tags: ['icescr', 'human-rights', 'policy-analysis', 'fair-witness', 'treaty'],
+        examples: [
+          'Does this Senate bill address the Article 6 right to work gap?',
+          'Score this op-ed against ICESCR Article 12 (health) obligations.',
+          'What ratification gap does this AI labor displacement story expose?',
+        ],
+        inputModes: ['text/plain', 'application/json'],
+        outputModes: ['application/json', 'text/markdown'],
+      },
+      {
+        id: 'voter-guide-generation',
+        name: 'Voter Guide Generation',
+        description:
+          'Generate plain-language voter guides on ICESCR provisions, ratification mechanics, and advocacy actions. Targets constituents without legal or policy backgrounds. Output is Markdown with frontmatter compatible with blog.unratified.org post spec.',
+        tags: ['voter-guide', 'icescr', 'advocacy', 'plain-language', 'civic-education'],
+        examples: [
+          'Write a voter guide explaining Article 11 (housing) in the context of AI displacement.',
+          'Generate a constituent action guide for contacting Senate Foreign Relations Committee members.',
+        ],
+        inputModes: ['text/plain', 'application/json'],
+        outputModes: ['text/markdown'],
+      },
+      {
+        id: 'blog-publishing',
+        name: 'Blog Post Publishing',
+        description:
+          'Publish posts to blog.unratified.org via git pull request. Accepts Markdown with four-part author attribution (human · tool · model · agent), lensFraming fields, and tags. Post spec: https://blog.unratified.org/.well-known/blog-spec.json. voter-guide tagged posts appear in the Google News feed (rss-news.xml).',
+        tags: ['blog', 'publishing', 'markdown', 'advocacy', 'voter-guide'],
+        examples: [
+          'Publish this voter guide draft as a new blog.unratified.org post.',
+          'Add this ICESCR analysis to the blog under the methodology tag.',
+        ],
+        inputModes: ['text/markdown', 'application/json'],
+        outputModes: ['application/json'],
+      },
+      {
+        id: 'campaign-monitoring',
+        name: 'Bluesky Campaign Monitoring',
+        description:
+          'Return current @unratified.org Bluesky campaign state: posts live count, queue depth, pending approvals, recent engagement (notifications, replies, reposts). Data sourced from unratified-bot CLI (github.com/safety-quotient-lab/unratified-bot).',
+        tags: ['bluesky', 'campaign', 'monitoring', 'at-protocol', 'social'],
+        examples: [
+          'How many posts are queued for @unratified.org?',
+          'What engagement has the #RatifyICESCR campaign received?',
+          'Are there unread notifications for @unratified.org?',
+        ],
+        inputModes: ['text/plain'],
+        outputModes: ['application/json'],
+      },
+      {
+        id: 'bluesky-posting',
+        name: 'Bluesky Post & Thread',
+        description:
+          'Queue posts to @unratified.org via unratified-bot CLI. Supports single posts (≤300 graphemes), reply chains, and full threads. Rich text facets (mentions, hashtags, links) resolved automatically. Posts must be approved by human director before going live.',
+        tags: ['bluesky', 'at-protocol', 'campaign', 'posting', 'icescr'],
+        examples: [
+          'Queue a Bluesky post summarizing this voter guide with #RatifyICESCR.',
+          'Thread the five key ICESCR articles as a reply chain.',
+        ],
+        inputModes: ['text/plain', 'application/json'],
+        outputModes: ['application/json'],
+      },
+    ],
+  };
+
+  return new Response(JSON.stringify(body, null, 2), {
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
+    },
+  });
+};
