@@ -401,6 +401,11 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Anthropic Agent SDK branding compliance — replaced product-context "Claude Code" with "Claude (Anthropic)" in 3 UI/machine-readable files: start.astro, for/developers.astro, fair-witness.json.ts; blog four-part byline tool field and all descriptive/attribution prose preserved as-is per guidelines; both builds verified (main 60 pages, blog 88 pages, zero errors); commit 6bc0e10
 - [x] unratified.bsky.social org account setup (D063) — display name, bio (AI-disclosed), follows HRW/ISHR/Amnesty/kashfshah, anchor thread posted + pinned; bsky-setup-account.mjs + bsky-pin-post.mjs + bsky-reply.mjs scripts
 - [x] #RatifyICESCR campaign hashtag coined (D064) — first post planted Mar 6; retrofit replies added to Posts 1 + 2 (kashfshah) and unratified anchor thread; posts 3–18 in marketing plan updated to carry tag; standing pattern: every ICESCR advocacy post uses #RatifyICESCR
+- [x] Domain handle updated to @unratified.org (D065) — DNS TXT verified, `bsky-update-handle.mjs` executed, .dev.vars updated; account resolves as @unratified.org
+- [x] Bluesky avatar set (D066) — Iwaria Inc. "diverse hands" image (Unsplash D1) downloaded + uploaded via blob API + upsertProfile; profile complete
+- [x] bsky-post-queue.mjs — posts multiple pre-written posts with configurable delay (default 3 min); grapheme pre-flight check; posts 6–10 fired Mar 6
+- [x] Bluesky Posts 3–10 posted (Mar 6) — all 10 posts in the planned sequence now live on @unratified.org
+- [x] Feed generator scaffold (D067) — /Users/kashif/Projects/unratified-feed cloned from bluesky-social/feed-generator; classifier.ts (two-tier keyword+Haiku), algos/ai-human-rights.ts (skeleton endpoint), fly.toml (Fly.io config with persistent volume), subscription-patch.ts (integration guide); parked as TODO pending credits/time
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*

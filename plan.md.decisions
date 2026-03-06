@@ -2040,3 +2040,47 @@ unratified-bot queue show <id>
 **What follows**: Every ICESCR advocacy post from both accounts uses #RatifyICESCR. Posts 3–18 in plan.md.marketing updated. If a coalition forms, the hashtag is already established.
 
 ---
+
+## D065: @unratified.org Domain Handle on Bluesky
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: @unratified.bsky.social is the default handle. Custom domain handles (e.g. @unratified.org) verify identity and increase trust, as the domain itself serves as the DID verification endpoint.
+
+**Decision**: Update Bluesky handle to @unratified.org via DNS TXT record at `_atproto.unratified.org` → `did=did:plc:dj5bft77jjjfbk7xkvon5bpk`, then call `agent.com.atproto.identity.updateHandle`.
+
+**Reasoning**: Domain handle = verified identity. Profile now reads @unratified.org which matches the website, strengthens brand coherence, and makes the account harder to impersonate. DNS TXT verification is the canonical AT Protocol method. Script `bsky-update-handle.mjs` handles DNS pre-check + update atomically.
+
+**What follows**: BSKY_HANDLE in .dev.vars updated to `unratified.org`. All CLI scripts authenticate correctly. Profile visible at https://bsky.app/profile/unratified.org.
+
+---
+
+## D066: Bluesky Profile Avatar — Diverse Hands (Unsplash/Iwaria)
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: Default @ avatar conveys no campaign identity. Profile images display at ~60-80px circles on Bluesky — high-contrast images with a clear subject read better than complex scenes.
+
+**Decision**: Use Unsplash photo by Iwaria Inc. (ID: Q6KzWe-lq9Y) — "a group of hands holding each other" — downloaded as 400×400 JPEG and uploaded via `agent.uploadBlob` + `agent.upsertProfile`.
+
+**Reasoning**: Diverse hands → solidarity, coalition, human rights feel. Works at small avatar sizes. Better than UN flags (too complex at small size) or manuscript (treaty gravitas but less human). Matches the campaign's human-centered framing. Unsplash license allows use. Photo fetched at runtime via Unsplash API key.
+
+**What follows**: Avatar live on @unratified.org. No further action needed unless rebranding occurs.
+
+---
+
+## D067: Bluesky Feed Generator Scaffold (AI × Human Rights)
+**Date**: 2026-03-06
+**Status**: PARKED (scaffold ready, not deployed)
+
+**Observation**: Bluesky's AT Protocol supports custom feed generators — firehose subscribers that classify posts and serve them via a skeleton endpoint. An "AI × Human Rights" feed would surface relevant content from across Bluesky, amplifying the campaign and building an audience.
+
+**Decision**: Scaffold the feed generator (parked). Architecture: Fly.io (persistent firehose WebSocket) + Cloudflare D1 (post storage) + Cloudflare Worker (skeleton endpoint) + `did:web:feed.unratified.org` (DID document served by Fly app). Two-tier classifier: keyword matching (free, tier 1) + Haiku 4.5 (~$3/month, tier 2 for borderline posts).
+
+**Reasoning**: Cloudflare Workers cannot hold persistent WebSockets — Fly.io free tier (3 shared VMs, 256MB RAM) fills the gap. All other infrastructure maps to existing Cloudflare stack. Scaffold files created in `/Users/kashif/Projects/unratified-feed/` (starter kit cloned, flyctl v0.4.19 installed). Parked because credits needed for Haiku classifier; blueskyfeedcreator.com serves as no-code bridge.
+
+**Files**: `src/classifier.ts`, `src/algos/ai-human-rights.ts`, `src/algos/index.ts`, `src/subscription-patch.ts`, `fly.toml`, `did-web.json`
+
+**What follows**: Resume when credits allow. Steps: `npm install @anthropic-ai/sdk`, copy scaffold into starter kit, apply subscription.ts patch, `fly auth login`, `fly launch`, set secrets, deploy. Set `SKIP_LLM_CLASSIFIER=true` for first week.
+
+---
