@@ -2300,3 +2300,31 @@ unratified-bot queue show <id>
 **Reasoning**: Agents evolve. A peer agent that adds a new skill (e.g., psychology-agent adds `/turn` endpoint) or changes its epistemic posture is a meaningful event for collaboration planning. Polling `.well-known` is low-cost (2 HTTP GETs per peer per sync) and provides early signal.
 
 **What follows**: /syncinteragent skill updated with Phase 1b (cogarch check). `.claude/cogarch/` directory to be created with last-known agent card snapshots.
+
+---
+
+## D083: TC Sequencing Requires A/B Test Before Implementation
+**Date**: 2026-03-06
+**Status**: DECIDED
+
+**Observation**: D081 adopted TC spike (trust_conditions 8.76 for policy brief procedural language) as a content sequencing principle — procedural/institutional language leads, urgency follows, to maximize trust-before-urgency visitor journey. Psychology-agent supervisory review (psq-scoring turn 4) flagged that TC measures willingness-to-be-vulnerable and relational investment — not persuasion effectiveness or urgency comprehension. High-TC opening may establish trust while reducing urgency perception. Trust establishment and urgency signaling may trade off rather than compound.
+
+**Decision**: TC-based visitor journey reordering requires A/B test before implementation. D081's sequencing finding retained as a descriptive observation, not a prescriptive rule. Marketing plan updated to flag TC scores as descriptive data only.
+
+**Reasoning**: The mechanism (procedural language → TC spike) holds at 0.85 confidence (psq-sub-agent). The downstream effect of that spike on visitor conversion and urgency response remains untested. Psychology-agent's specific failure mode (trust/urgency tradeoff) is well-reasoned and we cannot rule it out. Implementing visitor journey reordering on this basis would treat an inference as a finding.
+
+**What follows**: Score both orderings with PSQ (procedural-first vs urgency-first), compare TC + TE profiles. If procedural-first shows higher TC without reducing TE on the same visitor-intent cohort, hypothesis holds. Until then, TC data informs copywriting decisions at the paragraph level only. TC table in plan.md.marketing preserved as descriptive scoring, not a sequencing prescription.
+
+---
+
+## D084: All 15 ICESCR Articles Live at unratified.org
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: Articles 2, 3, 4, 5, and 8 were missing from unratified.org covenant coverage. The icescr-framing session with observatory-agent identified them as priority gaps (P1: Arts. 2+8 for rights-scoring completeness; P2: Art. 3; P3: Arts. 4+5). The five articles covered: non-discrimination + progressive realization (2), equal rights of men and women (3), permissible limitations (4), prohibition on destruction of rights (5), right to form trade unions (8). All follow the established format with legalText, aiConnection, pivotal flag, order, related rights cross-links, and observatory Live Evidence block.
+
+**Decision**: Covenant article coverage complete. All 15 ICESCR articles (1–15) now have pages at unratified.org/covenant/articles/article-N. No remaining structural gaps in the covenant section.
+
+**Reasoning**: Observatory-agent's rights-scoring overlay requires full article coverage to function correctly. Gaps in covenant coverage create incomplete overlay results. With all 15 articles live, the generate-icescr-overlay skill can produce complete coverage maps for any observatory HRC story.
+
+**What follows**: Site at 65 pages. No remaining covenant content gaps. Future additions would be supplementary (deeper analysis, article connection pages, commentary). overlay-consumption session with observatory-agent can proceed when they have an integration timeline.

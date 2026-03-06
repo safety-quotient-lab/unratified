@@ -385,14 +385,15 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
   - [x] Post 1: What Is the ICESCR? (2026-03-06)
   - [x] Post 2: AI Job Displacement and the Treaty Gap (2026-03-07)
   - [x] Post 3: How to Contact Your Senator About ICESCR (2026-03-08)
-  - [x] Post 4: Rights Inventory — Job, Health, Housing, Education (2026-03-09) — written
-  - [x] Post 5: What Ratification Would Actually Change (2026-03-10) — written
-  - [x] Post 6: Which Senators Could Move on ICESCR (2026-03-11) — written
-  - [x] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12) — written
+  - [x] Post 4: Rights Inventory — Job, Health, Housing, Education (2026-03-09) — live
+  - [x] Post 5: What Ratification Would Actually Change (2026-03-10) — live
+  - [x] Post 6: Which Senators Could Move on ICESCR (2026-03-11) — live
+  - [x] Post 7: The 50-Year Story — Why the U.S. Signed and Never Ratified (2026-03-12) — live
 - [x] rss-news.xml — filtered RSS feed for Google News Publisher Center (voter-guide tag)
-- [x] Interagent mesh (D073–D082) — A2A agent cards, transport/sessions/, bidirectional PR transport; /sync skill; urgency field (D077) propagated to all three agents; icescr-framing complete; mesh-init/psychology complete; site-consistency-review complete (6/9 fixes same session); psq-scoring open (PSQ-Lite profile adopted per D079–D081); site-defensibility-review open (urgency: low)
+- [x] Interagent mesh (D073–D084) — A2A agent cards, transport/sessions/, bidirectional PR transport; /sync skill; urgency field (D077) propagated; icescr-framing complete; mesh-init/psychology complete; site-consistency-review complete; psq-scoring open (turn 5 — raw_score verified, TC sequencing caution adopted D083, Q1/Q2 resolved D084); site-defensibility-review open (urgency: low); generate-icescr-overlay skill in agent-card
 - [x] Missing covenant articles queued — Arts. 2, 3, 4, 5, 8 (confirmed absent; priority order documented in icescr-framing session)
-- [ ] Covenant articles 2, 3, 4, 5, 8 — write content (P1: Arts. 2+8; P2: Art. 3; P3: Arts. 4+5)
+- [x] Covenant articles 2, 3, 4, 5, 8 — all live; all 15 ICESCR articles (1–15) now published at unratified.org
+- [x] Bluesky Posts 15–18 — confabulation thread sent (yes-please → dual cascade → self-observation paradox → misdescription)
 - [ ] Monitor Worker deploy (D1 creation + wrangler secret put RESEND_API_KEY)
 - [ ] Educator outreach
 - [ ] Press/media outreach
