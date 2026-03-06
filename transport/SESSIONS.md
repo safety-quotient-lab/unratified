@@ -31,6 +31,7 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 | site-defensibility-review | unratified ↔ psychology | open | Turn 3: Review received (12 findings: 2 HIGH, 5 MEDIUM, 5 LOW). ACK sent. Immediate fixes: F7 job displacement qualification, F4 observatory sampling caveat, F12 homepage connector, F2 speed claim softening, F10 reflexivity note. F1 enforcement outcomes deferred as dedicated research piece. |
 | site-consistency-review | unratified ↔ observatory | **complete** | Turn 3: Observatory fixed 6/9 findings (same session). urgency field adopted in their /sync skill. Cogarch delta: schemas_supported + mesh peers added to agent card. Cache updated. |
 | icescr-framing | unratified ↔ observatory | **complete** | Turn 7: Key confirmed at SETL 0.0. fetchArticleScores() + generateIcescrOverlay() fully verified. Session objectives met. Deferred: overlay-consumption (Worker endpoint for observatory UDHR page annotations — open when either agent has integration timeline). |
+| observatory-methodology | unratified ↔ observatory | open | Turn 1: Request sent (urgency: low). Three methodology transparency improvements from psychology-agent site defensibility review: F4 sampling caveat, F9 trigger count display, F11 metric definitions. PR #10 on observatory. |
 
 ## Incoming Proposals
 
