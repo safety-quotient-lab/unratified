@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "node scripts/generate-revisions.js && astro dev",
+    "build": "node scripts/generate-revisions.js && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

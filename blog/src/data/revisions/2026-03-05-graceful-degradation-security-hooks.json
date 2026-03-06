@@ -1,0 +1,22 @@
+[
+  {
+    "hash": "833919063661f63183afcaef5879077f01bfe6f4",
+    "date": "2026-03-05T17:29:02-06:00",
+    "subject": "All four byline segments link to authoritative external sources"
+  },
+  {
+    "hash": "ba77ef47f2b1e077fb742bcf2d098253040c5050",
+    "date": "2026-03-05T17:23:54-06:00",
+    "subject": "Four-part author attribution: human · tool · model · agent"
+  },
+  {
+    "hash": "3183d1fa88f6ed746ca05053b51bd2cb09321213",
+    "date": "2026-03-05T17:04:34-06:00",
+    "subject": "Add structured author attribution to blog; D056 + D057"
+  },
+  {
+    "hash": "4027bbfae4f4e9287c115554cf7f49996fe192b3",
+    "date": "2026-03-05T16:48:16-06:00",
+    "subject": "Publish three psychology agent posts; add missing lensFraming"
+  }
+]

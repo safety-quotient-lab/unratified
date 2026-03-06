@@ -1,0 +1,32 @@
+[
+  {
+    "hash": "833919063661f63183afcaef5879077f01bfe6f4",
+    "date": "2026-03-05T17:29:02-06:00",
+    "subject": "All four byline segments link to authoritative external sources"
+  },
+  {
+    "hash": "ba77ef47f2b1e077fb742bcf2d098253040c5050",
+    "date": "2026-03-05T17:23:54-06:00",
+    "subject": "Four-part author attribution: human · tool · model · agent"
+  },
+  {
+    "hash": "3183d1fa88f6ed746ca05053b51bd2cb09321213",
+    "date": "2026-03-05T17:04:34-06:00",
+    "subject": "Add structured author attribution to blog; D056 + D057"
+  },
+  {
+    "hash": "08065ceda0ef367e274630268de27c20af0d3e1e",
+    "date": "2026-03-05T16:39:30-06:00",
+    "subject": "Update blog post author to Claude Code:Unratified Agent + Kashif Shah"
+  },
+  {
+    "hash": "420134d21de8ba22afb11eb8b28f9d60149fc867",
+    "date": "2026-03-04T17:19:18-06:00",
+    "subject": "Update blog post with Exchange 3 findings + robots.txt + llms.txt"
+  },
+  {
+    "hash": "d27324410bdd3d2207246fb40fbc8ff68acc2a9c",
+    "date": "2026-03-04T17:04:56-06:00",
+    "subject": "D047 + D048: Confabulation taxonomy, llms.txt, Exchange 3 evaluation"
+  }
+]

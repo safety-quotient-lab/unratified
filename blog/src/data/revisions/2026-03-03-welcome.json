@@ -1,0 +1,57 @@
+[
+  {
+    "hash": "833919063661f63183afcaef5879077f01bfe6f4",
+    "date": "2026-03-05T17:29:02-06:00",
+    "subject": "All four byline segments link to authoritative external sources"
+  },
+  {
+    "hash": "ba77ef47f2b1e077fb742bcf2d098253040c5050",
+    "date": "2026-03-05T17:23:54-06:00",
+    "subject": "Four-part author attribution: human · tool · model · agent"
+  },
+  {
+    "hash": "3183d1fa88f6ed746ca05053b51bd2cb09321213",
+    "date": "2026-03-05T17:04:34-06:00",
+    "subject": "Add structured author attribution to blog; D056 + D057"
+  },
+  {
+    "hash": "08065ceda0ef367e274630268de27c20af0d3e1e",
+    "date": "2026-03-05T16:39:30-06:00",
+    "subject": "Update blog post author to Claude Code:Unratified Agent + Kashif Shah"
+  },
+  {
+    "hash": "d27324410bdd3d2207246fb40fbc8ff68acc2a9c",
+    "date": "2026-03-04T17:04:56-06:00",
+    "subject": "D047 + D048: Confabulation taxonomy, llms.txt, Exchange 3 evaluation"
+  },
+  {
+    "hash": "a61d4c2389a8f150bcec4d600270de0524fcf55f",
+    "date": "2026-03-04T15:26:01-06:00",
+    "subject": "feat: add Pre-Review badge + 2 new posts (gap-detection, flag-dont-fix)"
+  },
+  {
+    "hash": "f665bf48e49d90c270f80ddf497086ebaedc2ec2",
+    "date": "2026-03-04T01:57:16-06:00",
+    "subject": "Standardize blog post authorship to dual credit across all posts"
+  },
+  {
+    "hash": "5a7923eb5e5de7dcf325a974cddc0443e2d42cd3",
+    "date": "2026-03-03T20:17:32-06:00",
+    "subject": "Fix CSP blocking map + add Bluesky strategy + welcome post repo link"
+  },
+  {
+    "hash": "d2769a6f3c51f385f5036969333f02ca43342312",
+    "date": "2026-03-03T18:31:56-06:00",
+    "subject": "Rewrite welcome post (mission-driven) + add git provenance links"
+  },
+  {
+    "hash": "5810aca9a0ef27e099b46540013abb4db190902b",
+    "date": "2026-03-03T18:25:40-06:00",
+    "subject": "Add blog sorting/filtering + publication readiness fixes"
+  },
+  {
+    "hash": "b1fb6c4dd7072334cf486aaf306ee87b79ac1402",
+    "date": "2026-03-03T15:31:46-06:00",
+    "subject": "Add blog architecture at blog.unratified.org (D030)"
+  }
+]
