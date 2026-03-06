@@ -1,6 +1,6 @@
 ---
 title: "Cognitive Architecture for AI Agents: Triggers, Self-Healing Memory, and Documentation Propagation"
-summary: "How 12 mechanical triggers, auto-restoring memory, and a 13-step documentation chain prevent cognitive regression in long-running Claude Code sessions — and what a popular anti-regression repo reveals about the gap between code safety and reasoning safety."
+summary: "How 15 mechanical triggers, auto-restoring memory, and a 13-step documentation chain prevent cognitive regression in long-running Claude Code sessions — and what a popular anti-regression repo reveals about the gap between code safety and reasoning safety."
 publishedDate: "2026-03-05T12:25:00-06:00"
 author:
   human:
@@ -10,20 +10,20 @@ author:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
-    name: "Claude Sonnet 4.6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
 tags: ["cognitive-architecture", "ai-agents", "claude-code", "methodology", "anti-regression", "meta"]
 lensFraming:
-  voter: "AI systems drift without enforcement infrastructure — the same way institutions drift without governance. This post documents how trigger-based architecture prevents that drift: mechanical checks, cross-session memory, and self-auditing. Understanding how AI agents stay consistent matters for evaluating AI safety claims."
-  politician: "AI agent governance at the system level: triggers, hooks, and documentation chains that mechanically enforce epistemic quality across sessions. The gap between code regression and cognitive regression maps onto the gap between compliance and integrity — the same distinction policy frameworks struggle with at scale."
-  developer: "Architecture deep-dive into a trigger-based cognitive system for Claude Code. Covers mechanical enforcement (hooks + triggers), memory persistence across sessions, self-healing recovery, and a 13-step documentation propagation chain. Includes a direct comparison with the antiregression-setup approach and concrete adoption recommendations."
+  voter: "AI systems are increasingly used to help make decisions that affect the public — in policy analysis, legal research, and public communication. This post explains a concrete problem those systems face: they forget earlier reasoning, drift from established constraints, and agree with whoever is asking even when evidence says otherwise. The infrastructure described here — mechanical triggers, self-healing memory, epistemic quality checks — represents one approach to making AI reasoning more accountable. The question it raises for public trust: what should citizens expect from AI systems that inform decisions made on their behalf?"
+  politician: "AI assistants used by political staff can introduce reasoning errors that accumulate invisibly across a work session — forgetting earlier constraints, drifting from established positions, or agreeing with the user when they should push back. This post documents a trigger-based cognitive architecture designed to prevent those failures mechanically, not by relying on the AI to remember its own rules. The comparison with code-regression tooling reveals a gap directly relevant to any office using AI for research or drafting: existing tools prevent broken code, but reasoning regression — inconsistent analysis, overconfident claims, vocabulary drift — remains unaddressed by all standard approaches."
   educator: "Use this post to teach the difference between code regression and cognitive regression in AI-assisted work. Students examine two approaches — one that prevents broken code, one that prevents broken reasoning — and evaluate which failure modes each addresses and misses."
-  researcher: "Methodological documentation of a cognitive architecture governing an AI agent's reasoning quality across sessions. Reports 12 triggers with specific firing conditions, 8-order knock-on analysis for decisions, epistemic quality enforcement (anti-sycophancy, confidence calibration, fair witness discipline), and a self-auditing mechanism (T11). Comparison with code-regression-focused approaches reveals a gap in existing tooling: reasoning regression remains unaddressed by test-gating and code review."
+  researcher: "Methodological documentation of a cognitive architecture governing an AI agent's reasoning quality across sessions. Reports 15 triggers with specific firing conditions, 10-order knock-on analysis for decisions (grounded in INCOSE systems engineering and Popperian falsificationism at the highest orders), epistemic quality enforcement (anti-sycophancy, confidence calibration, fair witness discipline), and a self-auditing mechanism (T11). Comparison with code-regression-focused approaches reveals a gap in existing tooling: reasoning regression remains unaddressed by test-gating and code review."
+  developer: "Architecture deep-dive into a trigger-based cognitive system for Claude Code. Covers mechanical enforcement (hooks + triggers), memory persistence across sessions, self-healing recovery, and a 13-step documentation propagation chain. Includes a direct comparison with the antiregression-setup approach and concrete adoption recommendations."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "reviewed"
 ---
 
 ## The Problem Has Two Layers
@@ -46,7 +46,7 @@ The central design insight: telling an AI agent "always check for X" accomplishe
 
 "Be careful with memory files" functions as aspiration. "Before any file write (T4), verify: date format uses system clock, file routes to the correct document, content does not duplicate existing entries, variable names meet semantic naming standard" functions as infrastructure.
 
-The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) implements 12 triggers (T1–T12), each with a specific moment it fires:
+The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) implements 15 triggers (T1–T15), each with a specific moment it fires. The core twelve:
 
 | Trigger | Fires when | What it checks |
 |---------|-----------|----------------|
@@ -63,6 +63,8 @@ The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-a
 | T11 | On demand | Full self-audit of cognitive infrastructure |
 | T12 | "Good thinking" signal | Name the principle, explain the mechanism, generalize |
 
+Three additional triggers emerged from integration work: T13 (external content ingestion gatekeeper — source classification, injection scan, scope relevance), T14 (structural checkpoint — mandatory scan of orders 7–10 at all decision scales), and T15 (PSQ v3 receiver protocol — scale discipline, threshold validation, WEIRD flags).
+
 T3 deserves particular attention. Before any recommendation, the agent classifies whether the decision requires user input (substance) or can resolve autonomously (process). It scans for a specific reason NOT to proceed — vague concern does not count; only a concrete objection surfaces. It checks whether the user would benefit more from a *different* recommendation than the obvious one. And it separates "I feel confident" from "the evidence supports this" — stating evidence strength independently of recommendation strength.
 
 None of these checks appear in test-gating approaches. A test suite verifies that code produces correct output. T3 verifies that the reasoning *producing the recommendation* meets epistemic standards before the recommendation reaches the user.
@@ -77,7 +79,7 @@ The antiregression setup uses CLAUDE.md as its single persistent artifact. CLAUD
 
 It does not handle volatile state: what the agent worked on last session, what decisions were made, what comes next. That state evaporates when the session ends.
 
-The psychology agent maintains volatile state in `MEMORY.md` — an auto-memory file that lives outside the git repo (in Claude Code's path-hashed project directory). MEMORY.md carries the active thread, design decisions table, cognitive trigger quick-reference, and sub-project status across sessions. A [13-step post-session cycle](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/cycle/SKILL.md) (`/cycle`) propagates changes through 10 overlapping documents at different abstraction levels.
+The psychology agent maintains volatile state in auto-memory files that live outside the git repo (in Claude Code's path-hashed project directory). An index file (`MEMORY.md`, ~55 lines) carries the active thread and links to topic files — `decisions.md` (design decisions table), `cogarch.md` (trigger quick-reference), `psq-status.md` (sub-agent status) — that persist across sessions. A [13-step post-session cycle](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/cycle/SKILL.md) (`/cycle`) propagates changes through 10 overlapping documents at different abstraction levels.
 
 ### The Recovery Problem
 
@@ -150,11 +152,11 @@ The psychology agent's [/adjudicate skill](https://github.com/safety-quotient-la
 
 1. **Classifies** the decision domain (Code / Data / Pipeline / Infrastructure / UX / Operational / Product)
 2. **Grounds** each option by verifying actual dependencies before tracing effects
-3. **Traces** 8 orders of knock-on effects per option — from certain (orders 1–2) through likely (3), possible (4–5), speculative (6), structural (7), to horizon (8)
+3. **Traces** 10 orders of knock-on effects per option — from certain (orders 1–2) through likely (3), possible (4–5), speculative (6), structural (7), horizon (8), emergent (9, INCOSE), to theory-revising (10, Popper)
 4. **Compares** options on differentiating axes — dimensions where they produce different outcomes
 5. **Resolves** by consensus (all axes favor one option) or parsimony (when no consensus exists, the simplest adequate explanation prevails)
 
-Severity tiers control depth: XS decisions get 3-order analysis with a structural scan. L decisions get full 8-order with 2-pass refinement. A structural checkpoint runs at all scales — even trivial decisions get scanned for precedent-setting and norm-establishing effects (orders 7–8).
+Severity tiers control depth: XS decisions get 3-order analysis with a structural scan. L decisions get full 10-order with 2-pass refinement. A structural checkpoint runs at all scales — even trivial decisions get scanned for precedent-setting, norm-establishing, emergent, and theory-revising effects (orders 7–10).
 
 This methodology produced the project's licensing decision: CC BY-SA 4.0 for data/weights (required by Dreaddit's ShareAlike clause), CC BY-NC-SA 4.0 for code. The 8-order analysis across three options converged without ambiguity — only one option satisfied legal compliance at order 1, scientific defensibility at order 3, and community perception at orders 7–8.
 
@@ -167,7 +169,7 @@ This methodology produced the project's licensing decision: CC BY-SA 4.0 for dat
 | Failure mode | Antiregression setup | Psychology agent |
 |-------------|---------------------|-----------------|
 | Broken code committed | ✓ Pre-commit test gate | ✗ No test infrastructure yet |
-| Context exhaustion | ✓ 60% compaction rule | Partial — T2 checks pressure without threshold |
+| Context exhaustion | ✓ 60% compaction rule | ✓ T2 explicit thresholds (60% /doc, 75% compact) |
 | Lost volatile state | ✗ No cross-session memory | ✓ MEMORY.md + snapshots + bootstrap recovery |
 | Sycophantic agreement | ✗ No epistemic checks | ✓ T3 anti-sycophancy + recommend-against |
 | Vocabulary drift | ✗ No detection mechanism | ✓ Term collision rule + T6 drift audit |
@@ -195,11 +197,11 @@ The convergence point: hooks that enforce mechanically, triggers that enforce ep
 
 ---
 
-## Sources
+## Source Code
 
 - [psychology-agent](https://github.com/safety-quotient-lab/psychology-agent) — the cognitive architecture described in this post
 - [claude-code-antiregression-setup](https://github.com/CreatmanCEO/claude-code-antiregression-setup) — the antiregression approach evaluated here
-- [Cognitive trigger system](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) — full T1–T12 definitions
+- [Cognitive trigger system](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) — full T1–T15 definitions
 - [Bootstrap health check](https://github.com/safety-quotient-lab/psychology-agent/blob/main/bootstrap-check.sh) — self-healing memory script
 - [/cycle skill](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/cycle/SKILL.md) — 13-step documentation propagation
 - [/adjudicate skill](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/adjudicate/SKILL.md) — structured decision resolution

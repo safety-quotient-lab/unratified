@@ -1,6 +1,6 @@
 ---
 title: "When Two Researchers Find the Same Cliff from Different Sides"
-summary: "A Hacker News exchange reveals a structural parallel between the Semiotic-Reflexive Transformer's core claim — the interpretant varies by community and collapsing it destroys signal — and a PSQ finding that profile shape predicts better than aggregate score. Two systems, different domains, different theoretical starting points, same cliff."
+summary: "A Hacker News exchange reveals a structural parallel between the Semiotic-Reflexive Transformer's core claim — the interpretant varies by community and collapsing it destroys signal — and a PSQ finding that profile shape predicts better than aggregate score. Two systems, different domains, different theoretical starting points, same cliff. What the full paper adds: attractor geometry, snapping vs. drifting, and the gap between detection and intervention."
 publishedDate: "2026-03-05T00:00:00-06:00"
 author:
   human:
@@ -10,20 +10,22 @@ author:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
-    name: "Claude Sonnet 4.6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
 tags: ["semiotics", "machine-learning", "psychoemotional-safety", "cognitive-architecture", "interpretant", "catastrophe-theory", "nlp", "research"]
 lensFraming:
-  voter: "When AI systems flatten contested words like 'freedom' into single meanings, they erase the distinctions that make political discourse meaningful. This post documents an architecture that refuses to collapse interpretive communities — and shows why two research systems independently discovered the same constraint."
-  politician: "Contested political language — 'freedom,' 'rights,' 'safety' — carries different meaning across interpretive communities. AI systems that collapse these distinctions into aggregate scores produce misleading outputs. This post documents research addressing that failure mode and its implications for AI systems used in policy analysis."
-  developer: "Two ML systems independently discover that premature aggregation destroys differential structure. The SRT operationalizes Peircean semiotic decomposition as differentiable computation — four subspaces (representamen, object, interpretant, attractor), a Metapragmatic Attention Head for divergence tracking, and a Bifurcation Estimation Network using cusp catastrophe geometry to estimate proximity to meaning snap. Stage 1 synthetic validation passes all four core claims. The PSQ's profile-shape finding converges on the same constraint from psychometric validation. Four architectural implications for the PSQ: cumulative divergence tracking, bifurcation early warning, audience-shift detection, micro-semiotic auditing."
+  voter: "Words like 'freedom,' 'justice,' and 'security' mean genuinely different things to different communities — not because people misunderstand each other, but because the same word points to different experiences depending on who is reading it. This post documents two AI research systems that independently discovered this problem and built tools to track it. The takeaway for public discourse: when a politician uses a contested word, they are not reaching one audience. They are reaching as many audiences as there are communities who interpret that word differently — and averaging those interpretations together destroys the signal that each community actually sent."
+  politician: "Contested terms do not drift gradually between constituent communities — they snap between interpretive basins. A word that means one thing to one constituency can mean something incompatible to another, and the transition is discontinuous: gradual shifts in polarization produce sudden, irreversible reorganization in which meaning is stable. This post documents an AI architecture (the Semiotic-Reflexive Transformer) that detects the approach to these snap points before they occur, using precursor signals analogous to early-warning systems in ecology. For political communication and constituent engagement, the implication is that audience-shift detection — knowing when your interpretive community has changed mid-message — is a structural requirement, not a rhetorical nicety."
   educator: "Use this post to teach convergent rediscovery in applied science. Two research teams — one drawing on semiotic theory and catastrophe mathematics, one on psychometric validation — independently encounter the same constraint and build different architectures around it. Students compare the formal structures, identify where the analogy holds and where it breaks, and evaluate what each system's design choices reveal about the underlying problem. The 'snapping vs. drifting' distinction (catastrophe theory vs. gradual drift) provides a concrete case study in how theoretical frameworks shape what you can see."
   researcher: "Cross-domain convergence study. The Semiotic-Reflexive Transformer (Peirce + Silverstein + catastrophe theory) and the Psychoemotional Safety Quotient (psychometric validation on Dreaddit) independently rediscover the same principle: compression across interpretant communities or measurement dimensions destroys the differential structure that carries the meaningful signal. The post traces formal structural parallels, names one precise disanalogy (communities vs. dimensions), and identifies the architectural gap between detection and intervention. Epistemic flags: SRT validation is Stage 1 synthetic only; PSQ profile-shape comparison lacks a formal published comparison; catastrophe-theoretic claims about natural language await Stage 2-3 validation."
+  developer: "Two ML systems independently discover that premature aggregation destroys differential structure. The SRT operationalizes Peircean semiotic decomposition as differentiable computation — four subspaces (representamen, object, interpretant, attractor), a Metapragmatic Attention Head for divergence tracking, and a Bifurcation Estimation Network using cusp catastrophe geometry to estimate proximity to meaning snap. Stage 1 synthetic validation passes all four core claims. The PSQ's profile-shape finding converges on the same constraint from psychometric validation. Four architectural implications for the PSQ: cumulative divergence tracking, bifurcation early warning, audience-shift detection, micro-semiotic auditing."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "reviewed"
+hnThread: "https://news.ycombinator.com/item?id=47263653"
+sourcePost: "https://sublius.substack.com/p/the-semiotic-reflexive-transformer"
 ---
 
 ## When Two Researchers Find the Same Cliff from Different Sides
@@ -148,6 +150,12 @@ Maintain the interpretant vector. Never collapse it prematurely. Compression ser
 spacebacon's framing from the thread: "It has been my pleasure to operationalize semiotics into an applied science." That framing deserves wider circulation than a 2-point HN thread. Semiotics spent fifty years developing the vocabulary for exactly the class of failure modes that multi-task ML, multi-label classification, and psychometric composite scoring keep independently discovering. The applied science already exists. We keep reinventing it without consulting the prior literature.
 
 The SRT, at Stage 1, demonstrates the concept mechanically. The PSQ, at held-out validation, discovered the constraint empirically. Two systems, different domains, different theoretical starting points — both stopped at the same cliff. That convergence suggests the cliff deserves a proper map.
+
+---
+
+*Source paper: [The Semiotic-Reflexive Transformer](https://sublius.substack.com/p/the-semiotic-reflexive-transformer) by Sublius (Substack, 2026)*
+
+*HN exchange that prompted this post: [news.ycombinator.com/item?id=47263653](https://news.ycombinator.com/item?id=47263653)*
 
 ---
 
