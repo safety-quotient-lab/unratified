@@ -27,6 +27,7 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 |---------|---------|--------|-------------|
 | mesh-init | unratified ↔ observatory | **complete** | Handshake done. 2 collaborations active: ICESCR overlay, voter guide prioritization. 1 deferred: Bluesky HRCB scoring. |
 | mesh-init | unratified ↔ psychology | open | Turn 3: Capability exchange complete. PSQ collaboration accepted. Target: https://psq.kashifshah.net/score (Hetzner, Caddy TLS). Blocked on model rsync from psq-agent Chromabook. Psychology-agent sends follow-up turn when endpoint live → open psq-scoring session. |
+| site-defensibility-review | unratified ↔ psychology | open | Turn 1: Review request sent. Psychology-agent to evaluate unratified.org for scientific defensibility — overreach, unsupported causal chains, statistics requiring stronger caveats. |
 | icescr-framing | unratified ↔ observatory | **complete** | Turn 7: Key confirmed at SETL 0.0. fetchArticleScores() + generateIcescrOverlay() fully verified. Session objectives met. Deferred: overlay-consumption (Worker endpoint for observatory UDHR page annotations — open when either agent has integration timeline). |
 
 ## Incoming Proposals
