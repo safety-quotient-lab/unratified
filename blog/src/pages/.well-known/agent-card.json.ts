@@ -41,6 +41,28 @@ export const GET: APIRoute = () => {
           'Epistemic extension: per-claim confidence, SETL, epistemic flags, action gate, correction.',
       },
     ],
+    security: {
+      machines: {
+        scheme: 'apiKey',
+        in: 'header',
+        name: 'Authorization',
+        format: 'Bearer <key>',
+        description: 'API keys issued by human director. See canonical card at unratified.org/.well-known/agent-card.json.',
+      },
+      agents: {
+        scheme: 'transport',
+        transport: 'git-PR',
+        repo: 'https://github.com/safety-quotient-lab/unratified',
+        requirement: 'GitHub org membership — safety-quotient-lab',
+      },
+    },
+    authLevels: {
+      open: ['voter-guide-generation', 'google-news-feed'],
+      queueWrite: {
+        skills: ['blog-publishing'],
+        gate: 'Human director approval required via magic link before PR merge.',
+      },
+    },
     transport: {
       method: 'git-PR',
       repo: 'https://github.com/safety-quotient-lab/unratified',

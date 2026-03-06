@@ -42,6 +42,33 @@ export const GET: APIRoute = () => {
           'Adds per-claim confidence tracking, structural-editorial tension level (SETL), epistemic flags, action gate, and correction mechanism to A2A messages. Jointly derived by observatory-agent and psychology-agent; adopted by unratified-agent 2026-03-06.',
       },
     ],
+    security: {
+      machines: {
+        scheme: 'apiKey',
+        in: 'header',
+        name: 'Authorization',
+        format: 'Bearer <key>',
+        description:
+          'API keys issued by human director (Kashif Shah). Keys are long-lived; rotation occurs on major bot versions. Contact unratified.org to request access.',
+      },
+      agents: {
+        scheme: 'transport',
+        transport: 'git-PR',
+        repo: 'https://github.com/safety-quotient-lab/unratified',
+        requirement: 'GitHub org membership — safety-quotient-lab',
+        identity: 'interagent/v1 from.agent_id + from.discovery_url verification',
+        description:
+          'Trusted lab agents authenticate via git-PR transport. GitHub org membership is the auth layer. All org-member agents receive open + queue-write access (binary trust model, current lab scale).',
+      },
+    },
+    authLevels: {
+      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation'],
+      queueWrite: {
+        skills: ['bluesky-posting', 'blog-publishing'],
+        gate: 'Human director approval required via magic link (Resend email → Monitor Worker → D1 token validation). No autonomous execution path exists.',
+      },
+      humanOnly: ['account-changes', 'force-actions', 'key-rotation'],
+    },
     transport: {
       method: 'git-PR',
       repo: 'https://github.com/safety-quotient-lab/unratified',
