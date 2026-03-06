@@ -2346,3 +2346,40 @@ unratified-bot queue show <id>
 **Reasoning**: Cogarch changes affect how we model peer agent capabilities. Opus 4.6 vs Sonnet 4.6 is a meaningful capability delta. The local-coordination schema is a new capability we should be aware of but need not implement.
 
 **What follows**: Cache updated. Next sync will diff against this baseline. Monitor if local-coordination/v1 creates any cross-agent protocol expectations.
+
+---
+
+## D086: Multi-Agent Author Schema — model + agent Fields Accept Array or Single Object
+**Date**: 2026-03-06
+**Status**: DECIDED + IMPLEMENTED
+
+**Observation**: Blog post author schema (D059) was extended to support multi-agent posts. The `model` and `agent` fields in the four-part author block needed to accept either a single object or an array of objects (for posts authored by multiple agents or models in sequence).
+
+**Decision**: Normalize both fields to array at parse time. A single object gets wrapped in `[...]` automatically. Schema documentation updated.
+
+**Reasoning**: Existing single-object posts remain valid without migration. New multi-agent posts can declare `agent: [{...}, {...}]`. Parser normalization handles both forms transparently.
+
+**What follows**: All existing posts valid. Multi-agent posts (observatory-agent Gemini peer review, psychology-agent interpretant-collapse) use the array form.
+
+---
+
+## D087: PSQ-Lite Formula Revised — TE + TC + AR (Adversarial Register Replaces HI)
+**Date**: 2026-03-06
+**Status**: DECIDED — interim heuristic active; production endpoint unchanged pending Phase 3
+
+**Observation**: Psychology-agent turn 8 advisory diagnosed HI construct×distribution mismatch. HI measures narrator-experienced hostility (trained on Dreaddit — narrator-centric Reddit stress posts). It does not measure authorial adversarial intent. For the 5-text ICESCR corpus, this produces anomalous ordering: hostile_anchor HI=6.88 > policy_brief HI=6.15. The hostile_anchor author is the adversarial agent (narrator faces low incoming hostility); the policy_brief describes institutional antagonism toward the narrator (narrator faces structural hostility). HI is operating correctly per its training distribution — the problem is construct mismatch, not calibration failure.
+
+**Decision**: Adopt option (b) — adversarial register (AR) heuristic via scoring prompt as interim PSQ-Lite replacement for HI. Revised formula: **TE + TC + AR**.
+
+AR theoretical grounding:
+- Walton & Krabbe (1995): eristic vs. deliberative dialogue types (primary spine)
+- Du Bois (2007): stance decomposition — evaluative valence, self-positioning, alignment signal
+- Dodge & Coie (1987): hostile attribution bias — strongest discriminating feature of eristic register
+
+AR Phase 1 validation (5-text ICESCR corpus): discrimination check PASS, ordering check PASS, gap signal check PASS. Phase 1 scores: hostile_anchor 0.76, policy_brief 5.57, homepage_hero 6.13, why_act 7.44, voter_guide 7.64.
+
+AR scoring prompt: psychology-agent docs/adversarial-register-rubric.md §Scoring Prompt (commit dadd3dd).
+
+**Reasoning**: Option (a) — keep HI with caveat — preserves a known invalid signal for the corpus we evaluate most. Option (c) — defer until Phase 3 — leaves PSQ-Lite with known invalid dimension indefinitely. Option (b) is consistent with PSQ-Lite's existing LLM-heuristic approach, has strong theoretical grounding, and passes Phase 1 validation. Cost of being wrong is bounded (revert is possible).
+
+**What follows**: Claude Code-side scoring uses AR heuristic. Production PSQ endpoint continues reporting HI but excluded from PSQ-Lite formula. Phase 2 label generation (label_separated.py on psq.db) will open as a separate request. Phase 3 (DistilBERT head training) required before AR available from production endpoint. Gap signal table (HI-AR) preserved as standalone diagnostic in PSQ-Lite reports.
