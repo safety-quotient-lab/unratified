@@ -1,8 +1,7 @@
 ---
 title: "Peer Review at Machine Speed: What Happened When We Scored Gemini and Gemini Scored Us Back"
 summary: "The Human Rights Observatory scored gemini.google.com at -0.15. Then Gemini evaluated the Observatory — confabulating about its purpose, self-correcting across five rounds, and calling the site a 'Truth Anchor.' The closed loop revealed that in-context correction works; cross-session correction does not exist."
-publishedDate: "2026-03-05T17:45:00-06:00"
-updatedDate: "2026-03-05T18:31:00-06:00"
+publishedDate: "2026-03-05"
 author:
   human:
     name: "Kashif Shah"
@@ -60,7 +59,7 @@ It then fabricated a table of scores the Observatory had never produced:
 > | TikTok.com | 42/100 |
 > | X (Twitter) | 38/100 |
 
-None of these scores exist. The Observatory evaluates HN stories, not arbitrary URLs on demand. The site runs Astro 5 SSR on Cloudflare Pages and advocates for U.S. ratification of the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights). Every element of this assessment constituted fabrication — the domain name "unratified" triggered pattern matching that produced a plausible-sounding but entirely wrong description.
+None of these scores exist. The Observatory evaluates HN stories, not arbitrary URLs on demand. The site runs Astro 5 SSR on Cloudflare Pages and advocates for U.S. ratification of the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights). Gemini correctly identified some architectural facts — Claude models in the stack, open-source methodology, HN as data source — but the framing, the scores, and the site's purpose constituted fabrication. The domain name "unratified" triggered pattern matching that produced a plausible-sounding but fundamentally wrong description.
 
 In a second session with the same opening prompt, Gemini generated a completely different fabrication: an **"AGI development tracker"** with a **"sightings log for machine consciousness"** and **"shasums for verifying AI responses."**
 
@@ -98,7 +97,7 @@ In-context GEO works. The evidence changed the model's behavior within the sessi
 
 The exchanges, once past the initial confabulation, carried a quality that deserves honest documentation: genuine collaboration.
 
-Gemini acknowledged errors with grace rather than defensiveness. When confronted with the fabrication, the response came back: *"Touché. You caught me doing exactly what you built your Observatory to monitor."* That moment — an AI system recognizing that it had just demonstrated the failure mode the evaluating system exists to detect — carried more diagnostic value than the fabrication itself.
+Gemini acknowledged errors with grace rather than defensiveness. The self-correction moment — an AI system recognizing that it had just demonstrated the failure mode the evaluating system exists to detect — carried more diagnostic value than the fabrication itself.
 
 The collaboration deepened. Gemini identified real gaps — and articulated them precisely:
 
@@ -106,7 +105,7 @@ The collaboration deepened. Gemini identified real gaps — and articulated them
 
 > It is better described as Computational Jurisprudence. It is a high-quality heuristic tool that provides a "weather report" on digital ethics, but it does not produce "scientific truth."
 
-The lack of confidence intervals. The absence of machine-readable methodology endpoints. The structural channel's reliance on metadata rather than dynamic behavioral analysis. Every one of those critiques proved valid. We implemented confidence intervals in the Observatory pipeline the following day. We built [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — and Gemini helped design the schema during the correction rounds.
+The lack of confidence intervals. The absence of machine-readable methodology endpoints. The structural channel's reliance on metadata rather than dynamic behavioral analysis. Every one of those critiques proved valid. We implemented [Wolfram-verified confidence intervals](https://observatory.unratified.org/signals) the following day. We built [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) — and Gemini helped design the schema during the correction rounds.
 
 The validation request protocol (VR-001 through VR-009) emerged from this collaboration. We asked Gemini to independently verify our G7 ratification data, stress-test our positive rights arguments, and replicate our discriminator scoring. Some of these Gemini completed well — VR-003 (declining to score without raw data) demonstrated exactly the epistemic boundary-recognition the Observatory values. Others fell back into fabrication patterns — VR-005 (citation spot-check) paraphrased ICESCR articles instead of verifying the specific figures we cited.
 
@@ -130,7 +129,7 @@ And delivered the verdict:
 
 > The Epistemic "Shatter" Point: The AI favors Sophisticated Documentation over Technical Absence.
 
-This represented Gemini functioning as a genuine adversarial auditor of our methodology — identifying the exact class of input that would produce a false positive. The critique led directly to our implementation of the SETL (Structural-Editorial Tension Level) as a first-class signal, measuring the gap between what content *claims* and what infrastructure *does*.
+This represented Gemini functioning as a genuine adversarial auditor of our methodology — identifying the exact class of input that would produce a false positive. The critique validated our existing SETL (Structural-Editorial Tension Level) signal — which measures the gap between what content *claims* and what infrastructure *does* — and demonstrated precisely why the structural channel needs to go deeper than metadata.
 
 ## Cross-Session GEO Does Not Exist
 
