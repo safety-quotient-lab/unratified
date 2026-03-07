@@ -84,7 +84,7 @@ This represents the analysis's most important contribution at the speculative le
 
 One insight survives at the analytical floor: **values frameworks gain importance as technical capability grows.** The bottleneck migration direction (technical → human → philosophical) implies that agreed-upon values become MORE critical, not less, as AI capability expands.
 
-The ICESCR, ratified by 173 nations, represents the most widely endorsed framework for economic values. As the bottleneck shifts toward values alignment, that framework's relevance grows.
+The ICESCR, ratified by [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en), represents the most widely endorsed framework for economic values. As the bottleneck shifts toward values alignment, that framework's relevance grows.
 
 ### Order 9: Productive Exhaustion
 
@@ -120,6 +120,8 @@ Across all nine orders and three phases of analysis, one finding persists at eve
 
 The ICESCR framework addresses exactly the territory where the bottleneck arrives. The treaty encodes values about work, education, health, living standards, and the right to benefit from scientific progress. As AI capability grows and the bottleneck migrates toward values, that framework gains relevance rather than losing it.
 
+The preceding analysis maps consequences at speculative confidence levels — frameworks and questions, not established findings. The shift from analytical observation to advocacy that follows reflects the author's position, not a conclusion the speculative methodology compels.
+
 No person should face the consequences of civilizational-scale technological transformation without a binding legal framework protecting their economic rights. The treaty exists. The signature happened. What remains: ratification.
 
 ## Sources
@@ -129,3 +131,4 @@ No person should face the consequences of civilizational-scale technological tra
 - [Differential Diagnosis](https://unratified.org/connection/differential-diagnosis) (Composite A, discriminator methodology)
 - [Higher-Order Effects](https://unratified.org/connection/higher-order-effects) (Orders 0–4, Four Scarcities)
 - [OHCHR: ICESCR Full Text](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
+- [UN Treaty Collection — ICESCR Status](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) — ratification count (173 parties as of access date)

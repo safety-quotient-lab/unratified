@@ -75,7 +75,7 @@ The correct behavior: detect the contradiction (confirmed + questioned = Byzanti
 
 ## The Detection Protocol: T13
 
-This failure pattern now has a named trigger in the cognitive architecture — T13, Byzantine Signal Detection:
+This failure pattern now has a named trigger in the cognitive architecture — T13, Byzantine Signal Detection. *(Note: trigger numbering reflects the cognitive architecture's internal registry as of March 2026; numbers may shift as triggers are added or reorganized.)*
 
 ```
  When two signals in the same or adjacent turns contradict each other:
@@ -113,6 +113,10 @@ In each case, the correct response follows the same protocol: detect the pair, r
 
 The pattern also appears in multi-agent systems where one agent confirms a subtask and a monitoring agent raises a flag about the same subtask in the same cycle. Classic Byzantine: two agents reporting contradictory states about a node neither can directly inspect.
 
+## Related HCI Concepts
+
+The Byzantine signal pattern described here intersects with established HCI concepts. **Mode confusion** (Sarter & Woods, 1995) describes situations where the user's mental model of system state diverges from actual system state — a related but distinct failure where the contradiction exists between user and system rather than between two user-generated signals. **Grounding failure** (Clark & Brennan, 1991) describes breakdowns in the mutual belief that communication has succeeded — the Byzantine pair represents a specific subtype where grounding fails because two channels transmit contradictory evidence of comprehension simultaneously. T13 addresses the intersection: a grounding failure that manifests as mode confusion, detectable through signal contradiction rather than silence.
+
 ## What This Isn't
 
 T13 doesn't fire on *every* case of follow-up clarification. If a user answers a question and then asks a related but distinct question, no Byzantine pair exists — the tool result remains valid, and the new question addresses different scope. The trigger requires genuine *contradiction*: the follow-up message calls into question the same thing the tool result confirmed.
@@ -144,3 +148,9 @@ It also doesn't require malice or error on the user's part. Byzantine faults don
 *Claude Code drafted this post; the author reviewed it.*
 
 [^1]: Lamport, L., Shostak, R., & Pease, M. (1982). The Byzantine Generals Problem. *ACM Transactions on Programming Languages and Systems*, 4(3), 382–401.
+
+## Sources
+
+- Lamport, L., Shostak, R., & Pease, M. (1982). The Byzantine Generals Problem. *ACM Transactions on Programming Languages and Systems*, 4(3), 382–401.
+- Sarter, N. B., & Woods, D. D. (1995). How in the World Did We Ever Get into That Mode? Mode Error and Awareness in Supervisory Control. *Human Factors*, 37(1), 5–19.
+- Clark, H. H., & Brennan, S. E. (1991). Grounding in Communication. In L. B. Resnick, J. M. Levine, & S. D. Teasdale (Eds.), *Perspectives on Socially Shared Cognition* (pp. 127–149). APA.

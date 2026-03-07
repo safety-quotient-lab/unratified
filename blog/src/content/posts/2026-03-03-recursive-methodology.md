@@ -30,11 +30,11 @@ reviewStatus: "unreviewed"
 
 An AI analyzing AI's impact on economic rights operates in a recursive loop. The analysis examines itself — the tools that produced this site represent the same technology whose economic effects the site evaluates. This self-referential structure demands methodological rigor beyond what a straightforward analysis requires.
 
-This post documents the techniques that emerged during development — not as a template to follow, but as a transparency record so readers can evaluate the methodology and decide whether the conclusions deserve trust.
+This post documents the techniques that emerged during development — not as a validated methodology, but as a transparency record of operational practices. These techniques guided the production of this site's content. They have not undergone independent validation, peer review, or empirical testing beyond their application here. Readers can evaluate whether the practices described merit trust, replication, or further study.
 
 ## Technique 1: The Consensus-or-Parsimony Discriminator
 
-When multiple competing explanations exist for a phenomenon, the [discriminator](https://unratified.org/glossary#discriminator-score) methodology scores each on five dimensions:
+When multiple competing explanations exist for a phenomenon, the [discriminator](https://unratified.org/glossary#discriminator-score) scoring protocol — a novel construct developed for this project — scores each on five dimensions:
 
 | Dimension | Measures | Scale |
 |---|---|---|
@@ -50,7 +50,7 @@ The surviving [Composite A](https://unratified.org/glossary#composite-a) model (
 
 ## Technique 2: Knock-On Analysis (Orders 0–9)
 
-The higher-order effects analysis traces consequences through successive causal chains. Each order carries lower confidence than the one before it. The analysis documents this degradation explicitly, so readers can calibrate their trust proportionally.
+The higher-order effects analysis traces consequences through successive causal chains, drawing on foresight methodology's practice of tracing cascading impacts across multiple orders (see Glenn & Gordon, *Futures Research Methodology*, 2009). Each order carries lower confidence than the one before it. The analysis documents this degradation explicitly, so readers can calibrate their trust proportionally.
 
 The full framework spans ten orders. The first five have undergone complete discriminator analysis; the remaining five await Phase 2.
 
@@ -98,7 +98,7 @@ Two operational constraints shape all content:
 
 **Fair witness**: Observe without interpretation. Report what happened, not why it happened. Distinguish direct observation from inference. When the analysis draws a conclusion, the text marks it as a conclusion rather than presenting it as fact.
 
-**E-prime**: Avoid all forms of "to be" (is, am, are, was, were, be, being, been). This constraint forces active, precise verb choices and prevents the passive constructions that hide agency. "The bill was signed" becomes "The president signed the bill" — making the actor visible.
+**E-prime**: Avoid all forms of "to be" (is, am, are, was, were, be, being, been). This constraint forces active, precise verb choices and prevents the passive constructions that hide agency. "The bill was signed" becomes "The president signed the bill" — making the actor visible. The E-prime discipline draws on D. David Bourland Jr.'s 1965 formalization of a subset of English without the verb "to be," itself rooted in Alfred Korzybski's general semantics (*Science and Sanity*, 1933).
 
 These constraints reduce interpretive bias, not eliminate it. A single-rater analysis (one AI system generating all content) carries inherent limitations regardless of operational constraints. The methodology acknowledges this limitation explicitly.
 
@@ -122,6 +122,8 @@ All of the above techniques share a critical dependency: **real-time access to a
 
 The discriminator requires current data to score empirical support. The knock-on analysis requires observable evidence at each order. The triple-loop fact-check requires independent source verification at each layer. The additive correction principle requires awareness of events that post-date the analysis.
 
+The extent of this dependency remains unquantified. We have not measured how much accuracy degrades without web access compared to with it, nor have we isolated the contribution of web grounding from other factors (prompt design, model capability, domain familiarity). The dependency claim rests on the qualitative observation that web-fetched corrections caught errors that parametric knowledge did not — but we lack controlled data on the frequency or severity of such corrections.
+
 Without web access, these recursive patterns collapse into self-referential loops. The AI would verify its claims against its own training data, score hypotheses against its own parametric knowledge, and trace knock-on effects through its own predictions rather than observable outcomes. The internet-fetch capability transforms recursive prompting from a parlor trick into a verification engine.
 
 This dependency carries a transparency implication: the analysis remains only as reliable as the sources it accesses. Government databases (.gov), international organizations (.org), and academic institutions (.edu) receive preference. Commercial sources receive scrutiny. The sourcing hierarchy itself represents a methodological choice that readers can evaluate and challenge.
@@ -130,8 +132,14 @@ This dependency carries a transparency implication: the analysis remains only as
 
 ## Sources
 
+**Project references** (self-referential — these document the system described above, not independent validation):
 - [Unratified — Differential Diagnosis](https://unratified.org/connection/differential-diagnosis)
 - [Unratified — Higher-Order Effects](https://unratified.org/connection/higher-order-effects)
 - [Unratified — Ratification Counterfactual](https://unratified.org/connection/ratification-counterfactual)
 - [Unratified — Glossary](https://unratified.org/glossary)
 - [Human Rights Observatory](https://observatory.unratified.org)
+
+**External references**:
+- Bourland, D. David Jr. (1965). "A Linguistic Note: Writing in E-Prime." *General Semantics Bulletin*, 32–33. — Foundational formalization of E-prime as a disciplined subset of English.
+- Korzybski, Alfred (1933). *Science and Sanity: An Introduction to Non-Aristotelian Systems and General Semantics*. Institute of General Semantics. — The general semantics framework from which E-prime derives.
+- Glenn, Jerome C. & Gordon, Theodore J. (2009). *Futures Research Methodology — Version 3.0*. The Millennium Project. — Foresight methodology for tracing cascading impacts across multiple analytical orders.

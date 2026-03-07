@@ -1,6 +1,6 @@
 ---
 title: "Cognitive Architecture as Self-Governance Infrastructure for AI Agents"
-summary: "A working AI agent needs more than instructions — it needs triggers, memory hygiene, epistemic checks, and mechanical enforcement. Here's how we built a 13-trigger cognitive architecture for a psychology research agent."
+summary: "A working AI agent needs more than instructions — it needs triggers, memory hygiene, epistemic checks, and mechanical enforcement. Here's how we built a 15-trigger cognitive architecture for a psychology research agent."
 publishedDate: "2026-03-05T16:38:00-06:00"
 author:
   human:
@@ -30,11 +30,11 @@ reviewStatus: "unreviewed"
 
 Every developer who has built a multi-session AI agent encounters the same failure mode: the agent forgets its own rules. Not because the rules disappeared — they sit right there in CLAUDE.md, loaded at every session start. The agent forgets because instructions and enforcement occupy different categories.
 
-An instruction says "check for sycophancy before recommending." An enforcement mechanism *prevents the recommendation from shipping* until the check runs. The gap between these two — between aspiration and infrastructure — determines whether an agent's behavior stays consistent across 15 sessions or drifts by session 3.
+An instruction says "check for sycophancy before recommending." An enforcement mechanism *prevents the recommendation from shipping* until the check runs. The gap between these two — between aspiration and infrastructure — echoes Bertrand Meyer's design-by-contract principle (Meyer, *Object-Oriented Software Construction*, 1988/1997): preconditions, postconditions, and invariants make obligations explicit rather than relying on documentation. The same insight applies here — triggers are contracts, not comments. The gap determines whether an agent's behavior stays consistent across 15 sessions or drifts by session 3.
 
 ## Triggers: When-Then Infrastructure
 
-The psychology agent's cognitive architecture defines 13 triggers, each with a specific firing condition and a set of checks. The design principle: *a principle without a mechanical trigger remains an aspiration, not infrastructure.*
+The psychology agent's cognitive architecture defines 15 triggers (T1–T15), each with a specific firing condition and a set of checks. (The system grew from an initial 13 to 15 through integration work; see the [companion post](/2026-03-05-cognitive-architecture-for-ai-agents) for the full T1–T15 listing.) The design principle: *a principle without a mechanical trigger remains an aspiration, not infrastructure.*
 
 | Fires When | What Runs |
 |---|---|
@@ -99,7 +99,7 @@ The Socratic discipline adds another layer: evidence before conclusion, competin
 
 After 15 sessions of iterative development, several patterns emerged:
 
-**Triggers without hooks drift.** T2 (before response) has 8 checks. The agent runs them when it remembers to. A hook would enforce them mechanically — but nuanced checks like "fair witness" and "e-prime" resist binary automation. The prompt-hook boundary maps to the judgment-verification boundary.
+**Triggers without hooks drift (design hypothesis).** T2 (before response) has 8 checks. The agent runs them when it remembers to. We expect that prompt-only triggers degrade over session length, but this remains a design hypothesis — we have not systematically measured trigger compliance rates across sessions. A hook would enforce them mechanically — but nuanced checks like "fair witness" and "e-prime" resist binary automation. The prompt-hook boundary maps to the judgment-verification boundary.
 
 **Memory pressure drives architectural decisions.** The 200-line constraint forced the separation of volatile state (MEMORY.md) from stable conventions (CLAUDE.md) from canonical infrastructure (docs/cognitive-triggers.md). Each layer has different update frequency, different audiences, and different persistence guarantees. The constraint turned out to produce better architecture than unconstrained design would have.
 
@@ -122,3 +122,4 @@ Whether this approach scales to more complex multi-agent systems remains an open
 - Claude Code documentation: hooks, memory, settings — [Anthropic Claude Code docs](https://docs.anthropic.com/en/docs/claude-code)
 - SWEBOK (Software Engineering Body of Knowledge, IEEE) — reference vocabulary for design, construction, and quality knowledge areas
 - The psychology agent project: [safety-quotient-lab/psychology-agent](https://github.com/safety-quotient-lab/psychology-agent)
+- Bertrand Meyer, *Object-Oriented Software Construction* (Prentice Hall, 1988; 2nd ed. 1997) — design-by-contract: preconditions, postconditions, invariants as executable specifications

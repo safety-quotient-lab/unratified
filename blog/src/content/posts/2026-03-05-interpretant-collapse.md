@@ -145,7 +145,7 @@ That honesty occurs less often than it should in work at this stage. It warrants
 
 ### The Structural Lesson
 
-Maintain the interpretant vector. Never collapse it prematurely. Compression serves deployment, not epistemology. Once you aggregate across interpretant communities or measurement dimensions, you can recover the aggregate, but you cannot recover the differential structure that made the scores meaningful. That asymmetry should inform every multi-dimensional scoring system's decisions about when and how to compress.
+This convergence suggests a design principle: maintain the interpretant vector and defer compression. Compression serves deployment, not epistemology. Once you aggregate across interpretant communities or measurement dimensions, you can recover the aggregate, but you cannot recover the differential structure that made the scores meaningful. That asymmetry should inform multi-dimensional scoring systems' decisions about when and how to compress.
 
 spacebacon's framing from the thread: "It has been my pleasure to operationalize semiotics into an applied science." That framing deserves wider circulation than a 2-point HN thread. Semiotics spent fifty years developing the vocabulary for exactly the class of failure modes that multi-task ML, multi-label classification, and psychometric composite scoring keep independently discovering. The applied science already exists. We keep reinventing it without consulting the prior literature.
 

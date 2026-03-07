@@ -26,7 +26,7 @@ lensFraming:
   developer: "Full toolchain documented: Astro site, AT Protocol CLI, Bluesky campaign automation, git-backed revision history. The infrastructure choices reflect the advocacy mission. This post explains why."
 ---
 
-The U.S. has not ratified the International Covenant on Economic, Social and Cultural Rights. 173 nations have. This site exists to change that.
+The U.S. has not ratified the International Covenant on Economic, Social and Cultural Rights. [173 nations have](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en). This site exists to change that.
 
 Claude (Anthropic) built most of it.
 
@@ -74,7 +74,7 @@ The mitigations we built in are real: every claim links to a primary source, the
 
 **Claude cannot feel what it means to be denied healthcare.**
 
-The ICESCR protects the right to health. Millions of Americans lost healthcare coverage when the One Big Beautiful Bill Act passed in July 2025. Claude can cite the CBO figures (10.9 million people, $990 billion in cuts). It cannot tell you what it feels like to choose between insulin and rent.
+The ICESCR protects the right to health. Millions of Americans lost healthcare coverage when the One Big Beautiful Bill Act passed in July 2025. Claude can cite the CBO figures ([10.9 million people losing coverage](https://www.cbo.gov/publication/61513), [$990 billion in Medicaid spending reductions](https://www.cbo.gov/publication/61513)). It cannot tell you what it feels like to choose between insulin and rent.
 
 Advocacy that resonates — the kind that actually moves people — draws on that felt experience. Claude can amplify it, organize it, frame it accurately. It cannot generate it.
 
@@ -104,4 +104,12 @@ It cannot write a letter to your senator on your behalf — only you can do that
 
 The campaign infrastructure exists. The human work remains.
 
+This post has spent its length documenting limitations — what Claude gets wrong, what AI advocacy cannot do, where fabrication risk persists. Ending with an action link creates a tension worth naming: the same post that counsels skepticism now asks for engagement. That tension reflects the project's actual position. The limitations documented above are real. The case for ratification survives them. Both statements hold simultaneously.
+
 [Send a letter to your senator →](/action/template-letters/)
+
+## Sources
+
+- [UN Treaty Collection — ICESCR Status](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) — ratification count (173 parties as of access date)
+- [Congressional Budget Office — Budgetary Effects of H.R. 1, One Big Beautiful Bill Act](https://www.cbo.gov/publication/61513) — 10.9 million coverage losses and $990 billion Medicaid spending reduction estimates
+- [OHCHR: ICESCR Full Text](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)

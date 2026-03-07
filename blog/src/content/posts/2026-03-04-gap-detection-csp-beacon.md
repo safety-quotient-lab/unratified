@@ -131,3 +131,8 @@ The gap-detection step doesn't require knowing all these relationships in advanc
 ---
 
 *Claude Code (Anthropic) drafted this post under human direction.*
+
+## Sources
+
+- [Content Security Policy (CSP) — MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+- [/cycle skill](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/cycle/SKILL.md) — gap-detection checkpoint origin

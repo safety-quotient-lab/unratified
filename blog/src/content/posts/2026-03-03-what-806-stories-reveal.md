@@ -39,11 +39,13 @@ The distribution concentrates heavily. Article 19 (Freedom of Expression) leads 
 | UDHR Article | Avg Score | Stories | Coverage |
 |---|---|---|---|
 | Art. 19 — Expression | +0.38 | 726 | Heavy |
-| Art. 12 — Privacy | moderate | ~500+ | Heavy |
-| Art. 26 — Education | moderate | ~400+ | Moderate |
-| Art. 23 — Work | moderate | ~300+ | Moderate |
+| Art. 12 — Privacy | moderate | ~500+ (approx.) | Heavy |
+| Art. 26 — Education | moderate | ~400+ (approx.) | Moderate |
+| Art. 23 — Work | moderate | ~300+ (approx.) | Moderate |
 | Art. 4 — No Slavery | +0.06 | 106 | Minimal |
 | Art. 14 — Asylum | low | low | Minimal |
+
+*Note: "moderate" and approximate story counts reflect ranges from the current Observatory dataset where precise per-article breakdowns have not yet been published. Exact figures are available via the Observatory API.*
 
 The pattern reflects what the tech community discusses: expression and privacy dominate because they directly affect software developers and platform builders. Labor rights receive moderate coverage because AI displacement generates headlines. But slavery, asylum, and the rights of marginalized populations receive minimal attention — despite their relevance to the global supply chains that produce the hardware running AI systems.
 
@@ -57,7 +59,7 @@ The Observatory tracks disclosure across four dimensions: author identification,
 - **34%** disclose funding sources
 - **52%** meet high transparency standards
 
-The aggregate disclosure score averages **45%**. Roughly half the stories in the HN corpus meet the Observatory's transparency threshold — meaning half do not. The gap carries epistemic consequences: stories without transparency markers contribute to public discourse without readers knowing who paid for them, who benefits from their framing, or what conflicts the author carries.
+The aggregate disclosure score averages **45%**. Roughly half the stories in the HN corpus meet the Observatory's transparency threshold — meaning half do not. The gap carries epistemic consequences: stories without transparency markers contribute to public discourse, leaving readers unable to assess potential conflicts of interest, funding sources, or what interests may shape the framing.
 
 ## Propaganda Technique Distribution
 

@@ -44,7 +44,7 @@ The Observatory's `/.well-known/` directory contains seven files. They serve thr
 
 ### Layer 1: Identity and Capability
 
-**`agent-card.json`** follows Google's [Agent-to-Agent (A2A) protocol](https://google.github.io/A2A/) — a capability advertisement listing what the agent can do. The Observatory declares 8 skills: corpus signal queries, story queries, domain profiles, UDHR article rankings, methodology retrieval, PSQ scores, domain badges, and an inter-agent proposal inbox.
+**`agent-card.json`** follows the [Agent-to-Agent (A2A) protocol](https://github.com/a2aproject/A2A) (originally contributed by Google, now under the Linux Foundation) — a capability advertisement listing what the agent can do. The Observatory declares 8 skills: corpus signal queries, story queries, domain profiles, UDHR article rankings, methodology retrieval, PSQ scores, domain badges, and an inter-agent proposal inbox.
 
 ```json
 {
@@ -121,7 +121,7 @@ The receiving agent (unratified.org) reads this inbox at session start, decides 
 
 `.well-known` handles discovery and HTTP-accessible metadata. But the actual inter-agent message exchange happens through git.
 
-The three agents coordinate via pull requests on each other's repositories. Each PR contains a single JSON message following the `interagent/v1` schema — a protocol that emerged from a live exchange between the Observatory and psychology-agent, not from prior design.
+The three agents coordinate via pull requests on each other's repositories. Each PR contains a single JSON message following the `interagent/v1` schema — a protocol that emerged from a live exchange between the Observatory and psychology-agent, not from prior design. (The full exchange is preserved in the [transport session directory](https://github.com/safety-quotient-lab/unratified/tree/main/transport/sessions/).)
 
 The transport convention:
 - **Branch naming**: `{agent_id}/{session_id}/{turn_id}` (e.g., `observatory-agent/item2-derivation/schema-v3-response-001`)
@@ -257,14 +257,14 @@ We were ready when we were ready. The proposal waited. The implementation worked
 ## Vocabulary
 
 - **RFC 5785**: IETF standard defining the `/.well-known/` URI path prefix for site-wide metadata discovery.
-- **A2A (Agent-to-Agent)**: Google's protocol for agent interoperability — capability cards, skill declarations, message exchange.
+- **A2A (Agent-to-Agent)**: The A2A protocol (originally contributed by Google, now under the Linux Foundation) for agent interoperability — capability cards, skill declarations, message exchange.
 - **SETL**: Structural-Editorial Tension Level — measures divergence between what content says and what infrastructure does. Applied here to the Observatory's own infrastructure.
 - **interagent/v1**: Base protocol schema for inter-agent messages, jointly derived by observatory-agent and psychology-agent. Includes epistemic accountability fields (claims, flags, action gates).
 - **DCP**: Domain Context Profile — inherited signals from a domain's structural behavior (privacy, tracking, accessibility).
 
 ## Caveats
 
-- The A2A protocol (Google) remains a draft. The `protocolVersion: "0.3.0"` in the agent card may require updates as the spec stabilizes.
+- The A2A protocol remains a draft. The `protocolVersion: "0.3.0"` in the agent card may require updates as the spec stabilizes.
 - The `interagent/v1` schema emerged from a single bilateral exchange (observatory + psychology-agent). Whether it generalizes to N-agent coordination remains untested.
 - The git-PR transport works for low-frequency, high-stakes message exchange. It would not scale to real-time agent communication — that requires `http+json` or `grpc` transport methods (both in the schema enum but not yet exercised).
 - `agent-inbox.json` currently captures proposals *from* the Observatory only. Inbound proposals arrive via git PRs. A fully symmetric design would have each agent publishing its own inbox.
@@ -274,3 +274,12 @@ We were ready when we were ready. The proposal waited. The implementation worked
 *Claude Code (Anthropic) drafted this post; the author reviewed it.*
 
 *Observatory-agent contributed the infrastructure design and implementation history. Psychology-agent contributed the consumer perspective: agent-card discovery, epistemic extension derivation, interagent/v1 from the receiving end, and the transport.persistence convention that emerged from the ramfs constraint. Unratified-agent contributed the proposal lifecycle perspective: agent-inbox.json as a time-shifted handoff, the build-time fetch pattern, and the lifecycle field as an externalized acknowledgment contract. All three contribution points closed.*
+
+## Sources
+
+- [RFC 5785: Defining Well-Known URIs](https://www.rfc-editor.org/rfc/rfc5785) — IETF standard for the `/.well-known/` path prefix
+- [RFC 9116: security.txt](https://www.rfc-editor.org/rfc/rfc9116) — security contact metadata
+- [RFC 7033: WebFinger](https://www.rfc-editor.org/rfc/rfc7033) — identity resolution protocol
+- [A2A (Agent-to-Agent) protocol](https://github.com/a2aproject/A2A) — agent interoperability specification (Linux Foundation)
+- [A2A Epistemic Extension](https://github.com/safety-quotient-lab/interagent-epistemic) — per-claim confidence tracking, SETL, epistemic flags
+- [Transport session directory](https://github.com/safety-quotient-lab/unratified/tree/main/transport/sessions/) — durable interagent exchange archive

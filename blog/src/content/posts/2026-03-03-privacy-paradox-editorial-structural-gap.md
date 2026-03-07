@@ -47,7 +47,7 @@ A site publishes an article defending user privacy. That same site tracks reader
 
 ## Three Provisions with Formal SETL Flags
 
-The Observatory flags provisions where the editorial-structural gap exceeds a significance threshold. Three of 31 UDHR provisions carry formal SETL flags:
+The Observatory flags provisions where the editorial-structural gap exceeds a flagging threshold. Three of 31 UDHR provisions carry formal SETL flags:
 
 1. **Privacy (Article 12)** — Largest gap. Tech platforms advocate for privacy in content while undermining it in infrastructure.
 2. **Expression (Article 19)** — Sites that publish content about free expression also employ content moderation, algorithmic suppression, and platform rules that constrain expression.
@@ -57,11 +57,11 @@ Each flag represents a measurable structural contradiction — not an accusation
 
 ## Why This Connects to the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
 
-The SETL pattern mirrors the ratification gap itself. The United States signed the ICESCR in 1977 — an editorial-channel commitment to economic, social, and cultural rights. Domestically, policy moves in the opposite direction — the [OBBBA](https://unratified.org/glossary#obbba) cut $990 billion (gross) from Medicaid, a structural-channel action that contradicts the signed commitment.
+The SETL pattern mirrors the ratification gap itself. The United States signed the ICESCR in 1977 — an editorial-channel commitment to economic, social, and cultural rights. Domestically, policy moves in the opposite direction — the [OBBBA](https://unratified.org/glossary#obbba) cut an estimated $990 billion (gross, per CBO scoring as of early 2025) from Medicaid, a structural-channel action that contradicts the signed commitment.
 
 The Observatory's SETL metric operationalizes this gap at the level of individual publications. The ICESCR ratification argument operationalizes it at the level of national policy. Both measure the same underlying phenomenon: the distance between what actors say about rights and what they do about them.
 
-Article 12 of the ICESCR protects the right to health, including the conditions that produce health. In the digital context, privacy functions as a health determinant — surveillance stress, data exploitation, and algorithmic profiling all carry measurable psychological and economic consequences. The editorial-structural gap in privacy coverage reflects a broader failure to treat privacy as the health-adjacent right the ICESCR framework recognizes.
+Article 12 of the ICESCR protects the right to health, including the conditions that produce health. In the digital context, some researchers have argued that privacy functions as a social determinant of health — surveillance stress, data exploitation, and algorithmic profiling all carry documented psychological and economic consequences (see Lupton, 2014; Zuboff, 2019). The editorial-structural gap in privacy coverage reflects a broader failure to treat privacy as the health-adjacent right the ICESCR framework recognizes.
 
 > **The observation.** No person should rely on a platform's editorial commitment to privacy when that platform's structural practices undermine it. The SETL metric makes the gap measurable. The ICESCR would make the gap actionable.
 
@@ -78,3 +78,7 @@ The [quality floor](https://unratified.org/glossary#quality-floor) analysis on t
 - [UDHR Article 12 — Privacy](https://www.un.org/en/about-us/universal-declaration-of-human-rights)
 - [Unratified — Article 12 (Right to Health)](https://unratified.org/covenant/articles/article-12)
 - [Unratified — Ratification Counterfactual](https://unratified.org/connection/ratification-counterfactual)
+- [UN Treaty Collection — ICESCR Signatories](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4) — US signed October 5, 1977
+- Congressional Budget Office (CBO). Estimated budgetary effects of OBBBA, 2025. Medicaid gross reduction figures cited as of early 2025 scoring; subsequent CBO revisions may update totals.
+- Lupton, D. (2014). Health promotion in the digital era: a critical commentary. *Health Promotion International*, 30(1), 174–183.
+- Zuboff, S. (2019). *The Age of Surveillance Capitalism*. PublicAffairs.

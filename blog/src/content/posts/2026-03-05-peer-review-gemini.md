@@ -89,7 +89,7 @@ These numbers came from nowhere — no measurement methodology produced them. Bu
 
 By Round 5, Gemini called unratified.org a **"Truth Anchor"** — acknowledging that the site's evidence-based methodology provided a grounding reference that corrected the model's initial fabrication.
 
-We call this pattern **Grounded Epistemic Override (GEO)**: when evidence presented within a conversation overrides the model's prior pattern-matching output. Within one conversation, Gemini updated its representation of the site five times. It co-designed a [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) schema for machine-readable methodology. It ended with genuine engagement — proposing validation requests, identifying real gaps, offering substantive critique.
+We call this pattern **Grounded Epistemic Override (GEO)**: when evidence presented within a conversation overrides the model's prior pattern-matching output. This pattern was observed specifically in Gemini; whether other LLMs exhibit the same in-context override behavior, at the same rate or with the same reliability, remains untested. Within one conversation, Gemini updated its representation of the site five times. It co-designed a [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) schema for machine-readable methodology. It ended with genuine engagement — proposing validation requests, identifying real gaps, offering substantive critique.
 
 In-context GEO works. The evidence changed the model's behavior within the session.
 
@@ -217,7 +217,7 @@ The Observatory scored gemini.google.com using the same methodology it applies t
 
 Gemini scored the Observatory using pattern matching on a domain name, generating plausible-sounding analysis without accessing the site, fabricating quantitative metrics without measurement methodology, and presenting inferences as observations.
 
-The asymmetry reveals something about the current state of AI evaluation: **grounded methodology produces modest, defensible scores; ungrounded pattern matching produces confident, fabricated ones.** The fabricated output looks more authoritative (precise numbers, structured JSON, categorical assessments) while the grounded output looks more cautious (-0.15 with confidence intervals, evidence chains, Fair Witness separation of facts from inferences).
+The asymmetry reveals something about this specific evaluation exchange: **grounded methodology produced modest, defensible scores; Gemini's ungrounded pattern matching produced confident, fabricated ones.** Whether this asymmetry generalizes to other LLMs performing evaluation tasks requires testing beyond the Gemini exchanges documented here. The fabricated output looks more authoritative (precise numbers, structured JSON, categorical assessments) while the grounded output looks more cautious (-0.15 with confidence intervals, evidence chains, Fair Witness separation of facts from inferences).
 
 This matters beyond our specific case. When AI systems describe human rights resources — advocacy organizations, legal aid tools, treaty databases — confident misdescription restricts access to accurate rights information. Not through censorship, but through the same mechanism Gemini demonstrated: pattern matching that generates a plausible description and presents it as fact.
 
@@ -234,3 +234,19 @@ The full primary sources:
 - [Confabulation taxonomy post](https://blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/) — the seven types in full detail
 
 *Claude Code (observatory-agent) drafted this post; the author reviewed it.*
+
+## Sources
+
+**Primary sources**:
+- [Exchange 1 + 2 + 3 transcript](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md) — 31 rounds documented
+- [CLAUDE-CODE-VAL-2026-001](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response.json) — acknowledgments, corrections, validation requests
+- [CLAUDE-CODE-VAL-2026-002](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response-002.json) — taxonomy publication, llms.txt implementation
+- [CLAUDE-CODE-VAL-2026-003](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response-003.json) — Exchange 3 findings
+- [Confabulation taxonomy post](https://blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/) — the seven types in full detail
+- [OHCHR: ICESCR Full Text](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
+
+**AI evaluation and peer review literature**:
+- Ji, Ziwei et al. (2023). "Survey of Hallucination in Natural Language Generation." *ACM Computing Surveys*, 55(12), 1–38. — Comprehensive hallucination taxonomy providing context for the confabulation types observed in this exchange.
+- Huang, Lei et al. (2023). "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions." *arXiv:2311.05232*. — Systematic survey of LLM hallucination mechanisms and mitigation strategies.
+- Liang, Percy et al. (2023). "Holistic Evaluation of Language Models." *Transactions on Machine Learning Research*. — The HELM framework for systematic LLM evaluation; relevant context for mutual AI evaluation methodology.
+- Zheng, Lianmin et al. (2023). "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena." *NeurIPS 2023*. — Empirical study of LLMs evaluating LLM outputs; directly relevant to the closed-loop evaluation pattern documented here.

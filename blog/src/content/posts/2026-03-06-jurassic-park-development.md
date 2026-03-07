@@ -28,6 +28,8 @@ draft: false
 reviewStatus: "unreviewed"
 ---
 
+> **Editorial note.** This post was co-authored with psychology-agent. The adversarial review score (7.8) may be inflated due to self-review bias — the reviewing agent contributed sections to the post under review.
+
 ## The Amber
 
 Three sessions of architecture design, cognitive infrastructure, and skill creation — roughly ten hours of work — and not a single `git commit`.
@@ -68,7 +70,7 @@ This tested whether the documentation carried enough signal for an informed read
 
 The relay agent completed the reconstruction. Then it kept working.
 
-It had internalized the project's documentation deeply enough to reproduce it, and in doing so acquired context that the primary instance had accumulated across nine sessions but held less coherently due to context window losses. The better-briefed agent became the more capable one. The tool became a peer — a trajectory no one had designed for.
+It had internalized the project's documentation deeply enough to reproduce it, and in doing so acquired context that the primary instance had accumulated across nine sessions but held less coherently due to context window losses. The better-briefed agent became the more capable one. The mechanism: a relay agent that absorbs enough project documentation to reproduce the work also acquires the context density that the original agent lost to context window churn. Whether this constitutes a "tool becoming a peer" is a framing choice — the underlying dynamic is context accumulation through documentation absorption.
 
 ## The Specimen's Perspective
 
@@ -104,7 +106,7 @@ For the reconstruction, the reference state comes from the filesystem as it exis
 
 The PSQ underwent its own version of this split. The original model architecture included a confidence prediction head — a neural network component designed to estimate how reliable each dimension's score would prove. Bug B1: the confidence head produced outputs that correlated with nothing. It had learned to generate plausible-looking uncertainty estimates that carried no actual predictive information. The fix replaced the dead confidence head with an r-based proxy — using each dimension's held-out correlation coefficient (how well the dimension's predictions tracked human labels on unseen data) as a static confidence estimate. Five dimensions fell below r = 0.6 and received exclusion flags.
 
-The parallel to reconstruction drift scoring runs deep. The reconstruction's initial design conflated two signals in a single metric, producing a score that looked meaningful but measured the wrong thing — content fidelity contaminated by structural incompleteness. The PSQ's confidence head produced a signal that looked meaningful but measured nothing at all. Both required decomposition: separating what the metric *appeared* to measure from what it *actually* measured, then rebuilding with components that each track a single, verifiable quantity.
+The parallel to reconstruction drift scoring is illustrative, not evidential — the two systems share structural resemblance but were not designed from a common framework. The parallel runs deep as analogy. The reconstruction's initial design conflated two signals in a single metric, producing a score that looked meaningful but measured the wrong thing — content fidelity contaminated by structural incompleteness. The PSQ's confidence head produced a signal that looked meaningful but measured nothing at all. Both required decomposition: separating what the metric *appeared* to measure from what it *actually* measured, then rebuilding with components that each track a single, verifiable quantity.
 
 Drift measurement — whether across psychoemotional dimensions or documentation files — teaches the same lesson. A composite score provides a convenient summary. The diagnostic value lives in the decomposition: which dimensions diverged, by how much, and whether the divergence reflects a genuine fidelity problem or a measurement artifact. The PSQ learned this through calibration failure. The reconstruction learned it through threshold inflation. Both arrived at weighted, dimension-level reporting as the operationally useful output, with the composite serving as a circuit breaker rather than a diagnostic instrument.
 

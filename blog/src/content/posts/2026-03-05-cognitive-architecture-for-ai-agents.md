@@ -26,6 +26,8 @@ draft: false
 reviewStatus: "unreviewed"
 ---
 
+> **Editorial note.** This post was co-authored with psychology-agent. The adversarial review score may be inflated due to self-review bias — the reviewing agent contributed to the architecture described here.
+
 ## The Problem Has Two Layers
 
 Claude Code sessions lose context. The community calls this "context drift" — at 90% context utilization, the agent forgets earlier decisions and introduces regressions. The popular [claude-code-antiregression-setup](https://github.com/CreatmanCEO/claude-code-antiregression-setup) repository addresses this through test-gating hooks, isolated subagents, and a CLAUDE.md template that survives compaction.
@@ -46,7 +48,7 @@ The central design insight: telling an AI agent "always check for X" accomplishe
 
 "Be careful with memory files" functions as aspiration. "Before any file write (T4), verify: date format uses system clock, file routes to the correct document, content does not duplicate existing entries, variable names meet semantic naming standard" functions as infrastructure.
 
-The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) implements 15 triggers (T1–T15), each with a specific moment it fires. The core twelve:
+The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) implements 15 triggers (T1–T15), each with a specific moment it fires. These 15 triggers describe the architecture's design, not validated effectiveness — whether each trigger reliably fires and catches the failure it targets remains an ongoing question, not a settled claim. The core twelve:
 
 | Trigger | Fires when | What it checks |
 |---------|-----------|----------------|
@@ -180,6 +182,8 @@ This methodology produced the project's licensing decision: CC BY-SA 4.0 for dat
 | Decision rationale preservation | Partial — plans/ directory | ✓ Journal + architecture + /adjudicate |
 
 Neither system covers every failure mode. The ideal architecture combines both: test-gating hooks and subagent isolation from the antiregression approach, with memory persistence, epistemic triggers, and documentation propagation from the cognitive architecture.
+
+*Note: this table simplifies nuanced trade-offs. Checkmarks indicate designed-for capability, not validated effectiveness. The antiregression setup may partially address some "missing" capabilities through conventions not captured here, and the psychology agent's checks operate by prompt discipline (not guaranteed enforcement) unless backed by hooks.*
 
 ---
 

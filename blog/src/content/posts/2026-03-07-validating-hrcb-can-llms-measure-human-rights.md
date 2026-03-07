@@ -167,3 +167,21 @@ All validation findings with full statistical details: [github.com/safety-quotie
 ---
 
 *Disclosure: Claude Code (Opus 4.6) drafted this post. The author reviewed it. The Human Rights Observatory evaluates content using multiple LLM providers; this post describes the validation of that process. All statistical claims in this post were verified via Wolfram Alpha (37/37 confirmed). The observatory source code, methodology, and data are available at [github.com/safety-quotient-lab/observatory](https://github.com/safety-quotient-lab/observatory) under Apache 2.0 (code) and CC BY-SA 4.0 (methodology/data).*
+
+## Sources
+
+**Project references**:
+- [Human Rights Observatory — Methodology](https://observatory.unratified.org/methodology)
+- [Observatory API — OpenAPI spec](https://observatory.unratified.org/api/v1/openapi.json)
+- [Validation findings](https://github.com/safety-quotient-lab/observatory/tree/main/findings)
+- [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights)
+
+**Psychometric and measurement references**:
+- American Educational Research Association, American Psychological Association, & National Council on Measurement in Education (2014). *Standards for Educational and Psychological Testing*. AERA. — The authoritative framework for construct validity evidence, including known-groups discrimination, discriminant validity, and inter-rater reliability standards referenced in this validation.
+- Krippendorff, Klaus (2018). *Content Analysis: An Introduction to Its Methodology* (4th ed.). SAGE. — Standard reference for inter-rater reliability in content analysis; the Krippendorff's alpha benchmark (0.40–0.80) cited in Test 4 derives from this work.
+- Messick, Samuel (1995). "Validity of Psychological Assessment." *American Psychologist*, 50(9), 741–749. — Foundational framework for unified construct validity, including the consequential dimension referenced in the "What HRCB Does Not Yet Prove" section.
+- Landis, J. Richard & Koch, Gary G. (1977). "The Measurement of Observer Agreement for Categorical Data." *Biometrics*, 33(1), 159–174. — Kappa benchmarks for classification agreement interpretation.
+
+**Human rights measurement literature**:
+- Landman, Todd (2004). "Measuring Human Rights: Principle, Practice, and Policy." *Human Rights Quarterly*, 26(4), 906–931. — Methodological challenges in quantifying human rights compliance, relevant to HRCB's construct design.
+- Cingranelli, David L. & Richards, David L. (2010). "The Cingranelli-Richards (CIRI) Human Rights Data Project." *Human Rights Quarterly*, 32(2), 401–424. — Established human rights measurement dataset; comparative reference for HRCB's approach to rights scoring.

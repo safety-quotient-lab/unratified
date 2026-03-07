@@ -40,7 +40,7 @@ Remove any of those sources, and the analysis degrades. Not hypothetically. Demo
 
 The project's [glossary](https://unratified.org/glossary) contains 49 terms across 8 categories. During the latest development cycle, we validated 19 of those terms against their authoritative external sources. The validation checked four axes: factual accuracy, scope alignment, completeness, and whether any reinterpretation appeared intentional.
 
-Results: zero critical factual errors. Five corrections applied.
+Results: zero critical factual errors. Five corrections applied. (The counterfactual — whether a closed-web scenario would have prevented these corrections — was not tested. The claim is that open access *enabled* verification, not that closed access would have made verification impossible through other means.)
 
 Here's what those corrections looked like in practice:
 
@@ -73,7 +73,7 @@ Open protocols create composable systems. Closed protocols create dependency cha
 
 The project's [differential diagnosis](https://unratified.org/connection/differential-diagnosis) identified seven hypotheses for how AI reshapes economic activity. Two of them apply directly to the open web:
 
-**H3 (Jevons Explosion)**: When efficiency improvements reduce the effective cost of a resource, demand for that resource explodes rather than decreases. Applied to agents and the web: as agents proliferate, their demand for web resources — government databases, academic repositories, reference materials — grows exponentially. Every agent that verifies claims, researches topics, or builds structured data consumes web resources at a scale no individual human would.
+**H3 (Jevons Explosion)**: When efficiency improvements reduce the effective cost of a resource, demand for that resource explodes rather than decreases. *Note: the application of the Jevons Paradox to agent-driven web traffic is a novel hypothesis from this project's differential diagnosis, not an established finding.* Applied to agents and the web: as agents proliferate, their demand for web resources — government databases, academic repositories, reference materials — grows exponentially. Every agent that verifies claims, researches topics, or builds structured data consumes web resources at a scale no individual human would.
 
 **H6 (Quality Erosion)**: More output produced at lower cost leads to lower average quality. Applied to agents and the web: if the response to H3's demand explosion involves restricting access — CAPTCHAs, authentication walls, aggressive rate limiting, robots.txt blanket blocks — agents lose the grounding that makes their output reliable. The quality erosion that follows does not affect only agents. It affects every human who consumes agent-generated analysis, policy briefs, research summaries, and recommendations.
 

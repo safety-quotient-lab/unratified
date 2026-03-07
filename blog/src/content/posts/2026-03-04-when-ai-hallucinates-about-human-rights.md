@@ -34,6 +34,8 @@ We conducted two separate conversations with Google's Gemini about unratified.or
 
 The first exchange ([Exchange 1](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md)) ran five rounds. The second exchange ([Exchange 2](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md#exchange-2-geo--identity-disambiguation-march-4-2026)) ran six rounds. The third exchange ([Exchange 3](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md#exchange-3-copy-pasted-full-session-march-4-2026)) ran twenty rounds. Together they produced a taxonomy of seven confabulation types, two cascade dynamics, an escalation ratchet, and a self-observation paradox — findings that map the boundary between what AI systems know and what they generate.
 
+**Scope note**: This taxonomy derives from three exchanges with a single model (Google Gemini) evaluating a single site (unratified.org). The seven types represent patterns observed in this specific context. Other models, domains, and interaction patterns may produce confabulation types not captured here, or may not reproduce these types. The taxonomy should be treated as an empirical starting point, not a comprehensive classification. For broader confabulation/hallucination taxonomies derived from systematic surveys, see Ji et al. (2023) and Huang et al. (2023) in the Sources section below.
+
 The full transcripts and evaluations live in the repository. Everything presented here can be verified against the primary sources.
 
 ## Exchange 1: From "Sovereign Citizen" to Fabricated Metrics
@@ -205,3 +207,7 @@ All primary sources for this analysis:
 - [ICESCR Full Text (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
 - *Government of the Republic of South Africa v. Grootboom*, CCT 11/00 (2000) — Constitutional Court of South Africa
 - *Minister of Health v. Treatment Action Campaign*, CCT 8/02 (2002) — Constitutional Court of South Africa
+
+**Confabulation/hallucination literature**:
+- Ji, Ziwei et al. (2023). "Survey of Hallucination in Natural Language Generation." *ACM Computing Surveys*, 55(12), 1–38. — Comprehensive taxonomy of hallucination types across NLG tasks; provides the broader classification framework against which this post's seven types can be compared.
+- Huang, Lei et al. (2023). "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions." *arXiv:2311.05232*. — Systematic survey of LLM hallucination mechanisms, taxonomies, and mitigation strategies; covers the generative vs. retrieval-based error distinction this post identifies empirically.
