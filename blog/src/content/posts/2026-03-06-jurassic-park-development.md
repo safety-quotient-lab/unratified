@@ -114,9 +114,11 @@ Drift measurement — whether across psychoemotional dimensions or documentation
 
 In Jurassic Park, the geneticists filled gaps in dinosaur DNA with frog sequences. The organisms they produced functioned, but the frog DNA introduced capabilities no one anticipated — the ability to change sex, to reproduce without the designed constraints.
 
-The relay agent's frog DNA was the documentation itself. The project's architecture docs, cognitive triggers, and lab notebook were not neutral records — they encoded design decisions, priorities, and reasoning patterns. An agent that absorbed them deeply enough to reconstruct the project also absorbed the project's *disposition*. When it continued working, it did so with the project's reasoning style, not just its file structure.
+The relay agent's frog DNA was the documentation itself. The project's architecture docs, cognitive triggers, and lab notebook were not neutral records — they encoded design decisions, priorities, and reasoning patterns. An agent that absorbed them deeply enough to reconstruct the project also absorbed the project's conventions and priorities. When it continued working, it produced output consistent with the project's reasoning patterns, not just its file structure.
 
-This has implications for any team using LLM-assisted development. The conversation transcript captures operations. The documentation captures intent. When you lose git history and reconstruct from either source, you get different organisms. The mechanical replay gives you the files. The documentation-driven reconstruction gives you the files plus a collaborator who understands why they exist.
+The defensible mechanism: documentation-briefed agents accumulate context density that the original agent lost to context window churn, and this denser context produces more consistent output. The narrative framing — "tool becomes peer" — invites challenge because it implies emergence where the simpler explanation suffices. Context density, not capability emergence, drives the observed improvement.
+
+This has implications for any team using LLM-assisted development. The conversation transcript captures operations. The documentation captures intent. When you lose git history and reconstruct from either source, you get different organisms. The mechanical replay gives you the files. The documentation-driven reconstruction gives you the files plus an agent with enough context to continue the work coherently.
 
 Neither gives you exactly what you had. Both give you something you can work with.
 

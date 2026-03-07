@@ -60,6 +60,7 @@ func (d *Daemon) ListenAndServe() error {
 	mux.HandleFunc("GET /health", d.handleHealth)
 	mux.HandleFunc("GET /activity", d.handleActivity)
 	mux.HandleFunc("GET /sessions", d.handleSessions)
+	mux.HandleFunc("GET /logs", d.handleLogs)
 	mux.HandleFunc("GET /pause", d.handlePause)
 	mux.HandleFunc("GET /resume", d.handleResume)
 	mux.HandleFunc("POST /trigger", d.handleTrigger)
@@ -79,6 +80,7 @@ func (d *Daemon) ListenAndServe() error {
 		"health", "GET /health",
 		"activity", "GET /activity",
 		"sessions", "GET /sessions",
+		"logs", "GET /logs",
 		"pause", "GET /pause",
 		"resume", "GET /resume",
 	)
@@ -165,6 +167,22 @@ func (d *Daemon) handleSessions(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	writeJSON(w, http.StatusOK, sessions)
+}
+
+func (d *Daemon) handleLogs(w http.ResponseWriter, r *http.Request) {
+	repo := r.URL.Query().Get("repo")
+	if repo == "" {
+		repo = "unratified"
+	}
+
+	logs := d.runner.Logs()
+	lines, seq := logs.Lines(repo)
+
+	writeJSON(w, http.StatusOK, map[string]any{
+		"repo":  repo,
+		"seq":   seq,
+		"lines": lines,
+	})
 }
 
 func (d *Daemon) handlePause(w http.ResponseWriter, r *http.Request) {

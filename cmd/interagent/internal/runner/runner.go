@@ -1,8 +1,10 @@
 package runner
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
+	"io"
 	"log/slog"
 	"os"
 	"os/exec"
@@ -11,6 +13,7 @@ import (
 	"time"
 
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/budget"
+	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/logbuf"
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/store"
 )
 
@@ -20,6 +23,9 @@ type RepoConfig map[string]string
 // AllowedPrompts lists prompts that can run via /trigger.
 var AllowedPrompts = map[string]bool{
 	"/sync":           true,
+	"/iterate":        true,
+	"/iterate quick":  true,
+	"/iterate deep":   true,
 	"/hunt":           true,
 	"/hunt quick":     true,
 	"/hunt deep":      true,
@@ -34,16 +40,18 @@ type Runner struct {
 	repos  RepoConfig
 	budget *budget.Checker
 	store  *store.Store
+	logs   *logbuf.Ring
 	logDir string
 	log    *slog.Logger
 }
 
 // New creates a runner.
-func New(repos RepoConfig, b *budget.Checker, s *store.Store, logDir string, log *slog.Logger) *Runner {
+func New(repos RepoConfig, b *budget.Checker, s *store.Store, logs *logbuf.Ring, logDir string, log *slog.Logger) *Runner {
 	return &Runner{
 		repos:  repos,
 		budget: b,
 		store:  s,
+		logs:   logs,
 		logDir: logDir,
 		log:    log,
 	}
@@ -61,6 +69,11 @@ func (r *Runner) Repos() []string {
 // RepoPath returns the local path for a repo, or empty string if unknown.
 func (r *Runner) RepoPath(repo string) string {
 	return r.repos[repo]
+}
+
+// Logs returns the shared log ring buffer.
+func (r *Runner) Logs() *logbuf.Ring {
+	return r.logs
 }
 
 // Trigger attempts to run claude with the given prompt in the repo's directory.
@@ -82,7 +95,6 @@ func (r *Runner) Trigger(repo, prompt, reason string) {
 	// Check budget
 	if err := r.budget.Check(repo); err != nil {
 		errMsg := err.Error()
-		// If blocked because in-flight, queue instead of dropping
 		if r.budget.IsInFlight(repo) && strings.Contains(errMsg, "in flight") {
 			r.budget.Enqueue(repo, prompt, reason)
 			r.log.Info("queued", "repo", repo, "prompt", prompt)
@@ -131,10 +143,18 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 
 	cmd := exec.Command("claude", "-p", prompt,
 		"--allowedTools", "Read,Edit,Write,Bash,Glob,Grep",
-		"--output-format", "json",
+		"--output-format", "stream-json",
 	)
 	cmd.Dir = clonePath
-	cmd.Stdout = f
+
+	// Pipe stdout so we can parse stream-json and tee to log file
+	stdoutPipe, err := cmd.StdoutPipe()
+	if err != nil {
+		f.Close()
+		r.log.Error("stdout pipe", "error", err)
+		r.store.Emit(store.Event{Type: "error", Repo: repo, Detail: err.Error(), Prompt: prompt})
+		return
+	}
 	cmd.Stderr = f
 
 	// Build clean env without CLAUDECODE
@@ -146,6 +166,13 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	}
 	env = append(env, "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1")
 	cmd.Env = env
+
+	// Clear any previous log buffer and emit the prompt as the first line
+	r.logs.Clear(repo)
+	r.logs.Append(repo, logbuf.Line{
+		Text: fmt.Sprintf("> %s  [%s in %s]", prompt, repo, clonePath),
+		Kind: "prompt",
+	})
 
 	if err := cmd.Start(); err != nil {
 		f.Close()
@@ -166,6 +193,14 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 		"daily", fmt.Sprintf("%d/%d", dailyCount, r.budget.Config().MaxSyncsPerDay),
 		"hourly", fmt.Sprintf("%d/%d", hourlyCount, r.budget.Config().MaxSyncsPerHour),
 	)
+
+	// Parse stream-json from stdout in a goroutine
+	sessionID := ""
+	streamDone := make(chan string, 1)
+	go func() {
+		sid := r.parseStream(repo, stdoutPipe, f)
+		streamDone <- sid
+	}()
 
 	// Wait with timeout
 	timeout := time.Duration(r.budget.Config().TimeoutSeconds) * time.Second
@@ -191,15 +226,15 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 			Prompt: prompt,
 		})
 		cmd.Process.Kill()
-		<-done // Wait for process to actually exit
+		<-done
 		rc = -9
 	}
 
+	// Wait for stream parser to finish
+	sessionID = <-streamDone
+
 	f.Close()
 	r.budget.ClearInFlight(repo)
-
-	// Extract session ID from JSON output
-	sessionID := extractSessionID(logFile)
 
 	status := "OK"
 	if rc != 0 {
@@ -240,16 +275,133 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	}
 }
 
-func extractSessionID(logFile string) string {
-	data, err := os.ReadFile(logFile)
-	if err != nil {
-		return ""
+// parseStream reads stream-json lines from claude stdout, accumulates text deltas
+// into coherent lines, tees raw data to the log file, and returns the session_id.
+func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) string {
+	scanner := bufio.NewScanner(stdout)
+	scanner.Buffer(make([]byte, 256*1024), 1024*1024) // 1MB max line
+
+	var sessionID string
+	var textBuf strings.Builder // accumulates text deltas between flushes
+	inToolUse := false
+
+	flushText := func() {
+		if textBuf.Len() == 0 {
+			return
+		}
+		// Split accumulated text into lines and emit each
+		text := textBuf.String()
+		textBuf.Reset()
+		for _, line := range strings.Split(text, "\n") {
+			if line == "" {
+				continue
+			}
+			r.logs.Append(repo, logbuf.Line{Text: line, Kind: "assistant"})
+		}
 	}
-	var output struct {
-		SessionID string `json:"session_id"`
+
+	for scanner.Scan() {
+		raw := scanner.Bytes()
+
+		// Tee to log file
+		logFile.Write(raw)
+		logFile.Write([]byte("\n"))
+
+		// Parse the stream-json event
+		var ev streamEvent
+		if err := json.Unmarshal(raw, &ev); err != nil {
+			r.logs.Append(repo, logbuf.Line{Text: string(raw), Kind: "raw"})
+			continue
+		}
+
+		switch ev.Type {
+		case "content_block_start":
+			if ev.ContentBlock.Type == "tool_use" {
+				flushText()
+				inToolUse = true
+				r.logs.Append(repo, logbuf.Line{
+					Text: fmt.Sprintf("[tool: %s]", ev.ContentBlock.Name),
+					Kind: "tool_use",
+				})
+			} else if ev.ContentBlock.Type == "text" {
+				inToolUse = false
+			}
+
+		case "content_block_delta":
+			if ev.Delta.Type == "text_delta" && ev.Delta.Text != "" {
+				textBuf.WriteString(ev.Delta.Text)
+				// Flush on newlines so we get real-time line output
+				if strings.Contains(ev.Delta.Text, "\n") {
+					flushText()
+				}
+			} else if ev.Delta.Type == "input_json_delta" && ev.Delta.PartialJSON != "" && inToolUse {
+				// Accumulate tool input for display
+				textBuf.WriteString(ev.Delta.PartialJSON)
+				if strings.Contains(ev.Delta.PartialJSON, "\n") {
+					// Flush tool input lines
+					text := textBuf.String()
+					textBuf.Reset()
+					for _, line := range strings.Split(text, "\n") {
+						if line == "" {
+							continue
+						}
+						r.logs.Append(repo, logbuf.Line{Text: "  " + line, Kind: "tool_input"})
+					}
+				}
+			}
+
+		case "content_block_stop":
+			flushText()
+
+		case "message_start":
+			// Log the model and role
+			if ev.Message.Role != "" {
+				r.logs.Append(repo, logbuf.Line{
+					Text: fmt.Sprintf("[%s message, model: %s]", ev.Message.Role, ev.Message.Model),
+					Kind: "system",
+				})
+			}
+
+		case "message_stop":
+			flushText()
+
+		case "result":
+			flushText()
+			if ev.SessionID != "" {
+				sessionID = ev.SessionID
+			}
+			costStr := ""
+			if ev.CostUSD > 0 {
+				costStr = fmt.Sprintf(", cost: $%.4f", ev.CostUSD)
+			}
+			r.logs.Append(repo, logbuf.Line{
+				Text: fmt.Sprintf("[done: session=%s%s]", ev.SessionID, costStr),
+				Kind: "system",
+			})
+		}
 	}
-	if err := json.Unmarshal(data, &output); err != nil {
-		return ""
-	}
-	return output.SessionID
+
+	// Final flush
+	flushText()
+	return sessionID
+}
+
+// streamEvent represents a stream-json line from claude.
+type streamEvent struct {
+	Type      string `json:"type"`
+	SessionID string `json:"session_id,omitempty"`
+	CostUSD   float64 `json:"cost_usd,omitempty"`
+	Delta     struct {
+		Type        string `json:"type"`
+		Text        string `json:"text"`
+		PartialJSON string `json:"partial_json"`
+	} `json:"delta,omitempty"`
+	ContentBlock struct {
+		Type string `json:"type"`
+		Name string `json:"name"`
+	} `json:"content_block,omitempty"`
+	Message struct {
+		Role  string `json:"role"`
+		Model string `json:"model"`
+	} `json:"message,omitempty"`
 }

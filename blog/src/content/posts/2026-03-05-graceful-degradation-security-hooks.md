@@ -42,7 +42,7 @@ Fail-closed security makes sense when all-or-nothing represents the actual threa
 
 When the ML layer goes down, the system still has 5 functioning detection layers. The marginal risk increase from missing ML is real but bounded. The developer experience cost of prompting on every tool use is unbounded — it persists for the entire session, every session, until someone fixes the daemon.
 
-Developers respond predictably: they disable the hook entirely. The security posture drops from 5/6 layers to 0/6 layers. Fail-closed, applied to a partially-available system, produces worse outcomes than graceful degradation.
+Developers respond predictably: they disable the hook entirely. This pattern — security mechanisms abandoned when they impose friction — appears consistently in usability research ([Whitten & Tygar 1999](https://www.usenix.org/conference/8th-usenix-security-symposium/why-johnny-cant-encrypt-usability-evaluation-pgp-50); [Herley 2009](https://www.microsoft.com/en-us/research/publication/so-long-and-no-thanks-for-the-externalities-the-rational-rejection-of-security-advice-by-users/)). The security posture drops from 5/6 layers to 0/6 layers. Fail-closed, applied to a partially-available system, produces worse outcomes than graceful degradation.
 
 ## The Wrapper Pattern
 

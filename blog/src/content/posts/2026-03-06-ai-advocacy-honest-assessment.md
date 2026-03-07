@@ -80,6 +80,8 @@ Advocacy that resonates — the kind that actually moves people — draws on tha
 
 ## What This Means for Human Rights Work
 
+*The preceding sections document observed limitations. What follows draws implications for practice — a shift from analysis to advocacy framing.*
+
 The pattern that emerges from this project matches what the ICESCR analysis itself predicts: AI removes the technical and logistical constraints on advocacy, while leaving the human constraints fully in place.
 
 The analysis found that as AI handles cognitive tasks, the bottleneck migrates toward judgment, relationship, and values. The same applies here. Claude handles the 1am research session, the campaign copy draft, the hashtag strategy. The humans handle the senator's office, the community meeting, the decision about what to fight for and why.

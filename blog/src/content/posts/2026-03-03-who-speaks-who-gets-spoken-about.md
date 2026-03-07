@@ -43,6 +43,8 @@ Marginalized communities show a similar asymmetry: 13 speaker slots versus 92 su
 | Marginalized communities | 13 | 92 | 1:7 |
 | Individuals (general) | dominant | dominant | ~1:1 |
 
+**Methodological note:** "Speaker" means a story quotes, interviews, or centers the perspective of someone from that category. "Subject" means the story discusses that category without giving its members a voice. Classification uses the Observatory's [HRCB evaluation pipeline](https://observatory.unratified.org/signals), which tags stakeholder representation per story through structured evaluation. The absolute speaker counts remain small (n=13 for both workers and marginalized communities across 806 stories), which limits the precision of the ratios — a few additional speaker slots would shift the ratios meaningfully. The pattern (subjects outnumber speakers by large margins) holds across the corpus, but the exact multipliers carry uncertainty proportional to the small speaker denominators.
+
 The asymmetry carries a specific consequence: when economic policy debates draw on tech discourse as input, the voices most affected by those policies contribute the least to shaping them.
 
 ## The [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) Connection

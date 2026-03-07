@@ -28,7 +28,7 @@ lensFraming:
 
 The first wave of AI job displacement arrived quietly. Automated scheduling replaced human coordinators. Document review software replaced junior paralegals. Customer service chatbots replaced phone representatives. Each substitution looked, in isolation, like a productivity gain.
 
-The second wave moves faster and reaches higher. AI systems now draft contracts, generate financial analyses, write code, synthesize research, and produce marketing copy. The workers most exposed — educated, urban, salaried — are not the workers American labor law was built to protect.
+The second wave moves faster and reaches higher. AI systems now draft contracts, generate financial analyses, write code, synthesize research, and produce marketing copy. [Research estimates that roughly 80% of the U.S. workforce holds jobs where at least 10% of tasks face exposure to large language models](https://arxiv.org/abs/2303.10130) (Eloundou et al. 2023). The workers most exposed — educated, urban, salaried — are not the workers American labor law was built to protect.
 
 And the U.S. has no binding legal framework for how it must respond.
 
@@ -42,11 +42,11 @@ None of them is permanent. Congress can lower the minimum wage, narrow unemploym
 
 The International Covenant on Economic, Social and Cultural Rights creates a different kind of floor: one that governments must actively defend, justify any retreat from, and report on publicly to an international monitoring body. The ICESCR does not make cuts illegal. It makes them visible, accountable, and subject to international review.
 
-173 countries operate under that accountability. The U.S. does not.
+[173 countries](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) operate under that accountability. The U.S. does not.
 
 ## The Workers AI Displaces First
 
-Research on AI labor displacement consistently identifies several categories of work most exposed to automation in the near term:
+Research on AI labor displacement — including [Eloundou et al. (2023)](https://arxiv.org/abs/2303.10130) on LLM task exposure and [Acemoglu & Restrepo (2020)](https://www.aeaweb.org/articles?id=10.1257/aer.20190658) on automation's labor market effects — consistently identifies several categories of work most exposed to automation in the near term:
 
 **Routine cognitive work** — data entry, form processing, basic analysis, scheduling, and coordination tasks that follow predictable patterns. These jobs have disappeared steadily since the 2010s and accelerated sharply with large language model deployment.
 
@@ -110,7 +110,7 @@ None of this prevents bad policy. It makes bad policy visible and formally conte
 
 **"The U.S. already has workforce programs."** It does — Trade Adjustment Assistance, Workforce Innovation and Opportunity Act programs, Pell Grants. The question is what happens when those programs get cut. Under current law, cutting workforce programs is a normal political act. Under ICESCR Article 6, it would trigger international review and require justification.
 
-**"This creates international bureaucracy without real enforcement."** The CESCR monitoring body has no enforcement power over domestic law. Its leverage comes from public reporting, civil society engagement, and reputational accountability. Reasonable people disagree about whether that leverage justifies treaty commitments. The 173 nations that ratified concluded it does.
+**"This creates international bureaucracy without real enforcement."** The CESCR monitoring body has no enforcement power over domestic law. Its leverage comes from public reporting, civil society engagement, and reputational accountability. Reasonable people disagree about whether that leverage justifies treaty commitments. The [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) that ratified concluded it does.
 
 ## The Governance Gap Is Not About Technology
 

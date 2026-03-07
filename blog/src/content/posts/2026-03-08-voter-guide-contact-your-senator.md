@@ -72,7 +72,7 @@ Here is a script that works:
 
 *"Hi, my name is [your name] and I'm a constituent calling from [your city, state]. I'm calling to ask Senator [name] to support Senate Foreign Relations Committee hearings on U.S. ratification of the International Covenant on Economic, Social and Cultural Rights — the ICESCR.*
 
-*The U.S. signed this treaty in 1977, nearly fifty years ago. 173 countries have ratified it. The Senate has never held a hearing or a vote. The treaty covers the right to work, fair wages, healthcare, housing, and education — rights that matter especially now with AI reshaping the labor market.*
+*The U.S. signed this treaty in 1977, nearly fifty years ago. [173 countries](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have ratified it. The Senate has never held a hearing or a vote. The treaty covers the right to work, fair wages, healthcare, housing, and education — rights that matter especially now with AI reshaping the labor market.*
 
 *I'm asking the senator to support scheduling hearings before the Foreign Relations Committee. Can you tell me the senator's current position on ICESCR ratification?"*
 
@@ -104,7 +104,7 @@ My name is [your name]. I live in [your city, state] and I am one of your consti
 
 I am writing to ask you to support Senate Foreign Relations Committee hearings on U.S. ratification of the International Covenant on Economic, Social and Cultural Rights.
 
-The United States signed this treaty in 1977. In the nearly fifty years since, 173 nations have ratified it — including every major ally and trading partner. The Senate has never held a committee hearing or a floor vote. That gap between signing and ratifying represents a concrete policy choice about whether Americans deserve binding protections for economic rights: the right to work, to fair wages, to social security, to healthcare, to education, to an adequate standard of living.
+The United States signed this treaty in 1977. In the nearly fifty years since, [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have ratified it — including every major ally and trading partner. The Senate has never held a committee hearing or a floor vote. That gap between signing and ratifying represents a concrete policy choice about whether Americans deserve binding protections for economic rights: the right to work, to fair wages, to social security, to healthcare, to education, to an adequate standard of living.
 
 I believe we do.
 

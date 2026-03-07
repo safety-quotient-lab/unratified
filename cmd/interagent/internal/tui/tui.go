@@ -18,18 +18,33 @@ import (
 type Tab int
 
 const (
-	TabStatus Tab = iota
-	TabActivity
+	TabLoop Tab = iota
+	TabFeed
 	TabSessions
 )
 
-var tabNames = []string{"Status", "Activity", "Sessions"}
+var tabNames = []string{"Loop", "Feed", "Sessions"}
+
+// LoopPhase represents the current phase of the iterate cycle.
+type LoopPhase int
+
+const (
+	PhaseIdle LoopPhase = iota
+	PhaseSync
+	PhaseIterate
+)
+
+var phaseNames = map[LoopPhase]string{
+	PhaseIdle:    "IDLE",
+	PhaseSync:    "SYNC",
+	PhaseIterate: "ITERATE",
+}
 
 // Config holds TUI settings.
 type Config struct {
-	Host         string
-	Token        string
-	RefreshSecs  int
+	Host        string
+	Token       string
+	RefreshSecs int
 }
 
 // DefaultConfig returns sensible defaults.
@@ -42,11 +57,11 @@ func DefaultConfig() Config {
 
 // healthData mirrors the /health JSON response.
 type healthData struct {
-	Status    string         `json:"status"`
-	Paused    bool           `json:"paused"`
-	InFlight  map[string]int `json:"in_flight"`
-	Queued    map[string]string `json:"queued"`
-	Budget    struct {
+	Status  string         `json:"status"`
+	Paused  bool           `json:"paused"`
+	InFlight map[string]int `json:"in_flight"`
+	Queued   map[string]string `json:"queued"`
+	Budget   struct {
 		DailyUsed  int            `json:"daily_used"`
 		DailyMax   int            `json:"daily_max"`
 		HourlyMax  int            `json:"hourly_max"`
@@ -97,18 +112,32 @@ type actionMsg struct {
 	err    error
 }
 
+// logLine mirrors logbuf.Line
+type logLine struct {
+	Text string `json:"text"`
+	Kind string `json:"kind"`
+}
+type logsMsg struct {
+	repo  string
+	lines []logLine
+	seq   int64
+	err   error
+}
+
 // Model holds TUI state.
 type Model struct {
 	cfg        Config
 	tab        Tab
 	health     *healthData
+	logLines   []logLine
+	logSeq     int64
 	activity   []activityEvent
 	sessions   []activityEvent
 	spinner    spinner.Model
 	width      int
 	height     int
 	scroll     int
-	autoScroll bool // pin to bottom of activity feed
+	autoScroll bool
 	err        error
 	lastAction string
 	quitting   bool
@@ -116,37 +145,41 @@ type Model struct {
 
 // keybindings
 type keyMap struct {
-	Quit    key.Binding
-	Tab1    key.Binding
-	Tab2    key.Binding
-	Tab3    key.Binding
-	NextTab key.Binding
-	PrevTab key.Binding
-	Pause   key.Binding
-	Resume  key.Binding
-	Up      key.Binding
-	Down    key.Binding
-	PgUp    key.Binding
-	PgDown  key.Binding
-	Home    key.Binding
-	End     key.Binding
+	Quit       key.Binding
+	Tab1       key.Binding
+	Tab2       key.Binding
+	Tab3       key.Binding
+	NextTab    key.Binding
+	PrevTab    key.Binding
+	Pause      key.Binding
+	Resume     key.Binding
+	TrigSync   key.Binding
+	TrigIter   key.Binding
+	Up         key.Binding
+	Down       key.Binding
+	PgUp       key.Binding
+	PgDown     key.Binding
+	Home       key.Binding
+	End        key.Binding
 }
 
 var keys = keyMap{
-	Quit:    key.NewBinding(key.WithKeys("q", "ctrl+c"), key.WithHelp("q", "quit")),
-	Tab1:    key.NewBinding(key.WithKeys("1"), key.WithHelp("1", "status")),
-	Tab2:    key.NewBinding(key.WithKeys("2"), key.WithHelp("2", "activity")),
-	Tab3:    key.NewBinding(key.WithKeys("3"), key.WithHelp("3", "sessions")),
-	NextTab: key.NewBinding(key.WithKeys("tab", "right", "l"), key.WithHelp("tab/right", "next tab")),
-	PrevTab: key.NewBinding(key.WithKeys("shift+tab", "left", "h"), key.WithHelp("shift+tab/left", "prev tab")),
-	Pause:   key.NewBinding(key.WithKeys("p"), key.WithHelp("p", "pause")),
-	Resume:  key.NewBinding(key.WithKeys("r"), key.WithHelp("r", "resume")),
-	Up:      key.NewBinding(key.WithKeys("up", "k"), key.WithHelp("up/k", "scroll up")),
-	Down:    key.NewBinding(key.WithKeys("down", "j"), key.WithHelp("down/j", "scroll down")),
-	PgUp:    key.NewBinding(key.WithKeys("pgup", "ctrl+u"), key.WithHelp("pgup", "page up")),
-	PgDown:  key.NewBinding(key.WithKeys("pgdown", "ctrl+d"), key.WithHelp("pgdn", "page down")),
-	Home:    key.NewBinding(key.WithKeys("home", "g"), key.WithHelp("home/g", "top")),
-	End:     key.NewBinding(key.WithKeys("end", "G"), key.WithHelp("end/G", "bottom")),
+	Quit:     key.NewBinding(key.WithKeys("q", "ctrl+c"), key.WithHelp("q", "quit")),
+	Tab1:     key.NewBinding(key.WithKeys("1"), key.WithHelp("1", "loop")),
+	Tab2:     key.NewBinding(key.WithKeys("2"), key.WithHelp("2", "feed")),
+	Tab3:     key.NewBinding(key.WithKeys("3"), key.WithHelp("3", "sessions")),
+	NextTab:  key.NewBinding(key.WithKeys("tab", "right", "l"), key.WithHelp("tab/right", "next tab")),
+	PrevTab:  key.NewBinding(key.WithKeys("shift+tab", "left", "h"), key.WithHelp("shift+tab/left", "prev tab")),
+	Pause:    key.NewBinding(key.WithKeys("p"), key.WithHelp("p", "pause")),
+	Resume:   key.NewBinding(key.WithKeys("r"), key.WithHelp("r", "resume")),
+	TrigSync: key.NewBinding(key.WithKeys("s"), key.WithHelp("s", "trigger sync")),
+	TrigIter: key.NewBinding(key.WithKeys("i"), key.WithHelp("i", "trigger iterate")),
+	Up:       key.NewBinding(key.WithKeys("up", "k"), key.WithHelp("up/k", "scroll up")),
+	Down:     key.NewBinding(key.WithKeys("down", "j"), key.WithHelp("down/j", "scroll down")),
+	PgUp:     key.NewBinding(key.WithKeys("pgup", "ctrl+u"), key.WithHelp("pgup", "page up")),
+	PgDown:   key.NewBinding(key.WithKeys("pgdown", "ctrl+d"), key.WithHelp("pgdn", "page down")),
+	Home:     key.NewBinding(key.WithKeys("home", "g"), key.WithHelp("home/g", "top")),
+	End:      key.NewBinding(key.WithKeys("end", "G"), key.WithHelp("end/G", "bottom")),
 }
 
 // Styles
@@ -198,6 +231,26 @@ var (
 
 	barEmptyStyle = lipgloss.NewStyle().
 			Foreground(lipgloss.Color("240"))
+
+	// Loop-specific styles
+	phaseBoxStyle = lipgloss.NewStyle().
+			Border(lipgloss.RoundedBorder()).
+			BorderForeground(lipgloss.Color("63")).
+			Padding(0, 2)
+
+	phaseActiveStyle = lipgloss.NewStyle().
+				Bold(true).
+				Foreground(lipgloss.Color("15")).
+				Background(lipgloss.Color("63")).
+				Padding(0, 1)
+
+	phaseDimStyle = lipgloss.NewStyle().
+			Foreground(lipgloss.Color("240")).
+			Padding(0, 1)
+
+	phaseNextStyle = lipgloss.NewStyle().
+			Foreground(lipgloss.Color("250")).
+			Padding(0, 1)
 )
 
 // eventStyles maps event types to their display style.
@@ -234,7 +287,7 @@ func NewModel(cfg Config) Model {
 	s.Style = cyanStyle
 	return Model{
 		cfg:        cfg,
-		tab:        TabActivity,
+		tab:        TabLoop,
 		spinner:    s,
 		autoScroll: true,
 	}
@@ -257,10 +310,10 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.quitting = true
 			return m, tea.Quit
 		case key.Matches(msg, keys.Tab1):
-			m.tab = TabStatus
+			m.tab = TabLoop
 			m.scroll = 0
 		case key.Matches(msg, keys.Tab2):
-			m.tab = TabActivity
+			m.tab = TabFeed
 			m.scroll = 0
 		case key.Matches(msg, keys.Tab3):
 			m.tab = TabSessions
@@ -273,7 +326,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				return m, m.fetchSessions
 			}
 		case key.Matches(msg, keys.PrevTab):
-			m.tab = (m.tab + 2) % 3 // +2 wraps backward
+			m.tab = (m.tab + 2) % 3
 			m.scroll = 0
 			if m.tab == TabSessions {
 				return m, m.fetchSessions
@@ -282,6 +335,10 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, m.doPause
 		case key.Matches(msg, keys.Resume):
 			return m, m.doResume
+		case key.Matches(msg, keys.TrigSync):
+			return m, m.doTrigger("unratified", "/sync")
+		case key.Matches(msg, keys.TrigIter):
+			return m, m.doTrigger("unratified", "/iterate quick")
 		case key.Matches(msg, keys.Up):
 			m.autoScroll = false
 			if m.scroll > 0 {
@@ -330,7 +387,6 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.autoScroll = true
 			}
 		case tea.MouseButtonLeft:
-			// Click on tab bar (row 1, tabs start at col 0)
 			if msg.Y == 1 {
 				m.handleTabClick(msg.X)
 				if m.tab == TabSessions {
@@ -347,6 +403,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		return m, tea.Batch(
 			m.fetchHealth,
 			m.fetchActivity,
+			m.fetchLogs,
 			tickCmd(m.cfg.RefreshSecs),
 		)
 
@@ -360,6 +417,12 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			if m.autoScroll {
 				m.scroll = m.maxScroll()
 			}
+		}
+
+	case logsMsg:
+		if msg.err == nil && msg.seq != m.logSeq {
+			m.logLines = msg.lines
+			m.logSeq = msg.seq
 		}
 
 	case sessionsMsg:
@@ -385,8 +448,6 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 // handleTabClick determines which tab was clicked based on x position.
 func (m *Model) handleTabClick(x int) {
-	// Tab labels: " 1:Status  2:Activity  3:Sessions "
-	// Each tab occupies roughly: label width + 2 padding
 	col := 0
 	for i, name := range tabNames {
 		label := fmt.Sprintf(" %d:%s ", i+1, name)
@@ -401,7 +462,6 @@ func (m *Model) handleTabClick(x int) {
 }
 
 // pageSize returns how many lines fit in the scrollable area.
-// Layout: title(1) + tabs(1) + blank(1) + statsbar(1) + blank(1) + header(2) + footer(2) = 9 overhead
 func (m Model) pageSize() int {
 	ps := m.height - 10
 	if ps < 5 {
@@ -414,7 +474,7 @@ func (m Model) pageSize() int {
 func (m Model) maxScroll() int {
 	var total int
 	switch m.tab {
-	case TabActivity:
+	case TabFeed:
 		total = len(m.activity)
 	case TabSessions:
 		total = len(m.sessions)
@@ -434,6 +494,56 @@ func (m *Model) clampScroll() {
 	if m.scroll > ms {
 		m.scroll = ms
 	}
+}
+
+// currentPhase derives the loop phase from health + activity data.
+func (m Model) currentPhase() (LoopPhase, string, string) {
+	if m.health == nil {
+		return PhaseIdle, "", ""
+	}
+
+	// Check in-flight processes
+	for repo := range m.health.InFlight {
+		// Find what prompt triggered this
+		prompt := findInFlightPrompt(m.activity, repo)
+		if strings.HasPrefix(prompt, "/sync") {
+			return PhaseSync, repo, prompt
+		}
+		if strings.HasPrefix(prompt, "/iterate") {
+			return PhaseIterate, repo, prompt
+		}
+		if strings.HasPrefix(prompt, "/hunt") {
+			return PhaseIterate, repo, prompt
+		}
+		if strings.HasPrefix(prompt, "/cycle") {
+			return PhaseSync, repo, prompt
+		}
+		// Unknown prompt still in-flight
+		if prompt != "" {
+			return PhaseIterate, repo, prompt
+		}
+		return PhaseIdle, repo, ""
+	}
+
+	return PhaseIdle, "", ""
+}
+
+// findInFlightPrompt scans recent activity for the last run_start without a run_done for this repo.
+func findInFlightPrompt(events []activityEvent, repo string) string {
+	// Walk backward to find most recent run_start for this repo
+	for i := len(events) - 1; i >= 0; i-- {
+		ev := events[i]
+		if ev.Repo != repo {
+			continue
+		}
+		if ev.Event == "run_done" {
+			return "" // Already finished
+		}
+		if ev.Event == "run_start" {
+			return ev.Prompt
+		}
+	}
+	return ""
 }
 
 func (m Model) View() string {
@@ -463,7 +573,7 @@ func (m Model) View() string {
 	}
 	b.WriteString("\n\n")
 
-	// Stats bar — always visible
+	// Stats bar
 	b.WriteString(m.renderStatsBar())
 	b.WriteString("\n")
 
@@ -474,10 +584,10 @@ func (m Model) View() string {
 		b.WriteString("\n")
 	} else {
 		switch m.tab {
-		case TabStatus:
-			b.WriteString(m.viewStatus())
-		case TabActivity:
-			b.WriteString(m.viewActivity())
+		case TabLoop:
+			b.WriteString(m.viewLoop())
+		case TabFeed:
+			b.WriteString(m.viewFeed())
 		case TabSessions:
 			b.WriteString(m.viewSessions())
 		}
@@ -485,7 +595,7 @@ func (m Model) View() string {
 
 	// Footer
 	b.WriteString("\n")
-	footer := fmt.Sprintf(" %s | q:quit arrows:nav p:pause r:resume pgup/dn:page | refresh %ds ",
+	footer := fmt.Sprintf(" %s | q:quit tab:nav p:pause r:resume s:sync i:iterate | refresh %ds ",
 		m.cfg.Host, m.cfg.RefreshSecs)
 	if m.lastAction != "" {
 		footer += "| " + m.lastAction + " "
@@ -503,60 +613,67 @@ func (m Model) renderStatsBar() string {
 	h := m.health
 	var parts []string
 
-	// Status indicator
+	// Status
 	if h.Paused {
 		parts = append(parts, redStyle.Bold(true).Render("PAUSED"))
 	} else {
-		parts = append(parts, greenStyle.Bold(true).Render("ACTIVE"))
-	}
-
-	// Budget
-	barW := 15
-	parts = append(parts, renderBar(barW, h.Budget.DailyUsed, h.Budget.DailyMax))
-
-	// In-flight
-	if len(h.InFlight) > 0 {
-		for repo := range h.InFlight {
-			parts = append(parts, greenStyle.Bold(true).Render("->"+repo))
+		phase, repo, _ := m.currentPhase()
+		switch phase {
+		case PhaseIdle:
+			parts = append(parts, greenStyle.Render("IDLE"))
+		case PhaseSync:
+			parts = append(parts, cyanStyle.Bold(true).Render("SYNC "+repo))
+		case PhaseIterate:
+			parts = append(parts, magentaStyle.Bold(true).Render("ITER "+repo))
 		}
 	}
+
+	// Budget bar
+	parts = append(parts, renderBar(12, h.Budget.DailyUsed, h.Budget.DailyMax))
+
+	// Countdown timers
+	syncCD, iterCD := m.loopCountdowns()
+	parts = append(parts, cyanStyle.Render("sync:"+syncCD))
+	parts = append(parts, magentaStyle.Render("iter:"+iterCD))
 
 	// Queued
 	for repo, prompt := range h.Queued {
-		parts = append(parts, magentaStyle.Render(".."+repo+":"+prompt))
+		parts = append(parts, yellowStyle.Render(".."+repo+":"+prompt))
 	}
 
-	// Cooldowns
-	for repo, secs := range h.Cooldowns {
-		if secs > 0 {
-			parts = append(parts, yellowStyle.Render(fmt.Sprintf("||%s %ds", repo, secs)))
+	// Scroll indicator
+	if m.tab == TabFeed {
+		if m.autoScroll {
+			parts = append(parts, dimStyle.Render("auto"))
+		} else {
+			parts = append(parts, yellowStyle.Render("scroll"))
 		}
-	}
-
-	// Next sync countdown
-	for _, task := range h.Schedule {
-		if task.Prompt == "/sync" {
-			cd := formatCountdown(task.NextRun)
-			style := dimStyle
-			if cd == "now" {
-				style = greenStyle.Bold(true)
-			}
-			parts = append(parts, style.Render("sync:"+cd))
-			break
-		}
-	}
-
-	// Auto-scroll indicator
-	if m.autoScroll {
-		parts = append(parts, dimStyle.Render("auto"))
-	} else {
-		parts = append(parts, yellowStyle.Render("scroll"))
 	}
 
 	return "  " + strings.Join(parts, dimStyle.Render("  |  "))
 }
 
-func (m Model) viewStatus() string {
+// loopCountdowns returns countdown strings for sync and iterate schedule entries.
+func (m Model) loopCountdowns() (string, string) {
+	syncCD := "---"
+	iterCD := "---"
+	if m.health == nil {
+		return syncCD, iterCD
+	}
+	for _, task := range m.health.Schedule {
+		cd := formatCountdown(task.NextRun)
+		if strings.HasPrefix(task.Prompt, "/sync") {
+			syncCD = cd
+		}
+		if strings.HasPrefix(task.Prompt, "/iterate") {
+			iterCD = cd
+		}
+	}
+	return syncCD, iterCD
+}
+
+// viewLoop renders the main Loop tab — the iterate cycle visualizer.
+func (m Model) viewLoop() string {
 	if m.health == nil {
 		return fmt.Sprintf("  %s Loading...\n", m.spinner.View())
 	}
@@ -564,72 +681,110 @@ func (m Model) viewStatus() string {
 	h := m.health
 	var b strings.Builder
 
-	// Status
-	if h.Paused {
-		b.WriteString(redStyle.Bold(true).Render("  ** PAUSED"))
-	} else {
-		b.WriteString(greenStyle.Bold(true).Render("  ** ACTIVE"))
-	}
-	ts := h.Timestamp
-	if len(ts) > 19 {
-		ts = ts[:19]
-	}
-	b.WriteString(dimStyle.Render("  " + ts))
-	b.WriteString("\n\n")
-
-	// Budget bar
-	barW := min(30, m.width-20)
-	b.WriteString("  ")
-	b.WriteString(dimStyle.Render("Budget "))
-	b.WriteString(renderBar(barW, h.Budget.DailyUsed, h.Budget.DailyMax))
-	b.WriteString("\n\n")
-
-	// In-flight
-	if len(h.InFlight) > 0 {
-		for repo, pid := range h.InFlight {
-			b.WriteString(greenStyle.Bold(true).Render(fmt.Sprintf("  -> %s", repo)))
-			b.WriteString(dimStyle.Render(fmt.Sprintf(" PID %d", pid)))
-			if prompt, ok := h.Queued[repo]; ok {
-				b.WriteString(magentaStyle.Render(fmt.Sprintf("  .. queued: %s", prompt)))
-			}
-			b.WriteString("\n")
-		}
-	} else if len(h.Queued) > 0 {
-		for repo, prompt := range h.Queued {
-			b.WriteString(magentaStyle.Render(fmt.Sprintf("  .. %s: %s", repo, prompt)))
-			b.WriteString("\n")
-		}
-	} else {
-		b.WriteString(dimStyle.Render("  idle"))
-		b.WriteString("\n")
-	}
-
-	// Cooldowns
-	for repo, secs := range h.Cooldowns {
-		if secs > 0 {
-			b.WriteString(yellowStyle.Render(fmt.Sprintf("  || %s cooldown %ds", repo, secs)))
-			b.WriteString("\n")
-		}
-	}
+	// Phase pipeline
+	b.WriteString(m.renderPhasePipeline())
 	b.WriteString("\n")
 
-	// Schedule
-	if len(h.Schedule) > 0 {
-		b.WriteString(headerStyle.Render("  SCHEDULE"))
+	// Current run details
+	phase, repo, prompt := m.currentPhase()
+	if phase != PhaseIdle {
+		pid := h.InFlight[repo]
+		b.WriteString("  ")
+		b.WriteString(headerStyle.Render("RUNNING"))
+		b.WriteString("  ")
+		b.WriteString(greenStyle.Bold(true).Render(repo))
+		b.WriteString(dimStyle.Render(fmt.Sprintf("  %s  PID %d", prompt, pid)))
 		b.WriteString("\n")
-		for _, task := range h.Schedule {
-			freq := formatInterval(task.Interval)
-			countdown := formatCountdown(task.NextRun)
 
-			line := fmt.Sprintf("  %s: %s", task.Repo, task.Prompt)
-			b.WriteString(dimStyle.Render(line))
+		if secs, ok := h.Cooldowns[repo]; ok && secs > 0 {
+			b.WriteString(yellowStyle.Render(fmt.Sprintf("    cooldown: %ds", secs)))
+			b.WriteString("\n")
+		}
 
-			right := fmt.Sprintf("  ~~ %s (%s)", countdown, freq)
-			style := cyanStyle
-			if countdown == "now" {
-				style = greenStyle.Bold(true)
-			}
-			b.WriteString(style.Render(right))
+		// Live output from running process
+		b.WriteString("\n")
+		b.WriteString(m.renderLiveOutput())
+	} else if h.Paused {
+		b.WriteString("  ")
+		b.WriteString(redStyle.Bold(true).Render("PAUSED"))
+		b.WriteString(dimStyle.Render("  all syncs halted  (r to resume)"))
+		b.WriteString("\n\n")
+		b.WriteString(m.renderScheduleSection())
+		b.WriteString("\n")
+		b.WriteString(m.renderRecentIterations())
+	} else {
+		b.WriteString("  ")
+		b.WriteString(dimStyle.Render("idle  waiting for next scheduled run"))
+		b.WriteString("\n\n")
+		b.WriteString(m.renderScheduleSection())
+		b.WriteString("\n")
+		b.WriteString(m.renderRecentIterations())
+	}
+
+	return b.String()
+}
+
+// renderLiveOutput shows the tail of the live log buffer from the running process.
+func (m Model) renderLiveOutput() string {
+	var b strings.Builder
+	b.WriteString("  ")
+	b.WriteString(headerStyle.Render("LIVE OUTPUT"))
+	b.WriteString(dimStyle.Render(fmt.Sprintf("  (%d lines)", len(m.logLines))))
+	b.WriteString("\n")
+
+	if len(m.logLines) == 0 {
+		b.WriteString(dimStyle.Render("    (waiting for output...)"))
+		b.WriteString("\n")
+		return b.String()
+	}
+
+	// Show the last N lines that fit in the available space
+	availLines := m.height - 14 // account for header, pipeline, run info, footer
+	if availLines < 5 {
+		availLines = 5
+	}
+
+	start := len(m.logLines) - availLines
+	if start < 0 {
+		start = 0
+	}
+
+	maxW := m.width - 6
+	if maxW < 40 {
+		maxW = 40
+	}
+
+	for _, line := range m.logLines[start:] {
+		text := line.Text
+		// Trim trailing newlines from text deltas
+		text = strings.TrimRight(text, "\n")
+		if text == "" {
+			continue
+		}
+
+		var style lipgloss.Style
+		switch line.Kind {
+		case "prompt":
+			style = greenStyle.Bold(true)
+		case "assistant":
+			style = lipgloss.NewStyle().Foreground(lipgloss.Color("15"))
+		case "tool_use":
+			style = cyanStyle.Bold(true)
+		case "tool_input":
+			style = dimStyle
+		case "tool_result":
+			style = dimStyle
+		case "system":
+			style = yellowStyle
+		default:
+			style = dimStyle
+		}
+
+		// Word-wrap long lines
+		lines := wrapText(text, maxW)
+		for _, wl := range lines {
+			b.WriteString("    ")
+			b.WriteString(style.Render(wl))
 			b.WriteString("\n")
 		}
 	}
@@ -637,7 +792,195 @@ func (m Model) viewStatus() string {
 	return b.String()
 }
 
-func (m Model) viewActivity() string {
+// wrapText breaks text into lines of at most maxW characters.
+func wrapText(text string, maxW int) []string {
+	if maxW <= 0 {
+		return []string{text}
+	}
+	var result []string
+	for _, rawLine := range strings.Split(text, "\n") {
+		for len(rawLine) > maxW {
+			cut := maxW
+			for cut > maxW/2 {
+				if rawLine[cut] == ' ' {
+					break
+				}
+				cut--
+			}
+			if cut <= maxW/2 {
+				cut = maxW
+			}
+			result = append(result, rawLine[:cut])
+			rawLine = rawLine[cut:]
+			if len(rawLine) > 0 && rawLine[0] == ' ' {
+				rawLine = rawLine[1:]
+			}
+		}
+		result = append(result, rawLine)
+	}
+	return result
+}
+
+// renderPhasePipeline draws the loop phase indicator:
+//   IDLE  ──>  SYNC  ──>  ITERATE  ──>  (cycle)
+func (m Model) renderPhasePipeline() string {
+	phase, _, _ := m.currentPhase()
+
+	phases := []struct {
+		phase LoopPhase
+		label string
+	}{
+		{PhaseIdle, "IDLE"},
+		{PhaseSync, "SYNC"},
+		{PhaseIterate, "ITERATE"},
+	}
+
+	var parts []string
+	for _, p := range phases {
+		if p.phase == phase {
+			parts = append(parts, phaseActiveStyle.Render(p.label))
+		} else if p.phase < phase {
+			// Already passed
+			parts = append(parts, dimStyle.Render(p.label))
+		} else {
+			parts = append(parts, phaseDimStyle.Render(p.label))
+		}
+	}
+
+	arrow := dimStyle.Render(" --> ")
+	pipeline := strings.Join(parts, arrow)
+
+	return "  " + pipeline + "\n"
+}
+
+// renderScheduleSection shows all scheduled tasks with countdown timers.
+func (m Model) renderScheduleSection() string {
+	h := m.health
+	if len(h.Schedule) == 0 {
+		return ""
+	}
+
+	var b strings.Builder
+	b.WriteString("  ")
+	b.WriteString(headerStyle.Render("SCHEDULE"))
+	b.WriteString("\n")
+
+	for _, task := range h.Schedule {
+		cd := formatCountdown(task.NextRun)
+		freq := formatInterval(task.Interval)
+
+		// Determine style based on prompt type
+		promptStyle := dimStyle
+		timerStyle := dimStyle
+		prefix := "  "
+		if strings.HasPrefix(task.Prompt, "/sync") {
+			promptStyle = cyanStyle
+			prefix = cyanStyle.Render("  ~~ ")
+		} else if strings.HasPrefix(task.Prompt, "/iterate") {
+			promptStyle = magentaStyle
+			prefix = magentaStyle.Render("  ~~ ")
+		} else {
+			prefix = dimStyle.Render("  ~~ ")
+		}
+
+		if cd == "now" {
+			timerStyle = greenStyle.Bold(true)
+		} else {
+			timerStyle = promptStyle
+		}
+
+		b.WriteString(prefix)
+		b.WriteString(promptStyle.Render(fmt.Sprintf("%-16s", task.Prompt)))
+		b.WriteString(dimStyle.Render(fmt.Sprintf("  %-12s  ", task.Repo)))
+		b.WriteString(timerStyle.Render(cd))
+		b.WriteString(dimStyle.Render(fmt.Sprintf("  (%s)", freq)))
+		b.WriteString("\n")
+	}
+
+	return b.String()
+}
+
+// renderRecentIterations shows the last few completed iteration results.
+func (m Model) renderRecentIterations() string {
+	var b strings.Builder
+	b.WriteString("  ")
+	b.WriteString(headerStyle.Render("RECENT RUNS"))
+	b.WriteString("\n")
+
+	// Collect recent run_done events (walk backward, cap at 8)
+	var runs []activityEvent
+	for i := len(m.activity) - 1; i >= 0 && len(runs) < 8; i-- {
+		ev := m.activity[i]
+		if ev.Event == "run_done" {
+			runs = append(runs, ev)
+		}
+	}
+
+	if len(runs) == 0 {
+		b.WriteString(dimStyle.Render("    (no completed runs yet)"))
+		b.WriteString("\n")
+		return b.String()
+	}
+
+	// Display newest-first
+	for _, ev := range runs {
+		ts := ev.TS
+		if len(ts) > 19 {
+			ts = ts[11:19]
+		}
+
+		statusStyle := greenStyle
+		statusSym := "OK"
+		if ev.ExitCode != nil && *ev.ExitCode != 0 {
+			statusStyle = redStyle
+			statusSym = fmt.Sprintf("X%d", *ev.ExitCode)
+		}
+
+		prompt := ev.Prompt
+		if prompt == "" {
+			prompt = "?"
+		}
+
+		// Categorize the prompt
+		promptStyle := dimStyle
+		if strings.HasPrefix(prompt, "/sync") {
+			promptStyle = cyanStyle
+		} else if strings.HasPrefix(prompt, "/iterate") {
+			promptStyle = magentaStyle
+		}
+
+		repoShort := ev.Repo
+		if len(repoShort) > 12 {
+			repoShort = repoShort[:12]
+		}
+
+		detail := ev.Detail
+		maxW := m.width - 50
+		if maxW < 20 {
+			maxW = 20
+		}
+		if len(detail) > maxW {
+			detail = detail[:maxW-3] + "..."
+		}
+
+		b.WriteString(fmt.Sprintf("    %s  %s  %-12s  %s  %s\n",
+			dimStyle.Render(ts),
+			statusStyle.Render(fmt.Sprintf("%-3s", statusSym)),
+			promptStyle.Render(prompt),
+			headerStyle.Render(repoShort),
+			dimStyle.Render(detail),
+		))
+
+		if ev.Resume != "" {
+			b.WriteString(dimStyle.Render(fmt.Sprintf("      resume: %s", ev.Resume)))
+			b.WriteString("\n")
+		}
+	}
+
+	return b.String()
+}
+
+func (m Model) viewFeed() string {
 	if len(m.activity) == 0 {
 		return dimStyle.Render("  (no events)\n")
 	}
@@ -731,7 +1074,6 @@ func (m Model) renderEvent(ev activityEvent) string {
 		detail = fmt.Sprintf("[%s] %s", ev.Prompt, detail)
 	}
 
-	// Allow up to 300 chars (Bluesky post length) before truncating
 	maxDetail := m.width - 28
 	if maxDetail < 300 {
 		maxDetail = 300
@@ -740,27 +1082,23 @@ func (m Model) renderEvent(ev activityEvent) string {
 		detail = detail[:maxDetail-3] + "..."
 	}
 
-	// Prefix columns: "  HH:MM:SS XX reponame____ "
 	prefix := fmt.Sprintf("  %s %s %-12s ",
 		dimStyle.Render(ts),
 		style.Render(sym),
 		headerStyle.Render(repoShort),
 	)
 
-	// Wrap detail text if it exceeds terminal width
 	availWidth := m.width - 28
 	if availWidth <= 0 || len(detail) <= availWidth {
 		return prefix + style.Render(detail) + "\n"
 	}
 
-	// Word-wrap the detail into continuation lines
 	var b strings.Builder
-	indent := strings.Repeat(" ", 28) // align continuation with detail column
+	indent := strings.Repeat(" ", 28)
 	first := true
 	for len(detail) > 0 {
 		chunk := detail
 		if len(chunk) > availWidth {
-			// Try to break at a space
 			cut := availWidth
 			for cut > availWidth/2 {
 				if detail[cut] == ' ' {
@@ -769,11 +1107,10 @@ func (m Model) renderEvent(ev activityEvent) string {
 				cut--
 			}
 			if cut <= availWidth/2 {
-				cut = availWidth // no good break point, hard wrap
+				cut = availWidth
 			}
 			chunk = detail[:cut]
 			detail = detail[cut:]
-			// Skip leading space on next line
 			if len(detail) > 0 && detail[0] == ' ' {
 				detail = detail[1:]
 			}
@@ -817,6 +1154,22 @@ func (m Model) fetchSessions() tea.Msg {
 	return sessionsMsg{events, err}
 }
 
+func (m Model) fetchLogs() tea.Msg {
+	body, err := doGet(m.cfg, "/logs?repo=unratified", false)
+	if err != nil {
+		return logsMsg{err: err}
+	}
+	var result struct {
+		Repo  string    `json:"repo"`
+		Seq   int64     `json:"seq"`
+		Lines []logLine `json:"lines"`
+	}
+	if err := json.Unmarshal(body, &result); err != nil {
+		return logsMsg{err: err}
+	}
+	return logsMsg{repo: result.Repo, lines: result.Lines, seq: result.Seq}
+}
+
 func (m Model) doPause() tea.Msg {
 	_, err := doGet(m.cfg, "/pause", true)
 	if err != nil {
@@ -831,6 +1184,35 @@ func (m Model) doResume() tea.Msg {
 		return actionMsg{"", err}
 	}
 	return actionMsg{"Resumed", nil}
+}
+
+func (m Model) doTrigger(repo, prompt string) tea.Cmd {
+	return func() tea.Msg {
+		body := fmt.Sprintf(`{"repo":%q,"prompt":%q}`, repo, prompt)
+		url := m.cfg.Host + "/trigger"
+		req, err := http.NewRequest("POST", url, strings.NewReader(body))
+		if err != nil {
+			return actionMsg{"", err}
+		}
+		req.Header.Set("Content-Type", "application/json")
+		if m.cfg.Token != "" {
+			req.Header.Set("Authorization", "Bearer "+m.cfg.Token)
+		}
+		client := &http.Client{Timeout: 5 * time.Second}
+		resp, err := client.Do(req)
+		if err != nil {
+			return actionMsg{"", err}
+		}
+		defer resp.Body.Close()
+		respBody, _ := io.ReadAll(resp.Body)
+
+		var result map[string]any
+		json.Unmarshal(respBody, &result)
+		if errMsg, ok := result["error"].(string); ok {
+			return actionMsg{errMsg, nil}
+		}
+		return actionMsg{fmt.Sprintf("Triggered %s %s", repo, prompt), nil}
+	}
 }
 
 // --- HTTP helpers ---

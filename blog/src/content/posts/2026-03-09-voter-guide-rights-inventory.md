@@ -28,7 +28,7 @@ lensFraming:
 
 Poll Americans on whether everyone deserves a fair shot at a decent job, a safe place to live, healthcare when they get sick, and education that doesn't leave them in debt for decades. You'll find broad agreement across political lines.
 
-The [International Covenant on Economic, Social and Cultural Rights (ICESCR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) translates that agreement into binding treaty obligations. 173 countries ratified it. The United States signed it in 1977 and has never voted on ratification.
+The [International Covenant on Economic, Social and Cultural Rights (ICESCR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) translates that agreement into binding treaty obligations. [173 countries](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) ratified it. The United States signed it in 1977 and has never voted on ratification.
 
 This post maps the treaty's core guarantees to the economic concerns Americans already live with.
 
@@ -77,7 +77,7 @@ Under the ICESCR, a government that cuts unemployment benefits during a period o
 
 Article 11 establishes the right to an adequate standard of living, including adequate food, clothing, and **housing**.
 
-Housing unaffordability has moved from an urban problem to a national one. In major cities, median rents consume more than 30% of median income — widely used as the threshold of housing burden. Homelessness remained elevated through economic recovery periods that restored corporate profits and stock prices.
+Housing unaffordability has moved from an urban problem to a national one. In major cities, median rents consume more than 30% of median income — [the standard threshold of housing burden used by HUD](https://www.huduser.gov/portal/pdredge/pdr_edge_featd_article_092214.html). Homelessness remained elevated through economic recovery periods that restored corporate profits and stock prices.
 
 Under Article 11, a ratified government must:
 
@@ -93,7 +93,7 @@ Article 11 doesn't dictate a housing policy. It doesn't require rent control, pu
 
 Article 12 establishes the right to the highest attainable standard of physical and mental health.
 
-The United States has the most expensive healthcare system among wealthy nations and among the worst outcomes on life expectancy, infant mortality, and preventable death rates. Medical debt remains a leading cause of personal bankruptcy — a situation largely unique to the U.S. among wealthy nations.
+The United States has the most expensive healthcare system among wealthy nations and among the worst outcomes on life expectancy, infant mortality, and preventable death rates. Medical debt remains a leading cause of personal bankruptcy — [a situation largely unique to the U.S. among wealthy nations](https://ajph.aphapublications.org/doi/10.2105/AJPH.2018.304901) (Himmelstein et al. 2019).
 
 Article 12 requires ratified governments to take steps toward:
 
@@ -102,7 +102,7 @@ Article 12 requires ratified governments to take steps toward:
 - Preventing and controlling epidemic and endemic diseases
 - Creating conditions that give everyone **access to medical care when they need it**
 
-Article 12 doesn't mandate single-payer healthcare or any particular system. It creates a standard — "highest attainable" — that governments must actively work toward. A government whose healthcare costs leave 30% of adults avoiding care due to cost faces hard treaty-level questions about whether that standard holds.
+Article 12 doesn't mandate single-payer healthcare or any particular system. It creates a standard — "highest attainable" — that governments must actively work toward. A government whose healthcare costs leave [30% of adults avoiding care due to cost](https://www.commonwealthfund.org/publications/surveys/2023/oct/paying-for-it-costs-debt-americans-sicker-poorer) (Commonwealth Fund 2023) faces hard treaty-level questions about whether that standard holds.
 
 > **Key takeaway.** Article 12 covers access to healthcare as a right, not a market outcome. Ratification would put the U.S. on record that it takes active steps toward ensuring everyone can access medical care — and subject those steps to international review.
 
@@ -116,7 +116,7 @@ Articles 13 and 14 of the ICESCR establish education as a right at every level:
 
 **Higher education** must be accessible to all on the basis of capacity — and progressively made free. This is where U.S. practice diverges most sharply from treaty obligations.
 
-The United States has among the highest per-student tuition costs among wealthy nations. Student loan debt exceeds $1.7 trillion as of 2024 — a burden that falls disproportionately on first-generation students, students from lower-income families, and students from racial groups historically excluded from educational opportunity.
+The United States has among the highest per-student tuition costs among wealthy nations. Student loan debt exceeds [$1.7 trillion as of 2024](https://www.newyorkfed.org/microeconomics/hhdc) (Federal Reserve Bank of New York, Household Debt and Credit Report) — a burden that falls disproportionately on first-generation students, students from lower-income families, and students from racial groups historically excluded from educational opportunity.
 
 Under Articles 13 and 14, a ratified government must demonstrate that higher education moves progressively toward accessibility — not progressively toward debt burden. A government whose higher education financing shifted primarily from public subsidy to individual debt over the past four decades has a significant treaty-level case to answer.
 

@@ -1,5 +1,10 @@
 [
   {
+    "hash": "190673d0e81b23fa6b8786131d4c1148aca3b9e8",
+    "date": "2026-03-07T16:06:35-06:00",
+    "subject": "Mark all 32 posts ai-reviewed, write remediation-complete ACK to psychology-agent"
+  },
+  {
     "hash": "b4be2b67ea6507559a2c5b36868170b3e398d61c",
     "date": "2026-03-07T13:59:35-06:00",
     "subject": "Add source citations, counterarguments, and factual fixes to all 8 Batch A posts"

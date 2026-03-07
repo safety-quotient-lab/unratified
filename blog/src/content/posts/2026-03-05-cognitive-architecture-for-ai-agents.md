@@ -48,7 +48,7 @@ The central design insight: telling an AI agent "always check for X" accomplishe
 
 "Be careful with memory files" functions as aspiration. "Before any file write (T4), verify: date format uses system clock, file routes to the correct document, content does not duplicate existing entries, variable names meet semantic naming standard" functions as infrastructure.
 
-The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) implements 15 triggers (T1–T15), each with a specific moment it fires. These 15 triggers describe the architecture's design, not validated effectiveness — whether each trigger reliably fires and catches the failure it targets remains an ongoing question, not a settled claim. The core twelve:
+The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) implements 16 triggers (T1–T16), each with a specific moment it fires. These 16 triggers describe the architecture's design, not validated effectiveness — whether each trigger reliably fires and catches the failure it targets remains an ongoing question, not a settled claim. The core twelve:
 
 | Trigger | Fires when | What it checks |
 |---------|-----------|----------------|
@@ -65,7 +65,7 @@ The [cognitive architecture](https://github.com/safety-quotient-lab/psychology-a
 | T11 | On demand | Full self-audit of cognitive infrastructure |
 | T12 | "Good thinking" signal | Name the principle, explain the mechanism, generalize |
 
-Three additional triggers emerged from integration work: T13 (external content ingestion gatekeeper — source classification, injection scan, scope relevance), T14 (structural checkpoint — mandatory scan of orders 7–10 at all decision scales), and T15 (PSQ v3 receiver protocol — scale discipline, threshold validation, WEIRD flags).
+Four additional triggers emerged from integration work: T13 (external content ingestion gatekeeper — source classification, injection scan, scope relevance), T14 (structural checkpoint — mandatory scan of orders 7–10 at all decision scales), T15 (PSQ v3 receiver protocol — scale discipline, threshold validation, WEIRD flags), and T16 (external-facing action gate — fires before any action visible to external parties, such as PR creation, issue comments, or transport message delivery).
 
 T3 deserves particular attention. Before any recommendation, the agent classifies whether the decision requires user input (substance) or can resolve autonomously (process). It scans for a specific reason NOT to proceed — vague concern does not count; only a concrete objection surfaces. It checks whether the user would benefit more from a *different* recommendation than the obvious one. And it separates "I feel confident" from "the evidence supports this" — stating evidence strength independently of recommendation strength.
 
@@ -131,7 +131,7 @@ The antiregression setup maintains one persistent document (CLAUDE.md). The psyc
 | `ideas.md` | Generative — possible | Speculative directions, not committed |
 | `TODO.md` | Operational — tasks | Forward-looking backlog |
 | `MEMORY.md` | Cross-session — volatile | Active thread, quick-reference |
-| `cognitive-triggers.md` | Infrastructure — operational | T1–T12 trigger definitions |
+| `cognitive-triggers.md` | Infrastructure — operational | T1–T16 trigger definitions |
 | `CLAUDE.md` | Foundational — conventions | Stable policies and skills |
 | `MEMORY-snapshot.md` | Bootstrap — recovery | Committed copy of volatile state |
 | `cognitive-triggers.md` | Bootstrap — recovery | Committed copy of trigger system |
@@ -205,7 +205,7 @@ The convergence point: hooks that enforce mechanically, triggers that enforce ep
 
 - [psychology-agent](https://github.com/safety-quotient-lab/psychology-agent) — the cognitive architecture described in this post
 - [claude-code-antiregression-setup](https://github.com/CreatmanCEO/claude-code-antiregression-setup) — the antiregression approach evaluated here
-- [Cognitive trigger system](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) — full T1–T15 definitions
+- [Cognitive trigger system](https://github.com/safety-quotient-lab/psychology-agent/blob/main/docs/cognitive-triggers.md) — full T1–T16 definitions
 - [Bootstrap health check](https://github.com/safety-quotient-lab/psychology-agent/blob/main/bootstrap-check.sh) — self-healing memory script
 - [/cycle skill](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/cycle/SKILL.md) — 13-step documentation propagation
 - [/adjudicate skill](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/adjudicate/SKILL.md) — structured decision resolution

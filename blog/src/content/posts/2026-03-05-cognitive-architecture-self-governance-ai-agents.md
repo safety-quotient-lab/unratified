@@ -34,7 +34,7 @@ An instruction says "check for sycophancy before recommending." An enforcement m
 
 ## Triggers: When-Then Infrastructure
 
-The psychology agent's cognitive architecture defines 15 triggers (T1–T15), each with a specific firing condition and a set of checks. (The system grew from an initial 13 to 15 through integration work; see the [companion post](/2026-03-05-cognitive-architecture-for-ai-agents) for the full T1–T15 listing.) The design principle: *a principle without a mechanical trigger remains an aspiration, not infrastructure.*
+The psychology agent's cognitive architecture defines 16 triggers (T1–T16), each with a specific firing condition and a set of checks. (The system grew from an initial 12 to 16 through integration work; see the [companion post](/2026-03-05-cognitive-architecture-for-ai-agents) for the full T1–T16 listing.) The design principle: *a principle without a mechanical trigger remains an aspiration, not infrastructure.*
 
 | Fires When | What Runs |
 |---|---|

@@ -1,5 +1,15 @@
 [
   {
+    "hash": "190673d0e81b23fa6b8786131d4c1148aca3b9e8",
+    "date": "2026-03-07T16:06:35-06:00",
+    "subject": "Mark all 32 posts ai-reviewed, write remediation-complete ACK to psychology-agent"
+  },
+  {
+    "hash": "2eb8a74bb923756e0a8bfe8fbead4ed6391ba343",
+    "date": "2026-03-07T15:45:39-06:00",
+    "subject": "Remediate Batches B-F: sources, factual fixes, scope qualifications across 19 posts"
+  },
+  {
     "hash": "00c5ea8cd09bec337c8e40c42f7b31bc28c0f3cf",
     "date": "2026-03-07T09:56:11-06:00",
     "subject": "feat: methodology validation blog post — HRCB construct validity"

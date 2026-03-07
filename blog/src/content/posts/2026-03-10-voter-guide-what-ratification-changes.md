@@ -67,7 +67,7 @@ Periodically after that (the original five-year cycle has shifted in practice to
 
 This doesn't sound dramatic. But it creates something that currently doesn't exist: **a formal obligation to document, measure, and publicly account for economic and social conditions across the full treaty scope.**
 
-Right now, the U.S. government reports extensively on some economic conditions (GDP, employment rates, poverty statistics) and selectively on others. It has no obligation to explain, to an external body with expertise in treaty compliance, why 30% of adults avoid medical care due to cost, why student debt exceeds $1.7 trillion, or why housing cost burdens affect the majority of renters in major cities.
+Right now, the U.S. government reports extensively on some economic conditions (GDP, employment rates, poverty statistics) and selectively on others. It has no obligation to explain, to an external body with expertise in treaty compliance, why [30% of adults avoid medical care due to cost](https://www.commonwealthfund.org/publications/surveys/2023/oct/paying-for-it-costs-debt-americans-sicker-poorer) (Commonwealth Fund 2023), why student debt exceeds $1.7 trillion, or why housing cost burdens affect the majority of renters in major cities.
 
 Ratification would create that obligation.
 
@@ -143,7 +143,7 @@ What would change over time, if the accountability machinery functioned:
 
 **A different vocabulary for rights.** Economic and social rights currently lack the constitutional grounding that civil rights and political rights carry in U.S. discourse. ICESCR ratification would strengthen the argument that these rights belong in the same category — not charity, not policy preference, but obligations governments must account for.
 
-**Alignment with 173 other nations.** The U.S. would participate in a shared accountability framework that 173 countries already operate in — allowing comparison, learning, and coordinated advocacy across borders.
+**Alignment with [173 other nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en).** The U.S. would participate in a shared accountability framework that 173 countries already operate in — allowing comparison, learning, and coordinated advocacy across borders.
 
 ## The Honest Assessment
 

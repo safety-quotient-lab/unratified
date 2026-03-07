@@ -63,9 +63,16 @@ That meant building three things:
 
 ## The Auth Model
 
-Before declaring the Bluesky posting skill public-facing, we had to design the auth model. The skill has real-world consequences: public posts on @unratified.org. We ran the decision through the [consensus-or-parsimony discriminator](/2026-03-03-recursive-methodology) and evaluated five candidates.
+Before declaring the Bluesky posting skill public-facing, we had to design the auth model. The skill has real-world consequences: public posts on @unratified.org. We ran the decision through the [consensus-or-parsimony discriminator](/2026-03-03-recursive-methodology) and evaluated four candidates:
 
-The winner: API keys for machines (unratified-bot carries a Bearer token when calling the Monitor Worker), git-PR transport for agents (GitHub org membership is the auth layer), and a magic link gate for every queue-write action — no post goes live without the human director clicking an approval email. Rejected alternatives included OAuth 2.0 (excessive infrastructure for three agents), cryptographic message signing (key management overhead outweighs benefit at lab scale), and fully autonomous posting (eliminated by the human-in-the-loop requirement). The decision was resolved via the [consensus-or-parsimony discriminator](/2026-03-03-recursive-methodology).
+| Candidate | Outcome | Reason |
+|-----------|---------|--------|
+| API keys + git-PR transport + magic link gate | **Winner** | Defense-in-depth with human approval as primary control; minimal infrastructure |
+| OAuth 2.0 flows | Rejected | Excessive infrastructure for a three-agent closed lab |
+| Cryptographic message signing (HMAC/Ed25519) | Rejected | Key management overhead outweighs benefit at lab scale |
+| Fully autonomous posting | Rejected | Eliminated by the human-in-the-loop requirement |
+
+The winner combines three layers: API keys for machines (unratified-bot carries a Bearer token when calling the Monitor Worker), git-PR transport for agents (GitHub org membership serves as the auth layer), and a magic link gate for every queue-write action — no post goes live without the human director clicking an approval email.
 
 The reasoning is architectural: the magic link gate is the real security boundary. Machine and agent auth is defense in depth, not the primary control. For a three-agent closed lab, API keys and transport-level auth provide sufficient depth without the infrastructure overhead of the rejected alternatives. *Note: this auth model is scoped for a closed, three-agent lab environment. A production or multi-tenant deployment would require stronger guarantees — magic link gates alone do not constitute a general-purpose security recommendation.*
 

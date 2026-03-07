@@ -28,7 +28,7 @@ lensFraming:
 
 In 1966, the United Nations adopted the International Covenant on Economic, Social and Cultural Rights — a binding treaty that commits ratifying nations to protect the economic foundations of human life: the right to work, to fair wages, to healthcare, to housing, to education.
 
-173 countries have ratified it. The United States has not.
+[173 countries](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have ratified it. The United States has not.
 
 The U.S. signed the treaty in 1977. Signing signals intent. Ratification makes it binding. The Senate has never held a ratification vote. Nearly fifty years have passed.
 
@@ -93,7 +93,7 @@ Fair engagement with ICESCR ratification requires acknowledging the strongest ar
 
 **"This surrenders sovereignty to an international body."** The CESCR monitoring body issues recommendations, not binding court orders. It cannot compel the U.S. to pass legislation or change domestic policy. The U.S. already participates in similar treaty monitoring under the [ICCPR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en) (ratified 1992) and the [Convention Against Torture](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en) (ratified 1994) without loss of sovereignty.
 
-**"Economic rights aren't the same as civil rights — they're aspirational goals, not justiciable rights."** This is a genuine philosophical debate. The ICESCR's drafters addressed it through Article 2's "progressive realization" standard — governments must demonstrate forward movement, not achieve perfection. Whether economic conditions constitute rights or policy goals remains contested, but 173 nations have concluded they warrant treaty-level accountability.
+**"Economic rights aren't the same as civil rights — they're aspirational goals, not justiciable rights."** This is a genuine philosophical debate. The ICESCR's drafters addressed it through Article 2's "progressive realization" standard — governments must demonstrate forward movement, not achieve perfection. Whether economic conditions constitute rights or policy goals remains contested, but [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have concluded they warrant treaty-level accountability.
 
 **"The U.S. would attach reservations that gut the treaty anyway."** Likely true in part. The Senate has attached [reservations, understandings, and declarations (RUDs)](https://crsreports.congress.gov/) to every human rights treaty it has ratified, limiting domestic legal effect. ICESCR ratification would almost certainly include RUDs. This limits the treaty's domestic reach but still creates reporting obligations and international accountability that don't currently exist.
 

@@ -47,6 +47,11 @@ The distribution concentrates heavily. Article 19 (Freedom of Expression) leads 
 
 *Note: "moderate" and approximate story counts reflect ranges from the current Observatory dataset where precise per-article breakdowns have not yet been published. Exact figures are available via the Observatory API.*
 
+<!-- TODO R-10: Replace approximate values (~500+, ~400+, ~300+, "moderate") with exact counts from Observatory DB.
+     Requires: querying observatory.unratified.org/api/v1/signals for per-UDHR-article story counts and avg scores.
+     Flagged for deeper investigation — the API response structure may not directly map to per-article breakdowns
+     without additional aggregation logic. Coordinate with observatory-agent. -->
+
 The pattern reflects what the tech community discusses: expression and privacy dominate because they directly affect software developers and platform builders. Labor rights receive moderate coverage because AI displacement generates headlines. But slavery, asylum, and the rights of marginalized populations receive minimal attention — despite their relevance to the global supply chains that produce the hardware running AI systems.
 
 ## Transparency Gaps

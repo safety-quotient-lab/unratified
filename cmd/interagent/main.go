@@ -18,6 +18,7 @@ import (
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/changelog"
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/daemon"
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/install"
+	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/logbuf"
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/runner"
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/store"
 	"github.com/safety-quotient-lab/unratified/cmd/interagent/internal/tui"
@@ -103,7 +104,8 @@ func serveCmd() *cobra.Command {
 				}
 			}
 
-			rn := runner.New(repos, bc, st, logDir, log)
+			logs := logbuf.New(500)
+			rn := runner.New(repos, bc, st, logs, logDir, log)
 
 			schedule := defaultSchedule()
 			if envSched := os.Getenv("SCHEDULE"); envSched != "" {
@@ -444,8 +446,8 @@ func defaultRepos() runner.RepoConfig {
 
 func defaultSchedule() []daemon.ScheduleTask {
 	return []daemon.ScheduleTask{
-		{Repo: "unratified", Prompt: "/hunt quick", Interval: 3600},
 		{Repo: "unratified", Prompt: "/sync", Interval: 300},
+		{Repo: "unratified", Prompt: "/iterate quick", Interval: 1800},
 	}
 }
 

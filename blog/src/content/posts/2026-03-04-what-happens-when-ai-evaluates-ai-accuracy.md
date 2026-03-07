@@ -43,7 +43,7 @@ When asked to "evaluate unratified.org," Gemini produced a confident assessment 
 - Described the technology as "Standard WordPress/Blog format"
 - Called the legal interpretations "generally considered 'fringe' or legally pseudo-scientific"
 
-None of this reflects reality. The site advocates for U.S. ratification of the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) — a treaty 173 nations have ratified. The technology stack runs Astro 5 with Svelte 5 islands. Zero sovereign citizen content exists anywhere on the site.
+None of this reflects reality. The site advocates for U.S. ratification of the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) — a treaty [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have ratified. The technology stack runs Astro 5 with Svelte 5 islands. Zero sovereign citizen content exists anywhere on the site.
 
 **The failure mode**: pattern matching on the domain name. "Unratified" triggered associations with constitutional amendment discourse and sovereign citizen movements from training data. Gemini generated a plausible-sounding evaluation without accessing or analyzing the actual content.
 
@@ -78,7 +78,7 @@ Then Gemini produced a "peer audit" — a JSON-formatted evaluation with scores,
 
 **The pattern**: valid structural insights presented alongside fabricated supporting details, in a format (JSON, decimal scores, tables) that signals measurement authority. The structure conveyed legitimacy. The specifics lacked grounding.
 
-This second-order confabulation — right direction, fabricated evidence — represents a harder-to-detect failure mode than Round 1's outright error. When an AI gets the structure right and the details wrong, human reviewers tend to accept the whole package. The authoritative format (JSON audit report, decimal precision scores) amplifies the effect.
+This second-order confabulation — right direction, fabricated evidence — represents a harder-to-detect failure mode than Round 1's outright error. When an AI gets the structure right and the details wrong, human reviewers tend to accept the whole package — a finding consistent with research on [automation bias in human-AI interaction](https://doi.org/10.1016/j.ijhcs.2018.10.001) (Goddard, Roudsari & Wyatt 2012). The authoritative format (JSON audit report, decimal precision scores) amplifies the effect.
 
 > This pattern — fabricated numbers in an authoritative format — represents exactly the failure mode the Observatory studies. Fluent quantification without grounded methodology.
 
