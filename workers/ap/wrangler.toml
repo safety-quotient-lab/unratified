@@ -1,0 +1,22 @@
+name = "unratified-ap"
+main = "src/index.ts"
+compatibility_date = "2025-03-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "unratified-ap"
+database_id = "8bf5c407-0577-4f92-8b97-914ca675f6d1"
+
+[[routes]]
+pattern = "unratified.org/.well-known/webfinger*"
+zone_name = "unratified.org"
+
+[[routes]]
+pattern = "unratified.org/ap/*"
+zone_name = "unratified.org"
+
+[vars]
+AP_BASE_URL = "https://unratified.org"
+
+# Secrets (set via wrangler secret put):
+#   AP_PRIVATE_KEY_OBSERVATORY  — RSA-2048 PKCS8 PEM, used from Phase 2 onward
