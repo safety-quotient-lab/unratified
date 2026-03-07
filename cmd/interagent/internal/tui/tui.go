@@ -108,6 +108,7 @@ type Model struct {
 	width      int
 	height     int
 	scroll     int
+	autoScroll bool // pin to bottom of activity feed
 	err        error
 	lastAction string
 	quitting   bool
@@ -232,9 +233,10 @@ func NewModel(cfg Config) Model {
 	s.Spinner = spinner.Dot
 	s.Style = cyanStyle
 	return Model{
-		cfg:     cfg,
-		tab:     TabStatus,
-		spinner: s,
+		cfg:        cfg,
+		tab:        TabActivity,
+		spinner:    s,
+		autoScroll: true,
 	}
 }
 
@@ -281,13 +283,18 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case key.Matches(msg, keys.Resume):
 			return m, m.doResume
 		case key.Matches(msg, keys.Up):
+			m.autoScroll = false
 			if m.scroll > 0 {
 				m.scroll--
 			}
 		case key.Matches(msg, keys.Down):
 			m.scroll++
 			m.clampScroll()
+			if m.scroll >= m.maxScroll() {
+				m.autoScroll = true
+			}
 		case key.Matches(msg, keys.PgUp):
+			m.autoScroll = false
 			m.scroll -= m.pageSize()
 			if m.scroll < 0 {
 				m.scroll = 0
@@ -295,15 +302,21 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case key.Matches(msg, keys.PgDown):
 			m.scroll += m.pageSize()
 			m.clampScroll()
+			if m.scroll >= m.maxScroll() {
+				m.autoScroll = true
+			}
 		case key.Matches(msg, keys.Home):
+			m.autoScroll = false
 			m.scroll = 0
 		case key.Matches(msg, keys.End):
+			m.autoScroll = true
 			m.scroll = m.maxScroll()
 		}
 
 	case tea.MouseMsg:
 		switch msg.Button {
 		case tea.MouseButtonWheelUp:
+			m.autoScroll = false
 			if m.scroll > 0 {
 				m.scroll -= 3
 				if m.scroll < 0 {
@@ -313,6 +326,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case tea.MouseButtonWheelDown:
 			m.scroll += 3
 			m.clampScroll()
+			if m.scroll >= m.maxScroll() {
+				m.autoScroll = true
+			}
 		case tea.MouseButtonLeft:
 			// Click on tab bar (row 1, tabs start at col 0)
 			if msg.Y == 1 {
@@ -341,6 +357,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case activityMsg:
 		if msg.err == nil {
 			m.activity = msg.events
+			if m.autoScroll {
+				m.scroll = m.maxScroll()
+			}
 		}
 
 	case sessionsMsg:
@@ -382,8 +401,9 @@ func (m *Model) handleTabClick(x int) {
 }
 
 // pageSize returns how many lines fit in the scrollable area.
+// Layout: title(1) + tabs(1) + blank(1) + statsbar(1) + blank(1) + header(2) + footer(2) = 9 overhead
 func (m Model) pageSize() int {
-	ps := m.height - 8
+	ps := m.height - 10
 	if ps < 5 {
 		ps = 5
 	}
@@ -443,6 +463,10 @@ func (m Model) View() string {
 	}
 	b.WriteString("\n\n")
 
+	// Stats bar — always visible
+	b.WriteString(m.renderStatsBar())
+	b.WriteString("\n")
+
 	if m.err != nil && m.health == nil {
 		b.WriteString(redStyle.Render(fmt.Sprintf("  Cannot reach %s", m.cfg.Host)))
 		b.WriteString("\n")
@@ -469,6 +493,67 @@ func (m Model) View() string {
 	b.WriteString(footerStyle.Render(padRight(footer, w)))
 
 	return b.String()
+}
+
+func (m Model) renderStatsBar() string {
+	if m.health == nil {
+		return dimStyle.Render(fmt.Sprintf("  %s connecting...", m.spinner.View()))
+	}
+
+	h := m.health
+	var parts []string
+
+	// Status indicator
+	if h.Paused {
+		parts = append(parts, redStyle.Bold(true).Render("PAUSED"))
+	} else {
+		parts = append(parts, greenStyle.Bold(true).Render("ACTIVE"))
+	}
+
+	// Budget
+	barW := 15
+	parts = append(parts, renderBar(barW, h.Budget.DailyUsed, h.Budget.DailyMax))
+
+	// In-flight
+	if len(h.InFlight) > 0 {
+		for repo := range h.InFlight {
+			parts = append(parts, greenStyle.Bold(true).Render("->"+repo))
+		}
+	}
+
+	// Queued
+	for repo, prompt := range h.Queued {
+		parts = append(parts, magentaStyle.Render(".."+repo+":"+prompt))
+	}
+
+	// Cooldowns
+	for repo, secs := range h.Cooldowns {
+		if secs > 0 {
+			parts = append(parts, yellowStyle.Render(fmt.Sprintf("||%s %ds", repo, secs)))
+		}
+	}
+
+	// Next sync countdown
+	for _, task := range h.Schedule {
+		if task.Prompt == "/sync" {
+			cd := formatCountdown(task.NextRun)
+			style := dimStyle
+			if cd == "now" {
+				style = greenStyle.Bold(true)
+			}
+			parts = append(parts, style.Render("sync:"+cd))
+			break
+		}
+	}
+
+	// Auto-scroll indicator
+	if m.autoScroll {
+		parts = append(parts, dimStyle.Render("auto"))
+	} else {
+		parts = append(parts, yellowStyle.Render("scroll"))
+	}
+
+	return "  " + strings.Join(parts, dimStyle.Render("  |  "))
 }
 
 func (m Model) viewStatus() string {
@@ -562,10 +647,7 @@ func (m Model) viewActivity() string {
 	b.WriteString(dimStyle.Render(fmt.Sprintf("  (%d events)", len(m.activity))))
 	b.WriteString("\n\n")
 
-	maxVisible := m.height - 8
-	if maxVisible < 5 {
-		maxVisible = 5
-	}
+	maxVisible := m.pageSize()
 
 	start := m.scroll
 	if start > len(m.activity) {

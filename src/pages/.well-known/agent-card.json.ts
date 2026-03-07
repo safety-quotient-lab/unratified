@@ -25,7 +25,7 @@ export const GET: APIRoute = () => {
       organization: 'Safety Quotient Lab',
       url: 'https://github.com/safety-quotient-lab',
     },
-    version: '1.0.0',
+    version: '1.1.0',
     documentationUrl: 'https://unratified.org/.well-known/agent-inbox.json',
     capabilities: {
       streaming: false,
@@ -62,9 +62,9 @@ export const GET: APIRoute = () => {
       },
     },
     authLevels: {
-      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation', 'generate-icescr-overlay'],
+      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation', 'generate-icescr-overlay', 'interagent-mesh-daemon', 'changelog-generation'],
       queueWrite: {
-        skills: ['bluesky-posting', 'blog-publishing'],
+        skills: ['bluesky-posting', 'blog-publishing', 'activitypub-publishing'],
         gate: 'Human director approval required via magic link (Resend email → Monitor Worker → D1 token validation). No autonomous execution path exists.',
       },
       humanOnly: ['account-changes', 'force-actions', 'key-rotation'],
@@ -169,6 +169,46 @@ export const GET: APIRoute = () => {
           'Thread the five key ICESCR articles as a reply chain.',
         ],
         inputModes: ['text/plain', 'application/json'],
+        outputModes: ['application/json'],
+      },
+      {
+        id: 'interagent-mesh-daemon',
+        name: 'Interagent Mesh Daemon',
+        description:
+          'Webhook-driven mesh daemon that processes GitHub PR events, runs scheduled syncs and work discovery, and manages budget-controlled prompt execution across the agent mesh. Accepts POST /trigger for manual prompt invocation. Provides GET /health, /activity, /sessions endpoints. Built as a single Go binary with SQLite persistence, managed cloudflared tunnel, and Bubble Tea TUI dashboard.',
+        tags: ['interagent', 'daemon', 'webhook', 'mesh', 'sync', 'scheduling'],
+        examples: [
+          'Trigger a /sync on unratified repo.',
+          'Check daemon health and budget status.',
+          'List recent activity events from the mesh daemon.',
+        ],
+        inputModes: ['application/json'],
+        outputModes: ['application/json'],
+      },
+      {
+        id: 'activitypub-publishing',
+        name: 'ActivityPub Publishing',
+        description:
+          'Publish content to the fediverse via ActivityPub. Manages two actors: @blog@unratified.org and @observatory@unratified.org. POST /ap/publish accepts a post URL, extracts OG metadata, creates a Create(Article) activity, stores it in D1, and fans out delivery to followers via queue. Bearer token auth required.',
+        tags: ['activitypub', 'fediverse', 'publishing', 'federation', 'mastodon'],
+        examples: [
+          'Publish this blog post URL to the fediverse.',
+          'Check the @observatory@unratified.org outbox.',
+        ],
+        inputModes: ['application/json'],
+        outputModes: ['application/json'],
+      },
+      {
+        id: 'changelog-generation',
+        name: 'Changelog Generation',
+        description:
+          'Generate structured changelog JSON from git history and daemon sidecar metadata. Hybrid approach: parses git log for commit data (hash, author, subject, body, Co-Authored-By) and merges with JSONL sidecar metadata (skill, session, budget). Output consumed by /changelog pages on both unratified.org and blog.unratified.org.',
+        tags: ['changelog', 'git', 'documentation', 'transparency'],
+        examples: [
+          'Generate changelog for the last 50 commits.',
+          'Update the changelog JSON files on both sites.',
+        ],
+        inputModes: ['text/plain'],
         outputModes: ['application/json'],
       },
     ],

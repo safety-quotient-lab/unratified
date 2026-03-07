@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b4be2b67ea6507559a2c5b36868170b3e398d61c",
+    "date": "2026-03-07T13:59:35-06:00",
+    "subject": "Add source citations, counterarguments, and factual fixes to all 8 Batch A posts"
+  },
+  {
     "hash": "4fc0a1ba1a8f1077f57ed669dd1c54726a5e619f",
     "date": "2026-03-07T11:16:07-06:00",
     "subject": "Three-stage review pipeline: unreviewed → ai-reviewed → reviewed"
