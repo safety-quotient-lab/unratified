@@ -23,7 +23,7 @@ lensFraming:
   educator: "Use this post to teach digital infrastructure literacy — how the open web functions as a public good, and what happens when AI systems lose access to open information sources. Your students examine real examples of AI verification depending on open government databases, then evaluate the trade-offs between openness and access restriction."
   researcher: "Analysis of open web infrastructure as a precondition for reliable agentic AI output. Documents dependency chain: agent verification → open authoritative sources → grounded output. Presents evidence from a 49-term glossary validation (19 terms verified against external sources, 5 corrections applied). Connects to Jevons paradox (H3) and quality erosion (H6) hypotheses from the site's differential diagnosis."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## The Dependency

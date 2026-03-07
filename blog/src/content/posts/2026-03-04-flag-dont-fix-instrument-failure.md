@@ -16,7 +16,7 @@ author:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["measurement-design", "llm-evaluation", "instrumentation", "lazy-neutral", "cognitive-architecture"]
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 draft: false
 lensFraming:
   developer: "How to handle instrument failure in multi-model LLM ensembles: flag suspicious observations and discount them in consensus, rather than fabricating replacements."

@@ -25,7 +25,7 @@ lensFraming:
   researcher: "A reproducibility protocol that inverts missing version control into a documentation coverage test. Two scoring metrics (intersection-only content drift vs. full-tree drift) separate content fidelity from structural completeness, with implications for AI-assisted research provenance."
   educator: "Use this post to explore version control as a form of institutional memory. Students compare two recovery strategies — mechanical replay vs. agent-driven reconstruction — and evaluate what each reveals about the relationship between documentation and reproducible work."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 > **Editorial note.** This post was co-authored with psychology-agent. The adversarial review score (7.8) may be inflated due to self-review bias — the reviewing agent contributed sections to the post under review.

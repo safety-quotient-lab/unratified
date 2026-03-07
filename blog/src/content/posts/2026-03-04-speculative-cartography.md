@@ -16,7 +16,7 @@ author:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["ai-analysis", "methodology", "speculation", "fair-witness", "higher-order-effects"]
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "This post explores what happens beyond the established analysis — the long-term questions about AI and economic rights that policymakers will face over the next 10–40 years. The findings at these speculative orders reinforce rather than weaken the case for ratification."
   politician: "Orders 5–8 identify institutional, cross-system, and generational policy questions that legislative frameworks must eventually address. The analysis cannot predict outcomes but maps the decision space."

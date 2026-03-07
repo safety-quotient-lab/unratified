@@ -16,7 +16,7 @@ author:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["gap-detection", "cognitive-architecture", "csp", "silent-failure", "development-process"]
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 draft: false
 lensFraming:
   developer: "A gap-detection checkpoint catches a CSP omission before deployment — the kind of cross-file dependency that standard code review misses."

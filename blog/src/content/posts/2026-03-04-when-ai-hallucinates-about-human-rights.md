@@ -24,7 +24,7 @@ lensFraming:
   educator: "Your students can use this taxonomy to develop AI literacy skills. Seven confabulation types range from easily detectable (complete fabrication) to extremely difficult (quantitative fabrication, creative synthesis). The correction cascade demonstrates why 'just check the AI's work' requires more sophisticated verification strategies than most people realize."
   researcher: "Empirical confabulation taxonomy derived from two independent cross-model evaluation exchanges (Gemini → Claude Code). Seven types mapped by detection difficulty. Key methodological finding: confabulations demonstrate generative rather than retrieval-based error mechanisms — the model produces novel fabrications on each attempt, precluding simple deduplication-based correction strategies."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 relatedArticles: [15]
 ---
 

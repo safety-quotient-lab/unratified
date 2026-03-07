@@ -23,7 +23,7 @@ lensFraming:
   educator: "This post demonstrates peer review between AI systems through a concrete example. Students can trace the full loop: one AI scores a website, the website's subject AI scores the first AI's parent site back, fabrications emerge and get corrected in real time, and the corrections vanish in the next session. The exercise surfaces questions about AI reliability, evidence standards, and what 'correction' means for systems without persistent memory."
   researcher: "Empirical case study: closed-loop AI evaluation. Observatory scored gemini.google.com (HRCB -0.15, multi-rater consensus). Gemini independently evaluated observatory.unratified.org across three sessions (31 total rounds). Key finding: Grounded Epistemic Override (GEO) operates within a single context window but does not persist across sessions. Deterministic confabulation from identical prompts, generative confabulation from different prompts. Seven confabulation types observed, one candidate type proposed by the subject system itself."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 relatedArticles: [19]
 ---
 

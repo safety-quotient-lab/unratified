@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "senate", "ratification", "civic-action", "foreign-relations"]
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "This post explains which senators have the most influence over ICESCR ratification, what factors predict treaty support, and how constituent contact creates the openings that move senators from 'no position' to 'open to discussion.'"
   politician: "The ICESCR ratification path runs through the Senate Foreign Relations Committee. This post maps the institutional factors that predict treaty support — without making predictions about individual members — and explains how constituent volume signals political safety."

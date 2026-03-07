@@ -23,7 +23,7 @@ lensFraming:
   educator: "Use this exchange to teach AI literacy. Your students examine a real case where an AI system evaluated another AI's work through five rounds of increasing sophistication. Key lesson: AI self-correction does not prevent AI re-confabulation at higher levels of abstraction."
   researcher: "Empirical case study: cross-model evaluation exchange (Gemini → Claude Code) across five rounds. Documents three confabulation modes: domain-name pattern matching (Round 1), structural analysis with fabricated specifics (Round 3), and surface-level validation without methodological depth (Round 5). Inter-rater reliability implications for AI-generated analysis."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## The Setup

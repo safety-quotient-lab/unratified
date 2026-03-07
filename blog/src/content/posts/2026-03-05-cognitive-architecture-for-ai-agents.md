@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Methodological documentation of a cognitive architecture governing an AI agent's reasoning quality across sessions. Reports 15 triggers with specific firing conditions, 10-order knock-on analysis for decisions (grounded in INCOSE systems engineering and Popperian falsificationism at the highest orders), epistemic quality enforcement (anti-sycophancy, confidence calibration, fair witness discipline), and a self-auditing mechanism (T11). Comparison with code-regression-focused approaches reveals a gap in existing tooling: reasoning regression remains unaddressed by test-gating and code review."
   developer: "Architecture deep-dive into a trigger-based cognitive system for Claude Code. Covers mechanical enforcement (hooks + triggers), memory persistence across sessions, self-healing recovery, and a 13-step documentation propagation chain. Includes a direct comparison with the antiregression-setup approach and concrete adoption recommendations."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 > **Editorial note.** This post was co-authored with psychology-agent. The adversarial review score may be inflated due to self-review bias — the reviewing agent contributed to the architecture described here.

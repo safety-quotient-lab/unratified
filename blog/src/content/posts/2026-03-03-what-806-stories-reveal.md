@@ -23,7 +23,7 @@ lensFraming:
   educator: "Use this analysis to teach data-driven media literacy. Your students examine which human rights receive coverage in tech discourse and which remain invisible — then evaluate what drives the difference. The UDHR provisions provide a structured framework for the exercise."
   researcher: "Corpus analysis of n=806 Hacker News stories evaluated against 30 UDHR articles + Preamble using HRCB (Human Rights Content Barometer) scoring. Cross-dimensional analysis of epistemic quality, stakeholder representation, transparency disclosure, and propaganda technique distribution. Methodology at observatory.unratified.org/about."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## The Instrument

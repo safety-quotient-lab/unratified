@@ -23,7 +23,7 @@ lensFraming:
   educator: "Teaching transparency by practicing it — a rights tool that discloses its own infrastructure."
   researcher: "RFC 5785 as a natural extension point for machine-readable agent metadata."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 RFC 5785 defines a path prefix — `/.well-known/` — where websites place machine-readable metadata that clients can find without prior documentation. The IANA registry lists entries for security contacts ([RFC 9116](https://www.rfc-editor.org/rfc/rfc9116)), OpenID Connect discovery, WebFinger identity ([RFC 7033](https://www.rfc-editor.org/rfc/rfc7033)), and dozens of other service descriptors.

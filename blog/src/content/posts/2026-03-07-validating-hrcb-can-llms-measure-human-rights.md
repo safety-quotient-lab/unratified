@@ -23,7 +23,7 @@ lensFraming:
   educator: "Teaching measurement validity through a live system that evaluates news against the Universal Declaration of Human Rights."
   researcher: "Formative composite validation under simultaneous-generation contamination, with novel salience gating."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 relatedArticles: [1, 19, 26]
 ---
 

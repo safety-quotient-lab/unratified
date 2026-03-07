@@ -23,7 +23,7 @@ lensFraming:
   educator: "Use this post to teach meta-methodology — how to evaluate whether an analytical process produces trustworthy results. Your students examine the recursive structure and assess whether each verification layer adds genuine rigor or merely adds complexity."
   researcher: "Methodological self-documentation of the analytical pipeline producing unratified.org content. Reports recursive verification architecture, discriminator scoring protocol (5 dimensions, /25), knock-on chain analysis methodology (Orders 0-9, confidence degradation, 0-4 complete, 5-9 Phase 2), and the critical dependency on real-time web access for each recursion layer. Single-rater limitation acknowledged."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## The Meta-Layer
