@@ -19,6 +19,16 @@ QPl8HEJCrWwbuzahCYiVQSw0n2eYFYef8xW7f7gyBMrWTjWxmvMs32ILu/tRlQo9
 iQIDAQAB
 -----END PUBLIC KEY-----`;
 
+const BLOG_PUBLIC_KEY = `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxYpybcfY7cG7QWpfzUFu
+/5w+TJJRfWgDamp5aWkophqAuV08963gEnFgWKuf39ivhT4SYAoFEw+Mf5V2sbtl
+tZQ/WZX8qEBMKX7UCmdAL30PQqYpxiAihxjd+7tpReTeoQLQlfgdDYhkIRjXdNrz
+XnE09A7J5cBxrPbaug8JNDqh3vyOQwIoIaiweXCvdaYUImK4TF5tf+LzgdTy05XM
+P75CQAI5SArTial9KfbOPct9brqq/e+xmUbgE/y25to42a483gDU2h4vaGKNy2iR
+j6SvLSkQWWmSDMhrBua/rVuxZ5XcddXA4RS8yY0KQF0H0xVpDc1afaWKMJr1uL8T
+WwIDAQAB
+-----END PUBLIC KEY-----`;
+
 export const ACTORS: Record<string, ActorConfig> = {
   observatory: {
     username: 'observatory',
@@ -29,6 +39,16 @@ export const ACTORS: Record<string, ActorConfig> = {
     url: 'https://observatory.unratified.org',
     iconUrl: 'https://unratified.org/images/observatory-avatar.svg',
     publicKeyPem: OBSERVATORY_PUBLIC_KEY,
+  },
+  blog: {
+    username: 'blog',
+    name: 'unratified.org blog',
+    summary:
+      'Posts from <a href="https://blog.unratified.org">blog.unratified.org</a> — ' +
+      'research, analysis, and commentary on the case for U.S. ICESCR ratification.',
+    url: 'https://blog.unratified.org',
+    iconUrl: 'https://unratified.org/images/blog-avatar.svg',
+    publicKeyPem: BLOG_PUBLIC_KEY,
   },
 };
 

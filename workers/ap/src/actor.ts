@@ -1,5 +1,9 @@
 import { getActor } from './actors.js';
 
+export interface ActorEnv {
+  DB: D1Database;
+}
+
 const AP_CONTEXT = [
   'https://www.w3.org/ns/activitystreams',
   'https://w3id.org/security/v1',
@@ -48,54 +52,31 @@ export function handleActor(name: string, baseUrl: string): Response {
   });
 }
 
-// GET /ap/actors/:name/outbox
-export function handleOutbox(name: string, baseUrl: string): Response {
-  const actor = getActor(name);
-  if (!actor) {
-    return new Response('Not found', { status: 404 });
-  }
-
-  const actorUrl = `${baseUrl}/ap/actors/${actor.username}`;
-
-  const outbox = {
-    '@context': 'https://www.w3.org/ns/activitystreams',
-    id: `${actorUrl}/outbox`,
-    type: 'OrderedCollection',
-    totalItems: 0,
-    first: `${actorUrl}/outbox?page=1`,
-  };
-
-  return new Response(JSON.stringify(outbox, null, 2), {
-    headers: {
-      'Content-Type': 'application/activity+json',
-      'Access-Control-Allow-Origin': '*',
-      'Cache-Control': 'public, max-age=60',
-    },
-  });
-}
-
 // GET /ap/actors/:name/followers
-export function handleFollowers(name: string, baseUrl: string): Response {
+export async function handleFollowers(name: string, baseUrl: string, env: ActorEnv): Promise<Response> {
   const actor = getActor(name);
   if (!actor) {
     return new Response('Not found', { status: 404 });
   }
 
   const actorUrl = `${baseUrl}/ap/actors/${actor.username}`;
+  const { results } = await env.DB.prepare(
+    `SELECT COUNT(*) as count FROM ap_followers WHERE actor_name = ?`,
+  ).bind(actor.username).all<{ count: number }>();
+  const totalItems = results[0]?.count ?? 0;
 
-  // Phase 1: return totalItems only (privacy — don't expose follower list)
   const followers = {
     '@context': 'https://www.w3.org/ns/activitystreams',
     id: `${actorUrl}/followers`,
     type: 'OrderedCollection',
-    totalItems: 0,
+    totalItems,
   };
 
   return new Response(JSON.stringify(followers, null, 2), {
     headers: {
       'Content-Type': 'application/activity+json',
       'Access-Control-Allow-Origin': '*',
-      'Cache-Control': 'public, max-age=60',
+      'Cache-Control': 'no-store',
     },
   });
 }

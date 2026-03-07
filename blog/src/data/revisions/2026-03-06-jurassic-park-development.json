@@ -1,5 +1,10 @@
 [
   {
+    "hash": "7b0dcf09f2411c93ee107981671ef68ede798cb0",
+    "date": "2026-03-06T16:00:19-06:00",
+    "subject": "Multi-agent author schema: arrays for agent + model fields (D086)"
+  },
+  {
     "hash": "1cc91694cd51875546537a8341ed1b3da6653775",
     "date": "2026-03-06T15:41:36-06:00",
     "subject": "Add multi-author blog post: Jurassic Park Development"

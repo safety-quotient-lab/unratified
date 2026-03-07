@@ -7,6 +7,16 @@ binding = "DB"
 database_name = "unratified-ap"
 database_id = "8bf5c407-0577-4f92-8b97-914ca675f6d1"
 
+[[queues.producers]]
+queue = "ap-delivery"
+binding = "AP_DELIVERY_QUEUE"
+
+[[queues.consumers]]
+queue = "ap-delivery"
+max_batch_size = 10
+max_batch_timeout = 5
+max_retries = 3
+
 [[routes]]
 pattern = "unratified.org/.well-known/webfinger*"
 zone_name = "unratified.org"
@@ -19,4 +29,6 @@ zone_name = "unratified.org"
 AP_BASE_URL = "https://unratified.org"
 
 # Secrets (set via wrangler secret put):
-#   AP_PRIVATE_KEY_OBSERVATORY  — RSA-2048 PKCS8 PEM, used from Phase 2 onward
+#   AP_PRIVATE_KEY_OBSERVATORY  — RSA-2048 PKCS8 PEM
+#   AP_PRIVATE_KEY_BLOG         — RSA-2048 PKCS8 PEM
+#   AP_PUBLISH_TOKEN            — bearer token for /ap/publish

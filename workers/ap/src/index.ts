@@ -1,10 +1,16 @@
 import { handleWebFinger } from './webfinger.js';
-import { handleActor, handleOutbox, handleFollowers, handleFollowing } from './actor.js';
+import { handleActor, handleFollowers, handleFollowing } from './actor.js';
+import { handleInbox, Env as InboxEnv } from './inbox.js';
+import { handlePublish, handleOutboxPaged, Env as PublishEnv } from './publish.js';
+import { handleDeliveryQueue, Env as DeliveryEnv } from './delivery.js';
 
-export interface Env {
+export interface Env extends InboxEnv, PublishEnv, DeliveryEnv {
   DB: D1Database;
+  AP_DELIVERY_QUEUE: Queue;
   AP_BASE_URL: string;
-  AP_PRIVATE_KEY_OBSERVATORY?: string; // Phase 2+
+  AP_PRIVATE_KEY_OBSERVATORY?: string;
+  AP_PRIVATE_KEY_BLOG?: string;
+  AP_PUBLISH_TOKEN?: string;
 }
 
 export default {
@@ -18,12 +24,16 @@ export default {
       return handleWebFinger(request, baseUrl);
     }
 
-    // AP actor routes: /ap/actors/:name[/outbox|/followers|/following]
+    // /ap/publish — Phase 3
+    if (pathname === '/ap/publish') {
+      return handlePublish(request, env);
+    }
+
+    // AP actor routes: /ap/actors/:name[/inbox|/outbox|/followers|/following]
     const actorMatch = pathname.match(/^\/ap\/actors\/([^/]+)(\/.*)?$/);
     if (actorMatch) {
       const [, name, sub] = actorMatch;
 
-      // Require AP content negotiation for actor endpoint (Mastodon sends Accept: application/activity+json)
       const accept = request.headers.get('Accept') ?? '';
       const wantsAp =
         accept.includes('application/activity+json') ||
@@ -32,39 +42,20 @@ export default {
         accept === '';
 
       if (!wantsAp) {
-        // Redirect HTML requests to the actor's profile URL
         return Response.redirect(`${baseUrl}/ap/actors/${name}`, 302);
       }
 
-      if (!sub || sub === '/') {
-        return handleActor(name, baseUrl);
-      }
-      if (sub === '/outbox') {
-        return handleOutbox(name, baseUrl);
-      }
-      if (sub === '/followers') {
-        return handleFollowers(name, baseUrl);
-      }
-      if (sub === '/following') {
-        return handleFollowing(name, baseUrl);
-      }
-      // inbox — Phase 2
-      if (sub === '/inbox') {
-        return new Response(
-          JSON.stringify({ error: 'Inbox not yet implemented (Phase 2)' }),
-          { status: 501, headers: { 'Content-Type': 'application/json' } }
-        );
-      }
-    }
-
-    // /ap/publish — Phase 3
-    if (pathname === '/ap/publish') {
-      return new Response(
-        JSON.stringify({ error: 'Publish endpoint not yet implemented (Phase 3)' }),
-        { status: 501, headers: { 'Content-Type': 'application/json' } }
-      );
+      if (!sub || sub === '/') return handleActor(name, baseUrl);
+      if (sub === '/outbox') return handleOutboxPaged(name, request, env, baseUrl);
+      if (sub === '/followers') return handleFollowers(name, baseUrl, env);
+      if (sub === '/following') return handleFollowing(name, baseUrl);
+      if (sub === '/inbox') return handleInbox(name, request, env);
     }
 
     return new Response('Not found', { status: 404 });
+  },
+
+  async queue(batch: MessageBatch<string>, env: Env): Promise<void> {
+    await handleDeliveryQueue(batch, env);
   },
 };
