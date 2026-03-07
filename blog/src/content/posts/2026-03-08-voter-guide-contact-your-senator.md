@@ -22,7 +22,7 @@ lensFraming:
   voter: "This post gives you the specific scripts, channels, and timing to contact your senators about ICESCR ratification — and explains why that contact, done right, moves the needle."
   politician: "This post documents the constituent contact pressure building around ICESCR ratification. Your staff will field these calls. This is what your constituents are asking and why."
   educator: "Civic contact skills transfer across every policy issue. This post models the kind of specific, substantive constituent engagement that actually influences legislative staff — useful as a civic literacy teaching tool."
-  researcher: "This post documents the constituent advocacy mechanics around ICESCR ratification as it unfolds in 2026 — useful for researchers studying treaty ratification advocacy and civic engagement strategies."
+  researcher: "This post documents constituent advocacy mechanics around ICESCR ratification — an advocacy guide with sourced claims, RUDs context, and engagement strategies for both supportive and skeptical offices."
   developer: "You understand systems. Senate offices are systems with inputs and outputs. This post maps those inputs precisely so that constituent pressure produces measurable outputs rather than noise."
 ---
 
@@ -182,15 +182,17 @@ If your senator holds this position:
 
 1. **Engage it directly.** Acknowledge that you've heard the sovereignty concern. The ICESCR monitoring body (the UN Committee on Economic, Social and Cultural Rights) does not have enforcement power over the U.S. — it issues concluding observations and recommendations. Ratification creates accountability and reporting obligations, not external legal authority over domestic law.
 
-2. **Keep the focus on hearings, not immediate ratification.** Asking a skeptical senator to support hearings is a lower bar than asking for their ratification vote. Hearings are the appropriate mechanism for a democratic body to examine a treaty. That argument doesn't require the senator to have made up their mind.
+2. **Know the RUDs precedent.** The U.S. has ratified three human rights treaties — the [ICCPR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en), the [Convention Against Torture](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en), and [CERD](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-2&chapter=4&clang=_en) — each with [reservations, understandings, and declarations (RUDs)](https://www.congressfoundation.org/) that limited domestic legal effect. ICESCR ratification would almost certainly follow the same pattern. The treaty would not be self-executing — meaning it wouldn't automatically become enforceable domestic law without implementing legislation. This is worth knowing when engaging sovereignty objections: ratification creates international reporting obligations and accountability, not a transfer of domestic lawmaking authority.
 
-3. **Stay respectful and factual.** Constituent contacts that engage policy substance rather than express frustration are more likely to get substantive responses.
+3. **Keep the focus on hearings, not immediate ratification.** Asking a skeptical senator to support hearings is a lower bar than asking for their ratification vote. Hearings are the appropriate mechanism for a democratic body to examine a treaty. That argument doesn't require the senator to have made up their mind.
+
+4. **Stay respectful and factual.** Constituent contacts that engage policy substance rather than express frustration are more likely to get substantive responses.
 
 ## The Bigger Picture
 
 Senators respond to constituent pressure when it is sustained, specific, and comes from multiple people across multiple contact points over time.
 
-ICESCR ratification has never had a coordinated constituent advocacy campaign at scale. The treaty has spent five decades in the Senate's unanswered inbox — not because senators have weighed it and rejected it, but because it has never faced enough constituent pressure to force a decision.
+ICESCR ratification has never had a coordinated constituent advocacy campaign at scale. The treaty has spent five decades in the Senate's unanswered inbox — not because senators have weighed it and rejected it, but because the volume of constituent contact on this issue has not yet reached the threshold that forces a scheduling decision.
 
 That creates an opening. Contact volume on this issue is low enough that a meaningful number of engaged constituents — making specific, substantive asks over several months — can move it from "never discussed" to "on the agenda."
 
@@ -201,3 +203,12 @@ Your two senators are the right starting point. Find their contact information, 
 *This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities.*
 
 *Post 1: [The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. Didn't](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) | Post 2: [AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/)*
+
+## Sources
+
+- [ICESCR full text (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
+- [ICESCR ratification status — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) (173 parties as of March 2026)
+- [Find your senators — U.S. Senate](https://www.senate.gov/senators/senators-contact.htm)
+- [Congressional Management Foundation — Communicating with Congress: Perceptions of Citizen Advocacy on Capitol Hill](https://www.congressfoundation.org/projects/communicating-with-congress) — research on constituent contact effectiveness by channel (in-person, phone, letter, email, form)
+- [U.S. Senate Foreign Relations Committee](https://www.foreign.senate.gov/)
+- [Committee on Economic, Social and Cultural Rights (CESCR)](https://www.ohchr.org/en/treaty-bodies/cescr)

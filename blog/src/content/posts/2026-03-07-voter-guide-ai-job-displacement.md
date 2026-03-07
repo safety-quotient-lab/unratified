@@ -22,7 +22,7 @@ lensFraming:
   voter: "AI tools now do work that millions of Americans earned a living doing five years ago. This post explains why the U.S. has no binding legal floor for how it must respond — and what a ratified treaty would require."
   politician: "AI displacement creates constituent pressure with no legislative ceiling. This post explains the treaty framework that ratified nations use to structure their responses — and why the U.S. operates without that framework."
   educator: "Your students will enter a labor market transformed by AI. This post gives them the civic vocabulary to understand why the U.S. lacks binding protections for workers in economic transitions — and what the ICESCR would change."
-  researcher: "This post documents the intersection of AI labor displacement and U.S. treaty non-ratification as a governance gap, not a technological argument. The frame: treaty obligations create measurable accountability; the U.S. has none."
+  researcher: "This post documents the intersection of AI labor displacement and U.S. treaty non-ratification as a governance gap — advocacy grounded in treaty analysis, with counterarguments and enforcement limitations acknowledged."
   developer: "You build the tools. This post asks what accountability layer exists for the economic consequences — and answers honestly: in the U.S., there isn't one. In 173 ratified nations, there is."
 ---
 
@@ -50,7 +50,7 @@ Research on AI labor displacement consistently identifies several categories of 
 
 **Routine cognitive work** — data entry, form processing, basic analysis, scheduling, and coordination tasks that follow predictable patterns. These jobs have disappeared steadily since the 2010s and accelerated sharply with large language model deployment.
 
-**Customer-facing service roles** — phone support, chat assistance, and front-line service work. Automated systems now handle the majority of first-contact customer interactions in sectors from banking to healthcare to retail.
+**Customer-facing service roles** — phone support, chat assistance, and front-line service work. Automated systems now handle a growing share of first-contact customer interactions in sectors from banking to healthcare to retail.
 
 **Paralegal and legal support work** — document review, contract summarization, case research, and filing tasks that once employed thousands of junior legal workers per large firm.
 
@@ -76,7 +76,7 @@ None of these requirements mandates a particular policy solution. A ratified nat
 
 ## What Article 7 Would Require About AI-Driven Wage Suppression
 
-AI doesn't only displace workers. It suppresses wages for workers who remain — by expanding the supply of work that can be done more cheaply, and by shifting negotiating leverage decisively toward employers.
+AI doesn't only displace workers. It suppresses wages for workers who remain — by expanding the supply of work that can be done more cheaply, and by shifting negotiating leverage significantly toward employers.
 
 Article 7 of the ICESCR establishes the right to just and favorable conditions of work, including **fair wages** and **equal remuneration for work of equal value**. This doesn't set a specific number, but it creates a standard governments must measure themselves against.
 
@@ -102,7 +102,15 @@ What it changes concretely:
 
 **Non-discrimination requirements** — Article 2 requires that rights apply to everyone within the nation's jurisdiction without discrimination. AI displacement hits some workers harder than others — by sector, by race, by education level, by geography. A ratified government must demonstrate that its responses reach those workers equitably.
 
-None of this prevents bad policy. It makes bad policy visible and formally contestable in an international forum. For advocates, that's a different kind of tool.
+None of this prevents bad policy. It makes bad policy visible and formally contestable in an international forum — through recommendations and concluding observations that carry political weight, not through enforceable court orders. For advocates, that's a different kind of tool.
+
+## Common Objections
+
+**"Treaty monitoring won't stop AI displacement."** Correct. The ICESCR doesn't prevent economic disruption — no treaty can. What it creates is accountability for the *response*. A government that takes no meaningful action on workforce displacement must explain that inaction publicly. Whether that accountability produces better outcomes depends on how effectively domestic advocates use it.
+
+**"The U.S. already has workforce programs."** It does — Trade Adjustment Assistance, Workforce Innovation and Opportunity Act programs, Pell Grants. The question is what happens when those programs get cut. Under current law, cutting workforce programs is a normal political act. Under ICESCR Article 6, it would trigger international review and require justification.
+
+**"This creates international bureaucracy without real enforcement."** The CESCR monitoring body has no enforcement power over domestic law. Its leverage comes from public reporting, civil society engagement, and reputational accountability. Reasonable people disagree about whether that leverage justifies treaty commitments. The 173 nations that ratified concluded it does.
 
 ## The Governance Gap Is Not About Technology
 
@@ -135,3 +143,13 @@ The next post in this series will walk through what that contact looks like in p
 ---
 
 *This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Post 1: [The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. Didn't](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/).*
+
+## Sources
+
+- [ICESCR full text — Articles 6, 7, 9 (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
+- [ICESCR ratification status — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) (173 parties as of March 2026)
+- [CESCR General Comment No. 18 — Right to Work (Article 6)](https://www.refworld.org/legal/general/cescr/2006/32433) — defines "appropriate steps" toward full employment
+- [CESCR General Comment No. 23 — Right to Just and Favorable Conditions of Work (Article 7)](https://www.refworld.org/legal/general/cescr/2016/73541) — fair wages and working conditions
+- [Brookings Institution — AI and workforce displacement research](https://www.brookings.edu/articles/what-jobs-are-affected-by-ai-better-paid-better-educated-workers-face-the-most-exposure/)
+- [World Economic Forum — Future of Jobs Report 2025](https://www.weforum.org/publications/the-future-of-jobs-report-2025/)
+- [Committee on Economic, Social and Cultural Rights (CESCR)](https://www.ohchr.org/en/treaty-bodies/cescr)

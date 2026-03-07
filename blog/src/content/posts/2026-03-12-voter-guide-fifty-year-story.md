@@ -22,7 +22,7 @@ lensFraming:
   voter: "The U.S. signed the ICESCR in 1977. Congress has had nearly 50 years to vote on it and hasn't. This post traces that history — and explains why the pattern of inaction reflects a specific political choice, not a legal impossibility."
   politician: "This post documents the legislative and executive history of ICESCR non-ratification: Carter's signature, the Reagan reversal, the pattern of Senate Foreign Relations Committee inaction, and the moments when ratification came closest. Useful context for staff handling treaty inquiries."
   educator: "This post offers a complete historical arc — from the 1966 UN adoption through the Cold War, the Reagan reversal, and the present — suitable for courses on U.S. foreign policy, international human rights law, or democratic governance."
-  researcher: "This post documents the political history of ICESCR non-ratification with specific dates, actors, and institutional decisions. The framing: non-ratification reflects active political choices, not passive oversight — and those choices have contemporary consequences."
+  researcher: "This post documents the political history of ICESCR non-ratification with specific dates, actors, and institutional decisions — distinguishing structural barriers (supermajority threshold, committee bandwidth) from active political choices."
   developer: "The ICESCR has existed for nearly six decades. This post explains why the U.S. still hasn't ratified it — a story about political economy and institutional gatekeeping more than legal obstacles."
 ---
 
@@ -48,7 +48,7 @@ The SFRC's inaction during the Carter years reflected several converging pressur
 
 **Senate skepticism about binding international commitments.** The two-thirds ratification threshold exists precisely because the Constitution's framers viewed treaties as serious, durable commitments requiring supermajority consensus. A significant bloc of senators — spanning both parties but concentrated on the right — viewed the ICESCR with suspicion: would ratification require Congress to pass specific legislation? Would it give international bodies influence over domestic U.S. policy? Could it expose U.S. government programs to international scrutiny?
 
-**The sovereignty argument.** Critics argued that ratification would subordinate U.S. democratic decision-making to an unelected international committee. This argument has appeared in every human rights treaty ratification debate since the 1940s — it surfaced against the Universal Declaration of Human Rights, against the genocide convention, against the ICCPR, against the Convention on the Elimination of All Forms of Racial Discrimination.
+**The sovereignty argument.** Critics argued that ratification would subordinate U.S. democratic decision-making to an unelected international committee. This argument has appeared in every human rights treaty ratification debate since the 1940s — it surfaced against the Universal Declaration of Human Rights (which was non-binding), against the genocide convention, against the ICCPR, against the Convention on the Elimination of All Forms of Racial Discrimination.
 
 **Cold War complexity.** The ICESCR originated partly from Soviet-bloc advocacy for social and economic rights at the UN — a framing designed to contrast Communist governance favorably against capitalist inequality. Some U.S. officials saw the treaty as ideologically compromised by this origin, even though its content reflected universally recognized human rights standards.
 
@@ -110,13 +110,17 @@ As of 2026, the treaty has awaited Senate action for 49 years. No Senate Foreign
 
 ## What the 50-Year History Reveals
 
-The 50-year pattern isn't passive oversight or bureaucratic delay. It reflects a series of active political choices:
+The 50-year pattern reflects both structural barriers and active political choices — and distinguishing between them matters:
 
 **The choice not to schedule hearings.** Every SFRC chair since 1978 has had the authority to schedule ICESCR hearings. None has.
 
 **The choice to distinguish economic rights from civil and political rights.** The U.S. ratified treaties protecting civil and political rights while declining to ratify treaties protecting economic and social rights. This distinction reflects a political choice about which category of rights the U.S. accepts as binding — not a constitutional impossibility.
 
-**The choice to accept international accountability for some rights but not others.** The U.S. accepts review of its compliance with the ICCPR, CAT, and CERD. It declines review of housing, health, and labor conditions. The selectivity reflects political economy: industries that benefit from weak labor protections, limited social spending, and deregulated healthcare markets have strong lobbying presence; treaty advocacy organizations do not.
+**The choice to accept international accountability for some rights but not others.** The U.S. accepts review of its compliance with the ICCPR, CAT, and CERD. It declines review of housing, health, and labor conditions. The selectivity reflects political economy: critics argue that industries benefiting from weak labor protections, limited social spending, and deregulated healthcare markets have strong lobbying presence, while treaty advocacy organizations do not.
+
+**The structural barrier of the two-thirds threshold.** The Constitution's supermajority requirement for treaty ratification makes any treaty harder to ratify than ordinary legislation. ICESCR ratification requires 67 votes — a bipartisan coalition in an era of deepening polarization. This isn't a political choice; it's a constitutional design feature that filters out treaties without broad consensus.
+
+**Committee bandwidth and institutional inertia.** The SFRC handles hundreds of treaties, nominations, and foreign policy matters. A treaty with no organized constituency and no executive branch push competes for scarce committee time against issues with active political pressure behind them. Inertia isn't always a decision — sometimes it's the default when no one pushes.
 
 **The choice not to use available tools.** The ICESCR's reporting mechanism, shadow reporting infrastructure, and UN Committee review process have provided accountability tools to civil society organizations in 173 ratified countries for decades. U.S. organizations have gone without those tools — not because they couldn't exist, but because the Senate has never voted.
 
@@ -126,7 +130,7 @@ The 50-year pattern ends through the same process that began it: political choic
 
 SFRC chairs choose to schedule hearings when the political cost of not scheduling them exceeds the cost of acting. That threshold shifts when constituent contact demonstrates that ratification has a meaningful constituency — that inaction carries a political price, not just moral criticism.
 
-The senators who've sat on the SFRC since 1978 weren't opposed to ICESCR ratification because they studied the treaty and rejected it. Most never encountered a constituent who asked them to act on it. The treaty existed in their political environment as a nonissue — invisible, unthreatening, and easily deferred.
+The senators who've sat on the SFRC since 1978 weren't opposed to ICESCR ratification because they studied the treaty and rejected it. Few appear to have encountered significant constituent pressure to act on it. The treaty existed in their political environment as a nonissue — invisible, unthreatening, and easily deferred.
 
 Making the ICESCR visible in that environment — through constituent contact, civil society coordination, and persistent engagement — changes what senators perceive as politically possible.
 
@@ -143,3 +147,16 @@ The 50-year silence didn't come from nowhere. It can end the same way.
 ---
 
 *This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-09-voter-guide-rights-inventory/) · [Post 5: What Ratification Would Actually Change](https://blog.unratified.org/2026-03-10-voter-guide-what-ratification-changes/) · [Post 6: Which Senators Could Move](https://blog.unratified.org/2026-03-11-voter-guide-which-senators-could-move/).*
+
+## Sources
+
+- [ICESCR full text (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
+- [ICESCR ratification status — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) (173 parties as of March 2026)
+- [ICCPR full text (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights) — signed alongside ICESCR by President Carter in 1977
+- [ICCPR ratification by U.S. (1992) — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en)
+- [Convention Against Torture ratification by U.S. (1994) — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en)
+- [CERD ratification by U.S. (1994) — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-2&chapter=4&clang=_en)
+- [U.S. Senate Foreign Relations Committee](https://www.foreign.senate.gov/)
+- [U.S. Constitution, Article II, Section 2](https://constitution.congress.gov/browse/article-2/section-2/) — treaty ratification requiring two-thirds Senate vote
+- [Congressional Research Service — International Human Rights Treaties Ratified by the United States](https://crsreports.congress.gov/) — RUDs practice on ICCPR, CAT, CERD
+- [Universal Declaration of Human Rights (1948) — UN](https://www.un.org/en/about-us/universal-declaration-of-human-rights) — non-binding declaration that preceded both covenants

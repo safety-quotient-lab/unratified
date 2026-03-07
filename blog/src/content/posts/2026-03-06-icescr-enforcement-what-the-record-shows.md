@@ -36,7 +36,7 @@ The honest answer: the enforcement gap is real. But the gap reveals something mo
 
 The ICESCR's primary enforcement mechanism is the [Committee on Economic, Social and Cultural Rights (CESCR)](https://www.ohchr.org/en/treaty-bodies/cescr), a UN treaty body. CESCR operates through two channels:
 
-**Periodic review**: Every five years, ratifying states submit reports on their implementation of ICESCR obligations. CESCR reviews these reports and issues Concluding Observations — assessments of progress and specific recommendations. These are not binding court orders, but they create a public record and generate accountability pressure through civil society and media.
+**Periodic review**: Ratifying states submit periodic reports on their implementation of ICESCR obligations (originally every five years; the cycle has shifted in practice to approximately eight years). CESCR reviews these reports and issues Concluding Observations — assessments of progress and specific recommendations. These are not binding court orders, but they create a public record and generate accountability pressure through civil society and media.
 
 **Individual communications**: The [Optional Protocol to the ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/optional-protocol-international-covenant-economic-social-and-cultural-rights), which entered into force in 2013, allows individuals to bring complaints directly to CESCR when domestic remedies are exhausted. CESCR can find violations and recommend remedies. Twenty-six states have ratified the Optional Protocol as of 2026.
 
@@ -46,19 +46,19 @@ The mechanism relies on political pressure, civil society mobilization, and — 
 
 The enforcement record is uneven across rights. For **Article 11 (adequate housing)**, it is substantial.
 
-Spain — one of the first Optional Protocol ratifiers — has faced 139+ individual communications to CESCR, the vast majority concerning the right to adequate housing. CESCR has found Spain in violation multiple times, most notably in *Ben Djazia and Bellili v. Spain* (Communication No. 5/2015, 2017), where the Committee ruled that Spain violated Article 11(1) by failing to provide adequate housing before evicting a family. The ruling required Spain to provide restitution and take preventive measures to avoid similar violations.
+Spain — one of the first Optional Protocol ratifiers — has faced [139+ individual communications](https://www.ohchr.org/en/treaty-bodies/cescr/individual-communications) to CESCR, the vast majority concerning the right to adequate housing. CESCR has found Spain in violation multiple times, most notably in *Ben Djazia and Bellili v. Spain* (Communication No. 5/2015, 2017), where the Committee ruled that Spain violated Article 11(1) by failing to provide adequate housing before evicting a family. The ruling required Spain to provide restitution and take preventive measures to avoid similar violations.
 
 South Africa's Constitutional Court enforces socioeconomic rights directly — not always through the ICESCR, but through constitutional provisions that closely parallel it. *Government of RSA v. Grootboom* (2000) ordered emergency housing provision. *Minister of Health v. Treatment Action Campaign* (2002) ordered antiretroviral treatment access. These cases established that economic rights are justiciable: courts can evaluate, adjudicate, and order specific government action.
 
 Colombia's [tutela mechanism](https://www.escr-net.org/caselaw/list) allows individuals to seek judicial protection of fundamental rights, including economic rights. Multiple rulings have addressed healthcare access, education, and social security in ICESCR-consistent terms.
 
-The enforcement gap on housing is real but narrowing. The Optional Protocol creates a genuine complaint pathway that has produced binding findings.
+The enforcement gap on housing is real but narrowing. The Optional Protocol creates a genuine complaint pathway that has produced authoritative findings carrying significant political and moral weight, though they do not carry formal binding force under international law.
 
 ## What the Article 6 Record Shows
 
 For **Article 6 (the right to work)**, the record is much thinner.
 
-CESCR's Optional Protocol jurisprudence is dominated by housing cases. Among the communications that have produced findings, we found no documented case where ICESCR Article 6 was directly enforced against technology-driven job displacement or algorithmic labor management in any ratifying state's courts or through the Optional Protocol.
+CESCR's Optional Protocol jurisprudence is dominated by housing cases. Among the communications that have produced findings, we found no documented case in the databases and sources we searched (OHCHR treaty body database, ESCR-Net caselaw database, Optional Protocol decisions) where ICESCR Article 6 was directly enforced against technology-driven job displacement or algorithmic labor management.
 
 This is the honest finding: the enforcement of work rights through the ICESCR — specifically in contexts involving automation, platform labor, and AI-driven displacement — does not yet exist as a documented body of case law.
 
@@ -76,9 +76,9 @@ Why?
 
 The nearest analogues to ICESCR Article 6 enforcement on technology and labor come from domestic law and EU frameworks — not the ICESCR itself.
 
-**Italy (2021)**: Italy's data protection authority (Garante) [fined Glovo-owned Foodinho €2.6 million](https://techcrunch.com/2021/07/06/italys-dpa-fines-glovo-owned-foodinho-3m-orders-changes-to-algorithmic-management-of-riders/) and ordered changes to its algorithmic management of delivery riders. The ruling was the first time a European DPA applied GDPR Article 22 (automated decision-making) in an employment context. A Bologna tribunal separately found a platform industry collective bargaining agreement illegal for derogating unfavorably from worker protections. These cases used data protection law and domestic labor law — not the ICESCR — but they demonstrate what enforcement looks like when a legal framework exists.
+**Italy (2021)**: Italy's data protection authority (Garante) [fined Glovo-owned Foodinho €2.6 million](https://techcrunch.com/2021/07/06/italys-dpa-fines-glovo-owned-foodinho-3m-orders-changes-to-algorithmic-management-of-riders/) and ordered changes to its algorithmic management of delivery riders. The ruling was among the first times a European DPA applied GDPR Article 22 (automated decision-making) in an employment context. A Bologna tribunal separately found a platform industry collective bargaining agreement illegal for derogating unfavorably from worker protections. These cases used data protection law and domestic labor law — not the ICESCR — but they demonstrate what enforcement looks like when a legal framework exists.
 
-**France (2021)**: The French Court of Cassation ruled that Deliveroo riders could form a union, based on the subordination of riders to platform management. Again, domestic labor law — not the ICESCR — but consistent with Article 8 (right to form trade unions) obligations.
+**France (2020)**: The French Court of Cassation [ruled in November 2020](https://www.reuters.com/article/us-deliveroo-france-court-idUSKBN28E1ME) that a Deliveroo rider should be reclassified as an employee rather than an independent contractor, based on the subordination of riders to platform management. Again, domestic labor law — not the ICESCR — but consistent with Article 8 (right to form trade unions) obligations.
 
 **EU Platform Work Directive (2024)**: [Directive (EU) 2024/2831](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32024L2831) establishes a presumption of employment for platform workers and creates algorithmic transparency obligations for all workers regardless of employment status. This is EU law — not treaty enforcement — but it demonstrates that a rights framework can produce concrete labor protections for platform workers. The U.S. has no equivalent.
 
@@ -90,7 +90,7 @@ The enforcement gap on Article 6 — specifically on technology-driven displacem
 
 But the gap reveals the wrong lesson if read as "ratification doesn't matter."
 
-The correct reading is this: **enforcement develops within frameworks. It does not develop outside them.**
+A more precise reading: **enforcement develops within frameworks. It does not develop outside them.**
 
 Italy enforced algorithmic management obligations using the frameworks it had — GDPR, domestic labor law, constitutional protections. The EU enforced platform worker rights using the frameworks it had — the Charter of Fundamental Rights, Directives, the social chapter of EU treaties. South Africa enforced housing rights using the framework it had — a post-apartheid Constitution that incorporated ICESCR-parallel obligations.
 
@@ -104,9 +104,11 @@ CESCR is already building the normative architecture: General Comment 25 anchors
 
 The enforcement gap on Article 6 in technology-driven displacement contexts is evidence that the ICESCR's Article 6 framework has not yet been tested in that specific context — not that it cannot be.
 
-Given the pace of AI-driven economic transformation, the question is not whether that framework will matter, but whether the United States will have established it before the displacement effects are fully observable. The ADA pattern — enforcement developing 10-30 years after legal framework establishment — suggests the window matters.
+Given the pace of AI-driven economic transformation, the question is not whether that framework will matter, but whether the United States will have established it before the displacement effects are fully observable. The pattern of rights frameworks historically producing enforcement capacity over decades — including the ICESCR's own trajectory on housing rights — suggests the window matters.
 
-Waiting for enforcement evidence to appear before ratifying is structurally equivalent to waiting for a disease to develop before taking precautionary measures. The framework is the precaution.
+Waiting for enforcement evidence to appear before ratifying is structurally equivalent to establishing a monitoring system only after the conditions it would have detected have already materialized. The framework is the precaution — and its absence is the gap.
+
+*Editorial note: This analogy reflects the authors' assessment of the strategic case for early ratification. Readers who find the precautionary framing overstated should weigh it against the enforcement record documented above — which shows both genuine gaps and a trajectory of expanding jurisprudence.*
 
 ---
 
