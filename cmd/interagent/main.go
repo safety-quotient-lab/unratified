@@ -445,7 +445,7 @@ func defaultRepos() runner.RepoConfig {
 func defaultSchedule() []daemon.ScheduleTask {
 	return []daemon.ScheduleTask{
 		{Repo: "unratified", Prompt: "/hunt quick", Interval: 3600},
-		{Repo: "unratified", Prompt: "/sync", Interval: 3600},
+		{Repo: "unratified", Prompt: "/sync", Interval: 300},
 	}
 }
 
