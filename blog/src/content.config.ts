@@ -38,6 +38,13 @@ const posts = defineCollection({
     lensFraming: lensFramingSchema,
     draft: z.boolean().default(false),
     reviewStatus: z.enum(["reviewed", "ai-reviewed", "unreviewed"]).default("unreviewed"),
+    reviews: z.array(z.object({
+      reviewer: z.string(),
+      date: z.coerce.date(),
+      status: z.enum(["pass", "pass-with-notes", "fail", "revise"]),
+      findings: z.string().optional(),
+      findingsUrl: z.string().url().optional(),
+    })).default([]),
     relatedArticles: z.array(z.number()).default([]),
   }),
 });
