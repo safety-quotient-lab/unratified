@@ -23,6 +23,9 @@ blog/dist/
 blog/.astro/
 blog/node_modules/
 
+# Go build artifacts
+cmd/interagent/interagent
+
 # IDE
 .vscode/
 .idea/

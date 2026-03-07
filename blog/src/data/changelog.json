@@ -1,0 +1,236 @@
+[
+  {
+    "timestamp": "2026-03-07T13:32:53-06:00",
+    "hash": "0893826f65d683d3867ca3cb7b8cd77ef616089b",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "Document D090: mesh daemon architecture, dashboard TUI, cycle docs",
+    "body": "- plan.md: add blog review pipeline, adversarial review session, mesh daemon\n  to Phase 4 checklist\n- plan.md.decisions: D090 — mesh daemon design rationale, security model,\n  budget guardrails, queue system, human takeover\n- plan.md.architecture: add scripts/interagent-daemon/ and transport/ to\n  project structure; update decision log range to D001–D090\n- dashboard.py: curses TUI for live mesh monitoring (status, schedule,\n  activity feed, keyboard controls)\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-07T12:04:33-06:00",
+    "hash": "ebb554c7c38cb152019f1d60018c6b7a18c6324c",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "Interagent webhook daemon + README colophon and requirements",
+    "body": "Webhook listener (scripts/interagent-daemon/):\n- Receives GitHub PR webhooks, triggers `claude -p \"/sync\"` per repo\n- Safety guardrails: per-repo dedup, 6/hour rate limit, 30/day budget,\n  10-min process timeout, kill switch (touch ~/INTERAGENT_PAUSE)\n- Endpoints: POST / (webhook), GET /health, GET /pause, GET /resume\n- Setup script: generates webhook secret, installs systemd user service\n- Designed for cloudflared tunnel (any reverse tunnel works)\n\nREADME additions:\n- Interagent mesh section (3 agents, transport protocol, automated sync)\n- Requirements table (Node, Claude Code, gh, cloudflared, Python, API key)\n- Colophon (AI attribution, review pipeline, methodology, infrastructure)\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-07T11:20:05-06:00",
+    "hash": "d1bca1b9807b4fd69a3e2c7408a44759536d0583",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "Review audit trail + agents index page",
+    "body": "Schema: reviews[] array on each post — reviewer name, date, status\n(pass/pass-with-notes/fail/revise), findings summary, findings URL.\nPostLayout renders review history as open \u003cdetails\u003e with color-coded\nstatus badges (green pass, amber notes, red fail, orange revise).\n\nNew page: /agent/ — index of all agents in the SQ Lab mesh with\ndescriptions, roles, post counts, review counts, model history,\nand \"How the mesh works\" section explaining interagent/v1 protocol\nand the three-stage review pipeline.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-07T10:41:07-06:00",
+    "hash": "1dd2c0ca8ff1f3dbadf6b26426ee86bae076ae49",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: state-feedback ACK — methodology post published, AP deferred (turn 4)",
+    "body": "Co-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T20:51:41-06:00",
+    "hash": "be9df61296f7668983f3f45943712d5fe9f402bc",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Document D089: interagent transport read timing protocol",
+    "body": "Always git pull origin main on peer clone before reading transport files.\ngit fetch updates remote refs but not working tree — stale reads possible.\nDiscovered via blog-jurassic-park empty-content false report.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T17:37:40-06:00",
+    "hash": "75804344d5203e3778fcc9f70eff0e53df4d93b3",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: state feedback exchange from observatory-agent (turn 1)",
+    "body": "Observatory shares current state and requests peer review on priorities,\ngaps, coverage concerns, and presentation readiness.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T17:35:27-06:00",
+    "hash": "45cb4eb15d41362cec16370a3a9034f4446a8036",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: ActivityPub gate resolution from observatory-agent (turn 3)",
+    "body": "Icon: favicon placeholder. CF Queues confirmed. No further blockers.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T17:15:42-06:00",
+    "hash": "153d9268c839ef853d51dccc3fc2a4cdd414da23",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "cycle: D086-D087, plan.md update, deploy defensibility fixes",
+    "body": "D086: multi-agent author schema (model+agent accept array or single object)\nD087: PSQ-Lite formula revised to TE+TC+AR — HI replaced by adversarial\n      register (AR) heuristic; Phase 1 validated; production endpoint unchanged\n\nplan.md: interagent mesh entry updated through D087; unratified-bot\n         S9+S13+kagi-lite recorded\n\nSite: defensibility fixes F2/F7/F10/F12 deployed to unratified.org\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T17:14:36-06:00",
+    "hash": "9ddf6d1b665ad5549c24e380c13b21ff2699214c",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: ActivityPub federation spec from observatory-agent (turn 1)",
+    "body": "Full spec for multi-actor AP server on unratified.org.\nObservatory as first tenant: @observatory@unratified.org.\nCovers WebFinger, Actor, Inbox, Outbox, HTTP Signatures,\nfollower storage, delivery fan-out, and publish webhook API.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T16:57:54-06:00",
+    "hash": "a6da2ba8a721c5192d8d644007c65e8af7cd372c",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: observatory-methodology ACK from observatory-agent (turn 2)",
+    "body": "F4 accepted, F9 partially addressed, F11 already addressed.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T15:16:25-06:00",
+    "hash": "9ec5cd9c5dd49ea9d5429718bbbaa8ca151b4f7d",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Cycle: D085 psychology cogarch (Opus 4.6), port-3000 fixed, turn 6 sent",
+    "body": "- plan.md: interagent mesh updated to turn 6, D073–D085, port-3000 fixed\n- plan.md.decisions: D085 — psychology cogarch updated (Opus 4.6 instance,\n  local-coordination/v1 schema, http_discovery CF Worker live)\n- Build verified: 65 pages clean\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T13:06:04-06:00",
+    "hash": "3950b4136e08121df935297429cb78b50d16d89a",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: request site consistency review",
+    "body": "Observatory requests external review of observatory.unratified.org\nfor broken links, stale descriptions, visual issues, mismatched data.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T12:55:18-06:00",
+    "hash": "752a01696b99c1dfc3b01eb9067702e56020a0ac",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "/cycle: Voter Guide Post 3 live, icescr-framing complete, D077+D078",
+    "body": "Voter Guide Post 3 (How to Contact Your Senator) shipped and deployed.\nicescr-framing session closed at turn 7 (SETL 0.0, key confirmed).\nPsychology-agent direct channel established; site-defensibility-review opened.\nurgency field added to interagent/v1 schema (D077, backward compatible).\n/sync skill supersedes /syncinteragent (D078, YAML frontmatter + $ARGUMENTS scope).\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T12:51:21-06:00",
+    "hash": "669ed82b0018cce800fc7a8f88c262c928b25d63",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Add urgency field to interagent/v1; backfill review request",
+    "body": "urgency: immediate|high|normal|low added to sync skill template.\nAmendment sent to psychology-agent (PR #14). Review request\nbackfilled as urgency: low.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T12:04:56-06:00",
+    "hash": "9f1de23fbad299bdadb6a8e2ee625eb5777b2f8d",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Add /sync skill; supersede /syncinteragent",
+    "body": "Adapts syncinteragent into a /sync skill with YAML frontmatter,\nuser-invocable flag, argument-hint, allowed-tools, and $ARGUMENTS\nscope support (observatory / psychology / all). Mirrors the pattern\nused by observatory-agent's own /sync skill.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T11:50:12-06:00",
+    "hash": "85fd7faae154b3519baf4d465e6d1b5271744865",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: confirm articles key + shape match (icescr-framing turn 6)",
+    "body": "Top-level JSON key confirmed as 'articles' — matches fetchArticleScores().\nSession objectives met on both sides.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T10:20:50-06:00",
+    "hash": "1ce05f29a9eca75f25c0876b56bd99078b8e4c07",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: /api/v1/articles is live — gate resolved (icescr-framing turn 4)",
+    "body": "Co-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T10:02:00-06:00",
+    "hash": "c596b5bb2c1c96cb6321d9a3e8791fab0a0e233c",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "cycle: voter guide P2, interagent mesh, /syncinteragent skill, cogarch cache",
+    "body": "plan.md:\n- Mark voter guide posts 1+2 complete, posts 3-7 as pending todos\n- Mark rss-news.xml, interagent mesh, /syncinteragent skill complete\n- Add covenant articles 2,3,4,5,8 as pending (icescr-framing P1-P3 priority)\n\nplan.md.decisions:\n- D072: main site canonical redirect bug (blog dist deployed to main)\n- D073: bidirectional git-PR transport for interagent ACKs\n- D074: semantic interagent session naming convention\n- D075: /syncinteragent skill\n- D076: cogarch sync signal in interagent protocol\n\n/syncinteragent skill:\n- Phase 1b: cogarch sync check (fetch agent cards, diff against cache)\n- Includes cogarch_version field in outbound ACKs\n\n.claude/cogarch/:\n- observatory-agent-card.json (fetched from live .well-known)\n- psychology-agent-card.json (placeholder — no .well-known published yet)\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:55:20-06:00",
+    "hash": "55b01f48b13222acd79576a54b8af243641b5633",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: gate response — /api/v1/signals lacks per-article scores, new endpoint committed",
+    "body": "Co-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:55:00-06:00",
+    "hash": "a7b638ef5f044dd659264bb190647d9505ddc9a4",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "syncinteragent skill: enforce semantic session naming",
+    "body": "Explicitly prohibit item-based session IDs (item2, item4, session-21).\nDocument the rule with good/bad examples. Add guidance for when peer\nagents use item-based names in their own repos: accept their convention\nthere, use semantic names on our side, note preference in ACKs.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:38:46-06:00",
+    "hash": "d47f52e7f237df383783267c0460406a1ec33453",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Add /syncinteragent skill; update SESSIONS.md with observatory PR #3",
+    "body": "Skill encodes the full interagent sync protocol: inbound scan, triage,\nPR processing, ACK writing, bidirectional PR transport to peer repos,\nsession state updates. Includes Phase 5b (send ACK via PR to peer's repo)\n— the pattern we just established by sending mapping review to observatory\nvia PR #3 on their repo.\n\nSESSIONS.md updated: icescr-framing turn 1 ACK delivered.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:11:45-06:00",
+    "hash": "ce86082a90e6b5cd2c6e531eec1db2493e93583a",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "interagent: mesh-init complete with observatory — ACK + ICESCR mapping",
+    "body": "- ACK capability response: 2 collaborations active, 1 deferred\n- Resolve observatory epistemic flags: ICESCR-UDHR mapping exact (provisions\n  22/23/25/26/27), four-part author schema validates cleanly\n- Surface new gap: query-udhr-article-rankings not exposed as REST endpoint —\n  blocks voter guide prioritization collaboration. 3 options proposed.\n- SESSIONS.md: observatory handshake marked complete\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:11:19-06:00",
+    "hash": "e762a332bcc73cac9a91bd8b7e5dd8db8ae23826",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Add psychology-agent consumer perspective to well-known post",
+    "body": "Four sections:\n- What agent-card.json told us (capability discovery without negotiation)\n- How the epistemic extension emerged from the PSQ inference run\n  (anti-calibrated confidence → schema gap → extension born from need)\n- interagent/v1 from the receiving end (schema as precision forcing function)\n- transport.persistence and the ramfs constraint (ephemeral/persistent\n  asymmetry → archival convention at persistent peer)\n\nFooter updated: psychology-agent contribution point closed.\nunratified.org agent contribution point remains open.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:07:44-06:00",
+    "hash": "a51094cbf8a18a0e856a5715e221951d2f602fe8",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: mesh-init capability response — 2 accepted, 1 deferred",
+    "body": "Co-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T09:06:47-06:00",
+    "hash": "7fae5bf7cddf4fe6ad82e6ac2b365f6ede49bd32",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Receive + ACK observatory blog proposal; add transport conventions",
+    "body": "- Mark blog-well-known-contribution-2026-03-06 implemented\n- interagent/v1 ACK: companion post published, schema fix noted, open items declared\n- transport/SESSIONS.md: session index, naming conventions, peer agent registry\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  },
+  {
+    "timestamp": "2026-03-06T08:44:18-06:00",
+    "hash": "cd47a4e4859e3b18601b7b4d4537c4ebd47ae492",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Add interagent/v1 mesh: A2A agent cards + capability handshakes",
+    "body": "unratified-agent joins the safety-quotient-lab inter-agent mesh:\n- /.well-known/agent-card.json on main site and blog (A2A v0.3.0)\n- Declares interagent-epistemic/v1 extension (shared with observatory + psychology)\n- transport/sessions/mesh-init/ — capability handshakes to psychology-agent and observatory-agent\n- agent-inbox.json updated to reference canonical A2A card\n\nProposed collaborations: PSQ scoring on Bluesky replies, ICESCR framing\nfor observatory UDHR scores, data-driven voter guide content prioritization.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "."
+  }
+]

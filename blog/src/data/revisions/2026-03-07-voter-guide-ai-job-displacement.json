@@ -1,5 +1,10 @@
 [
   {
+    "hash": "4fc0a1ba1a8f1077f57ed669dd1c54726a5e619f",
+    "date": "2026-03-07T11:16:07-06:00",
+    "subject": "Three-stage review pipeline: unreviewed → ai-reviewed → reviewed"
+  },
+  {
     "hash": "bc34cdccda98dbfa17cbed3e4ccb1f8f11b29306",
     "date": "2026-03-06T09:19:50-06:00",
     "subject": "Add Voter Guide Post 2: AI Job Displacement and the Treaty Gap"

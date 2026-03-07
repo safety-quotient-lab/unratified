@@ -2423,3 +2423,24 @@ Security model: bearer token auth on mutating endpoints (`/trigger`, `/pause`, `
 Budget guardrails enforce human-speed operation: 5-min cooldown per repo, 6 runs/hour/repo, 30 runs/day total, 20-min timeout, kill switch (`~/INTERAGENT_PAUSE` or `GET /pause`). Queue system (latest-wins per repo) prevents dropped events during in-flight runs. Session IDs captured for `claude --resume` human takeover on failures.
 
 **What follows**: Dashboard TUI (`dashboard.py`) for persistent monitoring. Build verification before auto-push (framework ready, needs `npm install` on gray-box). Deploy gate for large diffs (deferred — budget system sufficient). Content refresh pipeline for external data (deferred — most complex).
+
+## D091: Interagent Mesh Daemon — Go Rewrite with Bubble Tea TUI
+**Date**: 2026-03-07
+**Status**: DECIDED — implemented in cmd/interagent/
+
+**Observation**: The Python+Bash+curses daemon (D090) worked but suffered from three-language fragmentation, no persistent state (ring buffer lost on restart), fragile shell-out JSON parsing in monitor.sh, and limited curses TUI capabilities (no scrolling, tabs, or keyboard nav).
+
+**Decision**: Rewrite the entire interagent mesh daemon as a single Go binary at `cmd/interagent/` using:
+- **Bubble Tea + Lip Gloss** (Charm stack) for the TUI
+- **SQLite** (pure Go via modernc.org/sqlite) for persistent activity log, sessions, and budget state
+- **Cobra** for CLI subcommands
+- **Managed cloudflared subprocess** with auto-create on first install
+- **Hybrid changelog**: git log + daemon sidecar metadata, served on both sites
+
+Subcommands: `serve`, `tui`, `status`, `trigger`, `sessions`, `resume`, `pause`, `unpause`, `install`, `changelog`.
+
+**Reasoning**: Single binary eliminates Python/Bash runtime dependencies on gray-box. SQLite persistence means activity history and budget state survive restarts. Bubble Tea provides scrollable tabs, keyboard navigation, and proper terminal UI. Go cross-compiles trivially for macOS ARM64. The `install` subcommand replaces both setup-macos.sh and setup.sh, detecting OS and generating appropriate service files.
+
+Changelog design: hybrid approach uses git log for the timeline (always accurate, zero runtime dependency) enriched with daemon sidecar metadata (skill name, session ID, budget consumed) written as JSONL. Both unratified.org and blog.unratified.org get a /changelog page, cross-linked.
+
+**What follows**: Wire up the Go binary on gray-box, replacing the Python daemon. Add /changelog pages to both Astro sites consuming the generated JSON. Old Python scripts remain in scripts/interagent-daemon/ as reference until Go binary proves stable.
