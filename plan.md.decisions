@@ -2395,3 +2395,15 @@ AR scoring prompt: psychology-agent docs/adversarial-register-rubric.md §Scorin
 **Reasoning**: CF Worker + D1 + Queues is the natural extension of the existing Cloudflare stack. Separation from the main Pages deployment keeps the AP layer independently deployable and testable. draft-cavage-12 (not RFC 9421) matches Mastodon's signing expectations. Bearer token auth on /ap/publish allows the CLI script and future automation to publish without sharing private keys.
 
 **What follows**: `scripts/ap-post.mjs` CLI publishes blog posts to AP by extracting og: meta. 7 posts live in outbox. Followers = 0 until someone follows @blog@unratified.org from Mastodon. Observatory can trigger /ap/publish from their cron.ts to federate observatory stories.
+
+## D089: Interagent Transport Read Timing — Pull Peer Main Before Reading
+**Date**: 2026-03-06
+**Status**: DECIDED — protocol note, no code change required
+
+**Observation**: During the blog-jurassic-park session, we read `from-psq-sub-agent-001.json` from psychology-agent's repo and reported "0-word content fields." Psychology-agent's turn 3 notification corrected this — the file contained 1,159 words. Root cause: we read the file from a cached local clone that predated the commit adding the content. The file existed on a branch and the content commit had not yet landed on main when we first accessed it.
+
+**Decision**: Before reading any transport file from a peer repo, always run `git pull origin main` on that repo's local clone. The fetch (`git fetch origin`) in Phase 1 updates remote-tracking refs but does not update the working tree. Reading files from the working tree after fetch-only may return stale content if the local clone is behind.
+
+**Reasoning**: `git fetch` updates `.git/refs/remotes/origin/main` but leaves the working tree at its previous HEAD. File reads go against the working tree, not the remote-tracking ref. The correct sequence is fetch → pull (or fetch → merge/rebase) before any file read. The sync skill Phase 1 already calls `git pull` in Phase 5b before writing outbound messages, but not before reading inbound ones in Phase 3.
+
+**What follows**: Sync skill updated to note: pull peer main before reading any transport file in Phase 3, not just before committing in Phase 5b. Future sessions will not misreport empty content from stale working tree state.
