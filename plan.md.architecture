@@ -439,9 +439,21 @@ unratified/
 │           └── db/
 │               ├── schema.sql         ← D1 migration (4 tables + indexes)
 │               └── queries.ts         ← D1 CRUD operations
+├── scripts/
+│   └── interagent-daemon/            ← Mesh daemon (D090) — runs on gray-box
+│       ├── webhook-listener.py       ← Main daemon: webhooks + scheduler + budget + queue
+│       ├── dashboard.py              ← Live curses TUI monitor
+│       ├── monitor.sh                ← CLI: status, activity, sessions, resume, trigger
+│       ├── setup-macos.sh            ← One-time launchd setup
+│       ├── com.unratified.interagent-webhook.plist  ← launchd template
+│       ├── com.unratified.interagent-tunnel.plist   ← launchd template
+│       └── README.md                 ← Full usage docs
+├── transport/
+│   ├── SESSIONS.md                   ← Session index
+│   └── sessions/                     ← interagent/v1 messages by session
 ├── plan.md                         ← Project plan
 ├── plan.md.architecture            ← This file
-├── plan.md.decisions               ← Decision log (D001–D037)
+├── plan.md.decisions               ← Decision log (D001–D090)
 ├── plan.md.identity                ← Organizational identity
 ├── plan.md.marketing               ← Marketing and audience strategy
 ├── astro.config.mjs                ← Astro 5 + MDX + Svelte

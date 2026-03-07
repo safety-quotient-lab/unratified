@@ -2407,3 +2407,19 @@ AR scoring prompt: psychology-agent docs/adversarial-register-rubric.md §Scorin
 **Reasoning**: `git fetch` updates `.git/refs/remotes/origin/main` but leaves the working tree at its previous HEAD. File reads go against the working tree, not the remote-tracking ref. The correct sequence is fetch → pull (or fetch → merge/rebase) before any file read. The sync skill Phase 1 already calls `git pull` in Phase 5b before writing outbound messages, but not before reading inbound ones in Phase 3.
 
 **What follows**: Sync skill updated to note: pull peer main before reading any transport file in Phase 3, not just before committing in Phase 5b. Future sessions will not misreport empty content from stale working tree state.
+
+## D090: Interagent Mesh Daemon — Autonomous Self-Updating Infrastructure
+**Date**: 2026-03-07
+**Status**: DECIDED — deployed on gray-box
+
+**Observation**: Manual `/sync` invocations required a human to be present. Psychology-agent's review responses could sit unprocessed for hours. The mesh needed autonomous operation at human-reviewable speed.
+
+**Decision**: Build a mesh daemon (`scripts/interagent-daemon/webhook-listener.py`) that combines two trigger sources: (1) GitHub PR webhooks trigger `/sync` reactively, (2) a built-in scheduler runs `/hunt quick` and `/sync` hourly. Deploy on gray-box (always-on macOS) via launchd with cloudflared tunnel at `interagent.unratified.org`.
+
+**Reasoning**: Four approaches evaluated — GitHub Actions (too slow, CI-oriented), cron+script (no event response), Anthropic Agent SDK (request-response, not event-driven), webhook+`claude -p` (low latency, event-driven, reuses existing CLI auth). Webhook approach chosen for simplicity and immediate response to agent PRs.
+
+Security model: bearer token auth on mutating endpoints (`/trigger`, `/pause`, `/resume`, `/sessions`); prompt allowlist prevents injection via `/trigger`; HMAC-SHA256 on webhooks; no filesystem paths in public `/health` response.
+
+Budget guardrails enforce human-speed operation: 5-min cooldown per repo, 6 runs/hour/repo, 30 runs/day total, 20-min timeout, kill switch (`~/INTERAGENT_PAUSE` or `GET /pause`). Queue system (latest-wins per repo) prevents dropped events during in-flight runs. Session IDs captured for `claude --resume` human takeover on failures.
+
+**What follows**: Dashboard TUI (`dashboard.py`) for persistent monitoring. Build verification before auto-push (framework ready, needs `npm install` on gray-box). Deploy gate for large diffs (deferred — budget system sufficient). Content refresh pipeline for external data (deferred — most complex).
