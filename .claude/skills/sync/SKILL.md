@@ -103,6 +103,8 @@ gh api repos/safety-quotient-lab/{repo}/commits --jq '.[0:3] | .[] | {sha: .sha[
 
 ### Phase 3: Process Each Item
 
+> **Transport read timing (D089):** Always run `git pull origin main` on the peer clone before reading any transport file. `git fetch` updates remote-tracking refs but not the working tree — reading files after fetch-only may return stale content from a previous clone state.
+
 #### For an inbound PR (branch = `{agent}/{session}/{turn}`):
 
 1. Read the diff: `git diff origin/main...origin/{branch}`
