@@ -27,7 +27,7 @@ export const ACTORS: Record<string, ActorConfig> = {
       'Evaluating Hacker News stories against the Universal Declaration of Human Rights. ' +
       'Part of <a href="https://unratified.org">unratified.org</a> — the case for U.S. ICESCR ratification.',
     url: 'https://observatory.unratified.org',
-    iconUrl: 'https://observatory.unratified.org/favicon.ico',
+    iconUrl: 'https://unratified.org/images/observatory-avatar.svg',
     publicKeyPem: OBSERVATORY_PUBLIC_KEY,
   },
 };

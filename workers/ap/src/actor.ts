@@ -29,7 +29,7 @@ export function handleActor(name: string, baseUrl: string): Response {
     following: `${actorUrl}/following`,
     icon: {
       type: 'Image',
-      mediaType: 'image/x-icon',
+      mediaType: 'image/svg+xml',
       url: actor.iconUrl,
     },
     publicKey: {

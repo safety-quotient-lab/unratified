@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#00695c"/>
+
+  <!-- Scales of justice — white, centered -->
+
+  <!-- Balance beam -->
+  <rect x="96" y="176" width="320" height="22" rx="11" fill="#ffffff"/>
+
+  <!-- Pivot circle -->
+  <circle cx="256" cy="187" r="32" fill="#ffffff"/>
+
+  <!-- Fulcrum post -->
+  <rect x="245" y="208" width="22" height="168" rx="11" fill="#ffffff"/>
+
+  <!-- Base -->
+  <rect x="176" y="368" width="160" height="22" rx="11" fill="#ffffff"/>
+
+  <!-- Left arm string -->
+  <rect x="109" y="198" width="11" height="72" rx="5.5" fill="#ffffff"/>
+
+  <!-- Right arm string -->
+  <rect x="392" y="198" width="11" height="72" rx="5.5" fill="#ffffff"/>
+
+  <!-- Left pan (arc) -->
+  <path d="M72 270 Q114.5 318 157 270Z" fill="#ffffff"/>
+
+  <!-- Right pan (arc) -->
+  <path d="M355 270 Q397.5 318 440 270Z" fill="#ffffff"/>
+</svg>
