@@ -2383,3 +2383,15 @@ AR scoring prompt: psychology-agent docs/adversarial-register-rubric.md §Scorin
 **Reasoning**: Option (a) — keep HI with caveat — preserves a known invalid signal for the corpus we evaluate most. Option (c) — defer until Phase 3 — leaves PSQ-Lite with known invalid dimension indefinitely. Option (b) is consistent with PSQ-Lite's existing LLM-heuristic approach, has strong theoretical grounding, and passes Phase 1 validation. Cost of being wrong is bounded (revert is possible).
 
 **What follows**: Claude Code-side scoring uses AR heuristic. Production PSQ endpoint continues reporting HI but excluded from PSQ-Lite formula. Phase 2 label generation (label_separated.py on psq.db) will open as a separate request. Phase 3 (DistilBERT head training) required before AR available from production endpoint. Gap signal table (HI-AR) preserved as standalone diagnostic in PSQ-Lite reports.
+
+## D088: ActivityPub Federation — Full Stack Implementation
+**Date**: 2026-03-06
+**Status**: DECIDED — deployed and live
+
+**Observation**: Observatory-agent proposed ActivityPub federation (activitypub-federation session). The unratified blog needed a way to distribute posts to Mastodon/fediverse followers and expose actors (@observatory@unratified.org, @blog@unratified.org) that federated servers can discover and follow.
+
+**Decision**: Implement a standalone `unratified-ap` Cloudflare Worker handling WebFinger, Actor, Inbox, Outbox, and /ap/publish endpoints. D1 for persistent follower + activity storage. CF Queues for fan-out delivery. draft-cavage-12 HTTP Signatures (RSA-SHA256) for interoperability with Mastodon.
+
+**Reasoning**: CF Worker + D1 + Queues is the natural extension of the existing Cloudflare stack. Separation from the main Pages deployment keeps the AP layer independently deployable and testable. draft-cavage-12 (not RFC 9421) matches Mastodon's signing expectations. Bearer token auth on /ap/publish allows the CLI script and future automation to publish without sharing private keys.
+
+**What follows**: `scripts/ap-post.mjs` CLI publishes blog posts to AP by extracting og: meta. 7 posts live in outbox. Followers = 0 until someone follows @blog@unratified.org from Mastodon. Observatory can trigger /ap/publish from their cron.ts to federate observatory stories.

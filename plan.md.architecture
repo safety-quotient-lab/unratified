@@ -408,6 +408,17 @@ unratified/
 │   ├── favicon.svg
 │   └── favicon.ico
 ├── workers/
+│   ├── ap/                            ← ActivityPub Worker (D088) — unratified-ap
+│   │   ├── wrangler.toml              ← D1: unratified-ap DB; Queues: ap-delivery; routes: webfinger + /ap/*
+│   │   └── src/
+│   │       ├── index.ts               ← Entry: fetch + queue handlers
+│   │       ├── actors.ts              ← @observatory + @blog actor definitions + keypairs
+│   │       ├── actor.ts               ← GET /ap/actors/:name + followers + following
+│   │       ├── webfinger.ts           ← GET /.well-known/webfinger
+│   │       ├── inbox.ts               ← POST /ap/actors/:name/inbox (Follow/Undo + Accept)
+│   │       ├── publish.ts             ← POST /ap/publish (Bearer auth + outbox pagination)
+│   │       ├── delivery.ts            ← Queue consumer: fan-out to follower inboxes
+│   │       └── signing.ts             ← draft-cavage-12 RSA-SHA256 sign + verify
 │   └── monitor/                       ← Site monitor Cloudflare Worker (D037)
 │       ├── package.json
 │       ├── tsconfig.json

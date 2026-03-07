@@ -395,6 +395,9 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Covenant articles 2, 3, 4, 5, 8 — all live; all 15 ICESCR articles (1–15) now published at unratified.org
 - [x] Bluesky Posts 15–18 — confabulation thread sent (yes-please → dual cascade → self-observation paradox → misdescription)
 - [x] Defensibility near-term: F8 reservations note (gap/comparison), F5 discriminator rubric link (research-summary), F3 source comparability note (economic-landscape) — deployed
+- [x] Favicon — replaced default Astro rocket with scales of justice SVG; confirmed live on unratified.org
+- [x] ActivityPub Phase 1 (D088) — unratified-ap CF Worker: WebFinger, Actor, Outbox, Followers endpoints; D1 schema (ap_followers + ap_activities); RSA-2048 keypairs for @observatory + @blog actors; avatars (observatory-avatar.svg, blog-avatar.svg); deployed to unratified.org
+- [x] ActivityPub Phase 2+3 (D088) — inbox.ts (Follow/Undo + HTTP Sig verify + signed Accept); publish.ts (/ap/publish Bearer token + outbox pagination); delivery.ts (CF Queues fan-out consumer); signing.ts (draft-cavage-12 RSA-SHA256); 7 blog posts published to AP outbox; scripts/ap-post.mjs CLI (og: meta extraction, apostrophe regex fix, site suffix strip)
 - [ ] Monitor Worker deploy (D1 creation + wrangler secret put RESEND_API_KEY)
 - [ ] Educator outreach
 - [ ] Press/media outreach
