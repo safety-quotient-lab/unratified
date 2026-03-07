@@ -144,7 +144,10 @@ def trigger_sync(repo: str, clone_path: Path, pr_info: str):
             cwd=str(clone_path),
             stdout=open(sync_log, "w"),
             stderr=subprocess.STDOUT,
-            env={**os.environ, "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"},
+            env={
+                **{k: v for k, v in os.environ.items() if k != "CLAUDECODE"},
+                "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+            },
         )
 
         with _lock:
