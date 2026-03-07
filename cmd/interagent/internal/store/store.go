@@ -173,7 +173,7 @@ func (s *Store) Activity(limit int, repo, eventType string) ([]Event, error) {
 		if err != nil {
 			return nil, err
 		}
-		e.Timestamp, _ = time.Parse(time.RFC3339, ts)
+		e.Timestamp, _ = parseFlexTime(ts)
 		e.ExitCode = exitCode
 		events = append(events, e)
 	}
@@ -231,7 +231,8 @@ func (s *Store) RecordSync(repo string) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	_, err := s.db.Exec(`INSERT INTO sync_times (repo) VALUES (?)`, repo)
+	_, err := s.db.Exec(`INSERT INTO sync_times (repo, ts) VALUES (?, ?)`,
+		repo, time.Now().Format(time.RFC3339))
 	return err
 }
 
@@ -264,7 +265,7 @@ func (s *Store) LastSyncTime(repo string) (time.Time, error) {
 	if err != nil {
 		return time.Time{}, err
 	}
-	return time.Parse(time.RFC3339, ts)
+	return parseFlexTime(ts)
 }
 
 // DailyCount returns total syncs today.
@@ -319,6 +320,16 @@ func (s *Store) SetBudget(key, value string) error {
 // Close closes the database.
 func (s *Store) Close() error {
 	return s.db.Close()
+}
+
+// parseFlexTime parses RFC3339 timestamps, falling back to the bare
+// "2006-01-02T15:04:05" format that SQLite's strftime default produces.
+func parseFlexTime(ts string) (time.Time, error) {
+	t, err := time.Parse(time.RFC3339, ts)
+	if err != nil {
+		t, err = time.ParseInLocation("2006-01-02T15:04:05", ts, time.Local)
+	}
+	return t, err
 }
 
 // MarshalEvent serializes an event to JSON.
