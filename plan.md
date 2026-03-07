@@ -430,6 +430,8 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Interagent Go rewrite (D091) — single binary `cmd/interagent/` replaces Python+Bash+curses: Bubble Tea TUI (tabs, scrolling, keyboard nav), SQLite persistence (activity, sessions, budget survive restarts), managed cloudflared subprocess with auto-create, cobra CLI (serve/tui/status/trigger/sessions/resume/pause/unpause/install/changelog), hybrid changelog generator (git log + daemon sidecar JSONL → JSON for both sites)
 - [x] Deploy Go binary to gray-box, replacing Python daemon — live on port 8787, cloudflared tunnel connected, old Python plists unloaded
 - [x] Add /changelog pages to unratified.org and blog.unratified.org — 26 entries from git history, cross-linked, commit hashes linked to GitHub, agent badge on Co-Authored commits
+- [x] Fix daemon timestamp parsing bug — SQLite DEFAULT strftime omitted timezone suffix; `parseFlexTime` handles legacy rows; `RecordSync` now writes RFC3339; webhook triggers now fire correctly
+- [x] Webhook testing — verified: agent-branch PR triggers /sync, non-agent branch skipped, bad HMAC rejected (403), push events ignored, disallowed prompts rejected with allowed list, in-flight dedup queues
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
