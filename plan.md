@@ -432,6 +432,10 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Add /changelog pages to unratified.org and blog.unratified.org — 26 entries from git history, cross-linked, commit hashes linked to GitHub, agent badge on Co-Authored commits
 - [x] Fix daemon timestamp parsing bug — SQLite DEFAULT strftime omitted timezone suffix; `parseFlexTime` handles legacy rows; `RecordSync` now writes RFC3339; webhook triggers now fire correctly
 - [x] Webhook testing — verified: agent-branch PR triggers /sync, non-agent branch skipped, bad HMAC rejected (403), push events ignored, disallowed prompts rejected with allowed list, in-flight dedup queues
+- [x] TUI auto-scroll + persistent stats bar — auto-scroll to latest activity (manual scroll overrides, bottom re-enables); stats bar on all tabs showing status, budget, in-flight, cooldowns, sync countdown
+- [x] Agent card v1.1.0 — 3 new skills advertised: interagent-mesh-daemon (open), activitypub-publishing (queueWrite), changelog-generation (open); 9 skills total
+- [x] Sync interval 300s — interagent daemon /sync runs every 5 minutes (was 3600s)
+- [x] AP auto-publish threshold proposal — activitypub-federation turn 6: three-tier HRCB thresholds sent to observatory (Tier 1: >=0.7, Tier 2: >=0.6, Tier 3: review queue); awaiting acceptance + AP_PUBLISH_TOKEN delivery
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*
