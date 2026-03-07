@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "ratification", "accountability", "civil-society", "progressive-realization"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "This post answers the practical question: what would actually change if the U.S. ratified the ICESCR? It's not utopia — it's a formal accountability structure that gives advocates, journalists, and lawmakers new tools to use."
   politician: "Ratification creates a monitoring and reporting mechanism, not a mandate. This post explains what your office would gain (internationally recognized standards, civil society reporting infrastructure) and what it wouldn't change (domestic law, funding allocations, existing agency authorities)."

@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "economic-rights", "housing", "health", "education", "labor", "ratification"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "This post maps the ICESCR's core rights to the economic concerns Americans already care about — stable jobs, affordable housing, working healthcare, and accessible education. The question isn't whether these rights matter. It's whether the U.S. has a binding obligation to protect them."
   politician: "The ICESCR covers rights that already appear in constituent casework: job displacement, medical debt, housing unaffordability, student loan burden. Ratification would create a formal accountability structure around these issues — not new mandates, but documented obligations and international review."

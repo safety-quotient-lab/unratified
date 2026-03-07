@@ -104,6 +104,9 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
         {reviewStatus === 'unreviewed' && (
           <span class="review-badge">&middot; Pre-Review</span>
         )}
+        {reviewStatus === 'ai-reviewed' && (
+          <span class="review-badge ai-reviewed">&middot; AI-Reviewed</span>
+        )}
       </div>
       {tags.length > 0 && (
         <div class="post-tags">
@@ -277,6 +280,10 @@ const readingTime = Math.max(1, Math.ceil(wordCount / 200));
     color: #b58900;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+  }
+
+  .review-badge.ai-reviewed {
+    color: #268bd2;
   }
 
   .revision-history {

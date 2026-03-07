@@ -181,6 +181,8 @@
         </span>
         {#if post.reviewStatus === "unreviewed"}
           <span class="review-badge">Pre-Review</span>
+        {:else if post.reviewStatus === "ai-reviewed"}
+          <span class="review-badge ai-reviewed">AI-Reviewed</span>
         {/if}
         {#if post.tags.length > 0}
           <span class="tags">
@@ -440,5 +442,10 @@
     border: 1px solid #b5890044;
     padding: 0.1rem 0.4rem;
     border-radius: 2px;
+  }
+
+  .review-badge.ai-reviewed {
+    color: #268bd2;
+    border-color: #268bd244;
   }
 </style>

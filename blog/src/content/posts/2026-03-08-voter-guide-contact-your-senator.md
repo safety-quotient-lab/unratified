@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "civic-action", "senate", "ratification"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "This post gives you the specific scripts, channels, and timing to contact your senators about ICESCR ratification — and explains why that contact, done right, moves the needle."
   politician: "This post documents the constituent contact pressure building around ICESCR ratification. Your staff will field these calls. This is what your constituents are asking and why."

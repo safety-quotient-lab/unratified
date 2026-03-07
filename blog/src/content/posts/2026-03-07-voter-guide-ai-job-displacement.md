@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "ai", "labor", "economic-rights", "ratification"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "AI tools now do work that millions of Americans earned a living doing five years ago. This post explains why the U.S. has no binding legal floor for how it must respond — and what a ratified treaty would require."
   politician: "AI displacement creates constituent pressure with no legislative ceiling. This post explains the treaty framework that ratified nations use to structure their responses — and why the U.S. operates without that framework."

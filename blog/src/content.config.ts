@@ -37,7 +37,7 @@ const posts = defineCollection({
     tags: z.array(z.string()).default([]),
     lensFraming: lensFramingSchema,
     draft: z.boolean().default(false),
-    reviewStatus: z.enum(["reviewed", "unreviewed"]).default("unreviewed"),
+    reviewStatus: z.enum(["reviewed", "ai-reviewed", "unreviewed"]).default("unreviewed"),
     relatedArticles: z.array(z.number()).default([]),
   }),
 });

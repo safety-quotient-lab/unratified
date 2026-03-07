@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "policy", "economic-rights", "ratification"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "This post explains what the ICESCR is, what it guarantees, and why the U.S. decision not to ratify it affects your economic life — your job security, your access to healthcare, your housing, your children's education."
   politician: "173 of your counterparts in other nations operate under binding treaty obligations on economic rights. This post explains what those obligations look like in practice and what U.S. ratification would require of federal and state governments."

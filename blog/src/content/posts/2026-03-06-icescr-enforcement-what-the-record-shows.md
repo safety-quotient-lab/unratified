@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "enforcement", "article-6", "right-to-work", "platform-workers", "algorithmic-management", "research"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "Critics say the ICESCR has no real enforcement. We looked at what enforcement actually exists — for work rights specifically. The answer is nuanced: housing enforcement is real and growing, but work rights enforcement (especially on technology and job displacement) is nearly nonexistent. That's not a reason to skip ratification. It's a reason to understand what ratification actually does."
   politician: "This post documents the ICESCR enforcement record with specificity: the Optional Protocol complaint mechanism, CESCR Concluding Observations, adjacent enforcement in Italy and the EU, and the emerging normative framework under General Comment 25 (Article 15/right to science). The enforcement gap on Article 6 is real and documented — but adjacent frameworks show what enforcement looks like when a legal foundation exists."

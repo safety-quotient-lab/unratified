@@ -23,6 +23,7 @@ lensFraming:
   educator: "A story about a security guard who arrests himself: what happens when a detection system encounters its own test data, and what this reveals about the limits of content-based scanning."
   researcher: "Recursive self-reference in detection systems as a class of measurement validity threats — from antivirus signature databases to prompt injection scanners."
 draft: false
+reviewStatus: "unreviewed"
 ---
 
 ## What Happened

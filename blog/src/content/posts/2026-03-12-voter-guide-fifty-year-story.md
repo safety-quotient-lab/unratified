@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "voter-guide", "history", "ratification", "senate", "cold-war", "human-rights-history"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "The U.S. signed the ICESCR in 1977. Congress has had nearly 50 years to vote on it and hasn't. This post traces that history — and explains why the pattern of inaction reflects a specific political choice, not a legal impossibility."
   politician: "This post documents the legislative and executive history of ICESCR non-ratification: Carter's signature, the Reagan reversal, the pattern of Senate Foreign Relations Committee inaction, and the moments when ratification came closest. Useful context for staff handling treaty inquiries."

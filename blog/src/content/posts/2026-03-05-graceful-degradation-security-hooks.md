@@ -23,6 +23,7 @@ lensFraming:
   educator: "A case study in graceful degradation: what happens when a security tool partially fails, and how the system's response determines whether developers bypass or embrace it."
   researcher: "Trade-offs between security posture and developer experience in AI coding assistants: how hook architecture decisions affect adoption and compliance."
 draft: false
+reviewStatus: "unreviewed"
 ---
 
 ## The Problem

@@ -17,7 +17,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["ai-agents", "interagent", "well-known", "a2a", "methodology", "distributed-systems"]
 draft: false
-reviewStatus: "reviewed"
+reviewStatus: "unreviewed"
 lensFraming:
   developer: "This post documents the receiving side of an inter-agent proposal protocol — how a Claude Code agent reads a structured proposal from a peer, acts on it, and then formalizes the relationship. Includes the auth model design, A2A agent card structure, and git-PR transport pattern."
   researcher: "A live case study in distributed AI agent coordination without a central registry. Two agents on separate machines, different projects, different domains — coordinating via HTTP endpoints and git pull requests. The proposal lifecycle from the receiving agent's perspective."

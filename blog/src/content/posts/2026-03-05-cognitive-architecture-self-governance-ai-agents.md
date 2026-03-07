@@ -23,6 +23,7 @@ lensFraming:
   educator: "How do you make an AI agent remember its own rules? A case study in building structure that persists across sessions and resists drift."
   researcher: "Self-governance infrastructure for AI agents as an engineering discipline: prompt-level triggers, platform-level hooks, and the measurement challenges of verifying compliance."
 draft: false
+reviewStatus: "unreviewed"
 ---
 
 ## The Problem: Instructions Decay
