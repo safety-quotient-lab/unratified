@@ -21,69 +21,11 @@ function loadEnv() {
   return env;
 }
 
-const QUEUE = [
-  // Post 6 — The Transparency Card
-  `Every post on unratified.org links to its source file and full git revision history.
+// Queue is empty — posts 6–10 already sent Mar 6, posts 13–14 sent Mar 7.
+// Add new posts here before running. Use bsky-post.mjs for one-off posts.
+const QUEUE = [];
 
-An AI agent wrote the analysis. A human reviewed it. Every correction and editorial decision — all visible.
-
-If you can't show your work, you can't earn trust.
-
-blog.unratified.org
-
-#OpenSource #AITransparency`,
-
-  // Post 7 — The Reframe
-  `"The Senate has ignored this treaty for 49 years."
-
-Reframe: the Senate has never voted because no constituency demanded it.
-
-Most Americans don't know this treaty exists. Each letter changes that.
-
-Your senator has probably never received one.
-
-unratified.org/action/
-
-#RatifyICESCR #humanrights`,
-
-  // Post 8 — The Cross-Partisan Play
-  `ICESCR crosses partisan lines.
-
-Conservatives: stability, property rights, self-determination.
-Progressives: labor rights, healthcare, educational equity.
-
-Both. The treaty protects both.
-
-Not left vs. right — binding vs. no framework.
-
-unratified.org/action/why-act/
-
-#RatifyICESCR #humanrights`,
-
-  // Post 9 — The Methodology Post
-  `Seven AI-economics hypotheses. One discriminator. One surviving composite model.
-
-It makes the strongest case for a 1966 UN treaty most Americans have never heard of.
-
-Full methodology, open data, every inference marked.
-
-blog.unratified.org/2026-03-03-recursive-methodology/
-
-#AI #RatifyICESCR`,
-
-  // Post 10 — The Soft CTA
-  `Five minutes. Your senator. 173 nations.
-
-The ICESCR protects the right to work, health, education, and an adequate standard of living. The U.S. signed it in 1977 and never ratified.
-
-Template letters, talking points, senator contact info — all at:
-
-unratified.org/action/
-
-#RatifyICESCR #humanrights`,
-];
-
-const LABELS = ['Post 6', 'Post 7', 'Post 8', 'Post 9', 'Post 10'];
+const LABELS = [];
 
 async function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));

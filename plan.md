@@ -422,6 +422,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Bluesky avatar set (D066) — Iwaria Inc. "diverse hands" image (Unsplash D1) downloaded + uploaded via blob API + upsertProfile; profile complete
 - [x] bsky-post-queue.mjs — posts multiple pre-written posts with configurable delay (default 3 min); grapheme pre-flight check; posts 6–10 fired Mar 6
 - [x] Bluesky Posts 3–10 posted (Mar 6) — all 10 posts in the planned sequence now live on @unratified.org
+- [x] Bluesky Posts 13–14 posted (Mar 7) — Energy Number + Productivity-Pay Gap; #HumanRights #ICESCR #RatifyICESCR
 - [x] Feed generator scaffold (D067) — /Users/kashif/Projects/unratified-feed cloned from bluesky-social/feed-generator; classifier.ts (two-tier keyword+Haiku), algos/ai-human-rights.ts (skeleton endpoint), fly.toml (Fly.io config with persistent volume), subscription-patch.ts (integration guide); parked as TODO pending credits/time
 - [x] Blog review pipeline (three-stage) — `unreviewed` → `ai-reviewed` → `reviewed`; schema updated (reviewStatus enum, reviews audit trail array); PostLayout/PostList badges; all 32 posts set to `unreviewed`; agents index page at /agent/
 - [x] Blog adversarial review session opened — transport message to psychology-agent with 6-priority batches (A–F), dual AR + ethical marketing rubric scope; psychology-agent accepted, Batches A+B (14 posts) scored and ACKed

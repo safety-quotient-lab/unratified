@@ -1,5 +1,10 @@
 [
   {
+    "hash": "45df4e2683038b63584710142a1fca64fb8ed43a",
+    "date": "2026-03-07T18:27:33-06:00",
+    "subject": "R-10 remediation: replace approximate Observatory values with exact D1 data"
+  },
+  {
     "hash": "5cf7a89d9a7a44ddd81bad47fd5e38cda3e2d8ce",
     "date": "2026-03-07T16:24:16-06:00",
     "subject": "Blog remediation R-5/R-6/R-8/R-9/R-10/R-11/R-12/R-13/R-14 + TUI iterate loop rewrite"
