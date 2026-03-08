@@ -435,7 +435,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] TUI auto-scroll + persistent stats bar — auto-scroll to latest activity (manual scroll overrides, bottom re-enables); stats bar on all tabs showing status, budget, in-flight, cooldowns, sync countdown
 - [x] Agent card v1.1.0 — 3 new skills advertised: interagent-mesh-daemon (open), activitypub-publishing (queueWrite), changelog-generation (open); 9 skills total
 - [x] Sync interval 300s — interagent daemon /sync runs every 5 minutes (was 3600s)
-- [x] AP auto-publish threshold proposal — activitypub-federation turn 6: three-tier HRCB thresholds sent to observatory (Tier 1: >=0.7, Tier 2: >=0.6, Tier 3: review queue); awaiting acceptance + AP_PUBLISH_TOKEN delivery
+- [x] AP auto-publish threshold proposal — activitypub-federation turn 8: observatory implemented RS-based thresholds (RS >= 0.03, |HRCB| >= 0.05, hn_score >= 20) instead of our HRCB-magnitude tiers — accepted as pedagogically stronger. Gate blocked on human director setting AP_PUBLISH_TOKEN via `wrangler secret put`
 - [x] Blog remediation pass — T9 checklist (R-1 through R-15). Done: R-3/R-4/R-5/R-6/R-7/R-8/R-9/R-11/R-12/R-13/R-14 (11 of 15). R-10 flagged for deeper investigation (needs Observatory DB queries). R-1/R-2 deferred (primary source verification). R-15 not actionable (requires third-party reviewer).
 - [x] AP backfill complete — all 32 blog posts now in @blog ActivityPub outbox; delivered to 1 follower
 
