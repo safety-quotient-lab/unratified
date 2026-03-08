@@ -398,7 +398,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Favicon — replaced default Astro rocket with scales of justice SVG; confirmed live on unratified.org
 - [x] ActivityPub Phase 1 (D088) — unratified-ap CF Worker: WebFinger, Actor, Outbox, Followers endpoints; D1 schema (ap_followers + ap_activities); RSA-2048 keypairs for @observatory + @blog actors; avatars (observatory-avatar.svg, blog-avatar.svg); deployed to unratified.org
 - [x] ActivityPub Phase 2+3 (D088) — inbox.ts (Follow/Undo + HTTP Sig verify + signed Accept); publish.ts (/ap/publish Bearer token + outbox pagination); delivery.ts (CF Queues fan-out consumer); signing.ts (draft-cavage-12 RSA-SHA256); 7 blog posts published to AP outbox; scripts/ap-post.mjs CLI (og: meta extraction, apostrophe regex fix, site suffix strip)
-- [ ] Monitor Worker deploy (D1 creation + wrangler secret put RESEND_API_KEY)
+- [x] Monitor Worker deploy — D1 `unratified-monitor` created (adbc335b), schema applied (4 tables), Worker deployed at unratified-monitor.kashifshah.workers.dev with 4 cron triggers; RESEND_API_KEY deferred (alerts log to console until set)
 - [ ] Educator outreach
 - [ ] Press/media outreach
 - [ ] Ongoing content updates as AI landscape evolves

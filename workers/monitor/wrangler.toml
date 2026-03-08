@@ -13,7 +13,7 @@ crons = [
 [[d1_databases]]
 binding = "DB"
 database_name = "unratified-monitor"
-database_id = "FILL_AFTER_CREATION"
+database_id = "adbc335b-f4e0-4003-b69b-b89c4f65d654"
 
 [vars]
 ALERT_EMAIL = "kashif@kashifshah.net"
