@@ -24,7 +24,6 @@ const items = popular
       {items.map(item => (
         <li>
           <a href={`/${item.slug}/`}>{item.title}</a>
-          <span class="view-count">{item.views} views</span>
         </li>
       ))}
     </ol>
@@ -88,11 +87,4 @@ const items = popular
     color: var(--color-accent);
   }
 
-  .view-count {
-    font-family: var(--font-heading);
-    font-size: 0.7rem;
-    color: var(--color-text-muted);
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
 </style>
