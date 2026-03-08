@@ -457,8 +457,6 @@ func defaultSchedule() []daemon.ScheduleTask {
 		{Repo: "unratified", Prompt: "/sync", Interval: 300},
 		{Repo: "unratified", Prompt: "/iterate quick", Interval: 1800},
 		{Repo: "psychology-agent", Prompt: "/scan-peer unratified", Interval: 86400}, // daily content scan
-		{Repo: "observatory", Prompt: "/sync", Interval: 300},
-		{Repo: "observatory", Prompt: "/iterate quick", Interval: 1800},
 	}
 }
 
