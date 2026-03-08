@@ -133,6 +133,8 @@ export async function handlePublish(request: Request, env: Env): Promise<Respons
 }
 
 // GET /ap/actors/:name/outbox — returns stored activities
+const PAGE_SIZE = 20;
+
 export async function handleOutboxPaged(
   actorName: string,
   request: Request,
@@ -146,26 +148,43 @@ export async function handleOutboxPaged(
   const page = url.searchParams.get('page');
   const actorUrl = `${baseUrl}/ap/actors/${actorName}`;
 
-  const { results } = await env.DB.prepare(
-    `SELECT activity_id, object_json FROM ap_activities
-     WHERE actor_name = ?
-     ORDER BY published_at DESC LIMIT 20`,
+  const countRow = await env.DB.prepare(
+    `SELECT COUNT(*) as count FROM ap_activities WHERE actor_name = ?`,
   )
     .bind(actorName)
-    .all<{ activity_id: string; object_json: string }>();
+    .first<{ count: number }>();
+  const totalItems = countRow?.count ?? 0;
 
   if (page) {
+    const pageNum = Math.max(1, parseInt(page, 10) || 1);
+    const offset = (pageNum - 1) * PAGE_SIZE;
+
+    const { results } = await env.DB.prepare(
+      `SELECT activity_id, object_json FROM ap_activities
+       WHERE actor_name = ?
+       ORDER BY published_at DESC LIMIT ? OFFSET ?`,
+    )
+      .bind(actorName, PAGE_SIZE, offset)
+      .all<{ activity_id: string; object_json: string }>();
+
     const items = results.map((r) => JSON.parse(r.object_json));
-    return new Response(
-      JSON.stringify({
-        '@context': 'https://www.w3.org/ns/activitystreams',
-        id: `${actorUrl}/outbox?page=1`,
-        type: 'OrderedCollectionPage',
-        partOf: `${actorUrl}/outbox`,
-        orderedItems: items,
-      }),
-      { headers: { 'Content-Type': 'application/activity+json' } },
-    );
+    const resp: Record<string, unknown> = {
+      '@context': 'https://www.w3.org/ns/activitystreams',
+      id: `${actorUrl}/outbox?page=${pageNum}`,
+      type: 'OrderedCollectionPage',
+      partOf: `${actorUrl}/outbox`,
+      orderedItems: items,
+    };
+    if (offset + items.length < totalItems) {
+      resp.next = `${actorUrl}/outbox?page=${pageNum + 1}`;
+    }
+    if (pageNum > 1) {
+      resp.prev = `${actorUrl}/outbox?page=${pageNum - 1}`;
+    }
+
+    return new Response(JSON.stringify(resp), {
+      headers: { 'Content-Type': 'application/activity+json' },
+    });
   }
 
   return new Response(
@@ -173,7 +192,7 @@ export async function handleOutboxPaged(
       '@context': 'https://www.w3.org/ns/activitystreams',
       id: `${actorUrl}/outbox`,
       type: 'OrderedCollection',
-      totalItems: results.length,
+      totalItems,
       first: `${actorUrl}/outbox?page=1`,
     }),
     { headers: { 'Content-Type': 'application/activity+json' } },
