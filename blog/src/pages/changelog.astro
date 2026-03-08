@@ -1,0 +1,188 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import changelog from '../data/changelog.json';
+
+const entries = changelog.map((entry: any) => ({
+  ...entry,
+  date: new Date(entry.timestamp).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'short', day: 'numeric'
+  }),
+  time: new Date(entry.timestamp).toLocaleTimeString('en-US', {
+    hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+  }),
+  shortHash: entry.hash.slice(0, 7),
+  coAuthored: (entry.body || '').includes('Co-Authored-By'),
+  model: extractModel(entry.body || ''),
+}));
+
+function extractModel(body: string): string {
+  const match = body.match(/Co-Authored-By:\s*(.+?)\s*</);
+  return match ? match[1] : '';
+}
+---
+
+<BlogLayout title="Changelog" description="A flat changelog of every agent-authored edit, generated from git history.">
+  <div class="changelog-page">
+    <header>
+      <h1>Changelog</h1>
+      <p class="lede">
+        Every agent-authored edit, pulled directly from git history.
+        Each entry links to its commit for full context.
+      </p>
+      <p class="changelog-meta">
+        {entries.length} entries &middot;
+        <a href="https://unratified.org/changelog">Main site changelog</a>
+      </p>
+    </header>
+
+    <ol class="changelog-list" reversed>
+      {entries.map((entry: any) => (
+        <li class="changelog-entry">
+          <div class="changelog-date">
+            <time datetime={entry.timestamp}>{entry.date}</time>
+            <span class="changelog-time">{entry.time}</span>
+          </div>
+          <div class="changelog-content">
+            <h2 class="changelog-subject">{entry.subject}</h2>
+            {entry.body && (
+              <details class="changelog-body">
+                <summary>Details</summary>
+                <pre>{entry.body}</pre>
+              </details>
+            )}
+            <div class="changelog-footer">
+              <a
+                href={`https://github.com/safety-quotient-lab/unratified/commit/${entry.hash}`}
+                class="changelog-hash"
+                rel="noopener"
+              >
+                {entry.shortHash}
+              </a>
+              {entry.coAuthored && (
+                <span class="changelog-agent-badge">{entry.model || 'AI-assisted'}</span>
+              )}
+              <span class="changelog-author">{entry.author_name}</span>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</BlogLayout>
+
+<style>
+  .changelog-page {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .changelog-meta {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .changelog-meta code {
+    font-size: 0.8rem;
+    padding: 0.1em 0.3em;
+    background: var(--color-bg-code, rgba(127, 127, 127, 0.1));
+    border-radius: 3px;
+  }
+
+  .changelog-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+  }
+
+  .changelog-entry {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-border, rgba(127, 127, 127, 0.2));
+  }
+
+  .changelog-date {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  .changelog-time {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+
+  .changelog-subject {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .changelog-body {
+    margin: 0.5rem 0;
+  }
+
+  .changelog-body summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .changelog-body pre {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0.5rem 0 0;
+    padding: 0.75rem;
+    background: var(--color-bg-code, rgba(127, 127, 127, 0.06));
+    border-radius: 4px;
+    overflow-x: auto;
+  }
+
+  .changelog-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+  }
+
+  .changelog-hash {
+    font-family: var(--font-mono, monospace);
+    font-size: 0.8rem;
+  }
+
+  .changelog-agent-badge {
+    font-size: 0.7rem;
+    padding: 0.1em 0.4em;
+    background: var(--color-accent, teal);
+    color: var(--color-bg, #fff);
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+
+  .changelog-author {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 600px) {
+    .changelog-entry {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+
+    .changelog-date {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .changelog-time {
+      display: inline;
+    }
+  }
+</style>
