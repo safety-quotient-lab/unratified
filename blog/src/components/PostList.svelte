@@ -78,12 +78,12 @@
     all:        { name: 'All',        desc: 'Everything' },
   };
 
-  const STORAGE_KEY = 'blog-persona';
+  const LENS_KEY = 'unratified-lens';
 
   function loadPersona(): Persona {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored && stored in PERSONA_LABELS) return stored as Persona;
+      const stored = localStorage.getItem(LENS_KEY);
+      if (stored && stored in PERSONA_TAGS) return stored as Persona;
     } catch {}
     return 'voter';
   }
@@ -94,11 +94,20 @@
   let selectedTag = $state<string | null>(null);
   let sortOrder = $state('newest');
 
-  function setPersona(p: Persona) {
-    persona = p;
-    selectedTag = null;
-    try { localStorage.setItem(STORAGE_KEY, p); } catch {}
-  }
+  // Listen for lens changes from the main site (same origin) or other tabs
+  $effect(() => {
+    function onStorage(e: StorageEvent) {
+      if (e.key === LENS_KEY && e.newValue) {
+        const val = e.newValue as Persona;
+        if (val in PERSONA_TAGS || val === 'all') {
+          persona = val;
+          selectedTag = null;
+        }
+      }
+    }
+    window.addEventListener('storage', onStorage);
+    return () => window.removeEventListener('storage', onStorage);
+  });
 
   function postMatchesPersona(post: Post, p: Persona): boolean {
     if (p === 'all') return true;
@@ -106,7 +115,7 @@
     return post.tags.some(t => tags.has(t));
   }
 
-  // Tags visible for current persona (only tags that appear on matching posts)
+  // Tags visible for current persona with counts (for word-cloud sizing)
   const visibleTags = $derived.by(() => {
     const personaPosts = posts.filter(p => postMatchesPersona(p, persona));
     const tagCounts = new Map<string, number>();
@@ -115,9 +124,14 @@
         tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
       }
     }
-    return [...tagCounts.entries()]
-      .sort((a, b) => b[1] - a[1])
-      .map(([tag]) => tag);
+    const entries = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+    const max = entries.length > 0 ? entries[0][1] : 1;
+    return entries.map(([tag, count]) => ({
+      tag,
+      count,
+      // Scale font from 0.55rem (1 post) to 1.1rem (max posts)
+      fontSize: 0.55 + (count / max) * 0.55,
+    }));
   });
 
   const filtered = $derived.by(() => {
@@ -161,18 +175,11 @@
   }
 </script>
 
-<nav class="persona-bar" aria-label="Reading perspective">
-  {#each (['voter', 'politician', 'educator', 'researcher', 'developer', 'all'] as const) as p}
-    <button
-      class="persona-tab"
-      class:active={persona === p}
-      onclick={() => setPersona(p)}
-      aria-pressed={persona === p}
-      title={PERSONA_LABELS[p].desc}
-    >
-      {PERSONA_LABELS[p].name}
-    </button>
-  {/each}
+<div class="post-controls">
+  <span class="persona-label">
+    Showing for <strong>{PERSONA_LABELS[persona].name}</strong>
+    <a href="https://unratified.org/start" class="persona-change">change</a>
+  </span>
 
   <div class="sort-control">
     <select aria-label="Sort order" bind:value={sortOrder}>
@@ -181,19 +188,21 @@
       <option value="az">A-Z</option>
     </select>
   </div>
-</nav>
+</div>
 
 {#if visibleTags.length > 1}
-  <div class="tag-bar">
+  <div class="tag-cloud">
     <button
       class="tag-pill"
       class:active={!selectedTag}
       onclick={() => selectedTag = null}
     >All</button>
-    {#each visibleTags as tag}
+    {#each visibleTags as { tag, count, fontSize }}
       <button
         class="tag-pill"
         class:active={selectedTag === tag}
+        style="font-size: {fontSize}rem"
+        title="{count} post{count !== 1 ? 's' : ''}"
         onclick={() => selectedTag = selectedTag === tag ? null : tag}
       >#{tag}</button>
     {/each}
@@ -246,59 +255,52 @@
 </section>
 
 <style>
-  .persona-bar {
+  .post-controls {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-    border-bottom: 2px solid var(--color-border);
+    gap: 0.75rem;
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-sm);
   }
 
-  .persona-tab {
+  .persona-label {
     font-family: var(--font-heading);
-    font-size: 0.8rem;
-    padding: 0.5rem 0.85rem;
-    border: none;
-    background: transparent;
+    font-size: 0.85rem;
     color: var(--color-text-muted);
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-    transition: color 0.15s, border-color 0.15s;
   }
 
-  .persona-tab:hover {
-    color: var(--color-text);
-  }
-
-  .persona-tab.active {
+  .persona-change {
+    font-size: 0.75rem;
     color: var(--color-accent);
-    border-bottom-color: var(--color-accent);
-    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
   }
 
-  .persona-tab:focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: -2px;
+  .persona-change:hover {
+    text-decoration: underline;
   }
 
-  .tag-bar {
+  .tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3rem;
+    align-items: baseline;
+    gap: 0.25rem 0.4rem;
     padding: var(--space-sm) 0;
     margin-bottom: var(--space-lg);
+    line-height: 1.8;
   }
 
   .tag-pill {
     font-family: var(--font-heading);
-    font-size: 0.65rem;
-    padding: 0.2rem 0.5rem;
+    /* font-size set inline via word-cloud scaling */
+    padding: 0.15rem 0.4rem;
     border: 1px solid var(--color-border);
     border-radius: 1rem;
     background: transparent;
     color: var(--color-text-muted);
     cursor: pointer;
     transition: all 0.12s;
+    white-space: nowrap;
   }
 
   .tag-pill:hover {
@@ -422,13 +424,8 @@
   }
 
   @media (max-width: 640px) {
-    .persona-bar {
+    .post-controls {
       flex-wrap: wrap;
-    }
-
-    .persona-tab {
-      font-size: 0.75rem;
-      padding: 0.4rem 0.6rem;
     }
 
     .sort-control {
