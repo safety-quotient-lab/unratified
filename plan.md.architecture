@@ -121,6 +121,11 @@ observatory.unratified.org              OBSERVATORY — "Human Rights Observator
 ├── /landscape                          Current economic/geopolitical conditions
 ├── /methodology                        How the analysis works (academic-facing)
 └── /data                               Downloads: datasets, BibTeX, citations
+
+status.unratified.org                   STATUS — Site health monitoring (CF Worker + D1)
+│
+├── /                                   HTML status page (dark Fira Code theme)
+└── /status                             JSON API (machine-readable health data)
 ```
 
 #### Semantic Data Layer (D024)
@@ -419,15 +424,16 @@ unratified/
 │   │       ├── publish.ts             ← POST /ap/publish (Bearer auth + outbox pagination)
 │   │       ├── delivery.ts            ← Queue consumer: fan-out to follower inboxes
 │   │       └── signing.ts             ← draft-cavage-12 RSA-SHA256 sign + verify
-│   └── monitor/                       ← Site monitor Cloudflare Worker (D037)
+│   └── monitor/                       ← Site monitor Cloudflare Worker (D037) — status.unratified.org
 │       ├── package.json
 │       ├── tsconfig.json
-│       ├── wrangler.toml              ← Cron triggers: */5, hourly, 6h, daily
+│       ├── wrangler.toml              ← Cron triggers: */5, hourly, 6h, daily; custom domain route
 │       └── src/
 │           ├── index.ts               ← Entry: scheduled + fetch handlers
 │           ├── types.ts               ← Env, CheckResult, Alert, SiteStatus
 │           ├── config.ts              ← Endpoints, thresholds, check definitions
-│           ├── status.ts              ← GET /status JSON response
+│           ├── status.ts              ← GET /status JSON API
+│           ├── page.ts                ← GET / HTML status page (dark Fira Code theme, sparklines)
 │           ├── checks/
 │           │   ├── health.ts          ← HTTP status + response time (every 5 min)
 │           │   ├── content.ts         ← Expected text verification (hourly)
@@ -438,7 +444,7 @@ unratified/
 │           │   └── email.ts           ← Resend email with cooldown deduplication
 │           └── db/
 │               ├── schema.sql         ← D1 migration (4 tables + indexes)
-│               └── queries.ts         ← D1 CRUD operations
+│               └── queries.ts         ← D1 CRUD + uptime stats + response history
 ├── cmd/interagent/                   ← Mesh daemon Go binary (D091) — replaces Python scripts
 │   ├── main.go                       ← CLI entry (cobra): serve/tui/status/trigger/sessions/resume/pause/unpause/install/changelog
 │   ├── go.mod / go.sum
