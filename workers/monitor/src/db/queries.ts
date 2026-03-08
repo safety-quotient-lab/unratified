@@ -125,3 +125,64 @@ export async function getRecentAlerts(
     createdAt: r.createdAt as string,
   }));
 }
+
+export async function getUptimeStats(
+  db: D1Database,
+  hours: number = 24,
+): Promise<Array<{ endpoint: string; total: number; successful: number; avgResponseMs: number }>> {
+  const rows = await db.prepare(
+    `SELECT endpoint,
+            COUNT(*) as total,
+            SUM(success) as successful,
+            ROUND(AVG(CASE WHEN success = 1 THEN response_time_ms END)) as avgResponseMs
+     FROM health_checks
+     WHERE checked_at > datetime('now', '-' || ? || ' hours')
+     GROUP BY endpoint
+     ORDER BY endpoint`,
+  ).bind(hours).all();
+
+  return (rows.results ?? []).map((r: Record<string, unknown>) => ({
+    endpoint: r.endpoint as string,
+    total: r.total as number,
+    successful: r.successful as number,
+    avgResponseMs: (r.avgResponseMs as number) ?? 0,
+  }));
+}
+
+export async function getRecentContentChecks(
+  db: D1Database,
+  limit: number = 20,
+): Promise<Array<{ endpoint: string; checkType: string; passed: boolean; checkedAt: string }>> {
+  const rows = await db.prepare(
+    `SELECT endpoint, check_type as checkType, passed, checked_at as checkedAt
+     FROM content_checks
+     ORDER BY checked_at DESC
+     LIMIT ?`,
+  ).bind(limit).all();
+
+  return (rows.results ?? []).map((r: Record<string, unknown>) => ({
+    endpoint: r.endpoint as string,
+    checkType: r.checkType as string,
+    passed: r.passed === 1,
+    checkedAt: r.checkedAt as string,
+  }));
+}
+
+export async function getResponseTimeHistory(
+  db: D1Database,
+  endpoint: string,
+  limit: number = 48,
+): Promise<Array<{ responseTimeMs: number; checkedAt: string }>> {
+  const rows = await db.prepare(
+    `SELECT response_time_ms as responseTimeMs, checked_at as checkedAt
+     FROM health_checks
+     WHERE endpoint = ? AND success = 1
+     ORDER BY checked_at DESC
+     LIMIT ?`,
+  ).bind(endpoint, limit).all();
+
+  return (rows.results ?? []).map((r: Record<string, unknown>) => ({
+    responseTimeMs: r.responseTimeMs as number,
+    checkedAt: r.checkedAt as string,
+  })).reverse();
+}

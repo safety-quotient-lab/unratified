@@ -7,8 +7,8 @@
 //   daily 6 AM    → sitemap page count regression
 //
 // Fetch handler:
-//   GET /status   → current health summary (JSON)
-//   GET /         → redirect to /status
+//   GET /         → HTML status page (status.unratified.org)
+//   GET /status   → JSON API (machine-readable)
 
 import type { Env } from './types';
 import { runHealthChecks } from './checks/health';
@@ -16,6 +16,7 @@ import { runContentChecks } from './checks/content';
 import { runSitemapChecks } from './checks/sitemap';
 import { runAnalyticsSnapshot } from './analytics/snapshot';
 import { buildStatusResponse } from './status';
+import { buildStatusPage } from './page';
 
 export default {
   async scheduled(
@@ -55,7 +56,7 @@ export default {
     }
 
     if (url.pathname === '/') {
-      return Response.redirect(`${url.origin}/status`, 301);
+      return buildStatusPage(env);
     }
 
     return new Response('Not found', { status: 404 });
