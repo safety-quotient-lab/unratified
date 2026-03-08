@@ -37,6 +37,19 @@ var AllowedPrompts = map[string]bool{
 	"/process-feedback":  true,
 }
 
+// IsPromptAllowed checks if a prompt matches an allowed entry.
+// Supports exact match and prefix match (e.g. "/scan-peer unratified" matches "/scan-peer").
+func IsPromptAllowed(prompt string) bool {
+	if AllowedPrompts[prompt] {
+		return true
+	}
+	// Check if the base command (before first space) matches
+	if idx := strings.Index(prompt, " "); idx > 0 {
+		return AllowedPrompts[prompt[:idx]]
+	}
+	return false
+}
+
 // Runner manages claude process execution.
 type Runner struct {
 	repos  RepoConfig
@@ -146,6 +159,7 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	cmd := exec.Command("claude", "-p", prompt,
 		"--allowedTools", "Read,Edit,Write,Bash,Glob,Grep",
 		"--output-format", "stream-json",
+		"--verbose",
 	)
 	cmd.Dir = clonePath
 

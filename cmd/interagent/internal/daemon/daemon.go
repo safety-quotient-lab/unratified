@@ -227,7 +227,7 @@ func (d *Daemon) handleTrigger(w http.ResponseWriter, r *http.Request) {
 		payload.Prompt = "/sync"
 	}
 
-	if !runner.AllowedPrompts[payload.Prompt] {
+	if !runner.IsPromptAllowed(payload.Prompt) {
 		allowed := make([]string, 0, len(runner.AllowedPrompts))
 		for k := range runner.AllowedPrompts {
 			allowed = append(allowed, k)
