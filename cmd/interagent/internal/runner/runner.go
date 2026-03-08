@@ -22,17 +22,19 @@ type RepoConfig map[string]string
 
 // AllowedPrompts lists prompts that can run via /trigger.
 var AllowedPrompts = map[string]bool{
-	"/sync":           true,
-	"/iterate":        true,
-	"/iterate quick":  true,
-	"/iterate deep":   true,
-	"/hunt":           true,
-	"/hunt quick":     true,
-	"/hunt deep":      true,
-	"/hunt content":   true,
-	"/hunt integrity": true,
-	"/cycle":          true,
-	"/doc":            true,
+	"/sync":              true,
+	"/iterate":           true,
+	"/iterate quick":     true,
+	"/iterate deep":      true,
+	"/hunt":              true,
+	"/hunt quick":        true,
+	"/hunt deep":         true,
+	"/hunt content":      true,
+	"/hunt integrity":    true,
+	"/cycle":             true,
+	"/doc":               true,
+	"/scan-peer":         true,
+	"/process-feedback":  true,
 }
 
 // Runner manages claude process execution.

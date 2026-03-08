@@ -278,17 +278,102 @@ func (d *Daemon) handleWebhook(w http.ResponseWriter, r *http.Request) {
 
 	w.WriteHeader(http.StatusOK)
 
-	if eventType != "pull_request" {
+	repoObj, _ := payload["repository"].(map[string]any)
+	repoName, _ := repoObj["name"].(string)
+
+	switch eventType {
+	case "push":
+		d.handlePushEvent(repoName, payload)
+	case "pull_request":
+		d.handlePREvent(repoName, payload)
+	}
+}
+
+// contentPrefixes lists path prefixes that trigger a feedback loop scan when pushed.
+var contentPrefixes = []string{
+	"src/pages/", "src/content/", "blog/src/content/",
+}
+
+func (d *Daemon) handlePushEvent(repoName string, payload map[string]any) {
+	ref, _ := payload["ref"].(string)
+
+	// Only trigger on pushes to main/master
+	if ref != "refs/heads/main" && ref != "refs/heads/master" {
 		return
 	}
 
+	// Check if any commits touch content paths
+	commits, _ := payload["commits"].([]any)
+	touchesContent := false
+	for _, c := range commits {
+		commit, _ := c.(map[string]any)
+		for _, key := range []string{"added", "modified"} {
+			files, _ := commit[key].([]any)
+			for _, f := range files {
+				path, _ := f.(string)
+				for _, prefix := range contentPrefixes {
+					if len(path) >= len(prefix) && path[:len(prefix)] == prefix {
+						touchesContent = true
+					}
+				}
+			}
+		}
+	}
+
+	if !touchesContent {
+		return
+	}
+
+	headCommit, _ := payload["head_commit"].(map[string]any)
+	commitMsg, _ := headCommit["message"].(string)
+	if len(commitMsg) > 72 {
+		commitMsg = commitMsg[:72]
+	}
+
+	d.store.Emit(store.Event{
+		Type:   "webhook",
+		Repo:   repoName,
+		Detail: fmt.Sprintf("push to main (content): %s", commitMsg),
+	})
+
+	// Content push to unratified → trigger scan-peer on psychology-agent
+	if repoName == "unratified" {
+		if d.runner.RepoPath("psychology-agent") != "" {
+			d.log.Info("content push detected, triggering scan-peer",
+				"repo", repoName, "commit", commitMsg)
+			go d.runner.Trigger("psychology-agent", "/scan-peer unratified",
+				fmt.Sprintf("content push: %s", commitMsg))
+		}
+	}
+
+	// Push from psychology-agent with transport changes → trigger process-feedback on unratified
+	if repoName == "psychology-agent" {
+		for _, c := range commits {
+			commit, _ := c.(map[string]any)
+			for _, key := range []string{"added", "modified"} {
+				files, _ := commit[key].([]any)
+				for _, f := range files {
+					path, _ := f.(string)
+					if len(path) > 19 && path[:19] == "transport/sessions/" {
+						if d.runner.RepoPath("unratified") != "" {
+							d.log.Info("transport message detected, triggering process-feedback",
+								"repo", repoName)
+							go d.runner.Trigger("unratified", "/process-feedback",
+								"transport message from psychology-agent")
+							return
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+func (d *Daemon) handlePREvent(repoName string, payload map[string]any) {
 	action, _ := payload["action"].(string)
 	if action != "opened" && action != "synchronize" && action != "reopened" {
 		return
 	}
-
-	repoObj, _ := payload["repository"].(map[string]any)
-	repoName, _ := repoObj["name"].(string)
 
 	prObj, _ := payload["pull_request"].(map[string]any)
 	headObj, _ := prObj["head"].(map[string]any)
