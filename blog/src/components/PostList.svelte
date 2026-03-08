@@ -21,24 +21,109 @@
     allTags: string[];
   }
 
+  type Persona = 'voter' | 'politician' | 'educator' | 'researcher' | 'developer' | 'all';
+
+  const PERSONA_TAGS: Record<Exclude<Persona, 'all'>, Set<string>> = {
+    voter: new Set([
+      'icescr', 'voter-guide', 'ratification', 'civic-action', 'senate',
+      'economic-rights', 'human-rights', 'labor', 'housing', 'health',
+      'education', 'cold-war', 'human-rights-history', 'history',
+      'advocacy', 'open-web',
+    ]),
+    politician: new Set([
+      'icescr', 'voter-guide', 'ratification', 'policy', 'senate',
+      'civic-action', 'civil-society', 'progressive-realization',
+      'economic-rights', 'human-rights', 'labor', 'housing', 'health',
+      'education', 'foreign-relations', 'accountability',
+      'advocacy', 'AI', 'transparency',
+    ]),
+    educator: new Set([
+      'icescr', 'ratification', 'economic-rights', 'human-rights',
+      'udhr', 'methodology', 'fair-witness', 'transparency', 'meta',
+      'confabulation', 'ai-accuracy', 'taxonomy', 'open-web',
+      'history', 'cold-war', 'human-rights-history',
+      'labor', 'housing', 'health', 'education',
+      'observatory', 'data-analysis', 'stakeholder-voice',
+    ]),
+    researcher: new Set([
+      'methodology', 'construct-validity', 'psychometrics', 'data-analysis',
+      'measurement-design', 'statistics', 'hrcb', 'udhr', 'rights-salience',
+      'observatory', 'fair-witness', 'calibration', 'llm-evaluation',
+      'ensemble-scoring', 'confabulation', 'ai-accuracy', 'taxonomy',
+      'semiotics', 'machine-learning', 'nlp', 'research', 'catastrophe-theory',
+      'interpretant', 'psychoemotional-safety', 'setl', 'privacy',
+      'stakeholder-voice', 'higher-order-effects', 'speculation',
+      'peer-review', 'gemini', 'closed-loop', 'discriminator',
+      'lazy-neutral', 'instrumentation', 'measurement-integrity',
+    ]),
+    developer: new Set([
+      'cognitive-architecture', 'ai-agents', 'claude-code', 'a2a',
+      'distributed-systems', 'inter-agent', 'interagent', 'well-known',
+      'rfc-5785', 'infrastructure', 'security', 'prompt-injection',
+      'recursive-systems', 'false-positives', 'hooks', 'parry',
+      'graceful-degradation', 'developer-experience', 'byzantine-fault-tolerance',
+      'human-ai-interaction', 'tool-design', 'ai-ux', 'csp', 'gap-detection',
+      'silent-failure', 'development-process', 'git', 'reconstruction',
+      'reproducibility', 'anti-regression', 'self-governance',
+      'epistemic-infrastructure',
+    ]),
+  };
+
+  const PERSONA_LABELS: Record<Persona, { name: string; desc: string }> = {
+    voter:      { name: 'Voter',      desc: 'Voter guides, civic action, economic rights' },
+    politician: { name: 'Politician', desc: 'Policy, ratification, legislative context' },
+    educator:   { name: 'Educator',   desc: 'Teaching resources, methodology, human rights' },
+    researcher: { name: 'Researcher', desc: 'Measurement, validity, construct analysis' },
+    developer:  { name: 'Developer',  desc: 'Agent architecture, protocols, tools' },
+    all:        { name: 'All',        desc: 'Everything' },
+  };
+
+  const STORAGE_KEY = 'blog-persona';
+
+  function loadPersona(): Persona {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored && stored in PERSONA_LABELS) return stored as Persona;
+    } catch {}
+    return 'voter';
+  }
+
   let { posts, allTags }: Props = $props();
 
-  let selectedTags = $state<Set<string>>(new Set());
+  let persona = $state<Persona>(loadPersona());
+  let selectedTag = $state<string | null>(null);
   let sortOrder = $state('newest');
-  let dropdownOpen = $state(false);
 
-  const allSelected = $derived(selectedTags.size === 0);
+  function setPersona(p: Persona) {
+    persona = p;
+    selectedTag = null;
+    try { localStorage.setItem(STORAGE_KEY, p); } catch {}
+  }
 
-  const filterLabel = $derived.by(() => {
-    if (allSelected) return 'All tags';
-    if (selectedTags.size === 1) return `#${[...selectedTags][0]}`;
-    return `${selectedTags.size} tags selected`;
+  function postMatchesPersona(post: Post, p: Persona): boolean {
+    if (p === 'all') return true;
+    const tags = PERSONA_TAGS[p];
+    return post.tags.some(t => tags.has(t));
+  }
+
+  // Tags visible for current persona (only tags that appear on matching posts)
+  const visibleTags = $derived.by(() => {
+    const personaPosts = posts.filter(p => postMatchesPersona(p, persona));
+    const tagCounts = new Map<string, number>();
+    for (const post of personaPosts) {
+      for (const tag of post.tags) {
+        tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+      }
+    }
+    return [...tagCounts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .map(([tag]) => tag);
   });
 
   const filtered = $derived.by(() => {
-    let result = posts;
-    if (!allSelected) {
-      result = result.filter(p => p.tags.some(t => selectedTags.has(t)));
+    let result = posts.filter(p => postMatchesPersona(p, persona));
+    if (selectedTag) {
+      result = result.filter(p => p.tags.includes(selectedTag!));
     }
     switch (sortOrder) {
       case 'oldest':
@@ -60,37 +145,8 @@
   });
 
   const announcement = $derived(
-    allSelected
-      ? `Showing all ${filtered.length} post${filtered.length !== 1 ? 's' : ''}`
-      : `Showing ${filtered.length} post${filtered.length !== 1 ? 's' : ''} for ${filterLabel}`
+    `Showing ${filtered.length} post${filtered.length !== 1 ? 's' : ''} for ${PERSONA_LABELS[persona].name}${selectedTag ? `, #${selectedTag}` : ''}`
   );
-
-  function toggleTag(tag: string) {
-    const next = new Set(selectedTags);
-    if (next.has(tag)) {
-      next.delete(tag);
-    } else {
-      next.add(tag);
-    }
-    selectedTags = next;
-  }
-
-  function clearAll() {
-    selectedTags = new Set();
-  }
-
-  function closeOnOutsideClick(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.tag-filter-dropdown')) {
-      dropdownOpen = false;
-    }
-  }
-
-  function handleDropdownKeydown(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
-      dropdownOpen = false;
-    }
-  }
 
   function formatDate(iso: string): string {
     return new Date(iso).toLocaleString('en-US', {
@@ -105,55 +161,44 @@
   }
 </script>
 
-<svelte:window onclick={closeOnOutsideClick} />
-
-<div class="post-controls">
-  <div class="tag-filter-dropdown" role="none" onkeydown={handleDropdownKeydown}>
+<nav class="persona-bar" aria-label="Reading perspective">
+  {#each (['voter', 'politician', 'educator', 'researcher', 'developer', 'all'] as const) as p}
     <button
-      class="filter-trigger"
-      class:active={!allSelected}
-      aria-haspopup="listbox"
-      aria-expanded={dropdownOpen}
-      onclick={(e) => { e.stopPropagation(); dropdownOpen = !dropdownOpen; }}
+      class="persona-tab"
+      class:active={persona === p}
+      onclick={() => setPersona(p)}
+      aria-pressed={persona === p}
+      title={PERSONA_LABELS[p].desc}
     >
-      <span class="filter-label">{filterLabel}</span>
-      <span class="filter-caret" aria-hidden="true">{dropdownOpen ? '▴' : '▾'}</span>
+      {PERSONA_LABELS[p].name}
     </button>
-
-    {#if dropdownOpen}
-      <div class="filter-menu" role="listbox" aria-multiselectable="true" aria-label="Filter by tag">
-        <label class="filter-option filter-option--all">
-          <input
-            type="checkbox"
-            checked={allSelected}
-            onchange={clearAll}
-          />
-          <span>All tags</span>
-        </label>
-        <div class="filter-divider" role="separator"></div>
-        {#each allTags as tag}
-          <label class="filter-option" class:checked={selectedTags.has(tag)}>
-            <input
-              type="checkbox"
-              checked={selectedTags.has(tag)}
-              onchange={() => toggleTag(tag)}
-            />
-            <span>#{tag}</span>
-          </label>
-        {/each}
-      </div>
-    {/if}
-  </div>
+  {/each}
 
   <div class="sort-control">
-    <label for="post-sort">Sort</label>
-    <select id="post-sort" bind:value={sortOrder}>
-      <option value="newest">Newest first</option>
-      <option value="oldest">Oldest first</option>
-      <option value="az">A-Z by title</option>
+    <select aria-label="Sort order" bind:value={sortOrder}>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+      <option value="az">A-Z</option>
     </select>
   </div>
-</div>
+</nav>
+
+{#if visibleTags.length > 1}
+  <div class="tag-bar">
+    <button
+      class="tag-pill"
+      class:active={!selectedTag}
+      onclick={() => selectedTag = null}
+    >All</button>
+    {#each visibleTags as tag}
+      <button
+        class="tag-pill"
+        class:active={selectedTag === tag}
+        onclick={() => selectedTag = selectedTag === tag ? null : tag}
+      >#{tag}</button>
+    {/each}
+  </div>
+{/if}
 
 <div class="sr-only" aria-live="polite">{announcement}</div>
 
@@ -196,125 +241,79 @@
   {/each}
 
   {#if filtered.length === 0}
-    <p class="no-results">No posts match this filter.</p>
+    <p class="no-results">No posts match this filter. Try "All" to see everything.</p>
   {/if}
 </section>
 
 <style>
-  .post-controls {
+  .persona-bar {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: var(--space-lg);
-    margin-bottom: var(--space-xl);
+    gap: 0.25rem;
+    border-bottom: 2px solid var(--color-border);
   }
 
-  .tag-filter-dropdown {
-    position: relative;
-  }
-
-  .filter-trigger {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-xs);
+  .persona-tab {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
-    padding: 0.25rem 0.65rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.85rem;
+    border: none;
     background: transparent;
     color: var(--color-text-muted);
     cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
-    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.15s, border-color 0.15s;
   }
 
-  .filter-trigger:hover,
-  .filter-trigger[aria-expanded="true"] {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-  }
-
-  .filter-trigger.active {
-    border-color: var(--color-accent);
-    color: var(--color-accent);
-    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
-  }
-
-  .filter-trigger:focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-  }
-
-  .filter-caret {
-    font-size: 0.6rem;
-    line-height: 1;
-  }
-
-  .filter-menu {
-    position: absolute;
-    top: calc(100% + 4px);
-    left: 0;
-    z-index: 100;
-    min-width: 11rem;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 0.25rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    padding: 0.25rem 0;
-  }
-
-  .filter-option {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    padding: 0.3rem 0.75rem;
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .filter-option:hover {
+  .persona-tab:hover {
     color: var(--color-text);
-    background: var(--color-surface-alt);
   }
 
-  .filter-option.checked {
+  .persona-tab.active {
     color: var(--color-accent);
-  }
-
-  .filter-option--all {
-    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
     font-weight: 600;
   }
 
-  .filter-option input[type="checkbox"] {
-    width: 0.8rem;
-    height: 0.8rem;
-    accent-color: var(--color-accent);
-    cursor: pointer;
-    flex-shrink: 0;
+  .persona-tab:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: -2px;
   }
 
-  .filter-divider {
-    height: 1px;
-    background: var(--color-border);
-    margin: 0.25rem 0;
+  .tag-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-lg);
+  }
+
+  .tag-pill {
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    background: transparent;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: all 0.12s;
+  }
+
+  .tag-pill:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .tag-pill.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-surface);
   }
 
   .sort-control {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
     margin-left: auto;
-  }
-
-  .sort-control label {
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
   }
 
   .sort-control select {
@@ -423,13 +422,19 @@
   }
 
   @media (max-width: 640px) {
-    .post-controls {
-      flex-direction: column;
-      align-items: flex-start;
+    .persona-bar {
+      flex-wrap: wrap;
+    }
+
+    .persona-tab {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.6rem;
     }
 
     .sort-control {
       margin-left: 0;
+      width: 100%;
+      padding-top: var(--space-xs);
     }
   }
 
