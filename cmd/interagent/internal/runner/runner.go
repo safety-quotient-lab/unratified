@@ -289,8 +289,8 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 		LogFile:   logFile,
 	})
 
-	// Notify via Signal so owner can monitor automation
-	r.notifySignal(repo, prompt, status, rc, reason, sr.resultText)
+	// Notify via Zulip so owner can monitor automation
+	r.notifyZulip(repo, prompt, status, rc, reason, sr.resultText)
 
 	// Build verification gate — run after successful Claude completion
 	if rc == 0 && r.buildVerify {
@@ -485,6 +485,43 @@ func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) (s
 	// Final flush
 	flushText()
 	return sessionID, resultText
+}
+
+// notifyZulip sends a run summary to the Zulip golem stream via zulip-notify.sh.
+func (r *Runner) notifyZulip(repo, prompt, status string, exitCode int, reason, resultText string) {
+	script := filepath.Join(os.Getenv("HOME"), "Projects/claude-control/scripts/zulip-notify.sh")
+
+	if _, err := os.Stat(script); os.IsNotExist(err) {
+		r.log.Warn("zulip-notify.sh not found, skipping notification")
+		return
+	}
+
+	icon := "✅"
+	if exitCode != 0 {
+		icon = "❌"
+	}
+
+	msg := fmt.Sprintf("%s [%s] %s → %s\nReason: %s", icon, repo, prompt, status, reason)
+
+	if resultText != "" {
+		summary := resultText
+		if len(summary) > 500 {
+			summary = summary[:500] + "…"
+		}
+		msg += fmt.Sprintf("\n\nOutput:\n%s", summary)
+	}
+
+	if len(msg) > 1500 {
+		msg = msg[:1500]
+	}
+
+	topic := fmt.Sprintf("daemon/%s", repo)
+	cmd := exec.Command(script, topic, msg)
+	cmd.Stdout = nil
+	cmd.Stderr = nil
+	if err := cmd.Run(); err != nil {
+		r.log.Warn("zulip notification failed", "error", err)
+	}
 }
 
 // notifySignal sends a run summary to the owner via Signal bridge.
