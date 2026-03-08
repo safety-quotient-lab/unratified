@@ -42,19 +42,77 @@ If no unprocessed messages exist, report "no pending feedback" and stop.
 
 ### Phase 2: Evaluate Each Finding
 
-For each finding, apply domain judgment:
+For each finding, evaluate using dimension-specific heuristics:
 
-| Decision | Criteria |
-|----------|----------|
-| **Accept** | Finding accurately identifies a real issue; suggestion improves quality |
-| **Reject** | False positive, stylistic preference not aligned with project voice, or already addressed |
-| **Defer** | Valid issue but requires broader refactoring or human judgment |
+#### Fair Witness Findings
 
-Record the decision and reasoning for each finding.
+| Accept when | Reject when |
+|-------------|-------------|
+| Text asserts a factual claim without source | Claim functions as a value statement, not empirical assertion |
+| Inference presented as direct observation | Context makes the epistemic status clear (e.g., section header) |
+| Unattributed statistics or data points | Number serves as illustration, not evidence (e.g., "hundreds of...") |
+
+**Key judgment:** The project uses fair witness discipline *within content*, but
+page intros and calls-to-action may use deliberative framing intentionally.
+Evaluate whether the text sits in an epistemic or rhetorical zone.
+
+#### Vocabulary Findings
+
+| Accept when | Reject when |
+|-------------|-------------|
+| Term contradicts its glossary definition | Term used in a colloquial sense clearly distinct from glossary context |
+| Key term appears in variant form (e.g., "safety quotient" vs "PSQ") | Variant used for readability or audience accessibility |
+| Jargon introduced without glossary entry | Term appears only once in a technical aside |
+
+**Key judgment:** Glossary coverage matters for terms that recur across pages.
+Single-use technical terms in specialized content do not need glossary entries.
+
+#### Register Findings
+
+| Accept when | Reject when |
+|-------------|-------------|
+| Adversarial tone in deliberative content | Intentional rhetorical shift (e.g., contrast paragraph, call to action) |
+| Passive voice obscures the actor | Passive used to maintain focus on the receiver of action |
+| E-prime violation where active verb improves clarity | "To be" form serves as copula in definitions or formal statements |
+
+**Key judgment:** E-prime applies as a quality guideline, not a rigid rule.
+Accept e-prime findings only when the suggested active verb genuinely improves
+the sentence. Reject when the rewrite introduces awkwardness or loses meaning.
+
+#### Structural Findings
+
+| Accept when | Reject when |
+|-------------|-------------|
+| Internal link returns 404 (verify by checking file existence) | Link points to a page that exists at a different path |
+| Heading hierarchy broken (h3 appears before any h2) | Component uses heading levels for visual sizing (check Astro components) |
+| Empty section with no content | Section contains a component that renders content dynamically |
+| Missing alt text on img element | Image is decorative (empty alt="" is valid) |
+
+**Key judgment:** Always verify structural findings by reading the actual file.
+Structural issues have the highest false-positive rate because the scanner may
+not have full Astro component context.
+
+#### Severity Weighting
+
+| Severity | Auto-accept threshold | Auto-reject threshold |
+|----------|----------------------|----------------------|
+| `high` + confidence >= 0.9 | Accept without further review (structural/factual errors) | — |
+| `medium` + confidence >= 0.8 | Accept if suggestion aligns with project voice | Reject if fix introduces worse prose |
+| `low` + any confidence | Never auto-accept; evaluate individually | Reject if purely stylistic with no quality gain |
+
+#### Decision Rules
+
+- **Accept** — finding accurately identifies a real issue AND the suggestion (or a better alternative) improves quality
+- **Reject** — false positive, intentional stylistic choice, or suggestion degrades quality
+- **Defer** — valid issue but requires broader refactoring, human judgment, or touches more than 3 files
+
+Record the decision, reasoning, and dimension for each finding.
 
 **Convergence findings** (marked `convergence: true`): These persisted across
 3+ scans. If accepting, implement with higher priority. If rejecting, provide
 explicit reasoning — the peer agent needs to understand why this keeps appearing.
+Three consecutive rejections of the same finding should trigger an epistemic
+flag suggesting the scanner's criteria need recalibration for this case.
 
 ### Phase 3: Implement Accepted Fixes
 
@@ -77,13 +135,13 @@ Read neighboring content for tone calibration. The project uses:
 ### Phase 4: Build Gate
 
 ```bash
-npm run check    # TypeScript / Astro validation
-npm run build    # Full build
+npx astro check   # TypeScript / Astro validation
+npx astro build   # Full build
 
-# Regression check: at least 30 HTML pages
+# Regression check: at least 60 HTML pages (current baseline: ~66)
 PAGE_COUNT=$(find dist -name "*.html" | wc -l)
-if [ "$PAGE_COUNT" -lt 30 ]; then
-  echo "REGRESSION: only $PAGE_COUNT pages (expected 30+)"
+if [ "$PAGE_COUNT" -lt 60 ]; then
+  echo "REGRESSION: only $PAGE_COUNT pages (expected 60+)"
   exit 1
 fi
 ```
@@ -198,16 +256,18 @@ Signal notification (via signal-bridge if available):
 
 This skill will evolve. Areas marked for future refinement:
 
-- **Evaluation heuristics** — currently binary accept/reject logic; future versions
-  may weight findings by dimension, consider historical acceptance rates, or apply
-  PSQ scoring to the proposed fixes themselves
+- ~~**Evaluation heuristics**~~ — DONE: dimension-specific accept/reject criteria,
+  severity weighting, auto-accept thresholds added (v2, 2026-03-07)
 - **Fix strategies** — currently applies suggestions directly; future versions may
   generate alternative fixes and pick the best one
 - **Cross-finding interaction** — currently processes findings independently; future
   versions may detect when multiple findings in the same file interact
 - **Confidence calibration** — track accept/reject rates over time to calibrate
-  psychology-agent's confidence thresholds
-- **Escalation policy** — when to surface findings to human vs. auto-process
+  psychology-agent's confidence thresholds. Start collecting data after first
+  10 scan cycles with actual content findings.
+- **Escalation policy** — when to surface findings to human vs. auto-process.
+  Current rule: high-severity convergence findings that get deferred 2+ times
+  should trigger a Signal notification asking for human review.
 
 ## Anti-Patterns
 
