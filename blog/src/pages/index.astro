@@ -1,5 +1,6 @@
 ---
 import BlogLayout from '../layouts/BlogLayout.astro';
+import MostRead from '../components/MostRead.astro';
 import PostList from '../components/PostList.svelte';
 import { getCollection } from 'astro:content';
 
@@ -29,6 +30,8 @@ const allTags = [...new Set(allPosts.flatMap(p => p.data.tags))].sort();
         Analysis, updates, and community contributions on ICESCR ratification and AI economics.
       </p>
     </header>
+
+    <MostRead />
 
     <PostList client:load posts={posts} allTags={allTags} />
 
