@@ -194,7 +194,7 @@ if (Astro.url.pathname !== '/glossary') {
   <body data-lens={activeLens}>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="review-banner" role="status">
+    <div class="review-banner" role="status" id="review-banner" hidden>
       <p>
         <strong>AI-generated site.</strong>
         <a href="https://www.anthropic.com/claude" rel="noopener">Claude</a> built this entire site &mdash; analysis, copy, and code &mdash; under human direction.
@@ -202,6 +202,14 @@ if (Astro.url.pathname !== '/glossary') {
         <a href="https://github.com/safety-quotient-lab/unratified" rel="noopener">Suggest corrections on GitHub &rarr;</a>
       </p>
     </div>
+    <script is:inline>
+      (function(){
+        var k='unratified-banner-seen';
+        var b=document.getElementById('review-banner');
+        if(!b)return;
+        try{if(!sessionStorage.getItem(k)){b.hidden=false;sessionStorage.setItem(k,'1');}}catch(e){b.hidden=false;}
+      })();
+    </script>
 
     <header class="site-header">
       <nav aria-label="Main navigation">
