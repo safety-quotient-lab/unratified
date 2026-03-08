@@ -106,6 +106,23 @@ func migrate(db *sql.DB) error {
 		);
 
 		CREATE INDEX IF NOT EXISTS idx_sync_times_repo ON sync_times(repo);
+
+		CREATE TABLE IF NOT EXISTS feedback_decisions (
+			id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+			ts                  TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%S', 'now', 'localtime')),
+			scan_turn           INTEGER NOT NULL,
+			finding_id          TEXT NOT NULL,
+			dimension           TEXT NOT NULL,
+			severity            TEXT NOT NULL,
+			scanner_confidence  REAL NOT NULL,
+			decision            TEXT NOT NULL,
+			reasoning           TEXT NOT NULL DEFAULT '',
+			action_taken        TEXT NOT NULL DEFAULT '',
+			convergence         INTEGER NOT NULL DEFAULT 0
+		);
+
+		CREATE INDEX IF NOT EXISTS idx_fd_dimension ON feedback_decisions(dimension);
+		CREATE INDEX IF NOT EXISTS idx_fd_decision ON feedback_decisions(decision);
 	`)
 	return err
 }
@@ -315,6 +332,114 @@ func (s *Store) SetBudget(key, value string) error {
 		key, value, value,
 	)
 	return err
+}
+
+// FeedbackDecision represents one accept/reject/defer decision on a scan finding.
+type FeedbackDecision struct {
+	ID                 int64   `json:"id"`
+	Timestamp          string  `json:"ts"`
+	ScanTurn           int     `json:"scan_turn"`
+	FindingID          string  `json:"finding_id"`
+	Dimension          string  `json:"dimension"`
+	Severity           string  `json:"severity"`
+	ScannerConfidence  float64 `json:"scanner_confidence"`
+	Decision           string  `json:"decision"` // accept, reject, defer
+	Reasoning          string  `json:"reasoning,omitempty"`
+	ActionTaken        string  `json:"action_taken,omitempty"`
+	Convergence        bool    `json:"convergence"`
+}
+
+// RecordDecision stores a feedback decision.
+func (s *Store) RecordDecision(d FeedbackDecision) error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	conv := 0
+	if d.Convergence {
+		conv = 1
+	}
+	_, err := s.db.Exec(
+		`INSERT INTO feedback_decisions (scan_turn, finding_id, dimension, severity, scanner_confidence, decision, reasoning, action_taken, convergence)
+		 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+		d.ScanTurn, d.FindingID, d.Dimension, d.Severity, d.ScannerConfidence,
+		d.Decision, d.Reasoning, d.ActionTaken, conv,
+	)
+	return err
+}
+
+// CalibrationRow holds aggregated stats for one dimension+severity bucket.
+type CalibrationRow struct {
+	Dimension   string  `json:"dimension"`
+	Severity    string  `json:"severity"`
+	Total       int     `json:"total"`
+	Accepted    int     `json:"accepted"`
+	Rejected    int     `json:"rejected"`
+	Deferred    int     `json:"deferred"`
+	AcceptRate  float64 `json:"accept_rate"`
+	AvgConfidence float64 `json:"avg_scanner_confidence"`
+}
+
+// CalibrationStats returns accept/reject rates grouped by dimension and severity.
+func (s *Store) CalibrationStats() ([]CalibrationRow, error) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	rows, err := s.db.Query(`
+		SELECT
+			dimension,
+			severity,
+			COUNT(*) as total,
+			SUM(CASE WHEN decision = 'accept' THEN 1 ELSE 0 END) as accepted,
+			SUM(CASE WHEN decision = 'reject' THEN 1 ELSE 0 END) as rejected,
+			SUM(CASE WHEN decision = 'defer' THEN 1 ELSE 0 END) as deferred,
+			AVG(scanner_confidence) as avg_confidence
+		FROM feedback_decisions
+		GROUP BY dimension, severity
+		ORDER BY dimension, severity
+	`)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var stats []CalibrationRow
+	for rows.Next() {
+		var r CalibrationRow
+		if err := rows.Scan(&r.Dimension, &r.Severity, &r.Total, &r.Accepted, &r.Rejected, &r.Deferred, &r.AvgConfidence); err != nil {
+			return nil, err
+		}
+		if r.Total > 0 {
+			r.AcceptRate = float64(r.Accepted) / float64(r.Total)
+		}
+		stats = append(stats, r)
+	}
+	return stats, nil
+}
+
+// RecentDecisions returns the N most recent feedback decisions.
+func (s *Store) RecentDecisions(limit int) ([]FeedbackDecision, error) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	rows, err := s.db.Query(
+		`SELECT id, ts, scan_turn, finding_id, dimension, severity, scanner_confidence, decision, reasoning, action_taken, convergence
+		 FROM feedback_decisions ORDER BY id DESC LIMIT ?`, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var decisions []FeedbackDecision
+	for rows.Next() {
+		var d FeedbackDecision
+		var conv int
+		if err := rows.Scan(&d.ID, &d.Timestamp, &d.ScanTurn, &d.FindingID, &d.Dimension, &d.Severity, &d.ScannerConfidence, &d.Decision, &d.Reasoning, &d.ActionTaken, &conv); err != nil {
+			return nil, err
+		}
+		d.Convergence = conv != 0
+		decisions = append(decisions, d)
+	}
+	return decisions, nil
 }
 
 // Close closes the database.

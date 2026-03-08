@@ -72,6 +72,8 @@ func (d *Daemon) ListenAndServe() error {
 	mux.HandleFunc("POST /gpu/submit", d.handleGPUSubmit)
 	mux.HandleFunc("GET /gpu/jobs", d.handleGPUJobs)
 	mux.HandleFunc("GET /gpu/job/{id}", d.handleGPUJob)
+	mux.HandleFunc("GET /calibration", d.handleCalibration)
+	mux.HandleFunc("POST /calibration/record", d.handleCalibrationRecord)
 	mux.HandleFunc("POST /", d.handleWebhook)
 
 	// Start scheduler
@@ -108,6 +110,8 @@ func (d *Daemon) ListenAndServe() error {
 		"logs", "GET /logs",
 		"pause", "GET /pause",
 		"resume", "GET /resume",
+		"calibration", "GET /calibration",
+		"calibration_record", "POST /calibration/record",
 	)
 
 	return http.ListenAndServe(addr, mux)
@@ -550,6 +554,79 @@ func statusStr(paused bool) string {
 		return "paused"
 	}
 	return "ok"
+}
+
+// --- Calibration handlers ---
+
+func (d *Daemon) handleCalibration(w http.ResponseWriter, r *http.Request) {
+	stats, err := d.store.CalibrationStats()
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	limit := intParam(r.URL.Query(), "n", 20)
+	recent, err := d.store.RecentDecisions(limit)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	totalDecisions := 0
+	totalAccepted := 0
+	totalRejected := 0
+	for _, s := range stats {
+		totalDecisions += s.Total
+		totalAccepted += s.Accepted
+		totalRejected += s.Rejected
+	}
+
+	overallRate := 0.0
+	if totalDecisions > 0 {
+		overallRate = float64(totalAccepted) / float64(totalDecisions)
+	}
+
+	writeJSON(w, http.StatusOK, map[string]any{
+		"summary": map[string]any{
+			"total_decisions":    totalDecisions,
+			"total_accepted":     totalAccepted,
+			"total_rejected":     totalRejected,
+			"overall_accept_rate": overallRate,
+			"calibrated":         totalDecisions >= 10,
+		},
+		"by_dimension_severity": stats,
+		"recent_decisions":      recent,
+	})
+}
+
+func (d *Daemon) handleCalibrationRecord(w http.ResponseWriter, r *http.Request) {
+	if !d.checkAuth(w, r) {
+		return
+	}
+
+	var decisions []store.FeedbackDecision
+	if err := json.NewDecoder(r.Body).Decode(&decisions); err != nil {
+		http.Error(w, `{"error":"expected JSON array of decisions"}`, http.StatusBadRequest)
+		return
+	}
+
+	recorded := 0
+	for _, dec := range decisions {
+		if dec.Decision == "" || dec.Dimension == "" || dec.FindingID == "" {
+			continue
+		}
+		if err := d.store.RecordDecision(dec); err != nil {
+			d.log.Error("record decision failed", "finding", dec.FindingID, "err", err)
+			continue
+		}
+		recorded++
+	}
+
+	d.log.Info("calibration decisions recorded", "count", recorded)
+	writeJSON(w, http.StatusOK, map[string]any{
+		"recorded": recorded,
+		"total":    len(decisions),
+	})
 }
 
 // --- GPU queue handlers ---

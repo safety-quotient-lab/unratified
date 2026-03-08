@@ -108,6 +108,22 @@ not have full Astro component context.
 
 Record the decision, reasoning, and dimension for each finding.
 
+#### Phase 2b: Record Decisions for Calibration
+
+After evaluating all findings, POST the decisions to the daemon for calibration tracking:
+
+```bash
+# Build JSON array of decisions
+curl -s -X POST http://localhost:8787/calibration/record \
+  -H "Authorization: Bearer $WEBHOOK_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '[{"scan_turn":N,"finding_id":"f1","dimension":"fair-witness","severity":"high","scanner_confidence":0.92,"decision":"accept","reasoning":"...","convergence":false}, ...]'
+```
+
+The daemon aggregates accept/reject rates by dimension and severity. After 10+ decisions
+accumulate, `GET /calibration` returns calibration stats that can inform threshold adjustments.
+The `calibrated` flag in the response flips to `true` once 10 decisions exist.
+
 **Convergence findings** (marked `convergence: true`): These persisted across
 3+ scans. If accepting, implement with higher priority. If rejecting, provide
 explicit reasoning — the peer agent needs to understand why this keeps appearing.
@@ -262,9 +278,9 @@ This skill will evolve. Areas marked for future refinement:
   generate alternative fixes and pick the best one
 - **Cross-finding interaction** — currently processes findings independently; future
   versions may detect when multiple findings in the same file interact
-- **Confidence calibration** — track accept/reject rates over time to calibrate
-  psychology-agent's confidence thresholds. Start collecting data after first
-  10 scan cycles with actual content findings.
+- ~~**Confidence calibration**~~ — DONE: `feedback_decisions` table in daemon DB,
+  `POST /calibration/record` for structured decision logging, `GET /calibration`
+  for accept/reject rates by dimension+severity. Calibrated flag at 10+ decisions (v3, 2026-03-08).
 - **Escalation policy** — when to surface findings to human vs. auto-process.
   Current rule: high-severity convergence findings that get deferred 2+ times
   should trigger a Signal notification asking for human review.
