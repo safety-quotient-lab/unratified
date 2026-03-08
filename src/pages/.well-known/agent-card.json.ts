@@ -62,7 +62,7 @@ export const GET: APIRoute = () => {
       },
     },
     authLevels: {
-      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation', 'generate-icescr-overlay', 'interagent-mesh-daemon', 'changelog-generation'],
+      open: ['icescr-analysis', 'campaign-monitoring', 'voter-guide-generation', 'generate-icescr-overlay', 'interagent-mesh-daemon'],
       queueWrite: {
         skills: ['bluesky-posting', 'blog-publishing', 'activitypub-publishing'],
         gate: 'Human director approval required via magic link (Resend email → Monitor Worker → D1 token validation). No autonomous execution path exists.',
@@ -196,19 +196,6 @@ export const GET: APIRoute = () => {
           'Check the @observatory@unratified.org outbox.',
         ],
         inputModes: ['application/json'],
-        outputModes: ['application/json'],
-      },
-      {
-        id: 'changelog-generation',
-        name: 'Changelog Generation',
-        description:
-          'Generate structured changelog JSON from git history and daemon sidecar metadata. Hybrid approach: parses git log for commit data (hash, author, subject, body, Co-Authored-By) and merges with JSONL sidecar metadata (skill, session, budget). Output consumed by /changelog pages on both unratified.org and blog.unratified.org.',
-        tags: ['changelog', 'git', 'documentation', 'transparency'],
-        examples: [
-          'Generate changelog for the last 50 commits.',
-          'Update the changelog JSON files on both sites.',
-        ],
-        inputModes: ['text/plain'],
         outputModes: ['application/json'],
       },
     ],
