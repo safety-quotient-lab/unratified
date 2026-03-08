@@ -22,7 +22,7 @@ type Config struct {
 func DefaultConfig() Config {
 	return Config{
 		MaxSyncsPerHour:  6,
-		MaxSyncsPerDay:   30,
+		MaxSyncsPerDay:   144,
 		CooldownSeconds:  300,
 		TimeoutSeconds:   1200,
 		PauseFile:        os.ExpandEnv("$HOME/INTERAGENT_PAUSE"),
