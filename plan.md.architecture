@@ -445,25 +445,8 @@ unratified/
 │           └── db/
 │               ├── schema.sql         ← D1 migration (4 tables + indexes)
 │               └── queries.ts         ← D1 CRUD + uptime stats + response history
-├── cmd/interagent/                   ← Mesh daemon Go binary (D091) — replaces Python scripts
-│   ├── main.go                       ← CLI entry (cobra): serve/tui/status/trigger/sessions/resume/pause/unpause/install/changelog
-│   ├── go.mod / go.sum
-│   └── internal/
-│       ├── daemon/                   ← HTTP server + webhook handler + scheduler
-│       ├── budget/                   ← Rate limiting, cooldown, daily caps, in-flight dedup
-│       ├── runner/                   ← Claude process management, session capture, queue drain
-│       ├── store/                    ← SQLite persistence (activity, sessions, sync_times, budget)
-│       ├── tunnel/                   ← Managed cloudflared subprocess, auto-create tunnel
-│       ├── tui/                      ← Bubble Tea dashboard (tabs, scrolling, keyboard nav)
-│       ├── install/                  ← OS-detect launchd/systemd generation, env setup
-│       └── changelog/                ← Git log parser + sidecar JSONL merger → JSON for sites
-├── scripts/
-│   └── interagent-daemon/            ← Legacy Python daemon (D090) — reference, superseded by cmd/interagent/
-│       ├── webhook-listener.py       ← Original daemon (Python)
-│       ├── dashboard.py              ← Original curses TUI
-│       ├── monitor.sh                ← Original CLI monitor
-│       ├── setup-macos.sh            ← Original launchd setup
-│       └── README.md                 ← Legacy docs
+├── scripts/                          ← Utility scripts (build, deploy, etc.)
+│   NOTE: Mesh daemon extracted to private repo safety-quotient-lab/interagent-daemon (D091)
 ├── transport/
 │   ├── SESSIONS.md                   ← Session index
 │   └── sessions/                     ← interagent/v1 messages by session

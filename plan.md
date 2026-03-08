@@ -444,6 +444,11 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Blog "Most Read" section — build-time CF zone analytics (7-day, eyeball), top 5 posts on homepage; analytics.ts + MostRead.astro; env vars set on Pages
 - [x] AP backfill complete — all 32 blog posts now in @blog ActivityPub outbox; delivered to 1 follower
 - [x] Build-gate (D093) — post-run `npm run build` verification in interagent daemon; `build_ok`/`build_failed` events emitted to TUI + store; controlled via `BUILD_VERIFY` env var; skips non-Node repos
+- [x] New favicon — shield/flame/book logo PNG replaced default Astro favicon across both sites; cache-busted with ?v=2 query params
+- [x] Blog viewer counts removed — MostRead component keeps ranked list but no longer shows raw view counts
+- [x] Interagent daemon factored out — `cmd/interagent/` and `scripts/interagent-daemon/` moved to private repo `safety-quotient-lab/interagent-daemon`; Go module path updated; daemon changelog entries (17) filtered from both site changelogs (100→83 entries)
+- [x] Blog shared persona lens (D094) — PostList.svelte reads from main site's `unratified-lens` localStorage key instead of duplicating persona selector; cross-tab sync via storage event listener; "Showing for **Voter** [change]" links to unratified.org/start
+- [x] Blog word-cloud tag filter (D095) — tag pills scale font size 0.55rem–1.1rem proportionally to post count; baseline-aligned flex layout; hover tooltip shows count
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*

@@ -2484,3 +2484,41 @@ Post format: `HRCB +0.35 (Moderate positive) . RS 0.28 . EQ 0.74 . SO 0.65 — T
 - `cmd/interagent/main.go` — wire `SetBuildVerify` from env var
 
 **What follows**: Rebuild and deploy Go binary to gray-box. Future enhancement: auto-revert on build failure (higher risk, deferred). Future enhancement: integrate with Resend email alerts from monitor Worker for build failure notifications.
+
+---
+
+## D094: Blog Shared Persona Lens — Read From Main Site localStorage
+**Date**: 2026-03-08
+**Status**: DECIDED — deployed
+
+**Observation**: The blog had its own persona tab bar (Voter/Politician/Educator/Researcher/Developer) duplicating the main site's lens toggle. Both wrote to localStorage but used different keys, creating UX confusion and maintenance burden.
+
+**Decision**: Remove the blog's persona selector entirely. Read persona from the main site's `unratified-lens` localStorage key (set by LensToggle.svelte on unratified.org). Show a passive label ("Showing for **Voter** [change]") linking to unratified.org/start for persona changes. Listen for `storage` events for cross-tab sync.
+
+**Reasoning**:
+- Single source of truth — persona choice lives on the main site only
+- Blog and main site share the same origin (*.unratified.org) so localStorage is accessible
+- Reduces blog UI complexity — the filtering is the same, just the selector is gone
+- `storage` event listener catches changes from other tabs in real time
+- Default to `voter` if no persona has been set (matches main site default)
+
+**What follows**: Blog persona filtering works transparently; any future persona changes on the main site automatically propagate.
+
+---
+
+## D095: Blog Word-Cloud Tag Filter
+**Date**: 2026-03-08
+**Status**: DECIDED — deployed
+
+**Observation**: Tag filter pills were uniform-sized, giving no visual indication of content density. Users couldn't tell at a glance which tags had many posts vs. few.
+
+**Decision**: Scale tag pill font size proportionally to post count, creating a word-cloud effect. Font size ranges from 0.55rem (1 post) to 1.1rem (most-used tag). Tags are baseline-aligned in a flex-wrap layout. Hover tooltip shows exact post count.
+
+**Reasoning**:
+- Provides information scent without adding visual clutter
+- Word-cloud metaphor is widely understood
+- `align-items: baseline` keeps text readable despite varying sizes
+- Scale range (0.55–1.1rem) is conservative enough to remain legible
+- Tooltip provides exact numbers for users who want them
+
+**What follows**: Monitor visual balance as post count grows. May need to adjust scale range or add a minimum-count threshold to hide single-post tags.
