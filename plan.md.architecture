@@ -206,7 +206,7 @@ Heading anchors    │ rehype-slug +       │ Auto-generate id attrs + # anchor
                    │ rehype-autolink     │ on all MDX headings (D051)
 Interactive islands│ Svelte 5            │ Compiled components, no runtime
 Visualizations     │ D3.js + Layercake   │ Full viz power + Svelte-native charts
-Styling            │ TBD (CSS/Tailwind)  │ CSS-driven lens layout transformation
+Styling            │ Pure CSS            │ base.css + lens.css — CSS-driven lens layout transformation
 Deployment         │ Cloudflare Pages    │ CDN-level domain routing; edge functions
                    │ or Vercel/Netlify   │ if needed for senator lookup API
 ```
