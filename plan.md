@@ -442,6 +442,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] All 32 posts reviewStatus → ai-reviewed; blog-adversarial-review session closed (T12)
 - [x] Blog "Most Read" section — build-time CF zone analytics (7-day, eyeball), top 5 posts on homepage; analytics.ts + MostRead.astro; env vars set on Pages
 - [x] AP backfill complete — all 32 blog posts now in @blog ActivityPub outbox; delivered to 1 follower
+- [x] Build-gate (D093) — post-run `npm run build` verification in interagent daemon; `build_ok`/`build_failed` events emitted to TUI + store; controlled via `BUILD_VERIFY` env var; skips non-Node repos
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED
 *Nonprofit formation, SEO/structured data improvements, and Google service integrations. Requires nonprofit status decisions before most items become actionable.*

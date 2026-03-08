@@ -52,12 +52,13 @@ func IsPromptAllowed(prompt string) bool {
 
 // Runner manages claude process execution.
 type Runner struct {
-	repos  RepoConfig
-	budget *budget.Checker
-	store  *store.Store
-	logs   *logbuf.Ring
-	logDir string
-	log    *slog.Logger
+	repos       RepoConfig
+	budget      *budget.Checker
+	store       *store.Store
+	logs        *logbuf.Ring
+	logDir      string
+	log         *slog.Logger
+	buildVerify bool
 }
 
 // New creates a runner.
@@ -70,6 +71,11 @@ func New(repos RepoConfig, b *budget.Checker, s *store.Store, logs *logbuf.Ring,
 		logDir: logDir,
 		log:    log,
 	}
+}
+
+// SetBuildVerify enables post-run build verification.
+func (r *Runner) SetBuildVerify(enabled bool) {
+	r.buildVerify = enabled
 }
 
 // Repos returns configured repo names.
@@ -282,6 +288,11 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	// Notify via Signal so owner can monitor automation
 	r.notifySignal(repo, prompt, status, rc, reason)
 
+	// Build verification gate — run after successful Claude completion
+	if rc == 0 && r.buildVerify {
+		r.verifyBuild(repo, clonePath, prompt)
+	}
+
 	// Drain queue
 	if job, ok := r.budget.Dequeue(repo); ok {
 		r.log.Info("draining queue", "repo", repo, "prompt", job.Prompt)
@@ -292,6 +303,65 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 		})
 		r.Trigger(repo, job.Prompt, fmt.Sprintf("queued: %s", job.Reason))
 	}
+}
+
+// verifyBuild runs `npm run build` in repos that have a package.json.
+// Emits build_ok or build_failed events. Does not block or revert — serves
+// as an alert mechanism so humans can investigate broken builds promptly.
+func (r *Runner) verifyBuild(repo, clonePath, prompt string) {
+	pkgJSON := filepath.Join(clonePath, "package.json")
+	if _, err := os.Stat(pkgJSON); os.IsNotExist(err) {
+		return // not a Node project, skip
+	}
+
+	r.log.Info("build-gate: verifying", "repo", repo)
+	r.logs.Append(repo, logbuf.Line{
+		Text: "[build-gate] running npm run build...",
+		Kind: "system",
+	})
+
+	cmd := exec.Command("npm", "run", "build")
+	cmd.Dir = clonePath
+	cmd.Env = append(os.Environ(), "NODE_ENV=production")
+
+	output, err := cmd.CombinedOutput()
+	// Capture last 20 lines for the event detail
+	lines := strings.Split(strings.TrimSpace(string(output)), "\n")
+	tail := lines
+	if len(tail) > 20 {
+		tail = tail[len(tail)-20:]
+	}
+	snippet := strings.Join(tail, "\n")
+
+	if err != nil {
+		r.log.Error("build-gate: FAILED", "repo", repo, "error", err)
+		r.logs.Append(repo, logbuf.Line{
+			Text: fmt.Sprintf("[build-gate] FAILED: %s", err),
+			Kind: "error",
+		})
+		for _, line := range tail {
+			r.logs.Append(repo, logbuf.Line{Text: "  " + line, Kind: "error"})
+		}
+		r.store.Emit(store.Event{
+			Type:   "build_failed",
+			Repo:   repo,
+			Detail: fmt.Sprintf("after %s: %s\n%s", prompt, err, snippet),
+			Prompt: prompt,
+		})
+		return
+	}
+
+	r.log.Info("build-gate: OK", "repo", repo)
+	r.logs.Append(repo, logbuf.Line{
+		Text: "[build-gate] OK",
+		Kind: "system",
+	})
+	r.store.Emit(store.Event{
+		Type:   "build_ok",
+		Repo:   repo,
+		Detail: fmt.Sprintf("after %s", prompt),
+		Prompt: prompt,
+	})
 }
 
 // parseStream reads stream-json lines from claude stdout, accumulates text deltas

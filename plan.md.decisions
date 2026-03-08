@@ -2461,3 +2461,26 @@ Post format: `HRCB +0.35 (Moderate positive) . RS 0.28 . EQ 0.74 . SO 0.65 — T
 **Reasoning**: RS-primary weighting ensures the Fediverse feed serves the educational mission — only rights-relevant stories appear. EQ weighting rewards well-sourced, evidence-grounded reporting over clickbait. SO weighting favors stories that frame solutions or reader agency over pure problem-stating. The composite selects ~4% of evaluated stories (29 of 748 historical), producing a well-curated feed of ~2-5 posts per week at current eval rates. Stories passing the filter include: ICE/Palantir surveillance, NSA whistleblower coverage, employment discrimination via Facebook, FOIA-based civic action, right to repair — a coherent human rights + technology editorial line.
 
 **What follows**: Monitor the live feed for false positives/negatives over the first week. Adjust composite weights or thresholds if the editorial quality diverges from expectations. Consider adding theme-tag routing (different AP actors for different rights clusters) if volume warrants.
+
+---
+
+## D093: Build-Gate — Post-Run Build Verification in Interagent Daemon
+**Date**: 2026-03-08
+**Status**: DECIDED — implemented in runner.go
+
+**Observation**: The interagent daemon spawns Claude processes that can commit and push via the Bash tool during their run. A `BuildVerify` config flag existed in the daemon config since D091 but was never enforced — purely informational in the `/health` endpoint. If Claude introduces a build-breaking change and pushes it, Cloudflare Pages would deploy a broken site with no daemon-side alerting.
+
+**Decision**: Implement build verification as a post-run gate in `runner.go`. After every successful Claude completion (exit code 0), if the repo contains a `package.json`, run `npm run build`. Emit `build_ok` or `build_failed` store events. Stream build failure output (last 20 lines) to the TUI log buffer for immediate visibility.
+
+**Reasoning**:
+- Alert-only (not blocking) — Claude may have already pushed during its run, so the gate catches problems early rather than preventing them
+- Skips non-Node repos (psychology-agent) automatically via `package.json` existence check
+- `build_failed` events surface in TUI activity feed and `/health` API for human monitoring
+- Controlled via `BUILD_VERIFY` env var (defaults to enabled, set `BUILD_VERIFY=0` to disable)
+- Runs after `run_done` event but before queue drain, so build status is captured before the next job starts
+
+**Files modified**:
+- `cmd/interagent/internal/runner/runner.go` — `SetBuildVerify()`, `verifyBuild()`, `buildVerify` field on Runner struct
+- `cmd/interagent/main.go` — wire `SetBuildVerify` from env var
+
+**What follows**: Rebuild and deploy Go binary to gray-box. Future enhancement: auto-revert on build failure (higher risk, deferred). Future enhancement: integrate with Resend email alerts from monitor Worker for build failure notifications.

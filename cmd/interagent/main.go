@@ -106,6 +106,7 @@ func serveCmd() *cobra.Command {
 
 			logs := logbuf.New(500)
 			rn := runner.New(repos, bc, st, logs, logDir, log)
+			rn.SetBuildVerify(os.Getenv("BUILD_VERIFY") != "0")
 
 			schedule := defaultSchedule()
 			if envSched := os.Getenv("SCHEDULE"); envSched != "" {
