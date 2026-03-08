@@ -130,6 +130,37 @@ explicit reasoning — the peer agent needs to understand why this keeps appeari
 Three consecutive rejections of the same finding should trigger an epistemic
 flag suggesting the scanner's criteria need recalibration for this case.
 
+#### Phase 2c: Escalation Check
+
+After evaluating all findings, check if any require human attention:
+
+| Condition | Action |
+|-----------|--------|
+| HIGH severity + convergence + deferred 2+ times | **Escalate** — Signal notification |
+| HIGH severity + convergence + rejected 3+ times | **Recalibrate** — add `scanner_recalibration_needed` epistemic flag |
+| Any finding touching >3 files | **Escalate** — too broad for autonomous fix |
+| Build gate failed after accepted fix | **Escalate** — human review of fix approach |
+| `GET /calibration` shows accept_rate < 0.3 for a dimension | **Recalibrate** — scanner threshold too aggressive for that dimension |
+
+Escalation sends a Signal notification via the bridge:
+
+```bash
+SIGNAL_BRIDGE="$HOME/Projects/claude-control/signal-bridge/target/release/signal-bridge"
+OWNER_ACI="9d656f51-0716-445b-8074-dd08931e2174"
+"$SIGNAL_BRIDGE" send --to "$OWNER_ACI" \
+  "[Escalation] Finding $FINDING_ID ($DIMENSION/$SEVERITY): $DESCRIPTION. Deferred $N times. Needs human review."
+```
+
+Recalibration adds an epistemic flag to the response message and records a
+`recalibrate` event in the calibration table:
+
+```bash
+curl -s -X POST http://localhost:8787/calibration/record \
+  -H "Authorization: Bearer $WEBHOOK_SECRET" \
+  -H "Content-Type: application/json" \
+  -d '[{"scan_turn":N,"finding_id":"recal-DIMENSION","dimension":"DIMENSION","severity":"meta","scanner_confidence":0,"decision":"recalibrate","reasoning":"accept_rate below 0.3 — scanner too aggressive"}]'
+```
+
 ### Phase 3: Implement Accepted Fixes
 
 For each accepted finding:
@@ -281,9 +312,9 @@ This skill will evolve. Areas marked for future refinement:
 - ~~**Confidence calibration**~~ — DONE: `feedback_decisions` table in daemon DB,
   `POST /calibration/record` for structured decision logging, `GET /calibration`
   for accept/reject rates by dimension+severity. Calibrated flag at 10+ decisions (v3, 2026-03-08).
-- **Escalation policy** — when to surface findings to human vs. auto-process.
-  Current rule: high-severity convergence findings that get deferred 2+ times
-  should trigger a Signal notification asking for human review.
+- ~~**Escalation policy**~~ — DONE: 5 escalation conditions (convergence+deferred,
+  convergence+rejected×3, broad scope, build failure, low accept rate). Signal
+  notification for human review, recalibration events for scanner tuning (v4, 2026-03-08).
 
 ## Anti-Patterns
 
