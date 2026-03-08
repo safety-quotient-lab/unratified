@@ -9,6 +9,8 @@ import (
 	"log/slog"
 	"net/http"
 	"net/url"
+	"os"
+	"path/filepath"
 	"strconv"
 	"time"
 
@@ -41,6 +43,7 @@ type Daemon struct {
 	store     *store.Store
 	schedule  map[string]time.Time // "repo:prompt" -> next run
 	heartbeat *Heartbeat
+	gpuQueue  *GPUQueue
 	log       *slog.Logger
 }
 
@@ -66,6 +69,9 @@ func (d *Daemon) ListenAndServe() error {
 	mux.HandleFunc("GET /pause", d.handlePause)
 	mux.HandleFunc("GET /resume", d.handleResume)
 	mux.HandleFunc("POST /trigger", d.handleTrigger)
+	mux.HandleFunc("POST /gpu/submit", d.handleGPUSubmit)
+	mux.HandleFunc("GET /gpu/jobs", d.handleGPUJobs)
+	mux.HandleFunc("GET /gpu/job/{id}", d.handleGPUJob)
 	mux.HandleFunc("POST /", d.handleWebhook)
 
 	// Start scheduler
@@ -79,6 +85,16 @@ func (d *Daemon) ListenAndServe() error {
 		d.heartbeat = NewHeartbeat(d.cfg.Peers, 60*time.Second, 10*time.Second)
 		d.log.Info("heartbeat started", "peers", len(d.cfg.Peers))
 		go d.heartbeat.Run()
+	}
+
+	// Start GPU queue (targets first peer with SSH)
+	if len(d.cfg.Peers) > 0 {
+		jobDir := filepath.Join(os.Getenv("HOME"), ".config", "interagent", "gpu-jobs")
+		peer := d.cfg.Peers[0]
+		sshInit := `export NVM_DIR="$HOME/.config/nvm" && source "$NVM_DIR/nvm.sh" && `
+		d.gpuQueue = NewGPUQueue(peer.SSHHost, sshInit, jobDir)
+		d.log.Info("gpu queue started", "target", peer.SSHHost)
+		go d.gpuQueue.Run()
 	}
 
 	addr := fmt.Sprintf("127.0.0.1:%d", d.cfg.Port)
@@ -534,4 +550,81 @@ func statusStr(paused bool) string {
 		return "paused"
 	}
 	return "ok"
+}
+
+// --- GPU queue handlers ---
+
+func (d *Daemon) handleGPUSubmit(w http.ResponseWriter, r *http.Request) {
+	if !d.checkAuth(w, r) {
+		return
+	}
+	if d.gpuQueue == nil {
+		writeJSON(w, http.StatusServiceUnavailable, map[string]any{"error": "gpu queue not configured"})
+		return
+	}
+
+	var payload struct {
+		Command string `json:"command"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&payload); err != nil {
+		http.Error(w, `{"error":"invalid json"}`, http.StatusBadRequest)
+		return
+	}
+	if payload.Command == "" {
+		writeJSON(w, http.StatusBadRequest, map[string]any{"error": "command required"})
+		return
+	}
+
+	// Check peer health before submitting
+	if d.heartbeat != nil {
+		peers := d.heartbeat.Status()
+		for _, p := range peers {
+			if p.Status != "up" {
+				writeJSON(w, http.StatusServiceUnavailable, map[string]any{
+					"error": fmt.Sprintf("peer %s is %s", p.Name, p.Status),
+				})
+				return
+			}
+		}
+	}
+
+	id := d.gpuQueue.Submit(payload.Command)
+	d.log.Info("gpu job submitted", "id", id, "command", payload.Command)
+
+	writeJSON(w, http.StatusAccepted, map[string]any{
+		"id":     id,
+		"status": "queued",
+	})
+}
+
+func (d *Daemon) handleGPUJobs(w http.ResponseWriter, r *http.Request) {
+	if !d.checkAuth(w, r) {
+		return
+	}
+	if d.gpuQueue == nil {
+		writeJSON(w, http.StatusServiceUnavailable, map[string]any{"error": "gpu queue not configured"})
+		return
+	}
+
+	limit := intParam(r.URL.Query(), "n", 20)
+	jobs := d.gpuQueue.List(limit)
+	writeJSON(w, http.StatusOK, map[string]any{"jobs": jobs})
+}
+
+func (d *Daemon) handleGPUJob(w http.ResponseWriter, r *http.Request) {
+	if !d.checkAuth(w, r) {
+		return
+	}
+	if d.gpuQueue == nil {
+		writeJSON(w, http.StatusServiceUnavailable, map[string]any{"error": "gpu queue not configured"})
+		return
+	}
+
+	id := r.PathValue("id")
+	job, ok := d.gpuQueue.Get(id)
+	if !ok {
+		writeJSON(w, http.StatusNotFound, map[string]any{"error": "job not found"})
+		return
+	}
+	writeJSON(w, http.StatusOK, job)
 }
