@@ -217,11 +217,14 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	)
 
 	// Parse stream-json from stdout in a goroutine
-	sessionID := ""
-	streamDone := make(chan string, 1)
+	type streamResult struct {
+		sessionID  string
+		resultText string
+	}
+	streamDone := make(chan streamResult, 1)
 	go func() {
-		sid := r.parseStream(repo, stdoutPipe, f)
-		streamDone <- sid
+		sid, text := r.parseStream(repo, stdoutPipe, f)
+		streamDone <- streamResult{sid, text}
 	}()
 
 	// Wait with timeout
@@ -253,7 +256,8 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	}
 
 	// Wait for stream parser to finish
-	sessionID = <-streamDone
+	sr := <-streamDone
+	sessionID := sr.sessionID
 
 	f.Close()
 	r.budget.ClearInFlight(repo)
@@ -286,7 +290,7 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 	})
 
 	// Notify via Signal so owner can monitor automation
-	r.notifySignal(repo, prompt, status, rc, reason)
+	r.notifySignal(repo, prompt, status, rc, reason, sr.resultText)
 
 	// Build verification gate — run after successful Claude completion
 	if rc == 0 && r.buildVerify {
@@ -365,12 +369,13 @@ func (r *Runner) verifyBuild(repo, clonePath, prompt string) {
 }
 
 // parseStream reads stream-json lines from claude stdout, accumulates text deltas
-// into coherent lines, tees raw data to the log file, and returns the session_id.
-func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) string {
+// into coherent lines, tees raw data to the log file, and returns (session_id, result_text).
+func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) (string, string) {
 	scanner := bufio.NewScanner(stdout)
 	scanner.Buffer(make([]byte, 256*1024), 1024*1024) // 1MB max line
 
 	var sessionID string
+	var resultText string
 	var textBuf strings.Builder // accumulates text deltas between flushes
 	inToolUse := false
 
@@ -459,9 +464,16 @@ func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) st
 			if ev.SessionID != "" {
 				sessionID = ev.SessionID
 			}
+			if ev.Result != "" {
+				resultText = ev.Result
+			}
 			costStr := ""
-			if ev.CostUSD > 0 {
-				costStr = fmt.Sprintf(", cost: $%.4f", ev.CostUSD)
+			cost := ev.CostUSD
+			if cost == 0 {
+				cost = ev.TotalCostUSD
+			}
+			if cost > 0 {
+				costStr = fmt.Sprintf(", cost: $%.4f", cost)
 			}
 			r.logs.Append(repo, logbuf.Line{
 				Text: fmt.Sprintf("[done: session=%s%s]", ev.SessionID, costStr),
@@ -472,11 +484,11 @@ func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) st
 
 	// Final flush
 	flushText()
-	return sessionID
+	return sessionID, resultText
 }
 
 // notifySignal sends a run summary to the owner via Signal bridge.
-func (r *Runner) notifySignal(repo, prompt, status string, exitCode int, reason string) {
+func (r *Runner) notifySignal(repo, prompt, status string, exitCode int, reason, resultText string) {
 	bridge := filepath.Join(os.Getenv("HOME"), "Projects/claude-control/signal-bridge/target/release/signal-bridge")
 	ownerACI := "9d656f51-0716-445b-8074-dd08931e2174"
 
@@ -491,8 +503,18 @@ func (r *Runner) notifySignal(repo, prompt, status string, exitCode int, reason 
 	}
 
 	msg := fmt.Sprintf("%s [%s] %s → %s\nReason: %s", icon, repo, prompt, status, reason)
-	if len(msg) > 1000 {
-		msg = msg[:1000]
+
+	// Append result summary if available (truncate to keep message readable)
+	if resultText != "" {
+		summary := resultText
+		if len(summary) > 500 {
+			summary = summary[:500] + "…"
+		}
+		msg += fmt.Sprintf("\n\nOutput:\n%s", summary)
+	}
+
+	if len(msg) > 1500 {
+		msg = msg[:1500]
 	}
 
 	cmd := exec.Command(bridge, "send", "--to", ownerACI, msg)
@@ -505,9 +527,11 @@ func (r *Runner) notifySignal(repo, prompt, status string, exitCode int, reason 
 
 // streamEvent represents a stream-json line from claude.
 type streamEvent struct {
-	Type      string `json:"type"`
-	SessionID string `json:"session_id,omitempty"`
-	CostUSD   float64 `json:"cost_usd,omitempty"`
+	Type         string  `json:"type"`
+	SessionID    string  `json:"session_id,omitempty"`
+	CostUSD      float64 `json:"cost_usd,omitempty"`
+	TotalCostUSD float64 `json:"total_cost_usd,omitempty"`
+	Result       string  `json:"result,omitempty"`
 	Delta     struct {
 		Type        string `json:"type"`
 		Text        string `json:"text"`
