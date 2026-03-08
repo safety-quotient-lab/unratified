@@ -117,6 +117,7 @@ func serveCmd() *cobra.Command {
 				Secret:      os.Getenv("WEBHOOK_SECRET"),
 				Schedule:    schedule,
 				BuildVerify: os.Getenv("BUILD_VERIFY") != "0",
+				Peers:       defaultPeers(),
 			}
 
 			if dcfg.Secret == "" {
@@ -441,6 +442,12 @@ func defaultRepos() runner.RepoConfig {
 		"unratified":       filepath.Join(home, "projects", "unratified"),
 		"psychology-agent": filepath.Join(home, "projects", "psychology-sqlab"),
 		"observatory":      filepath.Join(home, "projects", "observatory-sqlab"),
+	}
+}
+
+func defaultPeers() []daemon.PeerConfig {
+	return []daemon.PeerConfig{
+		{Name: "chromabook", SSHHost: "chromabook"},
 	}
 }
 

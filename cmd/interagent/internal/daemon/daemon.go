@@ -30,16 +30,18 @@ type Config struct {
 	Secret        string
 	Schedule      []ScheduleTask
 	BuildVerify   bool
+	Peers         []PeerConfig
 }
 
 // Daemon orchestrates the HTTP server and scheduler.
 type Daemon struct {
-	cfg      Config
-	runner   *runner.Runner
-	budget   *budget.Checker
-	store    *store.Store
-	schedule map[string]time.Time // "repo:prompt" -> next run
-	log      *slog.Logger
+	cfg       Config
+	runner    *runner.Runner
+	budget    *budget.Checker
+	store     *store.Store
+	schedule  map[string]time.Time // "repo:prompt" -> next run
+	heartbeat *Heartbeat
+	log       *slog.Logger
 }
 
 // New creates a daemon.
@@ -70,6 +72,13 @@ func (d *Daemon) ListenAndServe() error {
 	if len(d.cfg.Schedule) > 0 {
 		d.initSchedule()
 		go d.schedulerLoop()
+	}
+
+	// Start heartbeat monitor
+	if len(d.cfg.Peers) > 0 {
+		d.heartbeat = NewHeartbeat(d.cfg.Peers, 60*time.Second, 10*time.Second)
+		d.log.Info("heartbeat started", "peers", len(d.cfg.Peers))
+		go d.heartbeat.Run()
 	}
 
 	addr := fmt.Sprintf("127.0.0.1:%d", d.cfg.Port)
@@ -138,6 +147,10 @@ func (d *Daemon) handleHealth(w http.ResponseWriter, r *http.Request) {
 		"build_verify":     d.cfg.BuildVerify,
 		"repos":            repos,
 		"timestamp":        time.Now().Format(time.RFC3339),
+	}
+
+	if d.heartbeat != nil {
+		status["peers"] = d.heartbeat.Status()
 	}
 
 	writeJSON(w, http.StatusOK, status)
