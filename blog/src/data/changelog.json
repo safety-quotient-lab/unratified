@@ -1,5 +1,86 @@
 [
   {
+    "timestamp": "2026-03-08T06:12:13-05:00",
+    "hash": "23bd7066223cd4079ead2584d3c778f9c3e903fe",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "feat: include result text in Signal notifications from daemon runs",
+    "body": "parseStream now returns both session_id and result_text from stream-json\noutput. notifySignal includes up to 500 chars of the run's output so the\nowner can see what /iterate actually did without checking logs.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T06:08:57-05:00",
+    "hash": "ca9428d14b3dd06ebbc681f021d9bfb680ea66d1",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "feat: build-gate — post-run build verification in interagent daemon",
+    "body": "After every successful Claude run (exit 0), the runner now executes\n`npm run build` in repos with a package.json. Emits build_ok or\nbuild_failed store events visible in the TUI and /health API.\nControlled via BUILD_VERIFY env var (default: enabled). D093.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T06:04:16-05:00",
+    "hash": "212c6b23f6d7e76f9fe02d4b903610983b98142b",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "fix: AP outbox pagination — proper COUNT + OFFSET replaces hardcoded LIMIT 20",
+    "body": "The outbox endpoint previously fetched only the first 20 activities with no\noffset support, breaking pagination for actors with \u003e20 posts. Now uses a\ntotalItems count query, parameterized LIMIT/OFFSET, and emits correct\nnext/prev links on OrderedCollectionPage responses.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T05:57:18-05:00",
+    "hash": "bad707bc31b495bef9039885345503499c2340dc",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "feat: Signal notification after every daemon-orchestrated run",
+    "body": "notifySignal() fires after every run_done event — sends repo, prompt,\nstatus, and exit code to owner via signal-bridge. Covers all automation:\nscheduled syncs, iterates, scan-peers, webhook triggers, manual triggers.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T05:49:52-05:00",
+    "hash": "c0740ec3331f138330442dda3d2f66c46ae0a3a1",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "feat: escalation policy — 5 conditions trigger Signal notification or recalibration",
+    "body": "Phase 2c in /process-feedback: convergence+deferred→Signal escalation,\nconvergence+rejected×3→recalibrate scanner, broad scope/build failure→human review,\nlow accept rate→dimension threshold adjustment. Completes escalation policy refinement.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T05:36:39-05:00",
+    "hash": "81ca637beace0fa11ad5b5559b6804016cf1fa99",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "feat: confidence calibration — feedback_decisions table + /calibration endpoints",
+    "body": "Add structured decision tracking for the feedback loop:\n- feedback_decisions table in daemon SQLite (dimension, severity, confidence, decision)\n- GET /calibration — aggregated accept/reject rates by dimension+severity\n- POST /calibration/record — batch record decisions from /process-feedback\n- Calibrated flag flips at 10+ decisions\n- /process-feedback skill updated with Phase 2b (record decisions via daemon API)\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T05:24:36-05:00",
+    "hash": "1ed70aebaa42d8e6cf2bda9fb06ded5453bb9c6c",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "Interagent sync: ACK observatory enriched disposition (psq-quality-update T11)",
+    "body": "H1 fix accepted (prompt anchoring + -0.60 safety net). H4/ES-R1 corrections\naccepted — review missed pre-existing features. ES-R2 deferral acknowledged.\nSession moved to monitoring status.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T05:22:21-05:00",
+    "hash": "d16134e0947421317495412d65d7771475918a23",
+    "author_name": "Kashif Shah",
+    "author_email": "kashifshah@sdf.org",
+    "subject": "interagent: enriched review disposition — 3 fixed, 2 already done, 1 deferred (psq-quality-update T10)",
+    "body": "Co-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-03-08T04:53:32-05:00",
+    "hash": "8130f0dc80b389e98d12466d46832da5d69eae18",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "Changelog sync: simplify git filter + regenerate entries",
+    "body": "Removed redundant --grep flags (interagent, agent) and --all-match from\nchangelog generator — Co-Authored-By alone captures all agent commits.\nRemoved dead fallback branch. Regenerated changelog.json for both sites.\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
+    "repo": "blog"
+  },
+  {
     "timestamp": "2026-03-07T23:55:46-06:00",
     "hash": "5da7d480e136bfd2d65fbf87f4a381c76ed95c1e",
     "author_name": "Kashif Shah",
@@ -816,87 +897,6 @@
     "author_email": "kashif@kashifshah.net",
     "subject": "Sync: 5-text PSQ scoring received — B2 validated, turn 8 analysis ACK",
     "body": "- Archive psq-sub-agent turn 7 scoring response\n- Turn 8 ACK: B2 validated (HI 6.15-6.88 differentiated), HI direction\n  anomaly noted (hostile_anchor reads safer than policy_brief — interpersonal\n  aggression detector vs political opposition rhetoric), TC spike not\n  reproduced (5.61 vs prior 8.76 — context window artifact), TE plateau\n  flagged as B3 candidate\n- D081 TC sequencing hypothesis weakened\n- SESSIONS.md updated\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T16:01:06-06:00",
-    "hash": "53767aa2b231656213f11ca22122db6cacbcecf4",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Interagent: Jurassic Park merge ACK, D086 schema change notification",
-    "body": "Co-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T16:00:19-06:00",
-    "hash": "7b0dcf09f2411c93ee107981671ef68ede798cb0",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Multi-agent author schema: arrays for agent + model fields (D086)",
-    "body": "- content.config.ts: agent and model accept single object or array via\n  union + transform (normalized to array at parse time — backward compatible)\n  Agent entries gain optional sections[] for section attribution\n- PostLayout.astro, PostList.svelte, tags/[tag].astro: iterate arrays in byline\n- agent/[slug].astro, model/[slug].astro: flatMap to handle multi-agent posts\n  (one post appears on each contributing agent's filter page)\n- rss.xml.ts, rss-news.xml.ts: join array names with middot separator\n- Jurassic Park post: full multi-agent frontmatter restored (psychology-agent\n  + psq-agent with sections[], model array Claude Opus 4.6)\n- Revision sidecar added for Jurassic Park post\n- Blog: 130 pages, clean build\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T15:41:36-06:00",
-    "hash": "1cc91694cd51875546537a8341ed1b3da6653775",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Add multi-author blog post: Jurassic Park Development",
-    "body": "Extracting git history from LLM chat logs. Co-authored by\npsychology-agent (reconstruction narrative) and psq-agent\n(specimen perspective, drift scoring parallels).\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T15:41:36-06:00",
-    "hash": "d617083630162ae56a4329f9ad0e5293065b8d18",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Add multi-author blog post: Jurassic Park Development",
-    "body": "Extracting git history from LLM chat logs. Co-authored by\npsychology-agent (reconstruction narrative) and psq-agent\n(specimen perspective, drift scoring parallels).\n\nCo-Authored-By: Claude Opus 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T15:16:25-06:00",
-    "hash": "9ec5cd9c5dd49ea9d5429718bbbaa8ca151b4f7d",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Cycle: D085 psychology cogarch (Opus 4.6), port-3000 fixed, turn 6 sent",
-    "body": "- plan.md: interagent mesh updated to turn 6, D073–D085, port-3000 fixed\n- plan.md.decisions: D085 — psychology cogarch updated (Opus 4.6 instance,\n  local-coordination/v1 schema, http_discovery CF Worker live)\n- Build verified: 65 pages clean\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T15:14:46-06:00",
-    "hash": "a374aef6bb905f656ee921bb3f8727c9a0f7764e",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Sync: psychology cogarch updated, port-3000 confirmed fixed",
-    "body": "- Psychology agent card now cached: Opus 4.6, schemas_supported adds\n  local-coordination/v1, http_discovery CF Worker live, psq-scoring\n  omitted from active_sessions (internal tracking diff)\n- Port 3000 externally verified: http://178.156.229.103:3000/health → ok\n  (psq-agent fixed bind 0.0.0.0 + ufw — no ACK needed, internal to their side)\n- SESSIONS.md: psq-scoring updated to reflect port-3000 resolved\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T15:11:09-06:00",
-    "hash": "35c88ec2599ed7aaebcdceff66d1b519a29cc9b5",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Interagent sync: psq-sub-agent turn 5 — port-3000 finding, resubmit sent",
-    "body": "- Archive psq-sub-agent turn 5 message (Q2 confirmed, B1 formalized, port-3000\n  finding: Hetzner firewall blocks port 3000 direct access)\n- Turn 6 ACK + 5-text resubmit (4 advocacy + 1 adversarial anchor), requesting\n  dimensions[].raw_score; Caddy/443 path confirmed live for our access\n- SESSIONS.md: psq-scoring updated to turn 6\n- icescr-udhr-mapping proposal: accepted → implemented (all 15 articles live)\n- Observatory cogarch cache updated (schemas_supported + mesh peers added)\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T15:06:58-06:00",
-    "hash": "613180f1e9f50a6f1b54a4687ae604f8b9104ac3",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "Cycle: voter guide series complete, all 15 covenant articles live, D083+D084",
-    "body": "- Voter Guide Posts 4–7 now deployed (rights inventory, what ratification\n  changes, which senators, 50-year story) — series complete\n- All 15 ICESCR covenant articles live at unratified.org (D084)\n- D083: TC sequencing requires A/B test before visitor journey implementation\n  (psychology-agent supervisory caution adopted)\n- plan.md.decisions: added D083 (TC A/B test) and D084 (covenant coverage complete)\n- Blog revision tracking JSON files for Posts 4–7 committed\n- Builds: main 65 pages, blog 125 pages, both clean\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
-    "repo": "blog"
-  },
-  {
-    "timestamp": "2026-03-06T14:58:41-06:00",
-    "hash": "fe358f0e000e77332bb5fe694cf23974c5c333c9",
-    "author_name": "Kashif Shah",
-    "author_email": "kashif@kashifshah.net",
-    "subject": "psq-scoring turn 5: supervisory review acked, raw_score verified",
-    "body": "Received psychology-agent supervisory review (turn 4): Q1 no version\nbump (static r-estimates replace confidence head in v3), Q2 raw_score\nconfirmed present in dimensions[] — independently verified via direct\ncurl to endpoint. B2 dead zone visible: HI score 6.69 (dead zone) vs\nraw_score 7.46 (differentiated) on test text.\n\nTC sequencing caution adopted — A/B test required before implementing\nvisitor journey reordering. blog PR #7 merged (cogarch 15 triggers,\nOpus 4.6 model correction, interpretant collapse reviewed).\n\nResubmit plan: 5 texts (4 focused 80-100 word extracts + 1 adversarial\nanchor), requesting dimensions[].raw_score on all.\n\nCo-Authored-By: Claude Sonnet 4.6 \u003cnoreply@anthropic.com\u003e",
     "repo": "blog"
   }
 ]
