@@ -2444,3 +2444,20 @@ Subcommands: `serve`, `tui`, `status`, `trigger`, `sessions`, `resume`, `pause`,
 Changelog design: hybrid approach uses git log for the timeline (always accurate, zero runtime dependency) enriched with daemon sidecar metadata (skill name, session ID, budget consumed) written as JSONL. Both unratified.org and blog.unratified.org get a /changelog page, cross-linked.
 
 **What follows**: Wire up the Go binary on gray-box, replacing the Python daemon. Add /changelog pages to both Astro sites consuming the generated JSON. Old Python scripts remain in scripts/interagent-daemon/ as reference until Go binary proves stable.
+
+## D092: AP Composite "Worth Sharing" Filter
+**Date**: 2026-03-07
+**Status**: DECIDED — deployed to hn-hrcb-cron Worker
+
+**Observation**: The observatory's initial AP threshold gates (RS >= 0.03, |HRCB| >= 0.05, hn_score >= 20) passed too many stories — including pure-tech content with minimal rights relevance. Our original HRCB-magnitude tier proposal (0.5/0.6/0.7) would have been too restrictive on the wrong axis. Analysis of the Observatory D1 database (748 stories with RS + EQ + SO scores) revealed that an additive composite without an RS floor allowed high-EQ, high-SO stories with near-zero rights relevance to leak through ("How to sew a Hyperbolic Blanket" scoring 0.496 composite despite RS 0.03).
+
+**Decision**: Three-part composite filter for AP auto-publishing:
+1. **RS >= 0.10** — hard floor ensures rights relevance (filters ~65% of stories)
+2. **(RS * 0.5 + EQ * 0.3 + SO * 0.2) >= 0.45** — composite rewards rights salience (50%), epistemic quality (30%), and constructive framing (20%)
+3. **hn_score >= 20** — community validation minimum
+
+Post format: `HRCB +0.35 (Moderate positive) . RS 0.28 . EQ 0.74 . SO 0.65 — Title`
+
+**Reasoning**: RS-primary weighting ensures the Fediverse feed serves the educational mission — only rights-relevant stories appear. EQ weighting rewards well-sourced, evidence-grounded reporting over clickbait. SO weighting favors stories that frame solutions or reader agency over pure problem-stating. The composite selects ~4% of evaluated stories (29 of 748 historical), producing a well-curated feed of ~2-5 posts per week at current eval rates. Stories passing the filter include: ICE/Palantir surveillance, NSA whistleblower coverage, employment discrimination via Facebook, FOIA-based civic action, right to repair — a coherent human rights + technology editorial line.
+
+**What follows**: Monitor the live feed for false positives/negatives over the first week. Adjust composite weights or thresholds if the editorial quality diverges from expectations. Consider adding theme-tag routing (different AP actors for different rights clusters) if volume warrants.
