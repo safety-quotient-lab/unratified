@@ -43,24 +43,11 @@ func GenerateFromGit(repoPath, sidecarPath string, maxEntries int) ([]Entry, err
 		fmt.Sprintf("--max-count=%d", maxEntries*2), // overfetch to filter
 		fmt.Sprintf("--format=%s", format),
 		"--grep=Co-Authored-By",
-		"--grep=interagent",
-		"--grep=agent",
-		"--all-match",
 	)
 	cmd.Dir = repoPath
 	out, err := cmd.Output()
 	if err != nil {
-		// Fallback: just get recent commits mentioning "agent" or "Co-Authored"
-		cmd = exec.Command("git", "log",
-			"--all",
-			fmt.Sprintf("--max-count=%d", maxEntries),
-			fmt.Sprintf("--format=%s", format),
-		)
-		cmd.Dir = repoPath
-		out, err = cmd.Output()
-		if err != nil {
-			return nil, fmt.Errorf("git log: %w", err)
-		}
+		return nil, fmt.Errorf("git log: %w", err)
 	}
 
 	// Load sidecar metadata
