@@ -436,7 +436,7 @@ These emerged from the PSQ-UDHR evaluation and require dedicated context:
 - [x] Agent card v1.1.0 — 3 new skills advertised: interagent-mesh-daemon (open), activitypub-publishing (queueWrite), changelog-generation (open); 9 skills total
 - [x] Sync interval 300s — interagent daemon /sync runs every 5 minutes (was 3600s)
 - [x] AP auto-publish threshold proposal — activitypub-federation turn 8: observatory implemented RS-based thresholds (RS >= 0.03, |HRCB| >= 0.05, hn_score >= 20) instead of our HRCB-magnitude tiers — accepted as pedagogically stronger. Gate blocked on human director setting AP_PUBLISH_TOKEN via `wrangler secret put`
-- [x] Blog remediation pass — T9 checklist (R-1 through R-15). Done: R-3/R-4/R-5/R-6/R-7/R-8/R-9/R-11/R-12/R-13/R-14 (11 of 15). R-10 flagged for deeper investigation (needs Observatory DB queries). R-1/R-2 deferred (primary source verification). R-15 not actionable (requires third-party reviewer).
+- [x] Blog remediation pass — T9 checklist (R-1 through R-15). Done: R-3/R-4/R-5/R-6/R-7/R-8/R-9/R-10/R-11/R-12/R-13/R-14 (12 of 15). R-10 resolved: queried Observatory D1 directly, replaced all approximate values with exact counts (1,014 stories, per-article signal counts, corrected transparency stats). R-1/R-2 deferred (primary source verification). R-15 not actionable (requires third-party reviewer).
 - [x] AP backfill complete — all 32 blog posts now in @blog ActivityPub outbox; delivered to 1 follower
 
 **Phase 5: Organizational Growth & Visibility** ← DEFERRED

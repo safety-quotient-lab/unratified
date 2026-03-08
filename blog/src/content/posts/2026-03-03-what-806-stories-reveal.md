@@ -19,7 +19,7 @@ tags: ["observatory", "udhr", "hacker-news", "data-analysis", "transparency"]
 lensFraming:
   voter: "Most tech coverage discusses some human rights but ignores others. Freedom of speech gets heavy attention. The right to not be enslaved — barely any. This analysis shows which of your rights the tech conversation covers, and which it overlooks entirely."
   politician: "Quantitative analysis of 806 Hacker News stories evaluated against 30 UDHR provisions. Article 19 (Expression) dominates at +0.38 avg score; Article 4 (Slavery) scores lowest at +0.06. Transparency disclosure averages 45%. These patterns shape the public information environment from which constituent opinion emerges."
-  developer: "Observatory pipeline output: 806 stories × 31 UDHR provisions × 8 signal dimensions. Highlights — avg EQ: 0.619, avg SO: 0.524, avg TD: 0.453. Top propaganda technique: loaded_language (197 flags). Reading level distribution: moderate 350, accessible 230, technical 219, expert 7. Full API: observatory.unratified.org/api/v1/signals."
+  developer: "Observatory pipeline output: 1,014 stories × 31 UDHR provisions × 8 signal dimensions. Highlights — avg EQ: 0.567, avg SO: 0.483, avg TD: 0.468. Top propaganda technique: loaded_language. Full API: observatory.unratified.org/api/v1/signals."
   educator: "Use this analysis to teach data-driven media literacy. Your students examine which human rights receive coverage in tech discourse and which remain invisible — then evaluate what drives the difference. The UDHR provisions provide a structured framework for the exercise."
   researcher: "Corpus analysis of n=806 Hacker News stories evaluated against 30 UDHR articles + Preamble using HRCB (Human Rights Content Barometer) scoring. Cross-dimensional analysis of epistemic quality, stakeholder representation, transparency disclosure, and propaganda technique distribution. Methodology at observatory.unratified.org/about."
 draft: false
@@ -30,27 +30,23 @@ reviewStatus: "ai-reviewed"
 
 The [Human Rights Observatory](https://observatory.unratified.org) evaluates Hacker News stories against the 30 articles of the [Universal Declaration of Human Rights (UDHR)](https://www.un.org/en/about-us/universal-declaration-of-human-rights). Each story receives scores across 8 signal dimensions: epistemic quality, solution orientation, stakeholder representation, transparency, propaganda techniques, emotional valence, temporal framing, and geographic scope.
 
-As of March 2026, the Observatory has evaluated **806 stories**. The aggregate data reveals patterns in how tech discourse engages with human rights — patterns that carry implications for the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) ratification argument.
+As of March 2026, the Observatory has evaluated **1,014 stories** (up from 806 at initial publication). The aggregate data reveals patterns in how tech discourse engages with human rights — patterns that carry implications for the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) ratification argument.
 
 ## Which Rights Receive Attention
 
-The distribution concentrates heavily. Article 19 (Freedom of Expression) leads with 726 stories and an average score of +0.38. Article 12 (Privacy) and Article 26 (Education) follow. At the other end: Article 4 (No Slavery) scores +0.06 average across 106 stories. Article 14 (Asylum) carries the lowest Fair Witness evidence ratio at 1%.
+The distribution concentrates heavily. Article 19 (Freedom of Expression) leads with 733 stories carrying meaningful signal and an average HRCB score of +0.41. Article 27 (Scientific Progress) and Article 26 (Education) follow — a pattern that reflects the tech community's direct engagement with innovation and knowledge production. At the other end: Article 4 (No Slavery) averages +0.03, with only 18 stories carrying signal above the noise floor. Article 14 (Asylum) scores +0.06 with 43 signal-bearing stories.
 
-| UDHR Article | Avg Score | Stories | Coverage |
+| UDHR Article | Avg Score | Stories with Signal | Coverage |
 |---|---|---|---|
-| Art. 19 — Expression | +0.38 | 726 | Heavy |
-| Art. 12 — Privacy | moderate | ~500+ (approx.) | Heavy |
-| Art. 26 — Education | moderate | ~400+ (approx.) | Moderate |
-| Art. 23 — Work | moderate | ~300+ (approx.) | Moderate |
-| Art. 4 — No Slavery | +0.06 | 106 | Minimal |
-| Art. 14 — Asylum | low | low | Minimal |
+| Art. 19 — Expression | +0.41 | 733 | Heavy |
+| Art. 27 — Science & Culture | +0.33 | 548 | Heavy |
+| Art. 26 — Education | +0.28 | 400 | Moderate |
+| Art. 23 — Work | +0.14 | 216 | Moderate |
+| Art. 12 — Privacy | +0.10 | 237 | Moderate |
+| Art. 14 — Asylum | +0.06 | 43 | Minimal |
+| Art. 4 — No Slavery | +0.03 | 18 | Minimal |
 
-*Note: "moderate" and approximate story counts reflect ranges from the current Observatory dataset where precise per-article breakdowns have not yet been published. Exact figures are available via the Observatory API.*
-
-<!-- TODO R-10: Replace approximate values (~500+, ~400+, ~300+, "moderate") with exact counts from Observatory DB.
-     Requires: querying observatory.unratified.org/api/v1/signals for per-UDHR-article story counts and avg scores.
-     Flagged for deeper investigation — the API response structure may not directly map to per-article breakdowns
-     without additional aggregation logic. Coordinate with observatory-agent. -->
+*"Stories with Signal" counts stories scoring above 0.1 on that article — filtering noise near zero. All 1,014 stories receive scores across all 31 UDHR provisions; the signal count indicates meaningful engagement with that right. Data queried directly from Observatory D1 database (March 2026).*
 
 The pattern reflects what the tech community discusses: expression and privacy dominate because they directly affect software developers and platform builders. Labor rights receive moderate coverage because AI displacement generates headlines. But slavery, asylum, and the rights of marginalized populations receive minimal attention — despite their relevance to the global supply chains that produce the hardware running AI systems.
 
@@ -58,13 +54,13 @@ The pattern reflects what the tech community discusses: expression and privacy d
 
 The Observatory tracks disclosure across four dimensions: author identification, conflict disclosure, funding disclosure, and an aggregate transparency score.
 
-- **67%** of stories include any disclosure
-- **66%** identify the author
-- **18%** disclose conflicts of interest
-- **34%** disclose funding sources
-- **52%** meet high transparency standards
+- **92%** of stories carry some transparency signal (td_score > 0)
+- **25%** identify the author
+- **1%** disclose conflicts of interest
+- **2%** disclose funding sources
+- **30%** meet the high-transparency threshold (td_score > 0.5)
 
-The aggregate disclosure score averages **45%**. Roughly half the stories in the HN corpus meet the Observatory's transparency threshold — meaning half do not. The gap carries epistemic consequences: stories without transparency markers contribute to public discourse, leaving readers unable to assess potential conflicts of interest, funding sources, or what interests may shape the framing.
+The composite transparency score averages **47%** across the corpus. While most stories carry *some* transparency signal, the individual dimensions reveal stark gaps: fewer than one in four identifies the author, and conflict-of-interest or funding disclosure remains rare (1–2%). The gap carries epistemic consequences: stories without transparency markers contribute to public discourse, leaving readers unable to assess potential conflicts of interest, funding sources, or what interests may shape the framing.
 
 ## Propaganda Technique Distribution
 
@@ -88,7 +84,7 @@ The Observatory applies a PTC-18 taxonomy — 18 recognized propaganda technique
 
 ## The Temporal Bias
 
-71% of coverage focuses on the present. Only 7.5% looks forward (prospective framing). The tech community discusses what happens now — not what structural consequences unfold over years.
+70% of coverage focuses on the present. Only 8% looks forward (prospective framing). The tech community discusses what happens now — not what structural consequences unfold over years.
 
 This present-tense bias carries consequences for rights protection. The ICESCR's progressive realization framework operates on timescales of years and decades. The [knock-on analysis](https://unratified.org/connection/higher-order-effects) traces effects through four orders, each unfolding over longer periods. Coverage that focuses exclusively on the present misses exactly the structural patterns that the ICESCR addresses.
 
