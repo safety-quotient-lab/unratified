@@ -279,6 +279,9 @@ func (r *Runner) runClaude(repo, clonePath, prompt, reason, logFile string) {
 		LogFile:   logFile,
 	})
 
+	// Notify via Signal so owner can monitor automation
+	r.notifySignal(repo, prompt, status, rc, reason)
+
 	// Drain queue
 	if job, ok := r.budget.Dequeue(repo); ok {
 		r.log.Info("draining queue", "repo", repo, "prompt", job.Prompt)
@@ -400,6 +403,34 @@ func (r *Runner) parseStream(repo string, stdout io.Reader, logFile *os.File) st
 	// Final flush
 	flushText()
 	return sessionID
+}
+
+// notifySignal sends a run summary to the owner via Signal bridge.
+func (r *Runner) notifySignal(repo, prompt, status string, exitCode int, reason string) {
+	bridge := filepath.Join(os.Getenv("HOME"), "Projects/claude-control/signal-bridge/target/release/signal-bridge")
+	ownerACI := "9d656f51-0716-445b-8074-dd08931e2174"
+
+	if _, err := os.Stat(bridge); os.IsNotExist(err) {
+		r.log.Warn("signal bridge binary not found, skipping notification")
+		return
+	}
+
+	icon := "✅"
+	if exitCode != 0 {
+		icon = "❌"
+	}
+
+	msg := fmt.Sprintf("%s [%s] %s → %s\nReason: %s", icon, repo, prompt, status, reason)
+	if len(msg) > 1000 {
+		msg = msg[:1000]
+	}
+
+	cmd := exec.Command(bridge, "send", "--to", ownerACI, msg)
+	cmd.Stdout = nil
+	cmd.Stderr = nil
+	if err := cmd.Run(); err != nil {
+		r.log.Warn("signal notification failed", "error", err)
+	}
 }
 
 // streamEvent represents a stream-json line from claude.
