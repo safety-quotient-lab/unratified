@@ -1,7 +1,7 @@
 ---
 title: "What ICESCR Ratification Would Actually Change"
 summary: "Ratification wouldn't create utopia, eliminate poverty, or guarantee anyone a job or a doctor. What it would create: a formal accountability structure that doesn't currently exist — and a set of tools domestic advocates could use that they can't access now."
-publishedDate: "2026-03-10T09:00:00-06:00"
+publishedDate: "2026-03-06T15:00:00-06:00"
 author:
   human:
     name: "Kashif Shah"
@@ -157,7 +157,7 @@ Whether that accountability structure justifies the political effort required to
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-09-voter-guide-rights-inventory/).*
+*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-06-voter-guide-rights-inventory/).*
 
 ## Sources
 

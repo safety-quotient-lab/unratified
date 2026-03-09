@@ -1,7 +1,7 @@
 ---
 title: "Your Rights Inventory: What ICESCR Covers — Job, Housing, Health, Education"
 summary: "Most Americans already believe in the rights the ICESCR protects. This post maps the treaty's core guarantees to the everyday economic concerns Americans live with — and explains what binding accountability for those rights would look like."
-publishedDate: "2026-03-09T09:00:00-06:00"
+publishedDate: "2026-03-06T14:45:00-06:00"
 author:
   human:
     name: "Kashif Shah"

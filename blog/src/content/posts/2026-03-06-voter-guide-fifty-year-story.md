@@ -1,7 +1,7 @@
 ---
 title: "The 50-Year Story: Why the U.S. Signed the ICESCR and Never Ratified It"
 summary: "In 1977, President Carter signed the ICESCR. In the nearly five decades since, the Senate has never voted on ratification. This post traces the political history of that silence — and what it reveals about how the U.S. relates to binding international accountability for economic rights."
-publishedDate: "2026-03-12T09:00:00-06:00"
+publishedDate: "2026-03-06T15:30:00-06:00"
 author:
   human:
     name: "Kashif Shah"
@@ -140,13 +140,13 @@ That's how the 50-year story ends. Not through a dramatic moment of moral awaken
 
 The Senate Foreign Relations Committee holds the procedural key. A request for SFRC hearings on ICESCR ratification — from a constituent, to their senator, naming the specific procedural action — is the most direct intervention available.
 
-Post 3 in this series provides [scripts, timing guidance, and follow-up strategies](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) for making that contact effectively. Post 6 explains [how to read the political map](https://blog.unratified.org/2026-03-11-voter-guide-which-senators-could-move/) of who could move on this issue.
+Post 3 in this series provides [scripts, timing guidance, and follow-up strategies](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) for making that contact effectively. Post 6 explains [how to read the political map](https://blog.unratified.org/2026-03-06-voter-guide-which-senators-could-move/) of who could move on this issue.
 
 The 50-year silence didn't come from nowhere. It can end the same way.
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-09-voter-guide-rights-inventory/) · [Post 5: What Ratification Would Actually Change](https://blog.unratified.org/2026-03-10-voter-guide-what-ratification-changes/) · [Post 6: Which Senators Could Move](https://blog.unratified.org/2026-03-11-voter-guide-which-senators-could-move/).*
+*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-06-voter-guide-rights-inventory/) · [Post 5: What Ratification Would Actually Change](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) · [Post 6: Which Senators Could Move](https://blog.unratified.org/2026-03-06-voter-guide-which-senators-could-move/).*
 
 ## Sources
 

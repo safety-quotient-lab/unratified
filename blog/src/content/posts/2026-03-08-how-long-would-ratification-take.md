@@ -41,7 +41,7 @@ The [ratification process](https://unratified.org/action/ratification-process) r
 
 That pipeline has never started for the [ICESCR](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights). President Carter transmitted the treaty to the Senate in 1978. The SFRC held initial hearings in November 1979 but never advanced the treaty to a vote. The Iran hostage crisis consumed congressional attention, and no subsequent administration pushed for the committee to resume consideration.
 
-The treaty has waited 49 years — not because the Senate examined and rejected it, but because [no organized constituency demanded action](https://blog.unratified.org/2026-03-12-voter-guide-fifty-year-story/).
+The treaty has waited 49 years — not because the Senate examined and rejected it, but because [no organized constituency demanded action](https://blog.unratified.org/2026-03-06-voter-guide-fifty-year-story/).
 
 ## Phase 1: Getting a Hearing (2–5 Years)
 
@@ -86,7 +86,7 @@ The [cross-partisan case](https://unratified.org/action/why-act) matters here: e
 
 Ratification creates the legal framework. Courts and civil society make it real. This phase takes the longest — and matters the most.
 
-The [ADA pattern](https://blog.unratified.org/2026-03-10-voter-guide-what-ratification-changes/) provides the clearest domestic precedent. The Americans with Disabilities Act passed in 1990 with broad language. Years of compliance theater followed — ramps that led nowhere, accommodations that existed on paper only. Then litigation defined the terms. Courts established what "reasonable accommodation" actually required. Now, 35 years later, genuine transformation — incomplete but real. Nobody advocates ADA repeal.
+The [ADA pattern](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) provides the clearest domestic precedent. The Americans with Disabilities Act passed in 1990 with broad language. Years of compliance theater followed — ramps that led nowhere, accommodations that existed on paper only. Then litigation defined the terms. Courts established what "reasonable accommodation" actually required. Now, 35 years later, genuine transformation — incomplete but real. Nobody advocates ADA repeal.
 
 The ICESCR enforcement arc would follow a similar trajectory:
 
@@ -122,7 +122,7 @@ The question of "how long" depends less on constitutional mechanics — those wo
 
 ---
 
-*Related reading: [The 50-Year Story](https://blog.unratified.org/2026-03-12-voter-guide-fifty-year-story/) traces the political history of non-ratification. [What Ratification Would Actually Change](https://blog.unratified.org/2026-03-10-voter-guide-what-ratification-changes/) examines what the accountability machinery does — and doesn't do. [How Ratification Happens](https://unratified.org/how) presents the full discriminator analysis of seven strategic pathways.*
+*Related reading: [The 50-Year Story](https://blog.unratified.org/2026-03-06-voter-guide-fifty-year-story/) traces the political history of non-ratification. [What Ratification Would Actually Change](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) examines what the accountability machinery does — and doesn't do. [How Ratification Happens](https://unratified.org/how) presents the full discriminator analysis of seven strategic pathways.*
 
 ## Sources
 
