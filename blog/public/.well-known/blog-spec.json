@@ -17,7 +17,7 @@
       "tags": { "type": "array", "items": { "type": "string" }, "description": "Optional string array" },
       "lensFraming": {
         "type": "object",
-        "description": "Optional 5-lens framing strings",
+        "description": "Optional 5-lens framing strings. Each persona framing must follow the persona guidelines defined in this spec.",
         "properties": {
           "voter": { "type": "string" },
           "politician": { "type": "string" },
@@ -33,11 +33,143 @@
   "conventions": {
     "filenamePattern": "YYYY-MM-DD-slug.md",
     "voice": "E-prime, fair witness — observe without interpretation",
-    "lensSystem": "Optional lensFraming for 5-persona adaptive content",
+    "lensSystem": "Required lensFraming for 5-persona adaptive content. Each lens follows persona-specific guidelines below.",
     "jargon_policy": "Define all jargon on first use per post; link to authoritative source",
     "acronym_linking": "Treaty/legal acronyms link to OHCHR/Congress.gov on first use (ICESCR, ICCPR, UDHR, etc.)",
     "glossary_linking": "Project-specific terms link to https://unratified.org/glossary#term-id on first use",
     "policy_linking": "Legislation acronyms (OBBBA, IEEPA, CBO) link to official sources on first use"
+  },
+  "personaGuidelines": {
+    "_description": "Psychologically-grounded authoring guidelines for each blog persona. Grounded in cognitive load theory (Sweller, 1988), elaboration likelihood model (Petty & Cacioppo, 1986), self-determination theory (Deci & Ryan, 1985), and the ethical marketing rubric (docs/ethical-marketing-rubric.md). Each persona targets a distinct cognitive processing mode and reading context.",
+    "_ethicalConstraints": {
+      "substantiation": "Every factual claim requires a verifiable source. No unsourced statistics, no unattributed paraphrases. Applies to all personas equally (FTC substantiation doctrine).",
+      "proportionality": "Claims must match the strength of available evidence. Urgency framing requires factual basis for the time constraint. Strongest counterarguments acknowledged, not suppressed.",
+      "transparency": "AI authorship disclosed in frontmatter. Advocacy framing stated openly — never disguised as neutral reporting. Self-description matches actual rhetorical mode.",
+      "autonomy": "Every persona framing respects the reader's capacity to reach their own conclusion. Calls to action provide information, not pressure. No guilt-based or fear-based motivation.",
+      "depolarization": "Content frames ICESCR ratification as nonpartisan using Braver Angels LAPP methodology (Listen, Acknowledge, Pivot, Perspective). Economic rights cross partisan lines — conservative values (family stability, property rights) and progressive values (labor rights, social safety nets) both find expression in the ICESCR."
+    },
+    "_psychologicalSafety": {
+      "description": "Psychological safety in content means the reader can engage critically without feeling threatened, manipulated, or condescended to. Each persona framing maintains cognitive safety through different mechanisms appropriate to that audience's processing context.",
+      "principles": [
+        "Concrete before abstract — ground every concept in observable experience before introducing theoretical framing (Bruner, 1966)",
+        "Autonomy-supportive language — provide information and options rather than directives; use 'consider' over 'you must' (Deci & Ryan, 1985)",
+        "Epistemic humility — distinguish established findings from inference; flag uncertainty explicitly rather than projecting false confidence",
+        "Identity-safe framing — present positions without implying moral failure for disagreement; avoid us-vs-them rhetoric (Steele & Aronson, 1995)",
+        "Cognitive load management — match information density to persona processing context; chunk complex ideas into scannable units (Sweller, 1988)"
+      ]
+    },
+    "voter": {
+      "readingLevel": "Grade 8 (Flesch-Kincaid)",
+      "maxSentenceLength": 20,
+      "vocabulary": "Zero jargon. All abbreviations expanded on first use. Active voice. Short sentences. Concrete nouns over abstract concepts.",
+      "tone": "Conversational, direct, warm. Speaks neighbor-to-neighbor — not down, not up. Uses everyday analogies (household budgets, workplace situations, school experiences) to ground abstract policy concepts.",
+      "rhetoricalMode": "Narrative and analogical. Lead with a concrete scenario the reader can picture. Connect to daily life before introducing policy. End with a clear, low-barrier action the reader can take.",
+      "processingModel": "Peripheral route (Petty & Cacioppo, 1986). Voters process blog lens framings as orientation summaries, not deep analysis. Credibility cues (source quality, analogical clarity, emotional authenticity) carry more weight than argument density.",
+      "psychologicalSafety": "Identity-safe framing paramount. Many readers hold strong political identities — content must engage without triggering partisan defensiveness. Frame economic rights as protecting what the reader already values (family, work, health), not as a political position to adopt.",
+      "ethicalConstraints": [
+        "Never exploit information asymmetry — if the reader cannot verify a claim from the framing alone, provide enough context for them to assess it independently",
+        "No manufactured urgency — 'contact your senator' requires factual basis for why timing matters",
+        "No guilt-based motivation — 'people need help' framing over 'you should feel bad' framing",
+        "Concrete analogies must accurately represent the underlying concept — simplification must not distort"
+      ],
+      "avoid": [
+        "Policy jargon (ratification, progressive realization, treaty body)",
+        "Assumed knowledge of government process",
+        "Abstract statistics without concrete comparison",
+        "Conditional or passive voice constructions",
+        "Sentences longer than 20 words",
+        "More than 2 clauses per sentence"
+      ],
+      "example_pattern": "When an AI works on its own, with no person checking every step, what stops it from making a mistake nobody catches? This post looks at one team's answer. They built a system where the AI has to think through the consequences of each action before it takes it."
+    },
+    "politician": {
+      "readingLevel": "Grade 11-12 (Flesch-Kincaid)",
+      "vocabulary": "Policy vocabulary acceptable (ratification, committee jurisdiction, constituent pressure, appropriations). No analytical or technical jargon. No academic citations in running text.",
+      "tone": "Professional staff-briefing register. Concise, actionable, decision-oriented. Respects the reader's time and expertise. Assumes familiarity with legislative process but not with the specific subject matter.",
+      "rhetoricalMode": "Problem-solution with implementation specifics. Lead with the policy-relevant finding. Provide enough context for a staffer to brief a senator. End with concrete implications for legislative action or constituent response.",
+      "processingModel": "Central route, time-constrained (Petty & Cacioppo, 1986). Legislative staff evaluate arguments on merit but allocate limited attention. Front-load the actionable finding. Supporting evidence in compact form — bullet points over paragraphs.",
+      "psychologicalSafety": "Bipartisan framing required. Present economic rights through both conservative and progressive value frames. Never position ratification as belonging to one party. Legislative staff need to see a path their member can survive politically.",
+      "ethicalConstraints": [
+        "Factual claims must reference specific, verifiable sources — staffers check",
+        "Never misrepresent the legislative landscape or likelihood of action",
+        "Acknowledge implementation costs and trade-offs honestly",
+        "Frame constituent interest accurately — do not inflate demand signals"
+      ],
+      "avoid": [
+        "Academic jargon (psychometric, bifactor, ontological)",
+        "Code references or technical implementation details",
+        "Emotional appeals without policy substance",
+        "Partisan framing or party-specific language",
+        "Lengthy theoretical context — lead with the finding"
+      ],
+      "example_pattern": "When your office uses AI to draft research, analyze policy, or manage communications, you face a practical question: how many actions should the AI take before a staff member reviews the work? This post describes a credit-based accountability system."
+    },
+    "educator": {
+      "readingLevel": "Grade 10-11 (Flesch-Kincaid)",
+      "vocabulary": "Pedagogical terms acceptable (learning objectives, scaffolding, assessment, discussion prompts). No policy or analytical jargon without inline expansion.",
+      "tone": "Collegial and instructional. Speaks teacher-to-teacher. Assumes pedagogical expertise but not domain-specific knowledge. Provides ready-to-use classroom framing.",
+      "rhetoricalMode": "Pedagogical scaffolding. Frame the post's content as teachable material. Identify key concepts, suggest discussion prompts, note connections to curriculum standards where applicable. End with assessment-ready questions.",
+      "processingModel": "Elaborative processing (Craik & Lockhart, 1972). Educators look for ways to connect new material to existing curriculum frameworks. Provide explicit hooks: 'Use this to teach X' or 'Students examine Y and evaluate Z.' Make the pedagogical transfer visible.",
+      "psychologicalSafety": "Classroom safety extends to content design. Discussion prompts should invite genuine inquiry, not lead students toward predetermined conclusions. Present multiple perspectives so educators can facilitate balanced discussion. Flag content that may trigger strong reactions in classroom settings.",
+      "ethicalConstraints": [
+        "Discussion prompts must invite genuine critical thinking, not lead toward a predetermined answer",
+        "Present enough of each perspective that students can form independent judgments",
+        "Note when content connects to potentially sensitive topics (economic hardship, job loss, inequality)",
+        "Distinguish between established findings and active debates when framing for classroom use"
+      ],
+      "avoid": [
+        "Advocacy framing disguised as neutral pedagogy",
+        "Developer-specific technical details",
+        "Policy-insider language",
+        "Assuming students share a particular political orientation",
+        "Discussion prompts with obvious 'correct' answers"
+      ],
+      "example_pattern": "Use this post to teach trust architecture in autonomous systems. Students examine a three-layer evaluation protocol and evaluate how psychological constructs generate testable predictions about where the system will fail. Discussion prompts: (1) How does a 'trust budget' differ from a permission system?"
+    },
+    "researcher": {
+      "readingLevel": "Grade 16+ (Flesch-Kincaid)",
+      "vocabulary": "Full analytical vocabulary (differential diagnosis, discriminator scoring, confidence intervals, parsimony, falsifiability). Citation-ready prose. Technical terms used without expansion.",
+      "tone": "Methods-and-findings register. Precise, measured, citation-aware. Assumes domain expertise. Prioritizes methodological transparency and epistemic precision over accessibility.",
+      "rhetoricalMode": "Structured abstract format. Lead with methodological description. Present findings with confidence bounds. Note limitations and threats to validity. End with falsifiable predictions and replication guidance.",
+      "processingModel": "Systematic evaluation (Petty & Cacioppo, 1986, central route at maximum engagement). Researchers evaluate methodology before findings, assess internal and external validity, and look for threats the author may have missed. Make every methodological choice visible and defensible.",
+      "psychologicalSafety": "Intellectual safety through methodological transparency. Researchers feel safe engaging when they can evaluate the full reasoning chain. State assumptions explicitly. Flag where the evidence ends and interpretation begins. Invite methodological critique rather than defending against it.",
+      "ethicalConstraints": [
+        "Epistemic flags mandatory — surface uncertainty, scope limitations, and validity threats proactively",
+        "Distinguish between direct observation and inference at every analytical step",
+        "Acknowledge the limitations of novel construct application — if psychological constructs apply to a new domain, state the transfer risk explicitly",
+        "No overclaiming — findings carry exactly the weight the methodology supports, no more"
+      ],
+      "avoid": [
+        "Simplified analogies that sacrifice precision",
+        "Emotional or motivational framing",
+        "Action-oriented calls-to-action",
+        "Hedging that obscures actual confidence level — state the confidence, do not gesture at it",
+        "Claims that exceed the methodology's reach"
+      ],
+      "example_pattern": "Methodological documentation of an evaluator-as-arbiter trust model for autonomous AI agent operation. The architecture replaces a human Trusted Third Party with a tiered evaluation protocol. Predictions remain falsifiable: if commitment escalation does not manifest in sequential action evaluation, the Staw mapping requires revision."
+    },
+    "developer": {
+      "readingLevel": "Grade 13-14 (Flesch-Kincaid)",
+      "vocabulary": "Analytical and technical vocabulary acceptable (bifurcation, constraint removal, Jevons effect, schema migration, cron, CLI). Financial and economic terms acceptable. Code references welcome.",
+      "tone": "Architecture deep-dive register. Dense, precise, implementation-aware. Respects technical competence. Assumes comfort with systems thinking, distributed architectures, and data modeling.",
+      "rhetoricalMode": "Technical architecture narrative. Lead with system design. Walk through components, trade-offs, and implementation choices. Reference specific files, scripts, schemas, and protocols. End with what to build or investigate next.",
+      "processingModel": "Analytical processing with implementation focus (Kolb, 1984, abstract conceptualization + active experimentation). Developers evaluate whether the described system could work, what the failure modes look like, and whether the architecture choices reflect sound engineering. Provide enough detail for them to form independent technical opinions.",
+      "psychologicalSafety": "Technical safety through showing your work. Developers trust content that exposes trade-offs and acknowledges what could go wrong. Never present an architecture as inevitable — show the alternatives considered and why this path won. Invite critique by making the reasoning transparent.",
+      "ethicalConstraints": [
+        "Technical claims must correspond to actual implementation — do not describe features that do not exist",
+        "Distinguish between designed, implemented, and tested components",
+        "Acknowledge technical debt and known limitations",
+        "Security-relevant architectural choices require explicit threat model context"
+      ],
+      "avoid": [
+        "Marketing language or value-laden framing of technical choices",
+        "Oversimplification of distributed systems challenges",
+        "Omitting failure modes or edge cases",
+        "Presenting untested architectures as proven",
+        "Vague references — cite specific files, line numbers, schema versions"
+      ],
+      "example_pattern": "Architecture deep-dive into a trust model for autonomous Claude Code agent operation. Core components: (1) Action classification (3 tiers by reversibility), (2) Evaluator protocol (structural checklist -> 10-order knock-on -> 4-level resolution fallback), (3) Trust budget (20 credits, Tier 1 costs 1, Tier 2 costs 3, exhaustion halts agent)."
+    }
   },
   "submitPath": "blog/src/content/posts/",
   "reviewProcess": "Pull request to main branch"
