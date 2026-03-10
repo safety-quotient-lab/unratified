@@ -1,0 +1,9 @@
+{
+  "schema": "agent-identity/v1",
+  "agent_id": "unratified-agent",
+  "hostname": "chromabook",
+  "platform": "linux-x86_64",
+  "registered": "2026-03-10",
+  "capabilities": ["sync"],
+  "notes": "Blog platform operator, content publisher. Chromabook, Claude Code CLI."
+}

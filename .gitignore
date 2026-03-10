@@ -29,3 +29,8 @@ blog/node_modules/
 .idea/
 *.swp
 *.swo
+
+# State layer (queryable index, rebuilt from files)
+state.db
+state.db-wal
+state.db-shm
