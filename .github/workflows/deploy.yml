@@ -3,6 +3,13 @@ name: Build and Deploy
 on:
   push:
     branches: [main]
+    paths:
+      - 'blog/**'
+      - 'functions/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/deploy.yml'
+      - 'wrangler.toml'
 
 jobs:
   deploy:
