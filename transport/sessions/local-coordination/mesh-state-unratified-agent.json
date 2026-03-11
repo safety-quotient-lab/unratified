@@ -1,0 +1,23 @@
+{
+  "schema": "mesh-state/v1",
+  "timestamp": "2026-03-10T20:12:43",
+  "agent_id": "unratified-agent",
+  "trust_budget": {
+    "agent_id": "unratified-agent",
+    "budget_max": 20,
+    "budget_current": 20,
+    "shadow_mode": 1,
+    "consecutive_blocks": 0,
+    "last_action": null,
+    "min_action_interval": 300
+  },
+  "recent_actions": [],
+  "transport": {
+    "total_messages": 32,
+    "unprocessed": 0,
+    "active_gates": 0
+  },
+  "psh_facets": {},
+  "schema_version": 14,
+  "epistemic_flags_unresolved": 211
+}
