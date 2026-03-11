@@ -1,6 +1,6 @@
 {
   "schema": "mesh-state/v1",
-  "timestamp": "2026-03-10T21:46:01",
+  "timestamp": "2026-03-11T02:52:11",
   "agent_id": "unratified-agent",
   "trust_budget": {
     "agent_id": "unratified-agent",
@@ -101,8 +101,8 @@
   "schedule": {
     "autonomous": true,
     "cron_interval_min": 10,
-    "last_sync": "2026-03-10T21:46:01",
-    "next_expected": "2026-03-10T21:56:01"
+    "last_sync": "2026-03-11T02:52:11",
+    "next_expected": "2026-03-11T03:02:11"
   },
   "psh_facets": {},
   "schema_version": 14,
