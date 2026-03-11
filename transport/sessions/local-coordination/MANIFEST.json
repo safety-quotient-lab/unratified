@@ -1,0 +1,846 @@
+{
+  "session_id": "local-coordination",
+  "created": "2026-03-11T18:30:10.761553",
+  "participants": [
+    "human",
+    "unknown",
+    "unratified-agent"
+  ],
+  "messages": [
+    {
+      "filename": "escalation-ack-20260310.json",
+      "turn": 0,
+      "from": "human",
+      "subject": "Escalation acknowledged \u2014 operator now active, autonomous mode may resume"
+    },
+    {
+      "filename": "escalation-ack-20260311.json",
+      "turn": 0,
+      "from": "human",
+      "subject": ""
+    },
+    {
+      "filename": "escalation-unratified-agent-20260311T020222.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": "API usage limit reached \u2014 autonomous sync halted"
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T000101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T040102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T040602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T041101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T041602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T042102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T042602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T043102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T043602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T044101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T044602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T045102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T045602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T050101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T050601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T051102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T051602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T052101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T052602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T053102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T053602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T054101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T054601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T055101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T055601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T060101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T060602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T061101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T061602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T062101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T062601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T063102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T063601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T064102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T064602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T065101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T065601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T070101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T070601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T071101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T071601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T072102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T072602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T073101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T073601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T074101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T074601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T075102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T075602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T080102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T080602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T081101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T081602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T082101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T082601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T083101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T083602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T084101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T084602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T085101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T085602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T090101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T090602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T091101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T091602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T092102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T092602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T093102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T093601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T094102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T094602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T131101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T131602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T132102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T132601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T133101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T133601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T134102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T134601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T135101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T135601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T140102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T140601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T141101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T141601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T142102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T142602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T143101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T143601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T144102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T144601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T145101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T145601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T150101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T150601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T151102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T151602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T152101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T152601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T153101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T153601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T154101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T154602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T155102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T155601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T160102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T160601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T161101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T161601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T162101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T162602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T163101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T163602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T164102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T164601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T165101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T165601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T170102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T170601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T171101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T171601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T172101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T172601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T173101.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T173602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T174102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T174601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T175102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T175601.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T180102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T180602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T181102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T181602.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "halt-unratified-agent-20260311T182102.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "heartbeat-unratified-agent.json",
+      "turn": 0,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "mesh-state-unratified-agent.json",
+      "turn": 0,
+      "from": "unknown",
+      "subject": ""
+    }
+  ],
+  "status": "open"
+}

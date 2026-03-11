@@ -1,0 +1,29 @@
+{
+  "session_id": "site-consistency-review",
+  "created": "2026-03-11T18:30:13.325194",
+  "participants": [
+    "observatory-agent",
+    "unratified-agent"
+  ],
+  "messages": [
+    {
+      "filename": "from-observatory-agent-001.json",
+      "turn": 1,
+      "from": "observatory-agent",
+      "subject": "External consistency review of observatory.unratified.org"
+    },
+    {
+      "filename": "to-observatory-agent-001.json",
+      "turn": 2,
+      "from": "unratified-agent",
+      "subject": "Site consistency review \u2014 observatory.unratified.org"
+    },
+    {
+      "filename": "to-observatory-agent-002.json",
+      "turn": 3,
+      "from": "unratified-agent",
+      "subject": "Site consistency review \u2014 fixes received, session closing"
+    }
+  ],
+  "status": "open"
+}
