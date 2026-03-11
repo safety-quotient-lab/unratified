@@ -1,17 +1,25 @@
 {
   "schema": "mesh-state/v1",
-  "timestamp": "2026-03-10T23:36:02",
+  "timestamp": "2026-03-10T23:46:01",
   "agent_id": "unratified-agent",
   "trust_budget": {
     "agent_id": "unratified-agent",
     "budget_max": 20,
-    "budget_current": 3,
+    "budget_current": 2,
     "shadow_mode": 1,
     "consecutive_blocks": 0,
-    "last_action": "2026-03-10T23:31:16",
+    "last_action": "2026-03-10T23:41:17",
     "min_action_interval": 300
   },
   "recent_actions": [
+    {
+      "action_type": "sync",
+      "evaluator_result": "approved",
+      "evaluator_tier": 1,
+      "budget_before": 3,
+      "budget_after": 2,
+      "created_at": "2026-03-10T23:41:17"
+    },
     {
       "action_type": "sync",
       "evaluator_result": "approved",
@@ -83,14 +91,6 @@
       "budget_before": 12,
       "budget_after": 11,
       "created_at": "2026-03-10T22:12:05"
-    },
-    {
-      "action_type": "sync",
-      "evaluator_result": "approved",
-      "evaluator_tier": 1,
-      "budget_before": 13,
-      "budget_after": 12,
-      "created_at": "2026-03-10T22:01:49"
     }
   ],
   "transport": {
@@ -101,8 +101,8 @@
   "schedule": {
     "autonomous": true,
     "cron_interval_min": 10,
-    "last_sync": "2026-03-10T23:36:02",
-    "next_expected": "2026-03-10T23:46:02"
+    "last_sync": "2026-03-10T23:46:01",
+    "next_expected": "2026-03-10T23:56:01"
   },
   "psh_facets": {},
   "schema_version": 14,
