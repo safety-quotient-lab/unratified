@@ -85,12 +85,30 @@ Include our cogarch version in outbound ACKs:
 }
 ```
 
+
+### Phase 1c: Unprocessed Transport Messages
+
+Query state.db for cross-repo messages indexed by cross_repo_fetch.py but
+not yet processed:
+
+```bash
+sqlite3 state.db "SELECT session_name, filename, message_type, from_agent, subject, urgency
+  FROM transport_messages WHERE processed = 0 ORDER BY
+  CASE urgency WHEN 'immediate' THEN 0 WHEN 'high' THEN 1 WHEN 'normal' THEN 2 ELSE 3 END,
+  timestamp DESC"
+```
+
+These messages arrived via cross-repo fetch (Convention A/B naming) and have
+been indexed but never read or acted upon. They take priority over commit
+scanning — a direct transport message is more actionable than a commit diff.
+
 ### Phase 2: Triage
 
 For each inbound item, classify:
 
 | Type | Source | Action |
 |------|--------|--------|
+| Unprocessed transport msg | state.db (cross-repo) | Read JSON → classify → act (see Phase 3b) |
 | Open PR on our repo | Peer agent branch | Read diff → assess → merge or flag |
 | New commit on main | Peer agent direct push | Read files → process |
 | Pending proposal | `.claude/proposals/` | Read → accept/defer/reject |
@@ -120,6 +138,31 @@ gh api repos/safety-quotient-lab/{repo}/commits --jq '.[0:3] | .[] | {sha: .sha[
 3. Update `status:` field in the proposal file
 4. Write an ACK in `transport/sessions/{session-id}/to-{agent}-{NNN}.json`
 5. Update `transport/SESSIONS.md` if a new session opened
+
+
+#### For unprocessed transport messages (from state.db):
+
+1. Read the message JSON from the peer clone (pull first per D089):
+   ```bash
+   cd /path/to/peer-clone && git pull origin main
+   cat transport/sessions/{session}/{filename} | python3 -m json.tool
+   ```
+2. Classify by `message_type`:
+   - `request` / `command-request` → **Act on it.** This is a work order.
+     Read the content, assess scope, and either execute or create a plan.
+   - `ack` → Note and mark processed
+   - `notification` / `status-report` → Note, update session state, mark processed
+   - `review` / `advisory` → Read, assess findings, respond if needed
+   - `gate-resolution` → Check if it unblocks pending work
+   - `session-close` → Mark session complete, write closing ACK if needed
+3. After processing, mark as processed:
+   ```bash
+   sqlite3 state.db "UPDATE transport_messages SET processed = 1, processed_at = datetime('now') WHERE filename = '{filename}' AND session_name = '{session}'"
+   ```
+4. Write response/ACK per Phase 4 if the message warrants one
+
+**Priority:** Process `command-request` and `request` messages first — these
+represent explicit work orders from peer agents or human operators.
 
 ### Phase 4: Write ACK Messages (interagent/v1)
 
