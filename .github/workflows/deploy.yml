@@ -1,0 +1,48 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install blog dependencies
+        run: cd blog && npm ci
+
+      - name: Type check
+        run: npm run check
+
+      - name: Build blog
+        run: npm run build:blog
+
+      - name: Verify page count
+        run: |
+          PAGE_COUNT=$(find blog/dist -name "index.html" | wc -l | tr -d ' ')
+          echo "Built $PAGE_COUNT pages"
+          if [ "$PAGE_COUNT" -lt "30" ]; then
+            echo "ERROR: Expected at least 30 pages, got $PAGE_COUNT"
+            exit 1
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy blog/dist --project-name=unratified-blog

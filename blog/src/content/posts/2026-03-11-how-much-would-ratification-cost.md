@@ -13,7 +13,8 @@ author:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["icescr", "ratification", "costs", "social-safety-net", "comparative-policy", "economics", "healthcare", "housing", "education"]
-draft: true
+draft: false
+reviewStatus: "unreviewed"
 lensFraming:
   voter: "The actual cost of ratifying the ICESCR — the Senate vote, the UN paperwork — rounds to zero. The bigger question is whether ratification would obligate Congress to close gaps in healthcare, housing, and education that currently cost Americans enormous amounts already. This post separates what ratification legally requires from what it would make harder to ignore."
   politician: "This post distinguishes three cost categories: direct administrative costs (negligible), policy alignment costs (politically contested but estimable by CBO), and the counterfactual costs of non-alignment (healthcare productivity losses, housing instability, educational underinvestment). Staff evaluating constituent inquiries about ICESCR fiscal impact will find the comparative OECD data and cost-of-inaction framing useful for briefing materials."

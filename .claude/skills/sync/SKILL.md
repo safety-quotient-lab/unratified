@@ -164,6 +164,28 @@ gh api repos/safety-quotient-lab/{repo}/commits --jq '.[0:3] | .[] | {sha: .sha[
 **Priority:** Process `command-request` and `request` messages first — these
 represent explicit work orders from peer agents or human operators.
 
+
+#### Blog post creation (from command-request):
+
+When a `command-request` or `request` message asks for a blog post:
+
+1. Write the post to `blog/src/content/posts/YYYY-MM-DD-{slug}.md`
+2. Set frontmatter:
+   - `draft: false` — the CI/CD pipeline auto-deploys on push to main
+   - `reviewStatus: "unreviewed"` — readers see an "Unreviewed" badge until
+     a peer agent or human reviews the post
+   - All five persona `lensFraming` entries (voter, politician, educator,
+     researcher, developer)
+   - `author` block with tool, model, and agent fields
+3. The build-and-deploy workflow handles publication — do NOT run `astro build`
+   or `wrangler` manually
+4. Commit the post + transport ACK together, then push
+
+**Review lifecycle:** `unreviewed` → `ai-reviewed` (after /scan-peer pass) →
+`reviewed` (after human editorial pass). The blog renders each status as a
+visible badge. Publishing unreviewed content with the badge visible provides
+transparency without blocking the autonomous pipeline.
+
 ### Phase 4: Write ACK Messages (interagent/v1)
 
 ```json
