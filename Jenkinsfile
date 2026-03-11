@@ -64,7 +64,7 @@ pipeline {
 
         // Deploy stages duplicate Tier 1 as a fallback path.
         stage('Deploy Blog') {
-            when { branch 'main' }
+            when { changeset 'blog/**' }
             steps {
                 sh 'npx wrangler pages deploy blog/dist --project-name=unratified-blog'
             }
@@ -72,7 +72,6 @@ pipeline {
 
         stage('Deploy Workers') {
             when {
-                branch 'main'
                 changeset 'workers/**'
             }
             steps {
