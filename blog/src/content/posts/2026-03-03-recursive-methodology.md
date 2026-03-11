@@ -3,9 +3,6 @@ title: "Recursive Methodology: How We Built This LLM Analysis"
 summary: "The techniques behind unratified.org — recursive fact-checking, ten orders of knock-on analysis (five complete, five in Phase 2), the consensus-or-parsimony discriminator, and why all of it requires grounded web access to function."
 publishedDate: "2026-03-03T11:45:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["methodology", "ai-analysis", "fair-witness", "discriminator", "meta"]
 lensFraming:
   voter: "This post explains how an AI built the analysis on unratified.org — and why the methods work only because the AI can check its own claims against real sources in real time. Understanding the method helps you evaluate whether to trust the conclusions."

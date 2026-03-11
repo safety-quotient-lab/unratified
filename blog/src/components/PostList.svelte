@@ -221,8 +221,6 @@
       <p class="post-summary">{post.summary}</p>
       <div class="post-card-meta">
         <span class="author">
-          <a href={post.author.human.url} rel="noopener">{post.author.human.name}</a>
-          &middot;
           <a href={post.author.tool.url} rel="noopener">{post.author.tool.name}</a>
           &middot;
           {#each post.author.model as m, i}

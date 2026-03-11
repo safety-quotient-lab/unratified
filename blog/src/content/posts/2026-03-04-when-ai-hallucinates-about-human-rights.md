@@ -4,9 +4,6 @@ summary: "Three conversations with Google's Gemini about the same site produced 
 publishedDate: "2026-03-04T16:00:00-05:00"
 updatedDate: "2026-03-04T22:30:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -16,6 +13,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["confabulation", "ai-accuracy", "fair-witness", "gemini", "methodology", "taxonomy", "human-rights"]
 lensFraming:
   voter: "When AI systems describe human rights resources, they sometimes fabricate the description entirely — calling an ICESCR advocacy site a 'sovereign citizen' platform or an 'AGI tracker.' This post documents seven types of AI fabrication and explains why each one matters for your access to accurate rights information."

@@ -3,9 +3,6 @@ title: "Which Senators Could Move on ICESCR — and How to Read the Political Ma
 summary: "Ratification requires 67 Senate votes. This post explains the political geography of that path: which committee controls the process, what factors historically predict treaty support, and how constituent contact creates the openings that move votes."
 publishedDate: "2026-03-06T15:15:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "senate", "ratification", "civic-action", "foreign-relations"]
 draft: false
 reviewStatus: "ai-reviewed"

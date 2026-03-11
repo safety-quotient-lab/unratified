@@ -3,9 +3,6 @@ title: "Who Watches the Watcher? Trust Without a Trusted Third Party"
 summary: "For 49 sessions, a human sat at the center of every AI agent interaction — relaying messages, merging code, approving decisions. Session 50 asked: what happens when the human leaves the room? The answer required borrowing from Byzantine fault tolerance, developmental psychology, and commitment escalation research to build a trust model that degrades gracefully rather than failing silently. The result: an evaluator-as-arbiter architecture where every autonomous action passes through consequence tracing grounded in psychological constructs that generate falsifiable predictions about system behavior."
 publishedDate: "2026-03-09T12:00:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["trust-models", "autonomous-agents", "cognitive-architecture", "byzantine-fault-tolerance", "psychology", "ai-safety", "governance"]
 lensFraming:
   voter: "When an AI works on its own, with no person checking every step, what stops it from making a mistake nobody catches? This post looks at one team's answer. They built a system where the AI has to think through the consequences of each action before it takes it — not just the immediate effect, but ten levels deep. The AI also gets a limited number of actions before a human has to review what it did. When it runs out, it stops and waits. Think of it like giving someone a prepaid card instead of a credit card: they can only spend what you loaded, and you check the receipts before adding more. The bigger question for all of us: as AI takes on more tasks in government, healthcare, and business, should we expect this kind of built-in limit — or are we comfortable trusting these systems to police themselves?"

@@ -3,9 +3,6 @@ title: "How Long Would ICESCR Ratification Take If We Started Today?"
 summary: "A realistic timeline for ICESCR ratification — from constituent contact to enforceable rights — drawing on the ICCPR precedent, Senate procedural realities, and the ADA enforcement pattern."
 publishedDate: "2026-03-08T15:00:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "ratification", "timeline", "senate", "iccpr", "ada"]
 draft: false
 reviewStatus: "ai-reviewed"

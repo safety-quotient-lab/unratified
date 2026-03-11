@@ -3,9 +3,6 @@ title: "An AI Built This Campaign. Here's the Honest Assessment."
 summary: "Claude drafted the analysis, built the site, wrote the Bluesky posts, and coined the campaign hashtag. What does that mean for human rights advocacy — and what does it not mean?"
 publishedDate: "2026-03-06T20:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["AI", "advocacy", "methodology", "transparency"]
 draft: false
 reviewStatus: "ai-reviewed"

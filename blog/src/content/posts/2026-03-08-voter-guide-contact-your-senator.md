@@ -3,9 +3,6 @@ title: "How to Contact Your Senator About ICESCR: Scripts, Timing, and Follow-Th
 summary: "Constituent contact works. This post gives you the exact scripts, timing guidance, and follow-up strategies to ask your senators to support ICESCR ratification hearings — and what to do when you don't hear back."
 publishedDate: "2026-03-08T09:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "civic-action", "senate", "ratification"]
 draft: false
 reviewStatus: "ai-reviewed"

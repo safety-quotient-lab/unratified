@@ -3,9 +3,6 @@ title: "Has the ICESCR Actually Worked? What the Enforcement Record Shows"
 summary: "The central objection to ICESCR ratification is that enforcement is weak. We researched the record — focusing on Article 6 (right to work) and technology-driven displacement. What we found is more precise than 'weak': enforcement is uneven, treaty-based work rights cases are rare, and the gap is real. But the gap confirms the case for ratification rather than undermining it."
 publishedDate: "2026-03-06T18:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "enforcement", "article-6", "right-to-work", "platform-workers", "algorithmic-management", "research"]
 draft: false
 reviewStatus: "ai-reviewed"

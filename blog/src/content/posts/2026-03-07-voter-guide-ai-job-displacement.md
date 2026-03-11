@@ -3,9 +3,6 @@ title: "AI Job Displacement and the Treaty Gap: Why the U.S. Has No Binding Floo
 summary: "Artificial intelligence displaces workers at a pace existing U.S. law never anticipated. In countries that ratified the ICESCR, governments face binding accountability for how they respond. In the U.S., the response depends entirely on which coalition holds power — and what it chooses to prioritize."
 publishedDate: "2026-03-07T09:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "ai", "labor", "economic-rights", "ratification"]
 draft: false
 reviewStatus: "ai-reviewed"

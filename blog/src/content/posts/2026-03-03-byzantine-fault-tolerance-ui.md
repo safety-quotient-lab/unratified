@@ -3,9 +3,6 @@ title: "Your Interface Has a Byzantine Fault Problem"
 summary: "The distributed-systems concept of Byzantine fault tolerance maps onto a failure mode in human-AI dialogue: a UI can confirm an answer while the user simultaneously questions it, and dialogue agents need a formal protocol for detecting and resolving this contradiction."
 publishedDate: "2026-03-03T15:30:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["cognitive-architecture", "byzantine-fault-tolerance", "human-ai-interaction", "tool-design", "ai-ux"]
 lensFraming:
   voter: "When a tool records your answer differently than you intended, the system should catch the contradiction — not act on the wrong signal."

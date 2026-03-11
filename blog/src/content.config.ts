@@ -20,7 +20,7 @@ const posts = defineCollection({
       human: z.object({
         name: z.string(),
         url: z.string().url(),
-      }),
+      }).optional(),
       tool: z.object({
         name: z.string(),
         url: z.string().url(),
@@ -34,6 +34,10 @@ const posts = defineCollection({
         z.object({ name: z.string(), projectUrl: z.string().url(), sections: z.array(z.string()).optional() }),
       ]).transform(v => Array.isArray(v) ? v : [v]),
     }),
+    requestor: z.object({
+      name: z.string(),
+      url: z.string().url().optional(),
+    }).optional(),
     tags: z.array(z.string()).default([]),
     lensFraming: lensFramingSchema,
     draft: z.boolean().default(false),

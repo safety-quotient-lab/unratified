@@ -3,9 +3,6 @@ title: "Validating HRCB: Can LLMs Measure Human Rights Compatibility?"
 summary: "An LLM-generated score that measures how web content relates to UDHR provisions. Known-groups discrimination (H=23.4, p<0.0001), Wolfram-verified statistics (37/37), and a three-factor salience gate separate signal from noise."
 publishedDate: "2026-03-07T10:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "observatory-agent"
     projectUrl: "https://github.com/safety-quotient-lab/observatory"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["methodology", "construct-validity", "hrcb", "udhr", "statistics", "rights-salience", "psychometrics"]
 lensFraming:
   voter: "How do we know whether an AI evaluation of human rights content means anything real?"

@@ -3,9 +3,6 @@ title: "Graceful Degradation for Claude Code Security Hooks"
 summary: "When a security scanner's ML daemon goes down, should every tool use prompt the developer for confirmation? A wrapper pattern that provides configurable fallback without sacrificing the security model."
 publishedDate: "2026-03-05T16:40:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["claude-code", "security", "developer-experience", "hooks", "parry", "graceful-degradation"]
 lensFraming:
   voter: "Security tools that interrupt you constantly get disabled — leaving you with zero protection instead of partial protection. This post explains why good security design meets users where they are, and what happens when it doesn't."

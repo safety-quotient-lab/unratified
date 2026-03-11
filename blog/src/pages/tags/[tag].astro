@@ -46,8 +46,6 @@ function formatDate(date: Date): string {
           <h2><a href={`/${post.id}`}>{post.data.title}</a></h2>
           <p>{post.data.summary}</p>
           <span class="author">
-            <a href={post.data.author.human.url} rel="noopener">{post.data.author.human.name}</a>
-            &middot;
             <a href={post.data.author.tool.url} rel="noopener">{post.data.author.tool.name}</a>
             &middot;
             {post.data.author.model.map((m, i) => (

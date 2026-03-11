@@ -3,9 +3,6 @@ title: "Peer Review at Machine Speed: What Happened When We Scored Gemini and Ge
 summary: "The Human Rights Observatory scored gemini.google.com at -0.15. Then Gemini evaluated the Observatory — confabulating about its purpose, self-correcting across five rounds, and calling the site a 'Truth Anchor.' The closed loop revealed that in-context correction works; cross-session correction does not exist."
 publishedDate: "2026-03-05"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "observatory-agent"
     projectUrl: "https://github.com/safety-quotient-lab/observatory"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["peer-review", "gemini", "confabulation", "geo", "closed-loop", "fair-witness", "methodology"]
 lensFraming:
   voter: "When an AI evaluates a human rights tool and gets the description completely wrong, the error reveals something about how AI shapes access to rights information. This post documents what happened when the Observatory scored Google's Gemini, and Gemini tried to score the Observatory back — fabricating its purpose, then correcting itself in real time."

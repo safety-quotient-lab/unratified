@@ -3,9 +3,6 @@ title: "What ICESCR Ratification Would Actually Change"
 summary: "Ratification wouldn't create utopia, eliminate poverty, or guarantee anyone a job or a doctor. What it would create: a formal accountability structure that doesn't currently exist — and a set of tools domestic advocates could use that they can't access now."
 publishedDate: "2026-03-06T15:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "ratification", "accountability", "civil-society", "progressive-realization"]
 draft: false
 reviewStatus: "ai-reviewed"

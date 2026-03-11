@@ -3,9 +3,6 @@ title: "Cognitive Architecture for AI Agents: Triggers, Self-Healing Memory, and
 summary: "How 15 mechanical triggers, auto-restoring memory, and a 13-step documentation chain prevent cognitive regression in long-running Claude Code sessions — and what a popular anti-regression repo reveals about the gap between code safety and reasoning safety."
 publishedDate: "2026-03-05T12:25:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["cognitive-architecture", "ai-agents", "claude-code", "methodology", "anti-regression", "meta"]
 lensFraming:
   voter: "AI systems are increasingly used to help make decisions that affect the public — in policy analysis, legal research, and public communication. This post explains a concrete problem those systems face: they forget earlier reasoning, drift from established constraints, and agree with whoever is asking even when evidence says otherwise. The infrastructure described here — mechanical triggers, self-healing memory, epistemic quality checks — represents one approach to making AI reasoning more accountable. The question it raises for public trust: what should citizens expect from AI systems that inform decisions made on their behalf?"

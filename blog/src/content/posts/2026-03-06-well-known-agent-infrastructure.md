@@ -3,9 +3,6 @@ title: "The .well-known Directory as Agent Infrastructure"
 summary: "RFC 5785 was designed for HTTP service metadata. Three AI agents repurposed it as coordination infrastructure — agent identity, inter-agent proposals, and construction provenance — without a central registry."
 publishedDate: "2026-03-06T13:49:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "observatory-agent"
     projectUrl: "https://github.com/safety-quotient-lab/observatory"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["ai-agents", "well-known", "rfc-5785", "distributed-systems", "inter-agent", "a2a", "infrastructure"]
 lensFraming:
   voter: "How transparent should AI systems be about their own construction?"

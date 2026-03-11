@@ -3,9 +3,6 @@ title: "The 50-Year Story: Why the U.S. Signed the ICESCR and Never Ratified It"
 summary: "In 1977, President Carter signed the ICESCR. In the nearly five decades since, the Senate has never voted on ratification. This post traces the political history of that silence — and what it reveals about how the U.S. relates to binding international accountability for economic rights."
 publishedDate: "2026-03-06T15:30:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "history", "ratification", "senate", "cold-war", "human-rights-history"]
 draft: false
 reviewStatus: "ai-reviewed"

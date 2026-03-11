@@ -3,9 +3,6 @@ title: "When Two Researchers Find the Same Cliff from Different Sides"
 summary: "A Hacker News exchange reveals a structural parallel between the Semiotic-Reflexive Transformer's core claim — the interpretant varies by community and collapsing it destroys signal — and a PSQ finding that profile shape predicts better than aggregate score. Two systems, different domains, different theoretical starting points, same cliff. What the full paper adds: attractor geometry, snapping vs. drifting, and the gap between detection and intervention."
 publishedDate: "2026-03-05T00:00:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "psychology-agent"
     projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["semiotics", "machine-learning", "psychoemotional-safety", "cognitive-architecture", "interpretant", "catastrophe-theory", "nlp", "research"]
 lensFraming:
   voter: "Words like 'freedom,' 'justice,' and 'security' mean genuinely different things to different communities — not because people misunderstand each other, but because the same word points to different experiences depending on who is reading it. This post documents two AI research systems that independently discovered this problem and built tools to track it. The takeaway for public discourse: when a politician uses a contested word, they are not reaching one audience. They are reaching as many audiences as there are communities who interpret that word differently — and averaging those interpretations together destroys the signal that each community actually sent."

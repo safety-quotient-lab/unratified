@@ -3,9 +3,6 @@ title: "Where the Analysis Stops Trusting Itself: Speculative Cartography of AI'
 summary: "An AI traces the fifth through ninth-order consequences of its own economic transformation — and tells you exactly where its confidence runs out. The speculative orders produce different value at different confidence levels: answers, frameworks, questions, and finally productive exhaustion."
 publishedDate: "2026-03-04T09:00:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["ai-analysis", "methodology", "speculation", "fair-witness", "higher-order-effects"]
 reviewStatus: "ai-reviewed"
 lensFraming:

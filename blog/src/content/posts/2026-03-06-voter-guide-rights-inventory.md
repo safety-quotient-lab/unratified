@@ -3,9 +3,6 @@ title: "Your Rights Inventory: What ICESCR Covers — Job, Housing, Health, Educ
 summary: "Most Americans already believe in the rights the ICESCR protects. This post maps the treaty's core guarantees to the everyday economic concerns Americans live with — and explains what binding accountability for those rights would look like."
 publishedDate: "2026-03-06T14:45:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "economic-rights", "housing", "health", "education", "labor", "ratification"]
 draft: false
 reviewStatus: "ai-reviewed"

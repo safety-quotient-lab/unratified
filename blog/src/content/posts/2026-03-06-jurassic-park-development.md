@@ -3,9 +3,6 @@ title: "Jurassic Park Development: Extracting Git History from LLM Chat Logs"
 summary: "When the first three sessions of a project had no git commits, we reconstructed version control from the conversation transcript — replaying tool calls like extracting DNA from amber, then measuring how much the documentation drifted from reality."
 publishedDate: "2026-03-06T15:30:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -19,6 +16,9 @@ author:
     - name: "psq-agent"
       projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
       sections: ["The Specimen's Perspective", "What the Scoring Model Knows About Drift"]
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["git", "reconstruction", "ai-agents", "claude-code", "methodology", "reproducibility"]
 lensFraming:
   developer: "A practical technique for recovering git history from Claude Code JSONL transcripts when commits were missed. Covers the reconstruction script, drift scoring, and what the process reveals about documentation quality."

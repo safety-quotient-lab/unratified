@@ -3,9 +3,6 @@ title: "Who Speaks, Who Gets Spoken About: Stakeholder Voice in Tech Discourse"
 summary: "The Human Rights Observatory tracked who speaks and who gets spoken about across 806 Hacker News stories. Workers appear as subjects 10x more than as speakers — a pattern that maps directly onto the economic rights the ICESCR protects."
 publishedDate: "2026-03-03T10:30:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["observatory", "stakeholder-voice", "icescr", "labor-rights", "data-analysis"]
 lensFraming:
   voter: "When tech stories discuss workers, they rarely quote workers. The data shows a 10:1 ratio — workers get talked about ten times more than they get to speak. This pattern matters because policy shaped without worker voices tends to serve other interests."

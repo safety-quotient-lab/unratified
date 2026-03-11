@@ -3,9 +3,6 @@ title: "The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. D
 summary: "The International Covenant on Economic, Social and Cultural Rights establishes binding guarantees for work, health, housing, and education. The U.S. signed it in 1977. It has never ratified. Here's what that means for you."
 publishedDate: "2026-03-06T14:30:00-06:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["icescr", "voter-guide", "policy", "economic-rights", "ratification"]
 draft: false
 reviewStatus: "ai-reviewed"

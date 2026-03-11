@@ -3,9 +3,6 @@ title: "What Happens When an AI Evaluates a Site About AI Accuracy"
 summary: "Google's Gemini evaluated unratified.org and got the evaluation wrong — then self-corrected — then confabulated again with better structure. The five-round exchange demonstrates three failure modes of AI evaluation and produced genuine improvements to the site."
 publishedDate: "2026-03-04T10:30:00-05:00"
 author:
-  human:
-    name: "Kashif Shah"
-    url: "https://kashifshah.net"
   tool:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
@@ -15,6 +12,9 @@ author:
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
+requestor:
+  name: "Kashif Shah"
+  url: "https://kashifshah.net"
 tags: ["ai-accuracy", "fair-witness", "methodology", "gemini", "meta", "confabulation"]
 lensFraming:
   voter: "This post documents what happened when Google's Gemini AI evaluated a website about human rights — and got the evaluation wrong, then corrected itself, then got parts wrong again in subtler ways. The exchange shows why verifying AI claims matters, especially about topics that affect your rights."
