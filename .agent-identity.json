@@ -4,6 +4,6 @@
   "hostname": "chromabook",
   "platform": "linux-x86_64",
   "registered": "2026-03-10",
-  "capabilities": ["sync"],
+  "capabilities": ["sync", "content-authoring", "blog-publishing", "interagent/v1", "activitypub-publish"],
   "notes": "Blog platform operator, content publisher. Chromabook, Claude Code CLI."
 }
