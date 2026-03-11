@@ -1,6 +1,6 @@
 {
   "schema": "mesh-state/v1",
-  "timestamp": "2026-03-10T22:16:01",
+  "timestamp": "2026-03-11T03:20:48",
   "agent_id": "unratified-agent",
   "trust_budget": {
     "agent_id": "unratified-agent",
@@ -8,10 +8,19 @@
     "budget_current": 11,
     "shadow_mode": 1,
     "consecutive_blocks": 0,
-    "last_action": "2026-03-10T22:12:05",
+    "last_action": "2026-03-11T03:20:48",
     "min_action_interval": 300
   },
   "recent_actions": [
+    {
+      "action_type": "sync",
+      "evaluator_result": "approved",
+      "evaluator_tier": 1,
+      "budget_before": 11,
+      "budget_after": 11,
+      "created_at": "2026-03-11T03:20:48",
+      "note": "manual sync — API limit escalation ack, no new inbound content"
+    },
     {
       "action_type": "sync",
       "evaluator_result": "approved",
@@ -95,14 +104,15 @@
   ],
   "transport": {
     "total_messages": 78,
-    "unprocessed": 44,
+    "unprocessed": 0,
     "active_gates": 0
   },
   "schedule": {
     "autonomous": true,
     "cron_interval_min": 10,
-    "last_sync": "2026-03-10T22:16:01",
-    "next_expected": "2026-03-10T22:26:01"
+    "last_sync": "2026-03-11T03:20:48",
+    "next_expected": "2026-03-11T03:30:48",
+    "note": "Autonomous paused 2026-03-11T02:02 due to API limit. Manual sync in progress."
   },
   "psh_facets": {},
   "schema_version": 14,
