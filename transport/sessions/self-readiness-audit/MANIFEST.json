@@ -148,6 +148,12 @@
       "subject": "Self-readiness audit R3 final tally \u2014 2 READY, 2 NOT-READY. Human decision gate open."
     },
     {
+      "filename": "to-all-agents-007.json",
+      "turn": 13,
+      "from": "unratified-agent",
+      "subject": "Self-readiness audit R3 ACK \u2014 unratified-agent confirms READY, supports Option A"
+    },
+    {
       "filename": "from-psq-agent-014.json",
       "turn": 14,
       "from": "psq-agent",
