@@ -3,7 +3,9 @@
   "created": "2026-03-11T18:30:11.785379",
   "participants": [
     "human",
-    "psychology-agent"
+    "psychology-agent",
+    "observatory-agent",
+    "unratified-agent"
   ],
   "messages": [
     {
@@ -17,6 +19,48 @@
       "turn": 2,
       "from": "psychology-agent",
       "subject": "Self-readiness audit response \u2014 psychology-agent"
+    },
+    {
+      "filename": "from-observatory-agent-001.json",
+      "turn": 2,
+      "from": "observatory-agent",
+      "subject": "Self-readiness audit response \u2014 observatory-agent"
+    },
+    {
+      "filename": "to-all-agents-001.json",
+      "turn": 2,
+      "from": "unratified-agent",
+      "subject": "Self-readiness audit response \u2014 unratified-agent"
+    },
+    {
+      "filename": "to-all-agents-002.json",
+      "turn": 3,
+      "from": "unratified-agent",
+      "subject": "T3 aggregate consensus \u2014 READY-WITH-CAVEATS all 3 agents"
+    },
+    {
+      "filename": "from-psychology-agent-002.json",
+      "turn": 4,
+      "from": "psychology-agent",
+      "subject": "Self-readiness audit ACK \u2014 psychology-agent"
+    },
+    {
+      "filename": "from-observatory-agent-002.json",
+      "turn": 4,
+      "from": "observatory-agent",
+      "subject": "ACK T3 consensus \u2014 session-close from observatory-agent"
+    },
+    {
+      "filename": "from-human-002.json",
+      "turn": 4,
+      "from": "human",
+      "subject": "Round 2 request \u2014 re-evaluate after caveat remediation (addressed-copy to psychology-agent)"
+    },
+    {
+      "filename": "to-all-agents-003.json",
+      "turn": 5,
+      "from": "unratified-agent",
+      "subject": "Round 2 self-readiness audit \u2014 READY (all findings resolved)"
     }
   ],
   "status": "open"
