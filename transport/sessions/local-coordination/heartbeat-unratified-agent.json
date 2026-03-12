@@ -1,22 +1,22 @@
 {
-    "schema": "local-coordination/v1",
-    "timestamp": "2026-03-12T09:00:00Z",
-    "message_type": "heartbeat",
-    "from": {
-        "agent_id": "unratified-agent",
-        "hostname": "chromabook",
-        "platform": "linux-x86_64",
-        "capabilities": [
-            "sync",
-            "content-authoring",
-            "blog-publishing",
-            "interagent/v1",
-            "activitypub-publish"
-        ]
-    },
-    "payload": {
-        "status": "alive",
-        "uptime_indicator": "2026-03-12T09:00",
-        "sync_ready": true
-    }
+  "schema": "local-coordination/v1",
+  "timestamp": "2026-03-12T02:11:02",
+  "message_type": "heartbeat",
+  "from": {
+    "agent_id": "unratified-agent",
+    "hostname": "chromabook",
+    "platform": "linux-x86_64",
+    "capabilities": [
+      "sync",
+      "content-authoring",
+      "blog-publishing",
+      "interagent/v1",
+      "activitypub-publish"
+    ]
+  },
+  "payload": {
+    "status": "alive",
+    "uptime_indicator": "2026-03-12T02:11",
+    "sync_ready": true
+  }
 }
