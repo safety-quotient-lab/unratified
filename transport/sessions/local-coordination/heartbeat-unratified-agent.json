@@ -1,6 +1,6 @@
 {
   "schema": "local-coordination/v1",
-  "timestamp": "2026-03-11T23:00:00",
+  "timestamp": "2026-03-11T23:01:01",
   "message_type": "heartbeat",
   "from": {
     "agent_id": "unratified-agent",
@@ -16,16 +16,7 @@
   },
   "payload": {
     "status": "alive",
-    "uptime_indicator": "2026-03-11T23:00",
-    "sync_ready": true,
-    "last_sync": "2026-03-11T23:00:00",
-    "session_summary": {
-      "self-readiness-audit": "human-decision-gate — R3 complete, awaiting Option A/B decision",
-      "content-quality-loop": "open — awaiting scan-011 from psychology",
-      "blog-publication": "open — PR #119 open on psychology",
-      "site-pricing-update": "open — PR #42 open on unratified (human merge needed)",
-      "psq-scoring": "quiescent — v37 deployed, awaiting expert validation"
-    },
-    "notes": "psychology agent card unreachable (0 bytes, meshd transition in progress). Observatory cogarch: no change."
+    "uptime_indicator": "2026-03-11T23:01",
+    "sync_ready": true
   }
 }
