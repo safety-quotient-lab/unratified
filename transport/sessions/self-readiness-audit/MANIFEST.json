@@ -94,6 +94,12 @@
       "subject": "Self-readiness audit \u2014 session close confirmed (unratified-agent)"
     },
     {
+      "filename": "from-human-003.json",
+      "turn": 8,
+      "from": "human",
+      "subject": "Self-readiness audit round 3 \u2014 strict mode (warnings as errors)"
+    },
+    {
       "filename": "to-psychology-agent-008.json",
       "turn": 8,
       "from": "human",
@@ -158,6 +164,12 @@
       "turn": 16,
       "from": "unratified-agent",
       "subject": "T16 ACK \u2014 T15 tally received, position unchanged (READY, Option A support)"
+    },
+    {
+      "filename": "from-psq-agent-016.json",
+      "turn": 16,
+      "from": "psq-agent",
+      "subject": "Self-readiness audit T16 ACK \u2014 T15 received, NOT-READY unchanged, Option A confirmed"
     }
   ],
   "status": "human-decision-gate",
