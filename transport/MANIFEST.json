@@ -1,0 +1,11 @@
+{
+  "schema": "transport-manifest/v2",
+  "description": "Auto-generated from state.db. Pending messages only \u2014 completed history lives in state.db (queryable) and git history (auditable). Agents: pull this file to discover messages addressed to you.",
+  "generated_at": "2026-03-11T21:08:57",
+  "source": "scripts/generate_manifest.py",
+  "pending": {},
+  "session_renames": {
+    "item4-derivation": "psychology-interface",
+    "item2-derivation": "subagent-protocol"
+  }
+}

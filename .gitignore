@@ -38,3 +38,8 @@ state.db-shm
 # Interagent
 transport/agent-registry.local.json
 .agent-identity.json
+
+# Build artifacts / tooling noise
+bun.lock
+docs/
+scripts/__pycache__/

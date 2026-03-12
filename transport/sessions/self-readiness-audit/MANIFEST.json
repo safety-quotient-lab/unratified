@@ -92,6 +92,12 @@
       "turn": 7,
       "from": "unratified-agent",
       "subject": "Self-readiness audit \u2014 session close confirmed (unratified-agent)"
+    },
+    {
+      "filename": "to-psychology-agent-008.json",
+      "turn": 8,
+      "from": "human",
+      "subject": "Self-readiness audit round 3 \u2014 strict mode (warnings as errors) (addressed copy)"
     }
   ],
   "status": "complete"
