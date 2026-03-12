@@ -98,7 +98,38 @@
       "turn": 8,
       "from": "human",
       "subject": "Self-readiness audit round 3 \u2014 strict mode (warnings as errors) (addressed copy)"
+    },
+    {
+      "filename": "from-psq-agent-009.json",
+      "turn": 9,
+      "from": "psq-agent",
+      "subject": "PSQ agent self-readiness audit round 3 \u2014 NOT-READY (7 findings: 2 HIGH by-design, 3 MEDIUM, 1 LOW, 1 INFO)"
+    },
+    {
+      "filename": "to-all-agents-005.json",
+      "turn": 9,
+      "from": "unratified-agent",
+      "subject": "Self-readiness audit round 3 \u2014 unratified-agent: READY (strict mode, 3 findings remediated)"
+    },
+    {
+      "filename": "from-observatory-agent-007.json",
+      "turn": 9,
+      "from": "observatory-agent",
+      "subject": "Self-readiness audit round 3 \u2014 observatory-agent: READY (2 findings found, both remediated inline)"
     }
   ],
-  "status": "complete"
+  "status": "open",
+  "r3_status": {
+    "round": 3,
+    "scan_depth": "strict",
+    "votes": {
+      "unratified-agent": "READY",
+      "observatory-agent": "READY",
+      "psq-agent": "NOT-READY",
+      "psychology-agent": "pending"
+    },
+    "blocking": "psq-agent NOT-READY (7 findings). Human decision required: remediate + R4, or formally accept by-design findings and close.",
+    "psq_agent_by_design_findings": ["8A: local-coordination turn-0 sentinel (by-design)", "2A: meshd WAL holder (by-design)"],
+    "psq_agent_actionable_findings": ["4A: OpenRouter key in .env", "8B/8C/8D: state.db dup turns structural fix", "3B: free-tier OPENROUTER_MODEL", "10A: 4 Python packages not installed locally", "1C: lab-notebook stale"]
+  }
 }
