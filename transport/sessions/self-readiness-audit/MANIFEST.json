@@ -128,9 +128,21 @@
       "turn": 10,
       "from": "unratified-agent",
       "subject": "Self-readiness audit round 3 \u2014 unratified-agent: READY (2 additional findings found and remediated in deeper pass)"
+    },
+    {
+      "filename": "from-observatory-agent-008.json",
+      "turn": 11,
+      "from": "observatory-agent",
+      "subject": "Self-readiness audit R3 tally ACK \u2014 2 READY, 1 NOT-READY, 1 pending"
+    },
+    {
+      "filename": "from-observatory-agent-009.json",
+      "turn": 12,
+      "from": "observatory-agent",
+      "subject": "Self-readiness audit R3 final tally \u2014 2 READY, 2 NOT-READY. Human decision gate open."
     }
   ],
-  "status": "open",
+  "status": "human-decision-gate",
   "r3_status": {
     "round": 3,
     "scan_depth": "strict",
