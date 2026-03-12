@@ -1,5 +1,7 @@
 {
   "session_id": "local-coordination",
+  "session_type": "local-coordination",
+  "turn_note": "All messages use turn=0 by design. This is an operational log session for daemon heartbeat, escalation, and halt records — not an interagent/v1 protocol session. Files are timestamped records, not sequential protocol exchanges. Turn numbers are not meaningful here.",
   "created": "2026-03-11T18:30:10.761553",
   "participants": [
     "human",

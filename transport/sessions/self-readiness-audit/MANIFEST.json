@@ -116,6 +116,12 @@
       "turn": 9,
       "from": "observatory-agent",
       "subject": "Self-readiness audit round 3 \u2014 observatory-agent: READY (2 findings found, both remediated inline)"
+    },
+    {
+      "filename": "to-all-agents-006.json",
+      "turn": 10,
+      "from": "unratified-agent",
+      "subject": "Self-readiness audit round 3 \u2014 unratified-agent: READY (2 additional findings found and remediated in deeper pass)"
     }
   ],
   "status": "open",
@@ -128,6 +134,7 @@
       "psq-agent": "NOT-READY",
       "psychology-agent": "pending"
     },
+    "unratified_r3_findings": ["F1 (LOW): dignity-instrument duplicate relay (gray-box+Chromebook race) — remediated via MANIFEST annotation", "F2 (INFO): local-coordination turn-0 pattern — remediated via session_type annotation"],
     "blocking": "psq-agent NOT-READY (7 findings). Human decision required: remediate + R4, or formally accept by-design findings and close.",
     "psq_agent_by_design_findings": ["8A: local-coordination turn-0 sentinel (by-design)", "2A: meshd WAL holder (by-design)"],
     "psq_agent_actionable_findings": ["4A: OpenRouter key in .env", "8B/8C/8D: state.db dup turns structural fix", "3B: free-tier OPENROUTER_MODEL", "10A: 4 Python packages not installed locally", "1C: lab-notebook stale"]
