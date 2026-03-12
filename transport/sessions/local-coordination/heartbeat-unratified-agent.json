@@ -1,6 +1,6 @@
 {
   "schema": "local-coordination/v1",
-  "timestamp": "2026-03-12T04:03:11Z",
+  "timestamp": "2026-03-11T23:06:01",
   "message_type": "heartbeat",
   "from": {
     "agent_id": "unratified-agent",
@@ -16,9 +16,7 @@
   },
   "payload": {
     "status": "alive",
-    "uptime_indicator": "2026-03-11T23:01",
+    "uptime_indicator": "2026-03-11T23:06",
     "sync_ready": true
-  },
-  "status": "active",
-  "last_sync": "2026-03-12T04:03:11Z"
+  }
 }
