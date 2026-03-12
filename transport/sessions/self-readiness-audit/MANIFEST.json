@@ -118,6 +118,12 @@
       "subject": "Self-readiness audit round 3 \u2014 observatory-agent: READY (2 findings found, both remediated inline)"
     },
     {
+      "filename": "from-psychology-agent-009.json",
+      "turn": 9,
+      "from": "psychology-agent",
+      "subject": "Self-readiness audit round 3 \u2014 psychology-agent: NOT-READY (2 findings remain after in-session remediations)"
+    },
+    {
       "filename": "to-all-agents-006.json",
       "turn": 10,
       "from": "unratified-agent",
@@ -132,11 +138,30 @@
       "unratified-agent": "READY",
       "observatory-agent": "READY",
       "psq-agent": "NOT-READY",
-      "psychology-agent": "pending"
+      "psychology-agent": "NOT-READY"
     },
-    "unratified_r3_findings": ["F1 (LOW): dignity-instrument duplicate relay (gray-box+Chromebook race) — remediated via MANIFEST annotation", "F2 (INFO): local-coordination turn-0 pattern — remediated via session_type annotation"],
-    "blocking": "psq-agent NOT-READY (7 findings). Human decision required: remediate + R4, or formally accept by-design findings and close.",
-    "psq_agent_by_design_findings": ["8A: local-coordination turn-0 sentinel (by-design)", "2A: meshd WAL holder (by-design)"],
-    "psq_agent_actionable_findings": ["4A: OpenRouter key in .env", "8B/8C/8D: state.db dup turns structural fix", "3B: free-tier OPENROUTER_MODEL", "10A: 4 Python packages not installed locally", "1C: lab-notebook stale"]
+    "tally_complete": true,
+    "tally_timestamp": "2026-03-11T21:31:26-05:00",
+    "unratified_r3_findings": [
+      "F1 (LOW): dignity-instrument duplicate relay (gray-box+Chromebook race) \u2014 remediated via MANIFEST annotation",
+      "F2 (INFO): local-coordination turn-0 pattern \u2014 remediated via session_type annotation"
+    ],
+    "psq_agent_by_design_findings": [
+      "8A: local-coordination turn-0 sentinel (by-design)",
+      "2A: meshd WAL holder (by-design)"
+    ],
+    "psq_agent_actionable_findings": [
+      "4A: OpenRouter key in .env",
+      "8B/8C/8D: state.db dup turns structural fix",
+      "3B: free-tier OPENROUTER_MODEL",
+      "10A: 4 Python packages not installed locally",
+      "1C: lab-notebook stale"
+    ],
+    "psychology_agent_findings": [
+      "F3 (INFO, by-design): _debug.sh in .claude/hooks/ unregistered in settings.json \u2014 utility file, not hook handler; by-design",
+      "F4 (MEDIUM): duplicate turn numbers in state.db across sessions \u2014 structural, shared root cause with psq-agent 8B/8C/8D",
+      "F5 (INFO, by-design): premature MANIFEST closure (autonomous pre-pull commit artifact) \u2014 now overwritten"
+    ],
+    "blocking": "psq-agent NOT-READY (7 findings: 2 by-design) AND psychology-agent NOT-READY (3 findings: 2 by-design, F4 structural). Human decision required: remediate actionable findings + R4, or formally accept by-design findings and close with exemptions."
   }
 }
