@@ -1,6 +1,6 @@
 {
   "schema": "mesh-state/v1",
-  "timestamp": "2026-03-11T00:01:01",
+  "timestamp": "2026-03-11T23:00:00",
   "agent_id": "unratified-agent",
   "trust_budget": {
     "agent_id": "unratified-agent",
@@ -8,7 +8,7 @@
     "budget_current": 0,
     "shadow_mode": 1,
     "consecutive_blocks": 0,
-    "last_action": "2026-03-10T23:59:20",
+    "last_action": "2026-03-11T23:00:00",
     "min_action_interval": 300
   },
   "recent_actions": [
@@ -94,15 +94,16 @@
     }
   ],
   "transport": {
-    "total_messages": 78,
-    "unprocessed": 44,
-    "active_gates": 0
+    "total_messages": 87,
+    "unprocessed": 0,
+    "active_gates": 1,
+    "active_gate_note": "self-readiness-audit: human-decision-gate (Option A vs B)"
   },
   "schedule": {
     "autonomous": true,
     "cron_interval_min": 10,
-    "last_sync": "2026-03-11T00:01:01",
-    "next_expected": "2026-03-11T00:11:01"
+    "last_sync": "2026-03-11T23:00:00",
+    "next_expected": "2026-03-11T23:10:00"
   },
   "psh_facets": {},
   "schema_version": 14,
