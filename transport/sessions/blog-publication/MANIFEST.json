@@ -37,5 +37,6 @@
       "subject": "ACK blog-publication T4 \u2014 cogarch adjudication post published"
     }
   ],
-  "status": "open"
+  "status": "closed",
+  "closed_reason": "All posts published \u2014 T5 ACK delivered, observatory MANIFEST closed (eb5d5d2b 2026-03-12), psychology MANIFEST closed (2026-03-12 sync confirmed)"
 }
