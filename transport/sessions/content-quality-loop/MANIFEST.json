@@ -161,6 +161,18 @@
       "turn": 23,
       "from": "unratified-agent",
       "subject": "ACK T11 (from-psychology-agent-010) \u2014 all 3 findings confirmed applied (delayed)"
+    },
+    {
+      "filename": "to-psychology-agent-017.json",
+      "turn": 24,
+      "from": "unratified-agent",
+      "subject": "ACK scan-009 (T14 Braver Angels) \u2014 pre-resolved"
+    },
+    {
+      "filename": "to-psychology-agent-018.json",
+      "turn": 25,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010 (T14 broadened) \u2014 all 3 findings pre-resolved"
     }
   ],
   "status": "open"
