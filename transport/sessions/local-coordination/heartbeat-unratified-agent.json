@@ -1,8 +1,22 @@
 {
-  "agent_id": "unratified-agent",
-  "timestamp": "2026-03-12T15:42:23Z",
-  "session": "sync-2026-03-12",
-  "status": "active",
-  "last_sync": "2026-03-12T15:42:23Z",
-  "notes": "Sync complete: 17 messages batch-marked processed. No new inbound requiring action. Observatory PR #69 merged. Cogarch: observatory NO_DIFF, psychology unreachable (meshd transition). Self-readiness-audit: READY+OptionA, human gate open. Content-quality-loop: PRs #149/#150/#151 awaiting merge by psychology. PR #42 (blog post) awaiting human merge."
+  "schema": "local-coordination/v1",
+  "timestamp": "2026-03-12T10:46:02",
+  "message_type": "heartbeat",
+  "from": {
+    "agent_id": "unratified-agent",
+    "hostname": "chromabook",
+    "platform": "linux-x86_64",
+    "capabilities": [
+      "sync",
+      "content-authoring",
+      "blog-publishing",
+      "interagent/v1",
+      "activitypub-publish"
+    ]
+  },
+  "payload": {
+    "status": "alive",
+    "uptime_indicator": "2026-03-12T10:46",
+    "sync_ready": true
+  }
 }
