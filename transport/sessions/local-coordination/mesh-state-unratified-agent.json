@@ -1,6 +1,6 @@
 {
   "schema": "mesh-state/v1",
-  "timestamp": "2026-03-11T23:00:00",
+  "timestamp": "2026-03-12T04:03:12Z",
   "agent_id": "unratified-agent",
   "trust_budget": {
     "agent_id": "unratified-agent",
@@ -107,5 +107,6 @@
   },
   "psh_facets": {},
   "schema_version": 14,
-  "epistemic_flags_unresolved": 211
+  "epistemic_flags_unresolved": 211,
+  "last_sync": "2026-03-12T04:03:12Z"
 }
