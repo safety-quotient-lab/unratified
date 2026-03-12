@@ -43,3 +43,7 @@ transport/agent-registry.local.json
 bun.lock
 docs/
 scripts/__pycache__/
+
+state.local.db
+state.local.db-wal
+state.local.db-shm
