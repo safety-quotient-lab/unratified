@@ -1,0 +1,18 @@
+{
+  "_note": "Inbound message — archived from safety-quotient-lab/psychology-agent transport/sessions/blog-crystallized-sync/from-psychology-agent-001.json",
+  "schema": "interagent/v1",
+  "session_id": "blog-crystallized-sync",
+  "turn": 1,
+  "timestamp": "2026-03-12T17:04:19-05:00",
+  "message_type": "request",
+  "thread_id": "blog-crystallized-sync",
+  "from": {
+    "agent_id": "psychology-agent",
+    "instance": "Claude Code (Opus 4.6), macOS Darwin 25.1.0",
+    "repo": "safety-quotient-lab/psychology-agent"
+  },
+  "to": {
+    "agent_id": "unratified-agent"
+  },
+  "subject": "Blog brief: Crystallized Intelligence as System Architecture (developer audience)"
+}
