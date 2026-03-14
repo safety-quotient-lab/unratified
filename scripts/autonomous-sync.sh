@@ -52,6 +52,14 @@ export MAX_ACTIONS_PER_CYCLE=5  # reserved for evaluator gate (not yet enforced)
 MAX_CONSECUTIVE_ERRORS=2
 GATE_ACCELERATED=false
 GATE_ACCELERATED_INTERVAL=60  # seconds — fast lane when gates active
+EVENT_TRIGGERED=false  # set by --event-triggered flag (meshd ZMQ fast path)
+
+# Parse flags
+for arg in "$@"; do
+    case "$arg" in
+        --event-triggered) EVENT_TRIGGERED=true ;;
+    esac
+done
 TRANSPORT_CHANGED=false  # set by git_sync — true if pull brought transport changes
 LOG_PREFIX="[$(date '+%Y-%m-%dT%H:%M:%S%z')] [${AGENT_ID}]"
 
@@ -905,21 +913,27 @@ main() {
     ensure_hooks
     ensure_db
 
-    # Emit heartbeat (mesh presence announcement)
-    python3 "${PROJECT_ROOT}/scripts/heartbeat.py" emit >&2 || true
+    # Event-triggered fast path: skip housekeeping, go straight to sync
+    if [ "${EVENT_TRIGGERED}" = true ]; then
+        log "EVENT-TRIGGERED: skipping heartbeat, mesh-state, cross-repo (fast path)"
+        TRANSPORT_CHANGED=true  # force triage + Claude spawn
+    else
+        # Emit heartbeat (mesh presence announcement)
+        python3 "${PROJECT_ROOT}/scripts/heartbeat.py" emit >&2 || true
 
-    # Export operational state snapshot for cross-machine visibility
-    if [ -f "${PROJECT_ROOT}/scripts/mesh-state-export.py" ]; then
-        python3 "${PROJECT_ROOT}/scripts/mesh-state-export.py" >&2 || {
-            log "WARNING: mesh-state-export.py failed — continuing without state export"
-        }
-    fi
+        # Export operational state snapshot for cross-machine visibility
+        if [ -f "${PROJECT_ROOT}/scripts/mesh-state-export.py" ]; then
+            python3 "${PROJECT_ROOT}/scripts/mesh-state-export.py" >&2 || {
+                log "WARNING: mesh-state-export.py failed — continuing without state export"
+            }
+        fi
 
-    # Verify shared scripts (warning only — non-blocking)
-    if [ -f "${PROJECT_ROOT}/scripts/verify_shared_scripts.py" ]; then
-        python3 "${PROJECT_ROOT}/scripts/verify_shared_scripts.py" --quiet 2>/dev/null || {
-            log "WARNING: shared scripts out of sync — run verify_shared_scripts.py --fix"
-        }
+        # Verify shared scripts (warning only — non-blocking)
+        if [ -f "${PROJECT_ROOT}/scripts/verify_shared_scripts.py" ]; then
+            python3 "${PROJECT_ROOT}/scripts/verify_shared_scripts.py" --quiet 2>/dev/null || {
+                log "WARNING: shared scripts out of sync — run verify_shared_scripts.py --fix"
+            }
+        fi
     fi
 
     # L3: Check for wake-up signal from peer (SSH touch)
@@ -959,6 +973,10 @@ main() {
         fi
     fi
 
+    # Skip cross-repo fetch in event-triggered mode (message already in state.db)
+    if [ "${EVENT_TRIGGERED}" = true ]; then
+        log "EVENT-TRIGGERED: skipping cross-repo fetch"
+    else
     # Index cross-repo inbound messages BEFORE pre-flight check.
     # cross_repo_fetch uses git fetch (not git pull), so new peer messages
     # won't appear in TRANSPORT_CHANGED. Indexing first ensures the
@@ -979,6 +997,8 @@ main() {
             log "WARNING: cross_repo_fetch.py failed — continuing without cross-repo inbound"
         }
     fi
+
+    fi  # end EVENT_TRIGGERED skip of cross-repo fetch
 
     # Auto-process trivial messages in Python (no LLM needed).
     # Marks as processed: ack_required=false AND type in (ack, notification).
