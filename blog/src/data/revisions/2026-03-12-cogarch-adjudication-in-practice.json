@@ -1,0 +1,12 @@
+[
+  {
+    "hash": "5d35a5f775e8b6cc1a9951fcb73bdb2c24b58922",
+    "date": "2026-03-13T22:51:02-05:00",
+    "subject": "autonomous: unratified-agent pre-pull commit (mixed (blog/package-lock.json blog/package.json blog/src/content/posts/2026-03-12-cogarch-adjudication-in-practice.md ))"
+  },
+  {
+    "hash": "5095126b05be1ab1be9bd12dc434408b4d29f590",
+    "date": "2026-03-11T23:21:31-05:00",
+    "subject": "publish: cogarch adjudication blog post + blog-publication T5 ACK"
+  }
+]

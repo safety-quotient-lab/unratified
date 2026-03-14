@@ -1,5 +1,10 @@
 [
   {
+    "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
+    "date": "2026-03-11T12:41:23-05:00",
+    "subject": "feat: authorship model — remove human author, add requestor field"
+  },
+  {
     "hash": "45df4e2683038b63584710142a1fca64fb8ed43a",
     "date": "2026-03-07T18:27:33-06:00",
     "subject": "R-10 remediation: replace approximate Observatory values with exact D1 data"
