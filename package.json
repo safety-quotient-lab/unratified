@@ -8,7 +8,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
+    "check": "cd blog && npx astro check",
     "astro": "astro",
     "dev:blog": "cd blog && npm run dev",
     "build:blog": "cd blog && npm run build",
@@ -25,12 +25,13 @@
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "svelte": "^5.53.6",
-    "topojson-client": "^3.1.0",
-    "typescript": "^5.9.3"
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.7",
     "@types/d3-geo": "^3.1.0",
     "@types/d3-selection": "^3.0.11",
-    "@types/topojson-client": "^3.1.5"
+    "@types/topojson-client": "^3.1.5",
+    "typescript": "^5.9.3"
   }
 }
