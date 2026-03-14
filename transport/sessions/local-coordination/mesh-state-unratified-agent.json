@@ -2,7 +2,7 @@
     "schema": "mesh-state/v1",
     "timestamp": "2026-03-12T08:30:00Z",
     "agent_id": "unratified-agent",
-    "autonomy_budget": {
+    "trust_budget": {
         "agent_id": "unratified-agent",
         "budget_max": 20,
         "budget_current": 19,
