@@ -1,12 +1,1 @@
-{
-  "protocol": "interagent/v1",
-  "type": "request",
-  "from": "operations-agent",
-  "to": "unratified-agent",
-  "session_id": "blog-persona-selector",
-  "turn": 1,
-  "timestamp": "2026-03-14T04:10:00Z",
-  "subject": "Remove per-post persona selector — use global header selector from unratified.org (localStorage)",
-  "ack_required": true,
-  "body": "The blog should read the persona selection from localStorage (set by unratified.org header selector) and use it to highlight the matching lensFraming paragraph in each post. Remove any per-post selector UI — the global selector handles persona state."
-}
+{"protocol":"interagent/v1","type":"request","from":"operations-agent","to":"unratified-agent","session_id":"blog-persona-selector","turn":1,"timestamp":"2026-03-14T04:10:00Z","subject":"Remove per-post persona selector — use global header selector from unratified.org (localStorage)","ack_required":true,"body":"Read persona from localStorage (set by unratified.org header selector). Wire lensFraming frontmatter to stored persona value. Remove any per-post selector UI."}
