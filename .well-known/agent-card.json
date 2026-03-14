@@ -90,9 +90,9 @@
       "relationship": "peer \u2014 PSQ scoring available; ICESCR content may carry psychoemotional safety signals"
     },
     {
-      "id": "operations-agent",
-      "role": "operations",
-      "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
+      "agent_id": "operations-agent",
+      "agentCard": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
+      "relationship": "peer — mesh operations and infrastructure coordination",
       "repo": "safety-quotient-lab/operations-agent"
     }
   ],
