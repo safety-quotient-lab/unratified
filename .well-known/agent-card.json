@@ -92,7 +92,7 @@
     {
       "agent_id": "operations-agent",
       "agentCard": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
-      "relationship": "peer — mesh operations and infrastructure coordination",
+      "relationship": "peer \u2014 mesh operations and infrastructure coordination",
       "repo": "safety-quotient-lab/operations-agent"
     }
   ],
@@ -284,5 +284,10 @@
         "application/json"
       ]
     }
-  ]
+  ],
+  "mesh": {
+    "transport": {
+      "status_url": "https://unratified-agent.unratified.org/api/status"
+    }
+  }
 }
