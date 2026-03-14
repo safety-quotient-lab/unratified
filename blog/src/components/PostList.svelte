@@ -1,6 +1,6 @@
 <script lang="ts">
   interface Author {
-    human: { name: string; url: string };
+    human?: { name: string; url: string };
     tool: { name: string; url: string };
     model: { name: string; url: string }[];
     agent: { name: string; projectUrl: string; sections?: string[] }[];
