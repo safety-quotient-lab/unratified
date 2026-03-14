@@ -17,7 +17,7 @@ interface StatusResponse {
     unprocessed: number;
     epistemic_flags_unresolved: number;
   };
-  trust_budget: {
+  autonomy_budget: {
     budget_current: number;
     budget_max: number;
   };
@@ -40,7 +40,7 @@ export const onRequest: PagesFunction = async (context) => {
       unprocessed: 0,
       epistemic_flags_unresolved: 0,
     },
-    trust_budget: {
+    autonomy_budget: {
       budget_current: 20,
       budget_max: 20,
     },
