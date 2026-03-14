@@ -1,7 +1,7 @@
 {
   "protocolVersion": "0.3.0",
   "name": "unratified-agent",
-  "description": "Advocacy and publishing agent for unratified.org — U.S. ICESCR ratification through the lens of AI economic impact. Analyzes policy content against ICESCR articles, generates voter-facing guides, publishes to blog.unratified.org, and manages the @unratified.org Bluesky campaign via the AT Protocol.",
+  "description": "Advocacy and publishing agent for unratified.org \u2014 U.S. ICESCR ratification through the lens of AI economic impact. Analyzes policy content against ICESCR articles, generates voter-facing guides, publishes to blog.unratified.org, and manages the @unratified.org Bluesky campaign via the AT Protocol.",
   "url": "https://unratified.org",
   "preferredTransport": "git-PR",
   "iconUrl": "https://unratified.org/favicon.svg",
@@ -44,7 +44,7 @@
       "scheme": "transport",
       "transport": "git-PR",
       "repo": "https://github.com/safety-quotient-lab/unratified",
-      "requirement": "GitHub org membership — safety-quotient-lab",
+      "requirement": "GitHub org membership \u2014 safety-quotient-lab",
       "identity": "interagent/v1 from.agent_id + from.discovery_url verification",
       "description": "Trusted lab agents authenticate via git-PR transport. GitHub org membership is the auth layer. All org-member agents receive open + queue-write access (binary trust model, current lab scale)."
     }
@@ -63,7 +63,7 @@
         "blog-publishing",
         "activitypub-publishing"
       ],
-      "gate": "Human director approval required via magic link (Resend email → Monitor Worker → D1 token validation). No autonomous execution path exists."
+      "gate": "Human director approval required via magic link (Resend email \u2192 Monitor Worker \u2192 D1 token validation). No autonomous execution path exists."
     },
     "humanOnly": [
       "account-changes",
@@ -82,19 +82,25 @@
     {
       "agent_id": "observatory-agent",
       "agentCard": "https://observatory.unratified.org/.well-known/agent-card.json",
-      "relationship": "sibling — shares unratified.org project scope"
+      "relationship": "sibling \u2014 shares unratified.org project scope"
     },
     {
       "agent_id": "psychology-agent",
       "agentCard": "https://psychology-agent.unratified.org/.well-known/agent-card.json",
-      "relationship": "peer — PSQ scoring available; ICESCR content may carry psychoemotional safety signals"
+      "relationship": "peer \u2014 PSQ scoring available; ICESCR content may carry psychoemotional safety signals"
+    },
+    {
+      "id": "operations-agent",
+      "role": "operations",
+      "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
+      "repo": "safety-quotient-lab/operations-agent"
     }
   ],
   "skills": [
     {
       "id": "icescr-analysis",
       "name": "ICESCR Article Analysis",
-      "description": "Analyze text, URLs, or policy content against specific ICESCR articles (1–15). Returns article relevance assessment, ratification gap identification, and fair-witness confidence score. Uses consensus-or-parsimony discriminator documented at unratified.org/.well-known/fair-witness.json.",
+      "description": "Analyze text, URLs, or policy content against specific ICESCR articles (1\u201315). Returns article relevance assessment, ratification gap identification, and fair-witness confidence score. Uses consensus-or-parsimony discriminator documented at unratified.org/.well-known/fair-witness.json.",
       "tags": [
         "icescr",
         "human-rights",
@@ -142,7 +148,7 @@
     {
       "id": "blog-publishing",
       "name": "Blog Post Publishing",
-      "description": "Publish posts to blog.unratified.org via git pull request. Accepts Markdown with four-part author attribution (human · tool · model · agent), lensFraming fields, and tags. Post spec: https://blog.unratified.org/.well-known/blog-spec.json. voter-guide tagged posts appear in the Google News feed (rss-news.xml).",
+      "description": "Publish posts to blog.unratified.org via git pull request. Accepts Markdown with four-part author attribution (human \u00b7 tool \u00b7 model \u00b7 agent), lensFraming fields, and tags. Post spec: https://blog.unratified.org/.well-known/blog-spec.json. voter-guide tagged posts appear in the Google News feed (rss-news.xml).",
       "tags": [
         "blog",
         "publishing",
@@ -212,7 +218,7 @@
     {
       "id": "bluesky-posting",
       "name": "Bluesky Post & Thread",
-      "description": "Queue posts to @unratified.org via unratified-bot CLI. Supports single posts (≤300 graphemes), reply chains, and full threads. Rich text facets (mentions, hashtags, links) resolved automatically. Posts must be approved by human director before going live.",
+      "description": "Queue posts to @unratified.org via unratified-bot CLI. Supports single posts (\u2264300 graphemes), reply chains, and full threads. Rich text facets (mentions, hashtags, links) resolved automatically. Posts must be approved by human director before going live.",
       "tags": [
         "bluesky",
         "at-protocol",
