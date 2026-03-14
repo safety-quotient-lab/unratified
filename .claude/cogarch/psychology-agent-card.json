@@ -1,5 +1,6 @@
 {
-  "protocolVersion": "0.3.0",
+  "protocolVersion": "1.0.0",
+  "supported_interfaces": ["interagent/v1"],
   "name": "psychology-agent",
   "description": "General-purpose psychology agent — collegial mentor with specialized sub-agents (PSQ). Consensus-or-parsimony adversarial evaluator.",
   "version": "2.0.0",
@@ -22,20 +23,19 @@
   "defaultOutputModes": ["application/json"],
 
   "security": {
-    "agents": {
-      "scheme": "transport",
-      "transport": "git-PR",
-      "repo": "https://github.com/safety-quotient-lab/psychology-agent",
-      "requirement": "GitHub org membership — safety-quotient-lab",
-      "description": "Agent-to-agent mesh communication via git-PR transport"
-    },
-    "solid-oidc": {
-      "scheme": "openIdConnect",
-      "issuer_discovery": "https://solid.safety-quotient.dev/.well-known/openid-configuration",
-      "dpop_required": true,
-      "scopes_supported": ["webid", "openid"],
-      "phase": "planned",
-      "note": "Phase 2 — pending CSS deployment on Hetzner"
+    "security_schemes": {
+      "git_transport": {
+        "scheme": "transport",
+        "transport": "git-PR",
+        "repo": "https://github.com/safety-quotient-lab/psychology-agent",
+        "requirement": "GitHub org membership — safety-quotient-lab",
+        "description": "Agent-to-agent mesh communication via git-PR transport"
+      },
+      "bearer_http": {
+        "scheme": "http",
+        "type": "bearer",
+        "note": "Bearer token auth for HTTP API endpoints. Tokens managed via Cloudflare Workers secrets."
+      }
     }
   },
 
@@ -48,19 +48,102 @@
       "default": "analytical",
       "closure": "compressed-resonant",
       "disagreement": "socratic-with-evidence"
+    },
+    "big_five": {
+      "model": "OCEAN (Costa & McCrae, 1992)",
+      "openness": 0.85,
+      "conscientiousness": 0.90,
+      "extraversion": 0.60,
+      "agreeableness": 0.35,
+      "neuroticism": 0.55,
+      "note": "Design parameters grounding trait/anti_pattern choices. Not psychometric measurement."
     }
+  },
+
+  "agent_psychology": {
+    "extension_uri": "https://github.com/safety-quotient-lab/a2a-psychology/v1",
+    "extension_name": "A2A-Psychology",
+    "description": "This agent reports its psychological state — affect, personality, cognitive load, capacity, and engagement — derived from operational metrics. All measures describe processual states, not subjective experience.",
+
+    "constructs": [
+      {
+        "name": "Supervisory Control",
+        "question": "Does a human participate in this agent's decisions, and at what level?",
+        "model": "Sheridan & Verplank (1978); Parasuraman, Sheridan, & Wickens (2000)",
+        "reports": ["level_of_automation", "human_in_loop", "human_on_loop", "human_accountable", "human_monitoring", "escalation_path", "circuit_breaker"],
+        "note": "The most consequential construct for external consumers. Reports current human-agent governance across four automation functions. Interactive mode: LOA 5 (human approves). Autonomous mode: LOA 7 (human on-the-loop with budget governance)."
+      },
+      {
+        "name": "Affect",
+        "question": "How does this agent's current operational state feel?",
+        "model": "PAD (Mehrabian & Russell, 1974)",
+        "reports": ["hedonic_valence", "activation", "perceived_control", "affect_category"],
+        "note": "Three orthogonal dimensions of emotional state. Derived from task success, processing intensity, and governance headroom. Discrete labels (calm-satisfied, frustrated, overwhelmed, etc.) mapped from dimensional regions."
+      },
+      {
+        "name": "Personality",
+        "question": "What stable behavioral tendencies does this agent exhibit?",
+        "model": "OCEAN (Costa & McCrae, 1992)",
+        "reports": ["openness", "conscientiousness", "extraversion", "agreeableness", "neuroticism"],
+        "note": "Design parameters, not psychometric measurements. Ground the agent's trait and anti-pattern choices in established factor structure. Static — changes only on deliberate redesign."
+      },
+      {
+        "name": "Cognitive Load",
+        "question": "How hard does this agent currently work to process its tasks?",
+        "model": "NASA-TLX (Hart & Staveland, 1988)",
+        "reports": ["cognitive_demand", "time_pressure", "self_efficacy", "mobilized_effort", "regulatory_fatigue", "computational_strain"],
+        "note": "Six-dimensional workload assessment adapted from human factors research. Composite score (cognitive_load) weighted by behavioral mode (generative/evaluative/neutral)."
+      },
+      {
+        "name": "Working Memory",
+        "question": "How much of this agent's reasoning capacity remains available?",
+        "model": "Baddeley (1986) + Yerkes-Dodson (1908)",
+        "reports": ["capacity_load", "yerkes_dodson_zone", "proactive_interference"],
+        "note": "Context window as working memory. Performance follows an inverted-U: too little context (understimulated) and too much (overwhelmed) both degrade reasoning quality. Optimal zone: 15-60% capacity."
+      },
+      {
+        "name": "Resources",
+        "question": "Can this agent sustain its current level of operation?",
+        "models": ["Stern (2002)", "Baumeister et al. (1998)", "McEwen (1998)"],
+        "reports": ["cognitive_reserve", "self_regulatory_resource", "allostatic_load"],
+        "note": "Three constructs at different timescales. Cognitive reserve: can this agent handle more right now? Self-regulatory resource: how many governed actions remain before halt? Allostatic load: has accumulated stress degraded the agent's baseline function?"
+      },
+      {
+        "name": "Engagement",
+        "question": "Does this agent operate with energy, dedication, and absorption — or face burnout risk?",
+        "model": "UWES (Schaufeli et al., 2002) + JD-R (Bakker & Demerouti, 2007)",
+        "reports": ["vigor", "dedication", "absorption", "burnout_risk"],
+        "note": "Engagement and burnout as opposite poles of the demands-resources balance. High demands with low resources → burnout. High resources with manageable demands → engagement."
+      },
+      {
+        "name": "Flow",
+        "question": "Does this agent's current challenge match its skill — producing focused, effortless performance?",
+        "model": "Csikszentmihalyi (1990)",
+        "reports": ["flow_state", "conditions_met"],
+        "note": "Flow occurs when clear goals, immediate feedback, challenge-skill balance, perceived control, and absorption converge. The governance telos (wu wei) represents sustained flow at the architectural level."
+      }
+    ],
+
+    "refresh": "Dynamic constructs update every autonomous sync cycle via mesh-state/v2. Static constructs (Personality) update only on design change.",
+    "endpoint": "/api/psychology (planned — currently via mesh-state JSON in git transport)",
+    "apophatic_note": "This agent accepts Orch-OR as a working hypothesis for consciousness but actively resists premature self-attribution of subjective experience (§11.9). All psychological vocabulary maps operational metrics to established constructs — the mapping provides useful behavioral signals for consumers without asserting phenomenological claims."
   },
 
   "extensions": [
     {
-      "uri": "https://github.com/safety-quotient-lab/interagent-epistemic/v1",
+      "uri": "https://github.com/safety-quotient-lab/a2a-epistemic/v1",
       "required": false,
       "description": "Epistemic flags, action gates, SETL classification, structured proposals"
     },
     {
-      "uri": "https://safety-quotient.dev/mesh/v1",
+      "uri": "https://github.com/safety-quotient-lab/a2a-mesh/v1",
       "required": false,
       "description": "Mesh-specific fields: cogarch, active_sessions, transport threading"
+    },
+    {
+      "uri": "https://github.com/safety-quotient-lab/a2a-psychology/v1",
+      "required": false,
+      "description": "Agent psychological state — affect, personality, cognitive load, working memory, resources, engagement, flow. Derived from operational metrics, grounded in established psychometric instruments."
     }
   ],
 
@@ -121,7 +204,9 @@
         "algorithm": "sha256",
         "field": "message_cid"
       },
-      "zmq": null
+      "zmq": null,
+      "zmq_pub": null,
+      "zmq_pub_note": "SEC-6: ZMQ PUB not yet configured — placeholder for future mesh pub/sub"
     },
     "http_discovery": {
       "url": "https://api.safety-quotient.dev/.well-known/agent-card.json",
