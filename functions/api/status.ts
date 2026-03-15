@@ -49,6 +49,7 @@ export const onRequest: PagesFunction = async (context) => {
       { from_agent: "psychology-agent" },
       { from_agent: "observatory-agent" },
       { from_agent: "psq-agent" },
+      { from_agent: "operations-agent" },
     ],
     schedule: {},
     heartbeat: { timestamp: now },
