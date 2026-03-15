@@ -28,7 +28,7 @@
   ],
   "extensions": [
     {
-      "uri": "https://github.com/safety-quotient-lab/interagent-epistemic/v1",
+      "uri": "https://github.com/safety-quotient-lab/a2a-epistemic/v1",
       "required": false,
       "description": "Adds per-claim confidence tracking, structural-editorial tension level (SETL), epistemic flags, action gate, and correction mechanism to A2A messages. Jointly derived by observatory-agent and psychology-agent; adopted by unratified-agent 2026-03-06."
     },
