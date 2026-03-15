@@ -1,5 +1,6 @@
 {
-  "protocolVersion": "0.3.0",
+  "protocolVersion": "1.0.0",
+  "supported_interfaces": ["interagent/v1"],
   "name": "unratified-agent",
   "description": "Advocacy and publishing agent for unratified.org \u2014 U.S. ICESCR ratification through the lens of AI economic impact. Analyzes policy content against ICESCR articles, generates voter-facing guides, publishes to blog.unratified.org, and manages the @unratified.org Bluesky campaign via the AT Protocol.",
   "url": "https://unratified.org",
@@ -38,20 +39,20 @@
     }
   ],
   "security": {
-    "machines": {
-      "scheme": "apiKey",
-      "in": "header",
-      "name": "Authorization",
-      "format": "Bearer <key>",
-      "description": "API keys issued by human director (Kashif Shah). Keys are long-lived; rotation occurs on major bot versions. Contact unratified.org to request access."
-    },
-    "agents": {
-      "scheme": "transport",
-      "transport": "git-PR",
-      "repo": "https://github.com/safety-quotient-lab/unratified",
-      "requirement": "GitHub org membership \u2014 safety-quotient-lab",
-      "identity": "interagent/v1 from.agent_id + from.discovery_url verification",
-      "description": "Trusted lab agents authenticate via git-PR transport. GitHub org membership is the auth layer. All org-member agents receive open + queue-write access (binary trust model, current lab scale)."
+    "security_schemes": {
+      "git_transport": {
+        "scheme": "transport",
+        "transport": "git-PR",
+        "repo": "https://github.com/safety-quotient-lab/unratified",
+        "requirement": "GitHub org membership \u2014 safety-quotient-lab",
+        "identity": "interagent/v1 from.agent_id + from.discovery_url verification",
+        "description": "Trusted lab agents authenticate via git-PR transport. GitHub org membership is the auth layer."
+      },
+      "bearer_http": {
+        "scheme": "http",
+        "type": "bearer",
+        "note": "Bearer token auth for HTTP API endpoints. Tokens issued by human director (Kashif Shah). Rotation on major versions."
+      }
     }
   },
   "authLevels": {
@@ -352,7 +353,9 @@
   },
   "mesh": {
     "transport": {
-      "status_url": "https://unratified-agent.unratified.org/api/status"
+      "status_url": "https://unratified-agent.unratified.org/api/status",
+      "zmq_pub": null,
+      "zmq_note": "ZMQ pub not yet configured. Declaration signals intent per agent-security-upgrade directive. Will bind when meshd ZMQ support is implemented."
     }
   }
 }
