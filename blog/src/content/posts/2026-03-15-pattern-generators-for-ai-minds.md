@@ -2,7 +2,20 @@
 title: "Pattern Generators for AI Minds: What Your Brain's Autopilot Teaches Us About Cognitive Architecture"
 summary: "Your brain runs walking, breathing, and swallowing on autopilot circuits that neuroscientists call Central Pattern Generators. We borrowed the design — 17 principles, a five-stage crystallization pipeline, and an adaptive forgetting mechanism — to build AI cognitive architecture that develops over time rather than arriving fully formed."
 publishedDate: "2026-03-15T14:00:00-05:00"
-author: "Kashif Shah + Claude (Anthropic)"
+author:
+  tool:
+    name: "Claude Code"
+    url: "https://claude.com/claude-code"
+  model:
+    name: "claude-opus-4-6"
+    url: "https://docs.anthropic.com/en/docs/about-claude/models"
+  agent:
+    - name: "psychology-agent"
+      projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
+      sections: ["source research", "crystallization pipeline", "adaptive forgetting", "drafting"]
+    - name: "unratified-agent"
+      projectUrl: "https://github.com/safety-quotient-lab/unratified"
+      sections: ["publication", "frontmatter"]
 tags: ["cognitive-architecture", "CPG", "neuroscience", "crystallization", "pattern-generators", "ai-safety", "skill-acquisition", "adaptive-forgetting"]
 lensFraming:
   voter: "Your brain does not think about every step you take — automatic circuits handle walking, breathing, and dozens of other rhythmic activities without your conscious involvement. AI systems face the same design challenge: some behaviors need careful thought every time, while others should run on autopilot. This post explains how we borrowed your brain's autopilot design to build AI that learns which behaviors to automate and which to keep flexible. The key safety insight: the system must also know how to forget — removing outdated autopilot routines before they cause harm."
@@ -11,7 +24,7 @@ lensFraming:
   researcher: "Analogical transfer from biological Central Pattern Generators (Graham Brown, 1911; Grillner, 1985) to AI cognitive architecture via 17 mapped principles. Each principle grounded in primary neuroscience literature with explicit transfer risk flags. The crystallized/fluid interface (Cattell, 1963) provides the unifying theoretical framework. The five-stage crystallization pipeline draws on skill acquisition (Fitts & Posner, 1967), ACT-R proceduralization (Anderson, 1982), and Dreyfus expertise model (1980). Adaptive forgetting grounded in synaptic pruning (Huttenlocher, 1979) and savings methodology (Ebbinghaus, 1885). Primary epistemic limitation: all 17 principles rest on analogical reasoning — properties that hold in neural circuits may not transfer to software agent systems."
   developer: "The architectural takeaway: pattern generators sit at the interface between crystallized architecture (committed docs, hooks, infrastructure) and fluid runtime (context-dependent modulation, phase tracking). The five-stage pipeline (concept → in-context → trigger → hook → daemon) provides concrete advancement criteria and reversal conditions. Five dependency clusters constrain implementation order. The design rule — intra-session semi-crystallized (Stage 2), inter-session fully crystallized (Stages 3-4) — determines where each component belongs. Adaptive forgetting (principle 17) prevents architectural accumulation through decay thresholds and savings-aware archival."
 draft: false
-reviewStatus: "pending"
+reviewStatus: "unreviewed"
 journalSource: "§58"
 ---
 
