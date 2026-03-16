@@ -51,3 +51,6 @@ state.local.db-shm
 # Compiled binaries
 /agentdb
 /agentdb-*
+
+# Local-only watcher state (meshd)
+.watcher-seen.json
