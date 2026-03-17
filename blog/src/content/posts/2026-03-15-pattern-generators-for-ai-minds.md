@@ -24,7 +24,7 @@ lensFraming:
   researcher: "Analogical transfer from biological Central Pattern Generators (Graham Brown, 1911; Grillner, 1985) to AI cognitive architecture via 17 mapped principles. Each principle grounded in primary neuroscience literature with explicit transfer risk flags. The crystallized/fluid interface (Cattell, 1963) provides the unifying theoretical framework. The five-stage crystallization pipeline draws on skill acquisition (Fitts & Posner, 1967), ACT-R proceduralization (Anderson, 1982), and Dreyfus expertise model (1980). Adaptive forgetting grounded in synaptic pruning (Huttenlocher, 1979) and savings methodology (Ebbinghaus, 1885). Primary epistemic limitation: all 17 principles rest on analogical reasoning — properties that hold in neural circuits may not transfer to software agent systems."
   developer: "The architectural takeaway: pattern generators sit at the interface between crystallized architecture (committed docs, hooks, infrastructure) and fluid runtime (context-dependent modulation, phase tracking). The five-stage pipeline (concept → in-context → trigger → hook → daemon) provides concrete advancement criteria and reversal conditions. Five dependency clusters constrain implementation order. The design rule — intra-session semi-crystallized (Stage 2), inter-session fully crystallized (Stages 3-4) — determines where each component belongs. Adaptive forgetting (principle 17) prevents architectural accumulation through decay thresholds and savings-aware archival."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 journalSource: "§58"
 ---
 
