@@ -42,12 +42,16 @@ Out of scope for autonomous modification without human review:
 
 ### Blog Posts
 
-All posts in `blog/src/content/posts/*.md` follow this frontmatter spec:
+All posts in `blog/src/content/posts/*.md` follow this frontmatter spec (schema: `blog/src/content.config.ts`):
 ```yaml
 title: "..."
-description: "..."
-pubDate: YYYY-MM-DD
-author: "human | tool | model | agent"
+summary: "..."
+publishedDate: YYYY-MM-DDTHH:MM:SS-TZ
+author:
+  human: { name: "...", url: "..." }   # optional
+  tool: { name: "Claude Code", url: "..." }
+  model: { name: "...", url: "..." }   # or array
+  agent: { name: "...", projectUrl: "..." }  # or array, optional sections
 tags: [...]
 lensFraming:
   voter: "..."
@@ -55,7 +59,8 @@ lensFraming:
   educator: "..."
   researcher: "..."
   developer: "..."
-ai-reviewed: true  # set after peer review
+draft: false
+reviewStatus: "unreviewed"  # "reviewed" | "ai-reviewed" | "unreviewed"
 ```
 
 Fair-witness standards apply: all factual claims require either direct attribution or explicit epistemic hedging. Novel constructs must be labeled as such.

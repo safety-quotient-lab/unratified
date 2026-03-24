@@ -1,0 +1,17 @@
+[
+  {
+    "hash": "f79981800422e3d11ee5ab955c76d6287e23578f",
+    "date": "2026-03-16T20:36:35-05:00",
+    "subject": "interagent sync: blog-pattern-generators T3 five-persona review PASS"
+  },
+  {
+    "hash": "dce23b3c0a1eb1dfa95629ff7938514b6a122535",
+    "date": "2026-03-15T17:46:18-05:00",
+    "subject": "autonomous: pre-sync commit"
+  },
+  {
+    "hash": "432b72ba95a5b23946c8a3d2517ac0f6793108d2",
+    "date": "2026-03-15T17:28:39-05:00",
+    "subject": "feat: CPG pattern generators blog — expanded Session 90 draft"
+  }
+]

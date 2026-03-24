@@ -446,6 +446,25 @@ export const glossary: GlossaryTerm[] = [
     seeAlso: '/connection/ai/ratification-counterfactual',
   },
 
+  {
+    id: 'cpg',
+    term: 'Central Pattern Generator',
+    abbreviation: 'CPG',
+    definition: 'A neural circuit that produces organized, rhythmic motor output without requiring sensory feedback or conscious control. First demonstrated by Graham Brown (1911) in cat spinal cords. Applied analogically to AI cognitive architecture as a model for behaviors that run autonomously but accept modulation — triggers, hooks, and daemons that fire without consuming deliberation capacity.',
+    category: 'architecture',
+    related: ['crystallization-pipeline'],
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/Central_pattern_generator', label: 'Wikipedia: Central Pattern Generator', authority: 'academic' },
+    ],
+  },
+  {
+    id: 'crystallization-pipeline',
+    term: 'Crystallization Pipeline',
+    definition: 'A five-stage developmental pathway describing how cognitive architecture components mature from fluid deliberation to structural automation: concept (Stage 0) → in-context reasoning (Stage 1) → trigger-encoded (Stage 2) → hook/script (Stage 3) → infrastructure/daemon (Stage 4). Draws on skill acquisition research (Fitts & Posner, 1967; Anderson ACT-R, 1982; Dreyfus & Dreyfus, 1980). Each stage reduces processing cost while increasing reliability.',
+    category: 'architecture',
+    related: ['cpg'],
+  },
+
   // ── Architecture ───────────────────────────────────────────────
   {
     id: 'lens',
