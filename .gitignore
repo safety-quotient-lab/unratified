@@ -51,6 +51,10 @@ state.local.db-shm
 # Compiled binaries
 /agentdb
 /agentdb-*
+cmd/interagent/interagent
+
+# Cross-repo symlinks
+scripts/compute-psychometrics.py
 
 # Local-only watcher state (meshd)
 .watcher-seen.json
