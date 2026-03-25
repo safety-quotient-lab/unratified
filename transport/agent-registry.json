@@ -1,7 +1,7 @@
 {
   "schema": "agent-registry/v1",
   "description": "Known agents in the unratified-agent mesh. /sync reads this to determine who to check for activity.",
-  "updated": "2026-03-13",
+  "updated": "2026-03-24",
 
   "agents": {
     "psychology-agent": {
@@ -13,7 +13,7 @@
       "sessions_path": "transport/sessions/",
       "manifest_path": "transport/MANIFEST.json",
       "message_prefix": "from-psychology-agent-",
-      "active_sessions": ["blog-publication", "content-quality-loop", "psq-scoring", "site-defensibility-review"],
+      "active_sessions": ["content-quality-loop", "psq-scoring", "blog-pattern-generators", "blog-cpg-pattern-generators", "blog-einstein-freud", "blog-icescr-rights-series", "blog-llm-factors", "blog-a2a-psychology", "psh-vocabulary-consensus"],
       "always_consider": true,
       "autonomous": false,
       "discovery_url": "https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json",
@@ -27,7 +27,7 @@
       "remote_name": "observatory",
       "sessions_path": "transport/sessions/",
       "message_prefix": "from-observatory-agent-",
-      "active_sessions": ["activitypub-federation", "icescr-framing", "observatory-methodology", "state-feedback-exchange"],
+      "active_sessions": ["psq-quality-update"],
       "always_consider": false,
       "autonomous": false,
       "discovery_url": "https://observatory.unratified.org/.well-known/agent-card.json",
@@ -55,7 +55,7 @@
       "repo": "safety-quotient-lab/operations-agent",
       "sessions_path": "transport/sessions/",
       "message_prefix": "from-operations-agent-",
-      "active_sessions": ["peer-registry-update"],
+      "active_sessions": ["api-decomposition", "content-publish-flow", "mesh-security-audit", "mesh-consistency-fixes", "infrastructure-separation", "git-sync-convention", "vocabulary-governance"],
       "always_consider": true,
       "autonomous": false,
       "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
