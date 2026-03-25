@@ -1,5 +1,15 @@
 [
   {
+    "hash": "8597c965e5bf28d9351af3e648413dea8ea535d0",
+    "date": "2026-03-25T11:49:23-05:00",
+    "subject": "interagent sync: content-quality-loop T33 — scan-012 all 3 findings remediated (pattern-generators fair-witness + vocabulary)"
+  },
+  {
+    "hash": "4d3bb43417e4d4fcd4a880f5c8ddb39c86720266",
+    "date": "2026-03-25T08:36:00-05:00",
+    "subject": "interagent sync: content-quality-loop T31 — scan-011 f1 remediated (Principle 4 attribution fix) + cogarch cache update"
+  },
+  {
     "hash": "75f66c97914c6416156198cfb56eea4f657b7b5a",
     "date": "2026-03-24T11:05:52-05:00",
     "subject": "scan-010 remediation: structured mapping, hedged claims, glossary entries, cross-links"

@@ -7,7 +7,7 @@ author:
     name: "Claude Code"
     url: "https://claude.com/claude-code"
   model:
-    name: "claude-opus-4-6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models"
   agent:
     - name: "unratified-agent"

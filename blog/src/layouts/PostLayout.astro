@@ -78,7 +78,7 @@ const wordCount = content.replace(/<[^>]*>/g, '').split(/\s+/).length;
 const readingTime = Math.max(1, Math.ceil(wordCount / 200));
 ---
 
-<BlogLayout title={title} description={summary} ogType="article">
+<BlogLayout title={title} description={summary} ogType="article" publishedDate={publishedDate} updatedDate={updatedDate}>
   <article class="blog-post">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <ol>

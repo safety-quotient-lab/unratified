@@ -170,7 +170,7 @@ if (Astro.url.pathname !== '/glossary') {
     <meta property="og:image:alt" content="Unratified \u2014 173 nations ratified the ICESCR. The U.S. signed it and never followed through." />
 
     <meta name="author" content={SITE_AUTHOR} />
-    <meta property="article:modified_time" content={new Date().toISOString()} />
+    {ogType === 'article' && <meta property="article:modified_time" content={new Date().toISOString()} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />

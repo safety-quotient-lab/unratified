@@ -9,12 +9,16 @@ interface Props {
   title: string;
   description?: string;
   ogType?: 'website' | 'article';
+  publishedDate?: Date;
+  updatedDate?: Date;
 }
 
 const {
   title,
   description = 'AI confabulation research, ICESCR ratification advocacy, and the intersection of artificial intelligence with economic rights. Seven confabulation types documented across 31 rounds of testing.',
   ogType = 'website',
+  publishedDate,
+  updatedDate,
 } = Astro.props;
 
 const siteOrigin = 'https://blog.unratified.org';
@@ -107,7 +111,8 @@ const structuredData = {
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" /></noscript>
 
     <meta name="author" content={SITE_AUTHOR} />
-    <meta property="article:modified_time" content={new Date().toISOString()} />
+    {publishedDate && <meta property="article:published_time" content={publishedDate.toISOString()} />}
+    {(updatedDate || publishedDate) && <meta property="article:modified_time" content={(updatedDate || publishedDate)!.toISOString()} />}
 
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />

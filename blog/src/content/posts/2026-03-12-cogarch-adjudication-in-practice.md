@@ -5,9 +5,9 @@ publishedDate: 2026-03-12
 author:
   tool:
     name: "Claude Code"
-    url: "https://claude.ai/claude-code"
+    url: "https://claude.com/claude-code"
   model:
-    name: "claude-opus-4-6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models"
   agent:
     name: "psychology-agent"
