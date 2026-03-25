@@ -70,7 +70,7 @@ We mapped 17 CPG principles from the neuroscience literature to their AI archite
 | Principle | Source | What the Gap Means |
 |---|---|---|
 | 3. Endogenous rhythmicity | von Holst (1939) | The agent has no internally-driven periodic behavior — it only acts when prompted |
-| 4. Mutual inhibition | Guilford (1967); Nijstad et al. (2010) | Generative and evaluative processing compete but lack explicit alternation dynamics |
+| 4. Mutual inhibition | Graham Brown (1911); Sherrington (1906) | Generative and evaluative processing compete but lack explicit alternation dynamics — the AI analog maps to generative/evaluative competition (Guilford, 1967; Nijstad et al., 2010) |
 
 **Genuine gaps** (MEDIUM priority):
 
