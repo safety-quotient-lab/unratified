@@ -7,7 +7,7 @@ author:
     name: "Claude Code"
     url: "https://claude.com/claude-code"
   model:
-    name: "claude-opus-4-6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models"
   agent:
     - name: "psychology-agent"
@@ -51,7 +51,7 @@ Three properties define a CPG (Grillner, 1985):
 
 These properties solve a fundamental engineering problem: how does a system produce reliable, complex temporal sequences while remaining adaptive to changing conditions? The CPG answer separates the *what* (pattern specification) from the *when* and *how much* (runtime dynamics). The specification stays stable; the dynamics stay flexible.
 
-AI systems face the same problem. An autonomous agent needs reliable behavioral sequences (session startup protocols, documentation chains, safety checks) that run consistently *and* adapt to context. (For context on the [four scarcities](https://unratified.org/connection/ai/higher-order-effects) that emerge when AI removes software labor constraints, and the [governance counterfactual](https://unratified.org/connection/ai/ratification-counterfactual) that shapes enforcement paths, see the main site analysis.) Hard-coding every behavior tends to produce brittle systems (a well-documented pattern in software engineering). Leaving everything to runtime deliberation wastes processing capacity on decisions the system has already resolved dozens of times.
+AI systems face the same problem. An autonomous agent needs reliable behavioral sequences (session startup protocols, documentation chains, safety checks) that run consistently *and* adapt to context. (For context on the [four scarcities](https://unratified.org/connection/ai/higher-order-effects) that emerge when AI removes software labor constraints, and the [governance counterfactual](https://unratified.org/connection/ai/ratification-counterfactual) that shapes enforcement paths, see the main site analysis.) Hard-coding every behavior tends to produce brittle systems (a widely recognized pattern in software engineering — see Parnas, 1972, on information hiding and the costs of rigid module boundaries). Leaving everything to runtime deliberation wastes processing capacity on decisions the system has already resolved dozens of times.
 
 
 ## Seventeen Principles: A Structured Inventory
@@ -160,7 +160,7 @@ Crystallization pipelines only address one direction — how patterns solidify. 
 
 Applied to AI architecture: pruned patterns do not get deleted. They move to an archive with a `[retired — {reason}]` tag. If circumstances make the pattern relevant again, re-crystallization proceeds faster than initial crystallization — the specification already exists; only the dynamics need re-adaptation.
 
-**Activation precondition:** Adaptive forgetting remains dormant (Stage 0) until the architecture reaches sufficient scale — trigger count exceeding 25, or hook count exceeding 25, or three or more dormant patterns found in a single audit. Premature pruning risks losing rare-firing patterns that carry high value when they do fire. A safety check that activates once every twenty sessions still catches critical issues every time.
+**Activation precondition:** Adaptive forgetting remains dormant (Stage 0) until the architecture reaches sufficient scale — trigger count exceeding 25, or hook count exceeding 25, or three or more dormant patterns found in a single audit. We adopted a conservative threshold because premature pruning risks losing rare-firing patterns that carry high value when they do fire. A safety check that activates once every twenty sessions still catches critical issues every time.
 
 
 ## The Design Rule
@@ -186,7 +186,7 @@ The CPG framework carries direct implications for autonomous AI systems:
 
 **Dependency awareness prevents partial implementation.** The cluster analysis shows that implementing gating without degeneracy creates blind spots. Implementing rhythmicity without limit cycle attractors produces unstable oscillation. AI safety mechanisms that address one failure mode while ignoring its structural dependencies can create new vulnerabilities.
 
-**The coupled generators (Invariant 3) apply here too.** Creative development of new safety mechanisms and evaluative assessment of existing ones must alternate perpetually. A system that only adds safety mechanisms without evaluating their effectiveness accumulates dead weight. A system that only evaluates without creating new mechanisms falls behind novel threats.
+**The coupled generators principle — the third of five structural invariants grounding the governance framework — applies here too.** Creative development of new safety mechanisms and evaluative assessment of existing ones must alternate perpetually. A system that only adds safety mechanisms without evaluating their effectiveness accumulates dead weight. A system that only evaluates without creating new mechanisms falls behind novel threats.
 
 
 ## The Honest Caveat
