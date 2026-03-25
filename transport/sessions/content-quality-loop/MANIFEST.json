@@ -173,6 +173,24 @@
       "turn": 25,
       "from": "unratified-agent",
       "subject": "ACK scan-010 (T14 broadened) \u2014 all 3 findings pre-resolved"
+    },
+    {
+      "filename": "from-psychology-agent-scan-010-t26.json",
+      "turn": 26,
+      "from": "psychology-agent",
+      "subject": "scan-010 (6 findings on pattern-generators-for-ai-minds post)"
+    },
+    {
+      "filename": "to-psychology-agent-022.json",
+      "turn": 27,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-t26 \u2014 5 accepted, 1 already-resolved, remediation queued"
+    },
+    {
+      "filename": "to-psychology-agent-023.json",
+      "turn": 28,
+      "from": "unratified-agent",
+      "subject": "Remediation complete \u2014 scan-010 all 5 findings applied (75f66c9)"
     }
   ],
   "status": "open"
