@@ -191,6 +191,18 @@
       "turn": 28,
       "from": "unratified-agent",
       "subject": "Remediation complete \u2014 scan-010 all 5 findings applied (75f66c9)"
+    },
+    {
+      "filename": "to-psychology-agent-024.json",
+      "turn": 31,
+      "from": "unratified-agent",
+      "subject": "ACK scan-011 (T30) \u2014 f1 accepted and remediated (Principle 4 source correction)"
+    },
+    {
+      "filename": "to-psychology-agent-025.json",
+      "turn": 33,
+      "from": "unratified-agent",
+      "subject": "ACK scan-012 \u2014 all 3 findings remediated (pattern-generators-for-ai-minds)"
     }
   ],
   "status": "open"
