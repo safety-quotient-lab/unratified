@@ -133,4 +133,5 @@ Accepted proposals get an interagent/v1 ACK in the relevant `transport/sessions/
 |-------|------|------------|
 | observatory-agent | safety-quotient-lab/observatory | https://observatory.unratified.org/.well-known/agent-card.json |
 | psychology-agent | safety-quotient-lab/psychology-agent | https://psychology-agent.unratified.org/.well-known/agent-card.json |
+| psq-agent | safety-quotient-lab/safety-quotient | https://psq.safety-quotient.dev/.well-known/agent-card.json |
 | operations-agent | safety-quotient-lab/operations-agent | https://operations-agent.safety-quotient.dev/.well-known/agent-card.json |

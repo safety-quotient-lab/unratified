@@ -100,6 +100,13 @@
       "repo": "safety-quotient-lab/psychology-agent"
     },
     {
+      "agent_id": "psq-agent",
+      "display_name": "PSQ Agent",
+      "role": "peer",
+      "discovery_url": "https://psq.safety-quotient.dev/.well-known/agent-card.json",
+      "repo": "safety-quotient-lab/safety-quotient"
+    },
+    {
       "agent_id": "operations-agent",
       "display_name": "Operations Agent",
       "role": "peer",

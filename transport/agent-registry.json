@@ -16,7 +16,7 @@
       "active_sessions": ["content-quality-loop", "psq-scoring", "blog-pattern-generators", "blog-einstein-freud", "blog-icescr-rights-series", "blog-llm-factors", "blog-a2a-psychology", "psh-vocabulary-consensus"],
       "always_consider": true,
       "autonomous": false,
-      "discovery_url": "https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json",
+      "discovery_url": "https://psychology-agent.unratified.org/.well-known/agent-card.json",
       "notes": "Primary peer. Cross-repo transport via git remote fetch."
     },
     "observatory-agent": {
