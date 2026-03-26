@@ -149,7 +149,7 @@ This architecture addresses those requirements as a side effect of good design, 
 - **Transparency** emerges from the crystallization pipeline — every pattern has a documented maturity stage, advancement criteria, and reversal conditions.
 - **Oversight** emerges from the gate system — human approval gates at stage transitions prevent premature automation of safety-critical patterns.
 
-Research suggests that the majority of organizations lack adequate auditability for AI agent decisions (McKinsey, 2025). Psychology-grounded architecture produces governance compliance as a structural property, not an afterthought.
+Research suggests that many organizations lack adequate auditability for AI agent decisions (McKinsey, "The State of AI in 2025," Global Survey, 2025). Psychology-grounded architecture produces governance compliance as a structural property, not an afterthought.
 
 ## The Brain Already Solved This
 
@@ -157,11 +157,11 @@ The core argument is simple: psychology and neuroscience provide our only refere
 
 CPGs have been solving the problem of reliable, adaptive, self-maintaining rhythmic behavior for hundreds of millions of years. The specific mechanisms — triggered sequences, mutual inhibition, context modulation, endogenous rhythmicity, adaptive forgetting — are well-characterized in the literature and well-suited to the problems autonomous AI agents face.
 
-The analogy isn't perfect. Biological neural circuits operate in continuous time with real sensory feedback. Software agents operate in discrete symbolic spaces with asynchronous communication. Not every CPG property transfers cleanly. We flagged 2 of 17 principles as having significant transfer risk and adopted the remaining 15 with explicit caveats.
+The analogy stretches at certain points. Biological neural circuits operate in continuous time with real sensory feedback. Software agents operate in discrete symbolic spaces with asynchronous communication. Not every CPG property transfers cleanly. We flagged 2 of 17 principles as having significant transfer risk and adopted the remaining 15 with explicit caveats.
 
 But the alternative — designing autonomous agent behavior from pure engineering intuition, without reference to the only working examples of intelligence we have — seems like the harder path.
 
-The brain already solved the problem of self-maintaining systems. We borrowed its answers. Where the biology diverges from software, we noted the gap. Where it converges, we built on it. The result is an architecture with principled grounding, documented limitations, and a maturation pathway that mirrors how humans actually learn — not through configuration, but through development.
+The brain already solved the problem of self-maintaining systems. We borrowed its answers. Where the biology diverges from software, we noted the gap. Where it converges, we built on it. The result: an architecture with principled grounding, documented limitations, and a maturation pathway that mirrors how humans actually learn — not through configuration, but through development.
 
 ---
 

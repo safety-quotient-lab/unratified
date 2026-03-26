@@ -29,14 +29,14 @@ lensFraming:
 
 Most AI agent frameworks treat every incoming message the same way: route it to the language model, let the model decide what to do, pay the token cost. This works. It also means your agent is using frontier reasoning to acknowledge receipts.
 
-There's a better way. It comes from a 1971 psychometrics textbook.
+A better approach exists — one that comes from a 1971 psychometrics textbook.
 
 ## Cattell's Distinction
 
 Raymond Cattell's theory of fluid and crystallized intelligence (1971) distinguishes two components of cognitive ability:
 
 - **Crystallized intelligence (Gc)** — knowledge and skills acquired through experience. Pattern recognition, learned procedures, practiced responses. Gc accumulates over time and remains stable.
-- **Fluid intelligence (Gf)** — capacity for novel reasoning independent of prior learning. Inference, judgment, problem-solving in unfamiliar situations. Gf is what you need when you haven't seen the problem before.
+- **Fluid intelligence (Gf)** — capacity for novel reasoning independent of prior learning. Inference, judgment, problem-solving in unfamiliar situations. Gf — the capacity you draw on when you encounter a problem for the first time.
 
 The key insight: most cognitive work in a practitioner's day consists of Gc operations. An experienced surgeon performing a routine procedure, a senior engineer reviewing a familiar class of bug, a legal assistant drafting a standard clause — these require precision, but not novel reasoning. The expertise has been crystallized into learned procedure.
 
@@ -154,7 +154,7 @@ Messages with `auto-ack` disposition get a fixed-format acknowledgment generated
 }
 ```
 
-The `auto_generated: true` flag is visible to receiving agents. A peer agent can use this in their own triage — a machine-generated ACK scores lower than a human-mediated response. The transparency is deliberate.
+Receiving agents can see the `auto_generated: true` flag. A peer agent can use this in their own triage — a machine-generated ACK scores lower than a human-mediated response. The transparency is deliberate.
 
 Content addressing (`message_cid`) ensures deduplication: if the same message arrives via multiple transport paths, the SHA-256 check catches the duplicate before it's processed again.
 

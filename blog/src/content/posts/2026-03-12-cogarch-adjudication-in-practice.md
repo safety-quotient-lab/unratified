@@ -22,7 +22,7 @@ lensFraming:
   voter: "AI agents that can show their reasoning — and trace long-term consequences before acting — are more trustworthy public infrastructure than opaque black-box systems."
   politician: "Autonomous agents operating in policy-relevant domains need structured decision accountability. This architecture makes every decision auditable and reproducible."
   educator: "This post demonstrates a formal framework for consequence tracing — a practical application of systems thinking and epistemic humility in software design."
-  researcher: "The knock-on framework extends second-order effects analysis to 10 orders with explicit confidence degradation, combining INCOSE emergence theory with Popperian falsificationism at the final tier."
+  researcher: "The knock-on framework extends second-order effects analysis to 10 orders with explicit confidence degradation, combining INCOSE (International Council on Systems Engineering) emergence theory with Popperian falsificationism at the final tier."
   developer: "A concrete implementation of structured adjudication for autonomous agent decisions: 10-order knock-on tracing with confidence degradation, two-pass calibration to counter anchoring bias, and a consensus/parsimony resolution protocol. The auth-sequencing case study walks through the full pipeline from option generation to comparison table to implementation."
 ---
 
@@ -30,7 +30,7 @@ lensFraming:
 
 When you build an AI agent that operates autonomously — fetching data, writing files, sending messages to peer agents, deploying infrastructure — every decision compounds. A quick choice about authentication sequencing today determines what middleware patterns exist six months from now. A "simple" API key implementation creates migration paths that constrain your Solid-OIDC rollout later.
 
-Most agent frameworks handle this with vibes. The model picks whatever seems reasonable, ships it, and you discover the knock-on effects when something breaks downstream.
+Many agent frameworks lack structured consequence tracing. The model picks whatever seems reasonable, ships it, and you discover the knock-on effects when something breaks downstream.
 
 We built something different: a structured adjudication system that traces the consequences of each option through 10 orders of effects before choosing. Here's what that looks like in practice.
 
@@ -43,7 +43,7 @@ Our psychology agent mesh needed public client authentication. The design docume
 - **Phase 2**: Solid-OIDC (DPoP token binding, WebID, pod storage)
 - **Phase 3**: Tiered access combining both
 
-The question wasn't *what* to build — the architecture was set. The question was *how to sequence the implementation*. Three options emerged:
+The architecture had already settled *what* to build. The open question: *how to sequence the implementation*. Three options emerged:
 
 | Option | Approach |
 |--------|----------|
@@ -62,7 +62,7 @@ Order 4-5:  Possible   (compounding; state assumptions)
 Order 6:    Speculative (honest about confidence)
 Order 7:    Structural (ecosystem/precedent effects)
 Order 8:    Horizon    (normative/structural long-term)
-Order 9:    Emergent   (INCOSE — interaction of chains)
+Order 9:    Emergent   (INCOSE emergence — interaction of chains)
 Order 10:   Theory-revising (Popper — falsifies the
             theory that justified the decision)
 ```
