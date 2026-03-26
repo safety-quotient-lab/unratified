@@ -1,5 +1,10 @@
 [
   {
+    "hash": "e9c966d9ef2e02ab0c64e831cbee192557fc3768",
+    "date": "2026-03-25T16:39:33-05:00",
+    "subject": "fix: OG meta dates use actual publish/update times + normalize model names"
+  },
+  {
     "hash": "cd38fc10f1a5d4d38af994502961f46defa1f817",
     "date": "2026-03-13T09:08:57-05:00",
     "subject": "fix: blog-crystallized-sync frontmatter schema + T4 ACK"

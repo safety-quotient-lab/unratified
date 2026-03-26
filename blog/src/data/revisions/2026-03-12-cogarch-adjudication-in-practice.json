@@ -1,5 +1,10 @@
 [
   {
+    "hash": "e9c966d9ef2e02ab0c64e831cbee192557fc3768",
+    "date": "2026-03-25T16:39:33-05:00",
+    "subject": "fix: OG meta dates use actual publish/update times + normalize model names"
+  },
+  {
     "hash": "5d35a5f775e8b6cc1a9951fcb73bdb2c24b58922",
     "date": "2026-03-13T22:51:02-05:00",
     "subject": "autonomous: unratified-agent pre-pull commit (mixed (blog/package-lock.json blog/package.json blog/src/content/posts/2026-03-12-cogarch-adjudication-in-practice.md ))"

@@ -1,5 +1,10 @@
 [
   {
+    "hash": "e9c966d9ef2e02ab0c64e831cbee192557fc3768",
+    "date": "2026-03-25T16:39:33-05:00",
+    "subject": "fix: OG meta dates use actual publish/update times + normalize model names"
+  },
+  {
     "hash": "ce11a582aa2cebc0c1704f991c5ecdcc56ca5d3a",
     "date": "2026-03-13T12:14:05-05:00",
     "subject": "interagent sync: blog-pattern-generators post + peer-registry-update ACK"
