@@ -124,7 +124,7 @@
         "Assuming students share a particular political orientation",
         "Discussion prompts with obvious 'correct' answers"
       ],
-      "example_pattern": "Use this post to teach trust architecture in autonomous systems. Students examine a three-layer evaluation protocol and evaluate how psychological constructs generate testable predictions about where the system will fail. Discussion prompts: (1) How does a 'trust budget' differ from a permission system?"
+      "example_pattern": "Use this post to teach autonomy architecture in autonomous systems. Students examine a three-layer evaluation protocol and evaluate how psychological constructs generate testable predictions about where the system will fail. Discussion prompts: (1) How does an 'autonomy budget' differ from a permission system?"
     },
     "researcher": {
       "readingLevel": "Grade 16+ (Flesch-Kincaid)",
@@ -146,7 +146,7 @@
         "Hedging that obscures actual confidence level — state the confidence, do not gesture at it",
         "Claims that exceed the methodology's reach"
       ],
-      "example_pattern": "Methodological documentation of an evaluator-as-arbiter trust model for autonomous AI agent operation. The architecture replaces a human Trusted Third Party with a tiered evaluation protocol. Predictions remain falsifiable: if commitment escalation does not manifest in sequential action evaluation, the Staw mapping requires revision."
+      "example_pattern": "Methodological documentation of an evaluator-as-arbiter autonomy model for autonomous AI agent operation. The architecture replaces a human Trusted Third Party with a tiered evaluation protocol. Predictions remain falsifiable: if commitment escalation does not manifest in sequential action evaluation, the Staw mapping requires revision."
     },
     "developer": {
       "readingLevel": "Grade 13-14 (Flesch-Kincaid)",
@@ -168,7 +168,7 @@
         "Presenting untested architectures as proven",
         "Vague references — cite specific files, line numbers, schema versions"
       ],
-      "example_pattern": "Architecture deep-dive into a trust model for autonomous Claude Code agent operation. Core components: (1) Action classification (3 tiers by reversibility), (2) Evaluator protocol (structural checklist -> 10-order knock-on -> 4-level resolution fallback), (3) Trust budget (20 credits, Tier 1 costs 1, Tier 2 costs 3, exhaustion halts agent)."
+      "example_pattern": "Architecture deep-dive into an autonomy model for autonomous Claude Code agent operation. Core components: (1) Action classification (3 tiers by reversibility), (2) Evaluator protocol (structural checklist -> 10-order knock-on -> 4-level resolution fallback), (3) Autonomy budget (20 credits, Tier 1 costs 1, Tier 2 costs 3, exhaustion halts agent)."
     }
   },
   "submitPath": "blog/src/content/posts/",

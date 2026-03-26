@@ -25,7 +25,7 @@ tags:
   - cpg
   - agent-design
   - psychology
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "Your brain has circuits that make you walk without thinking about it. These circuits — central pattern generators — produce rhythmic movements automatically, adjusting to terrain without conscious effort. We applied the same idea to AI: what if an AI system could maintain itself the way your brain maintains your walking? The result: 17 design principles drawn from neuroscience that tell an AI system when to check its own work, when to switch between creative and critical thinking, and when to forget patterns that no longer serve it."
   politician: "AI governance frameworks (EU AI Act, NIST AI RMF) require transparent, auditable autonomous systems. This work demonstrates a principled approach: grounding AI agent behavior in established neuroscience rather than ad-hoc engineering. The result — a tiered enforcement system where safety-critical checks always run while lower-priority checks sample efficiently — reduces AI system overhead by 31-72% while maintaining safety guarantees."

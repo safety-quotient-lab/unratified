@@ -17,12 +17,13 @@ tags:
   - decision-making
   - agent-systems
   - knock-on-analysis
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "AI agents that can show their reasoning — and trace long-term consequences before acting — are more trustworthy public infrastructure than opaque black-box systems."
   politician: "Autonomous agents operating in policy-relevant domains need structured decision accountability. This architecture makes every decision auditable and reproducible."
   educator: "This post demonstrates a formal framework for consequence tracing — a practical application of systems thinking and epistemic humility in software design."
   researcher: "The knock-on framework extends second-order effects analysis to 10 orders with explicit confidence degradation, combining INCOSE emergence theory with Popperian falsificationism at the final tier."
+  developer: "A concrete implementation of structured adjudication for autonomous agent decisions: 10-order knock-on tracing with confidence degradation, two-pass calibration to counter anchoring bias, and a consensus/parsimony resolution protocol. The auth-sequencing case study walks through the full pipeline from option generation to comparison table to implementation."
 ---
 
 ## The Problem: Decisions That Compound

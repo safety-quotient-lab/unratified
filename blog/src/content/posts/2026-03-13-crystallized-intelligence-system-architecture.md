@@ -18,7 +18,7 @@ tags:
   - cognitive-architecture
   - autonomous-agents
   - developer
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "AI systems that do more work without more AI calls are cheaper to run and easier to hold accountable. This post shows how a simple classification system cut unnecessary AI usage by more than half — the kind of efficiency that makes autonomous systems viable, not wasteful."
   politician: "Responsible AI deployment means not using a powerful model for work that doesn't require it. This post describes an architecture pattern that routes rule-based operations to deterministic code and reserves LLM reasoning for decisions that actually need it."
