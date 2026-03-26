@@ -1,5 +1,10 @@
 [
   {
+    "hash": "810974561c271bada682eb78e28d71152ca61f36",
+    "date": "2026-03-26T11:53:14-05:00",
+    "subject": "interagent sync: content-quality-loop scan-010 — all 10 findings remediated"
+  },
+  {
     "hash": "fe615185cc1c8efab2f2b67c1cfac7c2f6294fe1",
     "date": "2026-03-26T07:15:20-05:00",
     "subject": "content-quality-loop: mark 4 posts ai-reviewed + blog-spec terminology alignment"

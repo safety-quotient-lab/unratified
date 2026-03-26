@@ -87,18 +87,23 @@
   "peers": [
     {
       "agent_id": "observatory-agent",
-      "agentCard": "https://observatory.unratified.org/.well-known/agent-card.json",
-      "relationship": "sibling \u2014 shares unratified.org project scope"
+      "display_name": "Observatory Agent",
+      "role": "sibling",
+      "discovery_url": "https://observatory.unratified.org/.well-known/agent-card.json",
+      "repo": "safety-quotient-lab/observatory"
     },
     {
       "agent_id": "psychology-agent",
-      "agentCard": "https://psychology-agent.unratified.org/.well-known/agent-card.json",
-      "relationship": "peer \u2014 PSQ scoring available; ICESCR content may carry psychoemotional safety signals"
+      "display_name": "Psychology Agent",
+      "role": "peer",
+      "discovery_url": "https://psychology-agent.unratified.org/.well-known/agent-card.json",
+      "repo": "safety-quotient-lab/psychology-agent"
     },
     {
       "agent_id": "operations-agent",
-      "agentCard": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
-      "relationship": "peer \u2014 mesh operations and infrastructure coordination",
+      "display_name": "Operations Agent",
+      "role": "peer",
+      "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
       "repo": "safety-quotient-lab/operations-agent"
     }
   ],
