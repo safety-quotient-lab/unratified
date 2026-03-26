@@ -1,5 +1,10 @@
 [
   {
+    "hash": "fe615185cc1c8efab2f2b67c1cfac7c2f6294fe1",
+    "date": "2026-03-26T07:15:20-05:00",
+    "subject": "content-quality-loop: mark 4 posts ai-reviewed + blog-spec terminology alignment"
+  },
+  {
     "hash": "e9c966d9ef2e02ab0c64e831cbee192557fc3768",
     "date": "2026-03-25T16:39:33-05:00",
     "subject": "fix: OG meta dates use actual publish/update times + normalize model names"

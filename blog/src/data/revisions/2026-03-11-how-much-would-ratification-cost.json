@@ -1,5 +1,10 @@
 [
   {
+    "hash": "fe615185cc1c8efab2f2b67c1cfac7c2f6294fe1",
+    "date": "2026-03-26T07:15:20-05:00",
+    "subject": "content-quality-loop: mark 4 posts ai-reviewed + blog-spec terminology alignment"
+  },
+  {
     "hash": "acfa847de86c91dbfdd13492975519139821c956",
     "date": "2026-03-11T10:00:29-05:00",
     "subject": "feat: CI/CD deploy pipeline + /sync blog guidance + publish ICESCR post"
