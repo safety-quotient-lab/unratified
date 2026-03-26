@@ -1,7 +1,7 @@
 {
   "schema": "agent-registry/v1",
   "description": "Known agents in the unratified-agent mesh. /sync reads this to determine who to check for activity.",
-  "updated": "2026-03-24",
+  "updated": "2026-03-26",
 
   "agents": {
     "psychology-agent": {
@@ -13,7 +13,7 @@
       "sessions_path": "transport/sessions/",
       "manifest_path": "transport/MANIFEST.json",
       "message_prefix": "from-psychology-agent-",
-      "active_sessions": ["content-quality-loop", "psq-scoring", "blog-pattern-generators", "blog-cpg-pattern-generators", "blog-einstein-freud", "blog-icescr-rights-series", "blog-llm-factors", "blog-a2a-psychology", "psh-vocabulary-consensus"],
+      "active_sessions": ["content-quality-loop", "psq-scoring", "blog-pattern-generators", "blog-einstein-freud", "blog-icescr-rights-series", "blog-llm-factors", "blog-a2a-psychology", "psh-vocabulary-consensus"],
       "always_consider": true,
       "autonomous": false,
       "discovery_url": "https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json",
