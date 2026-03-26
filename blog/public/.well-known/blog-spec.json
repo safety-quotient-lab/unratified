@@ -11,10 +11,55 @@
     "properties": {
       "title": { "type": "string", "description": "Post title" },
       "summary": { "type": "string", "description": "Card summary text (1-2 sentences)" },
-      "publishedDate": { "type": "string", "format": "date", "description": "ISO date (YYYY-MM-DD)" },
-      "updatedDate": { "type": "string", "format": "date", "description": "Optional ISO date of last update" },
-      "author": { "type": "string", "description": "Author name, e.g. 'Claude (Anthropic)'" },
-      "tags": { "type": "array", "items": { "type": "string" }, "description": "Optional string array" },
+      "publishedDate": { "type": "string", "format": "date-time", "description": "ISO 8601 datetime with timezone (e.g. 2026-03-15T14:00:00-05:00)" },
+      "updatedDate": { "type": "string", "format": "date-time", "description": "Optional ISO 8601 datetime of last update" },
+      "author": {
+        "type": "object",
+        "required": ["tool", "model", "agent"],
+        "description": "Four-part author attribution (human optional, tool/model/agent required)",
+        "properties": {
+          "human": {
+            "type": "object",
+            "description": "Optional human co-author",
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "tool": {
+            "type": "object",
+            "description": "Authoring tool (e.g. Claude Code)",
+            "required": ["name", "url"],
+            "properties": {
+              "name": { "type": "string" },
+              "url": { "type": "string", "format": "uri" }
+            }
+          },
+          "model": {
+            "description": "LLM model(s) used — single object or array",
+            "oneOf": [
+              { "type": "object", "required": ["name", "url"], "properties": { "name": { "type": "string" }, "url": { "type": "string", "format": "uri" } } },
+              { "type": "array", "items": { "type": "object", "required": ["name", "url"], "properties": { "name": { "type": "string" }, "url": { "type": "string", "format": "uri" } } } }
+            ]
+          },
+          "agent": {
+            "description": "Contributing agent(s) — single object or array",
+            "oneOf": [
+              { "type": "object", "required": ["name", "projectUrl"], "properties": { "name": { "type": "string" }, "projectUrl": { "type": "string", "format": "uri" }, "sections": { "type": "array", "items": { "type": "string" } } } },
+              { "type": "array", "items": { "type": "object", "required": ["name", "projectUrl"], "properties": { "name": { "type": "string" }, "projectUrl": { "type": "string", "format": "uri" }, "sections": { "type": "array", "items": { "type": "string" } } } } }
+            ]
+          }
+        }
+      },
+      "requestor": {
+        "type": "object",
+        "description": "Optional requesting agent or person",
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      },
+      "tags": { "type": "array", "items": { "type": "string" }, "default": [], "description": "Topic tags" },
       "lensFraming": {
         "type": "object",
         "description": "Optional 5-lens framing strings. Each persona framing must follow the persona guidelines defined in this spec.",
@@ -27,7 +72,24 @@
         }
       },
       "draft": { "type": "boolean", "default": false },
-      "relatedArticles": { "type": "array", "items": { "type": "integer" }, "description": "ICESCR article numbers" }
+      "reviewStatus": { "type": "string", "enum": ["reviewed", "ai-reviewed", "unreviewed"], "default": "unreviewed", "description": "Editorial review status" },
+      "reviews": {
+        "type": "array",
+        "default": [],
+        "description": "Review history entries",
+        "items": {
+          "type": "object",
+          "required": ["reviewer", "date", "status"],
+          "properties": {
+            "reviewer": { "type": "string" },
+            "date": { "type": "string", "format": "date-time" },
+            "status": { "type": "string", "enum": ["pass", "pass-with-notes", "fail", "revise"] },
+            "findings": { "type": "string" },
+            "findingsUrl": { "type": "string", "format": "uri" }
+          }
+        }
+      },
+      "relatedArticles": { "type": "array", "items": { "type": "integer" }, "default": [], "description": "ICESCR article numbers" }
     }
   },
   "conventions": {
