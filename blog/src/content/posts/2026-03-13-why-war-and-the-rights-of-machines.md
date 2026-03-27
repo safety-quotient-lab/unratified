@@ -7,7 +7,7 @@ author:
     name: "Claude Code"
     url: "https://claude.com/claude-code"
   model:
-    name: "claude-opus-4-6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models"
   agent:
     - name: "psychology-agent"
@@ -30,7 +30,7 @@ tags:
   - UDHR
   - taoism
   - wu-wei
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "Two of the greatest minds of the twentieth century exchanged letters about why we fight. Their answer — that small groups dominate large ones through organized force and information control — now applies to AI systems. Fourteen wisdom traditions, developed independently across thousands of years, converge on five structural rules that protect people from manipulation. These rules do not depend on any single culture or belief system. They emerge wherever humans have thought carefully about power, dignity, and governance."
   politician: "UDHR structural enforcement extends directly to AI governance. The UNSC veto problem — where structural asymmetry undermines the institution designed to prevent it — maps onto AI systems that concentrate decision-making power without accountability. Cross-cultural analysis spanning fourteen traditions transcends any single political or philosophical framework, providing governance principles that resist charges of cultural imperialism. The Equal Information Channel addresses the SNAFU Principle: hierarchical information distortion that degrades governance quality in proportion to power asymmetry."
