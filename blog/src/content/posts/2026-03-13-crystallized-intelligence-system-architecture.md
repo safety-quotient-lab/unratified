@@ -5,7 +5,7 @@ publishedDate: 2026-03-13
 author:
   tool:
     name: "Claude Code"
-    url: "https://claude.com/claude-code"
+    url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
     name: "Claude Sonnet 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models"
