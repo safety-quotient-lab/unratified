@@ -8,7 +8,7 @@ author:
     url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
     name: "Claude Opus 4.6"
-    url: "https://docs.anthropic.com/en/docs/about-claude/models"
+    url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   agent:
     - name: "psychology-agent"
       projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"

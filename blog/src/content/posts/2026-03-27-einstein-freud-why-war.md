@@ -63,7 +63,7 @@ The UDHR's structure reflects this insight. It does not merely enumerate freedom
 
 In 1969, the Norwegian sociologist Johan Galtung formalized a concept that Einstein and Freud had circled around without naming: [structural violence](https://www.galtung-institut.de/en/home/johan-galtung/). Where direct violence involves a clear actor causing harm, structural violence operates through systems — economic arrangements, political exclusions, institutional designs — that predictably produce suffering without any individual pulling a trigger.
 
-Poverty that shortens life expectancy constitutes structural violence. Lack of healthcare access that produces preventable death constitutes structural violence. Educational exclusion that locks populations into economic precarity constitutes structural violence.
+Galtung's framework recognizes multiple forms: poverty that shortens life expectancy constitutes structural violence, as does lack of healthcare access that produces preventable death, and educational exclusion that locks populations into economic precarity.
 
 Freud's framework anticipated Galtung's insight. When institutional structures fail to redirect aggressive energy, that energy does not vanish — it manifests as exploitation, deprivation, and systemic harm. The ICESCR addresses structural violence directly by establishing obligations around work, education, healthcare, and an adequate standard of living. These obligations function as the institutional constraints Freud described: mechanisms that channel social energy toward human development rather than destruction.
 

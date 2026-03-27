@@ -33,7 +33,7 @@ On a Wednesday afternoon in New York, U.S. Ambassador to the United Nations Andr
 
 Carter's message transmitting the ICESCR to the Senate for advice and consent, sent on February 23, 1978, framed economic rights as consistent with American values. "The United States can only benefit from a world in which economic and social rights are respected," Carter wrote. He acknowledged that the covenant would not require immediate implementation of every provision — the treaty's own language calls for "progressive realization" based on available resources — but argued that ratification would signal American commitment to the full spectrum of human rights.
 
-The Senate Foreign Relations Committee never reported the treaty to the full Senate for a vote. It has remained pending, without a hearing, for nearly fifty years.
+The Senate Foreign Relations Committee held hearings in 1979 but never reported the treaty to the full Senate for a vote. It has remained pending, without a committee vote or floor vote, for nearly fifty years.
 
 ## Why Ratification Failed
 

@@ -49,7 +49,7 @@ On December 10, 1948, the [UN General Assembly adopted the Universal Declaration
 
 The UDHR established thirty articles covering the full spectrum of human rights. Articles 1 through 21 addressed what we now call civil and political rights: freedom of speech, assembly, religion, the right to a fair trial, protection from torture. Articles 22 through 27 addressed economic, social, and cultural rights: the right to work, to education, to an adequate standard of living, to social security.
 
-This comprehensiveness reflected a deliberate choice. The drafters understood that civil liberties without economic security amount to an empty promise. Roosevelt herself argued that "people who have nothing have no use for freedom." Cassin described the declaration as a temple portico — political rights and economic rights forming the two supporting pillars.
+This comprehensiveness reflected a deliberate choice. The drafters understood that civil liberties without economic security amount to an empty promise. Eleanor Roosevelt articulated the connection during UDHR drafting discussions, arguing that ["people who have nothing have no use for freedom."](https://www.trumanlibrary.gov/education/presidential-inquiries/universal-declaration-human-rights) René Cassin, in his juridical analysis, described the declaration as a temple portico — political rights and economic rights forming the two supporting pillars.
 
 The UDHR, however, carried no binding legal force. It served as a declaration of principles, not a treaty. Making these rights enforceable would require separate instruments.
 

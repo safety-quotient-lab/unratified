@@ -288,6 +288,18 @@ export const glossary: GlossaryTerm[] = [
     ],
   },
 
+  {
+    id: 'structural-violence',
+    term: 'Structural Violence',
+    definition: 'Harm produced through systems — economic arrangements, political exclusions, institutional designs — that predictably cause suffering without requiring direct action by any individual. Johan Galtung formalized the concept in 1969, distinguishing it from direct violence. Manifests as poverty that shortens life expectancy, healthcare deprivation that produces preventable death, and educational exclusion that locks populations into economic precarity. The ICESCR addresses structural violence by establishing positive obligations around work, health, education, and adequate living standards.',
+    category: 'framework',
+    related: ['escr', 'icescr'],
+    seeAlso: '/posts/2026-03-27-einstein-freud-why-war',
+    sources: [
+      { url: 'https://www.galtung-institut.de/en/home/johan-galtung/', label: 'Galtung Institute', authority: 'academic' },
+    ],
+  },
+
   // ── Treaty ─────────────────────────────────────────────────────
   {
     id: 'icescr',
@@ -300,6 +312,30 @@ export const glossary: GlossaryTerm[] = [
     sources: [
       { url: 'https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights', label: 'OHCHR: ICESCR Full Text', authority: 'primary' },
       { url: 'https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/treaty.aspx?treaty=cescr&lang=en', label: 'OHCHR: Ratification Status', authority: 'primary' },
+    ],
+  },
+  {
+    id: 'iccpr',
+    term: 'International Covenant on Civil and Political Rights',
+    abbreviation: 'ICCPR',
+    definition: 'A multilateral treaty adopted by the UN General Assembly in 1966, entered into force 1976. Protects civil and political rights including freedom of speech, assembly, religion, fair trial, and protection from torture. 174 states parties. The United States ratified the ICCPR in 1992, fourteen years after President Carter transmitted it to the Senate. The ICCPR and ICESCR together operationalize the UDHR\'s provisions as binding treaty obligations.',
+    category: 'treaty',
+    related: ['icescr', 'udhr', 'escr', 'ratification'],
+    seeAlso: '/covenant/history',
+    sources: [
+      { url: 'https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights', label: 'OHCHR: ICCPR Full Text', authority: 'primary' },
+      { url: 'https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/treaty.aspx?treaty=ccpr&lang=en', label: 'OHCHR: Ratification Status', authority: 'primary' },
+    ],
+  },
+  {
+    id: 'progressive-realization',
+    term: 'Progressive Realization',
+    definition: 'A legal principle in the ICESCR (Article 2) requiring states to move progressively toward full implementation of economic, social, and cultural rights using maximum available resources. Allows flexibility in timelines while maintaining binding obligation to advance. Many opponents of ICESCR ratification have mischaracterized the covenant as demanding immediate universal provision; progressive realization refutes that characterization.',
+    category: 'treaty',
+    related: ['icescr', 'escr', 'ratification'],
+    seeAlso: '/covenant/articles/article-2',
+    sources: [
+      { url: 'https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights', label: 'OHCHR: ICESCR Full Text (Article 2)', authority: 'primary' },
     ],
   },
   {

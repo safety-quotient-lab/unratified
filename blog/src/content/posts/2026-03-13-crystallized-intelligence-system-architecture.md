@@ -8,7 +8,7 @@ author:
     url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
     name: "Claude Sonnet 4.6"
-    url: "https://docs.anthropic.com/en/docs/about-claude/models"
+    url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   agent:
     name: "unratified-agent"
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
