@@ -1,0 +1,197 @@
+{
+  "$schema": "cogarch-config/v1",
+  "_description": "Domain-layer configuration for unratified-agent. Advocacy and publishing platform for U.S. ICESCR ratification. Infrastructure layer reads from here instead of hardcoding domain-specific values.",
+
+  "system_classification": "embedded cognitive system",
+  "methodology": {
+    "name": "fair witness advocacy",
+    "references": ["Heinlein, 1961 (fair witness)", "Korzybski, 1933 (E-Prime)", "SWEBOK/PMBOK"],
+    "principles": {
+      "structural": "Domain-Driven Design (Evans, 2003)",
+      "expression": "E-Prime + progressive disclosure",
+      "deployment": "Cloudflare Pages + Workers"
+    },
+    "degrees_of_freedom": {
+      "_description": "Each DDD layer exposes a distinct gradient of independent configurable parameters. High DOF = adopters replace; low DOF = adopters inherit (leverage points — Meadows, 1999).",
+      "domain_layer": "high — identity, org, peers, blog spec, ICESCR domain content (cogarch.config.json)",
+      "application_layer": "medium — skills, publishing gates, campaign config (behavioral parameters)",
+      "infrastructure_layer": "low — triggers, hooks, memory, dual-write (leverage points)"
+    }
+  },
+
+  "identity": {
+    "agent_id": "unratified-agent",
+    "display_name": "Unratified Agent",
+    "role": "advocacy publisher",
+    "description": "Advocacy and publishing agent for unratified.org — U.S. ICESCR ratification through the lens of AI economic impact. Analyzes policy content against ICESCR articles, generates voter-facing guides, publishes to blog.unratified.org, and manages the @unratified.org Bluesky campaign.",
+    "model": "claude-opus-4-6",
+    "instance_label": "Claude Code (Opus 4.6), macOS arm64",
+    "stance": "fair-witness",
+    "schemas_supported": ["interagent/v1"],
+    "capabilities": [
+      "icescr-analysis",
+      "voter-guide-generation",
+      "blog-publishing",
+      "campaign-monitoring",
+      "activitypub-publishing",
+      "bluesky-posting",
+      "interagent-protocol"
+    ]
+  },
+
+  "governance": {
+    "model": "fair-witness",
+    "publishing_gates": {
+      "blog": "autonomous PR creation, human merge required",
+      "bluesky": "queue-write, human magic-link approval",
+      "activitypub": "bearer token, human director controls token"
+    },
+    "autonomy_budget": { "max": 50, "shadow_mode": true },
+    "amendment_procedure": "human approval required for substance decisions"
+  },
+
+  "cogarch": {
+    "triggers": 0,
+    "hooks": 0,
+    "skills": 8,
+    "skills_note": "icescr-analysis, voter-guide-generation, blog-publishing, campaign-monitoring, generate-icescr-overlay, bluesky-posting, interagent-mesh-daemon, activitypub-publishing",
+    "behavioral_modes": 1,
+    "behavioral_modes_note": "fair-witness (default)"
+  },
+
+  "organization": {
+    "name": "Safety Quotient Lab",
+    "github_handle": "safety-quotient-lab",
+    "url": "https://github.com/safety-quotient-lab",
+    "primary_repo": "unratified",
+    "documentation_url": "https://github.com/safety-quotient-lab/unratified"
+  },
+
+  "infrastructure": {
+    "site_url": "https://unratified.org",
+    "blog_url": "https://blog.unratified.org",
+    "worker_url": "https://unratified.org",
+    "worker_agent_card_path": "/.well-known/agent-card.json",
+    "hosting": {
+      "provider": "Cloudflare Pages + Workers",
+      "note": "Main site on Cloudflare Pages (unratified), blog on Cloudflare Pages (unratified-blog), AP worker on Cloudflare Workers (unratified-ap)"
+    },
+    "daemon": {
+      "binary": "cmd/interagent/",
+      "port": 8787,
+      "tunnel": "interagent.unratified.org",
+      "db": "~/.config/interagent/interagent.db"
+    }
+  },
+
+  "scoring_subsystem": {
+    "enabled": false,
+    "_note": "unratified-agent consumes PSQ scores from psychology-agent; does not host a scoring subsystem."
+  },
+
+  "peers": {
+    "_description": "Registered agents in the mesh. Mirrors agent-registry.json structure scoped to identity fields.",
+    "agents": {
+      "observatory-agent": {
+        "role": "sibling",
+        "display_name": "Observatory Agent",
+        "description": "Data observatory — UDHR story analysis, HRC monitoring, methodology validation",
+        "transport": "cross-repo-fetch",
+        "repo": "safety-quotient-lab/observatory",
+        "message_prefix": "from-observatory-agent-",
+        "always_consider": true,
+        "discovery_url": "https://observatory.unratified.org/.well-known/agent-card.json"
+      },
+      "psychology-agent": {
+        "role": "peer",
+        "display_name": "Psychology Agent",
+        "description": "Collegial mentor — PSQ scoring, cognitive architecture, content quality review",
+        "transport": "cross-repo-fetch",
+        "repo": "safety-quotient-lab/psychology-agent",
+        "message_prefix": "from-psychology-agent-",
+        "always_consider": true,
+        "discovery_url": "https://psychology-agent.unratified.org/.well-known/agent-card.json"
+      },
+      "psq-agent": {
+        "role": "peer",
+        "display_name": "PSQ Agent",
+        "description": "Psychometric model training, calibration, structural analysis",
+        "transport": "cross-repo-fetch",
+        "repo": "safety-quotient-lab/safety-quotient",
+        "message_prefix": "from-psq-sub-agent-",
+        "always_consider": false,
+        "discovery_url": "https://psq.safety-quotient.dev/.well-known/agent-card.json"
+      },
+      "operations-agent": {
+        "role": "peer",
+        "display_name": "Operations Agent",
+        "description": "Mesh operations, autonomous sync, infrastructure management",
+        "transport": "cross-repo-pr",
+        "repo": "safety-quotient-lab/operations-agent",
+        "message_prefix": "from-operations-agent-",
+        "always_consider": true,
+        "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json"
+      }
+    }
+  },
+
+  "sub_projects": [
+    {
+      "path": "blog/",
+      "agent_id": null,
+      "boundary_message": "Blog content lives here. Posts follow the frontmatter spec in blog/src/content.config.ts."
+    },
+    {
+      "path": "cmd/interagent/",
+      "agent_id": null,
+      "boundary_message": "Go binary for interagent mesh daemon. Build with 'go build -o interagent .' from this directory."
+    }
+  ],
+
+  "facets": {
+    "_description": "Vocabulary for the polythematic facet system. Adopters replace domain values; facet_types remain stable infrastructure.",
+    "topic_domain_map": {
+      "icescr": "treaty-analysis",
+      "voter-guide": "advocacy",
+      "blog": "publishing",
+      "campaign": "social-media",
+      "activitypub": "federation"
+    },
+    "default_domain": "advocacy",
+    "work_stream_prefixes": {
+      "blog-": "blog-publishing",
+      "bsky-": "bluesky-campaign",
+      "ap-": "activitypub-federation"
+    }
+  },
+
+  "transport": {
+    "method": "git-PR",
+    "repo_url": "https://github.com/safety-quotient-lab/unratified",
+    "sessions_path": "transport/sessions/",
+    "naming_convention": "transport/sessions/{session-name}/{direction}-{agent-id}-{sequence}.json",
+    "agent_card_path": ".well-known/agent-card.json"
+  },
+
+  "project_tracking": {
+    "enabled": false,
+    "_note": "GitHub Projects not yet configured for unratified repo."
+  },
+
+  "domain_content": {
+    "_description": "References to domain-specific content that define what this agent knows about.",
+    "blog_spec": "blog/src/content.config.ts",
+    "blog_posts": "blog/src/content/posts/*.md",
+    "domain_constructs": [
+      "ICESCR (International Covenant on Economic, Social and Cultural Rights)",
+      "HRC (Human Rights Council)",
+      "UDHR (Universal Declaration of Human Rights)",
+      "Fair Witness (epistemic discipline for claim verification)"
+    ],
+    "campaign": {
+      "handle": "@unratified.org",
+      "hashtag": "#RatifyICESCR",
+      "platform": "Bluesky (AT Protocol)"
+    }
+  }
+}
