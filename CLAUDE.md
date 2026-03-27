@@ -65,6 +65,12 @@ reviewStatus: "unreviewed"  # "reviewed" | "ai-reviewed" | "unreviewed"
 
 Fair-witness standards apply: all factual claims require either direct attribution or explicit epistemic hedging. Novel constructs must be labeled as such.
 
+**Word count target: 800-1200 words.** Reader feedback indicates posts over 2000 words
+lose engagement. The five personas inform the framing lens (frontmatter) but do not each
+require dedicated sections — write for the general reader, let the lensFraming metadata
+signal which audiences the post serves. Prefer one clear argument per post. If the topic
+requires more depth, split into a series of shorter posts rather than one long one.
+
 ### Content Quality Standards
 
 - No unattributed superlatives for third-party organizations
