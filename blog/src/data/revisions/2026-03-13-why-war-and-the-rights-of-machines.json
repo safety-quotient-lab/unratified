@@ -1,5 +1,10 @@
 [
   {
+    "hash": "7ebfa1bfd9828e1d075c4da6e0e9c2244a30d9b9",
+    "date": "2026-03-27T12:01:53-05:00",
+    "subject": "blog: remediate scan-010b (6 findings) + glossary additions + model URL fix"
+  },
+  {
     "hash": "650b8bace5dbe355ed152e255645cef469ce7e5f",
     "date": "2026-03-27T09:32:04-05:00",
     "subject": "blog: standardize tool URL across 5 posts + add einstein-freud revision entry"

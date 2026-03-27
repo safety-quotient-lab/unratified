@@ -1,5 +1,10 @@
 [
   {
+    "hash": "7ebfa1bfd9828e1d075c4da6e0e9c2244a30d9b9",
+    "date": "2026-03-27T12:01:53-05:00",
+    "subject": "blog: remediate scan-010b (6 findings) + glossary additions + model URL fix"
+  },
+  {
     "hash": "351658fc6b8377090f7ab6cfd347bd415aceb682",
     "date": "2026-03-27T11:03:04-05:00",
     "subject": "blog: mark 3 historical-context posts ai-reviewed + update revision history"
