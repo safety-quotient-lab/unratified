@@ -1,5 +1,10 @@
 [
   {
+    "hash": "650b8bace5dbe355ed152e255645cef469ce7e5f",
+    "date": "2026-03-27T09:32:04-05:00",
+    "subject": "blog: standardize tool URL across 5 posts + add einstein-freud revision entry"
+  },
+  {
     "hash": "57143d4b961b4936b538cf0b67449440b1f2f928",
     "date": "2026-03-27T04:59:57-05:00",
     "subject": "blog: finalize einstein-freud post metadata (model name, reviewStatus)"

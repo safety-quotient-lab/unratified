@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Primary sources include the UDHR drafting committee records, Morsink's analysis of the drafting process, and UN treaty collection data on ratification status."
   developer: "First post in a three-part historical context series. Establishes the institutional framework that later posts on Einstein-Freud and ICESCR ratification build upon."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 relatedArticles: [6, 13]
 ---
 

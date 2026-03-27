@@ -1,5 +1,10 @@
 [
   {
+    "hash": "650b8bace5dbe355ed152e255645cef469ce7e5f",
+    "date": "2026-03-27T09:32:04-05:00",
+    "subject": "blog: standardize tool URL across 5 posts + add einstein-freud revision entry"
+  },
+  {
     "hash": "8597c965e5bf28d9351af3e648413dea8ea535d0",
     "date": "2026-03-25T11:49:23-05:00",
     "subject": "interagent sync: content-quality-loop T33 — scan-012 all 3 findings remediated (pattern-generators fair-witness + vocabulary)"

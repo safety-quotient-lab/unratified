@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Primary source: the 1932 Einstein-Freud correspondence published by the League of Nations International Institute of Intellectual Cooperation. Secondary analysis draws on Galtung's structural violence framework and Morsink's UDHR historiography."
   developer: "Second post in the historical context series. Links psychological theory to institutional design — a pattern that recurs in AI governance discussions."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 relatedArticles: [6, 13]
 ---
 
@@ -55,7 +55,7 @@ The League of Nations published the Einstein-Freud correspondence in 1933 as a p
 
 But the exchange did not disappear. It circulated among the intellectuals and diplomats who, after 1945, set about building new institutions from the ruins of the old ones.
 
-The UDHR drafting committee included people who had read and absorbed this correspondence. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
+The UDHR drafting committee likely included people who had encountered this correspondence — it circulated widely among the diplomats and intellectuals who shaped postwar institutions. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
 
 The UDHR's structure reflects this insight. It does not merely enumerate freedoms. It establishes a framework of mutual obligation — between individuals and states, between states and the international community. Economic rights (Articles 22–27) serve a specific structural function: they address the material conditions that, when absent, make populations vulnerable to the exact manipulation Einstein described.
 

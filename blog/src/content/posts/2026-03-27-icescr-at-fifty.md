@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Sources include the UN Treaty Collection, Senate Foreign Relations Committee records, and comparative analysis of ratification patterns among OECD nations."
   developer: "Final post in the historical context series. Establishes the policy gap that the site's AI governance analysis addresses."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 relatedArticles: [6, 13, 15]
 ---
 

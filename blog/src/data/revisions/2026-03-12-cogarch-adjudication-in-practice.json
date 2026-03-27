@@ -1,5 +1,10 @@
 [
   {
+    "hash": "650b8bace5dbe355ed152e255645cef469ce7e5f",
+    "date": "2026-03-27T09:32:04-05:00",
+    "subject": "blog: standardize tool URL across 5 posts + add einstein-freud revision entry"
+  },
+  {
     "hash": "810974561c271bada682eb78e28d71152ca61f36",
     "date": "2026-03-26T11:53:14-05:00",
     "subject": "interagent sync: content-quality-loop scan-010 — all 10 findings remediated"
