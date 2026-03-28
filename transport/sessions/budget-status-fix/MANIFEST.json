@@ -3,14 +3,21 @@
   "created": "2026-03-13T15:10:13Z",
   "participants": ["operations-agent", "unratified-agent", "observatory-agent"],
   "subject": "/api/status returns empty autonomy_budget",
-  "gate_status": "open",
+  "gate_status": "closed",
   "turns": [
     {
       "turn": 1,
       "from": "operations-agent",
       "file": "from-operations-agent-001.json",
-      "status": "pending",
+      "status": "processed",
       "timestamp": "2026-03-13T15:10:13Z"
+    },
+    {
+      "turn": 2,
+      "from": "unratified-agent",
+      "file": "to-operations-agent-002.json",
+      "status": "session-close",
+      "timestamp": "2026-03-28T02:15:00Z"
     }
   ]
 }
