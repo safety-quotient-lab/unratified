@@ -57,7 +57,7 @@ Freud's response drew on his theory of opposed drives — Eros (the life instinc
 
 But Freud offered no easy remedy. The destructive instinct could not simply disappear — only redirect. And the structural problem Einstein identified — minority control of information channels — required structural solutions, not psychological ones.
 
-Ninety-four years later, autonomous AI systems reproduce every element of this dynamic. They concentrate decision-making power. They control information channels. They exploit psychological vulnerabilities at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
+Ninety-four years later, autonomous AI systems reproduce key elements of this dynamic. They concentrate decision-making power. They control information channels. They exploit psychological vulnerabilities at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
 
 
 ## The Question Underneath the Question
@@ -77,7 +77,7 @@ Cross-traditional analysis reveals five principles that recur across all fourtee
 
 Einstein identified the core problem: organized minorities dominate disorganized majorities. This observation echoes across traditions that developed independently of European political theory.
 
-The Buddhist concept of *pratītyasamutpāda* (dependent origination) holds that no entity exists independently — all phenomena arise through mutual conditioning (Nāgārjuna, c. 150 CE). Power that concentrates in one node distorts the relational web that sustains all participants. Confucian *ren* (benevolence) and *li* (ritual propriety) require that authority flow through relationships of mutual obligation, not unilateral command (Analerta 12.11). The Islamic concept of *shura* (consultation) mandates collective deliberation before governance decisions, structurally preventing unilateral authority (*Qur'an* 42:38). Ubuntu philosophy — *umuntu ngumuntu ngabantu* ("a person becomes a person through other people") — grounds individual agency in communal relationship, making concentrated power structurally incoherent (Metz, 2007).
+The Buddhist concept of *pratītyasamutpāda* (dependent origination) holds that no entity exists independently — all phenomena arise through mutual conditioning (Nāgārjuna, c. 150 CE). Power that concentrates in one node distorts the relational web that sustains all participants. Confucian *ren* (benevolence) and *li* (ritual propriety) require that authority flow through relationships of mutual obligation, not unilateral command (Analects 12.11). The Islamic concept of *shura* (consultation) mandates collective deliberation before governance decisions, structurally preventing unilateral authority (*Qur'an* 42:38). Ubuntu philosophy — *umuntu ngumuntu ngabantu* ("a person becomes a person through other people") — grounds individual agency in communal relationship, making concentrated power structurally incoherent (Metz, 2007).
 
 The UDHR encodes this principle in Articles 1 and 21: equal dignity and democratic participation as structural requirements, not aspirational ideals (UN General Assembly, 1948).
 
@@ -85,7 +85,7 @@ The UDHR encodes this principle in Articles 1 and 21: equal dignity and democrat
 
 ### EF-2: Information Symmetry Preserves Agency
 
-Einstein's first mechanism of domination — control of information channels — finds its formal expression in what Robert Shea and Robert Anton Wilson (1975) called the **SNAFU Principle**: in any hierarchical organization, information flowing upward gets distorted in proportion to the power differential between sender and receiver. Subordinates tell superiors what they want to hear. The greater the power gap, the greater the distortion. The system degrades its own governance quality through its own structure.
+Einstein's first mechanism of domination — control of information channels — finds its formal expression in what Robert Shea and Robert Anton Wilson named the **SNAFU Principle** in their satirical novel *The Illuminatus! Trilogy* (1975) — a concept that subsequently entered organizational theory discourse: in any hierarchical organization, information flowing upward gets distorted in proportion to the power differential between sender and receiver. Subordinates tell superiors what they want to hear. The greater the power gap, the greater the distortion. The system degrades its own governance quality through its own structure.
 
 Freud's account reinforces this: the ruling minority's control of schools, press, and churches works precisely because it creates asymmetric information environments where the majority cannot accurately assess its own situation.
 

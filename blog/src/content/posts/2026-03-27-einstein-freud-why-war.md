@@ -55,7 +55,7 @@ The League of Nations published the Einstein-Freud correspondence in 1933 as a p
 
 But the exchange did not disappear. It circulated among the intellectuals and diplomats who, after 1945, set about building new institutions from the ruins of the old ones.
 
-The UDHR drafting committee likely included people who had encountered this correspondence — it circulated widely among the diplomats and intellectuals who shaped postwar institutions. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
+The Universal Declaration of Human Rights (UDHR) drafting committee likely included people who had encountered this correspondence — it circulated widely among the diplomats and intellectuals who shaped postwar institutions. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
 
 The UDHR's structure reflects this insight. It does not merely enumerate freedoms. It establishes a framework of mutual obligation — between individuals and states, between states and the international community. Economic rights (Articles 22–27) serve a specific structural function: they address the material conditions that, when absent, make populations vulnerable to the exact manipulation Einstein described.
 
@@ -65,7 +65,7 @@ In 1969, the Norwegian sociologist Johan Galtung formalized a concept that Einst
 
 Galtung's framework recognizes multiple forms: poverty that shortens life expectancy constitutes structural violence, as does lack of healthcare access that produces preventable death, and educational exclusion that locks populations into economic precarity.
 
-Freud's framework anticipated Galtung's insight. When institutional structures fail to redirect aggressive energy, that energy does not vanish — it manifests as exploitation, deprivation, and systemic harm. The ICESCR addresses structural violence directly by establishing obligations around work, education, healthcare, and an adequate standard of living. These obligations function as the institutional constraints Freud described: mechanisms that channel social energy toward human development rather than destruction.
+Freud's framework anticipated Galtung's insight. When institutional structures fail to redirect aggressive energy, that energy does not vanish — it manifests as exploitation, deprivation, and systemic harm. The International Covenant on Economic, Social and Cultural Rights (ICESCR) addresses structural violence directly by establishing obligations around work, education, healthcare, and an adequate standard of living. These obligations function as the institutional constraints Freud described: mechanisms that channel social energy toward human development rather than destruction.
 
 ## Why This Matters Now
 

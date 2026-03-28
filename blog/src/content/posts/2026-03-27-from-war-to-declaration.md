@@ -67,7 +67,7 @@ The United States ratified the ICCPR in 1992. The ICESCR remains unratified as o
 
 ## Why the Split Still Matters
 
-The two-covenant structure created a hierarchy that the UDHR's drafters explicitly rejected. By separating economic rights from civil rights and ratifying only one, the U.S. effectively declared that freedom of speech counts as a fundamental right but the right to food, housing, and healthcare does not.
+The two-covenant structure created a hierarchy that the UDHR's drafters explicitly rejected. By separating economic rights from civil rights and ratifying only one, the practical effect elevated freedom of speech to a fundamental right while leaving the right to food, housing, and healthcare without binding commitment.
 
 This distinction carries real consequences. Without ICESCR ratification, no binding international framework requires the U.S. to progressively realize economic rights for its residents. As AI automation accelerates displacement across entire sectors of the economy, that gap grows wider.
 
