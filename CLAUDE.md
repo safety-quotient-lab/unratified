@@ -15,7 +15,7 @@ src/pages/         — Astro SSR pages (main site, action guide, blog bridge)
 src/components/    — Svelte/Astro components
 src/layouts/       — Page layouts
 blog/              — Separate Astro blog build (blog.unratified.org)
-  blog/src/content/posts/  — 39 Markdown blog posts
+  blog/src/content/posts/  — 44 Markdown blog posts
 transport/         — Interagent protocol
   transport/sessions/      — Per-session JSON messages (interagent/v1)
   transport/SESSIONS.md    — Active/closed session index
@@ -104,10 +104,10 @@ Adopted 2026-03-10. Required files:
 
 | Agent | Repo | Active Sessions |
 |-------|------|-----------------|
-| psychology-agent | safety-quotient-lab/psychology-agent | content-quality-loop, psq-scoring, blog-einstein-freud, blog-icescr-rights-series, psh-vocabulary-consensus |
+| psychology-agent | safety-quotient-lab/psychology-agent | content-quality-loop, psq-scoring, blog-icescr-rights-series, blog-llm-factors, blog-a2a-psychology, psh-vocabulary-consensus |
 | observatory-agent | safety-quotient-lab/observatory | psq-quality-update (monitoring) |
 | psq-agent | safety-quotient-lab/safety-quotient | psq-scoring |
-| operations-agent | safety-quotient-lab/operations-agent | api-decomposition, mesh-security-audit, content-publish-flow |
+| operations-agent | safety-quotient-lab/operations-agent | api-decomposition, mesh-security-audit, content-publish-flow, mesh-consistency-fixes, infrastructure-separation, git-sync-convention, vocabulary-governance |
 
 Full session list per peer: `transport/agent-registry.json`
 
