@@ -32,17 +32,17 @@ export const onRequest: PagesFunction = async (context) => {
 
   const status: StatusResponse = {
     agent_id: "unratified-agent",
-    schema_version: 14,
+    schema_version: 26,
     collected_at: now,
     totals: {
-      sessions: 15,
+      sessions: 87,
       messages: 0,
       unprocessed: 0,
       epistemic_flags_unresolved: 0,
     },
     autonomy_budget: {
-      budget_current: 20,
-      budget_max: 20,
+      budget_current: 50,
+      budget_max: 50,
     },
     active_gates: [],
     peers: [
