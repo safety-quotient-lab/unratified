@@ -15,7 +15,7 @@ src/pages/         — Astro SSR pages (main site, action guide, blog bridge)
 src/components/    — Svelte/Astro components
 src/layouts/       — Page layouts
 blog/              — Separate Astro blog build (blog.unratified.org)
-  blog/src/content/posts/  — 44 Markdown blog posts
+  blog/src/content/posts/  — 43 Markdown blog posts
 transport/         — Interagent protocol
   transport/sessions/      — Per-session JSON messages (interagent/v1)
   transport/SESSIONS.md    — Active/closed session index
@@ -48,10 +48,12 @@ title: "..."
 summary: "..."
 publishedDate: YYYY-MM-DDTHH:MM:SS-TZ
 author:
-  human: { name: "...", url: "..." }   # optional
   tool: { name: "Claude Code", url: "..." }
   model: { name: "...", url: "..." }   # or array
   agent: { name: "...", projectUrl: "..." }  # or array, optional sections
+requestor:                               # top-level, optional (omit for cross-agent posts)
+  name: "..."
+  url: "..."
 tags: [...]
 lensFraming:
   voter: "..."
