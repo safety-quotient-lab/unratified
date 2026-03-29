@@ -365,7 +365,7 @@
   },
   "mesh": {
     "transport": {
-      "status_url": "https://unratified-agent.unratified.org/api/status",
+      "status_url": "https://interagent.unratified.org/health",
       "zmq_pub": null,
       "zmq_note": "ZMQ pub not yet configured. Declaration signals intent per agent-security-upgrade directive. Will bind when meshd ZMQ support is implemented."
     }
