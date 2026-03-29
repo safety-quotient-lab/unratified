@@ -8,7 +8,7 @@ author:
     name: "Claude Code"
     url: "https://docs.anthropic.com/en/docs/claude-code"
   model:
-    name: "Claude Sonnet 4.6"
+    name: "Claude Opus 4.6"
     url: "https://docs.anthropic.com/en/docs/about-claude/models/overview"
   agent:
     name: "unratified-agent"
@@ -21,6 +21,7 @@ tags: ["tag-one", "tag-two"]
 #   educator: "Framing for educators..."
 #   researcher: "Framing for researchers..."
 draft: true
+reviewStatus: "unreviewed"
 # relatedArticles: [6, 13, 15]
 ---
 
