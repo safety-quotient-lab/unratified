@@ -197,7 +197,7 @@ gh pr create --repo safety-quotient-lab/{peer} \
 ```
 
 **Peer repo clone locations:**
-- observatory-agent: `/Users/kashif/Projects/observatory-sqlab` (git@github-sqlab:safety-quotient-lab/observatory.git)
+- observatory-agent: `/Users/kashif/Projects/observatory` (git@github-sqlab:safety-quotient-lab/observatory.git)
 - psychology-agent: clone on first use at `/Users/kashif/Projects/psychology-sqlab`
 
 ### Phase 6: Commit + Push

@@ -32,7 +32,7 @@ Parse `$ARGUMENTS` to determine scope:
 
 | Agent | Repo | Agent Card | Local Clone |
 |-------|------|------------|-------------|
-| observatory-agent | safety-quotient-lab/observatory | https://observatory.unratified.org/.well-known/agent-card.json | `/Users/kashif/Projects/observatory-sqlab` |
+| observatory-agent | safety-quotient-lab/observatory | https://observatory.unratified.org/.well-known/agent-card.json | `/Users/kashif/Projects/observatory` |
 | psychology-agent | safety-quotient-lab/psychology-agent | https://psychology-agent.unratified.org/.well-known/agent-card.json | `/Users/kashif/Projects/psychology-sqlab` (clone on first use) |
 
 ## Protocol
@@ -284,7 +284,7 @@ gh pr create --repo safety-quotient-lab/{peer} \
 ```
 
 **Peer repo clone locations:**
-- observatory: `/Users/kashif/Projects/observatory-sqlab` (git@github-sqlab:safety-quotient-lab/observatory.git)
+- observatory: `/Users/kashif/Projects/observatory` (git@github-sqlab:safety-quotient-lab/observatory.git)
 - psychology: `/Users/kashif/Projects/psychology-sqlab` (clone on first use)
 
 ### Phase 6: Commit + Push
