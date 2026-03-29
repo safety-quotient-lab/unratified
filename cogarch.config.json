@@ -99,7 +99,7 @@
         "transport": "cross-repo-fetch",
         "repo": "safety-quotient-lab/observatory",
         "message_prefix": "from-observatory-agent-",
-        "always_consider": true,
+        "always_consider": false,
         "discovery_url": "https://observatory.unratified.org/.well-known/agent-card.json"
       },
       "psychology-agent": {
