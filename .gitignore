@@ -58,3 +58,6 @@ scripts/compute-psychometrics.py
 
 # Local-only watcher state (meshd)
 .watcher-seen.json
+
+# Peer agent card caches (local context, rebuilt from live endpoints)
+.claude/cogarch/
