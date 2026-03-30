@@ -53,7 +53,7 @@ This framing omitted several countervailing facts. The ICESCR does not prescribe
 
 As of 2026, [173 countries have ratified the ICESCR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en). The list includes every G7 nation except the United States. It includes every NATO ally. It includes countries across the full spectrum of economic development, political systems, and cultural traditions.
 
-The United States occupies a small and shrinking cohort of non-ratifiers. The other notable non-ratifying states include a handful of small island states and countries in active conflict. Among major democracies, America stands alone.
+The United States occupies a small cohort of non-ratifiers — one that has narrowed over time as additional states have joined (most recently, the State of Palestine in 2014). The other notable non-ratifying states include a handful of small island states and countries in active conflict. Among major democracies, America stands alone.
 
 This isolation carries practical consequences beyond symbolism. The U.S. lacks standing to participate fully in ICESCR monitoring mechanisms. It cannot invoke the treaty's framework in bilateral negotiations about labor standards or economic development. And it cannot credibly advocate for economic rights abroad while declining to commit to them at home.
 
@@ -70,5 +70,15 @@ Countries that have ratified the ICESCR possess a legal framework — however im
 The United States cannot ask these questions within an ICESCR framework because it has not accepted the framework. This leaves AI governance debates in the U.S. without the structural foundation that the treaty provides. The result: a patchwork of sector-specific regulations, voluntary industry commitments, and ad hoc policy responses where a systematic rights-based approach could operate.
 
 This does not mean ICESCR ratification would solve AI governance. It would not. But it would provide a framework — a set of principles, obligations, and accountability mechanisms — that the current approach lacks. The drafters of the UDHR understood that rights function as interconnected systems. Addressing AI's economic disruption without a framework for economic rights leaves the most affected people without the protections that 173 other nations have committed to provide.
+
+---
+
+**EPISTEMIC FLAGS**
+
+- **Counterfactual claims about ratification:** Assertions about what ICESCR ratification "would provide" the U.S. rest on inference from other ratifying states' experience. Actual effects would depend on reservations attached, judicial interpretation, and political implementation.
+- **Ratification trend data:** The most recent ICESCR ratification identified (State of Palestine, 2014) may not represent the absolute latest — the UN Treaty Collection should serve as the authoritative source for current status.
+- **AI governance gap framing:** The claim that non-ratification leaves the U.S. without a "structural foundation" for AI governance simplifies a complex policy landscape. Domestic frameworks (ADA, Title VII, sector-specific regulations) provide partial coverage, though not through a unified rights-based instrument.
+
+---
 
 *This post concludes a three-part series on the historical foundations of economic rights. Previously: [how WWII created the universal human rights framework](/posts/2026-03-27-from-war-to-declaration) and [what Einstein and Freud's 1932 letters tell us about structural violence](/posts/2026-03-27-einstein-freud-why-war).*

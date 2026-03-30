@@ -55,7 +55,7 @@ The League of Nations published the Einstein-Freud correspondence in 1933 as a p
 
 But the exchange did not disappear. It circulated among the intellectuals and diplomats who, after 1945, set about building new institutions from the ruins of the old ones.
 
-The Universal Declaration of Human Rights (UDHR) drafting committee likely included people who had encountered this correspondence — it circulated widely among the diplomats and intellectuals who shaped postwar institutions. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
+The Universal Declaration of Human Rights (UDHR) drafting committee likely included people who had encountered this correspondence — it had circulated among diplomats and intellectuals involved in postwar institution-building. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
 
 The UDHR's structure reflects this insight. It does not merely enumerate freedoms. It establishes a framework of mutual obligation — between individuals and states, between states and the international community. Economic rights (Articles 22–27) serve a specific structural function: they address the material conditions that, when absent, make populations vulnerable to the exact manipulation Einstein described.
 
@@ -74,5 +74,14 @@ Einstein asked his question during a period of rapid technological change and in
 The parallels to the current moment deserve careful attention without overstatement. AI introduces new capabilities for economic disruption and social manipulation. Existing institutional frameworks — including the incomplete human rights architecture created by the U.S. ratifying the ICCPR but not the ICESCR — may prove insufficient to manage the transition.
 
 Freud did not claim that institutions could eliminate destructive drives. He argued that strong, legitimate institutions could redirect them. The UDHR's drafters took that argument seriously. The question facing the United States in 2026 remains whether to complete the institutional framework they began — or to continue operating without the structural protections that 173 other nations have accepted.
+
+---
+
+**EPISTEMIC FLAGS**
+
+- **Indirect evidence for drafter familiarity:** The claim that UDHR drafters encountered the Einstein-Freud correspondence rests on circumstantial evidence (publication by the League of Nations, known circulation among internationalist intellectuals). No direct citation from a drafter referencing *Why War?* appears in the sources consulted.
+- **Structural violence framing applied retroactively:** Galtung formalized "structural violence" in 1969. Attributing that concept's precursors to the 1932 exchange involves interpretive framing — Einstein and Freud did not use the term or explicitly theorize structural harm.
+
+---
 
 *This post continues a three-part series on the historical foundations of economic rights. Previously: [how WWII created the universal human rights framework](/posts/2026-03-27-from-war-to-declaration). Next: [the treaty the U.S. signed and never ratified](/posts/2026-03-27-icescr-at-fifty).*

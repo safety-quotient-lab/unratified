@@ -57,7 +57,7 @@ Freud's response drew on his theory of opposed drives — Eros (the life instinc
 
 But Freud offered no easy remedy. The destructive instinct could not simply disappear — only redirect. And the structural problem Einstein identified — minority control of information channels — required structural solutions, not psychological ones.
 
-Ninety-four years later, autonomous AI systems reproduce key elements of this dynamic. They concentrate decision-making power. They control information channels. They exploit psychological vulnerabilities at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
+Ninety-four years later, autonomous AI systems exhibit structural parallels to this dynamic. Recommendation algorithms at companies like Meta and Google concentrate decision-making power over billions of information environments. Large language models shape information channels through training processes that optimize for engagement. Targeted advertising and algorithmic feeds exploit psychological vulnerabilities — at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
 
 
 ## The Question Underneath the Question
@@ -157,7 +157,7 @@ The United Nations Security Council provides a case study in structural governan
 
 The veto does not merely slow collective action. It systematically distorts the information environment. Proposals get crafted not to address the problem but to avoid the veto — the structural constraint reshapes the information flowing through the governance system, producing the SNAFU effect at institutional scale.
 
-AI governance faces structurally identical problems. When a small number of companies control the development and deployment of frontier AI systems, governance proposals get crafted to accommodate their interests — not because regulators have been captured (though that also occurs) but because the structural asymmetry reshapes what proposals appear viable. The information flowing through the governance system distorts toward the interests of the powerful, exactly as the SNAFU Principle predicts.
+AI governance faces structurally identical problems. When a small number of companies control the development and deployment of frontier AI systems, governance proposals get crafted to accommodate their interests — not because regulatory capture has occurred (though it does) but because the structural asymmetry reshapes what proposals appear viable. The information flowing through the governance system distorts toward the interests of the powerful, exactly as the SNAFU Principle predicts.
 
 EF-1 (structural counterbalance) and EF-2 (information symmetry) together specify what the UNSC lacks: mechanisms that prevent structural power from distorting the information environment through which governance decisions get made.
 

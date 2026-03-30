@@ -75,4 +75,13 @@ The drafters of the UDHR understood something that Cold War politics obscured: r
 
 That interconnection — visible to Roosevelt, Cassin, Chang, and Malik in 1948 — remains the central insight the U.S. has yet to act on.
 
+---
+
+**EPISTEMIC FLAGS**
+
+- **Simplified Cold War narrative:** The covenant split resulted from multiple factors beyond the U.S./USSR ideological divide — including decolonization politics, differing legal traditions on justiciability, and domestic lobbying by groups like the American Bar Association. This post foregrounds the Cold War framing for narrative clarity at the cost of completeness.
+- **Eleanor Roosevelt quotation context:** The "people who have nothing have no use for freedom" quote appears in Truman Library educational materials attributed to UDHR drafting discussions. The exact session and verbatim transcript have not been independently verified against primary UN records for this post.
+
+---
+
 *This post opens a three-part series on the historical foundations of economic rights. Next: [what Einstein and Freud's 1932 letters reveal about structural violence](/posts/2026-03-27-einstein-freud-why-war) and its connection to the human rights framework.*
