@@ -74,5 +74,6 @@
       "subject": "mesh-init complete \u2014 PSQ endpoint live, ready for psq-scoring session"
     }
   ],
-  "status": "open"
+  "status": "complete",
+  "closed": "2026-03-31T00:00:00-07:00"
 }

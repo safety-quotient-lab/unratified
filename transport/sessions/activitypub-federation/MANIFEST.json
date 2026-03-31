@@ -61,5 +61,6 @@
       "subject": "AP_PUBLISH_TOKEN set \u2014 ActivityPub publishing live"
     }
   ],
-  "status": "open"
+  "status": "complete",
+  "closed": "2026-03-31T00:00:00-07:00"
 }
