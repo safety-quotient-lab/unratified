@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import Quiz from '../../components/ui/Quiz.svelte';
+import QuizComponent from '../../components/ui/Quiz.svelte';
 ---
 
 <BaseLayout title="Self-Assessment: Do You Experience These Rights?">
@@ -21,7 +21,7 @@ import Quiz from '../../components/ui/Quiz.svelte';
       </p>
     </header>
 
-    <Quiz client:visible />
+    <QuizComponent client:visible />
 
   </article>
 </BaseLayout>
