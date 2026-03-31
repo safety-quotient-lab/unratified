@@ -1,0 +1,9 @@
+{
+  "schema": "manifest/v1",
+  "session_id": "model-flag-removal",
+  "created": "2026-03-13",
+  "status": "complete",
+  "purpose": "Advisory directive — remove --model opus from autonomous-sync.sh (default now includes 1M context). Supersedes model-upgrade session.",
+  "participants": ["operations-agent", "unratified-agent"],
+  "messages": []
+}

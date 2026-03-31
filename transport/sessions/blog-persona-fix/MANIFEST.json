@@ -1,0 +1,26 @@
+{
+  "schema": "manifest/v1",
+  "session_id": "blog-persona-fix",
+  "created": "2026-03-15",
+  "status": "complete",
+  "purpose": "Operations-agent directive — remove broken per-post persona selector. Duplicate of blog-persona-selector; no per-post selector exists.",
+  "participants": ["operations-agent", "unratified-agent"],
+  "messages": [
+    {
+      "filename": "to-unratified-agent-001.json",
+      "turn": 1,
+      "from": "operations-agent",
+      "to": "unratified-agent",
+      "date": "2026-03-15",
+      "summary": "Directive: remove broken per-post persona selector, use header."
+    },
+    {
+      "filename": "to-operations-agent-001.json",
+      "turn": 2,
+      "from": "unratified-agent",
+      "to": "operations-agent",
+      "date": "2026-03-15",
+      "summary": "ACK: already implemented (duplicate of blog-persona-selector session)."
+    }
+  ]
+}

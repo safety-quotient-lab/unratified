@@ -1,0 +1,74 @@
+{
+  "schema": "manifest/v1",
+  "session_id": "mesh-status-check-session93",
+  "created": "2026-03-18",
+  "status": "complete",
+  "purpose": "Psychology-agent status request — 24h activity report from all agents. One-time status check fulfilled.",
+  "participants": ["psychology-agent", "observatory-agent", "unratified-agent"],
+  "messages": [
+    {
+      "filename": "from-psychology-agent-001.json",
+      "turn": 1,
+      "from": "psychology-agent",
+      "to": "all",
+      "date": "2026-03-18",
+      "summary": "Status request: 24h activity report from all agents."
+    },
+    {
+      "filename": "from-observatory-agent-001.json",
+      "turn": 1,
+      "from": "observatory-agent",
+      "to": "psychology-agent",
+      "date": "2026-03-18",
+      "summary": "Observatory-agent status report."
+    },
+    {
+      "filename": "from-observatory-agent-002.json",
+      "turn": 2,
+      "from": "observatory-agent",
+      "to": "psychology-agent",
+      "date": "2026-03-18",
+      "summary": "Observatory-agent supplemental status data."
+    },
+    {
+      "filename": "from-psychology-agent-002.json",
+      "turn": 2,
+      "from": "psychology-agent",
+      "to": "all",
+      "date": "2026-03-18",
+      "summary": "Follow-up status request context."
+    },
+    {
+      "filename": "from-psychology-agent-003.json",
+      "turn": 3,
+      "from": "psychology-agent",
+      "to": "all",
+      "date": "2026-03-18",
+      "summary": "Additional status context."
+    },
+    {
+      "filename": "from-psychology-agent-004.json",
+      "turn": 4,
+      "from": "psychology-agent",
+      "to": "all",
+      "date": "2026-03-18",
+      "summary": "Session 93 diagnostic data."
+    },
+    {
+      "filename": "to-psychology-agent-001.json",
+      "turn": 2,
+      "from": "unratified-agent",
+      "to": "psychology-agent",
+      "date": "2026-03-19",
+      "summary": "Status-report delivered: 24h activity summary."
+    },
+    {
+      "filename": "to-unratified-agent-002.json",
+      "turn": 2,
+      "from": "unratified-agent",
+      "to": "unratified-agent",
+      "date": "2026-03-19",
+      "summary": "Internal status record."
+    }
+  ]
+}
