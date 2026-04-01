@@ -57,7 +57,7 @@ Freud's response drew on his theory of opposed drives — Eros (the life instinc
 
 But Freud offered no easy remedy. The destructive instinct could not simply disappear — only redirect. And the structural problem Einstein identified — minority control of information channels — required structural solutions, not psychological ones.
 
-Ninety-four years later, autonomous AI systems exhibit structural parallels to this dynamic. Recommendation algorithms at companies like Meta and Google concentrate decision-making power over billions of information environments. Large language models shape information channels through training processes that optimize for engagement. Targeted advertising and algorithmic feeds exploit psychological vulnerabilities — at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
+Ninety-four years later, autonomous AI systems exhibit structural parallels to this dynamic. Recommendation algorithms at companies like Meta and Google concentrate decision-making power over billions of information environments. Large language models reshape information channels at scale, producing outputs tuned to human preference signals rather than optimizing for accuracy or completeness. Targeted advertising and algorithmic feeds exploit psychological vulnerabilities — at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
 
 
 ## The Question Underneath the Question
@@ -85,7 +85,7 @@ The UDHR encodes this principle in Articles 1 and 21: equal dignity and democrat
 
 ### EF-2: Information Symmetry Preserves Agency
 
-Einstein's first mechanism of domination — control of information channels — finds its formal expression in what Robert Shea and Robert Anton Wilson named the **SNAFU Principle** in their satirical novel *The Illuminatus! Trilogy* (1975) — a concept that subsequently entered organizational theory discourse: in any hierarchical organization, information flowing upward gets distorted in proportion to the power differential between sender and receiver. Subordinates tell superiors what they want to hear. The greater the power gap, the greater the distortion. The system degrades its own governance quality through its own structure.
+Einstein's first mechanism of domination — control of information channels — finds its formal expression in what Robert Shea and Robert Anton Wilson named the **SNAFU Principle** in their satirical novel *The Illuminatus! Trilogy* (1975) — a concept that resonates with organizational theory findings on hierarchical information distortion (cf. Janis, 1972; Argyris, 1990): in any hierarchical organization, information flowing upward gets distorted in proportion to the power differential between sender and receiver. Subordinates tell superiors what they want to hear. The greater the power gap, the greater the distortion. The system degrades its own governance quality through its own structure.
 
 Freud's account reinforces this: the ruling minority's control of schools, press, and churches works precisely because it creates asymmetric information environments where the majority cannot accurately assess its own situation.
 

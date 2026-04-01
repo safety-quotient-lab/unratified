@@ -53,7 +53,7 @@ This framing omitted several countervailing facts. The ICESCR does not prescribe
 
 As of 2026, [173 countries have ratified the ICESCR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en). The list includes every G7 nation except the United States. It includes every NATO ally. It includes countries across the full spectrum of economic development, political systems, and cultural traditions.
 
-The United States occupies a small cohort of non-ratifiers — one that has narrowed over time as additional states have joined (most recently, the State of Palestine in 2014). The other notable non-ratifying states include a handful of small island states and countries in active conflict. Among major democracies, America stands alone.
+The United States occupies a small cohort of non-ratifiers — one that has narrowed over time as additional states have joined (most recently, the State of Palestine in 2014). The other notable non-ratifying states include Comoros, Cuba, and several small island nations (Palau, Nauru), along with countries in prolonged conflict such as South Sudan. Among major democracies, America stands alone.
 
 This isolation carries practical consequences beyond symbolism. The U.S. lacks standing to participate fully in ICESCR monitoring mechanisms. It cannot invoke the treaty's framework in bilateral negotiations about labor standards or economic development. And it cannot credibly advocate for economic rights abroad while declining to commit to them at home.
 
