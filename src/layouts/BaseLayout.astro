@@ -180,7 +180,7 @@ if (Astro.url.pathname !== '/glossary') {
     <meta name="twitter:image:alt" content="Unratified \u2014 173 nations ratified the ICESCR. The U.S. signed it and never followed through." />
 
     <!-- Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": structuredData,
     })} />

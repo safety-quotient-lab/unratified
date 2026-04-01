@@ -9,7 +9,6 @@ interface Section {
 interface Props {
   title: string;
   description?: string;
-  section: string;
   breadcrumbLabel?: string;
   sections?: Section[];
 }
@@ -17,7 +16,6 @@ interface Props {
 const {
   title,
   description,
-  section,
   breadcrumbLabel,
   sections,
 } = Astro.props;

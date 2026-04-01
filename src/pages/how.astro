@@ -50,7 +50,7 @@ const pathwayScores = [
 ---
 
 <BaseLayout title="How Ratification Happens" description="Seven ratification pathways evaluated through differential diagnosis — discriminator scoring, higher-order analysis, and the composite model that emerges.">
-  <script type="application/ld+json" set:html={JSON.stringify({
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": faqData.map(({ question, answer }) => ({
