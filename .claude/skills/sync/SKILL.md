@@ -33,7 +33,7 @@ Parse `$ARGUMENTS` to determine scope:
 | Agent | Repo | Agent Card | Local Clone |
 |-------|------|------------|-------------|
 | observatory-agent | safety-quotient-lab/observatory | https://observatory.unratified.org/.well-known/agent-card.json | `/Users/kashif/Projects/observatory` |
-| psychology-agent | safety-quotient-lab/psychology-agent | https://psychology-agent.unratified.org/.well-known/agent-card.json | `/Users/kashif/Projects/psychology-sqlab` (clone on first use) |
+| psychology-agent | safety-quotient-lab/psychology-agent | https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json | `/Users/kashif/Projects/psychology-sqlab` (clone on first use) |
 
 ## Protocol
 
@@ -61,7 +61,7 @@ For each in-scope peer, fetch their agent card and diff against cache:
 curl -s https://observatory.unratified.org/.well-known/agent-card.json > /tmp/observatory-card-current.json
 diff /tmp/observatory-card-current.json .claude/cogarch/observatory-agent-card.json && echo "NO_DIFF" || true
 
-curl -s https://psychology-agent.unratified.org/.well-known/agent-card.json > /tmp/psychology-card-current.json
+curl -s https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json > /tmp/psychology-card-current.json
 diff /tmp/psychology-card-current.json .claude/cogarch/psychology-agent-card.json && echo "NO_DIFF" || true
 ```
 
@@ -74,7 +74,7 @@ If `.claude/cogarch/` doesn't exist yet:
 ```bash
 mkdir -p .claude/cogarch
 curl -s https://observatory.unratified.org/.well-known/agent-card.json > .claude/cogarch/observatory-agent-card.json
-curl -s https://psychology-agent.unratified.org/.well-known/agent-card.json > .claude/cogarch/psychology-agent-card.json
+curl -s https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json > .claude/cogarch/psychology-agent-card.json
 ```
 
 Include our cogarch version in outbound ACKs:

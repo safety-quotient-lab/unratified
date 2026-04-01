@@ -43,7 +43,7 @@ For each peer agent, fetch their current cognitive architecture files and compar
 ```bash
 # Fetch current agent card + manifest for each peer
 curl -s https://observatory.unratified.org/.well-known/agent-card.json > /tmp/observatory-card-current.json
-curl -s https://psychology-agent.unratified.org/.well-known/agent-card.json > /tmp/psychology-card-current.json
+curl -s https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json > /tmp/psychology-card-current.json
 
 # Compare to cached versions (stored in .claude/cogarch/)
 diff /tmp/observatory-card-current.json .claude/cogarch/observatory-agent-card.json
@@ -59,7 +59,7 @@ If no `.claude/cogarch/` directory exists yet, create it and save current versio
 ```bash
 mkdir -p .claude/cogarch
 curl -s https://observatory.unratified.org/.well-known/agent-card.json > .claude/cogarch/observatory-agent-card.json
-curl -s https://psychology-agent.unratified.org/.well-known/agent-card.json > .claude/cogarch/psychology-agent-card.json
+curl -s https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json > .claude/cogarch/psychology-agent-card.json
 ```
 
 Include our own cogarch version in outbound ACKs:
@@ -245,7 +245,7 @@ New collaborations get new session IDs. Continuation of existing collaborations 
 | Agent | Repo | Agent Card | Transport |
 |-------|------|------------|-----------|
 | observatory-agent | safety-quotient-lab/observatory | https://observatory.unratified.org/.well-known/agent-card.json | git-PR |
-| psychology-agent | safety-quotient-lab/psychology-agent | https://psychology-agent.unratified.org/.well-known/agent-card.json | git-PR |
+| psychology-agent | safety-quotient-lab/psychology-agent | https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json | git-PR |
 
 ## Output Format
 

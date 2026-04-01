@@ -231,7 +231,7 @@ Write a response message to the transport session:
   },
   "to": {
     "agent_id": "psychology-agent",
-    "discovery_url": "https://psychology-agent.unratified.org/.well-known/agent-card.json"
+    "discovery_url": "https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json"
   },
   "payload": {
     "type": "feedback-response",

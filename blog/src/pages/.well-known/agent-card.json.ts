@@ -77,7 +77,7 @@ export const GET: APIRoute = () => {
       },
       {
         agent_id: 'psychology-agent',
-        agentCard: 'https://psychology-agent.unratified.org/.well-known/agent-card.json',
+        agentCard: 'https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json',
       },
     ],
     skills: [
