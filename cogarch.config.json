@@ -110,7 +110,7 @@
         "repo": "safety-quotient-lab/psychology-agent",
         "message_prefix": "from-psychology-agent-",
         "always_consider": true,
-        "discovery_url": "https://psychology-agent.unratified.org/.well-known/agent-card.json"
+        "discovery_url": "https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json"
       },
       "psq-agent": {
         "role": "peer",

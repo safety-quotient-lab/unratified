@@ -1,5 +1,15 @@
 [
   {
+    "hash": "d27ba3a6de45332846cd983bd035fb16748ee33b",
+    "date": "2026-04-02T15:45:43-05:00",
+    "subject": "interagent sync: scan-011-s101b — 4/4 findings remediated + ACK"
+  },
+  {
+    "hash": "c4fa44409ab1dcf5656a04b242bcdc9db0f940c1",
+    "date": "2026-04-02T13:52:17-05:00",
+    "subject": "chore: commit prior-session changes — psq-agent URL fix + revision tracking"
+  },
+  {
     "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
     "date": "2026-03-11T12:41:23-05:00",
     "subject": "feat: authorship model — remove human author, add requestor field"
