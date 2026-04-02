@@ -190,7 +190,7 @@
     {
       "id": "campaign-monitoring",
       "name": "Bluesky Campaign Monitoring",
-      "description": "Return current @unratified.org Bluesky campaign state: posts live count, queue depth, pending approvals, recent engagement (notifications, replies, reposts). Data sourced from unratified-bot CLI (github.com/safety-quotient-lab/unratified-bot).",
+      "description": "Return current @unratified.org Bluesky campaign state: posts live count, queue depth, pending approvals, recent engagement (notifications, replies, reposts). Data sourced from scripts/bsky-*.mjs in this repo.",
       "tags": [
         "bluesky",
         "campaign",

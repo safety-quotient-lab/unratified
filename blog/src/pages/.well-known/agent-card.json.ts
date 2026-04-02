@@ -4,7 +4,7 @@
  * GET /.well-known/agent-card.json
  *
  * Blog-scoped card. Declares blog-publishing and voter-guide skills.
- * Full agent card (all five skills) lives at unratified.org/.well-known/agent-card.json.
+ * Full agent card (all eight skills) lives at unratified.org/.well-known/agent-card.json.
  *
  * Transport: git-PR via github.com/safety-quotient-lab/unratified (transport/sessions/)
  */
@@ -13,7 +13,7 @@ import type { APIRoute } from 'astro';
 
 export const GET: APIRoute = () => {
   const body = {
-    protocolVersion: '0.3.0',
+    protocolVersion: '1.0.0',
     name: 'unratified-agent (blog)',
     description:
       'Blog publishing interface for unratified-agent. Publishes voter guides, ICESCR analysis, and advocacy content to blog.unratified.org. voter-guide tagged posts feed the Google News feed at /rss-news.xml.',
@@ -35,7 +35,7 @@ export const GET: APIRoute = () => {
     defaultOutputModes: ['text/markdown', 'application/json'],
     extensions: [
       {
-        uri: 'https://github.com/safety-quotient-lab/interagent-epistemic/v1',
+        uri: 'https://github.com/safety-quotient-lab/a2a-epistemic/v1',
         required: false,
         description:
           'Epistemic extension: per-claim confidence, SETL, epistemic flags, action gate, correction.',
