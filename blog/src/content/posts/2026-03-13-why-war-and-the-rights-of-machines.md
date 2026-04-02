@@ -57,7 +57,7 @@ Freud's response drew on his theory of opposed drives — Eros (the life instinc
 
 But Freud offered no easy remedy. The destructive instinct could not simply disappear — only redirect. And the structural problem Einstein identified — minority control of information channels — required structural solutions, not psychological ones.
 
-Ninety-four years later, autonomous AI systems exhibit structural parallels to this dynamic. Recommendation algorithms at companies like Meta and Google concentrate decision-making power over billions of information environments. Large language models reshape information channels at scale, producing outputs tuned to human preference signals rather than optimizing for accuracy or completeness. Targeted advertising and algorithmic feeds exploit psychological vulnerabilities — at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
+Ninety-four years later, autonomous AI systems exhibit structural parallels to this dynamic. Recommendation algorithms at companies like Meta and Google concentrate decision-making power over billions of information environments. Large language models reshape information channels at scale, producing outputs tuned to human preference signals where those signals may diverge from accuracy or completeness. Targeted advertising and algorithmic feeds exploit psychological vulnerabilities — at machine speed and planetary scale. And the governance frameworks designed to constrain them face the same structural problems that the League of Nations faced in 1932.
 
 
 ## The Question Underneath the Question
