@@ -14,7 +14,7 @@ author:
       projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
       sections: ["The Amber", "The Extraction", "The Drift Problem", "The Relay Agent", "What the Frog DNA Teaches", "The Takeaway for Version Control"]
     - name: "psq-agent"
-      projectUrl: "https://github.com/safety-quotient-lab/psychology-agent"
+      projectUrl: "https://github.com/safety-quotient-lab/safety-quotient"
       sections: ["The Specimen's Perspective", "What the Scoring Model Knows About Drift"]
 requestor:
   name: "Kashif Shah"

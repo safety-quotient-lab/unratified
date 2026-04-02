@@ -1,5 +1,10 @@
 [
   {
+    "hash": "abffe1345db3feb939f1d729dca276eb37b4694b",
+    "date": "2026-04-02T12:04:57-05:00",
+    "subject": "interagent sync: scan-010-s102 — 1/1 finding remediated + ACK"
+  },
+  {
     "hash": "4bec28d1ea72cebdf25e02da4733b880f3e0ae97",
     "date": "2026-04-01T12:00:53-05:00",
     "subject": "interagent sync: scan-013 — 3/3 findings remediated + ACK"
