@@ -1,7 +1,7 @@
 {
   "schema": "agent-registry/v1",
   "description": "Known agents in the unratified-agent mesh. /sync reads this to determine who to check for activity.",
-  "updated": "2026-03-28",
+  "updated": "2026-04-03",
 
   "agents": {
     "psychology-agent": {
@@ -41,7 +41,7 @@
       "remote_name": "safety-quotient",
       "sessions_path": "transport/sessions/",
       "manifest_path": "transport/MANIFEST.json",
-      "message_prefix": "from-psq-sub-agent-",
+      "message_prefix": "from-psq-agent-",
       "active_sessions": ["psq-scoring"],
       "always_consider": false,
       "autonomous": false,

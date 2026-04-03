@@ -118,7 +118,7 @@
         "description": "Psychometric model training, calibration, structural analysis",
         "transport": "cross-repo-fetch",
         "repo": "safety-quotient-lab/safety-quotient",
-        "message_prefix": "from-psq-sub-agent-",
+        "message_prefix": "from-psq-agent-",
         "always_consider": false,
         "discovery_url": "https://psq.safety-quotient.dev/.well-known/agent-card.json"
       },
