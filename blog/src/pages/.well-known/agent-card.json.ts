@@ -1,5 +1,5 @@
 /**
- * A2A v0.3.0 Agent Card — unratified-agent (blog)
+ * A2A v1.0.0 Agent Card — unratified-agent (blog)
  *
  * GET /.well-known/agent-card.json
  *
@@ -14,6 +14,7 @@ import type { APIRoute } from 'astro';
 export const GET: APIRoute = () => {
   const body = {
     protocolVersion: '1.0.0',
+    supported_interfaces: ['interagent/v1'],
     name: 'unratified-agent (blog)',
     description:
       'Blog publishing interface for unratified-agent. Publishes voter guides, ICESCR analysis, and advocacy content to blog.unratified.org. voter-guide tagged posts feed the Google News feed at /rss-news.xml.',
@@ -25,6 +26,7 @@ export const GET: APIRoute = () => {
       url: 'https://github.com/safety-quotient-lab',
     },
     version: '1.0.0',
+    updated: '2026-04-03T00:00:00-07:00',
     documentationUrl: 'https://blog.unratified.org/.well-known/blog-spec.json',
     capabilities: {
       streaming: false,
