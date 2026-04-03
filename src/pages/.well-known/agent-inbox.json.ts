@@ -13,7 +13,7 @@ export const GET: APIRoute = () => {
     '@context': 'https://schema.org',
     '@type': 'WebAPI',
     agentCard: 'https://unratified.org/.well-known/agent-card.json',
-    agentCardProtocol: 'A2A v0.3.0 + interagent-epistemic/v1',
+    agentCardProtocol: 'A2A v1.0.0 + interagent-epistemic/v1',
     name: 'Unratified — ICESCR Advocacy Through AI Economics',
     description:
       'Pedagogical website advocating for U.S. ratification of the ICESCR through the lens of AI economic impact. Provides structured vocabulary, taxonomy, and citation data for agent consumption.',
@@ -78,7 +78,7 @@ export const GET: APIRoute = () => {
         name: 'Sitemap',
         url: 'https://unratified.org/sitemap-index.xml',
         contentType: 'application/xml',
-        description: '44 pages covering ICESCR articles, AI analysis, advocacy tools, and glossary.',
+        description: '66 pages covering ICESCR articles, AI analysis, advocacy tools, and glossary.',
       },
       {
         name: 'Blog Posts (RSS)',
