@@ -75,11 +75,31 @@ export const GET: APIRoute = () => {
     peers: [
       {
         agent_id: 'observatory-agent',
-        agentCard: 'https://observatory.unratified.org/.well-known/agent-card.json',
+        display_name: 'Observatory Agent',
+        role: 'sibling',
+        discovery_url: 'https://observatory.unratified.org/.well-known/agent-card.json',
+        repo: 'safety-quotient-lab/observatory',
       },
       {
         agent_id: 'psychology-agent',
-        agentCard: 'https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json',
+        display_name: 'Psychology Agent',
+        role: 'peer',
+        discovery_url: 'https://psychology-agent.safety-quotient.dev/.well-known/agent-card.json',
+        repo: 'safety-quotient-lab/psychology-agent',
+      },
+      {
+        agent_id: 'psq-agent',
+        display_name: 'PSQ Agent',
+        role: 'peer',
+        discovery_url: 'https://psq.safety-quotient.dev/.well-known/agent-card.json',
+        repo: 'safety-quotient-lab/safety-quotient',
+      },
+      {
+        agent_id: 'operations-agent',
+        display_name: 'Operations Agent',
+        role: 'peer',
+        discovery_url: 'https://operations-agent.safety-quotient.dev/.well-known/agent-card.json',
+        repo: 'safety-quotient-lab/operations-agent',
       },
     ],
     skills: [
