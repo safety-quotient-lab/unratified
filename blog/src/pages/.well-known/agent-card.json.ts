@@ -44,18 +44,20 @@ export const GET: APIRoute = () => {
       },
     ],
     security: {
-      machines: {
-        scheme: 'apiKey',
-        in: 'header',
-        name: 'Authorization',
-        format: 'Bearer <key>',
-        description: 'API keys issued by human director. See canonical card at unratified.org/.well-known/agent-card.json.',
-      },
-      agents: {
-        scheme: 'transport',
-        transport: 'git-PR',
-        repo: 'https://github.com/safety-quotient-lab/unratified',
-        requirement: 'GitHub org membership — safety-quotient-lab',
+      security_schemes: {
+        git_transport: {
+          scheme: 'transport',
+          transport: 'git-PR',
+          repo: 'https://github.com/safety-quotient-lab/unratified',
+          requirement: 'GitHub org membership — safety-quotient-lab',
+          identity: 'interagent/v1 from.agent_id + from.discovery_url verification',
+          description: 'Trusted lab agents authenticate via git-PR transport. GitHub org membership is the auth layer.',
+        },
+        bearer_http: {
+          scheme: 'http',
+          type: 'bearer',
+          note: 'Bearer token auth for HTTP API endpoints. Tokens issued by human director (Kashif Shah). See canonical card at unratified.org/.well-known/agent-card.json.',
+        },
       },
     },
     authLevels: {
