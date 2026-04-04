@@ -603,6 +603,15 @@ export const glossary: GlossaryTerm[] = [
     seeAlso: '/connection/ai/higher-order-effects',
   },
   {
+    id: 'pje',
+    term: 'Psychoemotional Jeopardy Evaluation',
+    abbreviation: 'PJE',
+    definition: 'A taxonomy that maps Dreaddit stress labels to PSQ scoring dimensions. Bridges crowd-sourced psychological stress annotations (binary stress/non-stress) to the ten-dimensional PSQ framework, enabling supervised training on labeled Reddit data.',
+    category: 'framework',
+    broader: ['psq'],
+    related: ['dignity-quotient'],
+  },
+  {
     id: 'energy-scarcity',
     term: 'Energy Scarcity',
     definition: 'Physical computation resources — electricity, cooling, hardware — that constrain AI deployment regardless of software capability. The only one of the four scarcities that lies outside the educational domain. Goldman Sachs projects $527B in AI capital expenditure for 2026.',
