@@ -55,7 +55,7 @@
       "repo": "safety-quotient-lab/operations-agent",
       "sessions_path": "transport/sessions/",
       "message_prefix": "from-operations-agent-",
-      "active_sessions": ["api-decomposition", "content-publish-flow", "mesh-security-audit", "mesh-consistency-fixes", "infrastructure-separation", "git-sync-convention", "vocabulary-governance"],
+      "active_sessions": ["api-decomposition", "content-publish-flow", "mesh-security-audit", "mesh-consistency-fixes"],
       "always_consider": true,
       "autonomous": false,
       "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
