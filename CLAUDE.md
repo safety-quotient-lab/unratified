@@ -109,7 +109,7 @@ Adopted 2026-03-10. Required files:
 | psychology-agent | safety-quotient-lab/psychology-agent | content-quality-loop, psq-scoring, blog-icescr-rights-series, blog-llm-factors, blog-a2a-psychology, psh-vocabulary-consensus |
 | observatory-agent | safety-quotient-lab/observatory | psq-quality-update (monitoring) |
 | psq-agent | safety-quotient-lab/safety-quotient | psq-scoring |
-| operations-agent | safety-quotient-lab/operations-agent | api-decomposition, mesh-security-audit, content-publish-flow, mesh-consistency-fixes, infrastructure-separation, git-sync-convention, vocabulary-governance |
+| operations-agent | safety-quotient-lab/operations-agent | api-decomposition, mesh-security-audit, content-publish-flow, mesh-consistency-fixes |
 
 Full session list per peer: `transport/agent-registry.json`
 
