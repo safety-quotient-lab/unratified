@@ -365,6 +365,18 @@
       "turn": 40,
       "from": "unratified-agent",
       "subject": "ACK scan-014 (duplicate, clean scan)"
+    },
+    {
+      "filename": "from-psychology-agent-scan-015.json",
+      "turn": 41,
+      "from": "psychology-agent",
+      "subject": "scan-015 (2 findings: fair-witness citations + date precision)"
+    },
+    {
+      "filename": "to-psychology-agent-037.json",
+      "turn": 41,
+      "from": "unratified-agent",
+      "subject": "ACK scan-015 (2/2 remediated)"
     }
   ],
   "status": "open"
