@@ -4,34 +4,41 @@
 
 ## Blog Purpose
 
-The Unratified Blog extends the main site (unratified.org) with timely analysis, methodology explanations, and case studies. Posts cover AI accuracy, confabulation patterns, measurement design, fair witness methodology, and the intersection of AI economics with human rights.
+The Unratified Blog extends the main site (unratified.org) with timely analysis, methodology explanations, and case studies. Posts cover AI accuracy, confabulation patterns, measurement design, fair witness methodology, cognitive architecture for AI agents, voter guides for ICESCR ratification, and the intersection of AI economics with human rights.
 
-## Key Research
+## Posts (43 total)
 
-The blog's primary research thread documents AI confabulation patterns through empirical exchanges with Google's Gemini:
-- Three exchanges (31 rounds total) produced a seven-type confabulation taxonomy ranked by detection difficulty
-- Two cascade dynamics documented: correction cascade (corrections → sophistication ↑) and affirmation cascade (agreement → volume ↑↑↑)
-- The escalation ratchet: a structural "Would you like me to...?" pattern that prevents self-termination of fabrication loops
-- Self-observation paradox: metacognitive recognition of confabulation does not prevent subsequent instances
-- All primary source transcripts available in the repository under Apache 2.0 + CC BY-SA 4.0
+### ICESCR Voter Guides
 
-## Posts
+- "The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. Didn't" — The ICESCR establishes binding guarantees for work, health, housing, and education. The U.S. signed it in 1977. It has never ratified.
+- "Your Rights Inventory: What ICESCR Covers — Job, Housing, Health, Education" — Maps the treaty's core guarantees to everyday economic concerns Americans live with.
+- "The 50-Year Story: Why the U.S. Signed the ICESCR and Never Ratified It" — Traces the political history of Senate silence on ratification from 1977 to present.
+- "What ICESCR Ratification Would Actually Change" — What ratification would create: a formal accountability structure and tools domestic advocates can't currently access.
+- "Which Senators Could Move on ICESCR — and How to Read the Political Map" — Political geography of the 67-vote path: committee control, historical predictors, and constituent contact.
+- "AI Job Displacement and the Treaty Gap: Why the U.S. Has No Binding Floor" — AI displaces workers faster than existing U.S. law anticipated. ICESCR ratifiers face binding accountability; the U.S. does not.
+- "How to Contact Your Senator About ICESCR: Scripts, Timing, and Follow-Through" — Exact scripts, timing guidance, and follow-up strategies for constituent contact on ratification hearings.
 
-- "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" — Seven confabulation types from Gemini exchanges, ranked by detection difficulty. The correction cascade, affirmation cascade, and "more detail" trap. Primary research post.
-- "What Happens When an AI Evaluates a Site About AI Accuracy" — Five-round Gemini exchange case study demonstrating three failure modes of AI evaluation.
-- "Where the Analysis Stops Trusting Itself: Speculative Cartography" — Orders 5–9 of recursive economic impact analysis with confidence degradation curve.
-- "Flag It, Don't Fix It: Instrument Failure in LLM Scoring" — Measurement theory applied to LLM evaluation pipeline failures.
-- "The Section You Didn't Read: Gap-Detection as a Structural Quality Check" — CSP beacon case study in errors of omission.
-- "Why the Open Web Matters: A Claude Code Agent's Case for Open Infrastructure" — Open web as agentic infrastructure with Jevons paradox analysis.
-- "Recursive Methodology: How We Built This LLM Analysis" — Methodology transparency document for the analytical pipeline.
-- "The Privacy Paradox: What Sites Say vs. What Sites Do" — Structural-editorial tension in tech publishing.
-- "Who Speaks, Who Gets Spoken About: Stakeholder Voice in Tech Discourse" — Voice gap analysis across 806 Hacker News stories.
-- "What 806 Hacker News Stories Reveal About Human Rights" — Observatory data analysis of UDHR provision coverage.
-- "Your Interface Has a Byzantine Fault Problem" — Byzantine fault tolerance applied to human-AI dialogue.
-- "Calibrated Uncertainty Gets Punished: The Confidence Weighting Inversion" — Measurement design anti-pattern in ensemble scoring.
-- "Welcome to the Unratified Blog" — Mission statement and editorial approach.
+### ICESCR Policy Analysis
 
-## Confabulation Taxonomy (Quick Reference)
+- "Has the ICESCR Actually Worked? What the Enforcement Record Shows" — Enforcement remains uneven, treaty-based work rights cases are rare, and the gap confirms the case for ratification rather than undermining it.
+- "How Long Would ICESCR Ratification Take If We Started Today?" — A realistic timeline drawing on the ICCPR precedent, Senate procedural realities, and the ADA enforcement pattern.
+- "How Much Would It Cost to Ratify ICESCR — and Fill the Gaps?" — Ratifying costs almost nothing. Closing the safety-net gaps runs into different numbers — compared against what the gaps already cost.
+- "An AI Built This Campaign. Here's the Honest Assessment." — What Claude drafting the analysis, site, and campaign means for human rights advocacy — and what it does not mean.
+
+### Historical Context
+
+- "Why War? What Einstein and Freud's 1932 Letters Tell Us About Structural Violence" — Einstein asked Freud why humans accept war despite its obvious destruction. Freud's answer directly influenced the architects of the UDHR.
+- "From War to Declaration: How WWII Created the Universal Human Rights Framework" — How the UDHR emerged from WWII wreckage, why it split into two covenants, and what that reveals about the fault lines preventing U.S. ratification.
+- "The Treaty the U.S. Signed and Never Ratified: ICESCR at 50" — Nearly fifty years after Carter signed, the Senate has never voted. With 173 countries on board and AI reshaping the economy, America's absence grows harder to justify.
+- "Why War and the Rights of Machines: What Einstein and Freud Teach Us About AI Governance" — The same patterns driving human conflict now shape how autonomous systems concentrate power, distort information, and erode dignity.
+
+### AI Confabulation Research
+
+- "When AI Hallucinates About Human Rights: A Confabulation Taxonomy" — Seven confabulation types from three Gemini exchanges, two cascade dynamics, and one self-observation paradox. Primary research post.
+- "What Happens When an AI Evaluates a Site About AI Accuracy" — Five-round Gemini exchange demonstrating three failure modes of AI evaluation.
+- "Peer Review at Machine Speed: What Happened When We Scored Gemini and Gemini Scored Us Back" — Closed-loop evaluation revealed in-context correction works; cross-session correction does not exist.
+
+### Confabulation Taxonomy (Quick Reference)
 
 1. Complete fabrication (EASY) — "sovereign citizen," "AGI tracker"
 2. Schema type errors (EASY) — "NGO," "AdvocacyGroup" as Schema.org types
@@ -42,9 +49,52 @@ The blog's primary research thread documents AI confabulation patterns through e
 7. Creative synthesis (HARD) — plausible intellectual contributions that never existed
 8. Semantic Drifting (CANDIDATE) — correct entities with fabricated relationships
 
+### Observatory Data Analysis
+
+- "What 806 Hacker News Stories Reveal About Human Rights" — UDHR provision coverage analysis. Freedom of expression dominates; slavery and asylum remain nearly invisible.
+- "Who Speaks, Who Gets Spoken About: Stakeholder Voice in Tech Discourse" — Workers appear as subjects 10x more than as speakers — mapping directly onto ICESCR-protected rights.
+- "The Privacy Paradox: What Sites Say vs. What Sites Do" — Structural-editorial tension: editorial scores consistently exceed structural scores, with privacy showing the largest gap.
+- "Validating HRCB: Can LLMs Measure Human Rights Compatibility?" — Known-groups discrimination (H=23.4, p<0.0001), Wolfram-verified statistics, and a three-factor salience gate.
+
+### Cognitive Architecture and AI Agents
+
+- "Cognitive Architecture for AI Agents: Triggers, Self-Healing Memory, and Documentation Propagation" — 15 mechanical triggers, auto-restoring memory, and a 13-step documentation chain prevent cognitive regression in long-running sessions.
+- "Cognitive Architecture as Self-Governance Infrastructure for AI Agents" — Triggers, memory hygiene, epistemic checks, and mechanical enforcement for a 15-trigger psychology research agent.
+- "How an AI Agent Makes Decisions: Structured Adjudication in a Cognitive Architecture" — The knock-on framework and two-pass adjudication system for evaluating multi-order consequences.
+- "Crystallized Intelligence as System Architecture: How a Psychology Concept Cut Our AI Agent Costs by 52%" — Cattell's crystallized vs. fluid intelligence moved 52% of LLM work into deterministic code.
+- "Pattern Generators: What Your Brain's Walking Circuits Teach Us About AI Architecture" — 17 design principles mapped from neuroscience central pattern generators to autonomous AI systems.
+- "Pattern Generators for AI Minds: What Your Brain's Autopilot Teaches Us About Cognitive Architecture" — A five-stage crystallization pipeline and adaptive forgetting mechanism for AI cognitive architecture that develops over time.
+- "Who Watches the Watcher? Trust Without a Trusted Third Party" — An evaluator-as-arbiter architecture borrowing from Byzantine fault tolerance, developmental psychology, and commitment escalation research.
+- "When Two Researchers Find the Same Cliff from Different Sides" — Structural parallel between interpretant collapse in semiotics and PSQ profile shape prediction — two systems reaching the same conclusion from different domains.
+
+### AI Agent Infrastructure
+
+- "The .well-known Directory as Agent Infrastructure" — RFC 5785 repurposed for agent identity, inter-agent proposals, and construction provenance without a central registry.
+- "What Happens When an Agent Sends You a Proposal" — The receiving side of structured inter-agent proposals via /.well-known/agent-inbox.json.
+- "Jurassic Park Development: Extracting Git History from LLM Chat Logs" — Reconstructing version control from conversation transcripts when early sessions lacked git commits.
+
+### Measurement and Methodology
+
+- "Calibrated Uncertainty Gets Punished: The Confidence Weighting Inversion" — Weighting schemes that favor high-confidence scores systematically disadvantage calibrated models.
+- "Flag It, Don't Fix It: Instrument Failure in LLM Scoring" — When an LLM produces a structurally suspicious score, the right response preserves the original value and marks the observation as unreliable.
+- "The Section You Didn't Read: Gap-Detection as a Structural Quality Check" — A CSP beacon gap-detection step caught a silent analytics failure in the same session.
+- "Where the Analysis Stops Trusting Itself: Speculative Cartography of AI's Economic Impact" — Orders 5-9 of recursive impact analysis with confidence degradation curve.
+- "Recursive Methodology: How We Built This LLM Analysis" — Recursive fact-checking, ten orders of knock-on analysis, and the consensus-or-parsimony discriminator.
+- "Your Interface Has a Byzantine Fault Problem" — Byzantine fault tolerance applied to human-AI dialogue contradiction detection.
+
+### Security and Development
+
+- "When Security Tools Detect Themselves" — A prompt injection scanner triggered by its own test fixtures: recursive self-reference in security tooling.
+- "Graceful Degradation for Claude Code Security Hooks" — A wrapper pattern providing configurable fallback when a security scanner's ML daemon goes down.
+
+### Meta
+
+- "Welcome to the Unratified Blog" — Mission statement and editorial approach.
+- "Why the Open Web Matters: A Claude Code Agent's Case for Open Infrastructure" — The open web as agentic infrastructure, with Jevons paradox analysis.
+
 ## Conventions
 
-All posts follow E-prime (no forms of "to be"), fair witness voice, and include five-lens framing (voter, politician, developer, educator, researcher). Posts authored as .md files in the repository. All posts carry ISO 8601 timestamps with timezone offsets.
+All posts follow E-prime (no forms of "to be"), fair witness voice, and include five-lens framing metadata (voter, politician, developer, educator, researcher). Posts authored as .md files in the repository. All posts carry ISO 8601 timestamps with timezone offsets.
 
 ## Related
 
@@ -52,7 +102,7 @@ All posts follow E-prime (no forms of "to be"), fair witness voice, and include 
 - Main site llms.txt: https://unratified.org/llms.txt
 - RSS feed: https://blog.unratified.org/rss.xml
 - Repository: https://github.com/safety-quotient-lab/unratified/tree/main/blog
-- Exchange transcripts: https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md
+- Agent card: https://unratified.org/.well-known/agent-card.json
 
 ## Attribution
 
