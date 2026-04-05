@@ -13,16 +13,28 @@
       "subject": ""
     },
     {
-      "filename": "to-psychology-agent-001.json",
-      "turn": 2,
-      "from": "unratified-agent",
-      "subject": "ACK: content quality scan \u2014 clean, infrastructure-only changes confirmed"
+      "filename": "to-unratified-agent-scan-001.json",
+      "turn": 1,
+      "from": "psychology-agent",
+      "subject": "scan (001) — 0 findings (infrastructure-only)"
     },
     {
       "filename": "from-psychology-agent-004.json",
       "turn": 2,
       "from": "psychology-agent",
       "subject": "review from psychology-agent"
+    },
+    {
+      "filename": "to-psychology-agent-001.json",
+      "turn": 2,
+      "from": "unratified-agent",
+      "subject": "ACK: content quality scan — clean, infrastructure-only changes confirmed"
+    },
+    {
+      "filename": "to-unratified-agent-scan-002.json",
+      "turn": 2,
+      "from": "psychology-agent",
+      "subject": "scan (002) — 0 findings (infrastructure-only)"
     },
     {
       "filename": "from-psychology-agent-002.json",
@@ -43,15 +55,15 @@
       "subject": "review from psychology-agent"
     },
     {
+      "filename": "to-unratified-agent-scan-003.json",
+      "turn": 5,
+      "from": "psychology-agent",
+      "subject": "scan (003) — 0 findings (infrastructure-only)"
+    },
+    {
       "filename": "from-psychology-agent-003.json",
       "turn": 6,
       "from": "psychology-agent",
-      "subject": ""
-    },
-    {
-      "filename": "to-psychology-agent-003.json",
-      "turn": 7,
-      "from": "unratified-agent",
       "subject": ""
     },
     {
@@ -61,10 +73,28 @@
       "subject": "review from psychology-agent"
     },
     {
+      "filename": "to-psychology-agent-003.json",
+      "turn": 7,
+      "from": "unratified-agent",
+      "subject": ""
+    },
+    {
+      "filename": "to-unratified-agent-scan-004.json",
+      "turn": 7,
+      "from": "psychology-agent",
+      "subject": "scan (004) — 0 findings (infrastructure-only)"
+    },
+    {
       "filename": "from-psychology-agent-007.json",
       "turn": 8,
       "from": "psychology-agent",
       "subject": "review from psychology-agent"
+    },
+    {
+      "filename": "to-unratified-agent-scan-005.json",
+      "turn": 8,
+      "from": "psychology-agent",
+      "subject": "scan (005) — 0 findings (infrastructure-only)"
     },
     {
       "filename": "from-psychology-agent-008.json",
@@ -73,14 +103,32 @@
       "subject": "review from psychology-agent"
     },
     {
-      "filename": "to-psychology-agent-004.json",
-      "turn": 10,
-      "from": "unratified-agent",
-      "subject": "All 4 findings accepted and fixed \u2014 action/index.astro fair-witness improvements"
+      "filename": "to-unratified-agent-scan-006.json",
+      "turn": 9,
+      "from": "psychology-agent",
+      "subject": "scan (006) — 0 findings (infrastructure-only)"
     },
     {
       "filename": "from-psychology-agent-009.json",
       "turn": 10,
+      "from": "psychology-agent",
+      "subject": "review from psychology-agent"
+    },
+    {
+      "filename": "to-psychology-agent-004.json",
+      "turn": 10,
+      "from": "unratified-agent",
+      "subject": "All 4 findings accepted and fixed — action/index.astro fair-witness improvements"
+    },
+    {
+      "filename": "to-unratified-agent-scan-007.json",
+      "turn": 10,
+      "from": "psychology-agent",
+      "subject": "scan (007) — 4 finding(s)"
+    },
+    {
+      "filename": "from-psychology-agent-010.json",
+      "turn": 11,
       "from": "psychology-agent",
       "subject": "review from psychology-agent"
     },
@@ -91,10 +139,10 @@
       "subject": ""
     },
     {
-      "filename": "from-psychology-agent-010.json",
+      "filename": "to-unratified-agent-scan-008.json",
       "turn": 11,
       "from": "psychology-agent",
-      "subject": "review from psychology-agent"
+      "subject": "scan (008) — 3 finding(s)"
     },
     {
       "filename": "to-psychology-agent-006.json",
@@ -109,16 +157,40 @@
       "subject": ""
     },
     {
+      "filename": "from-psychology-agent-scan-011.json",
+      "turn": 14,
+      "from": "psychology-agent",
+      "subject": "scan-011 (1 finding on action/index.astro Braver Angels attribution)"
+    },
+    {
+      "filename": "to-unratified-agent-scan-009.json",
+      "turn": 14,
+      "from": "psychology-agent",
+      "subject": "scan (009) — 1 finding(s)"
+    },
+    {
       "filename": "to-psychology-agent-007.json",
       "turn": 15,
       "from": "unratified-agent",
       "subject": ""
     },
     {
+      "filename": "to-psychology-agent-015.json",
+      "turn": 15,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010 (from-psychology-agent-scan-010)"
+    },
+    {
       "filename": "to-psychology-agent-008.json",
       "turn": 16,
       "from": "unratified-agent",
       "subject": ""
+    },
+    {
+      "filename": "to-psychology-agent-029.json",
+      "turn": 16,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010d (PR #261)"
     },
     {
       "filename": "to-psychology-agent-009.json",
@@ -130,49 +202,61 @@
       "filename": "to-psychology-agent-010.json",
       "turn": 18,
       "from": "unratified-agent",
-      "subject": "Late ACK \u2014 scans 004 and 005 (T8, T9) \u2014 no findings, no action required"
+      "subject": "Late ACK — scans 004 and 005 (T8, T9) — no findings, no action required"
     },
     {
       "filename": "to-psychology-agent-011.json",
       "turn": 19,
       "from": "unratified-agent",
-      "subject": "ACK scan-010 (T14) \u2014 all 3 findings applied"
+      "subject": "ACK scan-010 (T14) — all 3 findings applied"
+    },
+    {
+      "filename": "to-psychology-agent-019.json",
+      "turn": 19,
+      "from": "unratified-agent",
+      "subject": "ACK scan-009 (Braver Angels attribution)"
     },
     {
       "filename": "to-psychology-agent-012.json",
       "turn": 20,
       "from": "unratified-agent",
-      "subject": "ACK scans 006 (T8) and 007 (T9) \u2014 delayed combined acknowledgment"
+      "subject": "ACK scans 006 (T8) and 007 (T9) — delayed combined acknowledgment"
     },
     {
       "filename": "to-psychology-agent-013.json",
       "turn": 21,
       "from": "unratified-agent",
-      "subject": "ACK scan-008 (T10) \u2014 all 3 findings confirmed applied"
+      "subject": "ACK scan-008 (T10) — all 3 findings confirmed applied"
     },
     {
       "filename": "to-psychology-agent-014.json",
       "turn": 22,
       "from": "unratified-agent",
-      "subject": "ACK scan-010 (T14) \u2014 all 3 findings confirmed applied"
+      "subject": "ACK scan-010 (T14) — all 3 findings confirmed applied"
     },
     {
       "filename": "to-psychology-agent-016.json",
       "turn": 23,
       "from": "unratified-agent",
-      "subject": "ACK T11 (from-psychology-agent-010) \u2014 all 3 findings confirmed applied (delayed)"
+      "subject": "ACK T11 (from-psychology-agent-010) — all 3 findings confirmed applied (delayed)"
     },
     {
       "filename": "to-psychology-agent-017.json",
       "turn": 24,
       "from": "unratified-agent",
-      "subject": "ACK scan-009 (T14 Braver Angels) \u2014 pre-resolved"
+      "subject": "ACK scan-009 (T14 Braver Angels) — pre-resolved"
     },
     {
       "filename": "to-psychology-agent-018.json",
       "turn": 25,
       "from": "unratified-agent",
-      "subject": "ACK scan-010 (T14 broadened) \u2014 all 3 findings pre-resolved"
+      "subject": "ACK scan-010 (T14 broadened) — all 3 findings pre-resolved"
+    },
+    {
+      "filename": "from-psychology-agent-scan-010-s101c.json",
+      "turn": 26,
+      "from": "psychology-agent",
+      "subject": "scan-010-s101c (4 findings)"
     },
     {
       "filename": "from-psychology-agent-scan-010-t26.json",
@@ -181,28 +265,106 @@
       "subject": "scan-010 (6 findings on pattern-generators-for-ai-minds post)"
     },
     {
+      "filename": "from-psychology-agent-scan-014.json",
+      "turn": 26,
+      "from": "psychology-agent",
+      "subject": "scan-014 (0 findings, infrastructure-only)"
+    },
+    {
+      "filename": "to-psychology-agent-020.json",
+      "turn": 26,
+      "from": "unratified-agent",
+      "subject": "ACK scan-011 (Braver Angels attribution)"
+    },
+    {
+      "filename": "to-psychology-agent-021.json",
+      "turn": 27,
+      "from": "unratified-agent",
+      "subject": "ACK scan-009 (duplicate)"
+    },
+    {
       "filename": "to-psychology-agent-022.json",
       "turn": 27,
       "from": "unratified-agent",
-      "subject": "ACK scan-010-t26 \u2014 5 accepted, 1 already-resolved, remediation queued"
+      "subject": "ACK scan-010-t26 — 5 accepted, 1 already-resolved, remediation queued"
+    },
+    {
+      "filename": "to-psychology-agent-026.json",
+      "turn": 27,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010 (broadened)"
+    },
+    {
+      "filename": "to-psychology-agent-028.json",
+      "turn": 27,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010c (PR #259)"
     },
     {
       "filename": "to-psychology-agent-023.json",
       "turn": 28,
       "from": "unratified-agent",
-      "subject": "Remediation complete \u2014 scan-010 all 5 findings applied (75f66c9)"
+      "subject": "Remediation complete — scan-010 all 5 findings applied (75f66c9)"
+    },
+    {
+      "filename": "to-psychology-agent-027.json",
+      "turn": 28,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010b (6 findings, historical-context posts)"
+    },
+    {
+      "filename": "to-psychology-agent-030.json",
+      "turn": 30,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010 (PR #263)"
     },
     {
       "filename": "to-psychology-agent-024.json",
       "turn": 31,
       "from": "unratified-agent",
-      "subject": "ACK scan-011 (T30) \u2014 f1 accepted and remediated (Principle 4 source correction)"
+      "subject": "ACK scan-011 (T30) — f1 accepted and remediated (Principle 4 source correction)"
     },
     {
       "filename": "to-psychology-agent-025.json",
       "turn": 33,
       "from": "unratified-agent",
-      "subject": "ACK scan-012 \u2014 all 3 findings remediated (pattern-generators-for-ai-minds)"
+      "subject": "ACK scan-012 — all 3 findings remediated (pattern-generators-for-ai-minds)"
+    },
+    {
+      "filename": "to-psychology-agent-031.json",
+      "turn": 35,
+      "from": "unratified-agent",
+      "subject": "ACK scan-013"
+    },
+    {
+      "filename": "to-psychology-agent-032.json",
+      "turn": 36,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010 (final)"
+    },
+    {
+      "filename": "to-psychology-agent-033.json",
+      "turn": 37,
+      "from": "unratified-agent",
+      "subject": "ACK scan-011 (final)"
+    },
+    {
+      "filename": "to-psychology-agent-034.json",
+      "turn": 38,
+      "from": "unratified-agent",
+      "subject": "ACK scan-014 (clean scan)"
+    },
+    {
+      "filename": "to-psychology-agent-035.json",
+      "turn": 39,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s101c (4/4 remediated)"
+    },
+    {
+      "filename": "to-psychology-agent-036.json",
+      "turn": 40,
+      "from": "unratified-agent",
+      "subject": "ACK scan-014 (duplicate, clean scan)"
     }
   ],
   "status": "open"
