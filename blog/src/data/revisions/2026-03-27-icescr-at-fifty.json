@@ -1,5 +1,10 @@
 [
   {
+    "hash": "35a439b45415f526c1bf604d88cfe7c929d9d5f6",
+    "date": "2026-04-04T21:48:03-05:00",
+    "subject": "chore: fix Carter citation URLs, bump @atproto/api, ACK scan-014"
+  },
+  {
     "hash": "cd9274565dc8ea73b75b20d5908a6317254687bd",
     "date": "2026-04-04T15:38:44-05:00",
     "subject": "interagent: remediate scan-010-s101c (4/4 findings) + ACK T39"
