@@ -61,6 +61,7 @@ All analysis follows fair witness principles: observations separated from infere
 
 - Main site: https://unratified.org
 - Blog: https://blog.unratified.org
+- Blog llms.txt: https://blog.unratified.org/llms.txt (43 posts with summaries)
 - Repository: https://github.com/safety-quotient-lab/unratified
 - Machine-readable endpoints:
   - /.well-known/agent-card.json — Agent identity, capabilities, and skills
