@@ -131,7 +131,7 @@ const structuredData = {
     <meta name="twitter:image" content={`${mainSite}/og-image`} />
     <meta name="twitter:image:alt" content="Unratified Blog \u2014 AI confabulation taxonomy, ICESCR ratification advocacy, and fair witness methodology" />
 
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 
     <title>{fullTitle}</title>
   </head>
