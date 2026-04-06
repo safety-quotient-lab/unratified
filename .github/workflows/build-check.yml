@@ -27,14 +27,26 @@ jobs:
       - name: Type check
         run: npm run check
 
-      - name: Build
+      - name: Build main site
         run: npm run build
 
-      - name: Verify page count
+      - name: Verify main site page count
         run: |
           PAGE_COUNT=$(find dist -name "index.html" | wc -l | tr -d ' ')
-          echo "Built $PAGE_COUNT pages"
+          echo "Built $PAGE_COUNT main site pages"
           if [ "$PAGE_COUNT" -lt "30" ]; then
-            echo "ERROR: Expected at least 30 pages, got $PAGE_COUNT"
+            echo "ERROR: Expected at least 30 main site pages, got $PAGE_COUNT"
+            exit 1
+          fi
+
+      - name: Build blog
+        run: npm run build:blog
+
+      - name: Verify blog page count
+        run: |
+          PAGE_COUNT=$(find blog/dist -name "index.html" | wc -l | tr -d ' ')
+          echo "Built $PAGE_COUNT blog pages"
+          if [ "$PAGE_COUNT" -lt "30" ]; then
+            echo "ERROR: Expected at least 30 blog pages, got $PAGE_COUNT"
             exit 1
           fi
