@@ -42,8 +42,8 @@ jobs:
         run: |
           PAGE_COUNT=$(find blog/dist -name "index.html" | wc -l | tr -d ' ')
           echo "Built $PAGE_COUNT pages"
-          if [ "$PAGE_COUNT" -lt "30" ]; then
-            echo "ERROR: Expected at least 30 pages, got $PAGE_COUNT"
+          if [ "$PAGE_COUNT" -lt "180" ]; then
+            echo "ERROR: Expected at least 180 pages, got $PAGE_COUNT"
             exit 1
           fi
 
