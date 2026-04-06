@@ -1,5 +1,10 @@
 [
   {
+    "hash": "a10215168a3caf3ab1df2f9dcc93c33808d5699a",
+    "date": "2026-04-05T15:41:59-05:00",
+    "subject": "interagent: scan-015 ACK — 2/2 remediated (content-quality-loop T41)"
+  },
+  {
     "hash": "cd9274565dc8ea73b75b20d5908a6317254687bd",
     "date": "2026-04-04T15:38:44-05:00",
     "subject": "interagent: remediate scan-010-s101c (4/4 findings) + ACK T39"
