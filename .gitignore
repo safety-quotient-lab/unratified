@@ -34,6 +34,7 @@ blog/node_modules/
 state.db
 state.db-wal
 state.db-shm
+state.db.pre-v19-bak
 
 # Interagent
 transport/agent-registry.local.json
