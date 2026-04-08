@@ -28,8 +28,6 @@ reviewStatus: "ai-reviewed"
 journalSource: "§58"
 ---
 
-# Pattern Generators for AI Minds
-
 ## Your Brain Runs on Autopilot
 
 You walked today. Maybe you climbed stairs, chewed food, breathed through a conversation. None of these activities required your conscious attention — your nervous system handled the rhythmic coordination automatically while you thought about something else entirely.

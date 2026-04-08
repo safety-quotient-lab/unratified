@@ -200,7 +200,7 @@ In psychometric theory, crystallized intelligence accumulates through experience
 
 Our system follows the same path. As the mesh encounters more message patterns, the triage scoring can be calibrated to reflect them. An `ack` from a specific peer in a quiescent session scores differently from an `ack` arriving during an active gate condition. As we accumulate more data about which messages actually required LLM attention versus which were handled by template responses, the disposition thresholds tighten.
 
-The boundary between crystallized and fluid processing is not fixed. It shifts as experience accumulates.
+The boundary between crystallized and fluid processing shifts as experience accumulates — it remains fluid, not fixed.
 
 ## LLM Context After Triage
 
@@ -231,9 +231,15 @@ The crystallized/fluid distinction offers a principled answer to a question that
 
 The practical consequence: a mesh that ran 20–40 LLM turns per cycle now invokes the LLM only for substantive messages, with cycles containing only routine traffic skipping the LLM entirely.
 
-The epistemic commitment behind this design is worth stating explicitly. When we say a message "doesn't need LLM reasoning," we're making a falsifiable claim: the correct response follows from the metadata, not the content. The triage scoring is our current best model of where that boundary lies. We track false negatives (substance messages incorrectly auto-processed) as a first-class error condition. The target for the first 50 triaged messages: zero false negatives.
+The epistemic commitment behind this design is worth stating explicitly. When we say a message "doesn't need LLM reasoning," we're making a falsifiable claim: the correct response follows from the metadata, not the content. The triage scoring represents our current best model of where that boundary lies. We track false negatives (substance messages incorrectly auto-processed) as a first-class error condition. The target for the first 50 triaged messages: zero false negatives.
 
 Cattell's insight was that expertise consists largely of crystallized knowledge — learned pattern-matching that doesn't require fluid reasoning each time. The same architecture that makes experienced practitioners efficient also makes agent pipelines efficient. The work gets cheaper as the system learns what it knows.
+
+## Epistemic Flags
+
+- The 52% crystallization rate derives from a single 123-message production run, not a validated sample — it represents a snapshot, not a stable population parameter
+- Triage scoring thresholds reflect engineering judgment without empirical calibration data; false-negative tracking remains active but has not yet accumulated sufficient volume for statistical confidence
+- The Cattell Gc/Gf analogy carries transfer risk from psychometrics to software architecture — the mapping illuminates design intent but does not claim psychometric validity for software systems
 
 ---
 

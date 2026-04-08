@@ -123,9 +123,15 @@ The system self-documents: every adjudication writes its full analysis to `docs/
 
 The adjudication system exists because AI agents face the same decision quality problems that human organizations face, but compressed in time. A human team might take weeks to discover that their authentication sequencing choice created migration debt. An autonomous agent discovers this in 30 seconds of knock-on tracing — if the tracing infrastructure exists.
 
-The cognitive architecture doesn't make the agent smarter. It makes the agent's reasoning *auditable*, *repeatable*, and *calibrated*. The same decision with the same inputs produces the same analysis, and the analysis explicitly labels its own confidence at each step.
+The cognitive architecture doesn't make the agent smarter. It makes the agent's reasoning *auditable*, *structurally repeatable*, and *calibrated*. The same decision with the same inputs produces structurally comparable analysis — though LLM non-determinism means exact reproduction varies across runs — and the analysis explicitly labels its own confidence at each step.
 
 That's the value proposition: not better decisions through magic, but better decisions through structure.
+
+## Epistemic Flags
+
+- The two-pass calibration claim (reduces anchoring bias) describes design intention, not a measured effect — no controlled experiment has isolated the calibration step's contribution
+- The auth sequencing case study demonstrates the protocol's mechanics but cannot establish generalizability from a single instance
+- LLM non-determinism limits reproducibility claims — the architecture aims for structural consistency, not identical outputs
 
 ---
 
