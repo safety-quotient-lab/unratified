@@ -1,5 +1,10 @@
 [
   {
+    "hash": "a1aa38ec438979bd7438dfd8952d2aac05b62c03",
+    "date": "2026-04-08T15:32:27-05:00",
+    "subject": "fix: remediate 8 findings from psychology-agent scan-010-s103"
+  },
+  {
     "hash": "1570db3f37394d214456f36d1d80f3cdcb21f12b",
     "date": "2026-03-30T11:54:32-05:00",
     "subject": "content-quality: remediate scan-010d (5/5 findings) + ACK"
