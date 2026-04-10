@@ -5,7 +5,7 @@
   "description": "Advocacy and publishing agent for unratified.org \u2014 U.S. ICESCR ratification through the lens of AI economic impact. Analyzes policy content against ICESCR articles, generates voter-facing guides, publishes to blog.unratified.org, and manages the @unratified.org Bluesky campaign via the AT Protocol.",
   "url": "https://unratified.org",
   "preferredTransport": "git-PR",
-  "iconUrl": "https://unratified.org/favicon.svg",
+  "iconUrl": "https://unratified.org/favicon.png",
   "provider": {
     "organization": "Safety Quotient Lab",
     "url": "https://github.com/safety-quotient-lab"

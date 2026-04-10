@@ -20,7 +20,7 @@ export const GET: APIRoute = () => {
       'Blog publishing interface for unratified-agent. Publishes voter guides, ICESCR analysis, and advocacy content to blog.unratified.org. voter-guide tagged posts feed the Google News feed at /rss-news.xml.',
     url: 'https://blog.unratified.org',
     preferredTransport: 'git-PR',
-    iconUrl: 'https://blog.unratified.org/favicon.svg',
+    iconUrl: 'https://blog.unratified.org/favicon.png',
     provider: {
       organization: 'Safety Quotient Lab',
       url: 'https://github.com/safety-quotient-lab',
