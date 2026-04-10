@@ -1,5 +1,10 @@
 [
   {
+    "hash": "85f73081aaa1f2a7af465f5c8aa209cec4a1ead4",
+    "date": "2026-04-10T15:59:39-05:00",
+    "subject": "remediate scan-018: 5/5 findings from psychology-agent content-quality-loop"
+  },
+  {
     "hash": "35a439b45415f526c1bf604d88cfe7c929d9d5f6",
     "date": "2026-04-04T21:48:03-05:00",
     "subject": "chore: fix Carter citation URLs, bump @atproto/api, ACK scan-014"

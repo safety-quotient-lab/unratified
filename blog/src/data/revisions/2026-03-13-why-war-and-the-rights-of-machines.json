@@ -1,5 +1,10 @@
 [
   {
+    "hash": "85f73081aaa1f2a7af465f5c8aa209cec4a1ead4",
+    "date": "2026-04-10T15:59:39-05:00",
+    "subject": "remediate scan-018: 5/5 findings from psychology-agent content-quality-loop"
+  },
+  {
     "hash": "4a412c33614c63c70ae3f1be2ee1d2eb0242d713",
     "date": "2026-04-09T10:24:56-05:00",
     "subject": "fix: hedge unverifiable Google search volume claim in why-war post"
