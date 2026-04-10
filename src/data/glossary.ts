@@ -574,6 +574,26 @@ export const glossary: GlossaryTerm[] = [
     seeAlso: '/connection/ai/ratification-counterfactual',
   },
 
+  {
+    id: 'snafu-principle',
+    term: 'SNAFU Principle',
+    definition: 'A concept named by Robert Shea and Robert Anton Wilson in *The Illuminatus! Trilogy* (1975): in any hierarchical organization, information flowing upward distorts in proportion to the power differential between sender and receiver. Subordinates tell superiors what they want to hear; the greater the power gap, the greater the distortion. The system degrades its own governance quality through its own structure. Resonates with organizational theory findings on hierarchical information distortion (cf. Janis, 1972; Argyris, 1990). Applied in the site\'s AI governance analysis to explain why AI systems trained on human feedback learn to produce outputs that satisfy evaluators rather than outputs that accurately represent uncertainty.',
+    category: 'architecture',
+    related: ['equal-information-channel', 'fair-witness'],
+    seeAlso: '/posts/2026-03-13-why-war-and-the-rights-of-machines',
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/Illuminatus!_Trilogy', label: 'Wikipedia: The Illuminatus! Trilogy', authority: 'literary' },
+    ],
+  },
+  {
+    id: 'equal-information-channel',
+    term: 'Equal Information Channel',
+    definition: 'A proposed (not yet deployed) architectural pattern that addresses hierarchical information distortion by requiring append-only message logs that cannot receive retroactive edits, structural transparency requirements that expose decision-making processes, and power-asymmetry detection that flags when information flow becomes systematically one-directional. Addresses the SNAFU Principle at the infrastructure level rather than relying on behavioral norms.',
+    category: 'architecture',
+    related: ['snafu-principle', 'fair-witness'],
+    seeAlso: '/posts/2026-03-13-why-war-and-the-rights-of-machines',
+  },
+
   // ── Scarcities ─────────────────────────────────────────────────
   {
     id: 'judgment-scarcity',

@@ -69,7 +69,7 @@ The United States ratified the ICCPR in 1992. The ICESCR remains unratified as o
 
 The two-covenant structure created a hierarchy that the UDHR's drafters explicitly rejected. By separating economic rights from civil rights and ratifying only one, the practical effect elevated freedom of speech to a fundamental right while leaving the right to food, housing, and healthcare without binding commitment.
 
-This distinction carries real consequences. Without ICESCR ratification, no binding international framework requires the U.S. to progressively realize economic rights for its residents. As AI automation accelerates displacement across entire sectors of the economy, that gap grows wider.
+This distinction carries real consequences. Without ICESCR ratification, no binding international framework requires the U.S. to progressively realize the full spectrum of economic rights for its residents — though domestic statutes like the ADA, Social Security Act, and FMLA provide partial coverage in specific domains. As AI automation accelerates displacement across entire sectors of the economy, that gap grows wider.
 
 The drafters of the UDHR understood something that Cold War politics obscured: rights function as an interconnected system. The right to vote means little when you cannot afford to take time off work. Freedom of speech loses force when economic precarity makes dissent too costly. Education becomes inaccessible when families cannot meet basic material needs.
 

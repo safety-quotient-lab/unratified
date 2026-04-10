@@ -57,7 +57,7 @@ But the exchange did not disappear. It circulated among the intellectuals and di
 
 The Universal Declaration of Human Rights (UDHR) drafting committee may have included people who had encountered this correspondence — evidence suggests it had circulated among diplomats and intellectuals involved in postwar institution-building, though direct documentation of specific drafters reading it remains sparse. René Cassin, who had lost 29 relatives in the Holocaust, understood viscerally that declarations alone could not contain human destructiveness. The institutional framework mattered — not as a utopian project, but as a practical mechanism for channeling conflict into less lethal forms.
 
-The UDHR's structure reflects this insight. It does not merely enumerate freedoms. It establishes a framework of mutual obligation — between individuals and states, between states and the international community. Economic rights (Articles 22–27) serve a specific structural function: they address the material conditions that, when absent, make populations vulnerable to the exact manipulation Einstein described.
+The UDHR's structure reflects this insight. It does not merely enumerate freedoms. It establishes a framework of mutual obligation — between individuals and states, between states and the international community. Economic rights (Articles 22–27) can be understood as serving a structural function: they address the material conditions that, when absent, make populations vulnerable to the kind of manipulation Einstein described.
 
 ## Structural Violence Before the Term Existed
 
