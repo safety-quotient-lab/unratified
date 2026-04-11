@@ -1,5 +1,10 @@
 [
   {
+    "hash": "a3a0072f11befad246618d974388dc6dda6c651b",
+    "date": "2026-04-11T05:50:11-05:00",
+    "subject": "fix: correct ICESCR ratification facts + clean stale agent-registry sessions"
+  },
+  {
     "hash": "85f73081aaa1f2a7af465f5c8aa209cec4a1ead4",
     "date": "2026-04-10T15:59:39-05:00",
     "subject": "remediate scan-018: 5/5 findings from psychology-agent content-quality-loop"
