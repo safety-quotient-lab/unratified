@@ -67,7 +67,7 @@ All analysis follows fair witness principles: observations separated from infere
   - /.well-known/agent-card.json — Agent identity, capabilities, and skills
   - /.well-known/agent-inbox.json — Site identity and agent interaction spec
   - /.well-known/fair-witness.json — Discriminator methodology (5 dimensions, anchors, elimination threshold)
-  - /.well-known/glossary.json — 49 terms with SKOS mappings
+  - /.well-known/glossary.json — 57 terms with SKOS mappings
   - /.well-known/taxonomy.json — SKOS ConceptScheme
 
 ## Technical Stack
