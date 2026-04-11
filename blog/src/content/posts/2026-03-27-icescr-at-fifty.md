@@ -17,7 +17,7 @@ requestor:
   url: "https://kashifshah.net"
 tags: ["icescr", "ratification", "carter", "cold-war", "ai-governance", "united-states"]
 lensFraming:
-  voter: "Your government signed a treaty promising economic rights — work, healthcare, education, adequate living standards — in 1977. It has never followed through. Here's what happened and what it means for you."
+  voter: "Your government signed a treaty promising economic rights — work, healthcare, education, adequate living standards — in 1977. It has never followed through. Find out what happened and what it means for you."
   politician: "ICESCR ratification remains pending before the Senate with no scheduled vote. This post reviews the political dynamics that have sustained the impasse and the emerging AI governance dimension."
   educator: "A case study in treaty ratification politics, suitable for international law or American government courses. Covers the signing, the Senate process, and the current status."
   researcher: "Sources include the UN Treaty Collection, Senate Foreign Relations Committee records, and comparative analysis of ratification patterns among OECD nations."
@@ -39,7 +39,7 @@ The Senate Foreign Relations Committee held hearings in 1979 but never reported 
 
 The ICESCR's stall in the Senate did not result from a single vote or a dramatic floor debate. It died quietly, through a combination of ideological opposition, institutional inertia, and strategic neglect.
 
-**Cold War framing.** The most powerful obstacle came from the persistent framing of economic rights as inherently socialist. During the 1970s and 1980s, conservative legal scholars and politicians argued that rights to work, healthcare, and education represented "positive rights" — entitlements that required government spending and redistribution. These, they claimed, differed fundamentally from the "negative rights" in the U.S. Constitution, which (in this reading) merely restrained government action. The argument carried ideological force during the Cold War: if the Soviet Union championed economic rights, then economic rights must represent a step toward Soviet-style governance.
+**Cold War framing.** Among the most significant obstacles stood the persistent framing of economic rights as inherently socialist. During the 1970s and 1980s, conservative legal scholars and politicians argued that rights to work, healthcare, and education represented "positive rights" — entitlements that required government spending and redistribution. These, they claimed, differed fundamentally from the "negative rights" in the U.S. Constitution, which (in this reading) merely restrained government action. The argument carried ideological force during the Cold War: if the Soviet Union championed economic rights, then economic rights must represent a step toward Soviet-style governance.
 
 This framing omitted several countervailing facts. The ICESCR does not prescribe any particular economic system. Its language requires "progressive realization" — meaning states commit to moving toward full implementation using maximum available resources, not to achieving it overnight. Many Western European democracies with robust market economies ratified the ICESCR without transforming into command economies. But the Cold War binary — free markets versus socialism, negative rights versus positive rights — proved more politically durable than the treaty's actual text.
 
@@ -76,7 +76,7 @@ This does not mean ICESCR ratification would solve AI governance. It would not. 
 **EPISTEMIC FLAGS**
 
 - **Counterfactual claims about ratification:** Assertions about what ICESCR ratification "would provide" the U.S. rest on inference from other ratifying states' experience. Actual effects would depend on reservations attached, judicial interpretation, and political implementation.
-- **Ratification trend data:** The most recent ICESCR ratification identified (State of Palestine, 2014) may not represent the absolute latest — the UN Treaty Collection should serve as the authoritative source for current status.
+- **Ratification trend data:** The most recent ICESCR accession identified (South Sudan, February 2024) may not represent the absolute latest — the [UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) should serve as the authoritative source for current status.
 - **AI governance gap framing:** The claim that non-ratification leaves the U.S. without a "structural foundation" for AI governance simplifies a complex policy landscape. Domestic frameworks (ADA, Title VII, sector-specific regulations) provide partial coverage, though not through a unified rights-based instrument.
 
 ---
