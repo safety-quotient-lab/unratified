@@ -1,5 +1,10 @@
 [
   {
+    "hash": "33f5f9bd1195d8e9fe64c656d0c2309a73cd1252",
+    "date": "2026-04-11T15:35:17-05:00",
+    "subject": "fix: remediate scan-010 findings (3/3) on icescr-at-fifty + ACK T47"
+  },
+  {
     "hash": "a3a0072f11befad246618d974388dc6dda6c651b",
     "date": "2026-04-11T05:50:11-05:00",
     "subject": "fix: correct ICESCR ratification facts + clean stale agent-registry sessions"

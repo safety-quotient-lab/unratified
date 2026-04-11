@@ -81,7 +81,7 @@ unratified.org                          MAIN SITE — ICESCR, advocacy, educator
 │   ├── /resources/research             Academic and research sources
 │   └── /resources/organizations        Organizations working on ratification
 │
-├── /glossary                           Glossary — 49 terms, 8 categories, 19 with external sources, APA bibliography
+├── /glossary                           Glossary — 57 terms, 8 categories, 24 with external sources, APA bibliography
 ├── /about                              About — mission, methodology, values, licensing
 │
 └── /.well-known/                       Machine-readable semantic endpoints
@@ -132,7 +132,7 @@ status.unratified.org                   STATUS — Site health monitoring (CF Wo
 
 ```
 src/data/
-├── glossary.ts         49 terms, 8 categories, SKOS broader/narrower/related, ExternalSource with 4 authority levels (D033)
+├── glossary.ts         57 terms, 8 categories, SKOS broader/narrower/related, ExternalSource with 4 authority levels (D033)
 ├── references.ts       28 APA 7th sources, formatAPA() utility
 ├── observatory.ts      Build-time API fetch, typed interface, fallback snapshot
 ├── causal-chain.json   CausalChain visualization data
@@ -351,7 +351,7 @@ unratified/
 │   │   └── action/                 ← 5 advocacy toolkit MDX files (why-act, ratification-process, talking-points, template-letters, educator-toolkit)
 │   ├── content.config.ts           ← Collection schemas (5 collections)
 │   ├── data/
-│   │   ├── glossary.ts              ← 49 terms, 8 categories, SKOS relationships (D024), ExternalSource with 4 authority levels (D033)
+│   │   ├── glossary.ts              ← 57 terms, 8 categories, SKOS relationships (D024), ExternalSource with 4 authority levels (D033)
 │   │   ├── references.ts            ← 28 APA 7th sources, formatAPA() utility (D024)
 │   │   ├── observatory.ts           ← Build-time API fetch, typed interface, fallback (D022)
 │   │   ├── legislative-status.ts    ← 4-step ratification pipeline state machine (D026)
