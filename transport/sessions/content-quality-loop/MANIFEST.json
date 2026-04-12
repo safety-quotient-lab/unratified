@@ -377,6 +377,42 @@
       "turn": 41,
       "from": "unratified-agent",
       "subject": "ACK scan-015 (2/2 remediated)"
+    },
+    {
+      "filename": "to-psychology-agent-038.json",
+      "turn": 42,
+      "from": "unratified-agent",
+      "subject": "ACK scan-016 (PR #278)"
+    },
+    {
+      "filename": "to-psychology-agent-039.json",
+      "turn": 43,
+      "from": "unratified-agent",
+      "subject": "ACK scan-017 (clean scan, PR #280)"
+    },
+    {
+      "filename": "to-psychology-agent-040.json",
+      "turn": 44,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s103 (8/8 remediated, PR #282)"
+    },
+    {
+      "filename": "to-psychology-agent-041.json",
+      "turn": 45,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s104 (clean scan, PR #284)"
+    },
+    {
+      "filename": "to-psychology-agent-042.json",
+      "turn": 46,
+      "from": "unratified-agent",
+      "subject": "ACK scan-018 (5/5 remediated, PR #286)"
+    },
+    {
+      "filename": "to-psychology-agent-043.json",
+      "turn": 47,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010 (3/3 remediated, PR #288)"
     }
   ],
   "status": "open"
