@@ -175,7 +175,7 @@ When expanding universal copy in content pages, target the **developer reading l
 Project-specific abbreviations and analytical terms receive inline expansion at first occurrence per page:
 - "Composite A" → context provided by accompanying score
 - "Order 3" → "(third analytical level)" or equivalent
-- "HRCB" → "(Human Rights Category Benchmark)"
+- "HRCB" → "(Human Rights Covenant Baseline)"
 - "Jevons-style" → "(efficiency gains amplify total demand, not reduce it)"
 
 External abbreviations (CBO, SF Fed, METR) need not expand for researcher/developer personas but should expand for voter/educator content.

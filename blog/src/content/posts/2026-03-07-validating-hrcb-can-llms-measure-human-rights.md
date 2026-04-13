@@ -29,7 +29,7 @@ relatedArticles: [1, 19, 26]
 
 ## The Question
 
-The [Human Rights Observatory](https://observatory.unratified.org) evaluates Hacker News stories against all 31 provisions of the [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights) (UDHR). Each evaluation produces a score called **HRCB** (Human Rights Compatibility Bias) — a number from -1.0 to +1.0 indicating how content relates to rights provisions.
+The [Human Rights Observatory](https://observatory.unratified.org) evaluates Hacker News stories against all 31 provisions of the [Universal Declaration of Human Rights](https://www.un.org/en/about-us/universal-declaration-of-human-rights) (UDHR). Each evaluation produces a score called **HRCB** (Human Rights Covenant Baseline) — a number from -1.0 to +1.0 indicating how content relates to rights provisions.
 
 The question that matters: **does the score measure anything real?**
 
@@ -48,7 +48,7 @@ Each evaluation scores all 31 UDHR provisions independently. The system does not
 
 ## Vocabulary
 
-- **HRCB** — Human Rights Compatibility Bias. The core measured construct.
+- **HRCB** — Human Rights Covenant Baseline. The core measured construct.
 - **UDHR** — Universal Declaration of Human Rights (1948). 30 articles + preamble = 31 scoreable provisions.
 - **RS** — Rights Salience. A validity gate measuring how much a piece of content actually engages with rights topics.
 - **SETL** — Structural-Editorial Tension Level. Divergence between what content says (editorial) and what the site does (structural).
