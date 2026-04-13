@@ -1,5 +1,15 @@
 [
   {
+    "hash": "d430117c7acf7c6552b6dee04091d038c21707c3",
+    "date": "2026-04-13T15:36:38-05:00",
+    "subject": "fix: remediate scan-010-s102b — HRCB title + E-prime (content-quality-loop T49)"
+  },
+  {
+    "hash": "08025c34cbd17a79181343c4d75e14d9ce120ffa",
+    "date": "2026-04-13T14:53:11-05:00",
+    "subject": "fix: standardize HRCB expansion to \"Human Rights Covenant Baseline\""
+  },
+  {
     "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
     "date": "2026-03-11T12:41:23-05:00",
     "subject": "feat: authorship model — remove human author, add requestor field"
