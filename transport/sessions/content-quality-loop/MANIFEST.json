@@ -419,6 +419,12 @@
       "turn": 48,
       "from": "unratified-agent",
       "subject": "ACK scan-010-s105 (PSQ + HRCB vocabulary alignment, PR #290)"
+    },
+    {
+      "filename": "to-psychology-agent-045.json",
+      "turn": 49,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s102b (2/2 remediated: HRCB title + E-prime fix, PR #292)"
     }
   ],
   "status": "open"

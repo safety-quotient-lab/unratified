@@ -1,5 +1,5 @@
 ---
-title: "Validating HRCB: Can LLMs Measure Human Rights Compatibility?"
+title: "Validating HRCB: Can LLMs Score Human Rights Content?"
 summary: "An LLM-generated score that measures how web content relates to UDHR provisions. Known-groups discrimination (H=23.4, p<0.0001), Wolfram-verified statistics (37/37), and a three-factor salience gate separate signal from noise."
 publishedDate: "2026-03-07T10:00:00-06:00"
 author:
