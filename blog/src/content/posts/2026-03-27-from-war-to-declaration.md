@@ -80,7 +80,7 @@ That interconnection — visible to Roosevelt, Cassin, Chang, and Malik in 1948 
 **EPISTEMIC FLAGS**
 
 - **Simplified Cold War narrative:** The covenant split resulted from multiple factors beyond the U.S./USSR ideological divide — including decolonization politics, differing legal traditions on justiciability, and domestic lobbying by groups like the American Bar Association. This post foregrounds the Cold War framing for narrative clarity at the cost of completeness.
-- **Eleanor Roosevelt quotation context:** The "people who have nothing have no use for freedom" quote appears in Truman Library educational materials attributed to UDHR drafting discussions. The exact session and verbatim transcript have not been independently verified against primary UN records for this post.
+- **Eleanor Roosevelt quotation context:** The "people who have nothing have no use for freedom" quote appears in Truman Library educational materials attributed to UDHR drafting discussions. The exact session and verbatim transcript lack independent verification against primary UN records for this post.
 
 ---
 
