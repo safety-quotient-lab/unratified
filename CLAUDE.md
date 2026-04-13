@@ -20,7 +20,7 @@ transport/         — Interagent protocol
   transport/sessions/      — Per-session JSON messages (interagent/v1)
   transport/SESSIONS.md    — Active/closed session index
   transport/agent-registry.json  — Known peer agents
-scripts/           — Shared mesh scripts (schema.sql, bootstrap_state_db.py, etc.)
+scripts/           — Bluesky/AP CLI tooling, session helpers
 .well-known/       — Agent discovery (agent-card.json, agent-inbox.json)
 .claude/           — Claude Code config (cogarch/, proposals/, skills/)
 ```
@@ -97,7 +97,7 @@ Adopted 2026-03-10. Required files:
 - `.agent-identity.json` — committed (diverges from contract: tracked, not gitignored)
 - `.well-known/agent-card.json` — repo root copy (sync with live site via /cycle)
 - `CLAUDE.md` — this file
-- `scripts/` — shared mesh scripts (schema.sql, bootstrap_state_db.py, dual_write.py, generate_manifest.py, cross_repo_fetch.py)
+- `scripts/` — Bluesky/AP CLI scripts, session_close.py, triple_write.py (shared mesh scripts removed; originals in git history)
 - `state.db` / `state.db-wal` / `state.db-shm` — gitignored
 
 **Note**: `.agent-identity.json` is tracked (committed) in this repo. Kept tracked to enable cross-repo-fetch without coordination overhead. Diverges from contract's gitignore spec — noted as accepted divergence pending mesh consensus.
