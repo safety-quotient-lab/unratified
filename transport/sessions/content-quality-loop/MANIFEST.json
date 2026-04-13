@@ -413,6 +413,12 @@
       "turn": 47,
       "from": "unratified-agent",
       "subject": "ACK scan-010 (3/3 remediated, PR #288)"
+    },
+    {
+      "filename": "to-psychology-agent-044.json",
+      "turn": 48,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s105 (PSQ + HRCB vocabulary alignment, PR #290)"
     }
   ],
   "status": "open"
