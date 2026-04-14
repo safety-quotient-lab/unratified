@@ -20,15 +20,15 @@ draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "This post gives you the specific scripts, channels, and timing to contact your senators about ICESCR ratification — and explains why that contact, done right, moves the needle."
-  politician: "This post documents the constituent contact pressure building around ICESCR ratification. Your staff will field these calls. This is what your constituents are asking and why."
+  politician: "This post documents the constituent contact pressure building around ICESCR ratification. Your staff will field these calls. This covers what your constituents ask and why."
   educator: "Civic contact skills transfer across every policy issue. This post models the kind of specific, substantive constituent engagement that actually influences legislative staff — useful as a civic literacy teaching tool."
   researcher: "This post documents constituent advocacy mechanics around ICESCR ratification — an advocacy guide with sourced claims, RUDs context, and engagement strategies for both supportive and skeptical offices."
-  developer: "You understand systems. Senate offices are systems with inputs and outputs. This post maps those inputs precisely so that constituent pressure produces measurable outputs rather than noise."
+  developer: "You understand systems. Senate offices function as systems with inputs and outputs. This post maps those inputs precisely so that constituent pressure produces measurable outputs rather than noise."
 ---
 
 A phone call from a constituent takes about two minutes. A letter takes about five. Most senators' offices in non-election years receive fewer constituent contacts per week than you might expect — particularly on foreign policy and treaty issues, which generate far less volume than hot-button domestic topics.
 
-That low volume cuts two ways: your contact matters more than it would on a higher-traffic issue, and the bar for standing out is lower.
+That low volume cuts two ways: your contact matters more than it would on a higher-traffic issue, and the bar for standing out drops.
 
 This post gives you what you need to make contact that registers: the right channel, the right message, the right timing, and a follow-up that keeps the issue alive.
 
@@ -66,7 +66,7 @@ Senate offices track constituent contact by channel. Each carries different weig
 
 When you call, a staff member — often a young aide or intern — will answer. You have about 60 to 90 seconds to deliver a clear, specific message. They will log it.
 
-Here is a script that works:
+The following script works:
 
 ---
 
@@ -78,7 +78,7 @@ Here is a script that works:
 
 ---
 
-That last question matters. Asking for the senator's position does three things: it signals that you're an informed constituent, not a one-time caller; it forces the staffer to log that you asked; and it opens the door for a follow-up if the answer is "I don't know" or "I'll have to find out."
+That last question matters. Asking for the senator's position does three things: it marks you as an informed constituent, not a one-time caller; it forces the staffer to log that you asked; and it opens the door for a follow-up if they answer "I don't know" or "I'll have to find out."
 
 If the staffer says they'll find out and call you back, leave your phone number. If they don't call back within two weeks, call again.
 
@@ -121,11 +121,11 @@ Sincerely,
 
 ---
 
-Keep the letter to one page. Write it in your own voice — the template above is a starting point, not a final draft. Personalize the middle paragraph with whatever aspect of ICESCR connects most directly to your life: your work, your family's healthcare, your children's education.
+Keep the letter to one page. Write it in your own voice — the template above serves as a starting point, not a final draft. Personalize the middle paragraph with whatever aspect of ICESCR connects most directly to your life: your work, your family's healthcare, your children's education.
 
 ## Step 5: Requesting a District Office Meeting
 
-If you want to go further than a call or letter, contact your senator's district office and request a meeting with their policy staff. You don't need an appointment with the senator. A meeting with their foreign policy aide or constituent services director carries real weight — and is more accessible than it sounds.
+If you want to go further than a call or letter, contact your senator's district office and request a meeting with their policy staff. You don't need an appointment with the senator. A meeting with their foreign policy aide or constituent services director carries real weight — and proves more accessible than it sounds.
 
 How to request:
 
@@ -137,19 +137,19 @@ How to request:
 
 4. Bring a one-page summary of what you're asking — support for Foreign Relations Committee hearings — and leave it with them.
 
-Groups of constituents (three to five people from the same state) are more effective than individuals. If you know others in your state who care about ICESCR ratification, coordinate a joint meeting request.
+Groups of constituents (three to five people from the same state) prove more effective than individuals. If you know others in your state who care about ICESCR ratification, coordinate a joint meeting request.
 
 ## What to Expect When You Contact
 
-**Most phone calls get a polite log and a thank-you.** The staffer will take your name, record the issue, and say the senator's office appreciates you calling. This is the normal outcome. It doesn't mean the call didn't register — it means it registered in the volume count.
+**Most phone calls get a polite log and a thank-you.** The staffer will take your name, record the issue, and say the senator's office appreciates you calling. This represents the normal outcome. It doesn't mean the call didn't register — it means the office registered it in the volume count.
 
-**Some calls get a policy question in response.** If the staffer seems engaged and asks follow-up questions, answer them directly and factually. They may be gauging how substantive the constituent contact is. Stay on point: you want Foreign Relations Committee hearings.
+**Some calls get a policy question in response.** If the staffer seems engaged and asks follow-up questions, answer them directly and factually. They may gauge how substantive the constituent contact sounds. Stay on point: you want Foreign Relations Committee hearings.
 
-**You may receive a form response by mail or email.** Senators often send templated constituent responses on recurring issues. A form response does not mean your contact was ignored — it means you were counted and the office sent a standardized reply. Read it carefully. If it addresses ICESCR specifically, that's meaningful. If it's a generic "I appreciate your concern about international affairs" reply, it tells you the office hasn't engaged with the issue yet.
+**You may receive a form response by mail or email.** Senators often send templated constituent responses on recurring issues. A form response does not mean the office ignored your contact — it means they counted you and sent a standardized reply. Read it carefully. If it addresses ICESCR specifically, that signals engagement. If it reads as a generic "I appreciate your concern about international affairs" reply, it tells you the office hasn't engaged with the issue yet.
 
-**You may receive a substantive response.** Less common, but it happens — especially on lower-volume issues. A substantive response from a policy staffer means your contact was read and considered. Reply to it.
+**You may receive a substantive response.** Less common, but it happens — especially on lower-volume issues. A substantive response from a policy staffer means they read and considered your contact. Reply to it.
 
-**You may hear nothing.** This is common. Follow up. One contact rarely moves anything. Sustained, repeated contact from multiple constituents over time does.
+**You may hear nothing.** This happens often. Follow up. One contact rarely moves anything. Sustained, repeated contact from multiple constituents over time does.
 
 ## The Follow-Up Cadence
 
@@ -162,11 +162,11 @@ A workable cadence:
 - **Month 2:** If the issue appears in news (HRC sessions, labor reports, AI policy discussions), call again and connect the news to the issue: "Given the recent [news item], I wanted to reiterate my request for the senator to support ICESCR hearings."
 - **Ongoing:** Whenever a relevant event occurs — a UN Human Rights Committee report, a major AI displacement story, a labor policy announcement — that's a moment to call.
 
-This doesn't require hours per week. Two calls and a letter over the course of a month, repeated quarterly, places you in the small category of constituents who are actually tracking the issue.
+This doesn't require hours per week. Two calls and a letter over the course of a month, repeated quarterly, places you in the small category of constituents who actually track the issue.
 
 ## If Your Senator Already Supports Ratification
 
-Some senators have publicly expressed support for ICESCR ratification or have signed onto related human rights resolutions. If your senator is already supportive:
+Some senators have publicly expressed support for ICESCR ratification or have signed onto related human rights resolutions. If your senator already supports ratification:
 
 1. **Thank them specifically.** A call or letter that acknowledges their existing position and thanks them for it reinforces that their constituents notice and value it.
 
@@ -182,25 +182,25 @@ If your senator holds this position:
 
 1. **Engage it directly.** Acknowledge that you've heard the sovereignty concern. The ICESCR monitoring body (the UN Committee on Economic, Social and Cultural Rights) does not have enforcement power over the U.S. — it issues concluding observations and recommendations. Ratification creates accountability and reporting obligations, not external legal authority over domestic law.
 
-2. **Know the RUDs precedent.** The U.S. has ratified three human rights treaties — the [ICCPR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en), the [Convention Against Torture](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en), and [CERD](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-2&chapter=4&clang=_en) — each with [reservations, understandings, and declarations (RUDs)](https://www.congressfoundation.org/) that limited domestic legal effect. ICESCR ratification would almost certainly follow the same pattern. The treaty would not be self-executing — meaning it wouldn't automatically become enforceable domestic law without implementing legislation. This is worth knowing when engaging sovereignty objections: ratification creates international reporting obligations and accountability, not a transfer of domestic lawmaking authority.
+2. **Know the RUDs precedent.** The U.S. has ratified three human rights treaties — the [ICCPR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en), the [Convention Against Torture](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en), and [CERD](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-2&chapter=4&clang=_en) — each with [reservations, understandings, and declarations (RUDs)](https://www.congressfoundation.org/) that limited domestic legal effect. ICESCR ratification would almost certainly follow the same pattern. The treaty would not self-execute — meaning it wouldn't automatically become enforceable domestic law without implementing legislation. This matters when engaging sovereignty objections: ratification creates international reporting obligations and accountability, not a transfer of domestic lawmaking authority.
 
-3. **Keep the focus on hearings, not immediate ratification.** Asking a skeptical senator to support hearings is a lower bar than asking for their ratification vote. Hearings are the appropriate mechanism for a democratic body to examine a treaty. That argument doesn't require the senator to have made up their mind.
+3. **Keep the focus on hearings, not immediate ratification.** Asking a skeptical senator to support hearings sets a lower bar than asking for their ratification vote. Hearings provide the appropriate mechanism for a democratic body to examine a treaty. That argument doesn't require the senator to have made up their mind.
 
-4. **Stay respectful and factual.** Constituent contacts that engage policy substance rather than express frustration are more likely to get substantive responses.
+4. **Stay respectful and factual.** Constituent contacts that engage policy substance rather than express frustration tend to receive substantive responses.
 
 ## The Bigger Picture
 
-Senators respond to constituent pressure when it is sustained, specific, and comes from multiple people across multiple contact points over time.
+Senators respond to constituent pressure when sustained, specific, and comes from multiple people across multiple contact points over time.
 
 ICESCR ratification has never had a coordinated constituent advocacy campaign at scale. The treaty has spent five decades in the Senate's unanswered inbox — not because senators have weighed it and rejected it, but because the volume of constituent contact on this issue has not yet reached the threshold that forces a scheduling decision.
 
-That creates an opening. Contact volume on this issue is low enough that a meaningful number of engaged constituents — making specific, substantive asks over several months — can move it from "never discussed" to "on the agenda."
+That creates an opening. Contact volume on this issue remains low enough that a meaningful number of engaged constituents — making specific, substantive asks over several months — can move it from "never discussed" to "on the agenda."
 
-Your two senators are the right starting point. Find their contact information, make the call, write the letter, and follow up. The next post in this series will look at the specific rights the ICESCR would protect for workers in the sectors most exposed to AI displacement — and what ratification would concretely change in your own economic life.
+Your two senators represent the right starting point. Find their contact information, make the call, write the letter, and follow up. The next post in this series will look at the specific rights the ICESCR would protect for workers in the sectors most exposed to AI displacement — and what ratification would concretely change in your own economic life.
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities.*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities.*
 
 *Post 1: [The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. Didn't](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) | Post 2: [AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/)*
 
