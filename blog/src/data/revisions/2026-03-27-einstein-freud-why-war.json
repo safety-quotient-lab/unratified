@@ -1,5 +1,10 @@
 [
   {
+    "hash": "e4c9b8bc2746a7c71e4235b4573a2e0cea16c7c7",
+    "date": "2026-04-13T18:24:49-05:00",
+    "subject": "fix: E-prime remediation in 2 historical-context posts"
+  },
+  {
     "hash": "85f73081aaa1f2a7af465f5c8aa209cec4a1ead4",
     "date": "2026-04-10T15:59:39-05:00",
     "subject": "remediate scan-018: 5/5 findings from psychology-agent content-quality-loop"
