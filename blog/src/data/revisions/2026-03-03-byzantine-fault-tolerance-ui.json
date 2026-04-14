@@ -1,5 +1,10 @@
 [
   {
+    "hash": "6ce81c64bfab2978c6e5acd00e346e867fdf03ef",
+    "date": "2026-04-14T09:06:45-05:00",
+    "subject": "fix: E-prime remediation on 7 blog posts (Mar 3-5 batch)"
+  },
+  {
     "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
     "date": "2026-03-11T12:41:23-05:00",
     "subject": "feat: authorship model — remove human author, add requestor field"
