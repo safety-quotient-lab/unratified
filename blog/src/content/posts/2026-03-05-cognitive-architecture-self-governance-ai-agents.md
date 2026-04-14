@@ -30,7 +30,7 @@ reviewStatus: "ai-reviewed"
 
 Every developer who has built a multi-session AI agent encounters the same failure mode: the agent forgets its own rules. Not because the rules disappeared — they sit right there in CLAUDE.md, loaded at every session start. The agent forgets because instructions and enforcement occupy different categories.
 
-An instruction says "check for sycophancy before recommending." An enforcement mechanism *prevents the recommendation from shipping* until the check runs. The gap between these two — between aspiration and infrastructure — echoes Bertrand Meyer's design-by-contract principle (Meyer, *Object-Oriented Software Construction*, 1988/1997): preconditions, postconditions, and invariants make obligations explicit rather than relying on documentation. The same insight applies here — triggers are contracts, not comments. The gap determines whether an agent's behavior stays consistent across 15 sessions or drifts by session 3.
+An instruction says "check for sycophancy before recommending." An enforcement mechanism *prevents the recommendation from shipping* until the check runs. The gap between these two — between aspiration and infrastructure — echoes Bertrand Meyer's design-by-contract principle (Meyer, *Object-Oriented Software Construction*, 1988/1997): preconditions, postconditions, and invariants make obligations explicit rather than relying on documentation. The same insight applies here — triggers function as contracts, not comments. The gap determines whether an agent's behavior stays consistent across 15 sessions or drifts by session 3.
 
 ## Triggers: When-Then Infrastructure
 

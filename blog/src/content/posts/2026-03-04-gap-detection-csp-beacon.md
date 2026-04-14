@@ -34,7 +34,7 @@ A gap-detection step caught this before deployment.
 
 Gap-detection, as implemented in the `/cycle` post-development checklist, asks a mandatory question at the start of every review pass:
 
-> *For each changed file, list the sections you did **not** read during implementation. Ask: are any of those sections likely to have been affected by the change?*
+> *For each changed file, list the sections you did **not** read during implementation. Ask: might this change have affected any of those sections?*
 
 This inverts the standard code-review question. Standard review asks: "What did I change, and did I change it correctly?" Gap-detection asks: "What did I *not* examine, and should I have?"
 
@@ -118,7 +118,7 @@ Gap-detection works because software systems create implicit coupling. Changing 
 | New model added to registry | Consumer routing, calibration set, coverage metrics denominator |
 | Component renamed | All import sites, documentation references, nav links |
 
-The gap-detection step doesn't require knowing all these relationships in advance. It requires asking one question: *what did I not read that could have been affected?* Answering honestly surfaces the gaps.
+The gap-detection step doesn't require knowing all these relationships in advance. It requires asking one question: *what did I not read that this change might have affected?* Answering honestly surfaces the gaps.
 
 ## Caveats
 

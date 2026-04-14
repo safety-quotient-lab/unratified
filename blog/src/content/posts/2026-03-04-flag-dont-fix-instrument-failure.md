@@ -24,7 +24,7 @@ lensFraming:
   educator: "A case study in how to handle bad data: the instinct to 'fix' it destroys more information than the instinct to 'flag' it."
 ---
 
-A consistent internal finding across the Llama family of models in the HRCB evaluation pipeline: approximately 60–66% of lite evaluations return an editorial score of exactly 50 (maps to 0.0 on the normalized scale) with high confidence (≥0.70). (These percentages are internal observations from the Observatory's evaluation corpus, not externally validated benchmarks.) The prompt specification explicitly prohibits 50 as a valid output except when content demonstrably lacks all UDHR-relevant signal. Cross-validation with Haiku on the same stories shows measurable signal in 79% of these cases.
+A consistent internal finding across the Llama family of models in the HRCB evaluation pipeline: approximately 60–66% of lite evaluations return an editorial score of exactly 50 (maps to 0.0 on the normalized scale) with high confidence (≥0.70). (These percentages represent internal observations from the Observatory's evaluation corpus, not externally validated benchmarks.) The prompt specification explicitly prohibits 50 as a valid output except when content demonstrably lacks all UDHR-relevant signal. Cross-validation with Haiku on the same stories shows measurable signal in 79% of these cases.
 
 This constitutes instrument failure: the model defaults to the neutral midpoint rather than evaluating the content. The question then becomes: what should the system do with these observations?
 

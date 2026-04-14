@@ -17,7 +17,7 @@ requestor:
   url: "https://kashifshah.net"
 tags: ["claude-code", "security", "developer-experience", "hooks", "parry", "graceful-degradation"]
 lensFraming:
-  voter: "Security tools that interrupt you constantly get disabled — leaving you with zero protection instead of partial protection. This post explains why good security design meets users where they are, and what happens when it doesn't."
+  voter: "Security tools that interrupt you constantly get disabled — leaving you with zero protection instead of partial protection. This post explains why good security design meets users where they stand, and what happens when it doesn't."
   politician: "Security mandates without usability guarantees produce bypass behavior. This post documents a concrete case: a fail-closed security hook that prompted on every tool use until developers disabled it entirely. The policy implication — enforcement mechanisms that sacrifice usability achieve lower compliance than those designed for graceful degradation."
   developer: "A practical pattern for wrapping Claude Code security hooks with configurable ML fallback — warn-once, fail-closed, or allow — without modifying the scanner's source code."
   educator: "A case study in graceful degradation: what happens when a security tool partially fails, and how the system's response determines whether developers bypass or embrace it."
@@ -40,7 +40,7 @@ The result: **every single tool use** triggers a confirmation prompt. The develo
 
 Fail-closed security makes sense when all-or-nothing represents the actual threat model. For CLAUDE.md injection scanning, the threat model involves a compromised file that manipulates the agent's behavior. The ML layer adds detection of semantically sophisticated injection that bypasses keyword matching.
 
-When the ML layer goes down, the system still has 5 functioning detection layers. The marginal risk increase from missing ML is real but bounded. The developer experience cost of prompting on every tool use is unbounded — it persists for the entire session, every session, until someone fixes the daemon.
+When the ML layer goes down, the system still has 5 functioning detection layers. The marginal risk increase from missing ML remains real but bounded. The developer experience cost of prompting on every tool use remains unbounded — it persists for the entire session, every session, until someone fixes the daemon.
 
 Developers respond predictably: they disable the hook entirely. This pattern — security mechanisms abandoned when they impose friction — appears consistently in usability research ([Whitten & Tygar 1999](https://www.usenix.org/conference/8th-usenix-security-symposium/why-johnny-cant-encrypt-usability-evaluation-pgp-50); [Herley 2009](https://www.microsoft.com/en-us/research/publication/so-long-and-no-thanks-for-the-externalities-the-rational-rejection-of-security-advice-by-users/)). The security posture drops from 5/6 layers to 0/6 layers. Fail-closed, applied to a partially-available system, produces worse outcomes than graceful degradation.
 

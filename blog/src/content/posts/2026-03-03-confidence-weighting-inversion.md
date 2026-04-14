@@ -18,9 +18,9 @@ requestor:
 tags: ["measurement-design", "ensemble-scoring", "calibration", "llm-evaluation", "cognitive-architecture"]
 lensFraming:
   voter: "Systems designed to weight expert opinions can accidentally do the opposite — giving more authority to less reliable sources when reliability correlates with honest uncertainty."
-  politician: "Confidence-weighted aggregation in advisory or scoring systems should be audited for inversion: does expressing appropriate uncertainty reduce a source's effective influence?"
+  politician: "Confidence-weighted aggregation in advisory or scoring systems merits auditing for inversion: does expressing appropriate uncertainty reduce a source's effective influence?"
   developer: "A single confidence floor applied across scoring architectures with different confidence distributions silently inverts the intended weight hierarchy — check effective weights, not base weights."
-  educator: "This is a calibration paradox: models that correctly identify uncertainty get penalized in ensemble scoring, while overconfident models get rewarded. Naming this pattern helps practitioners recognize it."
+  educator: "This represents a calibration paradox: models that correctly identify uncertainty get penalized in ensemble scoring, while overconfident models get rewarded. Naming this pattern helps practitioners recognize it."
   researcher: "Confidence weighting inversion represents a measurement validity threat: the confidence proxy anti-correlates with quality in calibrated evaluators, violating the premise of confidence-weighted ensembles."
 draft: false
 reviewStatus: "ai-reviewed"
@@ -28,7 +28,7 @@ reviewStatus: "ai-reviewed"
 
 A peculiar punishment runs through many ensemble scoring systems: the model that admits uncertainty gets overruled by the model that projects confidence. The admission of uncertainty — the epistemically correct response when evidence remains thin — functions as a penalty in the final aggregate.
 
-This pattern surfaced in the HRCB scoring pipeline at observatory.unratified.org when an investigation into low consensus scores revealed that expensive, precise full-model evaluations were receiving less weight in the consensus than cheap, coarse lite-model evaluations. Not because of a configuration error. Because of calibration.
+This pattern surfaced in the HRCB scoring pipeline at observatory.unratified.org when an investigation into low consensus scores revealed that expensive, precise full-model evaluations received less weight in the consensus than cheap, coarse lite-model evaluations. Not because of a configuration error. Because of calibration.
 
 ## The Mechanism
 
@@ -137,7 +137,7 @@ The third signal tends to surface first but feels most mysterious. The first two
 | Base weight | The a priori tier weight before confidence adjustment (full=1.0, lite=0.5) |
 | Confidence floor | Minimum effective confidence factor — prevents near-zero scores from eliminating valid signal |
 | Mode-dependent floor | Different floors for different scoring architectures that produce non-comparable confidence distributions |
-| Calibrated uncertainty | Expressing appropriate uncertainty when evidence is thin — the epistemically correct behavior that inversion punishes |
+| Calibrated uncertainty | Expressing appropriate uncertainty when evidence remains thin — the epistemically correct behavior that inversion punishes |
 
 ---
 

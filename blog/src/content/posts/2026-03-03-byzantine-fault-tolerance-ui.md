@@ -75,7 +75,7 @@ The correct behavior: detect the contradiction (confirmed + questioned = Byzanti
 
 ## The Detection Protocol: T13
 
-This failure pattern now has a named trigger in the cognitive architecture — T13, Byzantine Signal Detection. *(Note: trigger numbering reflects the cognitive architecture's internal registry as of March 2026; numbers may shift as triggers are added or reorganized.)*
+This failure pattern now has a named trigger in the cognitive architecture — T13, Byzantine Signal Detection. *(Note: trigger numbering reflects the cognitive architecture's internal registry as of March 2026; numbers may shift as new triggers emerge or get reorganized.)*
 
 ```
  When two signals in the same or adjacent turns contradict each other:
@@ -125,11 +125,11 @@ It also doesn't require malice or error on the user's part. Byzantine faults don
 
 ## Caveats
 
-**Detection isn't always clean.** The boundary between "questions the same answer" and "asks a related follow-up" can blur. T13 requires judgment about whether the follow-up genuinely contradicts or merely extends. A false positive (treating valid answers as Byzantine) creates unnecessary friction; a false negative (treating Byzantine pairs as valid answers) perpetuates the original failure. The trigger calibrates toward false positives — friction costs less than compounded confusion.
+**Detection doesn't always proceed cleanly.** The boundary between "questions the same answer" and "asks a related follow-up" can blur. T13 requires judgment about whether the follow-up genuinely contradicts or merely extends. A false positive (treating valid answers as Byzantine) creates unnecessary friction; a false negative (treating Byzantine pairs as valid answers) perpetuates the original failure. The trigger calibrates toward false positives — friction costs less than compounded confusion.
 
 **Prose resolution doesn't always succeed.** If the user remains confused after explanation, the re-ask path eventually activates anyway. T13 doesn't eliminate re-asking; it prevents *reformulation without resolution* — the specific failure mode where the agent keeps asking the same question in different words without addressing the underlying confusion.
 
-**The tool result sometimes was correct.** Occasionally a user clicks an option, types a clarifying question, reads the answer, and realizes the original click actually matched their intent. T13's discard step means the agent re-confirms via prose rather than proceeding on the tool result — a small cost when the original answer held.
+**The tool result sometimes proved correct.** Occasionally a user clicks an option, types a clarifying question, reads the answer, and realizes the original click actually matched their intent. T13's discard step means the agent re-confirms via prose rather than proceeding on the tool result — a small cost when the original answer held.
 
 **This analysis generalizes beyond `AskUserQuestion`.** The underlying pattern applies to any structured input channel paired with an unstructured clarification channel operating in the same turn window.
 
