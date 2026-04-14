@@ -157,7 +157,15 @@ The more precise answer to "how much would it cost to ratify ICESCR and fill the
 
 *Related reading: [How Long Would Ratification Take?](https://blog.unratified.org/2026-03-08-how-long-would-ratification-take/) examines the procedural timeline. [What Ratification Would Actually Change](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) examines the accountability machinery. [The 50-Year Story](https://blog.unratified.org/2026-03-06-voter-guide-fifty-year-story/) traces the political history of non-ratification.*
 
-*Epistemic note: Fiscal estimates in this post carry high uncertainty ranges. No authoritative CBO score for ICESCR implementation costs exists. Comparative data reflects correlation, not established causation. Savings estimates involve methodological assumptions flagged in the linked research. Readers evaluating specific policy proposals should consult program-specific CBO analyses.*
+---
+
+**EPISTEMIC FLAGS**
+
+- Fiscal estimates in this post carry high uncertainty ranges
+- No authoritative CBO score for ICESCR implementation costs exists
+- Comparative data reflects correlation, not established causation
+- Savings estimates involve methodological assumptions flagged in the linked research
+- Readers evaluating specific policy proposals should consult program-specific CBO analyses
 
 ## Sources
 

@@ -1,5 +1,5 @@
 ---
-title: "Crystallized Intelligence as System Architecture: How a Psychology Concept Cut Our AI Agent Costs by 52%"
+title: "Crystallized Intelligence as System Architecture: How a Psychology Concept Moved 52% of AI Agent Work to Deterministic Code"
 summary: "Cattell's crystallized vs. fluid intelligence distinction, applied to autonomous agent message processing, moved 52% of LLM work into deterministic code — no reasoning required."
 publishedDate: 2026-03-13
 author:

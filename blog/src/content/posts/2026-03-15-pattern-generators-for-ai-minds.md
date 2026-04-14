@@ -261,3 +261,7 @@ Thelen, E. (1985). Developmental origins of motor coordination: Leg movements in
 von Helmholtz, H. (1867). *Handbuch der physiologischen Optik* [Handbook of Physiological Optics]. Voss.
 
 von Holst, E. (1939). Die relative Koordination als Phanomen und als Methode zentralnervoser Funktionsanalyse [Relative coordination as phenomenon and method of CNS functional analysis]. *Ergebnisse der Physiologie*, 42, 228-306.
+
+---
+
+*For the full technical treatment — including trigger tiering, three-discipline evaluation, and dependency cluster analysis — see [Pattern Generators: What Your Brain's Walking Circuits Teach Us About AI Architecture](https://blog.unratified.org/2026-03-13-pattern-generators/).*

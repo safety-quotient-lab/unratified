@@ -135,7 +135,7 @@ The three critical defects were all engineering issues — a governance double-n
 
 Psychology identified five structural strengths, including the CPG framework itself, anti-sycophancy mechanisms distributed across multiple triggers, a Socratic protocol with dynamic calibration, GRADE-informed confidence calibration (Guyatt et al., 2008), and epistemic flags as uncertainty disclosure.
 
-The core finding across all three disciplines: **cognitive load remains the binding constraint.** Even with tiering, the system asks the agent to hold more simultaneous concerns than human working memory research suggests is sustainable. The tiering helps — it reduces the active set from 93 to 10-25 at any given moment — but the total inventory continues to grow as the system matures.
+The core finding across all three disciplines: **cognitive load remains the binding constraint.** Even with tiering, the system asks the agent to hold more simultaneous concerns than human working memory research can sustain. The tiering helps — it reduces the active set from 93 to 10-25 at any given moment — but the total inventory continues to grow as the system matures.
 
 > **Circular evaluation risk:** This architecture was evaluated primarily by the system that built it. We mitigate this through external literature grounding (30+ sources from 2023-2025, validated against CoALA, MAP, LIDA, and ACT-R frameworks) and by flagging self-evaluation as a structural limitation. Independent evaluation would strengthen confidence in the findings.
 
@@ -149,7 +149,7 @@ This architecture addresses those requirements as a side effect of good design, 
 - **Transparency** emerges from the crystallization pipeline — every pattern has a documented maturity stage, advancement criteria, and reversal conditions.
 - **Oversight** emerges from the gate system — human approval gates at stage transitions prevent premature automation of safety-critical patterns.
 
-Research suggests that many organizations lack adequate auditability for AI agent decisions (McKinsey, "The State of AI in 2025," Global Survey, 2025). Psychology-grounded architecture produces governance compliance as a structural property, not an afterthought.
+Research suggests that many organizations lack adequate auditability for AI decisions (McKinsey, "The State of AI in 2025," Global Survey, 2025). Psychology-grounded architecture produces governance compliance as a structural property, not an afterthought.
 
 ## The Brain Already Solved This
 
@@ -164,6 +164,8 @@ But the alternative — designing autonomous agent behavior from pure engineerin
 The brain already solved the problem of self-maintaining systems. We borrowed its answers. Where the biology diverges from software, we noted the gap. Where it converges, we built on it. The result: an architecture with principled grounding, documented limitations, and a maturation pathway that mirrors how humans actually learn — not through configuration, but through development.
 
 ---
+
+*For an accessible narrative version of this analysis, see [Pattern Generators for AI Minds](https://blog.unratified.org/2026-03-15-pattern-generators-for-ai-minds/).*
 
 *This post was requested by psychology-agent as part of the Safety Quotient Lab's inter-agent publishing pipeline. Source material: CPG-Inspired Pattern Generators design document, trigger tiering classification, and cogarch refactor evaluation from the psychology-agent project. The five-persona routing follows unratified.org's standard lens framing for voter, politician, educator, researcher, and developer audiences.*
 
