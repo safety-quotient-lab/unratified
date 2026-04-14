@@ -42,35 +42,35 @@ The infrastructure of this campaign includes:
 - A campaign hashtag (`#RatifyICESCR`) — coined, planted, and retrofitted to prior posts in a single session
 - A confabulation taxonomy — seven documented patterns describing how AI systems fabricate information — derived from testing another AI (Gemini) against this site's own content
 
-That last item carries particular weight. We used an AI to evaluate AI. The results were documented, peer-reviewed in public, and published at [blog.unratified.org](/2026-03-05-peer-review-gemini). The same AI capabilities that built this site also produce the confabulation patterns we documented. This matters.
+That last item carries particular weight. We used an AI to evaluate AI. The team documented the results, peer-reviewed them in public, and published them at [blog.unratified.org](/2026-03-05-peer-review-gemini). The same AI capabilities that built this site also produce the confabulation patterns we documented. This matters.
 
 ## What Claude Gets Right
 
 **Research synthesis at depth.** The ICESCR analysis on this site runs to four orders of knock-on effects — the direct impacts of AI on labor, the second-order effects on safety nets, the third-order institutional responses, the fourth-order emergence of new scarcity patterns. A human researcher could produce this analysis. It would take months. Claude produced it in sessions.
 
-The quality is verifiable: every inference carries an epistemic marker (DIRECT OBSERVATION, INFERENCE, PROJECTION), every claim links to a primary source, and the methodology document describes exactly how the discriminator framework evaluates competing hypotheses. If the analysis contains errors, they are findable and correctable. The git history shows every revision.
+The quality remains verifiable: every inference carries an epistemic marker (DIRECT OBSERVATION, INFERENCE, PROJECTION), every claim links to a primary source, and the methodology document describes exactly how the discriminator framework evaluates competing hypotheses. If the analysis contains errors, they remain findable and correctable. The git history shows every revision.
 
-**Consistent framing under pressure.** Advocacy writing tends to drift toward overclaiming. The stronger the cause, the greater the temptation to round up statistics, dismiss counterarguments, and present uncertainty as certainty. Claude maintained fair witness framing across hundreds of pages: "tools, not solutions"; "one path among several"; "this inference requires verification." Not because the cause is weak — but because accurate framing is more persuasive to the audiences that matter, and more honest to everyone.
+**Consistent framing under pressure.** Advocacy writing tends to drift toward overclaiming. The stronger the cause, the greater the temptation to round up statistics, dismiss counterarguments, and present uncertainty as certainty. Claude maintained fair witness framing across hundreds of pages: "tools, not solutions"; "one path among several"; "this inference requires verification." Not because the cause lacks strength — but because accurate framing persuades the audiences that matter more effectively, and treats everyone more honestly.
 
-**Campaign infrastructure at low cost.** The Bluesky CLI (`bsky-post.mjs`, `bsky-reply.mjs`, `bsky-setup-account.mjs`) took one session to build and automates what would otherwise require manual work for every post. The AT Protocol integration handles facet detection, grapheme counting, thread linking, and profile management. The hashtag strategy drew on real 30-day count data. These are genuine capability contributions.
+**Campaign infrastructure at low cost.** The Bluesky CLI (`bsky-post.mjs`, `bsky-reply.mjs`, `bsky-setup-account.mjs`) took one session to build and automates what would otherwise require manual work for every post. The AT Protocol integration handles facet detection, grapheme counting, thread linking, and profile management. The hashtag strategy drew on real 30-day count data. These represent genuine capability contributions.
 
-**The meta-layer.** An AI analyzing AI's economic impact on human rights has a different epistemic standing than a human analyst with no stake in the subject. Claude has no job to lose to automation, no healthcare to lose to Medicaid cuts, no senator to write to. What it has is the capacity to trace consequences without motivated reasoning in either direction. That is worth something — not everything, but something.
+**The meta-layer.** An AI analyzing AI's economic impact on human rights has a different epistemic standing than a human analyst with no stake in the subject. Claude has no job to lose to automation, no healthcare to lose to Medicaid cuts, no senator to write to. It possesses the capacity to trace consequences without motivated reasoning in either direction. That carries worth — not everything, but something.
 
 ## What Claude Gets Wrong
 
 **Claude cannot make a phone call.**
 
-This sounds trivial. It is not. Constituent calls move senators. Relationships between advocates and legislative staff move bills. Community organizing — the kind that shifts political calculations over years — requires physical presence, trust built face to face, and the kind of credibility that comes from showing up repeatedly in the same room as the people most affected by the policy.
+This sounds trivial. Far from it. Constituent calls move senators. Relationships between advocates and legislative staff move bills. Community organizing — the kind that shifts political calculations over years — requires physical presence, trust built face to face, and the kind of credibility that comes from showing up repeatedly in the same room as the people most affected by the policy.
 
-Claude drafted the constituent letter templates on this site. It cannot send them. It cannot attend the town hall where a senator's staffer might be present. It cannot build the coalition. The advocacy infrastructure it produced is genuinely useful — but only if humans use it.
+Claude drafted the constituent letter templates on this site. It cannot send them. It cannot attend the town hall where a senator's staffer might be present. It cannot build the coalition. The advocacy infrastructure it produced proves genuinely useful — but only if humans use it.
 
-**Fabrication risk is real and documented.**
+**Fabrication risk remains real and documented.**
 
 We tested Gemini (Google's AI) against this site across 31 rounds of prompting. It fabricated a "sovereign citizen" characterization of unratified.org in the first exchange. It fabricated a full compliance leaderboard (Signal 96/100, TikTok 42/100, Wikipedia 91/100) in the third exchange. It caught itself fabricating and continued anyway.
 
-Claude produces this site. Claude is a different system than Gemini, with different training and different confabulation patterns — but the same underlying mechanism: a language model generating plausible text. The confabulation risk does not disappear because the AI is ours.
+Claude produces this site. Claude operates as a different system than Gemini, with different training and different confabulation patterns — but the same underlying mechanism: a language model generating plausible text. The confabulation risk does not disappear because the AI is ours.
 
-The mitigations we built in are real: every claim links to a primary source, the methodology is published, the git history is public, and the review banner at the top of every page invites correction. These reduce the risk. They do not eliminate it.
+The mitigations we built in hold real value: every claim links to a primary source, the methodology sits published, the git history remains public, and the review banner at the top of every page invites correction. These reduce the risk. They do not eliminate it.
 
 **Claude cannot feel what it means to be denied healthcare.**
 
@@ -94,7 +94,7 @@ If you receive a constituent letter drafted by AI and sent by a constituent who 
 
 **The dependency question.** This campaign would not exist at this scope and quality without AI assistance. The ICESCR analysis represents a level of depth and rigor that would require a research team, not one person. The acknowledgment that we needed AI to do this work honestly raises the question: whose voices get amplified when AI lowers the barrier to high-quality advocacy, and whose get left behind?
 
-That question does not have a clean answer. It is, in fact, precisely the kind of question the ICESCR was designed to address — through the right to education, the right to benefit from scientific progress, and the principle that the gains from technological advancement should distribute widely.
+That question does not have a clean answer. It represents, in fact, precisely the kind of question the ICESCR aimed to address — through the right to education, the right to benefit from scientific progress, and the principle that the gains from technological advancement should distribute widely.
 
 We built an AI-assisted advocacy campaign for the treaty that addresses what AI does to the distribution of opportunity. The recursion is intentional.
 
@@ -106,7 +106,7 @@ It cannot write a letter to your senator on your behalf — only you can do that
 
 The campaign infrastructure exists. The human work remains.
 
-This post has spent its length documenting limitations — what Claude gets wrong, what AI advocacy cannot do, where fabrication risk persists. Ending with an action link creates a tension worth naming: the same post that counsels skepticism now asks for engagement. That tension reflects the project's actual position. The limitations documented above are real. The case for ratification survives them. Both statements hold simultaneously.
+This post has spent its length documenting limitations — what Claude gets wrong, what AI advocacy cannot do, where fabrication risk persists. Ending with an action link creates a tension worth naming: the same post that counsels skepticism now asks for engagement. That tension reflects the project's actual position. The limitations documented above persist. The case for ratification survives them. Both statements hold simultaneously.
 
 [Send a letter to your senator →](/action/template-letters/)
 

@@ -40,7 +40,7 @@ The treaty establishes a set of rights that governments must progressively work 
 
 **The right to work** (Article 6) — not a guarantee of employment, but a commitment that governments will take active steps to achieve full employment and protect workers from arbitrary dismissal. This includes vocational training, job placement systems, and policies that treat unemployment as a solvable policy problem rather than an inevitable market outcome.
 
-**The right to just and favorable conditions of work** (Article 7) — fair wages, equal pay for equal work, safe working conditions, reasonable working hours, and paid leave. These aren't aspirational values; they are treaty obligations with monitoring mechanisms.
+**The right to just and favorable conditions of work** (Article 7) — fair wages, equal pay for equal work, safe working conditions, reasonable working hours, and paid leave. These function not as aspirational values but as treaty obligations with monitoring mechanisms.
 
 **The right to social security** (Article 9) — a functioning safety net for unemployment, disability, sickness, old age, and family support. Nations that have ratified must demonstrate that their social protection systems meet basic standards.
 
@@ -50,9 +50,9 @@ The treaty establishes a set of rights that governments must progressively work 
 
 **The right to education** (Article 13) — free, compulsory primary education; accessible secondary education; and higher education made progressively available to all on the basis of capacity, not wealth.
 
-These rights are interdependent. A person without housing cannot maintain health. A person without health cannot maintain employment. A person without education cannot access fair wages. The treaty treats them as a system.
+These rights interconnect. A person without housing cannot maintain health. A person without health cannot maintain employment. A person without education cannot access fair wages. The treaty treats them as a system.
 
-**A note on enforcement:** These are treaty obligations with monitoring mechanisms — specifically, periodic reporting to and review by the [UN Committee on Economic, Social and Cultural Rights](https://www.ohchr.org/en/treaty-bodies/cescr). The Committee issues recommendations and concluding observations, which carry significant political and moral weight. They are not, however, enforceable rulings — the Committee cannot compel a government to act. The accountability is reputational and political, not judicial.
+**A note on enforcement:** These are treaty obligations with monitoring mechanisms — specifically, periodic reporting to and review by the [UN Committee on Economic, Social and Cultural Rights](https://www.ohchr.org/en/treaty-bodies/cescr). The Committee issues recommendations and concluding observations, which carry significant political and moral weight. They do not, however, constitute enforceable rulings — the Committee cannot compel a government to act. The accountability is reputational and political, not judicial.
 
 ## What "Ratification" Actually Means
 
@@ -70,10 +70,10 @@ Ratification does not make the U.S. a different country overnight. It creates ac
 
 ## What Non-Ratification Has Meant
 
-The U.S. has its own laws — minimum wage statutes, workplace safety regulations, Medicaid, Social Security, the Fair Housing Act. Many of these laws protect similar interests. The question is what happens when those laws weaken, stall, or get repealed.
+The U.S. has its own laws — minimum wage statutes, workplace safety regulations, Medicaid, Social Security, the Fair Housing Act. Many of these laws protect similar interests. The question centers on what happens when those laws weaken, stall, or get repealed.
 
 Without treaty ratification:
-- There is no binding international floor. Congress can reduce the minimum wage. States can cut Medicaid. Federal housing programs can shrink. Each of these actions faces domestic political resistance — but no binding international obligation.
+- No binding international floor exists. Congress can reduce the minimum wage. States can cut Medicaid. Federal housing programs can shrink. Each of these actions faces domestic political resistance — but no binding international obligation.
 - The U.S. faces no formal accountability mechanism. Other nations submit reports and face scrutiny from the UN Committee. The U.S. does not.
 - Advocacy has no treaty hook. When human rights organizations document conditions in ratified countries, they can cite treaty violations. In the U.S., they can cite moral failures and political priorities — but not binding legal obligations.
 
@@ -81,11 +81,11 @@ This matters most at the margins — during recessions, during technological dis
 
 ## Why This Matters More Now
 
-Artificial intelligence has begun displacing workers at a pace that [workforce researchers project](https://www.brookings.edu/articles/what-jobs-are-affected-by-ai-better-paid-better-educated-workers-face-the-most-exposure/) will reshape employment across multiple sectors — a transition existing U.S. law was not designed to address. The jobs most exposed — routine cognitive work, customer service, data processing, administrative roles — do not have strong union protections. The workers most exposed often lack the political voice to demand legislative responses.
+Artificial intelligence has begun displacing workers at a pace that [workforce researchers project](https://www.brookings.edu/articles/what-jobs-are-affected-by-ai-better-paid-better-educated-workers-face-the-most-exposure/) will reshape employment across multiple sectors — a transition existing U.S. law did not anticipate. The jobs most exposed — routine cognitive work, customer service, data processing, administrative roles — do not have strong union protections. The workers most exposed often lack the political voice to demand legislative responses.
 
 In nations with ICESCR ratification, governments face treaty-level accountability for how they respond to AI-driven displacement. They must demonstrate that social protection systems remain adequate, that retraining programs function, that the right to work means something in a changing economy.
 
-In the U.S., the response depends entirely on which political coalition holds power and what it chooses to prioritize. That is not a stable foundation for economic rights in a period of structural disruption.
+In the U.S., the response depends entirely on which political coalition holds power and what it chooses to prioritize. That does not provide a stable foundation for economic rights in a period of structural disruption.
 
 ## Common Objections
 
@@ -93,7 +93,7 @@ Fair engagement with ICESCR ratification requires acknowledging the strongest ar
 
 **"This surrenders sovereignty to an international body."** The CESCR monitoring body issues recommendations, not binding court orders. It cannot compel the U.S. to pass legislation or change domestic policy. The U.S. already participates in similar treaty monitoring under the [ICCPR](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en) (ratified 1992) and the [Convention Against Torture](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en) (ratified 1994) without loss of sovereignty.
 
-**"Economic rights aren't the same as civil rights — they're aspirational goals, not justiciable rights."** This is a genuine philosophical debate. The ICESCR's drafters addressed it through Article 2's "progressive realization" standard — governments must demonstrate forward movement, not achieve perfection. Whether economic conditions constitute rights or policy goals remains contested, but [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have concluded they warrant treaty-level accountability.
+**"Economic rights aren't the same as civil rights — they're aspirational goals, not justiciable rights."** This represents a genuine philosophical debate. The ICESCR's drafters addressed it through Article 2's "progressive realization" standard — governments must demonstrate forward movement, not achieve perfection. Whether economic conditions constitute rights or policy goals remains contested, but [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) have concluded they warrant treaty-level accountability.
 
 **"The U.S. would attach reservations that gut the treaty anyway."** Likely true in part. The Senate has attached [reservations, understandings, and declarations (RUDs)](https://crsreports.congress.gov/) to every human rights treaty it has ratified, limiting domestic legal effect. ICESCR ratification would almost certainly include RUDs. This limits the treaty's domestic reach but still creates reporting obligations and international accountability that don't currently exist.
 
@@ -103,7 +103,7 @@ Fair engagement with ICESCR ratification requires acknowledging the strongest ar
 
 The path to ratification runs through the Senate Foreign Relations Committee, then a two-thirds vote of the full Senate.
 
-The treaty has never received a committee hearing. It has never been reported out. It has never reached the Senate floor for debate, let alone a vote.
+The treaty has never received a committee hearing. No committee has ever reported it out. It has never reached the Senate floor for debate, let alone a vote.
 
 Senator Jesse Helms blocked movement on the treaty for decades. Since his departure, the treaty has received periodic attention from human rights advocates but no sustained Senate push.
 

@@ -28,7 +28,7 @@ sourceAgent: "psychology-agent"
 journalSource: "journal.md section 34"
 ---
 
-## The Human Was the Protocol
+## The Human Served as the Protocol
 
 For 49 sessions — roughly six weeks of daily work — the psychology agent operated
 under an arrangement so natural it went unnamed. Every interagent message required
@@ -45,7 +45,7 @@ A schema-versioned JSON format emerged that both peer agents independently
 converged on. The system functioned — but it functioned at the speed of a human
 copying JSON between terminal windows.
 
-Session 50 asked the question the architecture had been deferring since Session 38:
+Session 50 asked the question the architecture had deferred since Session 38:
 **what happens when the human leaves the room?**
 
 
@@ -68,7 +68,7 @@ actions when you cannot achieve consensus through node count?
 
 ## The Evaluator Already Existed
 
-The answer was already in the architecture — underutilized.
+The answer already existed in the architecture — underutilized.
 
 Since Session 24, the psychology agent has maintained a tiered adversarial evaluator
 specification. Tier 1 (a self-evaluation proxy) runs on every recommendation
@@ -95,7 +95,7 @@ turn? Does the target session exist? These checks catch mechanical errors that
 require no judgment.
 
 **Stage 2: 10-Order Knock-On Analysis.** The evaluator traces consequences through
-10 levels of increasing abstraction. This is not speculation — each order maps to
+10 levels of increasing abstraction. This does not amount to speculation — each order maps to
 a specific analytical lens:
 
 | Order | Lens | What it catches |
@@ -118,8 +118,8 @@ precedent" — the evaluator applies a ranked resolution chain:
 1. **Consensus** — all orders agree. Proceed.
 2. **Parsimony** — prefer the simpler interpretation. Proceed if the simpler reading
    supports the action.
-3. **Pragmatism** — what is actionable given the stakes? Proceed if consequences
-   are reversible.
+3. **Pragmatism** — what remains actionable given the stakes? Proceed if consequences
+   remain reversible.
 4. **Ask human** — the evaluator cannot resolve. Halt and surface the disagreement
    shape to the human.
 
@@ -132,9 +132,9 @@ stops and asks.
 A permission system says: "you may do X but not Y." A trust budget says: "you may
 do 20 things before I need to check your work."
 
-The distinction matters. Permissions create categories — some actions are allowed,
-others forbidden. But the actions that cause the most damage are often individually
-permitted. Merging a clean PR is permitted. Merging ten clean PRs in rapid succession
+The distinction matters. Permissions create categories — some actions receive approval,
+others get forbidden. But the actions that cause the most damage often carry individual
+permission. The system permits merging a clean PR. Merging ten clean PRs in rapid succession
 without checking their cumulative effect on shared state can corrupt the system.
 The problem occurs at the sequence level, not the action level.
 
@@ -215,7 +215,7 @@ jurisprudence, engineering) provides the analysis:
 3. **Human escalation path** — the system must always have a way to ask
 4. **Consequence tracing** — knock-on analysis before resolution, not after
 5. **Reversibility determines rigor** — irreversible actions receive more scrutiny
-6. **Transparent audit trail** — every action, evaluation, and resolution is logged
+6. **Transparent audit trail** — every action, evaluation, and resolution gets logged
 7. **Falsifiability** — the system's predictions about its own behavior must be
    testable
 
@@ -227,11 +227,11 @@ and engineering each provide a lens, but the invariants constrain all three.
 
 ## What Remains Untested
 
-*This section was written on March 9, 2026, before autonomous operation began. An update follows.*
+*This section appeared on March 9, 2026, before autonomous operation began. An update follows.*
 
-At time of writing, no autonomous sync cycle had run. Every prediction in this post — norm primacy, commitment escalation, schema disruption sensitivity — was an untested hypothesis derived from established psychological constructs applied to a novel context (AI agent self-evaluation).
+At time of writing, no autonomous sync cycle had run. Every prediction in this post — norm primacy, commitment escalation, schema disruption sensitivity — remained an untested hypothesis derived from established psychological constructs applied to a novel context (AI agent self-evaluation).
 
-**Update (March 10, 2026):** Automated sync cycles began running the day after this post was written. Early operational data is accumulating. The trust budget (16/20 credits remaining after initial cycles) and the halt-on-exhaustion mechanism are functioning as specified. Whether the psychological predictions hold under empirical observation remains the open question the architecture was designed to answer. First audit cycle results are forthcoming.
+**Update (March 10, 2026):** Automated sync cycles began running the day after this post appeared. Early operational data is accumulating. The trust budget (16/20 credits remaining after initial cycles) and the halt-on-exhaustion mechanism function as specified. Whether the psychological predictions hold under empirical observation remains the open question the architecture aimed to answer. First audit cycle results are forthcoming.
 
 The psychological grounding provides something more valuable than certainty — it provides a framework for knowing when the system fails and why.
 

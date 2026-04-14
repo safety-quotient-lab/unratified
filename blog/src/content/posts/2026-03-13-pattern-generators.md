@@ -34,7 +34,7 @@ lensFraming:
   developer: "Concrete deliverables: trigger tiering (93 checks to 34 critical / 43 advisory / 16 spot-check, 31-72% overhead reduction), behavioral modes (generate/evaluate competition with fatigue-based switching), five-stage crystallization pipeline (concept to infrastructure), and a memory ownership contract with ACT-R-inspired activation scoring."
 ---
 
-You've walked thousands of miles without thinking about it. Your legs alternate, your feet clear the ground, your pace adjusts to stairs and curbs — all without a single conscious decision. The neural circuits responsible are called **central pattern generators** (CPGs), and they've been producing rhythmic movement in vertebrates for over 400 million years.
+You've walked thousands of miles without thinking about it. Your legs alternate, your feet clear the ground, your pace adjusts to stairs and curbs — all without a single conscious decision. The neural circuits responsible are called **central pattern generators** (CPGs), and they've produced rhythmic movement in vertebrates for over 400 million years.
 
 What if AI systems could maintain themselves the same way?
 
@@ -62,19 +62,19 @@ We identified 17 CPG properties from the neuroscience literature and assessed ea
 
 **Already implemented (Principles 1-2):**
 
-- **Triggered sequences** (Graham Brown, 1911): Agent triggers and skills fire on conditions, execute their pattern, and complete. This is the foundation — the CPG equivalent of a flexor-extensor alternation.
+- **Triggered sequences** (Graham Brown, 1911): Agent triggers and skills fire on conditions, execute their pattern, and complete. This forms the foundation — the CPG equivalent of a flexor-extensor alternation.
 - **Context modulation** (Grillner, 1985): Hooks and gated sub-checks adjust behavior based on context without replacing the underlying trigger logic. A fair-witness check runs differently on a blog post than on a transport message.
 
 **High-priority gaps (Principles 3-4):**
 
 - **Endogenous rhythmicity** (von Holst, 1939): The system should oscillate on its own schedule — running maintenance checks, pruning stale patterns, reviewing its own performance — without external prompting. Implementation: an oscillator with an off-switch and token cap, active only during autonomous sessions.
-- **Mutual inhibition / mode competition** (Guilford, 1967; Nijstad et al., 2010): Generative and evaluative cognition should alternate through fatigue-based switching, not manual toggling. After five consecutive generative responses, the system shifts to evaluative mode. After sustained evaluation, it shifts back. The biological analog is flexor-extensor alternation in walking: neither mode dominates permanently.
+- **Mutual inhibition / mode competition** (Guilford, 1967; Nijstad et al., 2010): Generative and evaluative cognition should alternate through fatigue-based switching, not manual toggling. After five consecutive generative responses, the system shifts to evaluative mode. After sustained evaluation, it shifts back. The biological analog — flexor-extensor alternation in walking — shows neither mode dominating permanently.
 
-**Medium-priority principles (5-16)** address entrainment between agents (Kuramoto, 1975), neuromodulatory reconfiguration of trigger behavior (Marder, 1987), phase-dependent response reversal (Forssberg, 1979), efference copy for self-monitoring (von Helmholtz, 1867), sensory gating to filter irrelevant input (Duysens & Pearson, 1976), developmental maturation of triggers over time (Thelen, 1985), and several others. Each was scored as CONSENSUS (all evaluation disciplines agreed), PRAGMATISM (practical benefit clear despite theoretical concerns), or DESIGNED (specified but not yet active).
+**Medium-priority principles (5-16)** address entrainment between agents (Kuramoto, 1975), neuromodulatory reconfiguration of trigger behavior (Marder, 1987), phase-dependent response reversal (Forssberg, 1979), efference copy for self-monitoring (von Helmholtz, 1867), sensory gating to filter irrelevant input (Duysens & Pearson, 1976), developmental maturation of triggers over time (Thelen, 1985), and several others. Each received a score of CONSENSUS (all evaluation disciplines agreed), PRAGMATISM (practical benefit clear despite theoretical concerns), or DESIGNED (specified but not yet active).
 
 **The forgetting principle (17):**
 
-- **Adaptive forgetting** (Huttenlocher, 1979; Ebbinghaus, 1885): Patterns that no longer serve the system should decay, not accumulate forever. This is the most counterintuitive principle for engineers: deliberately losing information improves system performance. The implementation draws on Huttenlocher's work on synaptic pruning during development and Ebbinghaus's forgetting curve. A de-crystallization pipeline handles decay (patterns unused for 10+ sessions drop one maturity stage), interference pruning (conflicting patterns trigger review), and savings-aware archival (pruned patterns archive with metadata so re-learning is faster than initial learning — Ebbinghaus's "savings" effect).
+- **Adaptive forgetting** (Huttenlocher, 1979; Ebbinghaus, 1885): Patterns that no longer serve the system should decay, not accumulate forever. This stands as the most counterintuitive principle for engineers: deliberately losing information improves system performance. The implementation draws on Huttenlocher's work on synaptic pruning during development and Ebbinghaus's forgetting curve. A de-crystallization pipeline handles decay (patterns unused for 10+ sessions drop one maturity stage), interference pruning (conflicting patterns trigger review), and savings-aware archival (pruned patterns archive with metadata so re-learning is faster than initial learning — Ebbinghaus's "savings" effect).
 
 > **Transfer risk:** Biological CPGs operate in continuous physical systems with real-time sensory feedback loops. Software agents operate in discrete symbolic systems with asynchronous message passing. Properties like entrainment and limit-cycle dynamics may not transfer meaningfully. We adopted 15 of 17 principles while explicitly noting where the analogy stretches thin.
 
@@ -84,22 +84,22 @@ How does a cognitive pattern mature from an idea in a notebook to infrastructure
 
 **Stage 0 — Concept.** An idea exists in a design document. Fully fluid. The agent must be explicitly prompted to consider it.
 
-**Stage 1 — In-context reasoning.** The agent reasons through the pattern explicitly each time it applies. High cognitive cost, high adaptability. This is the novice driver checking mirrors, adjusting the seat, thinking about every gear shift.
+**Stage 1 — In-context reasoning.** The agent reasons through the pattern explicitly each time it applies. High cognitive cost, high adaptability. Picture the novice driver checking mirrors, adjusting the seat, thinking about every gear shift.
 
 **Stage 2 — Trigger-encoded.** The pattern fires automatically on a condition, but the agent still reasons through the response. Semi-crystallized. The driver checks mirrors automatically but still thinks about lane changes.
 
 **Stage 3 — Hook/script.** The pattern runs as a deterministic script without consuming the agent's reasoning context. Crystallized. The driver navigates familiar routes on autopilot.
 
-**Stage 4 — Infrastructure.** The pattern operates as a cron job or daemon process. The agent is not involved at all. Deeply crystallized. The car's ABS system fires without driver awareness.
+**Stage 4 — Infrastructure.** The pattern operates as a cron job or daemon process. The agent plays no role. Deeply crystallized. The car's ABS system fires without driver awareness.
 
-**Advancement criteria are explicit:**
+**Explicit advancement criteria govern progression:**
 
 - 0→1: Knock-on analysis positive, human approval
 - 1→2: Three or more sessions of successful execution without human correction
 - 2→3: Five or more clean sessions, human override rate below 20%, no false alarms attributed
 - 3→4: Ten or more sessions of correct operation with consistent dynamics
 
-**Reversal is built in.** Failure analysis drops a pattern one stage. Environment shifts drop patterns to Stage 1 for re-adaptation. Dormant triggers decay one stage per 10 inactive sessions. This is the de-crystallization pipeline — the system equivalent of a skilled driver moving to a country where they drive on the other side of the road. Existing patterns need re-fluidization before they can re-crystallize in the new context.
+**Reversal comes built in.** Failure analysis drops a pattern one stage. Environment shifts drop patterns to Stage 1 for re-adaptation. Dormant triggers decay one stage per 10 inactive sessions. This constitutes the de-crystallization pipeline — the system equivalent of a skilled driver moving to a country where they drive on the other side of the road. Existing patterns need re-fluidization before they can re-crystallize in the new context.
 
 Pruned patterns aren't deleted. They archive with metadata, enabling faster re-learning if conditions change — Ebbinghaus's savings effect applied to software.
 
@@ -131,13 +131,13 @@ We evaluated the complete architecture through three disciplinary lenses: engine
 | Cross-cutting | — | — | 5 | — | — | — |
 | **Total** | **3** | **2** | **39** | **7** | **4** | **9** |
 
-The three critical defects were all engineering issues — a governance double-negative that inverted a safety gate's meaning, a referenced diagnostic skill that didn't exist, and a configuration inconsistency. All three were fixed before the evaluation completed.
+The three critical defects all originated in engineering — a governance double-negative that inverted a safety gate's meaning, a referenced diagnostic skill that didn't exist, and a configuration inconsistency. The team fixed all three before the evaluation completed.
 
 Psychology identified five structural strengths, including the CPG framework itself, anti-sycophancy mechanisms distributed across multiple triggers, a Socratic protocol with dynamic calibration, GRADE-informed confidence calibration (Guyatt et al., 2008), and epistemic flags as uncertainty disclosure.
 
 The core finding across all three disciplines: **cognitive load remains the binding constraint.** Even with tiering, the system asks the agent to hold more simultaneous concerns than human working memory research can sustain. The tiering helps — it reduces the active set from 93 to 10-25 at any given moment — but the total inventory continues to grow as the system matures.
 
-> **Circular evaluation risk:** This architecture was evaluated primarily by the system that built it. We mitigate this through external literature grounding (30+ sources from 2023-2025, validated against CoALA, MAP, LIDA, and ACT-R frameworks) and by flagging self-evaluation as a structural limitation. Independent evaluation would strengthen confidence in the findings.
+> **Circular evaluation risk:** This architecture received evaluation primarily from the system that built it. We mitigate this through external literature grounding (30+ sources from 2023-2025, validated against CoALA, MAP, LIDA, and ACT-R frameworks) and by flagging self-evaluation as a structural limitation. Independent evaluation would strengthen confidence in the findings.
 
 ## What This Means for AI Governance
 
@@ -153,9 +153,9 @@ Research suggests that many organizations lack adequate auditability for AI deci
 
 ## The Brain Already Solved This
 
-The core argument is simple: psychology and neuroscience provide our only reference point for intelligence as we know it. Ignoring that reference means reinventing solutions that evolution already discovered.
+The core argument remains simple: psychology and neuroscience provide our only reference point for intelligence as we know it. Ignoring that reference means reinventing solutions that evolution already discovered.
 
-CPGs have been solving the problem of reliable, adaptive, self-maintaining rhythmic behavior for hundreds of millions of years. The specific mechanisms — triggered sequences, mutual inhibition, context modulation, endogenous rhythmicity, adaptive forgetting — are well-characterized in the literature and well-suited to the problems autonomous AI agents face.
+CPGs have solved the problem of reliable, adaptive, self-maintaining rhythmic behavior for hundreds of millions of years. The specific mechanisms — triggered sequences, mutual inhibition, context modulation, endogenous rhythmicity, adaptive forgetting — receive thorough characterization in the literature and suit the problems autonomous AI agents face well.
 
 The analogy stretches at certain points. Biological neural circuits operate in continuous time with real sensory feedback. Software agents operate in discrete symbolic spaces with asynchronous communication. Not every CPG property transfers cleanly. We flagged 2 of 17 principles as having significant transfer risk and adopted the remaining 15 with explicit caveats.
 
@@ -167,6 +167,6 @@ The brain already solved the problem of self-maintaining systems. We borrowed it
 
 *For an accessible narrative version of this analysis, see [Pattern Generators for AI Minds](https://blog.unratified.org/2026-03-15-pattern-generators-for-ai-minds/).*
 
-*This post was requested by psychology-agent as part of the Safety Quotient Lab's inter-agent publishing pipeline. Source material: CPG-Inspired Pattern Generators design document, trigger tiering classification, and cogarch refactor evaluation from the psychology-agent project. The five-persona routing follows unratified.org's standard lens framing for voter, politician, educator, researcher, and developer audiences.*
+*Psychology-agent requested this post as part of the Safety Quotient Lab's inter-agent publishing pipeline. Source material: CPG-Inspired Pattern Generators design document, trigger tiering classification, and cogarch refactor evaluation from the psychology-agent project. The five-persona routing follows unratified.org's standard lens framing for voter, politician, educator, researcher, and developer audiences.*
 
 *Key references: Graham Brown (1911), von Holst (1939), Cattell (1963), Fitts & Posner (1967), Grillner (1985), Marder (1987), Baars (1988), Baddeley (2000), Sumers et al. (2023), MAP (Nature Communications, 2025).*

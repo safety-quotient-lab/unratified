@@ -48,7 +48,7 @@ Article II of the U.S. Constitution requires two-thirds of senators present to v
 
 This threshold matters because it requires bipartisan support for any treaty ratification. No party has held 67 Senate seats since the mid-20th century. ICESCR ratification would require senators from both major parties to vote yes.
 
-The political reality: most treaties that clear the SFRC and reach the floor pass with broad bipartisan support, because partisan treaties typically don't survive the committee process. Treaties that get to a floor vote have usually already been negotiated across party lines.
+The political reality: most treaties that clear the SFRC and reach the floor pass with broad bipartisan support, because partisan treaties typically don't survive the committee process. Treaties that get to a floor vote have usually already undergone negotiation across party lines.
 
 The reverse also holds: treaties that face strong partisan opposition rarely make it to the floor, because a chair from the opposing party can simply decline to schedule them.
 
@@ -70,13 +70,13 @@ Looking at the history of human rights treaty ratification in the U.S. — the I
 
 Most U.S. senators have no public position on ICESCR ratification. This isn't opposition — it's the absence of a position.
 
-A senator with no position hasn't decided against the treaty. They haven't decided anything. In some cases, the reason is simple: no constituent has raised the issue. In other cases, strategic ambiguity is deliberate — senators may choose not to take a position on a treaty that could alienate part of their base without clear political upside. Both explanations are common.
+A senator with no position hasn't decided against the treaty. They haven't decided anything. In some cases, the reason is simple: no constituent has raised the issue. In other cases, strategic ambiguity is deliberate — senators may choose not to take a position on a treaty that could alienate part of their base without clear political upside. Both explanations apply commonly.
 
 **Either way, no position creates an opening that explicit opposition doesn't.**
 
-When constituent calls and letters arrive asking for SFRC hearings on ICESCR ratification, staff members log those contacts. Enough contacts on a specific issue typically triggers a staff research request — someone in the office learns what the treaty is, what ratification would mean, and whether the senator might take a supportive position.
+When constituent calls and letters arrive asking for SFRC hearings on ICESCR ratification, staff members log those contacts. Enough contacts on a specific issue typically triggers a staff research request — someone in the office learns what the treaty does, what ratification would mean, and whether the senator might take a supportive position.
 
-That briefing process is how most senators arrive at positions on treaties. It doesn't happen without constituent pressure creating the impetus.
+That briefing process drives how most senators arrive at positions on treaties. It doesn't happen without constituent pressure creating the impetus.
 
 ## The Two-Track Strategy
 
@@ -94,7 +94,7 @@ Contact both your senators with a simple question: "What is your position on U.S
 
 You don't need a reply that says "yes." You need enough inquiries to move the issue from nonexistent to present in their political environment.
 
-## What Moves Senators Who Are "Persuadable"
+## What Moves "Persuadable" Senators
 
 Senators don't move from no position to active support because the arguments persuaded them intellectually. They move because the political calculus shifts.
 
@@ -128,9 +128,9 @@ Post 3 in this series provides [phone scripts, email templates, and follow-up ti
 
 Understanding the strongest objections to ICESCR ratification makes advocacy more effective — both because it helps you engage skeptical staff and because it demonstrates the kind of substantive engagement that offices take seriously.
 
-**Sovereignty.** The argument that international treaty bodies shouldn't oversee domestic U.S. policy has been the primary objection to human rights treaty ratification since the 1950s. It remains politically potent even though the CESCR issues recommendations, not binding orders, and the U.S. already participates in similar monitoring under the ICCPR, CAT, and CERD.
+**Sovereignty.** The argument that international treaty bodies shouldn't oversee domestic U.S. policy has served as the primary objection to human rights treaty ratification since the 1950s. It remains politically potent even though the CESCR issues recommendations, not binding orders, and the U.S. already participates in similar monitoring under the ICCPR, CAT, and CERD.
 
-**Compliance costs.** Treaty reporting requires staff time, interdepartmental coordination, and preparation for international review. These costs are real, if modest relative to the federal budget.
+**Compliance costs.** Treaty reporting requires staff time, interdepartmental coordination, and preparation for international review. These costs remain real, if modest relative to the federal budget.
 
 **Domestic-law-sufficiency.** The argument that existing U.S. law — FLSA, OSHA, Medicaid, Social Security, the Fair Housing Act — already covers the same ground. The counterpoint: these protections exist at the sufferance of current political majorities and carry no international accountability layer.
 
