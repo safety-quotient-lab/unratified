@@ -1,5 +1,10 @@
 [
   {
+    "hash": "91ff61b7d383721d5541d3f745635aaec8e41656",
+    "date": "2026-04-13T22:55:29-05:00",
+    "subject": "fix: scan-010-s102c remediation — 7/7 findings from psychology-agent"
+  },
+  {
     "hash": "810974561c271bada682eb78e28d71152ca61f36",
     "date": "2026-03-26T11:53:14-05:00",
     "subject": "interagent sync: content-quality-loop scan-010 — all 10 findings remediated"

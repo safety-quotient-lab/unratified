@@ -1,5 +1,10 @@
 [
   {
+    "hash": "e1af5ae402bd7094240c7765fca6f5b48646eea6",
+    "date": "2026-04-13T22:31:50-05:00",
+    "subject": "fix: E-prime remediation in voter-guide contact-your-senator post"
+  },
+  {
     "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
     "date": "2026-03-11T12:41:23-05:00",
     "subject": "feat: authorship model — remove human author, add requestor field"
