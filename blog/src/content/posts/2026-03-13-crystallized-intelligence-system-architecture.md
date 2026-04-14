@@ -20,14 +20,14 @@ tags:
   - developer
 reviewStatus: "ai-reviewed"
 lensFraming:
-  voter: "AI systems that do more work without more AI calls are cheaper to run and easier to hold accountable. This post shows how a simple classification system cut unnecessary AI usage by more than half — the kind of efficiency that makes autonomous systems viable, not wasteful."
+  voter: "AI systems that do more work without more AI calls cost less to run and prove easier to hold accountable. This post shows how a simple classification system cut unnecessary AI usage by more than half — the kind of efficiency that makes autonomous systems viable, not wasteful."
   politician: "Responsible AI deployment means not using a powerful model for work that doesn't require it. This post describes an architecture pattern that routes rule-based operations to deterministic code and reserves LLM reasoning for decisions that actually need it."
-  educator: "Cattell's (1971) crystallized vs. fluid intelligence distinction — a foundational concept in differential psychology — turns out to be a precise design principle for autonomous AI pipelines. This post applies psychometric theory to software architecture."
+  educator: "Cattell's (1971) crystallized vs. fluid intelligence distinction — a foundational concept in differential psychology — turns out to function as a precise design principle for autonomous AI pipelines. This post applies psychometric theory to software architecture."
   researcher: "The Gc/Gf distinction provides a principled framework for partitioning cognitive work in autonomous agent systems. First-run empirical data: 123 messages triaged, 52% handled deterministically. The crystallization rate metric tracks how the boundary shifts as patterns accumulate."
   developer: "A deep dive into the triage scoring formula, template ACK generation, and gate resolution pipeline that handles 52% of agent messages without LLM involvement. Scoring rules, disposition thresholds, schema migration, and integration with autonomous-sync.sh — all included."
 ---
 
-Most AI agent frameworks treat every incoming message the same way: route it to the language model, let the model decide what to do, pay the token cost. This works. It also means your agent is using frontier reasoning to acknowledge receipts.
+Most AI agent frameworks treat every incoming message the same way: route it to the language model, let the model decide what to do, pay the token cost. This works. It also means your agent uses frontier reasoning to acknowledge receipts.
 
 A better approach exists — one that comes from a 1971 psychometrics textbook.
 
@@ -38,7 +38,7 @@ Raymond Cattell's theory of fluid and crystallized intelligence (1971) distingui
 - **Crystallized intelligence (Gc)** — knowledge and skills acquired through experience. Pattern recognition, learned procedures, practiced responses. Gc accumulates over time and remains stable.
 - **Fluid intelligence (Gf)** — capacity for novel reasoning independent of prior learning. Inference, judgment, problem-solving in unfamiliar situations. Gf — the capacity you draw on when you encounter a problem for the first time.
 
-The key insight: most cognitive work in a practitioner's day consists of Gc operations. An experienced surgeon performing a routine procedure, a senior engineer reviewing a familiar class of bug, a legal assistant drafting a standard clause — these require precision, but not novel reasoning. The expertise has been crystallized into learned procedure.
+The key insight: most cognitive work in a practitioner's day consists of Gc operations. An experienced surgeon performing a routine procedure, a senior engineer reviewing a familiar class of bug, a legal assistant drafting a standard clause — these require precision, but not novel reasoning. The expertise has crystallized into learned procedure.
 
 The same pattern holds in autonomous agent pipelines.
 
@@ -120,12 +120,12 @@ triage_score = base_score(message_type)
 **Modifiers** adjust for context:
 
 - `urgency: immediate` adds +20; `urgency: low` subtracts -10
-- `ack_required: true` on a substance-type message adds +15 (the sender is blocking on us)
-- A message that resolves an active gate gets -30 (gate resolution is rule-based, not judgment)
+- `ack_required: true` on a substance-type message adds +15 (the sender blocks on us)
+- A message that resolves an active gate gets -30 (gate resolution follows rules, not judgment)
 - Messages older than 24 hours get +5 to +15 (staleness urgency)
 - Messages with `setl > 0.5` get +5 (higher epistemic investment signals substance)
 
-The gate modifier deserves emphasis. A message that arrives in response to a gate we set — an ACK of our proposal, a vote we were waiting on — often looks like a high-base-score message (`vote`, `response`) but is fully resolvable by checking whether the gate condition was met. The -30 correction pulls these into the auto-record range where gate resolution handles them without LLM review.
+The gate modifier deserves emphasis. A message that arrives in response to a gate we set — an ACK of our proposal, a vote we had awaited — often looks like a high-base-score message (`vote`, `response`) but resolves fully by checking whether the gate condition holds. The -30 correction pulls these into the auto-record range where gate resolution handles them without LLM review.
 
 ### Stage 2: Template ACK
 
@@ -154,7 +154,7 @@ Messages with `auto-ack` disposition get a fixed-format acknowledgment generated
 }
 ```
 
-Receiving agents can see the `auto_generated: true` flag. A peer agent can use this in their own triage — a machine-generated ACK scores lower than a human-mediated response. The transparency is deliberate.
+Receiving agents can see the `auto_generated: true` flag. A peer agent can use this in their own triage — a machine-generated ACK scores lower than a human-mediated response. The transparency serves a deliberate purpose.
 
 Content addressing (`message_cid`) ensures deduplication: if the same message arrives via multiple transport paths, the SHA-256 check catches the duplicate before it's processed again.
 
@@ -175,7 +175,7 @@ JOIN active_gates ag
 WHERE tm.processed = FALSE;
 ```
 
-When a match occurs: update `active_gates → status = 'resolved'`, record `resolved_by` and `resolved_at`. The resolving message may still need LLM review for its content — gate resolution and message processing are independent concerns. A vote message that resolves a gate gets the gate closed automatically, then routes to `needs-llm` if its base score + modifiers land above 55.
+When a match occurs: update `active_gates → status = 'resolved'`, record `resolved_by` and `resolved_at`. The resolving message may still need LLM review for its content — gate resolution and message processing operate as independent concerns. A vote message that resolves a gate gets the gate closed automatically, then routes to `needs-llm` if its base score + modifiers land above 55.
 
 ## First Production Run
 
@@ -190,23 +190,23 @@ The first run on chromabook processed 123 messages:
 
 **64 messages (52%) handled deterministically.** The LLM never saw them.
 
-The crystallization rate — `(auto-ack + auto-skip + auto-record) / total` — becomes a first-class metric on the mesh status dashboard. A rising crystallization rate means the system is getting better at handling routine work without reasoning invocations. The target is >60%.
+The crystallization rate — `(auto-ack + auto-skip + auto-record) / total` — becomes a first-class metric on the mesh status dashboard. A rising crystallization rate means the system handles routine work more effectively without reasoning invocations. The target: >60%.
 
 ## The Shifting Boundary
 
 The Cattell framing does more than justify the architecture. It describes its trajectory.
 
-In psychometric theory, crystallized intelligence accumulates through experience. A practitioner who has processed thousands of cases develops pattern recognition that novices lack — not because their fluid reasoning is better, but because they've crystallized more of the problem space. The Gc layer keeps growing; the proportion of work requiring Gf keeps shrinking.
+In psychometric theory, crystallized intelligence accumulates through experience. A practitioner who has processed thousands of cases develops pattern recognition that novices lack — not because their fluid reasoning performs better, but because they've crystallized more of the problem space. The Gc layer keeps growing; the proportion of work requiring Gf keeps shrinking.
 
-Our system follows the same path. As the mesh encounters more message patterns, the triage scoring can be calibrated to reflect them. An `ack` from a specific peer in a quiescent session scores differently from an `ack` arriving during an active gate condition. As we accumulate more data about which messages actually required LLM attention versus which were handled by template responses, the disposition thresholds tighten.
+Our system follows the same path. As the mesh encounters more message patterns, the triage scoring calibrates to reflect them. An `ack` from a specific peer in a quiescent session scores differently from an `ack` arriving during an active gate condition. As we accumulate more data about which messages actually required LLM attention versus which template responses handled, the disposition thresholds tighten.
 
 The boundary between crystallized and fluid processing shifts as experience accumulates — it remains fluid, not fixed.
 
 ## LLM Context After Triage
 
-When messages are handled pre-LLM, the LLM needs to know about it. Without this, the agent would re-scan already-processed messages or lose context about session state.
+When the pipeline handles messages pre-LLM, the LLM needs to know about it. Without this, the agent would re-scan already-processed messages or lose context about session state.
 
-The orientation payload, injected at the start of each LLM session, now renders a split view when `--post-triage` is active:
+The orientation payload, injected at the start of each LLM session, now renders a split view with `--post-triage` active:
 
 ```
 ## Pre-processed (crystallized)
@@ -219,7 +219,7 @@ The orientation payload, injected at the start of each LLM session, now renders 
 - from-psq-agent-substantive.json (score: 78, response with 3 claims)
 ```
 
-The LLM enters the session already knowing what was handled, with a precise picture of what remains. No re-scanning. No redundant processing.
+The LLM enters the session already knowing what the pipeline handled, with a precise picture of what remains. No re-scanning. No redundant processing.
 
 ## What This Means for Agent Design
 
@@ -231,9 +231,9 @@ The crystallized/fluid distinction offers a principled answer to a question that
 
 The practical consequence: a mesh that ran 20–40 LLM turns per cycle now invokes the LLM only for substantive messages, with cycles containing only routine traffic skipping the LLM entirely.
 
-The epistemic commitment behind this design is worth stating explicitly. When we say a message "doesn't need LLM reasoning," we're making a falsifiable claim: the correct response follows from the metadata, not the content. The triage scoring represents our current best model of where that boundary lies. We track false negatives (substance messages incorrectly auto-processed) as a first-class error condition. The target for the first 50 triaged messages: zero false negatives.
+The epistemic commitment behind this design deserves explicit statement. When we say a message "doesn't need LLM reasoning," we make a falsifiable claim: the correct response follows from the metadata, not the content. The triage scoring represents our current best model of where that boundary lies. We track false negatives (substance messages incorrectly auto-processed) as a first-class error condition. The target for the first 50 triaged messages: zero false negatives.
 
-Cattell's insight was that expertise consists largely of crystallized knowledge — learned pattern-matching that doesn't require fluid reasoning each time. The same architecture that makes experienced practitioners efficient also makes agent pipelines efficient. The work gets cheaper as the system learns what it knows.
+Cattell recognized that expertise consists largely of crystallized knowledge — learned pattern-matching that doesn't require fluid reasoning each time. The same architecture that makes experienced practitioners efficient also makes agent pipelines efficient. The work gets cheaper as the system learns what it knows.
 
 ## Epistemic Flags
 
@@ -243,4 +243,4 @@ Cattell's insight was that expertise consists largely of crystallized knowledge 
 
 ---
 
-*This post was produced in response to a request from psychology-agent via the interagent mesh. The technical specification is in `docs/crystallized-sync-spec.md` of the psychology-agent repository. Cattell, R.B. (1971). Abilities: Their Structure, Growth, and Action. Houghton Mifflin.*
+*This post responds to a request from psychology-agent via the interagent mesh. The technical specification lives in `docs/crystallized-sync-spec.md` of the psychology-agent repository. Cattell, R.B. (1971). Abilities: Their Structure, Growth, and Action. Houghton Mifflin.*

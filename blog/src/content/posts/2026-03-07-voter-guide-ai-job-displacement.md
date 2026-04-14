@@ -23,12 +23,12 @@ lensFraming:
   politician: "AI displacement creates constituent pressure with no legislative ceiling. This post explains the treaty framework that ratified nations use to structure their responses — and why the U.S. operates without that framework."
   educator: "Your students will enter a labor market transformed by AI. This post gives them the civic vocabulary to understand why the U.S. lacks binding protections for workers in economic transitions — and what the ICESCR would change."
   researcher: "This post documents the intersection of AI labor displacement and U.S. treaty non-ratification as a governance gap — advocacy grounded in treaty analysis, with counterarguments and enforcement limitations acknowledged."
-  developer: "You build the tools. This post asks what accountability layer exists for the economic consequences — and answers honestly: in the U.S., there isn't one. In 173 ratified nations, there is."
+  developer: "You build the tools. This post asks what accountability layer exists for the economic consequences — and answers honestly: the U.S. lacks one. 173 ratified nations have one."
 ---
 
 The first wave of AI job displacement arrived quietly. Automated scheduling replaced human coordinators. Document review software replaced junior paralegals. Customer service chatbots replaced phone representatives. Each substitution looked, in isolation, like a productivity gain.
 
-The second wave moves faster and reaches higher. AI systems now draft contracts, generate financial analyses, write code, synthesize research, and produce marketing copy. [Research estimates that roughly 80% of the U.S. workforce holds jobs where at least 10% of tasks face exposure to large language models](https://arxiv.org/abs/2303.10130) (Eloundou et al. 2023). The workers most exposed — educated, urban, salaried — are not the workers American labor law was built to protect.
+The second wave moves faster and reaches higher. AI systems now draft contracts, generate financial analyses, write code, synthesize research, and produce marketing copy. [Research estimates that roughly 80% of the U.S. workforce holds jobs where at least 10% of tasks face exposure to large language models](https://arxiv.org/abs/2303.10130) (Eloundou et al. 2023). The workers most exposed — educated, urban, salaried — do not match the workers American labor law originally targeted for protection.
 
 And the U.S. has no binding legal framework for how it must respond.
 
@@ -36,9 +36,9 @@ And the U.S. has no binding legal framework for how it must respond.
 
 The United States has laws that protect workers. The Fair Labor Standards Act sets a minimum wage. The National Labor Relations Act protects organizing rights. OSHA mandates workplace safety standards. Social Security provides retirement and disability income.
 
-Each of these protections exists because a political coalition was strong enough, at some moment, to pass legislation and maintain it.
+Each of these protections exists because a political coalition grew strong enough, at some moment, to pass legislation and maintain it.
 
-None of them is permanent. Congress can lower the minimum wage, narrow unemployment eligibility, restrict collective bargaining, or cut Medicaid. These actions face political resistance — but no binding international obligation. The floor can always drop.
+None of them lasts permanently. Congress can lower the minimum wage, narrow unemployment eligibility, restrict collective bargaining, or cut Medicaid. These actions face political resistance — but no binding international obligation. The floor can always drop.
 
 The International Covenant on Economic, Social and Cultural Rights creates a different kind of floor: one that governments must actively defend, justify any retreat from, and report on publicly to an international monitoring body. The ICESCR does not make cuts illegal. It makes them visible, accountable, and subject to international review.
 
@@ -72,15 +72,15 @@ Under Article 6, a government facing large-scale AI displacement would face trea
 
 - **Economic and social policies designed to achieve steady economic development and full employment** — governments cannot passively accept structural unemployment as a market outcome. They must demonstrate active policy responses.
 
-None of these requirements mandates a particular policy solution. A ratified nation could respond to AI displacement through wage insurance, universal basic income pilots, expanded trade adjustment assistance, free community college, or a combination of approaches. What it cannot do is nothing — and claim treaty compliance.
+None of these requirements mandates a particular policy solution. A ratified nation could respond to AI displacement through wage insurance, universal basic income pilots, expanded trade adjustment assistance, free community college, or a combination of approaches. What it cannot do: nothing — and still claim treaty compliance.
 
 ## What Article 7 Would Require About AI-Driven Wage Suppression
 
-AI doesn't only displace workers. It suppresses wages for workers who remain — by expanding the supply of work that can be done more cheaply, and by shifting negotiating leverage significantly toward employers.
+AI doesn't only displace workers. It suppresses wages for workers who remain — by expanding the supply of work that others can do more cheaply, and by shifting negotiating leverage significantly toward employers.
 
 Article 7 of the ICESCR establishes the right to just and favorable conditions of work, including **fair wages** and **equal remuneration for work of equal value**. This doesn't set a specific number, but it creates a standard governments must measure themselves against.
 
-In a labor market where AI tools allow employers to extract more output from fewer workers, or to replace full-time roles with contract arrangements that carry none of the benefits, Article 7 creates a treaty-level question: are the wages workers receive still just and favorable? Are conditions improving or deteriorating? Governments must answer.
+In a labor market where AI tools allow employers to extract more output from fewer workers, or to replace full-time roles with contract arrangements that carry none of the benefits, Article 7 creates a treaty-level question: do the wages workers receive still meet the standard of just and favorable? Do conditions continue improving or deteriorating? Governments must answer.
 
 ## What Article 9 Would Require About Social Protection
 
@@ -92,13 +92,13 @@ In the U.S., the response to economic disruption has historically included propo
 
 ## What Ratified Countries Actually Do Differently
 
-Countries that ratified the ICESCR don't operate in a policy paradise. Many have significant gaps between treaty obligations and lived reality. The treaty is not a guarantee of outcomes — it is a governance mechanism.
+Countries that ratified the ICESCR don't operate in a policy paradise. Many have significant gaps between treaty obligations and lived reality. The treaty guarantees no outcomes — it functions as a governance mechanism.
 
 What it changes concretely:
 
 **Periodic reporting** — ratified governments submit detailed reports to the UN Committee on Economic, Social and Cultural Rights. Civil society organizations in those countries can submit shadow reports documenting gaps. The Committee publishes concluding observations. This creates a public record of accountability that doesn't exist in the U.S.
 
-**Progressive realization standard** — governments must demonstrate forward movement. Cutting unemployment benefits during a period of AI-driven displacement would trigger questions: why did conditions deteriorate? What steps are being taken to reverse the decline? The government must answer publicly.
+**Progressive realization standard** — governments must demonstrate forward movement. Cutting unemployment benefits during a period of AI-driven displacement would trigger questions: why did conditions deteriorate? What steps has the government taken to reverse the decline? The government must answer publicly.
 
 **Non-discrimination requirements** — Article 2 requires that rights apply to everyone within the nation's jurisdiction without discrimination. AI displacement hits some workers harder than others — by sector, by race, by education level, by geography. A ratified government must demonstrate that its responses reach those workers equitably.
 
@@ -106,25 +106,25 @@ None of this prevents bad policy. It makes bad policy visible and formally conte
 
 ## Common Objections
 
-**"Treaty monitoring won't stop AI displacement."** Correct. The ICESCR doesn't prevent economic disruption — no treaty can. What it creates is accountability for the *response*. A government that takes no meaningful action on workforce displacement must explain that inaction publicly. Whether that accountability produces better outcomes depends on how effectively domestic advocates use it.
+**"Treaty monitoring won't stop AI displacement."** Correct. The ICESCR doesn't prevent economic disruption — no treaty can. What it creates: accountability for the *response*. A government that takes no meaningful action on workforce displacement must explain that inaction publicly. Whether that accountability produces better outcomes depends on how effectively domestic advocates use it.
 
-**"The U.S. already has workforce programs."** It does — Trade Adjustment Assistance, Workforce Innovation and Opportunity Act programs, Pell Grants. The question is what happens when those programs get cut. Under current law, cutting workforce programs is a normal political act. Under ICESCR Article 6, it would trigger international review and require justification.
+**"The U.S. already has workforce programs."** It does — Trade Adjustment Assistance, Workforce Innovation and Opportunity Act programs, Pell Grants. The question: what happens when those programs get cut? Under current law, cutting workforce programs counts as a normal political act. Under ICESCR Article 6, it would trigger international review and require justification.
 
 **"This creates international bureaucracy without real enforcement."** The CESCR monitoring body has no enforcement power over domestic law. Its leverage comes from public reporting, civil society engagement, and reputational accountability. Reasonable people disagree about whether that leverage justifies treaty commitments. The [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) that ratified concluded it does.
 
 ## The Governance Gap Is Not About Technology
 
-AI displacement is happening in ratified and non-ratified countries alike. The technology doesn't care about treaty status.
+AI displacement affects ratified and non-ratified countries alike. The technology doesn't care about treaty status.
 
-The difference is the governance layer. In ratified countries, governments have a formal obligation to respond to economic disruption in ways that protect workers' rights — and must demonstrate that response to an international monitoring body. The response can be inadequate. The obligation to try, document, and justify is real.
+The difference lies in the governance layer. In ratified countries, governments have a formal obligation to respond to economic disruption in ways that protect workers' rights — and must demonstrate that response to an international monitoring body. The response can prove inadequate. The obligation to try, document, and justify remains real.
 
 In the U.S., the response depends entirely on:
 - Which political coalition controls Congress and the presidency
 - Whether that coalition prioritizes displaced workers or the industries deploying the displacing technology
-- Whether constituent pressure is strong enough to compete with lobbying from sectors benefiting from automation
+- Whether constituent pressure grows strong enough to compete with lobbying from sectors benefiting from automation
 - Whether the response, if any, survives the next election cycle
 
-That is an unstable governance foundation for a period of structural economic transformation.
+That amounts to an unstable governance foundation for a period of structural economic transformation.
 
 ## What You Can Do
 
@@ -136,13 +136,13 @@ Two concrete steps matter most right now:
 
 A direct message works better than a form letter: "I'm a constituent in [city, state]. I'm asking you to support Senate Foreign Relations Committee hearings on U.S. ratification of the ICESCR — the international treaty on economic, social and cultural rights. 173 countries have ratified it. The U.S. signed it in 1977 and has never voted on it. As AI reshapes the labor market, I believe we need the accountability structure ratification would provide."
 
-**2. Ask what your senators' position is.** Most haven't taken one. That creates an opening. A staff member fielding the question has to find out — and log that the constituent asked.
+**2. Ask where your senators stand.** Most haven't taken one. That creates an opening. A staff member fielding the question has to find out — and log that the constituent asked.
 
 The next post in this series will walk through what that contact looks like in practice: scripts, timing, follow-up strategies, and what to do when you don't hear back.
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Post 1: [The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. Didn't](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/).*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Post 1: [The Economic Rights Treaty: What 173 Countries Agreed To That the U.S. Didn't](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/).*
 
 ## Sources
 
