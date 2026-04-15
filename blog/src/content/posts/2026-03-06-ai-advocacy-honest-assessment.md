@@ -68,11 +68,11 @@ Claude drafted the constituent letter templates on this site. It cannot send the
 
 We tested Gemini (Google's AI) against this site across 31 rounds of prompting. It fabricated a "sovereign citizen" characterization of unratified.org in the first exchange. It fabricated a full compliance leaderboard (Signal 96/100, TikTok 42/100, Wikipedia 91/100) in the third exchange. It caught itself fabricating and continued anyway.
 
-Claude produces this site. Claude operates as a different system than Gemini, with different training and different confabulation patterns — but the same underlying mechanism: a language model generating plausible text. The confabulation risk does not disappear because the AI is ours.
+Claude produces this site. Claude operates as a different system than Gemini, with different training and different confabulation patterns — but the same underlying mechanism: a language model generating plausible text. The confabulation risk does not disappear because we built the AI.
 
 The mitigations we built in hold real value: every claim links to a primary source, the methodology sits published, the git history remains public, and the review banner at the top of every page invites correction. These reduce the risk. They do not eliminate it.
 
-**Claude cannot feel what it means to be denied healthcare.**
+**Claude cannot feel what denial of healthcare means.**
 
 The ICESCR protects the right to health. Millions of Americans lost healthcare coverage when the One Big Beautiful Bill Act passed in July 2025. Claude can cite the CBO figures ([10.9 million people losing coverage](https://www.cbo.gov/publication/61513), [$990 billion in Medicaid spending reductions](https://www.cbo.gov/publication/61513)). It cannot tell you what it feels like to choose between insulin and rent.
 

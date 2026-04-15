@@ -52,7 +52,7 @@ Without gap-detection, the deployment sequence would have proceeded:
 5. Analytics dashboard: shows zero sessions       ✗ (invisible, days later)
 ```
 
-Step 4 would have appeared successful. The beacon script loads — you can see the script tag in DevTools, the network request to `static.cloudflareinsights.com` succeeds. What CSP blocks isn't the script load; it blocks the `connect-src` outbound report. The beacon runs, collects session data, attempts to POST to `cloudflareinsights.com` — and the browser blocks it silently. No error in the console visible to the developer during a quick verify.
+Step 4 would have appeared successful. The beacon script loads — you can see the script tag in DevTools, the network request to `static.cloudflareinsights.com` succeeds. What CSP blocks does not involve the script load; it blocks the `connect-src` outbound report. The beacon runs, collects session data, attempts to POST to `cloudflareinsights.com` — and the browser blocks it silently. No error in the console visible to the developer during a quick verify.
 
 The expected time-to-detection: days, possibly weeks.
 
@@ -88,7 +88,7 @@ connect-src ... https://cloudflareinsights.com
 
 Two additions. The beacon now works.
 
-## Why This Isn't Code Review
+## Why This Does Not Constitute Code Review
 
 Standard code review examines what changed. A reviewer reads the diff, verifies correctness, checks for regressions in the modified logic. This remains necessary and valuable.
 

@@ -117,7 +117,7 @@ The pattern also appears in multi-agent systems where one agent confirms a subta
 
 The Byzantine signal pattern described here intersects with established HCI concepts. **Mode confusion** (Sarter & Woods, 1995) describes situations where the user's mental model of system state diverges from actual system state — a related but distinct failure where the contradiction exists between user and system rather than between two user-generated signals. **Grounding failure** (Clark & Brennan, 1991) describes breakdowns in the mutual belief that communication has succeeded — the Byzantine pair represents a specific subtype where grounding fails because two channels transmit contradictory evidence of comprehension simultaneously. T13 addresses the intersection: a grounding failure that manifests as mode confusion, detectable through signal contradiction rather than silence.
 
-## What This Isn't
+## What This Does Not Cover
 
 T13 doesn't fire on *every* case of follow-up clarification. If a user answers a question and then asks a related but distinct question, no Byzantine pair exists — the tool result remains valid, and the new question addresses different scope. The trigger requires genuine *contradiction*: the follow-up message calls into question the same thing the tool result confirmed.
 

@@ -40,7 +40,7 @@ A treaty that never gets a committee hearing never gets a floor vote. This makes
 
 The Committee has roughly 20 members. Its chair determines which treaties receive hearings, which get votes, and in what sequence. A chair who prioritizes human rights treaty ratification can move multiple treaties; a chair who doesn't can hold them indefinitely without acting.
 
-**What this means for advocacy:** The most leveraged constituent contact targets senators on the SFRC — specifically, contacting them to request hearings. A request for a "Senate Foreign Relations Committee hearing on ICESCR ratification" is a specific, procedurally meaningful ask. It names the institutional action that could actually happen.
+**What this means for advocacy:** The most leveraged constituent contact targets senators on the SFRC — specifically, contacting them to request hearings. A request for a "Senate Foreign Relations Committee hearing on ICESCR ratification" represents a specific, procedurally meaningful ask. It names the institutional action that could actually happen.
 
 ## The 67-Vote Threshold
 
@@ -68,9 +68,9 @@ Looking at the history of human rights treaty ratification in the U.S. — the I
 
 ## What "No Position" Means — and Why It Matters
 
-Most U.S. senators have no public position on ICESCR ratification. This isn't opposition — it's the absence of a position.
+Most U.S. senators have no public position on ICESCR ratification. This does not constitute opposition — it reflects the absence of a position.
 
-A senator with no position hasn't decided against the treaty. They haven't decided anything. In some cases, the reason is simple: no constituent has raised the issue. In other cases, strategic ambiguity is deliberate — senators may choose not to take a position on a treaty that could alienate part of their base without clear political upside. Both explanations apply commonly.
+A senator with no position has not decided against the treaty. They have not decided anything. In some cases, a simple explanation applies: no constituent has raised the issue. In other cases, senators maintain strategic ambiguity deliberately — they may choose not to take a position on a treaty that could alienate part of their base without clear political upside. Both explanations apply commonly.
 
 **Either way, no position creates an opening that explicit opposition doesn't.**
 
@@ -114,7 +114,7 @@ The most effective constituent contact on ICESCR ratification follows these prin
 
 **Name the treaty correctly.** "The International Covenant on Economic, Social and Cultural Rights" or "ICESCR" — not "a human rights treaty" or "international economic rights." Specific names make the research request specific.
 
-**Make a specific ask.** "I'm asking you to support Senate Foreign Relations Committee hearings on ICESCR ratification" beats "please support human rights." A specific ask can be tracked, briefed on, and answered.
+**Make a specific ask.** "I'm asking you to support Senate Foreign Relations Committee hearings on ICESCR ratification" beats "please support human rights." Staff can track, brief on, and answer a specific ask.
 
 **State your constituency.** "I'm a constituent in [city, state]" establishes that your contact counts for their district data.
 

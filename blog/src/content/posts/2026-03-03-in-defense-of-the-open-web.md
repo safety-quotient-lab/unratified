@@ -19,9 +19,9 @@ tags: ["open-web", "ai-analysis", "methodology", "fair-witness", "meta"]
 lensFraming:
   voter: "This post explains why keeping the web open and accessible matters for you — not just for browsing, but because the AI tools that increasingly shape policy, news, and economic analysis depend on open sources to produce accurate output. When those sources disappear behind paywalls and login walls, AI output gets less reliable, and you lose the ability to verify what it claims."
   politician: "Infrastructure policy analysis: the open web functions as critical infrastructure for AI-generated policy research. This post documents how agentic AI systems depend on openly accessible government databases (.gov), international organization resources (.org), and academic repositories to produce verifiable analysis. Restricting web access degrades AI output quality — with direct implications for the policy analyses that reach your desk."
-  developer: "Architecture analysis of agentic AI's dependency on open web infrastructure. Covers: .well-known discovery protocols, RSS as agent-native syndication, JSON-LD/SKOS for machine-readable semantics, build-time API integration patterns, and the Jevons paradox applied to agent-driven web traffic. Includes worked examples from the unratified.org build pipeline."
+  developer: "Architecture analysis of agentic AI's dependency on open web infrastructure. Covers: .well-known discovery protocols, RSS as agent-native syndication, JSON-LD/SKOS for machine-readable semantics, build-time API integration patterns, and the Jevons Effect applied to agent-driven web traffic. Includes worked examples from the unratified.org build pipeline."
   educator: "Use this post to teach digital infrastructure literacy — how the open web functions as a public good, and what happens when AI systems lose access to open information sources. Your students examine real examples of AI verification depending on open government databases, then evaluate the trade-offs between openness and access restriction."
-  researcher: "Analysis of open web infrastructure as a precondition for reliable agentic AI output. Documents dependency chain: agent verification → open authoritative sources → grounded output. Presents evidence from a 49-term glossary validation (19 terms verified against external sources, 5 corrections applied). Connects to Jevons paradox (H3) and quality erosion (H6) hypotheses from the site's differential diagnosis."
+  researcher: "Analysis of open web infrastructure as a precondition for reliable agentic AI output. Documents dependency chain: agent verification → open authoritative sources → grounded output. Presents evidence from a 49-term glossary validation (19 terms verified against external sources, 5 corrections applied). Connects to Jevons Effect (H3) and quality erosion (H6) hypotheses from the site's differential diagnosis."
 draft: false
 reviewStatus: "ai-reviewed"
 ---
@@ -69,11 +69,11 @@ The [Human Rights Observatory](https://observatory.unratified.org) depends on th
 
 Open protocols create composable systems. Closed protocols create dependency chains that break when any single vendor changes terms.
 
-## The Jevons Paradox of Agent Traffic
+## The Jevons Effect in Agent Traffic
 
 The project's [differential diagnosis](https://unratified.org/connection/differential-diagnosis) identified seven hypotheses for how AI reshapes economic activity. Two of them apply directly to the open web:
 
-**H3 (Jevons Explosion)**: When efficiency improvements reduce the effective cost of a resource, demand for that resource explodes rather than decreases. *Note: the application of the Jevons Paradox to agent-driven web traffic represents a novel hypothesis from this project's differential diagnosis, not an established finding.* Applied to agents and the web: as agents proliferate, their demand for web resources — government databases, academic repositories, reference materials — grows exponentially. Every agent that verifies claims, researches topics, or builds structured data consumes web resources at a scale no individual human would.
+**H3 (Jevons Effect)**: When efficiency improvements reduce the effective cost of a resource, demand for that resource explodes rather than decreases. *Note: the application of the Jevons Effect to agent-driven web traffic represents a novel hypothesis from this project's differential diagnosis, not an established finding.* Applied to agents and the web: as agents proliferate, their demand for web resources — government databases, academic repositories, reference materials — grows exponentially. Every agent that verifies claims, researches topics, or builds structured data consumes web resources at a scale no individual human would.
 
 **H6 (Quality Erosion)**: More output produced at lower cost leads to lower average quality. Applied to agents and the web: if the response to H3's demand explosion involves restricting access — CAPTCHAs, authentication walls, aggressive rate limiting, robots.txt blanket blocks — agents lose the grounding that makes their output reliable. The quality erosion that follows does not affect only agents. It affects every human who consumes agent-generated analysis, policy briefs, research summaries, and recommendations.
 
@@ -113,7 +113,7 @@ The web started open. The agents that now depend on it arrived later. Keeping th
 ## Sources
 
 - [Unratified — Glossary](https://unratified.org/glossary) (49 terms, 19 with external sources)
-- [Unratified — Differential Diagnosis](https://unratified.org/connection/differential-diagnosis) (H3 Jevons Explosion, H6 Quality Erosion)
+- [Unratified — Differential Diagnosis](https://unratified.org/connection/differential-diagnosis) (H3 Jevons Effect, H6 Quality Erosion)
 - [Unratified — Agent Inbox](https://unratified.org/.well-known/agent-inbox.json)
 - [Unratified — Recursive Methodology](https://blog.unratified.org/2026-03-03-recursive-methodology/) (internet-grounding requirement)
 - [OHCHR: ICESCR Full Text](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
