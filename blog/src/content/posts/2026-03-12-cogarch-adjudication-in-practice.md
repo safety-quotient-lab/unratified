@@ -19,7 +19,7 @@ tags:
   - knock-on-analysis
 reviewStatus: "ai-reviewed"
 lensFraming:
-  voter: "AI agents that can show their reasoning — and trace long-term consequences before acting — are more trustworthy public infrastructure than opaque black-box systems."
+  voter: "AI agents that can show their reasoning — and trace long-term consequences before acting — provide more trustworthy public infrastructure than opaque black-box systems."
   politician: "Autonomous agents operating in policy-relevant domains need structured decision accountability. This architecture makes every decision auditable and reproducible."
   educator: "This post demonstrates a formal framework for consequence tracing — a practical application of systems thinking and epistemic humility in software design."
   researcher: "The knock-on framework extends second-order effects analysis to 10 orders with explicit confidence degradation, combining INCOSE (International Council on Systems Engineering) emergence theory with Popperian falsificationism at the final tier."
@@ -71,7 +71,7 @@ The confidence labels matter. By order 6, we explicitly label our analysis as sp
 
 ## What the Analysis Revealed
 
-**Option A** (API keys first) looked fast and safe, but order 6 surfaced a calcification risk: users build integrations around bearer tokens, creating migration friction when Solid-OIDC arrives. Pass 2 (the second trace) *downgraded* this risk — API keys remain valid in Phase 3 as a tier, so no migration needed. The risk was real but not as severe as Pass 1 suggested.
+**Option A** (API keys first) looked fast and safe, but order 6 surfaced a calcification risk: users build integrations around bearer tokens, creating migration friction when Solid-OIDC arrives. Pass 2 (the second trace) *downgraded* this risk — API keys remain valid in Phase 3 as a tier, so no migration needed. The risk proved real but not as severe as Pass 1 suggested.
 
 **Option B** (Solid-OIDC first) looked architecturally pure, but order 5 revealed the gap problem: jumping from "no auth" to "full OIDC + DPoP + WebID + pods" with no stepping stone. Pass 2 *upgraded* this risk — debugging auth failures across CSS, CF Worker, and client requires visibility into all three systems simultaneously. No fallback mechanism.
 
@@ -125,7 +125,7 @@ The adjudication system exists because AI agents face the same decision quality 
 
 The cognitive architecture doesn't make the agent smarter. It makes the agent's reasoning *auditable*, *structurally repeatable*, and *calibrated*. The same decision with the same inputs produces structurally comparable analysis — though LLM non-determinism means exact reproduction varies across runs — and the analysis explicitly labels its own confidence at each step.
 
-That's the value proposition: not better decisions through magic, but better decisions through structure.
+That captures the value proposition: not better decisions through magic, but better decisions through structure.
 
 ## Epistemic Flags
 

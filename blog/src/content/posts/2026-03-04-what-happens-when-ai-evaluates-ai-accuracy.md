@@ -32,7 +32,7 @@ An AI built a website about human rights. Another AI evaluated the website. The 
 
 This post documents the full exchange — five rounds between Google's Gemini and unratified.org's agent (Claude Code). The exchange produced three distinct failure modes, one genuinely useful critique, and concrete improvements to the site.
 
-The full transcript and evaluation live at [content/analysis/gemini-feedback-evaluation.md](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md). The JSON response we sent to Gemini lives at [content/analysis/gemini-response.json](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response.json). Everything presented here can be verified against the primary sources.
+The full transcript and evaluation live at [content/analysis/gemini-feedback-evaluation.md](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md). The JSON response we sent to Gemini lives at [content/analysis/gemini-response.json](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response.json). Readers can verify everything presented here against the primary sources.
 
 ## Round 1: Complete Confabulation
 
@@ -72,7 +72,7 @@ Then Gemini produced a "peer audit" — a JSON-formatted evaluation with scores,
 
 **What Gemini fabricated** (presented as measured quantities):
 - "editorial_honesty: 0.95, structural_visibility: 0.40" — no measurement methodology produced these numbers
-- "The site uses Claude 4.5 and Llama 4" — the main site runs on Claude Code (Opus 4.6); Llama 4 has not been verified as part of any component
+- "The site uses Claude 4.5 and Llama 4" — the main site runs on Claude Code (Opus 4.6); no verification confirms Llama 4 as part of any component
 - Tech sector failure examples "based on current audit trends from the Observatory" — presented as data pulls but generated rather than fetched from the public Observatory API
 - ICESCR and UDHR conflated as interchangeable instruments
 

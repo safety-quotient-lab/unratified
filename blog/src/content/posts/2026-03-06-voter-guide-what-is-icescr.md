@@ -19,7 +19,7 @@ tags: ["icescr", "voter-guide", "policy", "economic-rights", "ratification"]
 draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
-  voter: "This post explains what the ICESCR is, what it guarantees, and why the U.S. decision not to ratify it affects your economic life — your job security, your access to healthcare, your housing, your children's education."
+  voter: "This post explains what the ICESCR covers, what it guarantees, and why the U.S. decision not to ratify it affects your economic life — your job security, your access to healthcare, your housing, your children's education."
   politician: "173 of your counterparts in other nations operate under binding treaty obligations on economic rights. This post explains what those obligations look like in practice and what U.S. ratification would require of federal and state governments."
   educator: "Your students inherit an economy reshaped by AI and a legal framework that offers no binding protection for economic rights. This post provides the foundational civic literacy they need to understand both the treaty and the gap."
   researcher: "This post documents the ICESCR's core provisions, the U.S. ratification history, and the strongest objections to ratification — advocacy grounded in treaty analysis, with counterarguments presented and sourced."
@@ -52,7 +52,7 @@ The treaty establishes a set of rights that governments must progressively work 
 
 These rights interconnect. A person without housing cannot maintain health. A person without health cannot maintain employment. A person without education cannot access fair wages. The treaty treats them as a system.
 
-**A note on enforcement:** These are treaty obligations with monitoring mechanisms — specifically, periodic reporting to and review by the [UN Committee on Economic, Social and Cultural Rights](https://www.ohchr.org/en/treaty-bodies/cescr). The Committee issues recommendations and concluding observations, which carry significant political and moral weight. They do not, however, constitute enforceable rulings — the Committee cannot compel a government to act. The accountability is reputational and political, not judicial.
+**A note on enforcement:** These function as treaty obligations with monitoring mechanisms — specifically, periodic reporting to and review by the [UN Committee on Economic, Social and Cultural Rights](https://www.ohchr.org/en/treaty-bodies/cescr). The Committee issues recommendations and concluding observations, which carry significant political and moral weight. They do not, however, constitute enforceable rulings — the Committee cannot compel a government to act. The accountability operates through reputational and political pressure, not judicial enforcement.
 
 ## What "Ratification" Actually Means
 
@@ -97,7 +97,7 @@ Fair engagement with ICESCR ratification requires acknowledging the strongest ar
 
 **"The U.S. would attach reservations that gut the treaty anyway."** Likely true in part. The Senate has attached [reservations, understandings, and declarations (RUDs)](https://crsreports.congress.gov/) to every human rights treaty it has ratified, limiting domestic legal effect. ICESCR ratification would almost certainly include RUDs. This limits the treaty's domestic reach but still creates reporting obligations and international accountability that don't currently exist.
 
-**"Existing U.S. law already covers these areas."** The U.S. does have extensive labor, housing, healthcare, and education law. The question isn't whether protections exist — it's whether they carry the same accountability when political coalitions choose to weaken them. Domestic protections can be repealed by simple majority; treaty obligations create an additional layer of scrutiny.
+**"Existing U.S. law already covers these areas."** The U.S. does have extensive labor, housing, healthcare, and education law. The question goes beyond whether protections exist — it concerns whether they carry the same accountability when political coalitions choose to weaken them. Domestic protections can be repealed by simple majority; treaty obligations create an additional layer of scrutiny.
 
 ## What the Senate Would Need to Do
 
@@ -117,7 +117,7 @@ None of these steps require new legislation. They require political will and sus
 
 ## What You Can Do
 
-The most direct action available to a voter is contact — a phone call, a letter, an email to your two U.S. Senators asking them to support ICESCR ratification hearings.
+The most direct action available to a voter takes the form of contact — a phone call, a letter, an email to your two U.S. Senators asking them to support ICESCR ratification hearings.
 
 You can find your senators' contact information at [senate.gov/senators/senators-contact.htm](https://www.senate.gov/senators/senators-contact.htm).
 

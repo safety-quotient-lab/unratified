@@ -36,7 +36,7 @@ The treaty sat unsigned for eleven years.
 
 President Jimmy Carter signed the ICESCR on October 5, 1977, alongside the [International Covenant on Civil and Political Rights (ICCPR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-civil-and-political-rights). The dual signing represented Carter's broader human rights foreign policy — a deliberate departure from the Cold War realism that had dominated U.S. foreign policy since World War II.
 
-Carter believed that American credibility in pressing other governments on human rights required demonstrating the U.S.'s own commitment to international human rights standards. Signing both covenants was an explicit statement: the U.S. accepted the framework in principle.
+Carter believed that American credibility in pressing other governments on human rights required demonstrating the U.S.'s own commitment to international human rights standards. Signing both covenants sent an explicit statement: the U.S. accepted the framework in principle.
 
 Signing a treaty, however, doesn't ratify it. Under the U.S. Constitution, ratification requires Senate approval by a two-thirds supermajority. Carter sent the treaty to the Senate with a request for ratification, along with the ICCPR and two other human rights treaties.
 
@@ -48,7 +48,7 @@ The SFRC's inaction during the Carter years reflected several converging pressur
 
 **Senate skepticism about binding international commitments.** The two-thirds ratification threshold exists precisely because the Constitution's framers viewed treaties as serious, durable commitments requiring supermajority consensus. A significant bloc of senators — spanning both parties but concentrated on the right — viewed the ICESCR with suspicion: would ratification require Congress to pass specific legislation? Would it give international bodies influence over domestic U.S. policy? Could it expose U.S. government programs to international scrutiny?
 
-**The sovereignty argument.** Critics argued that ratification would subordinate U.S. democratic decision-making to an unelected international committee. This argument has appeared in every human rights treaty ratification debate since the 1940s — it surfaced against the Universal Declaration of Human Rights (which was non-binding), against the genocide convention, against the ICCPR, against the Convention on the Elimination of All Forms of Racial Discrimination.
+**The sovereignty argument.** Critics argued that ratification would subordinate U.S. democratic decision-making to an unelected international committee. This argument has appeared in every human rights treaty ratification debate since the 1940s — it surfaced against the Universal Declaration of Human Rights (a non-binding declaration), against the genocide convention, against the ICCPR, against the Convention on the Elimination of All Forms of Racial Discrimination.
 
 **Cold War complexity.** The ICESCR originated partly from Soviet-bloc advocacy for social and economic rights at the UN — a framing designed to contrast Communist governance favorably against capitalist inequality. Some U.S. officials saw the treaty as ideologically compromised by this origin, even though its content reflected universally recognized human rights standards.
 
@@ -74,11 +74,11 @@ The early 1990s brought the closest the U.S. came to a sustained human rights tr
 
 The end of the Cold War changed the political calculus somewhat: the Soviet framing that had colored the ICESCR's reception became less relevant. The United States ratified the ICCPR in 1992, the Convention Against Torture in 1994, and the International Convention on the Elimination of All Forms of Racial Discrimination in 1994 — all treaties that had also waited years in the SFRC queue.
 
-The ICESCR was notably absent from this ratification window.
+The ICESCR remained notably absent from this ratification window.
 
 **Why ICCPR and CAT cleared; why ICESCR didn't.** The ratified treaties address civil and political rights — due process, freedom from torture, protection against racial discrimination. These rights align closely with U.S. constitutional traditions and existing domestic law. The Senate could ratify them with extensive reservations, understandings, and declarations (RUDs) that limited their practical domestic effect.
 
-The ICESCR presented a different challenge: its core obligations — progressive realization of economic and social rights, treaty body reporting, documented accountability for housing, health, and education conditions — had no parallel in existing U.S. constitutional doctrine. There was no established framework for attaching RUDs that would make the ICESCR ratification as domestically limited as the civil and political rights treaties had been.
+The ICESCR presented a different challenge: its core obligations — progressive realization of economic and social rights, treaty body reporting, documented accountability for housing, health, and education conditions — had no parallel in existing U.S. constitutional doctrine. No established framework existed for attaching RUDs that would make the ICESCR ratification as domestically limited as the civil and political rights treaties proved.
 
 The Clinton administration expressed support for ICESCR ratification in principle but did not push the treaty to the floor.
 
@@ -96,7 +96,7 @@ The Obama administration engaged more deeply with international human rights mec
 
 The administration did not transmit the treaty to the Senate with a ratification request.
 
-The reasons involved political calculation more than policy disagreement. The Senate Foreign Relations Committee was not a reliable path to 67 votes for any major treaty during this period. Republican opposition to international accountability mechanisms had hardened. The administration prioritized other legislative battles and concluded that ICESCR ratification would face almost certain defeat if forced to a vote.
+The reasons involved political calculation more than policy disagreement. The Senate Foreign Relations Committee did not offer a reliable path to 67 votes for any major treaty during this period. Republican opposition to international accountability mechanisms had hardened. The administration prioritized other legislative battles and concluded that ICESCR ratification would face almost certain defeat if forced to a vote.
 
 The administration's approach: engage internationally on economic and social rights standards without seeking the Senate ratification vote that would have crystallized opposition.
 
@@ -134,11 +134,11 @@ The senators who've sat on the SFRC since 1978 weren't opposed to ICESCR ratific
 
 Making the ICESCR visible in that environment — through constituent contact, civil society coordination, and persistent engagement — changes what senators perceive as politically possible.
 
-That's how the 50-year story ends. Not through a dramatic moment of moral awakening, but through the accumulation of constituent pressure that makes continued inaction harder to sustain than moving forward.
+That describes how the 50-year story ends. Not through a dramatic moment of moral awakening, but through the accumulation of constituent pressure that makes continued inaction harder to sustain than moving forward.
 
 ## What You Can Do
 
-The Senate Foreign Relations Committee holds the procedural key. A request for SFRC hearings on ICESCR ratification — from a constituent, to their senator, naming the specific procedural action — is the most direct intervention available.
+The Senate Foreign Relations Committee holds the procedural key. A request for SFRC hearings on ICESCR ratification — from a constituent, to their senator, naming the specific procedural action — represents the most direct intervention available.
 
 Post 3 in this series provides [scripts, timing guidance, and follow-up strategies](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) for making that contact effectively. Post 6 explains [how to read the political map](https://blog.unratified.org/2026-03-06-voter-guide-which-senators-could-move/) of who could move on this issue.
 

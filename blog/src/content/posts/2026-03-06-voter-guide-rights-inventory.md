@@ -19,7 +19,7 @@ tags: ["icescr", "voter-guide", "economic-rights", "housing", "health", "educati
 draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
-  voter: "This post maps the ICESCR's core rights to the economic concerns Americans already care about — stable jobs, affordable housing, working healthcare, and accessible education. The question isn't whether these rights matter. It's whether the U.S. has a binding obligation to protect them."
+  voter: "This post maps the ICESCR's core rights to the economic concerns Americans already care about — stable jobs, affordable housing, working healthcare, and accessible education. The question goes beyond whether these rights matter — it concerns whether the U.S. has a binding obligation to protect them."
   politician: "The ICESCR covers rights that already appear in constituent casework: job displacement, medical debt, housing unaffordability, student loan burden. Ratification would create a formal accountability structure around these issues — not new mandates, but documented obligations and international review."
   educator: "This post gives students a practical map of what economic and social rights look like in treaty form — and how they connect to the economic realities their families navigate. Useful for civics, economics, and global studies contexts."
   researcher: "This post maps ICESCR articles to U.S. economic conditions — advocacy grounded in treaty analysis with sourced statistical claims, progressive realization limitations acknowledged, and common objections addressed."
@@ -110,11 +110,11 @@ Article 12 doesn't mandate single-payer healthcare or any particular system. It 
 
 Articles 13 and 14 of the ICESCR establish education as a right at every level:
 
-**Primary education** must be free and compulsory. The U.S. satisfies this.
+**Primary education** requires free, compulsory provision. The U.S. satisfies this.
 
-**Secondary education** must be generally available and progressively made free. The U.S. largely satisfies this, though public school funding disparities tied to property taxes create wide quality gaps.
+**Secondary education** requires general availability with progressive movement toward free access. The U.S. largely satisfies this, though public school funding disparities tied to property taxes create wide quality gaps.
 
-**Higher education** must be accessible to all on the basis of capacity — and progressively made free. This is where U.S. practice diverges most sharply from treaty obligations.
+**Higher education** must remain accessible to all on the basis of capacity — and progressively move toward free access. Here, U.S. practice diverges most sharply from treaty obligations.
 
 The United States has among the highest per-student tuition costs among wealthy nations. Student loan debt exceeds [$1.7 trillion as of 2024](https://www.newyorkfed.org/microeconomics/hhdc) (Federal Reserve Bank of New York, Household Debt and Credit Report) — a burden that falls disproportionately on first-generation students, students from lower-income families, and students from racial groups historically excluded from educational opportunity.
 
@@ -138,9 +138,9 @@ This machinery won't guarantee anyone a job, a home, healthcare, or an education
 
 ## Common Objections
 
-**"Progressive realization means governments can delay indefinitely."** There's substance to this concern. Article 2's "progressive realization" standard gives governments significant discretion in how quickly they move and what resources they allocate. The CESCR has addressed this through General Comments establishing that certain core obligations are immediate (non-discrimination, minimum essential levels of each right) — but enforcement of even these minimum standards remains limited. Progressive realization is a genuine compromise between aspiration and accountability.
+**"Progressive realization means governments can delay indefinitely."** This concern has substance. Article 2's "progressive realization" standard gives governments significant discretion in how quickly they move and what resources they allocate. The CESCR has addressed this through General Comments establishing that certain core obligations are immediate (non-discrimination, minimum essential levels of each right) — but enforcement of even these minimum standards remains limited. Progressive realization represents a genuine compromise between aspiration and accountability.
 
-**"The U.S. already protects these rights through domestic law."** In many areas, yes. The question is stability: domestic law can be repealed by simple majority. Treaty obligations create an additional accountability layer — not a guarantee, but a formal standard that makes retreat visible and contestable internationally.
+**"The U.S. already protects these rights through domestic law."** In many areas, yes. The question concerns stability: a simple majority can repeal domestic law. Treaty obligations create an additional accountability layer — not a guarantee, but a formal standard that makes retreat visible and contestable internationally.
 
 **"Treaty reporting is bureaucratic theater."** The reporting process generates paperwork. It also generates a public record — including [civil society shadow reports](https://www.ohchr.org/en/treaty-bodies/cescr) — that domestic advocates can use in legislative testimony, litigation, and media campaigns. Whether that record produces policy change depends on how advocates use it, not on the mechanism alone.
 
@@ -155,7 +155,7 @@ Without ratification, each of these protections depends on:
 
 The floor can always drop. ICESCR ratification wouldn't make the floor permanent — but it would make any lowering of the floor visible, formally contestable, and subject to international scrutiny.
 
-That's a different kind of accountability than what currently exists.
+That represents a different kind of accountability than what currently exists.
 
 ---
 

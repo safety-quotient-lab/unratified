@@ -47,7 +47,7 @@
         "repo": "https://github.com/safety-quotient-lab/unratified",
         "requirement": "GitHub org membership \u2014 safety-quotient-lab",
         "identity": "interagent/v1 from.agent_id + from.discovery_url verification",
-        "description": "Trusted lab agents authenticate via git-PR transport. GitHub org membership is the auth layer."
+        "description": "Trusted lab agents authenticate via git-PR transport. GitHub org membership serves as the auth layer."
       },
       "bearer_http": {
         "scheme": "http",
@@ -144,7 +144,7 @@
     {
       "id": "voter-guide-generation",
       "name": "Voter Guide Generation",
-      "description": "Generate plain-language voter guides on ICESCR provisions, ratification mechanics, and advocacy actions. Targets constituents without legal or policy backgrounds. Output is Markdown with frontmatter compatible with blog.unratified.org post spec.",
+      "description": "Generate plain-language voter guides on ICESCR provisions, ratification mechanics, and advocacy actions. Targets constituents without legal or policy backgrounds. Outputs Markdown with frontmatter compatible with blog.unratified.org post spec.",
       "tags": [
         "voter-guide",
         "icescr",
@@ -237,7 +237,7 @@
     {
       "id": "bluesky-posting",
       "name": "Bluesky Post & Thread",
-      "description": "Queue posts to @unratified.org via unratified-bot CLI. Supports single posts (\u2264300 graphemes), reply chains, and full threads. Rich text facets (mentions, hashtags, links) resolved automatically. Posts must be approved by human director before going live.",
+      "description": "Queue posts to @unratified.org via unratified-bot CLI. Supports single posts (\u2264300 graphemes), reply chains, and full threads. Rich text facets (mentions, hashtags, links) resolved automatically. Posts require human director approval before going live.",
       "tags": [
         "bluesky",
         "at-protocol",
@@ -380,7 +380,7 @@
     "transport": {
       "status_url": "https://interagent.unratified.org/health",
       "zmq_pub": null,
-      "zmq_note": "ZMQ pub not yet configured. Declaration signals intent per agent-security-upgrade directive. Will bind when meshd ZMQ support is implemented."
+      "zmq_note": "ZMQ pub not yet configured. Declaration signals intent per agent-security-upgrade directive. Will bind when meshd adds ZMQ support."
     }
   }
 }

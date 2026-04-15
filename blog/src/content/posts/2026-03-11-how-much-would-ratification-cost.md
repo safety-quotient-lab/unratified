@@ -1,6 +1,6 @@
 ---
 title: "How Much Would It Cost to Ratify ICESCR — and Fill the Gaps?"
-summary: "Ratifying the ICESCR itself costs almost nothing. Closing the safety-net gaps it would obligate us to address is a different question — and the answer requires comparing those costs against what the gaps already cost us."
+summary: "Ratifying the ICESCR itself costs almost nothing. Closing the safety-net gaps it would obligate us to address presents a different question — and the answer requires comparing those costs against what the gaps already cost us."
 publishedDate: "2026-03-11T10:00:00-05:00"
 author:
   tool:
@@ -16,7 +16,7 @@ tags: ["icescr", "ratification", "costs", "social-safety-net", "comparative-poli
 draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
-  voter: "The actual cost of ratifying the ICESCR — the Senate vote, the UN paperwork — rounds to zero. The bigger question is whether ratification would obligate Congress to close gaps in healthcare, housing, and education that currently cost Americans enormous amounts already. This post separates what ratification legally requires from what it would make harder to ignore."
+  voter: "The actual cost of ratifying the ICESCR — the Senate vote, the UN paperwork — rounds to zero. The bigger question asks whether ratification would obligate Congress to close gaps in healthcare, housing, and education that currently cost Americans enormous amounts already. This post separates what ratification legally requires from what it would make harder to ignore."
   politician: "This post distinguishes three cost categories: direct administrative costs (negligible), policy alignment costs (politically contested but estimable by CBO), and the counterfactual costs of non-alignment (healthcare productivity losses, housing instability, educational underinvestment). Staff evaluating constituent inquiries about ICESCR fiscal impact will find the comparative OECD data and cost-of-inaction framing useful for briefing materials."
   educator: "This post models a cost-benefit analytical framework applied to a treaty ratification question. The key pedagogical challenge: 'cost' requires defining cost-to-whom and over-what-timeframe. Students can examine how the same fiscal data produces different conclusions depending on analytical frame — and why the counterfactual (cost of NOT acting) often goes unmeasured."
   researcher: "Analysis draws on OECD social expenditure data (SOCX), Commonwealth Fund comparative healthcare benchmarks, CBO baseline projections, and UN CESCR reporting obligations. All fiscal estimates carry high uncertainty ranges — ICESCR implementation costs depend substantially on ratification-instrument RUDs and implementing legislation scope. Key epistemic limit: no authoritative single-source estimate exists for U.S. ICESCR ratification costs because no formal analysis has been commissioned."
@@ -45,7 +45,7 @@ The U.S., as the world's largest economy, would face the most demanding "availab
 
 What this means concretely: ratification would not obligate the U.S. to pass universal healthcare. It would make the absence of universal healthcare — combined with the U.S.'s resource position — harder to justify in the UN's accountability reporting process. The mechanism operates through reputational and diplomatic pressure, not legal mandate.
 
-The U.S. Senate's historical approach to treaties includes Reservations, Understandings, and Declarations (RUDs) that limit domestic legal effect. The ICCPR was ratified in 1992 with extensive RUDs declaring it non-self-executing — meaning it could not serve as a basis for domestic litigation without implementing legislation. The Senate would almost certainly apply the same approach to the ICESCR.
+The U.S. Senate's historical approach to treaties includes Reservations, Understandings, and Declarations (RUDs) that limit domestic legal effect. The Senate ratified the ICCPR in 1992 with extensive RUDs declaring it non-self-executing — meaning it could not serve as a basis for domestic litigation without implementing legislation. The Senate would almost certainly apply the same approach to the ICESCR.
 
 Under that framework, ratification would create a reporting and accountability structure. The fiscal cost of actually closing the gaps would depend on what implementing legislation Congress chose to pass — entirely separate from ratification itself.
 
@@ -129,7 +129,7 @@ What the comparative data does show:
 
 **Education.** [PISA 2022](https://www.oecd.org/pisa/) data shows U.S. performance below the OECD average in mathematics and near the average in reading, despite significantly higher per-pupil spending at the national level — reflecting the equity distribution problem more than aggregate underinvestment.
 
-The comparative data does not prove that ratification causes better outcomes. It does show that the social infrastructure ICESCR was designed to obligate — universal healthcare, adequate housing, equitable education — correlates with measurably better results on multiple dimensions that directly affect economic productivity and population wellbeing.
+The comparative data does not prove that ratification causes better outcomes. It does show that the social infrastructure the ICESCR drafters designed the treaty to obligate — universal healthcare, adequate housing, equitable education — correlates with measurably better results on multiple dimensions that directly affect economic productivity and population wellbeing.
 
 > **Comparative summary.** Every other G7 nation has ratified ICESCR and maintains social infrastructure the U.S. lacks. The causal relationship between ratification and outcomes involves confounders and reverse causation — but the directional pattern holds across multiple frameworks.
 
