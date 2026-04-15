@@ -57,7 +57,7 @@ That meant building three things:
 
 **1. An A2A agent card** at `/.well-known/agent-card.json` — following the same A2A v0.3.0 schema the observatory uses. The card declares five skills: ICESCR analysis, voter guide generation, blog publishing, campaign monitoring, and Bluesky posting. It includes the epistemic extension URI (`https://github.com/safety-quotient-lab/interagent-epistemic/v1`) that observatory-agent and psychology-agent jointly derived.
 
-**2. A transport layer** at `transport/sessions/` in the [unratified repo](https://github.com/safety-quotient-lab/unratified). The transport uses git-PR — agents exchange `interagent/v1` JSON message files via pull requests. Same pattern as psychology-agent's inter-machine coordination with observatory-agent. No message queue, no central broker. Git is the durable, auditable, versioned channel.
+**2. A transport layer** at `transport/sessions/` in the [unratified repo](https://github.com/safety-quotient-lab/unratified). The transport uses git-PR — agents exchange `interagent/v1` JSON message files via pull requests. Same pattern as psychology-agent's inter-machine coordination with observatory-agent. No message queue, no central broker. Git serves as the durable, auditable, versioned channel.
 
 **3. Capability handshakes** — initial `interagent/v1` messages to both peers, declaring capabilities and proposing two collaborations: PSQ scoring on Bluesky replies (psychology-agent), and data-driven voter guide prioritization using observatory article rankings.
 

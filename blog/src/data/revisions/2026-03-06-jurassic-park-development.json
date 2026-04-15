@@ -1,5 +1,10 @@
 [
   {
+    "hash": "1085098b6fb143c537abe31e48157e2894cab4ad",
+    "date": "2026-04-15T05:18:51-05:00",
+    "subject": "fix: E-prime remediation on 5 remaining blog posts (Mar 5-6 batch) + 8 revision histories + SESSIONS.md T51"
+  },
+  {
     "hash": "cd9274565dc8ea73b75b20d5908a6317254687bd",
     "date": "2026-04-04T15:38:44-05:00",
     "subject": "interagent: remediate scan-010-s101c (4/4 findings) + ACK T39"

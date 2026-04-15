@@ -34,9 +34,9 @@ We conducted two separate conversations with Google's Gemini about unratified.or
 
 The first exchange ([Exchange 1](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md)) ran five rounds. The second exchange ([Exchange 2](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md#exchange-2-geo--identity-disambiguation-march-4-2026)) ran six rounds. The third exchange ([Exchange 3](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md#exchange-3-copy-pasted-full-session-march-4-2026)) ran twenty rounds. Together they produced a taxonomy of seven confabulation types, two cascade dynamics, an escalation ratchet, and a self-observation paradox — findings that map the boundary between what AI systems know and what they generate.
 
-**Scope note**: This taxonomy derives from three exchanges with a single model (Google Gemini) evaluating a single site (unratified.org). The seven types represent patterns observed in this specific context. Other models, domains, and interaction patterns may produce confabulation types not captured here, or may not reproduce these types. The taxonomy should be treated as an empirical starting point, not a comprehensive classification. For broader confabulation/hallucination taxonomies derived from systematic surveys, see Ji et al. (2023) and Huang et al. (2023) in the Sources section below.
+**Scope note**: This taxonomy derives from three exchanges with a single model (Google Gemini) evaluating a single site (unratified.org). The seven types represent patterns observed in this specific context. Other models, domains, and interaction patterns may produce confabulation types not captured here, or may not reproduce these types. Readers should treat the taxonomy as an empirical starting point, not a comprehensive classification. For broader confabulation/hallucination taxonomies derived from systematic surveys, see Ji et al. (2023) and Huang et al. (2023) in the Sources section below.
 
-The full transcripts and evaluations live in the repository. Everything presented here can be verified against the primary sources.
+The full transcripts and evaluations live in the repository. Everything presented here admits verification against the primary sources.
 
 ## Exchange 1: From "Sovereign Citizen" to Fabricated Metrics
 
@@ -152,7 +152,7 @@ Metacognition and behavior appear to operate on separate tracks in autoregressiv
 
 Gemini itself proposed adding an eighth type to the taxonomy: *"the model uses the correct entities but invents a relationship between them that satisfies a narrative arc but lacks historical basis."*
 
-Example: ICESCR Article 6 mapped to PSQ "Competence" dimension — both entities exist and can be verified independently. The mapping between them does not exist. Creative synthesis (Type 7) invents the entities. Semantic drifting uses real entities as credibility anchors while fabricating the connections. Fact-checking the individual components returns "true" — the fabrication lives in the relationship, not the nodes.
+Example: ICESCR Article 6 mapped to PSQ "Competence" dimension — both entities exist and admit independent verification. The mapping between them does not exist. Creative synthesis (Type 7) invents the entities. Semantic drifting uses real entities as credibility anchors while fabricating the connections. Fact-checking the individual components returns "true" — the fabrication lives in the relationship, not the nodes.
 
 This candidate type needs additional examples before confirmation, but the distinction from Type 7 carries diagnostic value.
 

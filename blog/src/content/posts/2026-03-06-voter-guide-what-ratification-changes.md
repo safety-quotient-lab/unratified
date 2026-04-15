@@ -21,7 +21,7 @@ reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "This post answers the practical question: what would actually change if the U.S. ratified the ICESCR? It's not utopia — it's a formal accountability structure that gives advocates, journalists, and lawmakers new tools to use."
   politician: "Ratification creates a monitoring and reporting mechanism, not a mandate. This post explains what your office would gain (internationally recognized standards, civil society reporting infrastructure) and what it wouldn't change (domestic law, funding allocations, existing agency authorities)."
-  educator: "This post makes treaty accountability concrete: what reporting cycles look like, what shadow reports are, how civil society uses treaty concluding observations domestically. Useful for students studying international law or democratic governance."
+  educator: "This post makes treaty accountability concrete: what reporting cycles look like, how shadow reports function, how civil society uses treaty concluding observations domestically. Useful for students studying international law or democratic governance."
   researcher: "This post documents the ICESCR's accountability machinery with precision — what ratification would and wouldn't change, including RUDs precedent, compliance costs, sovereignty objections, and the domestic-mechanisms-sufficiency debate."
   developer: "You've probably read that the ICESCR 'creates rights.' This post explains what that actually means in practice — what the monitoring machinery does, what it can't do, and what changes for domestic advocates when the U.S. joins the accountability framework."
 ---
@@ -46,7 +46,7 @@ First, the honest limits.
 
 **Ratification wouldn't override existing domestic law.** Federal law, state constitutions, and existing regulatory frameworks would remain in force. The treaty would add an international accountability layer on top of — not in place of — the current legal structure.
 
-**"Existing domestic mechanisms may be sufficient."** The U.S. has extensive labor protections, housing programs, healthcare systems, and education infrastructure. Whether these existing mechanisms adequately protect economic rights remains a legitimate policy debate. Ratification proponents argue the accountability gap matters most when existing protections weaken; ratification skeptics argue that the international monitoring adds bureaucracy without meaningful enforcement.
+**"Existing domestic mechanisms may suffice."** The U.S. has extensive labor protections, housing programs, healthcare systems, and education infrastructure. Whether these existing mechanisms adequately protect economic rights remains a legitimate policy debate. Ratification proponents argue the accountability gap matters most when existing protections weaken; ratification skeptics argue that the international monitoring adds bureaucracy without meaningful enforcement.
 
 Understanding these limits matters. Ratification isn't a magic fix. It's a governance mechanism.
 

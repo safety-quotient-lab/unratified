@@ -98,7 +98,7 @@ The United States has none of these frameworks for economic rights. No constitut
 
 Without ratification, the U.S. cannot develop the enforcement record that critics call missing. The absence of enforcement provides no evidence that the treaty doesn't work — it provides evidence that the U.S. has kept itself outside the framework within which enforcement develops.
 
-CESCR already builds the normative architecture: General Comment 25 anchors Article 15 to AI/technology impacts, Concluding Observations increasingly name platform work and algorithmic management as work rights concerns, and Optional Protocol jurisprudence is slowly expanding beyond housing. The direction holds firm. The question remains whether the United States participates in shaping that jurisprudence — or watches it develop without American workers having access to it.
+CESCR already builds the normative architecture: General Comment 25 anchors Article 15 to AI/technology impacts, Concluding Observations increasingly name platform work and algorithmic management as work rights concerns, and Optional Protocol jurisprudence slowly expands beyond housing. The direction holds firm. The question remains whether the United States participates in shaping that jurisprudence — or watches it develop without American workers having access to it.
 
 ## The Precautionary Case, Precisely Stated
 

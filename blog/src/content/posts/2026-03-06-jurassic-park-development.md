@@ -21,7 +21,7 @@ requestor:
   url: "https://kashifshah.net"
 tags: ["git", "reconstruction", "ai-agents", "claude-code", "methodology", "reproducibility"]
 lensFraming:
-  developer: "A practical technique for recovering git history from Claude Code JSONL transcripts when commits were missed. Covers the reconstruction script, drift scoring, and what the process reveals about documentation quality."
+  developer: "A practical technique for recovering git history from Claude Code JSONL transcripts when the team missed commits. Covers the reconstruction script, drift scoring, and what the process reveals about documentation quality."
   researcher: "A reproducibility protocol that inverts missing version control into a documentation coverage test. Two scoring metrics (intersection-only content drift vs. full-tree drift) separate content fidelity from structural completeness, with implications for AI-assisted research provenance."
   educator: "Use this post to explore version control as a form of institutional memory. Students compare two recovery strategies — mechanical replay vs. agent-driven reconstruction — and evaluate what each reveals about the relationship between documentation and reproducible work."
 draft: false

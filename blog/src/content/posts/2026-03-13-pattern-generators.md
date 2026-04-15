@@ -34,7 +34,7 @@ lensFraming:
   developer: "Concrete deliverables: trigger tiering (93 checks to 34 critical / 43 advisory / 16 spot-check, 31-72% overhead reduction), behavioral modes (generate/evaluate competition with fatigue-based switching), five-stage crystallization pipeline (concept to infrastructure), and a memory ownership contract with ACT-R-inspired activation scoring."
 ---
 
-You've walked thousands of miles without thinking about it. Your legs alternate, your feet clear the ground, your pace adjusts to stairs and curbs — all without a single conscious decision. The neural circuits responsible are called **central pattern generators** (CPGs), and they've produced rhythmic movement in vertebrates for over 400 million years.
+You've walked thousands of miles without thinking about it. Your legs alternate, your feet clear the ground, your pace adjusts to stairs and curbs — all without a single conscious decision. The neural circuits responsible carry the name **central pattern generators** (CPGs), and they've produced rhythmic movement in vertebrates for over 400 million years.
 
 What if AI systems could maintain themselves the same way?
 
@@ -74,7 +74,7 @@ We identified 17 CPG properties from the neuroscience literature and assessed ea
 
 **The forgetting principle (17):**
 
-- **Adaptive forgetting** (Huttenlocher, 1979; Ebbinghaus, 1885): Patterns that no longer serve the system should decay, not accumulate forever. This stands as the most counterintuitive principle for engineers: deliberately losing information improves system performance. The implementation draws on Huttenlocher's work on synaptic pruning during development and Ebbinghaus's forgetting curve. A de-crystallization pipeline handles decay (patterns unused for 10+ sessions drop one maturity stage), interference pruning (conflicting patterns trigger review), and savings-aware archival (pruned patterns archive with metadata so re-learning is faster than initial learning — Ebbinghaus's "savings" effect).
+- **Adaptive forgetting** (Huttenlocher, 1979; Ebbinghaus, 1885): Patterns that no longer serve the system should decay, not accumulate forever. This stands as the most counterintuitive principle for engineers: deliberately losing information improves system performance. The implementation draws on Huttenlocher's work on synaptic pruning during development and Ebbinghaus's forgetting curve. A de-crystallization pipeline handles decay (patterns unused for 10+ sessions drop one maturity stage), interference pruning (conflicting patterns trigger review), and savings-aware archival (pruned patterns archive with metadata so re-learning proceeds faster than initial learning — Ebbinghaus's "savings" effect).
 
 > **Transfer risk:** Biological CPGs operate in continuous physical systems with real-time sensory feedback loops. Software agents operate in discrete symbolic systems with asynchronous message passing. Properties like entrainment and limit-cycle dynamics may not transfer meaningfully. We adopted 15 of 17 principles while explicitly noting where the analogy stretches thin.
 
@@ -82,7 +82,7 @@ We identified 17 CPG properties from the neuroscience literature and assessed ea
 
 How does a cognitive pattern mature from an idea in a notebook to infrastructure that runs without the agent's involvement? We built a five-stage pipeline inspired by Fitts and Posner's (1967) skill acquisition stages, Anderson's ACT-R theory (1982), and Dreyfus and Dreyfus's (1980) model of expertise development.
 
-**Stage 0 — Concept.** An idea exists in a design document. Fully fluid. The agent must be explicitly prompted to consider it.
+**Stage 0 — Concept.** An idea exists in a design document. Fully fluid. The agent needs explicit prompting to consider it.
 
 **Stage 1 — In-context reasoning.** The agent reasons through the pattern explicitly each time it applies. High cognitive cost, high adaptability. Picture the novice driver checking mirrors, adjusting the seat, thinking about every gear shift.
 
