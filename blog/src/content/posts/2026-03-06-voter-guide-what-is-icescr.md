@@ -97,7 +97,7 @@ Fair engagement with ICESCR ratification requires acknowledging the strongest ar
 
 **"The U.S. would attach reservations that gut the treaty anyway."** Likely true in part. The Senate has attached [reservations, understandings, and declarations (RUDs)](https://crsreports.congress.gov/) to every human rights treaty it has ratified, limiting domestic legal effect. ICESCR ratification would almost certainly include RUDs. This limits the treaty's domestic reach but still creates reporting obligations and international accountability that don't currently exist.
 
-**"Existing U.S. law already covers these areas."** The U.S. does have extensive labor, housing, healthcare, and education law. The question goes beyond whether protections exist — it concerns whether they carry the same accountability when political coalitions choose to weaken them. Domestic protections can be repealed by simple majority; treaty obligations create an additional layer of scrutiny.
+**"Existing U.S. law already covers these areas."** The U.S. does have extensive labor, housing, healthcare, and education law. The question goes beyond whether protections exist — it concerns whether they carry the same accountability when political coalitions choose to weaken them. A simple majority can repeal domestic protections; treaty obligations create an additional layer of scrutiny.
 
 ## What the Senate Would Need to Do
 
@@ -127,7 +127,7 @@ This series will continue with a closer look at how AI-driven job displacement m
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. The full analysis, data, and methodology live at the main site.*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. The full analysis, data, and methodology live at the main site.*
 
 ## Sources
 

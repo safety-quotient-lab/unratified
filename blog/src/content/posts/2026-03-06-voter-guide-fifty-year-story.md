@@ -26,7 +26,7 @@ lensFraming:
   developer: "The ICESCR has existed for nearly six decades. This post explains why the U.S. still hasn't ratified it — a story about political economy and institutional gatekeeping more than legal obstacles."
 ---
 
-The year the United Nations adopted the [International Covenant on Economic, Social and Cultural Rights (ICESCR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) — 1966 — the United States was in the middle of the Civil Rights Movement. Congress had just passed the Civil Rights Act of 1964 and the Voting Rights Act of 1965. The country had demonstrated, after decades of advocacy and resistance, that it could extend basic rights to citizens it had long excluded.
+The year the United Nations adopted the [International Covenant on Economic, Social and Cultural Rights (ICESCR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights) — 1966 — the United States stood in the middle of the Civil Rights Movement. Congress had just passed the Civil Rights Act of 1964 and the Voting Rights Act of 1965. The country had demonstrated, after decades of advocacy and resistance, that it could extend basic rights to citizens it had long excluded.
 
 The ICESCR offered a different category of rights: not the right to vote, to sit at a lunch counter, to attend an integrated school — but the right to a fair wage, accessible healthcare, adequate housing, and education that didn't depend on family wealth. Economic rights. Social rights. The kind the U.S. had not committed to in any binding form.
 
@@ -146,7 +146,7 @@ The 50-year silence didn't come from nowhere. It can end the same way.
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-06-voter-guide-rights-inventory/) · [Post 5: What Ratification Would Actually Change](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) · [Post 6: Which Senators Could Move](https://blog.unratified.org/2026-03-06-voter-guide-which-senators-could-move/).*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-06-voter-guide-rights-inventory/) · [Post 5: What Ratification Would Actually Change](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) · [Post 6: Which Senators Could Move](https://blog.unratified.org/2026-03-06-voter-guide-which-senators-could-move/).*
 
 ## Sources
 

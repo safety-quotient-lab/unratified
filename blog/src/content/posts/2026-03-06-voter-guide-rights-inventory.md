@@ -138,7 +138,7 @@ This machinery won't guarantee anyone a job, a home, healthcare, or an education
 
 ## Common Objections
 
-**"Progressive realization means governments can delay indefinitely."** This concern has substance. Article 2's "progressive realization" standard gives governments significant discretion in how quickly they move and what resources they allocate. The CESCR has addressed this through General Comments establishing that certain core obligations are immediate (non-discrimination, minimum essential levels of each right) — but enforcement of even these minimum standards remains limited. Progressive realization represents a genuine compromise between aspiration and accountability.
+**"Progressive realization means governments can delay indefinitely."** This concern has substance. Article 2's "progressive realization" standard gives governments significant discretion in how quickly they move and what resources they allocate. The CESCR has addressed this through General Comments establishing that certain core obligations take immediate effect (non-discrimination, minimum essential levels of each right) — but enforcement of even these minimum standards remains limited. Progressive realization represents a genuine compromise between aspiration and accountability.
 
 **"The U.S. already protects these rights through domestic law."** In many areas, yes. The question concerns stability: a simple majority can repeal domestic law. Treaty obligations create an additional accountability layer — not a guarantee, but a formal standard that makes retreat visible and contestable internationally.
 

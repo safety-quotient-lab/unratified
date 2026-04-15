@@ -17,7 +17,7 @@ requestor:
   url: "https://kashifshah.net"
 tags: ["observatory", "udhr", "hacker-news", "data-analysis", "transparency"]
 lensFraming:
-  voter: "Most tech coverage discusses some human rights but ignores others. Freedom of speech gets heavy attention. The right to not be enslaved — barely any. This analysis shows which of your rights the tech conversation covers, and which it overlooks entirely."
+  voter: "Most tech coverage discusses some human rights but ignores others. Freedom of speech gets heavy attention. Freedom from enslavement — barely any. This analysis shows which of your rights the tech conversation covers, and which it overlooks entirely."
   politician: "Quantitative analysis of 806 Hacker News stories evaluated against 30 UDHR provisions. Article 19 (Expression) dominates at +0.38 avg score; Article 4 (Slavery) scores lowest at +0.06. Transparency disclosure averages 45%. These patterns shape the public information environment from which constituent opinion emerges."
   developer: "Observatory pipeline output: 1,014 stories × 31 UDHR provisions × 8 signal dimensions. Highlights — avg EQ: 0.567, avg SO: 0.483, avg TD: 0.468. Top propaganda technique: loaded_language. Full API: observatory.unratified.org/api/v1/signals."
   educator: "Use this analysis to teach data-driven media literacy. Your students examine which human rights receive coverage in tech discourse and which remain invisible — then evaluate what drives the difference. The UDHR provisions provide a structured framework for the exercise."

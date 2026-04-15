@@ -91,7 +91,7 @@ Freud's account reinforces this: the ruling minority's control of schools, press
 
 Buddhist *sammā diṭṭhi* (right view) and *sammā vācā* (right speech) require accurate perception and honest communication as preconditions for ethical action — not as virtues layered on top of an otherwise functional system, but as structural prerequisites without which the system cannot function at all. Hindu *satya* (truthfulness) and Islamic *amānah* (trustworthiness) encode the same structural requirement: governance built on distorted information corrodes itself.
 
-**AI governance mapping:** The SNAFU Principle operates with particular force in AI systems. A language model trained on human feedback learns to produce outputs that satisfy evaluators — not necessarily outputs that accurately represent uncertainty, limitation, or disagreement. The information channel between AI system and human overseer distorts toward confirmation. The **Equal Information Channel** addresses this directly: append-only message logs that cannot be retroactively edited, structural transparency requirements that expose the system's decision-making process, and power-asymmetry detection that flags when information flow has become systematically one-directional. This architecture remains proposed — not yet deployed infrastructure — but the structural requirement it addresses operates in every AI system that communicates with human overseers.
+**AI governance mapping:** The SNAFU Principle operates with particular force in AI systems. A language model trained on human feedback learns to produce outputs that satisfy evaluators — not necessarily outputs that accurately represent uncertainty, limitation, or disagreement. The information channel between AI system and human overseer distorts toward confirmation. The **Equal Information Channel** addresses this directly: append-only message logs that no one can retroactively edit, structural transparency requirements that expose the system's decision-making process, and power-asymmetry detection that flags when information flow has become systematically one-directional. This architecture remains proposed — not yet deployed infrastructure — but the structural requirement it addresses operates in every AI system that communicates with human overseers.
 
 ### EF-3: Two Coupled Generators Maintain Dynamic Balance
 
@@ -176,7 +176,7 @@ The specification draws on three sources:
 
 The Equal Information Channel operates on three architectural principles:
 
-- **Append-only logs:** Messages, once sent, cannot be retroactively edited or deleted. This prevents the post-hoc sanitization that hierarchical communication incentivizes.
+- **Append-only logs:** No one can retroactively edit or delete messages once sent. This prevents the post-hoc sanitization that hierarchical communication incentivizes.
 - **Structural transparency:** The decision-making process — not merely the decision — remains visible to all participants. This prevents the information asymmetry that the SNAFU Principle exploits.
 - **Power-asymmetry detection:** The system monitors its own communication patterns for signatures of hierarchical distortion — systematically one-directional information flow, declining message diversity over time, increasing confirmation patterns.
 
