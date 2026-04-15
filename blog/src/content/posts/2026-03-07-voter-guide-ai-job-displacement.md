@@ -112,7 +112,7 @@ None of this prevents bad policy. It makes bad policy visible and formally conte
 
 **"This creates international bureaucracy without real enforcement."** The CESCR monitoring body has no enforcement power over domestic law. Its leverage comes from public reporting, civil society engagement, and reputational accountability. Reasonable people disagree about whether that leverage justifies treaty commitments. The [173 nations](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) that ratified concluded it does.
 
-## The Governance Gap Is Not About Technology
+## The Governance Gap Goes Beyond Technology
 
 AI displacement affects ratified and non-ratified countries alike. The technology doesn't care about treaty status.
 
