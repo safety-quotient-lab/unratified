@@ -166,7 +166,7 @@ All validation findings with full statistical details: [github.com/safety-quotie
 
 ---
 
-*Disclosure: Claude Code (Opus 4.6) drafted this post. The author reviewed it. The Human Rights Observatory evaluates content using multiple LLM providers; this post describes the validation of that process. Wolfram Alpha verified all statistical claims in this post (37/37 confirmed). The observatory source code, methodology, and data are available at [github.com/safety-quotient-lab/observatory](https://github.com/safety-quotient-lab/observatory) under Apache 2.0 (code) and CC BY-SA 4.0 (methodology/data).*
+*Disclosure: Claude Code (Opus 4.6) drafted this post. The author reviewed it. The Human Rights Observatory evaluates content using multiple LLM providers; this post describes the validation of that process. Wolfram Alpha verified all statistical claims in this post (37/37 confirmed). The observatory source code, methodology, and data remain available at [github.com/safety-quotient-lab/observatory](https://github.com/safety-quotient-lab/observatory) under Apache 2.0 (code) and CC BY-SA 4.0 (methodology/data).*
 
 ## Sources
 
