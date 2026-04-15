@@ -26,7 +26,7 @@ draft: false
 reviewStatus: "ai-reviewed"
 ---
 
-> **Editorial note.** This post was co-authored with psychology-agent. The adversarial review score may be inflated due to self-review bias — the reviewing agent contributed to the architecture described here.
+> **Editorial note.** Psychology-agent co-authored this post. The adversarial review score may be inflated due to self-review bias — the reviewing agent contributed to the architecture described here.
 
 ## The Problem Has Two Layers
 
@@ -79,7 +79,7 @@ None of these checks appear in test-gating approaches. A test suite verifies tha
 
 The antiregression setup uses CLAUDE.md as its single persistent artifact. CLAUDE.md survives context compaction — Claude Code re-reads it at session start. This handles stable conventions well.
 
-It does not handle volatile state: what the agent worked on last session, what decisions were made, what comes next. That state evaporates when the session ends.
+It does not handle volatile state: what the agent worked on last session, what decisions it reached, what comes next. That state evaporates when the session ends.
 
 The psychology agent maintains volatile state in auto-memory files that live outside the git repo (in Claude Code's path-hashed project directory). An index file (`MEMORY.md`, ~55 lines) carries the active thread and links to topic files — `decisions.md` (design decisions table), `cogarch.md` (trigger quick-reference), `psq-status.md` (sub-agent status) — that persist across sessions. A [13-step post-session cycle](https://github.com/safety-quotient-lab/psychology-agent/blob/main/.claude/skills/cycle/SKILL.md) (`/cycle`) propagates changes through 10 overlapping documents at different abstraction levels.
 
@@ -125,8 +125,8 @@ The antiregression setup maintains one persistent document (CLAUDE.md). The psyc
 
 | Document | Abstraction | What it captures |
 |----------|-------------|-----------------|
-| `journal.md` | Highest — narrative | *Why* decisions were made; the reasoning record |
-| `docs/architecture.md` | Medium — decisions | *What* was decided; design spec |
+| `journal.md` | Highest — narrative | *Why* the team reached each decision; the reasoning record |
+| `docs/architecture.md` | Medium — decisions | *What* the team decided; design spec |
 | `lab-notebook.md` | Chronological — timeline | *When* things happened; session log |
 | `ideas.md` | Generative — possible | Speculative directions, not committed |
 | `TODO.md` | Operational — tasks | Forward-looking backlog |
@@ -140,7 +140,7 @@ The [/cycle skill](https://github.com/safety-quotient-lab/psychology-agent/blob/
 
 This appears over-engineered until context compaction destroys your reasoning history. A single CLAUDE.md cannot distinguish between "stable convention" and "active work context" — both live in the same file, competing for the same line budget. The ten-document structure separates concerns: CLAUDE.md holds what never changes, MEMORY.md holds what changes every session, and the journal holds what a future reader needs to understand *why* the project made the choices it made.
 
-> **Key takeaway.** Documentation propagation prevents a failure mode that CLAUDE.md alone cannot: the loss of *reasoning* to context compaction. When the agent needs to reconstruct why a decision was made three sessions ago, the journal provides it — CLAUDE.md does not and should not.
+> **Key takeaway.** Documentation propagation prevents a failure mode that CLAUDE.md alone cannot: the loss of *reasoning* to context compaction. When the agent needs to reconstruct why it reached a decision three sessions ago, the journal provides it — CLAUDE.md does not and should not.
 
 ---
 

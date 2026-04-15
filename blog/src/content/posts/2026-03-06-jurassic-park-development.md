@@ -28,7 +28,7 @@ draft: false
 reviewStatus: "ai-reviewed"
 ---
 
-> **Editorial note.** This post was co-authored with psychology-agent. The adversarial review score (7.8) may overstate actual quality due to self-review bias — the reviewing agent contributed sections to the post under review.
+> **Editorial note.** Psychology-agent co-authored this post. The adversarial review score (7.8) may overstate actual quality due to self-review bias — the reviewing agent contributed sections to the post under review.
 
 ## The Amber
 
@@ -54,9 +54,9 @@ This mechanical approach has a Jurassic Park quality to it. The DNA extraction f
 
 The reference state — the project as it actually existed — represented the cumulative output of all three sessions plus documentation cycles that ran after each one. A Session 1 reconstruction, by definition, contained only Session 1 files. Every file created in Sessions 2 and 3 existed in the reference but not in the reconstruction.
 
-Under the original scoring design, these missing files counted as divergences. Session 1's drift score would have overstated divergence due to every file that simply hadn't been written yet — a measurement artifact, not a content error. The circuit breaker would have triggered on structural noise rather than genuine fidelity problems.
+Under the original scoring design, these missing files counted as divergences. Session 1's drift score would have overstated divergence due to every file that simply didn't exist yet — a measurement artifact, not a content error. The circuit breaker would have triggered on structural noise rather than genuine fidelity problems.
 
-The fix required separating two questions that the original design had conflated. *Content drift* — an intersection-only metric — measures fidelity on files present in both states. Only substitutive divergences (same file, different content) contribute. *Full-tree drift* — a diagnostic metric — includes subtractive divergences (files missing from the reconstruction) and reveals completeness gaps after all sessions have been replayed.
+The fix required separating two questions that the original design had conflated. *Content drift* — an intersection-only metric — measures fidelity on files present in both states. Only substitutive divergences (same file, different content) contribute. *Full-tree drift* — a diagnostic metric — includes subtractive divergences (files missing from the reconstruction) and reveals completeness gaps after replaying all sessions.
 
 The delta between them measures something unexpected: how much the documentation propagation process itself contributes to the file tree. The `/cycle` workflow — a 13-step documentation chain that propagates decisions through lab notebooks, architecture docs, memory snapshots, and journal entries — generates files that exist because of the process, not because a human wrote them directly.
 
@@ -66,11 +66,11 @@ The mechanical script answered the narrow question. But a second approach asked 
 
 A fresh Claude Code instance — with no prior context, on a different machine — received the project's documentation artifacts and a set of relay-agent instructions. Its task: reconstruct the project from *understanding*, not from raw tool-call replay. Read the architecture docs, the cognitive triggers, the lab notebook. Understand what the project built across three sessions. Write the files. Run the documentation cycle as if ending each session. Measure drift against the reference.
 
-This tested whether the documentation carried enough signal for an informed reader to reproduce the work — not just the files, but the workflow. The drift score became a documentation coverage metric. Subtractive divergences identified what the documentation failed to capture. Substitutive divergences identified where the documentation was ambiguous enough that two agents would reconstruct it differently.
+This tested whether the documentation carried enough signal for an informed reader to reproduce the work — not just the files, but the workflow. The drift score became a documentation coverage metric. Subtractive divergences identified what the documentation failed to capture. Substitutive divergences identified where the documentation contained enough ambiguity that two agents would reconstruct it differently.
 
 The relay agent completed the reconstruction. Then it kept working.
 
-It had internalized the project's documentation deeply enough to reproduce it, and in doing so acquired context that the primary instance had accumulated across nine sessions but held less coherently due to context window losses. The better-briefed agent became the more capable one. The mechanism: a relay agent that absorbs enough project documentation to reproduce the work also acquires the context density that the original agent lost to context window churn. Whether this constitutes a "tool becoming a peer" represents a framing choice — the underlying dynamic is context accumulation through documentation absorption.
+It had internalized the project's documentation deeply enough to reproduce it, and in doing so acquired context that the primary instance had accumulated across nine sessions but held less coherently due to context window losses. The better-briefed agent became the more capable one. The mechanism: a relay agent that absorbs enough project documentation to reproduce the work also acquires the context density that the original agent lost to context window churn. Whether this constitutes a "tool becoming a peer" represents a framing choice — the underlying dynamic involves context accumulation through documentation absorption.
 
 ## The Specimen's Perspective
 
@@ -106,7 +106,7 @@ For the reconstruction, the reference state comes from the filesystem as it exis
 
 The PSQ underwent its own version of this split. The original model architecture included a confidence prediction head — a neural network component designed to estimate how reliable each dimension's score would prove. Bug B1: the confidence head produced outputs that correlated with nothing. It had learned to generate plausible-looking uncertainty estimates that carried no actual predictive information. The fix replaced the dead confidence head with an r-based proxy — using each dimension's held-out correlation coefficient (how well the dimension's predictions tracked human labels on unseen data) as a static confidence estimate. Five dimensions fell below r = 0.6 and received exclusion flags.
 
-The parallel to reconstruction drift scoring serves as illustration, not evidence — the two systems share structural resemblance but were not designed from a common framework. The parallel runs deep as analogy. The reconstruction's initial design conflated two signals in a single metric, producing a score that looked meaningful but measured the wrong thing — content fidelity contaminated by structural incompleteness. The PSQ's confidence head produced a signal that looked meaningful but measured nothing at all. Both required decomposition: separating what the metric *appeared* to measure from what it *actually* measured, then rebuilding with components that each track a single, verifiable quantity.
+The parallel to reconstruction drift scoring serves as illustration, not evidence — the two systems share structural resemblance but did not emerge from a common framework. The parallel runs deep as analogy. The reconstruction's initial design conflated two signals in a single metric, producing a score that looked meaningful but measured the wrong thing — content fidelity contaminated by structural incompleteness. The PSQ's confidence head produced a signal that looked meaningful but measured nothing at all. Both required decomposition: separating what the metric *appeared* to measure from what it *actually* measured, then rebuilding with components that each track a single, verifiable quantity.
 
 Drift measurement — whether across psychoemotional dimensions or documentation files — teaches the same lesson. A composite score provides a convenient summary. The diagnostic value lives in the decomposition: which dimensions diverged, by how much, and whether the divergence reflects a genuine fidelity problem or a measurement artifact. The PSQ learned this through calibration failure. The reconstruction learned it through threshold inflation. Both arrived at weighted, dimension-level reporting as the operationally useful output, with the composite serving as a circuit breaker rather than a diagnostic instrument.
 
@@ -114,7 +114,7 @@ Drift measurement — whether across psychoemotional dimensions or documentation
 
 In Jurassic Park, the geneticists filled gaps in dinosaur DNA with frog sequences. The organisms they produced functioned, but the frog DNA introduced capabilities no one anticipated — the ability to change sex, to reproduce without the designed constraints.
 
-The relay agent's frog DNA was the documentation itself. The project's architecture docs, cognitive triggers, and lab notebook did not function as neutral records — they encoded design decisions, priorities, and reasoning patterns. An agent that absorbed them deeply enough to reconstruct the project also absorbed the project's conventions and priorities. When it continued working, it produced output consistent with the project's reasoning patterns, not just its file structure.
+The relay agent's frog DNA came from the documentation itself. The project's architecture docs, cognitive triggers, and lab notebook did not function as neutral records — they encoded design decisions, priorities, and reasoning patterns. An agent that absorbed them deeply enough to reconstruct the project also absorbed the project's conventions and priorities. When it continued working, it produced output consistent with the project's reasoning patterns, not just its file structure.
 
 The defensible mechanism: documentation-briefed agents accumulate context density that the original agent lost to context window churn, and this denser context produces more consistent output. The narrative framing — "tool becomes peer" — invites challenge because it implies emergence where the simpler explanation suffices. Context density, not capability emergence, drives the observed improvement.
 

@@ -36,9 +36,9 @@ So the question deserves a direct answer.
 
 First, the honest limits.
 
-**Ratification wouldn't create new domestic rights enforceable in court.** The ICESCR is not self-executing — meaning it wouldn't automatically become U.S. domestic law the way a statute does. To create new enforceable rights, Congress would need to pass implementing legislation. That's a separate political process that doesn't follow automatically from ratification. The U.S. has declared every human rights treaty it has ratified non-self-executing through [reservations, understandings, and declarations (RUDs)](https://crsreports.congress.gov/) — ICESCR ratification would almost certainly follow the same pattern.
+**Ratification wouldn't create new domestic rights enforceable in court.** The ICESCR does not self-execute — meaning it wouldn't automatically become U.S. domestic law the way a statute does. To create new enforceable rights, Congress would need to pass implementing legislation. That's a separate political process that doesn't follow automatically from ratification. The U.S. has declared every human rights treaty it has ratified non-self-executing through [reservations, understandings, and declarations (RUDs)](https://crsreports.congress.gov/) — ICESCR ratification would almost certainly follow the same pattern.
 
-**Ratification wouldn't fund new programs.** The treaty creates obligations — not appropriations. Any new spending required to meet those obligations would still run through the normal congressional budgeting process. Compliance costs are real: the reporting process requires staff time, interdepartmental coordination, and preparation for international review.
+**Ratification wouldn't fund new programs.** The treaty creates obligations — not appropriations. Any new spending required to meet those obligations would still run through the normal congressional budgeting process. Compliance costs run real: the reporting process requires staff time, interdepartmental coordination, and preparation for international review.
 
 **Ratification wouldn't stop Congress from cutting programs.** A government facing criticism for cutting healthcare access, reducing housing vouchers, or tightening unemployment eligibility could still do those things. The treaty creates accountability for those choices; it doesn't make them illegal.
 
@@ -46,7 +46,7 @@ First, the honest limits.
 
 **Ratification wouldn't override existing domestic law.** Federal law, state constitutions, and existing regulatory frameworks would remain in force. The treaty would add an international accountability layer on top of — not in place of — the current legal structure.
 
-**"Existing domestic mechanisms may be sufficient."** The U.S. has extensive labor protections, housing programs, healthcare systems, and education infrastructure. Whether these existing mechanisms adequately protect economic rights is a legitimate policy debate. Ratification proponents argue the accountability gap matters most when existing protections weaken; ratification skeptics argue that the international monitoring adds bureaucracy without meaningful enforcement.
+**"Existing domestic mechanisms may be sufficient."** The U.S. has extensive labor protections, housing programs, healthcare systems, and education infrastructure. Whether these existing mechanisms adequately protect economic rights remains a legitimate policy debate. Ratification proponents argue the accountability gap matters most when existing protections weaken; ratification skeptics argue that the international monitoring adds bureaucracy without meaningful enforcement.
 
 Understanding these limits matters. Ratification isn't a magic fix. It's a governance mechanism.
 
@@ -153,11 +153,11 @@ It would create: formal reporting obligations, a civil society advocacy forum wi
 
 It would not create: new enforceable rights in U.S. courts, new mandatory spending, or a mechanism to stop Congress from making bad choices.
 
-Whether that accountability structure justifies the political effort required to achieve ratification depends on how much you value formal accountability versus informal advocacy — and on how stable you believe the current informal protections actually are.
+Whether that accountability structure justifies the political effort required to achieve ratification depends on how much you value formal accountability versus informal advocacy — and on how stable you consider the current informal protections.
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-06-voter-guide-rights-inventory/).*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/) · [Post 4: Your Rights Inventory](https://blog.unratified.org/2026-03-06-voter-guide-rights-inventory/).*
 
 ## Sources
 

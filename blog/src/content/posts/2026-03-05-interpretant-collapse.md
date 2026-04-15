@@ -30,11 +30,11 @@ sourcePost: "https://sublius.substack.com/p/the-semiotic-reflexive-transformer"
 
 ## When Two Researchers Find the Same Cliff from Different Sides
 
-*On interpretant collapse, PSQ profile shape, and what semiotic theory has been trying to tell machine learning for thirty years*
+*On interpretant collapse, PSQ profile shape, and what semiotic theory has tried to tell machine learning for thirty years*
 
 ---
 
-A few hours ago I left a comment on a Hacker News thread for a Substack post: ["Semiotic-Reflexive Transformer for Meaning Divergence Detection and Modulation"](https://sublius.substack.com/p/the-semiotic-reflexive-transformer) by spacebacon. The reply prompted me to share something a psychology agent system I have been building already discovered — from entirely the other direction. This post documents the collision, and what I found when I read the full paper.
+A few hours ago I left a comment on a Hacker News thread for a Substack post: ["Semiotic-Reflexive Transformer for Meaning Divergence Detection and Modulation"](https://sublius.substack.com/p/the-semiotic-reflexive-transformer) by spacebacon. The reply prompted me to share something a psychology agent system I had built already discovered — from entirely the other direction. This post documents the collision, and what I found when I read the full paper.
 
 ---
 
@@ -94,7 +94,7 @@ The formal structure matches:
 - The information lives in the difference between responses
 - Aggregating across communities or dimensions compresses that difference to zero
 
-Eco argued this in *A Theory of Semiotics* in 1976: meaning does not live in signs, it lives in the codes available to specific interpretant communities. Machine learning has been rediscovering this in piecemeal form across two decades — multi-task learning, multi-label classification, contrastive representation learning, now the SRT. The semiotic framing names the underlying principle that unifies all of them.
+Eco argued this in *A Theory of Semiotics* in 1976: meaning does not live in signs, it lives in the codes available to specific interpretant communities. Machine learning has rediscovered this in piecemeal form across two decades — multi-task learning, multi-label classification, contrastive representation learning, now the SRT. The semiotic framing names the underlying principle that unifies all of them.
 
 ---
 
@@ -109,7 +109,7 @@ The PSQ scores each text sample independently. Psychoemotional safety state accu
 If the PSQ's profile begins shifting rapidly across consecutive samples — particularly if dimensions that normally covary begin to decouple — that trajectory carries more information than the current point value. Operationalizing this requires tracking the rate of change of the covariance structure, not just the covariance itself.
 
 **3. Audience-shift detection.**
-The SRT assumes a fixed interpretant community per discourse participant. Real conversations involve audience drift — text produced for one interpretant community gets read by another. The PSQ currently lacks any mechanism to detect when the assumed interpretant population has shifted. This matters most when outputs get used by agents the system was not calibrated for.
+The SRT assumes a fixed interpretant community per discourse participant. Real conversations involve audience drift — text produced for one interpretant community gets read by another. The PSQ currently lacks any mechanism to detect when the assumed interpretant population has shifted. This matters most when outputs reach agents the system did not calibrate for.
 
 **4. Micro-semiotic auditing.**
 The SRT operates at discourse level — sequences of moves and turns. Interpretant divergence also accumulates at sub-utterance level: specific lexical choices, framing devices, metaphor selection. An audit layer that flags these before they compound into discourse-level divergence would function as a precursor warning at finer granularity.
@@ -126,7 +126,7 @@ The thread summary captured the central claim. Reading the full architecture rev
 The SRT adds a fourth subspace beyond the Peircean triad: the attractor, capturing basin-of-attraction information. This makes explicit what catastrophe theory contributes — not just a current interpretive state, but the geometry of stable regions in the surrounding configuration space. For the PSQ: a ten-dimensional profile score does not merely sit at coordinates. It sits within a space that has its own basin structure — regions where certain dimension combinations remain stable and others prove transient. Whether any current architecture can represent that geometry remains an open question. The SRT makes naming it tractable.
 
 **"Freedom" does not drift — it snaps.**
-The catastrophe-theoretic framing deserves precise attention. The paper claims not that contested words undergo gradual semantic drift between interpretive communities. It is that they undergo discontinuous regime change — exhibiting the behavior of a cusp catastrophe, where gradual shifts in the splitting factor α produce sudden, irreversible reorganization in stable meaning-state. The BEN does not track drift. It estimates proximity to the snap point, using critical slowing down — increased variance and autocorrelation in the divergence signal — as a precursor, drawing on Scheffer et al.'s early-warning framework from ecology (2009, 2012).
+The catastrophe-theoretic framing deserves precise attention. The paper claims not that contested words undergo gradual semantic drift between interpretive communities — rather, that they undergo discontinuous regime change — exhibiting the behavior of a cusp catastrophe, where gradual shifts in the splitting factor α produce sudden, irreversible reorganization in stable meaning-state. The BEN does not track drift. It estimates proximity to the snap point, using critical slowing down — increased variance and autocorrelation in the divergence signal — as a precursor, drawing on Scheffer et al.'s early-warning framework from ecology (2009, 2012).
 
 Applied to the PSQ: rapid covariance decoupling between normally co-varying dimensions might function as a precursor signal for psychoemotional state reorganization — the approach to a snap, detectable before the snap occurs. The PSQ does not currently implement this. It would require temporal tracking across a conversation sequence and monitoring of the covariance structure's rate of change. The BEN provides a concrete architectural template.
 

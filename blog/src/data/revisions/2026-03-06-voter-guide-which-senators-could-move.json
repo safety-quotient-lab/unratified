@@ -1,5 +1,10 @@
 [
   {
+    "hash": "eafaabfe075b3994a4c28671ca63e3a68ca866a3",
+    "date": "2026-04-15T01:17:21-05:00",
+    "subject": "fix: E-prime remediation on 8 blog posts (Mar 3-13 batch) + 7 revision histories"
+  },
+  {
     "hash": "e304b2bf247854d9d0a0c79744ae4cc67e78a756",
     "date": "2026-04-14T22:56:55-05:00",
     "subject": "fix: scan-019 remediation — 10/10 findings from psychology-agent"
