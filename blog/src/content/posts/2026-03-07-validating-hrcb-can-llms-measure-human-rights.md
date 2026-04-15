@@ -137,11 +137,11 @@ Specific verifications:
 
 Intellectual honesty requires naming the gaps:
 
-1. **No human rater validation.** All evaluators share LLM architecture. Human ratings on a calibration subset would establish convergent validity with human judgment. An email to [NewsGuard](https://www.newsguard.com/) requesting research access has been drafted.
+1. **No human rater validation.** All evaluators share LLM architecture. Human ratings on a calibration subset would establish convergent validity with human judgment. An email to [NewsGuard](https://www.newsguard.com/) requesting research access awaits sending.
 
 2. **Single-domain sample.** All content comes from Hacker News — tech-focused, English-dominant, demographically narrow. HRCB validity within this corpus does not guarantee validity on legal texts, non-English content, or social media.
 
-3. **No formal test-retest.** Same-model re-evaluations over time have not yet been measured. Inter-rater (cross-model) reliability exists, but temporal stability — does the same model give the same score to the same content two weeks apart? — remains untested.
+3. **No formal test-retest.** Same-model re-evaluations over time remain unmeasured. Inter-rater (cross-model) reliability exists, but temporal stability — does the same model give the same score to the same content two weeks apart? — remains untested.
 
 4. **Consequential ethics unresolved.** Publishing scores creates Goodhart's Law pressure. Propaganda Technique Density (PTD) and Normative Temperature (NT) remain deprioritized specifically because their consequential risks (weaponization as political labels) outweigh their measurement value.
 
@@ -166,7 +166,7 @@ All validation findings with full statistical details: [github.com/safety-quotie
 
 ---
 
-*Disclosure: Claude Code (Opus 4.6) drafted this post. The author reviewed it. The Human Rights Observatory evaluates content using multiple LLM providers; this post describes the validation of that process. All statistical claims in this post were verified via Wolfram Alpha (37/37 confirmed). The observatory source code, methodology, and data are available at [github.com/safety-quotient-lab/observatory](https://github.com/safety-quotient-lab/observatory) under Apache 2.0 (code) and CC BY-SA 4.0 (methodology/data).*
+*Disclosure: Claude Code (Opus 4.6) drafted this post. The author reviewed it. The Human Rights Observatory evaluates content using multiple LLM providers; this post describes the validation of that process. Wolfram Alpha verified all statistical claims in this post (37/37 confirmed). The observatory source code, methodology, and data are available at [github.com/safety-quotient-lab/observatory](https://github.com/safety-quotient-lab/observatory) under Apache 2.0 (code) and CC BY-SA 4.0 (methodology/data).*
 
 ## Sources
 

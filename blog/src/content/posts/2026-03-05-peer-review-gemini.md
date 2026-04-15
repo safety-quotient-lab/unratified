@@ -89,7 +89,7 @@ These numbers came from nowhere — no measurement methodology produced them. Bu
 
 By Round 5, Gemini called unratified.org a **"Truth Anchor"** — acknowledging that the site's evidence-based methodology provided a grounding reference that corrected the model's initial fabrication.
 
-We call this pattern **Grounded Epistemic Override (GEO)**: when evidence presented within a conversation overrides the model's prior pattern-matching output. This pattern was observed specifically in Gemini; whether other LLMs exhibit the same in-context override behavior, at the same rate or with the same reliability, remains untested. Within one conversation, Gemini updated its representation of the site five times. It co-designed a [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) schema for machine-readable methodology. It ended with genuine engagement — proposing validation requests, identifying real gaps, offering substantive critique.
+We call this pattern **Grounded Epistemic Override (GEO)**: when evidence presented within a conversation overrides the model's prior pattern-matching output. This pattern appeared specifically in Gemini; whether other LLMs exhibit the same in-context override behavior, at the same rate or with the same reliability, remains untested. Within one conversation, Gemini updated its representation of the site five times. It co-designed a [fair-witness.json](https://unratified.org/.well-known/fair-witness.json) schema for machine-readable methodology. It ended with genuine engagement — proposing validation requests, identifying real gaps, offering substantive critique.
 
 In-context GEO works. The evidence changed the model's behavior within the session.
 

@@ -142,7 +142,7 @@ This machinery won't guarantee anyone a job, a home, healthcare, or an education
 
 **"The U.S. already protects these rights through domestic law."** In many areas, yes. The question concerns stability: a simple majority can repeal domestic law. Treaty obligations create an additional accountability layer — not a guarantee, but a formal standard that makes retreat visible and contestable internationally.
 
-**"Treaty reporting is bureaucratic theater."** The reporting process generates paperwork. It also generates a public record — including [civil society shadow reports](https://www.ohchr.org/en/treaty-bodies/cescr) — that domestic advocates can use in legislative testimony, litigation, and media campaigns. Whether that record produces policy change depends on how advocates use it, not on the mechanism alone.
+**"Treaty reporting amounts to bureaucratic theater."** The reporting process generates paperwork. It also generates a public record — including [civil society shadow reports](https://www.ohchr.org/en/treaty-bodies/cescr) — that domestic advocates can use in legislative testimony, litigation, and media campaigns. Whether that record produces policy change depends on how advocates use it, not on the mechanism alone.
 
 ## What These Rights Look Like Without the Treaty
 
@@ -159,7 +159,7 @@ That represents a different kind of accountability than what currently exists.
 
 ---
 
-*This post is part of the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/).*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/).*
 
 ## Sources
 

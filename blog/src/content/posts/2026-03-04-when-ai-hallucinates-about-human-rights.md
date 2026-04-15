@@ -209,5 +209,5 @@ All primary sources for this analysis:
 - *Minister of Health v. Treatment Action Campaign*, CCT 8/02 (2002) — Constitutional Court of South Africa
 
 **Confabulation/hallucination literature**:
-- Ji, Ziwei et al. (2023). "Survey of Hallucination in Natural Language Generation." *ACM Computing Surveys*, 55(12), 1–38. — Comprehensive taxonomy of hallucination types across NLG tasks; provides the broader classification framework against which this post's seven types can be compared.
+- Ji, Ziwei et al. (2023). "Survey of Hallucination in Natural Language Generation." *ACM Computing Surveys*, 55(12), 1–38. — Comprehensive taxonomy of hallucination types across NLG tasks; provides the broader classification framework against which this post's seven types compare.
 - Huang, Lei et al. (2023). "A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions." *arXiv:2311.05232*. — Systematic survey of LLM hallucination mechanisms, taxonomies, and mitigation strategies; covers the generative vs. retrieval-based error distinction this post identifies empirically.

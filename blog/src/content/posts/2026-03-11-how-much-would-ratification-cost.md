@@ -81,7 +81,7 @@ Combining the most conservative estimates in each domain: $80–170 billion per 
 
 This number requires three important qualifications:
 
-1. **No authoritative single-source estimate exists.** No one has requested or published a CBO score for ICESCR implementation costs because no implementing legislation has been introduced. These figures synthesize program-specific analyses, not treaty-specific modeling.
+1. **No authoritative single-source estimate exists.** No one has requested or published a CBO score for ICESCR implementation costs because no implementing legislation has reached introduction. These figures synthesize program-specific analyses, not treaty-specific modeling.
 
 2. **The total does not adjust for savings.** These costs do not account for reduced emergency care spending, productivity gains, reduced incarceration costs, or other measurable offsets — addressed in the next section.
 

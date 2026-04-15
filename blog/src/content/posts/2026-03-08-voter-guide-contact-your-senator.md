@@ -170,7 +170,7 @@ Some senators have publicly expressed support for ICESCR ratification or have si
 
 1. **Thank them specifically.** A call or letter that acknowledges their existing position and thanks them for it reinforces that their constituents notice and value it.
 
-2. **Ask what they need from constituents to move it forward.** The answer may be: more constituent contacts, bipartisan cosponsors, or pressure on the Foreign Relations Committee chair. Ask. Staff sometimes tell you exactly what would help.
+2. **Ask what they need from constituents to move it forward.** They might answer: more constituent contacts, bipartisan cosponsors, or pressure on the Foreign Relations Committee chair. Ask. Staff sometimes tell you exactly what would help.
 
 3. **Ask them to co-sponsor or sign a letter** urging the Foreign Relations Committee to schedule hearings. Even senators who support a treaty often don't take the next step without constituent pressure to do so.
 

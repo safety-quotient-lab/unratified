@@ -135,4 +135,4 @@ That captures the value proposition: not better decisions through magic, but bet
 
 ---
 
-*The psychology agent's cognitive architecture, including the adjudication protocol and knock-on framework, lives at [safety-quotient-lab/psychology-agent](https://github.com/safety-quotient-lab/psychology-agent) under Apache 2.0. The trigger system (`docs/cognitive-triggers.md`), decision records (`docs/decisions/`), and skills (`.claude/skills/`) are all portable — see the [cogarch adaptation guide](https://github.com/safety-quotient-lab/psychology-agent/wiki/Cogarch-Adaptation-Guide) for adoption instructions.*
+*The psychology agent's cognitive architecture, including the adjudication protocol and knock-on framework, lives at [safety-quotient-lab/psychology-agent](https://github.com/safety-quotient-lab/psychology-agent) under Apache 2.0. The trigger system (`docs/cognitive-triggers.md`), decision records (`docs/decisions/`), and skills (`.claude/skills/`) all transfer — see the [cogarch adaptation guide](https://github.com/safety-quotient-lab/psychology-agent/wiki/Cogarch-Adaptation-Guide) for adoption instructions.*

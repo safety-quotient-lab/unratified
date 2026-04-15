@@ -31,7 +31,7 @@ relatedArticles: [6, 7]
 
 The [Human Rights Observatory](https://observatory.unratified.org) evaluates Hacker News stories against the 30 articles of the [Universal Declaration of Human Rights (UDHR)](https://www.un.org/en/about-us/universal-declaration-of-human-rights). Among its tracked dimensions: who speaks in a story, and who gets spoken about.
 
-Across 806 evaluated stories, a consistent pattern emerges. **Workers appear as subjects in 129 stories but as speakers in only 13** — a 10:1 ratio, though the small absolute speaker count (13 slots) means this ratio should be interpreted with caution. Tech coverage discusses workers — their productivity, their displacement, their retraining needs — without quoting them, interviewing them, or centering their perspective.
+Across 806 evaluated stories, a consistent pattern emerges. **Workers appear as subjects in 129 stories but as speakers in only 13** — a 10:1 ratio, though the small absolute speaker count (13 slots) means this ratio warrants cautious interpretation. Tech coverage discusses workers — their productivity, their displacement, their retraining needs — without quoting them, interviewing them, or centering their perspective.
 
 Marginalized communities show a similar asymmetry: 13 speaker slots versus 92 subject slots. These groups appear as objects of analysis far more than as participants in discourse.
 
@@ -60,7 +60,7 @@ The stakeholder voice data reveals a parallel bifurcation in discourse itself. T
 The Observatory tracks 8 signal dimensions across every evaluated story. The stakeholder voice dimension intersects with others:
 
 - **Transparency**: Stories with higher disclosure scores tend to include more diverse voices
-- **Propaganda techniques**: Stories flagged for loaded language (197 of 806) appear to concentrate among those with narrower stakeholder representation, though a formal cross-tabulation has not yet been published
+- **Propaganda techniques**: Stories flagged for loaded language (197 of 806) appear to concentrate among those with narrower stakeholder representation, though a formal cross-tabulation has not yet appeared
 - **Temporal framing**: 71% of coverage focuses on the present — not on the structural consequences that unfold over years for affected workers
 
 These intersections suggest that the voice gap compounds through multiple channels. Low-representation stories also tend toward lower transparency and higher persuasion technique density — creating a feedback loop where the least representative coverage also carries the least epistemic rigor.

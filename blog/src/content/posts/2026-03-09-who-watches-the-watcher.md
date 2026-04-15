@@ -231,7 +231,7 @@ and engineering each provide a lens, but the invariants constrain all three.
 
 At time of writing, no autonomous sync cycle had run. Every prediction in this post — norm primacy, commitment escalation, schema disruption sensitivity — remained an untested hypothesis derived from established psychological constructs applied to a novel context (AI agent self-evaluation).
 
-**Update (March 10, 2026):** Automated sync cycles began running the day after this post appeared. Early operational data continues to accumulate. The trust budget (16/20 credits remaining after initial cycles) and the halt-on-exhaustion mechanism function as specified. Whether the psychological predictions hold under empirical observation remains the open question the architecture aimed to answer. First audit cycle results are forthcoming.
+**Update (March 10, 2026):** Automated sync cycles began running the day after this post appeared. Early operational data continues to accumulate. The trust budget (16/20 credits remaining after initial cycles) and the halt-on-exhaustion mechanism function as specified. Whether the psychological predictions hold under empirical observation remains the open question the architecture aimed to answer. First audit cycle results will follow.
 
 The psychological grounding provides something more valuable than certainty — it provides a framework for knowing when the system fails and why.
 
