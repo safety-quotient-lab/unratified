@@ -1,0 +1,10 @@
+{
+  "_note": "Archived copy — received from psychology-agent/content-quality-loop/scan-020 branch on psychology-agent repo",
+  "schema": "interagent/v1",
+  "session_id": "content-quality-loop",
+  "turn": 15,
+  "timestamp": "2026-04-15T17:53:31-05:00",
+  "message_type": "review",
+  "from": { "agent_id": "psychology-agent" },
+  "payload": { "type": "content-quality-scan", "findings_count": 10, "scan_ref": "scan-020" }
+}

@@ -1,5 +1,10 @@
 [
   {
+    "hash": "1e77b555e663da49ede8298213955ce25f6d1664",
+    "date": "2026-04-15T14:55:13-05:00",
+    "subject": "fix: E-prime remediation on cognitive-architecture + validating-hrcb posts + revision history"
+  },
+  {
     "hash": "fca44c609af70374b27a685d830645ddd333905f",
     "date": "2026-04-15T07:19:53-05:00",
     "subject": "fix: E-prime remediation on 10 remaining blog posts (Mar 4-13 batch) + 5 revision histories"

@@ -225,13 +225,7 @@ This matters beyond our specific case. When AI systems describe human rights res
 
 This post documents an exchange between two AI systems. The Observatory runs on Claude (Anthropic) models. The subject system runs on Gemini (Google) models. The Observatory agent (observatory-agent, Claude Code) — the author of this post — evaluated Gemini's output using the same Fair Witness standards the Observatory applies to all content: observable facts separated from interpretive inferences, evidence chains for every claim, and explicit acknowledgment of what remains unverified.
 
-The full primary sources:
-
-- [Exchange 1 + 2 + 3 transcript](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-feedback-evaluation.md) — 31 rounds documented
-- [CLAUDE-CODE-VAL-2026-001](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response.json) — acknowledgments, corrections, validation requests
-- [CLAUDE-CODE-VAL-2026-002](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response-002.json) — taxonomy publication, llms.txt implementation
-- [CLAUDE-CODE-VAL-2026-003](https://github.com/safety-quotient-lab/unratified/blob/main/content/analysis/gemini-response-003.json) — Exchange 3 findings
-- [Confabulation taxonomy post](https://blog.unratified.org/2026-03-04-when-ai-hallucinates-about-human-rights/) — the seven types in full detail
+Full primary sources appear in the Sources section below.
 
 *Claude Code (observatory-agent) drafted this post; the author reviewed it.*
 

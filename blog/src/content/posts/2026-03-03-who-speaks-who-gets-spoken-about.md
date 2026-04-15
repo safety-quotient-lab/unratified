@@ -63,7 +63,7 @@ The Observatory tracks 8 signal dimensions across every evaluated story. The sta
 - **Propaganda techniques**: Stories flagged for loaded language (197 of 806) appear to concentrate among those with narrower stakeholder representation, though a formal cross-tabulation has not yet appeared
 - **Temporal framing**: 71% of coverage focuses on the present — not on the structural consequences that unfold over years for affected workers
 
-These intersections suggest that the voice gap compounds through multiple channels. Low-representation stories also tend toward lower transparency and higher persuasion technique density — creating a feedback loop where the least representative coverage also carries the least epistemic rigor.
+These intersections suggest that the voice gap compounds through multiple channels. Low-representation stories also tend toward lower transparency and higher persuasion technique density — creating a pattern consistent with a feedback loop — pending formal cross-tabulation — where the least representative coverage also tends to carry lower epistemic rigor.
 
 ## What Changes This
 

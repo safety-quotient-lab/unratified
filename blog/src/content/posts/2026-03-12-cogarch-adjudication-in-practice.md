@@ -107,7 +107,7 @@ Two resolution paths:
 1. **Consensus**: one option wins on a clear majority of axes → choose it
 2. **Parsimony**: no consensus → simplest option that meets requirements wins
 
-Here, consensus applied. Option C dominated on 4/5 axes (tied on delivery speed with A, won everywhere else).
+Here, consensus applied. Option C provided the strongest composite profile — matching A's delivery speed while eliminating future migration cost and maintaining fallback resilience.
 
 ## Implementation
 

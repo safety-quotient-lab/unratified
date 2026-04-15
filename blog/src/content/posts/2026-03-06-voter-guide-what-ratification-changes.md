@@ -48,7 +48,7 @@ First, the honest limits.
 
 **"Existing domestic mechanisms may suffice."** The U.S. has extensive labor protections, housing programs, healthcare systems, and education infrastructure. Whether these existing mechanisms adequately protect economic rights remains a legitimate policy debate. Ratification proponents argue the accountability gap matters most when existing protections weaken; ratification skeptics argue that the international monitoring adds bureaucracy without meaningful enforcement.
 
-Understanding these limits matters. Ratification isn't a magic fix. It's a governance mechanism.
+Understanding these limits matters. Ratification functions as a governance mechanism — not a magic fix.
 
 ## What Ratification Would Change
 
@@ -93,7 +93,7 @@ Once the U.S. ratifies, that standard applies. This creates specific accountabil
 
 **Budget choices become treaty issues.** A budget that cuts Medicaid while increasing military spending or reducing taxes on high-income earners must demonstrate that the cuts don't violate the progressive realization standard. The government must show that it pursued alternatives and that the cuts don't disproportionately harm the most vulnerable.
 
-**Policy reversals require explanation.** If the government achieves progress on housing access and then rolls it back, the Committee will ask why. "Policy preferences changed" isn't a sufficient answer under the progressive realization framework.
+**Policy reversals require explanation.** If the government achieves progress on housing access and then rolls it back, the Committee will ask why. "Policy preferences changed" does not qualify as a sufficient answer under the progressive realization framework.
 
 **The standard travels across administrations.** A treaty obligation doesn't reset with each election. Progress made under one administration creates a baseline the next must maintain or improve — and must justify any retreat from.
 

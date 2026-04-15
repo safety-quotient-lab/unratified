@@ -53,7 +53,7 @@ Article 7 covers conditions of work: fair wages, safe workplaces, reasonable hou
 
 This article has direct relevance to several ongoing debates in U.S. labor policy:
 
-**Wage stagnation.** Real wages for working-class and middle-income Americans stagnated or declined across several decades while productivity rose. Under Article 7, a ratified government must demonstrate that wages remain "just and favorable" — and explain, to an international body, what steps it took when they didn't.
+**Wage stagnation.** Real wages for working-class and middle-income Americans [stagnated or declined across several decades while productivity rose](https://www.epi.org/productivity-pay-gap/). Under Article 7, a ratified government must demonstrate that wages remain "just and favorable" — and explain, to an international body, what steps it took when they didn't.
 
 **Gig economy classifications.** Millions of American workers operate in arrangements that deny them the benefits and protections of employment: no paid leave, no employer-provided health coverage, no overtime protections. Article 7 covers "just and favorable conditions of work" — including the conditions under which work gets performed and compensated.
 

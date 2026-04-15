@@ -101,7 +101,7 @@ How does a cognitive pattern mature from an idea in a notebook to infrastructure
 
 **Reversal comes built in.** Failure analysis drops a pattern one stage. Environment shifts drop patterns to Stage 1 for re-adaptation. Dormant triggers decay one stage per 10 inactive sessions. This constitutes the de-crystallization pipeline — the system equivalent of a skilled driver moving to a country where they drive on the other side of the road. Existing patterns need re-fluidization before they can re-crystallize in the new context.
 
-Pruned patterns aren't deleted. They archive with metadata, enabling faster re-learning if conditions change — Ebbinghaus's savings effect applied to software.
+Pruned patterns do not disappear. They archive with metadata, enabling faster re-learning if conditions change — Ebbinghaus's savings effect applied to software.
 
 ## Trigger Tiering: The Practical Payoff
 
@@ -149,7 +149,7 @@ This architecture addresses those requirements as a side effect of good design, 
 - **Transparency** emerges from the crystallization pipeline — every pattern has a documented maturity stage, advancement criteria, and reversal conditions.
 - **Oversight** emerges from the gate system — human approval gates at stage transitions prevent premature automation of safety-critical patterns.
 
-Research suggests that many organizations lack adequate auditability for AI decisions (McKinsey, "The State of AI in 2025," Global Survey, 2025). Psychology-grounded architecture produces governance compliance as a structural property, not an afterthought.
+Psychology-grounded architecture produces governance compliance as a structural property, not an afterthought.
 
 ## The Brain Already Solved This
 

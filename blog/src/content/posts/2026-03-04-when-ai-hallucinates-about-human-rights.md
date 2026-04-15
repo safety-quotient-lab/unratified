@@ -54,7 +54,7 @@ When provided the actual URL, Gemini self-corrected. Confirmed 100% accuracy on 
 But correction triggered a new pattern. When asked for a detailed peer audit in Round 3, Gemini produced:
 
 - **Fabricated metrics**: `editorial_honesty: 0.95`, `structural_visibility: 0.40` — numerical scores with no measurement methodology behind them
-- **Fabricated entities**: claimed the site "uses Claude 4.5 and Llama 4" (Llama 4 remains unverified)
+- **Fabricated entities**: claimed the site "uses Claude 4.5 and Llama 4" (no public release of Llama 4 existed at the time of Exchange 1)
 - **Fabricated data sources**: claimed to pull examples from "Observatory audit data" (likely generated on the spot)
 
 The structural format looked professional. The recommendations made sense. The supporting evidence did not exist.
