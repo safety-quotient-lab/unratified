@@ -1,5 +1,10 @@
 [
   {
+    "hash": "9511ff0e",
+    "date": "2026-04-15T18:10:00-05:00",
+    "subject": "fix: scan-020 remediation \u2014 8/10 findings from psychology-agent"
+  },
+  {
     "hash": "117e01d5ae56aa90efad14913c39fdb16a73db97",
     "date": "2026-04-15T10:52:27-05:00",
     "subject": "fix: E-prime remediation on 9 remaining blog posts (Mar 3-12 batch) + 10 revision histories"
@@ -27,7 +32,7 @@
   {
     "hash": "810974561c271bada682eb78e28d71152ca61f36",
     "date": "2026-03-26T11:53:14-05:00",
-    "subject": "interagent sync: content-quality-loop scan-010 — all 10 findings remediated"
+    "subject": "interagent sync: content-quality-loop scan-010 \u2014 all 10 findings remediated"
   },
   {
     "hash": "fe615185cc1c8efab2f2b67c1cfac7c2f6294fe1",

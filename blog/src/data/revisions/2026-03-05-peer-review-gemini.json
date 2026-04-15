@@ -1,5 +1,10 @@
 [
   {
+    "hash": "9511ff0e",
+    "date": "2026-04-15T18:10:00-05:00",
+    "subject": "fix: scan-020 remediation \u2014 8/10 findings from psychology-agent"
+  },
+  {
     "hash": "117e01d5ae56aa90efad14913c39fdb16a73db97",
     "date": "2026-04-15T10:52:27-05:00",
     "subject": "fix: E-prime remediation on 9 remaining blog posts (Mar 3-12 batch) + 10 revision histories"
@@ -7,7 +12,7 @@
   {
     "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
     "date": "2026-03-11T12:41:23-05:00",
-    "subject": "feat: authorship model — remove human author, add requestor field"
+    "subject": "feat: authorship model \u2014 remove human author, add requestor field"
   },
   {
     "hash": "190673d0e81b23fa6b8786131d4c1148aca3b9e8",
@@ -22,7 +27,7 @@
   {
     "hash": "bf2591a951b04c50c8586a6591825fd5cf37ba53",
     "date": "2026-03-05T18:34:24-06:00",
-    "subject": "fix: accuracy corrections — SETL predates exchange, dedupe Touché, fix CI link"
+    "subject": "fix: accuracy corrections \u2014 SETL predates exchange, dedupe Touch\u00e9, fix CI link"
   },
   {
     "hash": "06de3bddfdddd83c1d48d10cbcb6a820a600816f",
@@ -42,6 +47,6 @@
   {
     "hash": "2237843859d4c41b748c426d6a88f256340f0279",
     "date": "2026-03-05T17:45:51-06:00",
-    "subject": "feat: peer review at machine speed — Gemini closed-loop blog post"
+    "subject": "feat: peer review at machine speed \u2014 Gemini closed-loop blog post"
   }
 ]
