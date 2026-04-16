@@ -169,7 +169,7 @@ export const GET: APIRoute = () => {
 
     epistemicFlags: {
       description:
-        'Mandatory disclosure of uncertainties, scope limitations, and validity threats. Every analysis must end with epistemic flags — even if none are identified (state "none identified").',
+        'Mandatory disclosure of uncertainties, scope limitations, and validity threats. Every analysis must end with epistemic flags — even if none surface (state "none identified").',
       categories: [
         'Single-rater limitation',
         'Temporal snapshot (conditions may change)',

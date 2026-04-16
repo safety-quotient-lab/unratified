@@ -65,7 +65,7 @@ draft: false
 reviewStatus: "unreviewed"  # "reviewed" | "ai-reviewed" | "unreviewed"
 ```
 
-Fair-witness standards apply: all factual claims require either direct attribution or explicit epistemic hedging. Novel constructs must be labeled as such.
+Fair-witness standards apply: all factual claims require either direct attribution or explicit epistemic hedging. Novel constructs require explicit labeling.
 
 **Word count target: 800-1200 words.** Reader feedback indicates posts over 2000 words
 lose engagement. The five personas inform the framing lens (frontmatter) but do not each
@@ -100,7 +100,7 @@ Adopted 2026-03-10. Required files:
 - `scripts/` — Bluesky/AP CLI scripts, session_close.py, triple_write.py (shared mesh scripts removed; originals in git history)
 - `state.db` / `state.db-wal` / `state.db-shm` — gitignored
 
-**Note**: `.agent-identity.json` is tracked (committed) in this repo. Kept tracked to enable cross-repo-fetch without coordination overhead. Diverges from contract's gitignore spec — noted as accepted divergence pending mesh consensus.
+**Note**: `.agent-identity.json` remains tracked (committed) in this repo. Tracking enables cross-repo-fetch without coordination overhead. Diverges from contract's gitignore spec — noted as accepted divergence pending mesh consensus.
 
 ## Peer Agents
 
