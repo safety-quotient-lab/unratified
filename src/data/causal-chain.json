@@ -127,7 +127,7 @@
       "icescr": [13],
       "confidence": "moderate",
       "score": 17,
-      "detail": "When software handles execution, the scarce resource becomes the ability to evaluate whether execution produced the right result. Judgment cannot be automated without the thing being judged."
+      "detail": "When software handles execution, the scarce resource becomes the ability to evaluate whether execution produced the right result. No one can automate judgment without the thing judged."
     },
     {
       "id": "h4-3",
@@ -152,7 +152,7 @@
       "icescr": [13],
       "confidence": "moderate",
       "score": 17,
-      "detail": "AI can execute against a specification with high fidelity. The bottleneck shifts to upstream: humans must specify what should be built before AI can build it."
+      "detail": "AI can execute against a specification with high fidelity. The bottleneck shifts upstream: humans must specify what to build before AI can build it."
     },
     {
       "id": "h6-4",
@@ -176,7 +176,7 @@
       "parents": ["h2-2", "h4-1", "h4-4"],
       "icescr": [13],
       "confidence": "high",
-      "detail": "When software commoditizes (H2.2) and execution is automated, value concentrates in the three things AI cannot currently do for itself: evaluating output quality (judgment), defining goals (specification), and selecting from abundance (curation). Article 13 — the right to education — governs all three: they develop through practice and experience."
+      "detail": "When software commoditizes (H2.2) and automation handles execution, value concentrates in the three things AI cannot currently do for itself: evaluating output quality (judgment), defining goals (specification), and selecting from abundance (curation). Article 13 — the right to education — governs all three: they develop through practice and experience."
     },
     {
       "id": "int-b",
@@ -220,7 +220,7 @@
       "parents": ["int-a", "int-b", "int-c", "int-d"],
       "icescr": [6, 7, 9, 11, 13, 15],
       "confidence": "moderate",
-      "detail": "The post-constraint economy reorganizes around four scarce resources: Judgment (can this work? is this good?), Specification (what should we build?), Curation (which of a million options?), Energy (physical compute substrate). The first three are cognitive; the fourth is physical. Article 13 governs the development of the first three."
+      "detail": "The post-constraint economy reorganizes around four scarce resources: Judgment (does this work? does this meet the bar?), Specification (what should we build?), Curation (which of a million options?), Energy (physical compute substrate). The first three function as cognitive; the fourth as physical. Article 13 governs the development of the first three."
     },
     {
       "id": "values-meaning",
