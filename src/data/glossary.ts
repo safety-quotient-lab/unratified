@@ -76,7 +76,7 @@ export const glossary: GlossaryTerm[] = [
   {
     id: 'discriminator',
     term: 'Discriminator',
-    definition: 'An empirical scoring system that evaluates competing hypotheses across five dimensions: empirical support, parsimony, predictive power, chain integrity, and falsifiability. Each dimension scores 0–5, yielding a total out of 25.',
+    definition: 'An empirical scoring system that evaluates competing hypotheses across five dimensions: empirical support, parsimony, consensus, chain integrity, and predictive power. Each dimension scores 0–5, yielding a total out of 25.',
     category: 'methodology',
     related: ['discriminator-score', 'composite-a', 'differential-diagnosis'],
     seeAlso: '/connection/ai/differential-diagnosis',
@@ -336,6 +336,29 @@ export const glossary: GlossaryTerm[] = [
     seeAlso: '/covenant/articles/article-2',
     sources: [
       { url: 'https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights', label: 'OHCHR: ICESCR Full Text (Article 2)', authority: 'primary' },
+    ],
+  },
+  {
+    id: 'cescr',
+    term: 'Committee on Economic, Social and Cultural Rights',
+    abbreviation: 'CESCR',
+    definition: 'The UN treaty body that monitors state compliance with the ICESCR. Composed of 18 independent experts, the Committee reviews state reports, issues concluding observations, and develops General Comments that elaborate binding treaty obligations into actionable legal standards. Distinct from the covenant itself — the ICESCR defines rights; the CESCR monitors compliance and develops jurisprudence.',
+    category: 'treaty',
+    related: ['icescr', 'progressive-realization', 'non-retrogression'],
+    seeAlso: '/covenant',
+    sources: [
+      { url: 'https://www.ohchr.org/en/treaty-bodies/cescr', label: 'OHCHR: CESCR', authority: 'primary' },
+    ],
+  },
+  {
+    id: 'non-retrogression',
+    term: 'Non-Retrogression',
+    definition: 'A principle developed by the CESCR holding that states cannot reduce existing protections for economic, social, and cultural rights without demonstrating that the reduction proved unavoidable and proportionate. States bear the burden of justifying any retrogressive measure against five criteria: reasonableness, necessity, proportionality, protection of disadvantaged groups, and examination of alternatives.',
+    category: 'treaty',
+    related: ['icescr', 'progressive-realization', 'cescr'],
+    seeAlso: '/covenant/articles/article-2',
+    sources: [
+      { url: 'https://www.ohchr.org/en/treaty-bodies/cescr', label: 'OHCHR: CESCR', authority: 'primary' },
     ],
   },
   {
