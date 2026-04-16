@@ -1,8 +1,8 @@
 [
   {
-    "hash": "9511ff0e",
-    "date": "2026-04-15T18:10:00-05:00",
-    "subject": "fix: scan-020 remediation \u2014 8/10 findings from psychology-agent"
+    "hash": "9511ff0e8827662ad7c521b0c2c7ff97aaeed9c2",
+    "date": "2026-04-15T18:08:50-05:00",
+    "subject": "fix: scan-020 remediation — 8/10 findings from psychology-agent"
   },
   {
     "hash": "fca44c609af70374b27a685d830645ddd333905f",
@@ -12,7 +12,7 @@
   {
     "hash": "e304b2bf247854d9d0a0c79744ae4cc67e78a756",
     "date": "2026-04-14T22:56:55-05:00",
-    "subject": "fix: scan-019 remediation \u2014 10/10 findings from psychology-agent"
+    "subject": "fix: scan-019 remediation — 10/10 findings from psychology-agent"
   },
   {
     "hash": "1cef55412304717641b7073c6e37c8a12025f17f",
@@ -22,7 +22,7 @@
   {
     "hash": "91ff61b7d383721d5541d3f745635aaec8e41656",
     "date": "2026-04-13T22:55:29-05:00",
-    "subject": "fix: scan-010-s102c remediation \u2014 7/7 findings from psychology-agent"
+    "subject": "fix: scan-010-s102c remediation — 7/7 findings from psychology-agent"
   },
   {
     "hash": "7ebfa1bfd9828e1d075c4da6e0e9c2244a30d9b9",
@@ -37,7 +37,7 @@
   {
     "hash": "810974561c271bada682eb78e28d71152ca61f36",
     "date": "2026-03-26T11:53:14-05:00",
-    "subject": "interagent sync: content-quality-loop scan-010 \u2014 all 10 findings remediated"
+    "subject": "interagent sync: content-quality-loop scan-010 — all 10 findings remediated"
   },
   {
     "hash": "fe615185cc1c8efab2f2b67c1cfac7c2f6294fe1",

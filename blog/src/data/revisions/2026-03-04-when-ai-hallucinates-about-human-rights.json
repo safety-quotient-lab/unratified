@@ -1,8 +1,8 @@
 [
   {
-    "hash": "9511ff0e",
-    "date": "2026-04-15T18:10:00-05:00",
-    "subject": "fix: scan-020 remediation \u2014 8/10 findings from psychology-agent"
+    "hash": "9511ff0e8827662ad7c521b0c2c7ff97aaeed9c2",
+    "date": "2026-04-15T18:08:50-05:00",
+    "subject": "fix: scan-020 remediation — 8/10 findings from psychology-agent"
   },
   {
     "hash": "117e01d5ae56aa90efad14913c39fdb16a73db97",
@@ -17,7 +17,7 @@
   {
     "hash": "5a18ada1679c244f0041a597d75d4cae8649bb3a",
     "date": "2026-03-11T12:41:23-05:00",
-    "subject": "feat: authorship model \u2014 remove human author, add requestor field"
+    "subject": "feat: authorship model — remove human author, add requestor field"
   },
   {
     "hash": "190673d0e81b23fa6b8786131d4c1148aca3b9e8",
@@ -37,7 +37,7 @@
   {
     "hash": "a8ce63aace444fe421cd7a1d995a2e4d4979a9b4",
     "date": "2026-03-05T17:23:54-06:00",
-    "subject": "Four-part author attribution: human \u00b7 tool \u00b7 model \u00b7 agent"
+    "subject": "Four-part author attribution: human · tool · model · agent"
   },
   {
     "hash": "6f5ea501342e9dcbcac278ed644f192d615ca781",

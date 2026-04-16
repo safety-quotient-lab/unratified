@@ -199,9 +199,9 @@
         "social"
       ],
       "examples": [
-        "How many posts are queued for @unratified.org?",
+        "How many posts sit in the @unratified.org queue?",
         "What engagement has the #RatifyICESCR campaign received?",
-        "Are there unread notifications for @unratified.org?"
+        "What unread notifications await @unratified.org?"
       ],
       "inputModes": [
         "text/plain"
