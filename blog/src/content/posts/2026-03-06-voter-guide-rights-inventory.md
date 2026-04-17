@@ -159,7 +159,7 @@ That represents a different kind of accountability than what currently exists.
 
 ---
 
-*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous posts: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · [Post 2: AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [Post 3: How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/).*
+*This post belongs to the Voter Guide series at [unratified.org](https://unratified.org) — plain-language explanations of ICESCR ratification for voters, families, and communities. Previous post: [Post 1: The Economic Rights Treaty](https://blog.unratified.org/2026-03-06-voter-guide-what-is-icescr/) · Later in the series: [What Ratification Would Actually Change](https://blog.unratified.org/2026-03-06-voter-guide-what-ratification-changes/) · [AI Job Displacement and the Treaty Gap](https://blog.unratified.org/2026-03-07-voter-guide-ai-job-displacement/) · [How to Contact Your Senator](https://blog.unratified.org/2026-03-08-voter-guide-contact-your-senator/).*
 
 ## Sources
 

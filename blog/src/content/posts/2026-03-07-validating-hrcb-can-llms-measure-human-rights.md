@@ -67,9 +67,9 @@ Results across 775 evaluated stories:
 
 | Group | Mean HRCB | n |
 |-------|-----------|---|
-| EP (editorial-positive) | +0.348 | — |
-| EN (editorial-neutral) | +0.205 | — |
-| EC (editorial-contrary) | +0.137 | — |
+| EP (editorial-positive) | +0.348 | (group sizes not reported separately) |
+| EN (editorial-neutral) | +0.205 | (group sizes not reported separately) |
+| EC (editorial-contrary) | +0.137 | (group sizes not reported separately) |
 
 **Kruskal-Wallis H = 23.4, p < 0.0001.** The score reliably separates content that supports rights from content that undermines them. This represents the strongest single validation result.
 

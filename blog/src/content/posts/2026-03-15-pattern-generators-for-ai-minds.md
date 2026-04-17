@@ -28,6 +28,8 @@ reviewStatus: "ai-reviewed"
 journalSource: "§58"
 ---
 
+For the full technical treatment including trigger tiering and three-discipline evaluation, see [Pattern Generators](/posts/2026-03-13-pattern-generators/).
+
 ## Your Brain Runs on Autopilot
 
 You walked today. Maybe you climbed stairs, chewed food, breathed through a conversation. None of these activities required your conscious attention — your nervous system handled the rhythmic coordination automatically while you thought about something else entirely.

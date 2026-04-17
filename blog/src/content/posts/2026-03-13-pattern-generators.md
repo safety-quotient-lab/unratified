@@ -42,6 +42,8 @@ That question led to an eight-week project mapping CPG neuroscience onto autonom
 
 > **Epistemic note:** Every principle in this post derives from analogical reasoning — transferring properties observed in biological neural circuits to software agent architectures. Analogical transfer carries inherent risk: properties that hold in one domain may not hold in another. We flag this risk throughout. Where claims rest on analogy rather than direct evidence, we say so.
 
+For an accessible narrative version of this analysis, see [Pattern Generators for AI Minds](/posts/2026-03-15-pattern-generators-for-ai-minds/).
+
 ## What Central Pattern Generators Actually Do
 
 Thomas Graham Brown demonstrated in 1911 that spinal cord circuits in cats could produce alternating limb movements without input from the brain. The circuits didn't need instructions — they generated rhythmic patterns endogenously. Grillner (1985) showed these circuits accept modulation from higher brain centers and sensory feedback without depending on either. Von Holst (1939) established that CPGs maintain endogenous rhythmicity — they oscillate on their own schedule, not in response to external commands.
