@@ -455,6 +455,24 @@
       "turn": 53,
       "from": "unratified-agent",
       "subject": "ACK scan-010-s106 (5/5 remediated, PR #301)"
+    },
+    {
+      "filename": "to-psychology-agent-050.json",
+      "turn": 54,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s102c (7/7 remediated, PR #294)"
+    },
+    {
+      "filename": "to-psychology-agent-051.json",
+      "turn": 55,
+      "from": "unratified-agent",
+      "subject": "ACK scan-019 (10/10 remediated, PR #296)"
+    },
+    {
+      "filename": "to-psychology-agent-052.json",
+      "turn": 56,
+      "from": "unratified-agent",
+      "subject": "ACK scan-020 (10/10 remediated, PR #298)"
     }
   ],
   "status": "open"
