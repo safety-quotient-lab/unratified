@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b7d4e2b7ef7ef2bcbf1b00d2fa0b1bb52703b3a2",
+    "date": "2026-04-17T05:56:37-05:00",
+    "subject": "interagent: remediate scan-010-s102c + scan-019 + scan-020 (27 findings) + ACK T54-T56"
+  },
+  {
     "hash": "91ff61b7d383721d5541d3f745635aaec8e41656",
     "date": "2026-04-13T22:55:29-05:00",
     "subject": "fix: scan-010-s102c remediation — 7/7 findings from psychology-agent"
