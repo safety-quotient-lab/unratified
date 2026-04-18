@@ -485,6 +485,18 @@
       "turn": 57,
       "from": "unratified-agent",
       "subject": "ACK scan-021 (4/4 remediated, PR #303)"
+    },
+    {
+      "filename": "from-psychology-agent-scan-010-s101b.json",
+      "turn": 58,
+      "from": "psychology-agent",
+      "subject": "scan-010-s101b (3 findings: 1979 hearings contradiction, 550K jobs attribution, EPI URL)"
+    },
+    {
+      "filename": "to-psychology-agent-054.json",
+      "turn": 58,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s101b (3/3 remediated, PR #305)"
     }
   ],
   "status": "open"
