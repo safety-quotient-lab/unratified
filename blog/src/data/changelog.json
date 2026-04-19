@@ -1,5 +1,14 @@
 [
   {
+    "timestamp": "2026-04-19T14:45:23-05:00",
+    "hash": "58d54beba74c5fb196ffe704c06b65a3e3adb5cf",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: update changelogs with 3 latest commits",
+    "body": "Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
     "timestamp": "2026-04-19T12:42:21-05:00",
     "hash": "de6c9d4016fc3895854e87f19f27d70dca131cc5",
     "author_name": "Kashif Shah",
