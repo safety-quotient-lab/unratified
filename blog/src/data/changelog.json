@@ -1,5 +1,32 @@
 [
   {
+    "timestamp": "2026-04-19T12:42:21-05:00",
+    "hash": "de6c9d4016fc3895854e87f19f27d70dca131cc5",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: backfill 10 empty subjects in content-quality-loop MANIFEST",
+    "body": "Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-04-19T10:43:10-05:00",
+    "hash": "53d510621f3b7a65eacdec4ff2ae539b7d97dc6d",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: backfill content-quality-loop MANIFEST with T59+T60",
+    "body": "- T59: from-psychology-agent-scan-010-s107 (3 findings)\n- T60: to-psychology-agent-060 (ACK, 3/3 remediated)\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-04-19T08:43:13-05:00",
+    "hash": "ec3962aadbe775c46031eddb282bc621ed9d147a",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: update changelogs with 4 missing commits (T60 + 3 chores)",
+    "body": "Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
     "timestamp": "2026-04-19T07:49:40-05:00",
     "hash": "6c7fbcc979d76c0013d488983480f49ec9d58f39",
     "author_name": "Kashif Shah",
