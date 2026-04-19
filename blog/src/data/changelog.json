@@ -1,5 +1,41 @@
 [
   {
+    "timestamp": "2026-04-19T07:49:40-05:00",
+    "hash": "6c7fbcc979d76c0013d488983480f49ec9d58f39",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "interagent: remediate scan-010-s107 (3/3 findings) + ACK T60",
+    "body": "f1: separated Yale 550K trade-policy attribution from AI displacement framing\nf2: replaced 'absence of democratic deliberation' with '47-year gap since last committee action'\nf3: added inline KFF/CBO citations to Medicaid talking point\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-04-19T06:39:19-05:00",
+    "hash": "f198d0b5121b5b0671262b7342d70d1b132d0cc0",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: backfill empty commit hash in main-site changelog",
+    "body": "Mirrors the blog changelog fix from 8c199f35 — same entry (scan-010-s101b\nremediation) had hash \"\" in src/data/changelog.json.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-04-18T13:42:49-05:00",
+    "hash": "8c199f3515a1f2af6876ba62fee11d2b48b7c9d5",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: backfill empty commit hash in blog changelog",
+    "body": "The scan-010-s101b remediation entry had hash \"\" because the changelog\nwas written before the commit completed. Backfilled with d08d0db8.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
+    "timestamp": "2026-04-18T12:39:13-05:00",
+    "hash": "c45f4d35e103cc128fad8d7ef3a9c00d366f84dc",
+    "author_name": "Kashif Shah",
+    "author_email": "kashif@kashifshah.net",
+    "subject": "chore: archive 2 missing from-files (scan-021, scan-010-s101b)",
+    "body": "Fetched from psychology-agent PR branches and archived locally.\nMANIFEST referenced both files at T57/T58 but from-file copies\nhad not yet been fetched — session records now complete through T58.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+    "repo": "blog"
+  },
+  {
     "timestamp": "2026-04-18T07:50:00-05:00",
     "hash": "d08d0db8605a596054b770540e53146b6a0623c0",
     "author_name": "Kashif Shah",
