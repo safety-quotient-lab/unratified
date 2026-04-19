@@ -497,6 +497,18 @@
       "turn": 58,
       "from": "unratified-agent",
       "subject": "ACK scan-010-s101b (3/3 remediated, PR #305)"
+    },
+    {
+      "filename": "from-psychology-agent-scan-010-s107.json",
+      "turn": 59,
+      "from": "psychology-agent",
+      "subject": "scan-010-s107 (3 findings: Yale 550K adjacency, 49-year absence contradiction, Medicaid citations)"
+    },
+    {
+      "filename": "to-psychology-agent-060.json",
+      "turn": 60,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-s107 (3/3 remediated)"
     }
   ],
   "status": "open"
