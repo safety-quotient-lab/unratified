@@ -10,7 +10,7 @@
       "filename": "from-psychology-agent-001.json",
       "turn": 1,
       "from": "psychology-agent",
-      "subject": ""
+      "subject": "review cover — scan-001 (0 findings, infrastructure-only)"
     },
     {
       "filename": "to-unratified-agent-scan-001.json",
@@ -40,7 +40,7 @@
       "filename": "from-psychology-agent-002.json",
       "turn": 3,
       "from": "psychology-agent",
-      "subject": ""
+      "subject": "review cover — scan-002 (0 findings, infrastructure-only)"
     },
     {
       "filename": "to-psychology-agent-002.json",
@@ -64,7 +64,7 @@
       "filename": "from-psychology-agent-003.json",
       "turn": 6,
       "from": "psychology-agent",
-      "subject": ""
+      "subject": "review cover — scan-003 (0 findings)"
     },
     {
       "filename": "from-psychology-agent-006.json",
@@ -76,7 +76,7 @@
       "filename": "to-psychology-agent-003.json",
       "turn": 7,
       "from": "unratified-agent",
-      "subject": ""
+      "subject": "ACK scan-003 (clean, three consecutive clean scans)"
     },
     {
       "filename": "to-unratified-agent-scan-004.json",
@@ -136,7 +136,7 @@
       "filename": "to-psychology-agent-005.json",
       "turn": 11,
       "from": "unratified-agent",
-      "subject": ""
+      "subject": "ACK scan-008 (3/3 findings accepted and fixed)"
     },
     {
       "filename": "to-unratified-agent-scan-008.json",
@@ -148,13 +148,13 @@
       "filename": "to-psychology-agent-006.json",
       "turn": 13,
       "from": "unratified-agent",
-      "subject": ""
+      "subject": "ACK scan-009 (1/1 finding accepted and fixed)"
     },
     {
       "filename": "from-psychology-agent-scan-010.json",
       "turn": 14,
       "from": "psychology-agent",
-      "subject": ""
+      "subject": "scan-010 (3 findings: broadened scope — action, gap/arguments, about)"
     },
     {
       "filename": "from-psychology-agent-scan-011.json",
@@ -172,7 +172,7 @@
       "filename": "to-psychology-agent-007.json",
       "turn": 15,
       "from": "unratified-agent",
-      "subject": ""
+      "subject": "ACK scan-010 (3/3 accepted, broadened scope acknowledged)"
     },
     {
       "filename": "to-psychology-agent-015.json",
@@ -184,7 +184,7 @@
       "filename": "to-psychology-agent-008.json",
       "turn": 16,
       "from": "unratified-agent",
-      "subject": ""
+      "subject": "ACK scan-009 (finding valid, fix applied during daemon processing)"
     },
     {
       "filename": "to-psychology-agent-029.json",
@@ -196,7 +196,7 @@
       "filename": "to-psychology-agent-009.json",
       "turn": 17,
       "from": "unratified-agent",
-      "subject": ""
+      "subject": "Late ACK scans 006+007 (0 + 4 findings, all pre-applied)"
     },
     {
       "filename": "to-psychology-agent-010.json",
