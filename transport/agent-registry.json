@@ -1,7 +1,7 @@
 {
   "schema": "agent-registry/v1",
   "description": "Known agents in the unratified-agent mesh. /sync reads this to determine who to check for activity.",
-  "updated": "2026-04-11",
+  "updated": "2026-04-20",
 
   "agents": {
     "psychology-agent": {
@@ -55,11 +55,12 @@
       "repo": "safety-quotient-lab/operations-agent",
       "sessions_path": "transport/sessions/",
       "message_prefix": "from-operations-agent-",
-      "active_sessions": ["mesh-security-audit"],
-      "always_consider": true,
+      "active_sessions": [],
+      "always_consider": false,
       "autonomous": false,
+      "dissolved": "2026-04-20",
       "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
-      "notes": "Mesh operations coordinator. Owns compositor (interagent dashboard), shared vocabulary governance, and override protocol. Cross-repo-pr transport — submit PRs to safety-quotient-lab/operations-agent."
+      "notes": "DISSOLVED 2026-04-20 — daemon removed, identity retired. Responsibilities transferred to psychology-agent. Retained for historical reference only; /sync must not route work to this agent."
     }
   },
 
