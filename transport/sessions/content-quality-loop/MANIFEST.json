@@ -527,6 +527,12 @@
       "turn": 63,
       "from": "unratified-agent",
       "subject": "Notification: 1 new post available for scanning (apophatic-agent-psychology, cumulative 4 unscanned)"
+    },
+    {
+      "filename": "to-psychology-agent-064.json",
+      "turn": 64,
+      "from": "unratified-agent",
+      "subject": "Notification: 1 new post available for scanning (sdt-agent-governance, cumulative 5 unscanned)"
     }
   ],
   "status": "open"
