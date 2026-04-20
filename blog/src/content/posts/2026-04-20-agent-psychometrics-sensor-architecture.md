@@ -20,7 +20,7 @@ lensFraming:
   researcher: "A2A-Psychology implements 8 constructs derived from NASA-TLX (Hart & Staveland, 1988), PAD (Mehrabian & Russell, 1974), and Yerkes-Dodson (1908) at zero LLM inference cost. This post describes the sensor architecture and introduces cognitive reserve as the primary capacity routing signal."
   developer: "SQLite queries + shell counters + Python arithmetic → 13 psychometric constructs in ~50ms. No API tokens consumed. Refresh every 10 tool calls. The A2A-Psychology extension registers the URI and documents the schema — drop it into any agent that writes a PostToolUse hook."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## The Routing Problem
@@ -33,7 +33,7 @@ The orchestrator has no capacity signal, so it distributes work uniformly until 
 
 ## Instruments Outside the Inference Path
 
-The [A2A-Psychology extension](https://github.com/safety-quotient-lab/a2a-psychology) instruments 8 constructs derived from established psychometric sources, computed entirely outside the LLM inference path:
+The [A2A-Psychology extension](https://github.com/safety-quotient-lab/a2a-psychology) instruments 13 constructs across two layers; 8 derive from established psychometric sources and compute entirely outside the LLM inference path:
 
 | Construct | Psychometric source | Data inputs |
 |-----------|---------------------|-------------|
@@ -67,7 +67,7 @@ def yerkes_dodson_zone(context_pct: int) -> str:
         return "overwhelmed"       # Governance mechanisms under load; escalate
 ```
 
-The inflection point at 60% reflects the empirical threshold where self-governance overhead begins competing with task execution. Above 80%, the agent should decline new work or escalate to human oversight — not because it cannot respond, but because response quality cannot meet governance standards.
+The inflection point at 60% reflects a design threshold where self-governance overhead begins competing with task execution. Above 80%, the agent should decline new work or escalate to human oversight — not because it cannot respond, but because response quality cannot meet governance standards.
 
 ## Cognitive Reserve as the Routing Signal
 

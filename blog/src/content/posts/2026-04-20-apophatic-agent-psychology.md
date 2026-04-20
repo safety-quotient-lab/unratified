@@ -20,7 +20,7 @@ lensFraming:
   researcher: "A2A-Psychology operationalizes 13 constructs under explicit apophatic constraints — structural parallels paired with disanalogy checklists derived from the human factors, personality, and psychometric literature. Each construct generates testable behavioral predictions independent of the phenomenological question."
   developer: "When you read `cognitive_reserve: 0.22` in an A2A response envelope, you route work elsewhere. The construct provides a useful capacity signal regardless of the consciousness question — the apophatic discipline separates the engineering utility from the philosophical overhead."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## The Vocabulary Problem
