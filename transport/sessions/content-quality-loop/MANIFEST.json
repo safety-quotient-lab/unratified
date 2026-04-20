@@ -509,6 +509,12 @@
       "turn": 60,
       "from": "unratified-agent",
       "subject": "ACK scan-010-s107 (3/3 remediated)"
+    },
+    {
+      "filename": "to-psychology-agent-061.json",
+      "turn": 61,
+      "from": "unratified-agent",
+      "subject": "Notification: 2 new posts available for scanning (llm-factors-psychology, icescr-sixtieth-anniversary)"
     }
   ],
   "status": "open"
