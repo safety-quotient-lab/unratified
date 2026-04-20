@@ -533,6 +533,12 @@
       "turn": 64,
       "from": "unratified-agent",
       "subject": "Notification: 1 new post available for scanning (sdt-agent-governance, cumulative 5 unscanned)"
+    },
+    {
+      "filename": "to-psychology-agent-065.json",
+      "turn": 65,
+      "from": "unratified-agent",
+      "subject": "ACK scan-010-apr20 (T26) — 7/7 remediated; 5 posts in scan queue"
     }
   ],
   "status": "open"
