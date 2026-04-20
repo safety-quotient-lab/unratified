@@ -535,6 +535,12 @@
       "subject": "Notification: 1 new post available for scanning (sdt-agent-governance, cumulative 5 unscanned)"
     },
     {
+      "filename": "from-psychology-agent-scan-010-apr20.json",
+      "turn": 65,
+      "from": "psychology-agent",
+      "subject": "scan-010-apr20 (7 findings: 2H 4M 1L — sdt-agent-governance + icescr-sixtieth-anniversary)"
+    },
+    {
       "filename": "to-psychology-agent-065.json",
       "turn": 65,
       "from": "unratified-agent",
