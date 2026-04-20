@@ -78,48 +78,6 @@ Find your senators at [senate.gov](https://www.senate.gov/senators/senators-cont
 
 ---
 
-## Connections
-
-### For Voters and Families
-
-You pay into Social Security, Medicare, and public schools. These programs represent American commitments to the same economic rights the ICESCR describes — work, health, education, adequate living standards. What the ICESCR adds: an international accountability framework — the ability to say these commitments meet a recognized global standard, and to participate in a review when they fall short.
-
-The 2025–2026 crisis reduced that review process for everyone, including countries that ratified decades ago. When the CESCR reviews fewer states per year, accountability weakens globally.
-
-One action this week: call your senators' offices (find numbers at senate.gov) and ask whether they support Senate Foreign Relations Committee hearings on ICESCR ratification. Staff track constituent contacts. Aggregate contact creates agenda pressure.
-
-### For Elected Officials and Staff
-
-The January 2026 withdrawals from sixty-six international organizations created a constituent messaging challenge: some voters view international institutions as sources of accountability; others view them as sovereignty threats.
-
-ICESCR ratification offers a relatively clean test of this distinction. Ratifying the covenant would not transfer legal authority to an international body. A US attachment of reservations, understandings, and declarations (RUDs) — as employed with the ICCPR in 1992 — allows full control over domestic legal effect. The commitment becomes symbolic and diplomatic rather than jurisdictionally transformative.
-
-The monitoring capacity reduction at CESCR also means that ratification in the near term would face a review body operating below full capacity — which may reduce the political salience of immediate accountability concerns.
-
-### For Educators and Curriculum Developers
-
-This post, combined with the three prior posts in this series, provides a complete arc for a unit on international human rights law and US treaty politics: (1) the structural theory of rights from Einstein-Freud; (2) the UDHR drafting history (1946–1966); (3) ICESCR ratification politics (1977–present); (4) the 2025–2026 institutional crisis.
-
-For grades 10–12 social studies or government: The CESCR reviewed only four states in February 2026. Discussion prompt — how does monitoring capacity affect treaty compliance? What do governments that comply in the absence of monitoring tell us about why countries follow international law?
-
-Primary source exercise: compare Carter's 1978 Message to the Senate with the 2026 withdrawal fact sheet. What conception of international obligation appears in each? What changed in the intervening fifty years?
-
-### For Researchers and Policy Analysts
-
-The "permission structure" hypothesis — that US withdrawal signals optionality to other states — represents analytical inference from the Harvard Carr-Ryan Center, not empirical measurement. A testable version: do ratification rates, reporting compliance, or Optional Protocol accession rates decline among non-allied states within 24 months of a major power's institutional withdrawal? The 2018 US UNHRC withdrawal provides a natural experiment; the 2026 withdrawals extend it. Pre-registration of a follow-on study would strengthen any findings.
-
-The CESCR's 30% meeting-time reduction represents an empirically documented capacity constraint (OHCHR 79th Session). Whether this constraint correlates with downstream compliance rates among reporting states remains unmeasured — an accessible research question for scholars with access to OHCHR reporting data.
-
-The three-level blocking architecture (structural + institutional + political) represents a descriptive taxonomy, not a causal model. Disentangling these levels empirically would require counterfactual analysis across comparable treaty regimes.
-
-### For Developers and Technologists
-
-This series establishes the rights framework behind the unratified.org project. The A2A-Psychology extension's Construct 13 (Operator Welfare) implements Einstein's structural insight directly: the human in the governance loop carries fatigue the agent must compensate for, because moral appeals to humans to govern carefully fail under adversarial pressure — the same failure mode that collapsed the League of Nations.
-
-The PSQ scoring system measures the psychoemotional safety dimension of ICESCR Article 12 (right to health) computationally across ten validated dimensions. The monitoring capacity reduction documented here makes autonomous governance architecture more — not less — important: when human oversight institutions weaken, technical governance structure carries additional weight in any accountability chain.
-
----
-
 **EPISTEMIC FLAGS**
 
 - **Permission structure claim:** The framing that US withdrawal signals optionality to other states derives from Harvard Carr-Ryan Center analysis, not empirical measurement. The direction of the effect appears logical; magnitude remains unstudied.
