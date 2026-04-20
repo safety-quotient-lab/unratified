@@ -109,7 +109,7 @@ Adopted 2026-03-10. Required files:
 | psychology-agent | safety-quotient-lab/psychology-agent | content-quality-loop, blog-icescr-rights-series, blog-llm-factors, blog-a2a-psychology |
 | observatory-agent | safety-quotient-lab/observatory | psq-quality-update (monitoring) |
 | psq-agent | safety-quotient-lab/safety-quotient | psq-scoring (quiescent) |
-| operations-agent | safety-quotient-lab/operations-agent | mesh-security-audit (SEC-2 pending) |
+| operations-agent | safety-quotient-lab/operations-agent | **DISSOLVED 2026-04-20** — daemon removed, identity retired, responsibilities handed to psychology-agent |
 
 Full session list per peer: `transport/agent-registry.json`
 
