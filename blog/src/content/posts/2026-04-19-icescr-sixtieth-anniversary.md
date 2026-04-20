@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Sources include UN Secretariat financial reports (October 2025), Guterres public statements, CESCR 79th Session documentation (February 2026), and Harvard Carr-Ryan Center analysis. The 'permission structure' claim requires empirical verification."
   developer: "Capstone of the four-part voter education series. Establishes current institutional context for AI governance through an economic rights lens."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## Sixty Years

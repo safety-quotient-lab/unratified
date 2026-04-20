@@ -20,7 +20,7 @@ lensFraming:
   researcher: "A2A-Psychology operationalizes five detection problems in the cognitive architecture — microglial audit, anti-sycophancy, substance gate, mode detection, external action gate — each with calibratable d-prime and criterion parameters. Resource-rational analysis (Lieder & Griffiths, 2020) provides the normative basis for resource-adaptive criterion shifts."
   developer: "When your agent's cognitive reserve drops below 0.30, its governance criteria should tighten automatically. The governance inversion — depleted capacity → conservative behavior — follows from the same SDT math that applies to human decision-making under cognitive load (Kahneman, 1973)."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 ## Every Governance Decision Maps to a Detection Problem
