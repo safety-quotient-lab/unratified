@@ -1,5 +1,20 @@
 [
   {
+    "hash": "e046a0cc81c45281b148089f8af2da65ff68c061",
+    "date": "2026-04-20T09:24:42-05:00",
+    "subject": "blog: mark sdt-agent-governance + icescr-60th as ai-reviewed"
+  },
+  {
+    "hash": "2dad5602da5bc1b3b4a26d60fa77f9f3ea4b618f",
+    "date": "2026-04-20T07:42:42-05:00",
+    "subject": "transport: scan-010-apr20 T26 — 7/7 remediated (content-quality-loop T65)"
+  },
+  {
+    "hash": "f8e30bc8d81ae98c597e33cfbf9f6ce491615eb7",
+    "date": "2026-04-20T07:26:43-05:00",
+    "subject": "blog: trim icescr-sixtieth-anniversary to 993 words (was 1641)"
+  },
+  {
     "hash": "ca24a148a0a6c5abbe1d0ef1241a10e59d811e74",
     "date": "2026-04-19T19:57:24-05:00",
     "subject": "blog: publish icescr-sixtieth-anniversary (blog-icescr-rights-series T8)"
