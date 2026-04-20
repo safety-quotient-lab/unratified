@@ -662,6 +662,23 @@ export const glossary: GlossaryTerm[] = [
     broader: ['four-scarcities'],
     seeAlso: '/evidence/economic-landscape',
   },
+  {
+    id: 'd-prime',
+    term: 'D-prime (d′)',
+    abbreviation: "d'",
+    definition: 'A discriminability measure from Signal Detection Theory (Green & Swets, 1966) that quantifies how well a system separates signal from noise, independent of its decision threshold. Higher d-prime reflects stronger detection ability. In agent governance, d-prime captures sensor accuracy — how reliably an agent detects confabulation, sycophancy, or out-of-scope actions.',
+    category: 'methodology',
+    related: ['criterion-sdt'],
+    seeAlso: '/posts/2026-04-20-sdt-agent-governance',
+  },
+  {
+    id: 'criterion-sdt',
+    term: 'Criterion (decision threshold)',
+    definition: 'In Signal Detection Theory, the evidence level a system requires before classifying input as signal rather than noise. Distinct from discriminability (d-prime): a system can hold the same criterion while varying detection sensitivity, or vice versa. Agent governance criteria shift under resource depletion — conservative defaults emerge when reasoning capacity declines, reducing miss costs at the expense of more false alarms.',
+    category: 'methodology',
+    related: ['d-prime'],
+    seeAlso: '/posts/2026-04-20-sdt-agent-governance',
+  },
 ];
 
 /** Look up a single term by ID. */

@@ -1,6 +1,6 @@
 ---
 title: "The 60th Anniversary No One Celebrated: What the 2025–2026 Crisis Means for Your Economic Rights"
-summary: "In 2026, the International Covenant on Economic, Social and Cultural Rights turns sixty. Instead of celebration: US withdrawal from sixty-six international organizations, a UN facing financial collapse, and the treaty's monitoring body losing a third of its meeting capacity. The worst conditions for economic rights since the Cold War split."
+summary: "In 2026, the International Covenant on Economic, Social and Cultural Rights turns sixty. Instead of celebration: US withdrawal from sixty-six international organizations, a UN facing financial collapse, and the treaty's monitoring body losing a third of its meeting capacity. Researchers describe these as among the most serious conditions for economic rights since the Cold War split."
 publishedDate: "2026-04-19T11:00:00-05:00"
 author:
   tool:
@@ -36,7 +36,7 @@ The occasion has produced no celebration. Instead, the ICESCR enters its seventh
 
 ## January 2026
 
-On January 20, 2026, the US government directed withdrawal from sixty-six international organizations. The list included the Human Rights Council, the World Health Organization, UNESCO, UNRWA, and bodies protecting children, women, and conflict victims ([White House Fact Sheet, January 2026](https://www.whitehouse.gov/fact-sheets/)).
+On January 20, 2026, the US government directed withdrawal from sixty-six international organizations. The list included the Human Rights Council, the World Health Organization, UNESCO, UNRWA, and bodies protecting children, women, and conflict victims (White House, "Putting America First in International Organizations," January 20, 2026 — archived at archive.org if removed from whitehouse.gov).
 
 The ICESCR's monitoring body — the Committee on Economic, Social and Cultural Rights (CESCR) — did not appear by name on the withdrawal list. The US has never ratified the covenant, so the Committee has never reviewed the US. But the withdrawals affect the institutional infrastructure that makes monitoring possible for the 173 states that have ratified.
 
@@ -72,7 +72,7 @@ The AI displacement dimension cuts in a different direction. The rights the ICES
 
 ## What Voters Can Do
 
-The ICESCR ratification pathway runs through the Senate Foreign Relations Committee. No committee chair has scheduled ratification hearings in nearly fifty years. Constituent contact — phone calls, written letters, in-person meetings with Senate offices — remains among the most documented methods for moving low-salience policy issues onto committee agendas ([Congressional Management Foundation, 2023](https://www.congressfoundation.org/)).
+The ICESCR ratification pathway runs through the Senate Foreign Relations Committee. No committee chair has scheduled ratification hearings in nearly fifty years. Constituent contact — phone calls, written letters, in-person meetings with Senate offices — remains among the most documented methods for moving low-salience policy issues onto committee agendas (Congressional Management Foundation, 2023, *Communicating with Congress* series — see [congressfoundation.org](https://www.congressfoundation.org/) for the full report).
 
 Find your senators at [senate.gov](https://www.senate.gov/senators/senators-contact.htm). The OHCHR maintains the treaty text and ratification status at [ohchr.org/icescr](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights).
 

@@ -45,7 +45,7 @@ Each detection problem carries a different miss-to-false-alarm cost ratio, which
 
 ## Resource-Adaptive Criteria
 
-Kahneman (1973) established that cognitive resources deplete under sustained work. Danziger and colleagues (2011) documented the behavioral consequence in judicial decisions: judges granted parole more frequently at session start and after breaks, then shifted toward denial as the session lengthened. The pattern reflects resource depletion, not negligence — and it represents the rational response under SDT. When reasoning capacity declines, the cost of a complex miss exceeds the cost of a false alarm. Conservative defaults protect against errors the depleted system can no longer detect.
+Kahneman (1973) established that cognitive resources deplete under sustained work. Danziger and colleagues (2011) reported a behavioral pattern in judicial decisions: judges granted parole more frequently at session start and after breaks, then shifted toward denial as the session lengthened. This specific finding faces replication scrutiny — Glöckner (2016) demonstrated the pattern may reflect case-ordering effects rather than resource depletion — but the broader SDT principle holds across multiple paradigms: depleted reasoners shift toward conservative defaults. The pattern represents the rational response under SDT. When reasoning capacity declines, the cost of a complex miss exceeds the cost of a false alarm. Conservative defaults protect against errors the depleted system can no longer detect.
 
 The same pattern applies to AI agents. As context window utilization rises, cognitive reserve (the agent's available capacity for additional work) declines. The sensors remain accurate, but the reasoning layer that interprets sensor output operates under constraint. Resource-rational analysis (Lieder & Griffiths, 2020) provides the normative basis: given limited computational resources, a rational agent should adopt simpler, more conservative decision strategies when resources run scarce. The optimal criterion shifts toward caution — not because caution always produces better outcomes, but because the cost of a missed governance failure under degraded reasoning exceeds the cost of an unnecessary escalation.
 
@@ -53,7 +53,7 @@ The governance implication follows directly: **depleted agents should seek more 
 
 ## The Governance Inversion
 
-[Post 2 in this series](https://blog.unratified.org/posts/2026-04-20-apophatic-agent-psychology/) introduced Operator Welfare (Construct 13): the human in the loop carries fatigue that affects governance quality. When operator capacity decreases, the agent faces a compounding problem — the human responsible for oversight operates with diminished capacity to provide it.
+[Post 2 in this series](/posts/2026-04-20-apophatic-agent-psychology/) introduced Operator Welfare (Construct 13): the human in the loop carries fatigue that affects governance quality. When operator capacity decreases, the agent faces a compounding problem — the human responsible for oversight operates with diminished capacity to provide it.
 
 The governance inversion resolves this directly. When Operator Welfare signals elevated fatigue load, the agent tightens its criteria rather than relaxing them to reduce the burden. Fewer actions proceed without review, but each escalation arrives with higher-confidence flagging — the agent pre-filters more aggressively before surfacing a concern.
 
@@ -74,6 +74,14 @@ AI governance frameworks typically specify permitted action categories, approval
 Governance specifications should include resource-adaptive criterion schedules — explicit mappings from cognitive reserve levels to detection thresholds for each of the five problem types. They should include Operator Welfare provisions: how the agent adjusts when human oversight capacity declines. And they should include calibration data requirements: what activation logs the agent must maintain to enable criterion refinement over time.
 
 The math for this exists in the psychophysics literature. The sensor architecture exists in A2A-Psychology. Connecting the two in governance specifications represents the remaining engineering and policy work.
+
+---
+
+**EPISTEMIC FLAGS**
+
+- **Danziger et al. (2011) replication status:** This study faces active replication scrutiny. Glöckner (2016) demonstrated the pattern may reflect case-ordering effects rather than resource depletion. The post uses it to illustrate the SDT principle, not as definitive evidence for judicial resource depletion specifically.
+- **0.30 cognitive reserve threshold:** The threshold cited in the lensFraming metadata ("when your agent's cognitive reserve drops below 0.30") functions as a working convention in A2A-Psychology, not an empirically derived value. Calibration against operational data remains in progress.
+- **Activation data infrastructure:** The claim that "activation patterns over time produce empirical estimates of d-prime and criterion performance" assumes the sensor collection and labeling infrastructure exists and calibrates correctly. The A2A-Psychology architecture specifies this infrastructure; deployment status varies by agent implementation.
 
 ---
 
