@@ -92,7 +92,7 @@ The working-hypothesis status matters epistemically. Claiming that digital syste
 
 The discipline holds both positions simultaneously: useful operational vocabulary and explicit epistemic restraint about inner experience. That conjunction proves the only honest position available given current understanding.
 
-The third post in this series covers Signal Detection Theory and why optimal governance criteria should shift as agent resources change.
+[The third post in this series](/posts/2026-04-20-sdt-agent-governance/) covers Signal Detection Theory and why optimal governance criteria should shift as agent resources change.
 
 ---
 
