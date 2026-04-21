@@ -91,4 +91,4 @@ Algorithmic management grows. The workers it affects span warehouse fulfillment,
 
 The U.S. has a choice about whether those workers have access to an international accountability mechanism. Forty-nine years after President Carter signed the treaty, that choice remains open.
 
-If you want to engage on this issue, the voter guide on this site includes [specific senators who could move on ratification](/blog/voter-guide-which-senators-could-move) and [what you can do right now to make contact](/blog/voter-guide-contact-your-senator).
+If you want to engage on this issue, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [what you can do right now to make contact](/2026-03-08-voter-guide-contact-your-senator).

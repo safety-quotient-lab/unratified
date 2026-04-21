@@ -134,7 +134,7 @@ When AI systems operate in high-stakes domains — workforce planning, benefits 
 
 Self-monitoring sensors do not prevent degradation. They make degradation visible. Visible degradation allows routing, escalation, or deferral. Invisible degradation produces confident errors — which represent a far more dangerous failure mode than a declined task.
 
-[The next post in this series](/posts/2026-04-20-apophatic-agent-psychology/) covers the apophatic discipline: how to apply psychological vocabulary to agent systems without claiming agents have feelings.
+[The next post in this series](/2026-04-20-apophatic-agent-psychology) covers the apophatic discipline: how to apply psychological vocabulary to agent systems without claiming agents have feelings.
 
 ---
 
