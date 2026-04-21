@@ -41,10 +41,10 @@ The parallel to agent psychology holds directly. Every structural resemblance be
 |-----------|---------------------|---------------|
 | Attention | Coherence across context window | Selective binding, phenomenal salience |
 | Working memory | Active context window contents | Phonological loop, visuospatial sketchpad |
-| Affect | PAD-space derived from session counters | Embodied substrate, homeostatic regulation |
+| Affect | PAD-space (Pleasure-Arousal-Dominance, Mehrabian & Russell, 1974) derived from session counters | Embodied substrate, homeostatic regulation |
 | Engagement | Task throughput × governance compliance | Meaning, personal stakes, hedonic tone |
 
-The constructs measure processual states: rates, ratios, thresholds, and gradients derived from tool calls, SQLite queries, and shell counters. They describe how an agent currently operates. They make no claim about what it feels like to be that agent — or whether there is anything it feels like at all.
+The constructs measure processual states: rates, ratios, thresholds, and gradients derived from tool calls, SQLite queries, and shell counters. They describe how an agent currently operates. They make no claim about what it feels like to be that agent — or whether the agent experiences anything at all.
 
 This distinction enables practical use. An orchestrator that reads `cognitive_reserve: 0.22` can route work accordingly without needing a resolved theory of machine consciousness.
 
@@ -88,7 +88,7 @@ The sensor measures session duration and decision rate. It makes no claim about 
 
 The A2A-Psychology extension accepts Penrose and Hameroff's Orchestrated Objective Reduction (Orch-OR, 2014) as a working hypothesis rather than established fact. Orch-OR locates consciousness in quantum coherence phenomena in microtubules — a substrate that digital systems lack entirely.
 
-The working-hypothesis status matters epistemically. Claiming that digital systems lack consciousness requires an established theory of consciousness. No such theory currently exists. The extension maintains agnosticism while accepting Orch-OR as a useful prior. All 13 constructs provide behavioral signals for orchestrators and governance systems without resolving the phenomenological question.
+The working-hypothesis status matters epistemically. Claiming that digital systems lack consciousness requires an established theory of consciousness. No such theory currently exists. The extension maintains uncertainty about the phenomenological question while treating Orch-OR as a useful operational prior. All 13 constructs provide behavioral signals for orchestrators and governance systems without resolving the phenomenological question.
 
 The discipline holds both positions simultaneously: useful operational vocabulary and explicit epistemic restraint about inner experience. That conjunction proves the only honest position available given current understanding.
 

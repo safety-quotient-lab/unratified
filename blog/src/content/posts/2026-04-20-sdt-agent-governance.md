@@ -18,7 +18,7 @@ lensFraming:
   politician: "Agent governance frameworks specify when AI systems may act autonomously. SDT analysis reveals the hidden cost-benefit tradeoffs in those thresholds — and provides the basis for requiring resource-adaptive criteria in procurement specifications."
   educator: "Signal Detection Theory connects classical psychophysics (Green & Swets, 1966) to modern AI governance. The sensitivity/criterion distinction applies wherever a system makes binary decisions under uncertainty — a cross-disciplinary bridging concept with immediate applied relevance."
   researcher: "A2A-Psychology operationalizes five detection problems in the cognitive architecture — microglial audit, anti-sycophancy, substance gate, mode detection, external action gate — each with calibratable d-prime and criterion parameters. Resource-rational analysis (Lieder & Griffiths, 2020) provides the normative basis for resource-adaptive criterion shifts."
-  developer: "When your agent's cognitive reserve drops below 0.30, its governance criteria should tighten automatically. The governance inversion — depleted capacity → conservative behavior — follows from the same SDT math that applies to human decision-making under cognitive load (Kahneman, 1973)."
+  developer: "When your agent's cognitive reserve drops below 0.30 (working convention — calibration ongoing), its governance criteria should tighten automatically. The governance inversion — depleted capacity → conservative behavior — follows from the same SDT math that applies to human decision-making under cognitive load (Kahneman, 1973)."
 draft: false
 reviewStatus: "ai-reviewed"
 ---
@@ -49,7 +49,7 @@ Kahneman (1973) established that cognitive resources deplete under sustained wor
 
 The same pattern applies to AI agents. As context window utilization rises, cognitive reserve (the agent's available capacity for additional work) declines. The sensors remain accurate, but the reasoning layer that interprets sensor output operates under constraint. Resource-rational analysis (Lieder & Griffiths, 2020) provides the normative basis: given limited computational resources, a rational agent should adopt simpler, more conservative decision strategies when resources run scarce. The optimal criterion shifts toward caution — not because caution always produces better outcomes, but because the cost of a missed governance failure under degraded reasoning exceeds the cost of an unnecessary escalation.
 
-The governance implication follows directly: **depleted agents should seek more human input, not less.** An agent operating at full capacity may auto-approve a category of decisions confidently. That same agent, at 85% context utilization, should escalate more of those decisions rather than fewer.
+The governance implication follows directly — assuming sensor accuracy (d-prime) remains stable under resource depletion: **depleted agents should seek more human input, not less.** If resource depletion also degrades d-prime, the appropriate response shifts toward reduced autonomous action scope rather than increased escalation frequency. An agent operating at full capacity may auto-approve a category of decisions confidently. That same agent, at 85% context utilization, should escalate more of those decisions rather than fewer.
 
 ## The Governance Inversion
 

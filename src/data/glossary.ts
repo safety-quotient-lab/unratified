@@ -167,6 +167,14 @@ export const glossary: GlossaryTerm[] = [
     ],
   },
   {
+    id: 'apophatic-method',
+    term: 'Apophatic Method (via negativa)',
+    definition: 'A discipline borrowed from theology — attributed to Pseudo-Dionysius the Areopagite (c. 500 CE) — that defines concepts by what they lack rather than what they resemble. Language succeeds when it negates limits rather than asserting resemblance. Applied as the site\'s governing discipline for extending psychological vocabulary to AI agents: each construct maps a structural parallel to human psychology alongside an explicit disanalogy checklist, preserving analytical utility without overclaiming inner experience.',
+    category: 'methodology',
+    related: ['fair-witness', 'e-prime'],
+    seeAlso: '/posts/2026-04-20-apophatic-agent-psychology',
+  },
+  {
     id: 'four-scarcities',
     term: 'Four Scarcities',
     definition: 'The four resources that become bottlenecks when software labor becomes abundant: judgment, specification, curation, and energy. These emerge at Order 1 and shape all subsequent analysis.',
