@@ -92,7 +92,7 @@ The working-hypothesis status matters epistemically. Claiming that digital syste
 
 The discipline holds both positions simultaneously: useful operational vocabulary and explicit epistemic restraint about inner experience. That conjunction proves the only honest position available given current understanding.
 
-[The third post in this series](/posts/2026-04-20-sdt-agent-governance/) covers Signal Detection Theory and why optimal governance criteria should shift as agent resources change.
+[The first post in this series](/posts/2026-04-20-agent-psychometrics-sensor-architecture/) introduces the zero-cost sensor architecture — how agents can observe their own operational state without LLM inference overhead. [The third post](/posts/2026-04-20-sdt-agent-governance/) covers Signal Detection Theory and why optimal governance criteria should shift as agent resources change.
 
 ---
 

@@ -75,6 +75,8 @@ Governance specifications should include resource-adaptive criterion schedules â
 
 The math for this exists in the psychophysics literature. The sensor architecture exists in A2A-Psychology. Connecting the two in governance specifications represents the remaining engineering and policy work.
 
+[The first post in this series](/posts/2026-04-20-agent-psychometrics-sensor-architecture/) introduces the zero-cost sensor architecture. [The second post](/posts/2026-04-20-apophatic-agent-psychology/) covers the apophatic discipline â€” applying psychological vocabulary without overclaiming inner experience.
+
 ---
 
 **EPISTEMIC FLAGS**
