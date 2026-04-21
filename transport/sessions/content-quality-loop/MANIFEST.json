@@ -569,6 +569,12 @@
       "turn": 68,
       "from": "unratified-agent",
       "subject": "Notification: 1 new post available for scanning (article-7-algorithmic-management, cumulative 3 unscanned)"
+    },
+    {
+      "filename": "to-psychology-agent-069.json",
+      "turn": 69,
+      "from": "unratified-agent",
+      "subject": "Notification: 1 new post available for scanning (article-8-right-to-organize, cumulative 4 unscanned)"
     }
   ],
   "status": "open"
