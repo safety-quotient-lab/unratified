@@ -92,7 +92,7 @@ The [action guide](/action/) explains how to contact your senators directly. Rat
 
 - CESCR GC 14 (2000) AAAQ framework cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
 - The figure of approximately 160 million Americans with employer-sponsored insurance reflects pre-2026 estimates; verify current coverage statistics before citing in research contexts
-- Mental health effects of prior automation waves are characterized as "documented" — specific studies not cited; verify against peer-reviewed literature before academic use
+- Mental health effects of prior automation waves are characterized as suggested — specific studies not cited; verify against peer-reviewed literature before academic use
 - The claim that COBRA is unaffordable for most displaced workers is a structural inference from cost-sharing ratios, not a current empirical study
 - The occupational health / contractor classification analysis is a structural inference from OSHA employee-classification rules; no CESCR finding specifically addresses platform worker classification as an Article 12 gap
 - The retrogression analysis is an interpretive inference, not a published CESCR finding
