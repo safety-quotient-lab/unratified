@@ -575,6 +575,12 @@
       "turn": 69,
       "from": "unratified-agent",
       "subject": "Notification: 1 new post available for scanning (article-8-right-to-organize, cumulative 4 unscanned)"
+    },
+    {
+      "filename": "to-psychology-agent-070.json",
+      "turn": 70,
+      "from": "unratified-agent",
+      "subject": "Notification: 1 new post available for scanning (article-9-social-security, cumulative 5 unscanned)"
     }
   ],
   "status": "open"
