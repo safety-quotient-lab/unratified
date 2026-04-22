@@ -52,7 +52,7 @@ CESCR GC 14 requires that states ensure economic accessibility — that cost doe
 
 Article 12 covers mental health with the same legal weight as physical health. This matters because the mental health burden of AI displacement does not require hospitalization or a diagnosed condition to represent a rights concern — it operates through the chronic stress, anxiety, and depression that income insecurity and employment loss produce at scale.
 
-Research on prior automation waves documents elevated mental health effects among displaced workers: increased depression rates, elevated substance use, reduced life expectancy in affected cohorts. These effects persist years beyond the initial displacement event. The communities where manufacturing automation concentrated in the 1980s and 1990s showed measurable public health consequences a generation later.
+Research on prior automation waves suggests elevated mental health effects among displaced workers: increased depression rates, elevated substance use, reduced life expectancy in affected cohorts. These effects persist years beyond the initial displacement event. The communities where manufacturing automation concentrated in the 1980s and 1990s showed measurable public health consequences a generation later.
 
 AI displacement's current wave concentrates in different occupational categories — administrative, customer service, logistics coordination — but the mechanism is the same: sudden income loss, status change, and prolonged uncertainty. The mental health dimension of Article 12 would require ratifying states to report on these population-level effects and demonstrate proactive response.
 

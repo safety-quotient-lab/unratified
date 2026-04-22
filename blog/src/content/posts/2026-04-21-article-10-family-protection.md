@@ -50,7 +50,7 @@ The United States has the least generous statutory parental leave among OECD nat
 
 Independent contractors receive none of these protections. They fall outside the statute entirely.
 
-AI displacement concentrates in roles where women are disproportionately represented: administrative support, customer service, retail transaction processing, data entry, and routine document handling. Research by McKinsey Global Institute suggests women face higher automation exposure than men in several developed economies, partly because of occupational concentration in these categories.
+AI displacement concentrates in roles where women are disproportionately represented: administrative support, customer service, retail transaction processing, data entry, and routine document handling. Research by McKinsey Global Institute (2019, *The Future of Women at Work*) suggests women face higher automation exposure than men in several developed economies, partly because of occupational concentration in these categories.
 
 When automation eliminates a position in one of these roles, the displaced worker's path often leads toward platform or gig arrangements — delivery, caregiving apps, task-based platforms — where the contractor classification is structural, not incidental. The worker may remain employed by any practical measure. The legal relationship that carried maternity protections does not continue.
 
