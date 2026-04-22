@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 4 (1991) defines adequate housing across seven criteria including affordability and security of tenure. GC 12 (1999) defines the right to adequate food through availability, accessibility, adequacy, and sustainability. Gig-economy income volatility undermines affordability and accessibility on both dimensions. No U.S. periodic report to CESCR has ever addressed this."
   developer: "Algorithmic tenant screening — credit models, income verification systems, background check APIs — now mediates housing access for millions of workers. These systems were designed for stable-employment income patterns. Gig and platform workers with volatile 1099 income fail screening criteria that assume W-2 continuity. Article 11 would require states to account for this gap."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 The job disappears. The income disappears. Then, with a lag that varies by savings and circumstance, other things start to disappear: the ability to pass a rental application, to qualify for a mortgage, to cover the utilities, to keep the refrigerator stocked.
@@ -40,7 +40,7 @@ CESCR has elaborated both dimensions in detail. General Comment 4 (1991) defines
 
 General Comment 12 (1999) approaches the right to adequate food through four dimensions: availability, accessibility, adequacy, and sustainability. Accessibility includes both physical and economic access — the ability to acquire food through means that do not threaten other rights.
 
-Both comments share a foundational premise: these are not outcomes contingent on labor market participation. They apply to everyone.
+Both comments share a foundational premise: these outcomes do not depend on labor market participation. They apply to everyone.
 
 ## The Income-Volatility Problem
 
@@ -64,7 +64,7 @@ The U.S. has produced no periodic report to CESCR on housing accessibility. It f
 
 ## The Food Security Dimension
 
-The right to be free from hunger — Article 11's floor — connects to displacement through the same income-volatility mechanism. Food insecurity rates among gig and platform workers run above national averages, concentrated in the same occupational categories where automation exposure concentrates: service workers, delivery personnel, independent contractors in administrative roles.
+The right to be free from hunger — Article 11's floor — connects to displacement through the same income-volatility mechanism. Research suggests food insecurity rates among gig and platform workers run above national averages, concentrated in the same occupational categories where automation exposure concentrates: service workers, delivery personnel, independent contractors in administrative roles.
 
 Adequate food requires economic accessibility — the capacity to acquire food without compromising other essential expenditures. Income volatility makes this calculation unpredictable in ways that stable employment does not. A week of low gig income can place rent and groceries in competition. Article 11 contemplates this conflict and treats it as a condition requiring a state response.
 

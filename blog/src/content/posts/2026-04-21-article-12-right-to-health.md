@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR GC 14 (2000) defines economic accessibility as the requirement that health services be affordable for all, including socially disadvantaged groups. Gig workers and displaced employees who lose employer-sponsored insurance face documented gaps in both coverage continuity and affordability. Article 12(2)(b) and (c) also address occupational health — an area where platform workers occupy a legal gray zone outside OSHA's employee classifications."
   developer: "Algorithmic hiring systems that screen applicants by employment history gaps, credit scores, or platform-work income patterns may systematically exclude workers displaced by prior AI systems from the employment relationships that provide health coverage. This feedback loop — AI displacement leading to coverage loss leading to barriers to re-employment — falls within Article 12's economic accessibility framework."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 The job disappears. With it, in the United States, goes the health insurance. Not immediately — COBRA continuation coverage exists, at a price most displaced workers cannot sustain. But within months, a worker whose job was automated away is statistically likely to join the ranks of the uninsured or underinsured, navigating a system designed for people with stable employment and steady premiums.

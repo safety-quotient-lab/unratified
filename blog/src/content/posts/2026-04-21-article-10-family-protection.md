@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 16 (2005) interprets Article 10 through an equality lens, requiring states to ensure women's economic participation without penalty to family formation. The reclassification mechanism — AI displacement into gig work, loss of FMLA coverage — produces measurable divergence from this standard that periodic reporting would surface."
   developer: "Platform architecture that classifies workers as independent contractors is also architecture that removes them from FMLA and state maternity leave protections. Article 10 would require states to close this gap. Building systems that route displaced workers into contractor arrangements has policy implications this post traces through."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 When a warehouse automation system replaces a shift worker's job, the immediate loss registers clearly: income, schedule, benefits. What registers less clearly is what happens to the protections that traveled with the job — the eligibility for unpaid leave under the Family and Medical Leave Act, the employer-sponsored health coverage, the unemployment insurance that would apply if a later job also ended.
