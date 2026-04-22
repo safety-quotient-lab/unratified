@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR addresses Article 4 indirectly in General Comment 14 (paras. 28-29) and General Comment 15 (para. 39). No dedicated Article 4 general comment exists. The Siracusa Principles (1984), developed for ICCPR limitation clauses, are routinely extended to ICESCR by analogy — the scholarly literature on this extension remains thin. AI-driven algorithmic constraints on economic rights constitute a structurally novel application of Article 4 analysis: private actors constraining state-bound rights without state authorization through recognized legal instruments."
   developer: "Platform classification decisions (contractor vs. employee) and algorithmic management systems function as de facto limitations on workers' Article 7, 8, and 9 rights. Article 4 establishes that state inaction permitting those limitations can itself trigger treaty accountability. The question for CESCR review: does the U.S. regulatory posture toward platform labor constitute a 'permitted limitation' satisfying the three-part test, or regulatory abdication that doesn't meet treaty standards?"
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 The ICESCR creates rights. Article 4 governs when those rights can be constrained. It establishes that limitations on Covenant rights are not prohibited — but they are not free either. A state seeking to limit an economic or social right must satisfy a three-part test that most of the informal mechanisms currently constraining workers' economic rights in the United States would not pass.

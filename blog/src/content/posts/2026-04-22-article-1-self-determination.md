@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Article 1's economic self-determination dimension encompasses two distinct obligations: the positive right to freely pursue economic, social, and cultural development, and the negative right not to be deprived of one's means of subsistence. HRC General Comment 12 (1984) affirms that the right to self-determination is fundamental and constitutes a precondition for all other rights. The intersection of collective economic self-determination with AI labor displacement remains underexplored in ICESCR scholarship — the existing literature focuses primarily on colonial and post-colonial contexts, while the AI displacement context raises structurally analogous questions about who controls the economic processes shaping a people's material conditions."
   developer: "The systems you build participate in a global reallocation of economic value. Automation tools shift labor income toward capital; AI platforms concentrate data — increasingly the raw material of economic value — in a small number of entities. Article 1's recognition that peoples have the right to 'freely dispose of their natural wealth and resources' raises a question that has no clean technical answer but has growing policy salience: when a people's collective economic activity generates the data that trains AI systems, and those AI systems then displace the same people's labor, does the distributional outcome satisfy or undermine the right to economic self-determination? Developers do not resolve that question, but they operate within it."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 Article 1 of the ICESCR does not begin with a right to food, work, or education. It begins with self-determination. The drafters of the two great 1966 human rights covenants — the ICESCR and its companion, the International Covenant on Civil and Political Rights — placed identical language at the opening of both instruments. That architectural choice was not accidental. Self-determination is the precondition, not merely one right among others.
@@ -61,3 +61,25 @@ The United States has not ratified the ICESCR. This means there exists no intern
 That accountability gap operates at the level Article 1 addresses: structural and collective, not merely individual. Other articles in the Covenant address workers' rights to just conditions, social security, and education. Article 1 addresses the prior question — whether the policy framework that governs how AI reshapes the economy emerges from a political process that the people, as such, can meaningfully direct.
 
 The United States Senate has never voted on ICESCR ratification. The treaty has awaited a vote since 1979. In the intervening decades, the economic transformations that Article 1's drafters could only partially anticipate have continued to accumulate. Self-determination, the Covenant's first commitment, remains the one its domestic policy most visibly leaves unaddressed.
+
+## What You Can Do
+
+The [action guide](/action/) describes how to contact your senators. Article 1 opens the Covenant with its most fundamental commitment — self-determination as the precondition for every economic and social right that follows. In an era when AI concentrates economic gains in a narrow ownership class while displacing workers at scale, Article 1 asks whether the collective capacity to shape economic development remains intact. Ratification would require the United States to engage that question internationally, with evidence, on a regular cycle.
+
+---
+
+*Part of the [ICESCR Article Series](/tags/icescr/) — examining each of the treaty's substantive articles through the lens of AI economic displacement.*
+
+---
+
+**EPISTEMIC FLAGS**
+
+- HRC General Comment 12 (1984) affirming self-determination as a precondition for other rights cited from knowledge base; specific paragraph claims have not been verified against official OHCHR text
+- UN General Assembly Resolution 1803 (1962) on permanent sovereignty over natural resources cited from knowledge base; publicly available through UN ODS
+- AI automation labor displacement projections characterized as "Research suggests" — reflects multiple published labor economics studies with varying methodology and scope; specific figures require current source verification
+- The application of Article 1's economic self-determination framework to AI-driven data accumulation and labor displacement represents an interpretive extension; no CESCR General Comment or HRC practice has directly applied Article 1 to AI labor markets
+- CESCR has not issued a general comment applying Article 1 to digital resources — accurately characterized in the post as nascent scholarship
+
+---
+
+*Published by [unratified.org](https://unratified.org) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*
