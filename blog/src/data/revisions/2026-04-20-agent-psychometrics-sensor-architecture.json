@@ -1,5 +1,20 @@
 [
   {
+    "hash": "0c2d1c3ac1bb2b1f70acf5b76c66968bd192e518",
+    "date": "2026-04-21T14:12:02-05:00",
+    "subject": "content: fix broken internal links in 2 unscanned posts"
+  },
+  {
+    "hash": "5efe7d4c391bd717554145398ae2cfcce6991161",
+    "date": "2026-04-20T23:10:28-05:00",
+    "subject": "blog: add cross-post nav links in a2a-psychology series (posts 1 & 2)"
+  },
+  {
+    "hash": "cf95692966780457d812191492656647d5615957",
+    "date": "2026-04-20T16:27:56-05:00",
+    "subject": "blog: ai-review 3 a2a-psychology series posts (2026-04-20)"
+  },
+  {
     "hash": "d6d4b2115793ad2cc41c499ff524fda70b5fd205",
     "date": "2026-04-20T01:53:19-05:00",
     "subject": "blog: publish a2a-psychology Post 1 (blog-a2a-psychology T3)"
