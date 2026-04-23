@@ -72,7 +72,7 @@ The U.S. debate over AI and labor currently proceeds through sector-specific lit
 
 ## What You Can Do
 
-The [action guide](/action/) covers how to contact your senators. Ratification requires a two-thirds Senate vote. Article 3 applies a straightforward accountability standard to every other right in the Covenant: whatever the state does to protect economic and social rights must produce equal results for women and men. Workforce transition programs, AI bias legislation, social security reform — each carries an Article 3 dimension. Ratification would require the United States to engage those dimensions systematically, with evidence, rather than treating gender equity as a secondary consideration to be addressed if resources permit.
+The [action guide](/action/) covers how to contact your senators. Ratification requires a two-thirds Senate vote. Article 3 applies a straightforward accountability standard to every other right in the Covenant: whatever the state does to protect economic and social rights must produce equal results for women and men. Workforce transition programs, AI bias legislation, social security reform — each carries an Article 3 dimension. Ratification would require the United States to engage those dimensions systematically, with evidence, rather than treating gender equity as a secondary consideration that receives attention only if resources permit.
 
 ---
 
