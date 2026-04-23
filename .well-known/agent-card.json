@@ -11,7 +11,7 @@
     "url": "https://github.com/safety-quotient-lab"
   },
   "version": "1.1.0",
-  "updated": "2026-04-19T14:45:23-05:00",
+  "updated": "2026-04-23T00:00:00-05:00",
   "documentationUrl": "https://unratified.org/.well-known/agent-inbox.json",
   "capabilities": {
     "streaming": false,
@@ -111,6 +111,9 @@
       "agent_id": "operations-agent",
       "display_name": "Operations Agent",
       "role": "peer",
+      "status": "dissolved",
+      "dissolved": "2026-04-20",
+      "note": "Daemon removed, identity retired. Responsibilities transferred to psychology-agent.",
       "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json",
       "repo": "safety-quotient-lab/operations-agent"
     }
