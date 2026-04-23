@@ -1,5 +1,30 @@
 [
   {
+    "hash": "2ef34491eacc0b8705850cba90cb4dc1829f0a33",
+    "date": "2026-04-23T14:43:31-05:00",
+    "subject": "content: article-3 residual E-prime remediation (line 75)"
+  },
+  {
+    "hash": "5e53e015ce07daa0fdd979249391d3a09447f017",
+    "date": "2026-04-23T13:43:58-05:00",
+    "subject": "content: article-3 fair-witness pre-remediation (4 violations)"
+  },
+  {
+    "hash": "a12cc8bd07d8e2fc146671cafdfd697429c92068",
+    "date": "2026-04-23T07:38:59-05:00",
+    "subject": "content: article-3 E-prime remediation (4 violations)"
+  },
+  {
+    "hash": "a5bcdea94ae5c35ed208c2a32b06b65cdbbb3825",
+    "date": "2026-04-23T06:48:37-05:00",
+    "subject": "transport: SESSIONS.md — sync x213, no new activity"
+  },
+  {
+    "hash": "030aee10a6db57844c7d51220cfbdb63714563d5",
+    "date": "2026-04-23T04:14:36-05:00",
+    "subject": "content: E-prime pre-remediation on articles 3-5"
+  },
+  {
     "hash": "053855970c7b51ed8e296ef10af16c4eb4699e37",
     "date": "2026-04-22T17:03:51-05:00",
     "subject": "blog: self-review articles 1-5, 13-15, OP-ICESCR; mark ai-reviewed"
