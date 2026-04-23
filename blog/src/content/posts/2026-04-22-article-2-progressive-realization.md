@@ -23,7 +23,7 @@ lensFraming:
   researcher: "General Comment 3 (1990) and the Limburg Principles (1987) provide the foundational interpretive framework for Article 2. Key doctrinal constructs: progressive realization (Art. 2(1)), minimum core obligations (GC 3 para. 10), maximum available resources (GC 3 para. 11), and the strong presumption against retrogression (GC 3 para. 9). The interaction of these constructs with AI-driven macroeconomic disruption constitutes a largely unexplored area — standard retrogression analysis assumes state action as the driver, not private-sector technological displacement operating without regulatory response."
   developer: "When your platform automates away a job category, neither you nor the state bears direct ICESCR obligations — the treaty binds states, not private actors. But Article 2 creates a state duty to respond: to deploy available resources toward ensuring workers can exercise their rights through the transition. The question of whether a state's response to private-sector automation satisfies Article 2 turns on what the state could have done with its available resources and whether it did."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 Article 2 of the ICESCR does not describe a right. It describes an obligation. Every other article in the Covenant — the right to work, to just conditions of work, to social security, to health, to education — exists within the framework Article 2 establishes. That framework contains a phrase that sounds permissive but delivers real obligations when read carefully: *progressive realization*.
@@ -52,13 +52,13 @@ Article 2(2) adds a distinct layer: states must guarantee that the Covenant's ri
 
 This provision interacts with AI displacement along dimensions that correspond to documented patterns. Automation risk does not distribute randomly across the labor market; it concentrates in occupational profiles associated with specific demographic groups. The workers bearing the earliest and heaviest displacement pressure do not represent a random cross-section of the workforce. They reflect the historical forces that shaped labor market access — forces that produced the present occupational distribution.
 
-A progressive realization framework that improves aggregate economic rights metrics while leaving concentrated displacement among specific demographic groups unaddressed does not satisfy Article 2(2). The Covenant requires that the movement toward full realization brings all groups with it, not that the average improves while disparities widen.
+Under CESCR's reading of the Covenant, a progressive realization framework that improves aggregate economic rights metrics while leaving concentrated displacement among specific demographic groups unaddressed would not satisfy Article 2(2). The Covenant requires that the movement toward full realization brings all groups with it, not that the average improves while disparities widen.
 
 ## Minimum Core: The Non-Negotiable Floor
 
 GC 3 introduces the minimum core obligation concept: regardless of resource constraints, states hold obligations with respect to the minimum essential level of each substantive right. A state in which significant numbers of people lack access to basic employment protections, minimum income, or access to healthcare cannot, on that basis alone, claim it has satisfied even the minimum core of the relevant Covenant rights.
 
-For AI displacement, the minimum core concept asks what floor the state must maintain as technological change reshapes labor markets. Workers displaced by automation do not face categorical exclusion from protection because their displacement has a private-sector origin. The minimum core asks whether the state's response preserves access to the foundational level of work, security, and living standard that the Covenant treats as non-negotiable.
+For AI displacement, the minimum core concept asks what floor the state must maintain as technological change reshapes labor markets. Under CESCR doctrine as currently established, workers displaced by automation would not face categorical exclusion from protection solely because their displacement has a private-sector origin. The minimum core framework asks whether the state's response preserves access to the foundational level of work, security, and living standard that the Covenant treats as non-negotiable.
 
 ## What Ratification Would Require
 
