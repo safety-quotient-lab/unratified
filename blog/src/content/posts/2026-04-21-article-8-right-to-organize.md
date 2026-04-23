@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Article 8(1)(d) guarantees the right to strike 'in conformity with the laws of the particular country.' CESCR has interpreted Article 8 as covering platform workers regardless of employment classification. The interaction between algorithmic monitoring capabilities and collective action rights warrants empirical attention. No U.S. CESCR review cycle currently creates incentive to study this."
   developer: "You may build workforce analytics tools, scheduling systems, or automation platforms. Article 8 asks whether those tools — when they identify organizing activity, reduce strike leverage, or structure work to preclude collective bargaining — interact with internationally recognized rights. In 173 ratifying states, that question has a formal review channel."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 A strike works when the employer needs the workers more than the workers need to stay.

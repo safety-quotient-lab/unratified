@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 19 (2007) interprets Article 9 as requiring social security to cover all individuals, with special attention to non-standard employment relationships. The U.S. absence from CESCR review means no periodic reporting obligation on coverage gaps — including the intersection of algorithmic reclassification and unemployment eligibility."
   developer: "Platform and gig economy infrastructure classifies workers as independent contractors. This post asks whether that classification — and the social security exclusion it produces — interacts with internationally recognized rights. In 173 ratifying states, CESCR scrutiny applies to that question. In the U.S., it does not."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 When automation eliminates a job, the question that follows is not only about finding the next one. It is about what happens in between.

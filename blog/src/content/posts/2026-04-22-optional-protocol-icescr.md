@@ -23,7 +23,7 @@ lensFraming:
   researcher: "The OP-ICESCR admissibility framework (Arts. 3-5) represents the primary innovation: it operationalizes 'progressive realization' as a justiciable standard. Communications require domestic remedy exhaustion and must clear a 'manifestly ill-founded' filter. Committee views are non-binding recommendations; follow-up procedures (Art. 9) monitor implementation. Approximately 26 states have ratified as of 2026. No communication has directly addressed algorithmic management or AI-driven displacement — this represents an open research gap on the OP-ICESCR's practical scope."
   developer: "The Optional Protocol's complaint mechanism operates at a different timescale than the reporting cycle. State reports come every five years; communications can be filed as long-running domestic remedies conclude. For platform developers: if a company's algorithmic management systems suppress wages or suppress organizing rights in OP-ICESCR ratifying states, worker organizations in those states can file communications with the CESCR after exhausting labor board and court processes. The U.S. doesn't currently face this exposure, but that is a function of non-ratification, not of the rights themselves being inapplicable."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 The International Covenant on Economic, Social and Cultural Rights has a problem its authors anticipated: economic and social rights are inherently progressive. They require resources, planning, and time. Making them enforceable through a complaints mechanism — the kind that civil and political rights had from 1966 — required answering a harder question: what does a violation look like when states have discretion over the pace of implementation?

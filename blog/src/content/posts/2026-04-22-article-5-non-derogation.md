@@ -23,7 +23,7 @@ lensFraming:
   researcher: "No dedicated CESCR General Comment addresses Article 5. Interpretation draws primarily from analogous provisions in ICCPR Art. 5, ECHR Art. 17, and UDHR Art. 30, and from Vienna Convention Art. 31 good-faith interpretation doctrine. The floor-protection dimension of Art. 5(2) has limited litigation history in ratifying states; the floor-not-ceiling principle is theoretically clear but empirically underexamined in contexts where domestic law exceeds ICESCR minimums. AI displacement creates a structurally novel pressure test: whether algorithmic management constraints operating through private contract might constitute 'custom' subject to Art. 5(2) floor protection."
   developer: "The technical reading of Article 5(2): 'existing in any country by virtue of law, conventions, regulations or custom' reaches beyond statutory law. If workers hold rights under regulatory practice, collective bargaining agreements, or established industry custom that exceed ICESCR minimums, Article 5(2) prevents the Covenant from serving as a pretext to reduce them. For platform developers: this means that established labor practice cannot be reduced by citing international standards — the floor constraint applies to custom as much as to statute."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 Article 5 of the ICESCR has two paragraphs, and both work as protective mechanisms rather than substantive grants of rights. They answer a question that arises whenever a treaty gets ratified: can the treaty itself be used against the values it embodies?

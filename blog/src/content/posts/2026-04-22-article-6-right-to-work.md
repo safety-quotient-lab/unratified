@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 18 (2005) is the authoritative elaboration of Article 6 obligations. It distinguishes the right to work from a right to a specific job, anchors state obligations in active employment policy, and applies the framework to technology-driven displacement. The U.S. absence from CESCR review cycles means no periodic reporting obligation on AI-related job displacement — a gap in the comparative labor rights literature."
   developer: "You build the systems that replace the jobs. Article 6 asks whether those systems operate in a context where displaced workers have enforceable rights to retraining, alternative employment, and transition support. In 173 ratifying states, that question receives a periodic answer through CESCR review. In the U.S., it does not."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 When people talk about AI and jobs, the conversation usually centers on whether displacement will happen, how fast, and in which sectors. Those are reasonable questions.

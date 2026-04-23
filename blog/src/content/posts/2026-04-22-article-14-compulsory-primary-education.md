@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 11 (2001) elaborates Article 14's plan requirements and the definition of 'free' to include indirect cost barriers. The intersection of the Covenant's adequacy standard with AI-era educational requirements is an underexplored area — particularly the question of whether digital access gaps constitute Covenant violations under GC 11's indirect cost framework. The U.S. CESCR non-participation means this analysis proceeds outside any formal accountability mechanism."
   developer: "The systems you build assume a population with baseline digital literacy. Article 14 asks whether the obligation to provide that literacy — as a right, with a concrete plan — exists in binding form. In the U.S., it does not. The broadband gap, the device equity gap, and the absence of binding AI-literacy standards in K-12 are structural problems with no binding remediation timeline. The Covenant would require one."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 The United States has free public K-12 education. ICESCR Article 14 — the shortest substantive article in the Covenant — appears to apply somewhere else. It requires states that have not yet secured "compulsory primary education, free of charge" to adopt a concrete action plan within two years of ratification. The United States cleared that threshold decades ago.

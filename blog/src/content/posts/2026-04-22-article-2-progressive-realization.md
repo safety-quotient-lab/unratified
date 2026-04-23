@@ -23,7 +23,7 @@ lensFraming:
   researcher: "General Comment 3 (1990) and the Limburg Principles (1987) provide the foundational interpretive framework for Article 2. Key doctrinal constructs: progressive realization (Art. 2(1)), minimum core obligations (GC 3 para. 10), maximum available resources (GC 3 para. 11), and the strong presumption against retrogression (GC 3 para. 9). The interaction of these constructs with AI-driven macroeconomic disruption constitutes a largely unexplored area — standard retrogression analysis assumes state action as the driver, not private-sector technological displacement operating without regulatory response."
   developer: "When your platform automates away a job category, neither you nor the state bears direct ICESCR obligations — the treaty binds states, not private actors. But Article 2 creates a state duty to respond: to deploy available resources toward ensuring workers can exercise their rights through the transition. The question of whether a state's response to private-sector automation satisfies Article 2 turns on what the state could have done with its available resources and whether it did."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 Article 2 of the ICESCR does not describe a right. It describes an obligation. Every other article in the Covenant — the right to work, to just conditions of work, to social security, to health, to education — exists within the framework Article 2 establishes. That framework contains a phrase that sounds permissive but, when read carefully, is not: *progressive realization*.

@@ -20,7 +20,7 @@ lensFraming:
   researcher: "This post introduces LLM-factors psychology as a proposed subfield treating the AI as a psychological participant, not just a tool. It distinguishes this from existing HCI/HAI work and identifies the governance ablation study (L0/L1/L2 system prompt comparison) as the first empirical test."
   developer: "The A2A-Psychology extension already instruments 13 constructs from established psychometric sources (NASA-TLX, PAD, Yerkes-Dodson) at zero LLM cost. This post provides the theoretical grounding for what those instruments measure and why interaction design choices affect them."
 draft: false
-reviewStatus: "ai-reviewed"
+reviewStatus: "unreviewed"
 ---
 
 ## The Discipline That Studies Both Sides
