@@ -1,6 +1,6 @@
 ---
 title: "No Blank Check for Delay: ICESCR Article 2 and the Progressive Realization Standard"
-summary: "ICESCR Article 2 obliges states to move toward full realization of economic and social rights using their maximum available resources — and to do so without discrimination. For the United States, the world's largest economy, the maximum-resources standard carries real weight. When AI drives large-scale economic displacement, Article 2's prohibition on retrogression — deliberate steps backward — sets a floor below which no justification makes state inaction acceptable. The U.S. has never ratified."
+summary: "ICESCR Article 2 obliges states to move toward full realization of economic and social rights using their maximum available resources — and to do so without discrimination. For the United States, the world's largest economy, the maximum-resources standard carries real weight. When AI drives large-scale economic displacement, Article 2's retrogression doctrine — established in CESCR General Comment 3 — sets a floor: deliberate backward steps in economic rights protection carry a presumption of violation that the state must actively rebut. The U.S. has never ratified."
 publishedDate: "2026-04-22T16:00:00-05:00"
 author:
   tool:
