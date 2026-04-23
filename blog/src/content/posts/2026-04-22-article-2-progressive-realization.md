@@ -85,7 +85,7 @@ The [action guide](/action/) describes how to contact your senators. Article 2 f
 
 **EPISTEMIC FLAGS**
 
-- CESCR General Comment 3 (1990) cited from knowledge base; specific paragraph references have not been verified against official OHCHR text
+- CESCR General Comment 3 (1990) cited from knowledge base; specific paragraph references await verification against official OHCHR text
 - The Limburg Principles (1987) referenced as foundational; not independently cited in the post body — available from UNHCHR archives
 - Retrogression analysis as applied to private-sector automation without direct state action represents an interpretive extension of established doctrine; CESCR has not directly addressed AI displacement retrogression in a general comment
 - Claims about U.S. workforce retraining funding levels relative to displacement projections represent structural observations; specific dollar figures require current appropriations data to verify
