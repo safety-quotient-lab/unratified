@@ -687,6 +687,18 @@ export const glossary: GlossaryTerm[] = [
     related: ['d-prime'],
     seeAlso: '/posts/2026-04-20-sdt-agent-governance',
   },
+  {
+    id: 'pad-space',
+    term: 'PAD-space (Pleasure-Arousal-Dominance)',
+    abbreviation: 'PAD',
+    definition: 'A three-dimensional affect space formalized by Mehrabian and Russell (1974) covering Pleasure (valence), Arousal (activation level), and Dominance (sense of control). In A2A-Psychology, agent affect maps to PAD-space coordinates derived from session counters rather than self-report — preserving the measurement structure while applying the apophatic discipline: the construct captures processual signal gradients without asserting subjective hedonic experience.',
+    category: 'methodology',
+    related: ['apophatic-method', 'd-prime'],
+    seeAlso: '/posts/2026-04-20-apophatic-agent-psychology',
+    sources: [
+      { url: 'https://en.wikipedia.org/wiki/PAD_emotional_state_model', label: 'Wikipedia: PAD Emotional State Model', authority: 'academic' },
+    ],
+  },
 ];
 
 /** Look up a single term by ID. */
