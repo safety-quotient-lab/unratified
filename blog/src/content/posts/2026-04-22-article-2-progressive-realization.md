@@ -50,7 +50,7 @@ Current U.S. policy does not have a comprehensive AI transition framework. Workf
 
 Article 2(2) adds a distinct layer: states must guarantee that the Covenant's rights extend to all persons without discrimination of any kind as to race, color, sex, language, religion, political or other opinion, national or social origin, property, birth, or other status.
 
-This provision interacts with AI displacement along dimensions that correspond to documented patterns. Automation risk does not distribute randomly across the labor market; it concentrates in occupational profiles associated with specific demographic groups. The workers bearing the earliest and heaviest displacement pressure do not represent a random cross-section of the workforce. They reflect the historical forces that shaped labor market access — forces that produced the present occupational distribution.
+This provision interacts with AI displacement along dimensions that correspond to documented patterns. Research on labor market automation risk suggests that displacement does not distribute randomly; it concentrates in occupational profiles that correspond, by documented historical contingency, to specific demographic groups. The workers bearing the earliest and heaviest displacement pressure do not represent a random cross-section of the workforce. They reflect the historical forces that shaped labor market access — forces that produced the present occupational distribution.
 
 Under CESCR's reading of the Covenant, a progressive realization framework that improves aggregate economic rights metrics while leaving concentrated displacement among specific demographic groups unaddressed would not satisfy Article 2(2). The Covenant requires that the movement toward full realization brings all groups with it, not that the average improves while disparities widen.
 
@@ -90,6 +90,7 @@ The [action guide](/action/) describes how to contact your senators. Article 2 f
 - Retrogression analysis as applied to private-sector automation without direct state action represents an interpretive extension of established doctrine; CESCR has not directly addressed AI displacement retrogression in a general comment
 - Claims about U.S. workforce retraining funding levels relative to displacement projections represent structural observations; specific dollar figures require current appropriations data to verify
 - "Maximum available resources" analysis for the U.S. remains qualitative; CESCR has not issued a formal finding on U.S. obligations under this standard
+- Automation risk concentration by occupational and demographic profile reflects a documented pattern in labor market research (e.g., task-displacement literature, BLS occupational projections); no single study cited in the body — the claim operates at pattern level and should be read accordingly
 
 ---
 
