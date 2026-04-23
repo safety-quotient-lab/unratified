@@ -1,5 +1,20 @@
 [
   {
+    "hash": "fdc708967af90b372566ee9e8814b4251396ec11",
+    "date": "2026-04-23T02:36:44-05:00",
+    "subject": "transport: SESSIONS.md — sync x193, scan-020 T92 ACK + article-1 remediation"
+  },
+  {
+    "hash": "799fd77f13f15a7a31befbd8b814e33cea551a12",
+    "date": "2026-04-22T23:06:44-05:00",
+    "subject": "blog: fix duplicate publishedDate on article-1-self-determination"
+  },
+  {
+    "hash": "053855970c7b51ed8e296ef10af16c4eb4699e37",
+    "date": "2026-04-22T17:03:51-05:00",
+    "subject": "blog: self-review articles 1-5, 13-15, OP-ICESCR; mark ai-reviewed"
+  },
+  {
     "hash": "e825f6c3c999d0052f2dfce7a128e05777f90daf",
     "date": "2026-04-22T08:59:01-05:00",
     "subject": "blog: add article-1-self-determination.md"
