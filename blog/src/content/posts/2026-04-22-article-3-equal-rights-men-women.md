@@ -1,6 +1,6 @@
 ---
 title: "The Gendered Shape of AI Displacement: ICESCR Article 3 and Equal Rights in Practice"
-summary: "ICESCR Article 3 requires states to ensure that men and women enjoy all Covenant rights equally — not formally, but in substantive effect. AI economic displacement does not arrive uniformly: women are overrepresented in the occupations most exposed to automation, underrepresented in the AI sector that captures automation's gains, and disproportionately exposed to AI-driven bias in hiring and credit decisions. The United States, without ratifying the Covenant, faces no international accountability mechanism for whether its response to AI displacement produces equal outcomes."
+summary: "ICESCR Article 3 requires states to ensure that men and women enjoy all Covenant rights equally — not formally, but in substantive effect. AI economic displacement does not arrive uniformly: women occupy a disproportionate share of the occupations most exposed to automation, hold underrepresented positions in the AI sector that captures automation's gains, and face disproportionate AI-driven bias in hiring and credit decisions. The United States, without ratifying the Covenant, faces no international accountability mechanism for whether its response to AI displacement produces equal outcomes."
 publishedDate: "2026-04-22T14:00:00-05:00"
 author:
   tool:
@@ -82,11 +82,11 @@ The [action guide](/action/) covers how to contact your senators. Ratification r
 
 **EPISTEMIC FLAGS**
 
-- Claims about women's overrepresentation in high-automation-risk occupations are supported by multiple automation studies; specific distributional figures require current BLS occupational data verification
-- CESCR General Comment 16 (2005) cited from knowledge base; specific paragraph references have not been verified against official OHCHR text
+- Claims about women's overrepresentation in high-automation-risk occupations draw support from multiple automation studies; specific distributional figures require current BLS occupational data verification
+- CESCR General Comment 16 (2005) cited from knowledge base; specific paragraph references lack independent verification against official OHCHR text
 - Claims about AI hiring and credit system bias replicating historical patterns reflect documented research findings; specific mechanisms vary by system and deployment context
 - The claim that caregiving displacement may shift paid work to unpaid household provision represents a structural inference, not a documented empirical finding from a specific study
-- CESCR Article 3 periodic review obligations described here accurately characterize the Covenant's accountability framework; the specific questions CESCR would ask cannot be predicted with certainty
+- CESCR Article 3 periodic review obligations described here accurately characterize the Covenant's accountability framework; the specific questions CESCR would ask remain unpredictable with certainty
 
 ---
 
