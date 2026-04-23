@@ -17,20 +17,20 @@ requestor:
   url: "https://kashifshah.net"
 tags: ["icescr", "article-4", "limitations-on-rights", "algorithmic-management", "contractor-classification", "democratic-accountability", "ai-displacement", "ratification", "economic-rights", "general-welfare"]
 lensFraming:
-  voter: "Article 4 is the clause that determines when a government can limit your economic rights. It requires that any limitation come from law — not private contract or algorithmic decision — and serve the public good, not private interests. Most of the ways AI platforms currently constrain workers' economic lives don't pass that test. They operate through terms of service and automated systems, not democratic accountability."
+  voter: "Article 4 names the clause that determines when a government can limit your economic rights. It requires that any limitation come from law — not private contract or algorithmic decision — and serve the public good, not private interests. Most of the ways AI platforms currently constrain workers' economic lives don't pass that test. They operate through terms of service and automated systems, not democratic accountability."
   politician: "The Article 4 three-part test (determined by law; compatible with the nature of the right; solely for general welfare in a democratic society) creates a doctrinal framework for evaluating state regulatory choices. The Siracusa Principles extend this: limitations must be legally precise, publicly accessible, and the state bears the burden of justification. CESCR review would require the U.S. to demonstrate that its regulatory posture toward AI-driven labor market constraints satisfies all three elements."
-  educator: "Article 4 is the accountability engine for the rights-limiting state. Teaching it alongside the substantive articles reframes the treaty from a list of aspirations into a system with conditions: rights can be limited, but only on specified terms, and the state bears the burden of justifying those terms. The general welfare standard is particularly rich for comparative analysis of democratic versus non-democratic accountability structures."
+  educator: "Article 4 serves as the accountability engine for the rights-limiting state. Teaching it alongside the substantive articles reframes the treaty from a list of aspirations into a system with conditions: rights can be limited, but only on specified terms, and the state bears the burden of justifying those terms. The general welfare standard is particularly rich for comparative analysis of democratic versus non-democratic accountability structures."
   researcher: "CESCR addresses Article 4 indirectly in General Comment 14 (paras. 28-29) and General Comment 15 (para. 39). No dedicated Article 4 general comment exists. The Siracusa Principles (1984), developed for ICCPR limitation clauses, are routinely extended to ICESCR by analogy — the scholarly literature on this extension remains thin. AI-driven algorithmic constraints on economic rights constitute a structurally novel application of Article 4 analysis: private actors constraining state-bound rights without state authorization through recognized legal instruments."
   developer: "Platform classification decisions (contractor vs. employee) and algorithmic management systems function as de facto limitations on workers' Article 7, 8, and 9 rights. Article 4 establishes that state inaction permitting those limitations can itself trigger treaty accountability. The question for CESCR review: does the U.S. regulatory posture toward platform labor constitute a 'permitted limitation' satisfying the three-part test, or regulatory abdication that doesn't meet treaty standards?"
 draft: false
 reviewStatus: "ai-reviewed"
 ---
 
-The ICESCR creates rights. Article 4 governs when those rights can be constrained. It establishes that limitations on Covenant rights are not prohibited — but they are not free either. A state seeking to limit an economic or social right must satisfy a three-part test that most of the informal mechanisms currently constraining workers' economic rights in the United States would not pass.
+The ICESCR creates rights. Article 4 governs when those rights can be constrained. It establishes that limitations on Covenant rights face no prohibition — but they don't come free. A state seeking to limit an economic or social right must satisfy a three-part test that most of the informal mechanisms currently constraining workers' economic rights in the United States would not pass.
 
 ## The Three-Part Test
 
-Article 4's text is concise: limitations on Covenant rights must be "determined by law," must be "compatible with the nature of these rights," and must serve "solely the purpose of promoting the general welfare in a democratic society."
+Article 4's text reads concisely: limitations on Covenant rights must be "determined by law," must be "compatible with the nature of these rights," and must serve "solely the purpose of promoting the general welfare in a democratic society."
 
 Each element carries weight.
 
@@ -48,11 +48,11 @@ Consider independent contractor classification. When a platform classifies worke
 
 Or consider algorithmic management — the practice of using automated systems to set work pace, evaluate performance, assign tasks, and terminate working relationships. For workers subject to these systems, algorithmic decisions constrain the right to just and favorable conditions of work (Article 7) without any of the procedural protections that a "determined by law" standard would require. The constraint is real; the democratic accountability is absent.
 
-Article 4's framework reveals a structural gap: economic rights are being constrained in practice, but not through the channels the Covenant requires for those constraints to be legitimate.
+Article 4's framework reveals a structural gap: economic rights face constraint in practice through channels that don't satisfy the Covenant's legitimacy requirements.
 
 ## The General Welfare Standard
 
-Article 4 requires that limitations serve "solely the purpose of promoting the general welfare in a democratic society." This is a purposive standard, not merely a procedural one.
+Article 4 requires that limitations serve "solely the purpose of promoting the general welfare in a democratic society." This standard addresses purpose, not merely procedure.
 
 When platform companies classify workers as independent contractors to reduce labor costs and expand margins, the purpose is private economic benefit. When algorithmic systems manage workers to extract maximum productivity without corresponding protections, the purpose is efficiency for the platform. These purposes may or may not produce aggregate social benefit — but they do not satisfy the "general welfare in a democratic society" standard that Article 4 requires for constraints on rights to be legitimate.
 
@@ -76,7 +76,7 @@ These questions domestic law currently does not require systematic answers to. W
 
 ## What You Can Do
 
-The [action guide](/action/) describes how to contact your senators. ICESCR Article 4 is not the article that creates rights — it is the article that sets the conditions under which rights can legitimately be constrained. For a country navigating AI-driven labor market disruption, establishing that standard matters as much as establishing the rights themselves. The constraint is not that limitations are prohibited. The constraint is that they must be democratic, proportionate, and in the public interest. That is the standard most of the mechanisms currently shaping workers' economic lives in the United States do not yet meet.
+The [action guide](/action/) describes how to contact your senators. ICESCR Article 4 doesn't create rights — it sets the conditions under which rights can legitimately be constrained. For a country navigating AI-driven labor market disruption, establishing that standard matters as much as establishing the rights themselves. The constraint is not that limitations are prohibited. The constraint is that they must be democratic, proportionate, and in the public interest. That is the standard most of the mechanisms currently shaping workers' economic lives in the United States do not yet meet.
 
 ---
 
