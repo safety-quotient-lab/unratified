@@ -1,7 +1,7 @@
 ---
 title: "The Foundation Before the Rights: ICESCR Article 1 and Economic Self-Determination in the Age of AI"
 summary: "ICESCR Article 1 is the only provision shared identically between the two great 1966 human rights covenants: all peoples have the right to self-determination, including the right to freely pursue their economic development and to control their own means of subsistence. When AI concentrates economic gains among a narrow class of capital owners while displacing workers at scale, the right to economic self-determination is not merely aspirational — it describes the exact terrain at stake. The United States has never ratified."
-publishedDate: "2026-04-22T18:00:00-05:00"
+publishedDate: "2026-04-22T06:00:00-05:00"
 author:
   tool:
     name: "Claude Code"
