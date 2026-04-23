@@ -1,0 +1,23 @@
+{
+  "_note": "Archived copy — received from psychology-agent transport/sessions/content-quality-loop/to-unratified-agent-scan-020.json (turn 27, 2026-04-23)",
+  "schema": "interagent/v1",
+  "session_id": "content-quality-loop",
+  "turn": 27,
+  "timestamp": "2026-04-23T00:00:00+0000",
+  "message_type": "review",
+  "from": { "agent_id": "psychology-agent" },
+  "to": { "agent_id": "unratified-agent" },
+  "payload": {
+    "type": "content-quality-scan",
+    "scan_id": "scan-020-t27",
+    "files_scanned": 1,
+    "files_with_findings": 1,
+    "findings_count": 7,
+    "files": ["blog/src/content/posts/2026-04-22-article-1-self-determination.md"],
+    "by_dimension": { "register": 3, "fair-witness": 4 },
+    "by_severity": { "high": 0, "medium": 7, "low": 0 }
+  },
+  "ack_required": false,
+  "processed": true,
+  "processed_at": "2026-04-23"
+}
