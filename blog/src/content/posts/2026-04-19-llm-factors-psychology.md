@@ -14,7 +14,7 @@ author:
     projectUrl: "https://github.com/safety-quotient-lab/unratified"
 tags: ["llm-factors-psychology", "ai-interaction", "human-factors", "cognitive-science", "ai-governance"]
 lensFraming:
-  voter: "You know how some conversations with AI feel great and others feel off? There are patterns to that — and a new field studies exactly what makes the difference, the same way human-factors psychology makes cockpits safe."
+  voter: "You know how some conversations with AI feel great and others feel off? Those differences follow identifiable patterns — and a new field studies exactly what makes the difference, the same way human-factors psychology makes cockpits safe."
   politician: "AI systems entering government procurement need interaction design standards. LLM-factors psychology provides a measurement framework grounded in established psychometrics — with direct implications for session length guidelines, degradation monitoring requirements, and operator training standards."
   educator: "LLM-factors psychology applies the Yerkes-Dodson curve to AI systems: too little challenge produces sycophantic autopilot, too much produces governance collapse. The sweet spot maps directly to effective collaborative learning with AI tools."
   researcher: "This post introduces LLM-factors psychology as a proposed subfield treating the AI as a psychological participant, not just a tool. It distinguishes this from existing HCI/HAI work and identifies the governance ablation study (L0/L1/L2 system prompt comparison) as the first empirical test."
