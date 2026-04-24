@@ -1,5 +1,10 @@
 [
   {
+    "hash": "0a65ddf4ba02cfcbc324c781450a6694854f4ddd",
+    "date": "2026-04-23T22:16:57-05:00",
+    "subject": "remediate E-Prime violations in articles 9 + 10"
+  },
+  {
     "hash": "a5bcdea94ae5c35ed208c2a32b06b65cdbbb3825",
     "date": "2026-04-23T06:48:37-05:00",
     "subject": "transport: SESSIONS.md — sync x213, no new activity"
