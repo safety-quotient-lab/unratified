@@ -94,3 +94,20 @@ The right to organize has always depended partly on conditions outside the text 
 Forty-nine years after the U.S. signed the treaty, the question of whether American workers in AI-managed, platform-classified, algorithmically monitored roles can meaningfully exercise Article 8 rights remains outside the scope of any formal international review.
 
 If you want to act on this, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [concrete steps for making contact](/2026-03-08-voter-guide-contact-your-senator).
+
+---
+
+*Part of the [ICESCR Article Series](/tags/icescr/) — examining each of the treaty's substantive articles through the lens of AI economic displacement.*
+
+---
+
+**EPISTEMIC FLAGS**
+
+- Employer surveillance practices (The Guardian reporting) and bargaining power research (Cornell ILR) cited from knowledge base; specific article titles, dates, and study findings have not been verified against primary sources
+- The characterization of platform worker classification as affecting organizing rights represents a structural inference from known NLRA coverage rules — specific legal outcomes vary by jurisdiction and classification challenge
+- CESCR recommendations on platform worker classification having "preceded legislative reforms in several ratifying states" represents a general claim — specific country examples and causal links have not been documented here
+- ILO convention intersections with Article 8 described in general terms; specific convention numbers and ratification status details should be verified independently
+
+---
+
+*Published by [unratified.org](https://unratified.org) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

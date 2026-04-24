@@ -92,3 +92,20 @@ Algorithmic management grows. The workers it affects span warehouse fulfillment,
 The U.S. has a choice about whether those workers have access to an international accountability mechanism. Forty-nine years after President Carter signed the treaty, that choice remains open.
 
 If you want to engage on this issue, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [what you can do right now to make contact](/2026-03-08-voter-guide-contact-your-senator).
+
+---
+
+*Part of the [ICESCR Article Series](/tags/icescr/) — examining each of the treaty's substantive articles through the lens of AI economic displacement.*
+
+---
+
+**EPISTEMIC FLAGS**
+
+- SOC report and Congressional testimony references drawn from knowledge base; specific document titles, dates, and testimony details have not been verified against primary sources
+- "Millions of workers" subject to algorithmic management represents a scale claim without a specific cited source — verify current figures before citing in research contexts
+- The characterization of algorithmic management practices (dynamic scheduling, automated termination, performance scoring) draws from documented industry reports but specific prevalence rates vary by sector and employer
+- CESCR General Comment 23 (2016) on Article 7 interpretations cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
+
+---
+
+*Published by [unratified.org](https://unratified.org) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

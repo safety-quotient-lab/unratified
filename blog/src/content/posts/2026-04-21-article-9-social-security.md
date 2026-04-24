@@ -96,3 +96,20 @@ Automation will continue to displace workers. The workers it displaces will incr
 ICESCR Article 9 asks states to examine whether social security reaches everyone. For forty-nine years, the U.S. has not had a formal obligation to answer that question in an international forum.
 
 If you want to engage on ratification, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [concrete steps for making contact](/2026-03-08-voter-guide-contact-your-senator).
+
+---
+
+*Part of the [ICESCR Article Series](/tags/icescr/) — examining each of the treaty's substantive articles through the lens of AI economic displacement.*
+
+---
+
+**EPISTEMIC FLAGS**
+
+- CESCR General Comment 19 (2008) interpretations cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
+- Acemoglu & Restrepo (2018) citation drawn from knowledge base — verify publication details and specific findings before citing in research contexts
+- The characterization of U.S. social insurance gaps as they apply to AI-displaced workers represents a structural inference from known coverage rules, not a published CESCR finding on U.S. policy
+- Contractor classification exclusions described in general terms; specific state-by-state variations in unemployment insurance eligibility may differ from the aggregate pattern described
+
+---
+
+*Published by [unratified.org](https://unratified.org) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

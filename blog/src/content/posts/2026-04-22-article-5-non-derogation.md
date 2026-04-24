@@ -1,6 +1,6 @@
 ---
 title: "No Ratchet Down: ICESCR Article 5 and the Covenant's Self-Protection Clause"
-summary: "ICESCR Article 5 prevents the Covenant from turning against itself. Two provisions do different work: the first forecloses any interpretation that would authorize destroying the rights the treaty creates; the second establishes that ratification cannot serve as a pretext to weaken protections that already exist in domestic law. For U.S. workers, Article 5 ensures that the most common objection to ratification — that it would lower existing labor standards — the treaty itself legally forecloses."
+summary: "ICESCR Article 5 prevents the Covenant from turning against itself. Two provisions do different work: the first forecloses any interpretation that would authorize destroying the rights the treaty creates; the second establishes that ratification cannot serve as a pretext to weaken protections that already exist in domestic law. For U.S. workers, Article 5 ensures that a frequently cited objection to ratification — that it would lower existing labor standards — the treaty itself legally forecloses."
 publishedDate: "2026-04-22T20:00:00-05:00"
 author:
   tool:
