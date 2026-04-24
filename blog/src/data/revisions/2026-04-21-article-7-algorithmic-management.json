@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b274ae7fbdb19c1e4eb3cb2d66d5883b471d292a",
+    "date": "2026-04-24T03:12:38-05:00",
+    "subject": "remediate scan-025: 10 findings across 7 posts"
+  },
+  {
     "hash": "a5bcdea94ae5c35ed208c2a32b06b65cdbbb3825",
     "date": "2026-04-23T06:48:37-05:00",
     "subject": "transport: SESSIONS.md — sync x213, no new activity"

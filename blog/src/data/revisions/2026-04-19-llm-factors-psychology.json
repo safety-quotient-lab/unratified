@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b274ae7fbdb19c1e4eb3cb2d66d5883b471d292a",
+    "date": "2026-04-24T03:12:38-05:00",
+    "subject": "remediate scan-025: 10 findings across 7 posts"
+  },
+  {
     "hash": "eb1737018b2f25af7b224455ad59e1eed4568760",
     "date": "2026-04-23T11:14:42-05:00",
     "subject": "content: proactive E-prime remediation — op-icescr + llm-factors"

@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b274ae7fbdb19c1e4eb3cb2d66d5883b471d292a",
+    "date": "2026-04-24T03:12:38-05:00",
+    "subject": "remediate scan-025: 10 findings across 7 posts"
+  },
+  {
     "hash": "0cf176e9f2f1cd504684057fd97c4792d742634a",
     "date": "2026-04-23T18:14:45-05:00",
     "subject": "content: article-5 E-prime remediation + article-13 revision JSON update"

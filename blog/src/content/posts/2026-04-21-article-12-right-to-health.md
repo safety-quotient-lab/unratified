@@ -1,6 +1,6 @@
 ---
 title: "When the Job Goes, So Does the Coverage: ICESCR Article 12 and the Health Access Gap"
-summary: "ICESCR Article 12 recognizes the right of everyone to the highest attainable standard of physical and mental health. In the United States, health coverage is primarily employment-based. AI displacement breaks the employment relationship — and with it, access to the healthcare system. The U.S. has no international accountability mechanism for the resulting gap."
+summary: "ICESCR Article 12 recognizes the right of everyone to the highest attainable standard of physical and mental health. In the United States, health coverage depends primarily on employment. AI displacement breaks the employment relationship — and with it, access to the healthcare system. The U.S. has no international accountability mechanism for the resulting gap."
 publishedDate: "2026-04-21T16:00:00-05:00"
 author:
   tool:
@@ -18,7 +18,7 @@ requestor:
 tags: ["icescr", "article-12", "health", "healthcare", "mental-health", "occupational-health", "ai", "ratification", "displacement", "employer-sponsored-insurance"]
 lensFraming:
   voter: "Most Americans get health insurance through their employer. When AI automation eliminates that job, the coverage disappears too. ICESCR Article 12 treats access to healthcare as a right that does not depend on employment status. The U.S. has never ratified it."
-  politician: "Article 12 obliges ratifying states to ensure economic accessibility to healthcare — coverage that does not depend on employment classification. AI displacement is producing a documented population of workers who lose employer-sponsored insurance and cycle through coverage gaps. CESCR periodic review would surface this pattern systematically."
+  politician: "Article 12 obliges ratifying states to ensure economic accessibility to healthcare — coverage that does not depend on employment classification. AI displacement produces a documented population of workers who lose employer-sponsored insurance and cycle through coverage gaps. CESCR periodic review would surface this pattern systematically."
   educator: "Article 12 illustrates the rights-based model of health access: the AAAQ framework (availability, accessibility, acceptability, quality) developed in CESCR General Comment 14 treats economic accessibility as a legal obligation rather than a benefit contingent on labor market participation."
   researcher: "CESCR GC 14 (2000) defines economic accessibility as the requirement that health services be affordable for all, including socially disadvantaged groups. Gig workers and displaced employees who lose employer-sponsored insurance face documented gaps in both coverage continuity and affordability. Article 12(2)(b) and (c) also address occupational health — an area where platform workers occupy a legal gray zone outside OSHA's employee classifications."
   developer: "Algorithmic hiring systems that screen applicants by employment history gaps, credit scores, or platform-work income patterns may systematically exclude workers displaced by prior AI systems from the employment relationships that provide health coverage. This feedback loop — AI displacement leading to coverage loss leading to barriers to re-employment — falls within Article 12's economic accessibility framework."
@@ -26,7 +26,7 @@ draft: false
 reviewStatus: "ai-reviewed"
 ---
 
-The job disappears. With it, in the United States, goes the health insurance. Not immediately — COBRA continuation coverage exists, at a price most displaced workers cannot sustain. But within months, a worker whose job was automated away is statistically likely to join the ranks of the uninsured or underinsured, navigating a system designed for people with stable employment and steady premiums.
+The job disappears. With it, in the United States, goes the health insurance. Not immediately — COBRA continuation coverage exists, at a price most displaced workers cannot sustain. But within months, a worker whose employer automated the position away statistically tends to join the ranks of the uninsured or underinsured, navigating a system designed for people with stable employment and steady premiums.
 
 Article 12 of the ICESCR treats this outcome as a condition international human rights law addresses directly.
 
@@ -42,9 +42,9 @@ CESCR General Comment 14 (2000) elaborates Article 12 through the AAAQ framework
 
 The United States delivers health coverage primarily through employers. Approximately 160 million Americans receive insurance through employer-sponsored plans. This arrangement ties the right Article 12 describes — access to healthcare — to employment status in a way the treaty explicitly does not.
 
-AI displacement severs this connection. When automation eliminates a position, the displaced worker loses not just income but the coverage mechanism that employment provided. COBRA allows temporary continuation, but premiums that employers were absorbing now fall entirely to the individual — at full market rates, typically several times what the worker contributed as an employee. Most displaced workers cannot sustain COBRA for the maximum coverage period.
+AI displacement severs this connection. When automation eliminates a position, the displaced worker loses not just income but the coverage mechanism that employment provided. COBRA allows temporary continuation, but premiums that employers previously absorbed now fall entirely to the individual — at full market rates, typically several times what the worker contributed as an employee. Most displaced workers cannot sustain COBRA for the maximum coverage period.
 
-The resulting coverage gap is not incidental. It follows directly from the structure of U.S. health financing and the employment relationship that AI displacement terminates.
+The resulting coverage gap does not emerge incidentally. It follows directly from the structure of U.S. health financing and the employment relationship that AI displacement terminates.
 
 CESCR GC 14 requires that states ensure economic accessibility — that cost does not exclude people from the healthcare system. A financing model that conditions access on employment classification, and a displacement pattern that terminates that classification, produces a structural accessibility gap by GC 14's own terms. No U.S. periodic report to CESCR has ever addressed this. None will exist until ratification occurs.
 
@@ -54,7 +54,7 @@ Article 12 covers mental health with the same legal weight as physical health. T
 
 Research on prior automation waves suggests elevated mental health effects among displaced workers: increased depression rates, elevated substance use, reduced life expectancy in affected cohorts. These effects persist years beyond the initial displacement event. The communities where manufacturing automation concentrated in the 1980s and 1990s showed measurable public health consequences a generation later.
 
-AI displacement's current wave concentrates in different occupational categories — administrative, customer service, logistics coordination — but the mechanism is the same: sudden income loss, status change, and prolonged uncertainty. The mental health dimension of Article 12 would require ratifying states to report on these population-level effects and demonstrate proactive response.
+AI displacement's current wave concentrates in different occupational categories — administrative, customer service, logistics coordination — but the mechanism remains the same: sudden income loss, status change, and prolonged uncertainty. The mental health dimension of Article 12 would require ratifying states to report on these population-level effects and demonstrate proactive response.
 
 ## Occupational Health and the Gig Classification Problem
 
@@ -90,12 +90,12 @@ The [action guide](/action/) explains how to contact your senators directly. Rat
 
 **EPISTEMIC FLAGS**
 
-- CESCR GC 14 (2000) AAAQ framework cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
+- CESCR GC 14 (2000) AAAQ framework cited from knowledge base; specific paragraph numbers remain unverified against official OHCHR text
 - The figure of approximately 160 million Americans with employer-sponsored insurance reflects pre-2026 estimates; verify current coverage statistics before citing in research contexts
-- Mental health effects of prior automation waves are characterized as suggested — specific studies not cited; verify against peer-reviewed literature before academic use
-- The claim that COBRA is unaffordable for most displaced workers is a structural inference from cost-sharing ratios, not a current empirical study
-- The occupational health / contractor classification analysis is a structural inference from OSHA employee-classification rules; no CESCR finding specifically addresses platform worker classification as an Article 12 gap
-- The retrogression analysis is an interpretive inference, not a published CESCR finding
+- This post characterizes mental health effects of prior automation waves as suggested patterns — specific studies not cited; verify against peer-reviewed literature before academic use
+- The claim that COBRA remains unaffordable for most displaced workers represents a structural inference from cost-sharing ratios, not a current empirical study
+- The occupational health / contractor classification analysis represents a structural inference from OSHA employee-classification rules; no CESCR finding specifically addresses platform worker classification as an Article 12 gap
+- The retrogression analysis represents an interpretive inference, not a published CESCR finding
 
 ---
 
