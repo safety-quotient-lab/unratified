@@ -70,7 +70,7 @@ Ratification would not mandate specific outcomes on AI copyright, training data 
 
 What ratification would create: a periodic accountability mechanism. A five-year review cycle in which the United States would document how it balances the Article 15.1.c material interests of authors against the Article 15.1.b right to benefit from scientific progress; how it ensures AI-era scientific applications distribute benefits equitably; and what access measures it takes to ensure cultural participation in an AI-mediated cultural economy.
 
-The U.S. debate over AI and authorship currently proceeds entirely through copyright litigation, executive orders, and voluntary industry commitments. Article 15 asks whether that framework adequately protects a human right — not a legal mechanism, but the underlying interest the mechanism was designed to protect. The U.S. has not signed on to asking that question.
+The U.S. debate over AI and authorship currently proceeds entirely through copyright litigation, executive orders, and voluntary industry commitments. Article 15 asks whether that framework adequately protects a human right — not a legal mechanism, but the underlying interest the drafters designed the mechanism to protect. The U.S. has not signed on to asking that question.
 
 ## What You Can Do
 
@@ -84,10 +84,10 @@ The [action guide](/action/) covers how to contact your senators. Ratification r
 
 **EPISTEMIC FLAGS**
 
-- General Comments 17 (2005), 21 (2009), and 25 (2020) cited from knowledge base; specific paragraph references have not been verified against official OHCHR text
+- General Comments 17 (2005), 21 (2009), and 25 (2020) cited from knowledge base; specific paragraph references have not undergone verification against official OHCHR text
 - The claim that AI training data use typically produces no compensation to authors reflects current industry practice as described in public reporting; ongoing litigation may alter this landscape
-- CESCR GC 25 (2020) on science and economic, social and cultural rights is cited for the "benefits distribution" framework; the specific application to AI has not been formally addressed by CESCR to date
-- The characterization of the Article 15.1.c standard as separate from copyright doctrine reflects the GC 17 analytical framework; this remains contested in international IP law scholarship
+- CESCR GC 25 (2020) on science and economic, social and cultural rights provides the cited "benefits distribution" framework; CESCR has not yet formally addressed the specific application to AI
+- The characterization of the Article 15.1.c standard as separate from copyright doctrine reflects the GC 17 analytical framework; international IP law scholarship continues to contest this distinction
 
 ---
 

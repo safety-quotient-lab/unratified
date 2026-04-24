@@ -28,7 +28,7 @@ reviewStatus: "unreviewed"
 
 A strike works when the employer needs the workers more than the workers need to stay.
 
-That calculation — the relative leverage of labor and capital in a standoff — has always shifted with technology. The mechanization of the 19th century reduced the leverage of craft workers whose specific skills had been irreplaceable. The assembly line created a different kind of leverage: a line stopped by one walkout could idle an entire plant.
+That calculation — the relative leverage of labor and capital in a standoff — has always shifted with technology. The mechanization of the 19th century reduced the leverage of craft workers whose specific skills had previously seemed irreplaceable. The assembly line created a different kind of leverage: a line stopped by one walkout could idle an entire plant.
 
 AI automation introduces a new kind of shift. In sectors where automation can substitute quickly for striking workers, the calculus of collective action changes in ways that existing labor law did not anticipate. And the United States, as a non-ratifier of the International Covenant on Economic, Social and Cultural Rights, has no formal international mechanism to examine whether those changes comply with recognized human rights standards.
 
@@ -43,17 +43,17 @@ ICESCR Article 8 commits ratifying states to ensure four specific rights:
 
 The Committee on Economic, Social and Cultural Rights (CESCR) — the treaty body that monitors Article 8 — has consistently interpreted these rights as applying to workers regardless of employment classification. In its reviews of states with large platform-work sectors, the CESCR has noted that reclassifying workers as independent contractors to exclude them from labor protections may conflict with Article 8 obligations (see CESCR periodic reviews, 2018–2023).
 
-Article 8 does not require a particular union structure or mandate any specific outcome in collective bargaining. What it requires is that the legal and practical conditions exist for workers to organize and act collectively without systematic impediment.
+Article 8 does not require a particular union structure or mandate any specific outcome in collective bargaining. What it requires: that the legal and practical conditions exist for workers to organize and act collectively without systematic impediment.
 
 ## The Classification Problem
 
-In the United States, the National Labor Relations Act covers "employees" — a term that excludes independent contractors. Platform workers at major gig companies have generally been classified as independent contractors, placing them outside NLRA protections: no right to union recognition elections, no employer obligation to bargain, limited protection for concerted activity.
+In the United States, the National Labor Relations Act covers "employees" — a term that excludes independent contractors. Major gig companies have generally classified platform workers as independent contractors, placing them outside NLRA protections: no right to union recognition elections, no employer obligation to bargain, limited protection for concerted activity.
 
 This classification structure predates AI-managed work, but automation accelerates its consequences. A driver for a platform company with app-based assignments, dynamic pricing, and algorithmic deactivation occupies a different position than a traditional independent contractor. The platform controls routing, pricing, scheduling, and termination through software — but the legal classification of independence removes NLRA protections.
 
 Efforts to address this have faced resistance. California's AB5 (2019) attempted to reclassify app-based workers; Proposition 22 (2020), funded largely by platform companies, carved them back out. The National Labor Relations Board has issued guidance suggesting some platform workers may qualify as employees, but enforcement depends on litigation and administration.
 
-The CESCR's position — that classification schemes that effectively nullify organizing rights may conflict with Article 8 — has no domestic enforcement mechanism in the U.S. because the treaty has not been ratified.
+The CESCR's position — that classification schemes that effectively nullify organizing rights may conflict with Article 8 — has no domestic enforcement mechanism in the U.S. because the U.S. has not ratified the treaty.
 
 ## Algorithmic Monitoring of Labor Activity
 
@@ -61,11 +61,11 @@ Beyond classification, a second dynamic warrants attention: the use of data and 
 
 Reports from labor researchers and investigative journalists suggest that some large employers use workforce analytics to identify employees who show signs of organizing interest — tracking communications patterns, meeting attendance, and social connections (see sources including *The Guardian* reporting, 2022; Cornell ILR labor tech research, 2021–2024). The National Labor Relations Act prohibits surveillance specifically intended to chill organizing, but enforcement requires a complaint, investigation, and finding.
 
-Whether algorithmic monitoring of labor activity rises to the level of systematic impediment that Article 8 prohibits is a question the CESCR would evaluate in periodic reviews. For ratifying states, that evaluation produces public recommendations. For the U.S., no equivalent review process exists.
+Whether algorithmic monitoring of labor activity rises to the level of systematic impediment that Article 8 prohibits remains a question the CESCR would evaluate in periodic reviews. For ratifying states, that evaluation produces public recommendations. For the U.S., no equivalent review process exists.
 
 ## The Leverage Problem
 
-The third dynamic operates differently from the first two: it does not necessarily involve any legal violation. It is structural.
+The third dynamic operates differently from the first two: it does not necessarily involve any legal violation. It operates structurally.
 
 A strike works partly because employers cannot easily replace experienced workers quickly. As AI systems demonstrate capability in warehouse logistics, customer service, content review, and routine knowledge work, the speed with which employers could substitute automated systems for striking workers increases — at least in sectors where the relevant tasks fall within current AI capability.
 
@@ -77,7 +77,7 @@ No law addresses this dynamic. It operates through the market, not through emplo
 
 The U.S. signed the ICESCR in 1977. Non-ratification means no CESCR review cycle, no periodic reporting obligation, and no UN body analyzing whether the combination of classification exclusions, algorithmic monitoring capabilities, and automation-as-replacement affects Article 8 rights in practice.
 
-For workers in platform-classified roles navigating an organizing campaign, or warehouse workers whose employer has both surveillance tools and automation infrastructure, this gap has a practical meaning: there is no international mechanism examining their situation, no shadow report channel for advocacy organizations to use, no set of CESCR recommendations that domestic advocates can cite in legislative or regulatory proceedings.
+For workers in platform-classified roles navigating an organizing campaign, or warehouse workers whose employer has both surveillance tools and automation infrastructure, this gap carries practical meaning: no international mechanism exists examining their situation, no shadow report channel for advocacy organizations to use, no set of CESCR recommendations that domestic advocates can cite in legislative or regulatory proceedings.
 
 ## What Ratification Would Change
 
@@ -89,7 +89,7 @@ None of this would resolve the leverage problem through legal mandate. But inter
 
 ## The Question Remains Open
 
-The right to organize has always depended partly on conditions outside the text of the law: economic conditions, labor market dynamics, employer capacity to substitute. AI automation changes some of those conditions in ways that interact with rights the ICESCR was written to protect.
+The right to organize has always depended partly on conditions outside the text of the law: economic conditions, labor market dynamics, employer capacity to substitute. AI automation changes some of those conditions in ways that interact with rights the ICESCR's drafters wrote the treaty to protect.
 
 Forty-nine years after the U.S. signed the treaty, the question of whether American workers in AI-managed, platform-classified, algorithmically monitored roles can meaningfully exercise Article 8 rights remains outside the scope of any formal international review.
 
@@ -103,10 +103,10 @@ If you want to act on this, the voter guide on this site includes [specific sena
 
 **EPISTEMIC FLAGS**
 
-- Employer surveillance practices (The Guardian reporting) and bargaining power research (Cornell ILR) cited from knowledge base; specific article titles, dates, and study findings have not been verified against primary sources
+- Employer surveillance practices (The Guardian reporting) and bargaining power research (Cornell ILR) cited from knowledge base; specific article titles, dates, and study findings have not undergone verification against primary sources
 - The characterization of platform worker classification as affecting organizing rights represents a structural inference from known NLRA coverage rules — specific legal outcomes vary by jurisdiction and classification challenge
-- CESCR recommendations on platform worker classification having "preceded legislative reforms in several ratifying states" represents a general claim — specific country examples and causal links have not been documented here
-- ILO convention intersections with Article 8 described in general terms; specific convention numbers and ratification status details should be verified independently
+- CESCR recommendations on platform worker classification having "preceded legislative reforms in several ratifying states" represents a general claim — specific country examples and causal links have not yet received documentation here
+- ILO convention intersections with Article 8 described in general terms; specific convention numbers and ratification status details require independent verification
 
 ---
 

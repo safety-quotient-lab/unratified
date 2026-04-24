@@ -1,5 +1,5 @@
 ---
-title: "When Your Manager Is an Algorithm: ICESCR Article 7 and the Hidden Rights Gap in AI-Managed Work"
+title: "When Your Manager Runs as an Algorithm: ICESCR Article 7 and the Hidden Rights Gap in AI-Managed Work"
 summary: "Millions of American workers now take instructions from software — warehouse systems that pace their movements, gig platforms that deactivate accounts without explanation, content moderation queues with automated quality scores. ICESCR Article 7 defines what 'just and favorable conditions of work' means in international law. The U.S. lacks this accountability layer."
 publishedDate: "2026-04-21T09:00:00-05:00"
 author:
@@ -69,7 +69,7 @@ The United States signed the ICESCR in 1977 under President Carter. The Senate h
 
 Non-ratification means no CESCR review cycle. The U.S. never files the periodic report that would describe, for international scrutiny, how working conditions in AI-managed sectors compare to Article 7 standards. No UN body issues recommendations. No shadow report process exists. No human rights mechanism can cite treaty obligations in U.S. courts.
 
-The gap does not mean working conditions are worse in the U.S. than in ratified states. It means the accountability infrastructure does not exist. Whether algorithmic management meets just and favorable conditions in the ICESCR sense is a question the U.S. has no formal obligation to answer.
+The gap does not mean working conditions rank worse in the U.S. than in ratified states. It means the accountability infrastructure does not exist. Whether algorithmic management meets just and favorable conditions in the ICESCR sense remains a question the U.S. has no formal obligation to answer.
 
 For workers, this matters practically. Civil society organizations in ratified states use the CESCR reporting cycle to document conditions, surface findings internationally, and create domestic political pressure through the reporting process itself. That lever does not exist for U.S. workers in AI-managed roles.
 
@@ -101,10 +101,10 @@ If you want to engage on this issue, the voter guide on this site includes [spec
 
 **EPISTEMIC FLAGS**
 
-- SOC report and Congressional testimony references drawn from knowledge base; specific document titles, dates, and testimony details have not been verified against primary sources
+- SOC report and Congressional testimony references drawn from knowledge base; specific document titles, dates, and testimony details have not undergone verification against primary sources
 - "Millions of workers" subject to algorithmic management represents a scale claim without a specific cited source — verify current figures before citing in research contexts
 - The characterization of algorithmic management practices (dynamic scheduling, automated termination, performance scoring) draws from documented industry reports but specific prevalence rates vary by sector and employer
-- CESCR General Comment 23 (2016) on Article 7 interpretations cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
+- CESCR General Comment 23 (2016) on Article 7 interpretations cited from knowledge base; specific paragraph numbers have not undergone verification against official OHCHR text
 
 ---
 

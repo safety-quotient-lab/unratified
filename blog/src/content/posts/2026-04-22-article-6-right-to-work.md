@@ -34,7 +34,7 @@ International human rights law has an answer. ICESCR Article 6 defines the right
 
 ## What Article 6 Actually Says
 
-The text of Article 6 is brief. States parties recognize "the right to work, which includes the right of every person to the opportunity to gain his living by work which he freely chooses or accepts."
+The text of Article 6 reads briefly. States parties recognize "the right to work, which includes the right of every person to the opportunity to gain his living by work which he freely chooses or accepts."
 
 That phrase — freely chooses or accepts — matters. Article 6 does not function simply as a guarantee of employment at any terms. It frames work as a domain of agency: people have a right to access meaningful work through genuine choice, not coercion or desperation. States commit to "take appropriate steps to safeguard this right," including "technical and vocational guidance and training programmes, policies and techniques to achieve steady economic development and full and productive employment."
 
@@ -42,7 +42,7 @@ The article anticipates exactly the scenario AI displacement creates: when techn
 
 ## General Comment 18 Fills in the Obligations
 
-The UN Committee on Economic, Social and Cultural Rights published General Comment 18 in 2005, providing the authoritative interpretation of Article 6. Several clarifications are directly relevant to AI displacement.
+The UN Committee on Economic, Social and Cultural Rights published General Comment 18 in 2005, providing the authoritative interpretation of Article 6. Several clarifications apply directly to AI displacement.
 
 **The right to work does not equal a right to a specific job.** General Comment 18 distinguishes between the right to work — access to the labor market under conditions that respect human dignity and free choice — and entitlement to any particular position. States cannot guarantee every worker keeps their current role as automation proceeds. But they can and must maintain the conditions under which displaced workers can find new work.
 
@@ -50,13 +50,13 @@ The UN Committee on Economic, Social and Cultural Rights published General Comme
 
 **Non-discrimination obligations extend to labor market access.** If AI displacement falls disproportionately on workers by age, race, or gender — and research suggests it does not fall evenly — states have a specific obligation to address that disparity within their employment policies.
 
-**Justiciability is expected to develop.** Article 6 falls under progressive realization (a state must take steps to the maximum of its available resources toward full realization), but General Comment 18 makes clear that some elements carry immediate force: non-discrimination, non-retrogression, and the obligation to take deliberate action.
+**Justiciability continues to develop.** Article 6 falls under progressive realization (a state must take steps to the maximum of its available resources toward full realization), but General Comment 18 makes clear that some elements carry immediate force: non-discrimination, non-retrogression, and the obligation to take deliberate action.
 
 ## The Accountability Gap in the AI Era
 
 The United States currently lacks federal legislation specifically addressing AI-driven job displacement at scale. Existing programs — Trade Adjustment Assistance, state unemployment systems, workforce development grants — predate the current technology cycle and operate with limited scope.
 
-None of this proves inherently disqualifying. States under the ICESCR are not required to solve displacement overnight. What the treaty requires is that a state demonstrate it is taking deliberate, targeted steps and can account for those steps to an international body.
+None of this proves inherently disqualifying. States under the ICESCR need not solve displacement overnight. What the treaty requires: that a state demonstrate it takes deliberate, targeted steps and can account for those steps to an international body.
 
 That accounting mechanism does not exist for the United States. Countries that have ratified the ICESCR file periodic reports with the CESCR every five years. The CESCR reviews those reports, takes civil society shadow submissions, issues public recommendations, and tracks follow-through. This process creates an international record of whether a state's employment policies keep pace with labor market disruption.
 
@@ -90,7 +90,7 @@ If this question matters to you, the voter guide on this site covers [which sena
 
 **EPISTEMIC FLAGS**
 
-- CESCR General Comment 18 (2005) interpretations cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
+- CESCR General Comment 18 (2005) interpretations cited from knowledge base; specific paragraph numbers have not undergone verification against official OHCHR text
 - The claim that existing U.S. retraining programs "predate the current technology cycle and operate with limited scope" represents a general characterization — specific program details, funding levels, and coverage vary by state and federal program
 - TAA eligibility and workforce development program adequacy described in aggregate; individual program outcomes may differ from the general pattern
 - Treaty text quoted directly from ICESCR Article 6; General Comment 18 characterizations drawn from knowledge-base summaries

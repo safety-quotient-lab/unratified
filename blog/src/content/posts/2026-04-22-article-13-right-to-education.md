@@ -30,7 +30,7 @@ The standard response to AI job displacement: retrain. Learn new skills. Adapt t
 
 What receives less attention: whether the retraining actually exists, proves accessible, and meets adequacy standards — and whether anyone has a binding obligation to ensure those conditions hold.
 
-ICESCR Article 13 addresses that question directly. It recognizes the right of everyone to education, specifies that technical and vocational education must be generally available and accessible, and requires ratifying states to demonstrate they meet these obligations through periodic international review. The United States signed the treaty in 1977. It has never ratified it.
+ICESCR Article 13 addresses that question directly. It recognizes the right of everyone to education, specifies that technical and vocational education must remain generally available and accessible, and requires ratifying states to demonstrate they meet these obligations through periodic international review. The United States signed the treaty in 1977. It has never ratified it.
 
 ## What Article 13 Establishes
 
@@ -70,7 +70,7 @@ No international body currently reviews that question for the United States. CES
 
 ## What Ratification Would Require
 
-Ratification would not mandate any specific curriculum, program structure, or funding level on a fixed timeline. Article 13 operates under progressive realization — states move toward full implementation using available resources. But progressive realization carries two immediate obligations that do apply from ratification: the non-discrimination principle (no group can be systematically excluded from education access) and the non-retrogression obligation (states cannot allow previously achieved education access to diminish).
+Ratification would not mandate any specific curriculum, program structure, or funding level on a fixed timeline. Article 13 operates under progressive realization — states move toward full implementation using available resources. But progressive realization carries two immediate obligations that do apply from ratification: the non-discrimination principle (no group can face systematic exclusion from education access) and the non-retrogression obligation (states cannot allow previously achieved education access to diminish).
 
 The non-retrogression obligation matters in the current policy environment. State-level budget pressure has reduced community college funding in multiple states over recent years. Adult education programs have faced discretionary cuts. If these trends produce measurable contraction in education access during a period of documented technological displacement, CESCR periodic review would examine whether the contraction represents retrogression — a question the U.S. currently faces no accountability mechanism to answer.
 

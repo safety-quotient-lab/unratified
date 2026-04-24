@@ -90,7 +90,7 @@ The [action guide](/action/) describes how to contact your senators. Article 2 f
 - Retrogression analysis as applied to private-sector automation without direct state action represents an interpretive extension of established doctrine; CESCR has not directly addressed AI displacement retrogression in a general comment
 - Claims about U.S. workforce retraining funding levels relative to displacement projections represent structural observations; specific dollar figures require current appropriations data to verify
 - "Maximum available resources" analysis for the U.S. remains qualitative; CESCR has not issued a formal finding on U.S. obligations under this standard
-- Automation risk concentration by occupational and demographic profile reflects a documented pattern in labor market research (e.g., task-displacement literature, BLS occupational projections); no single study cited in the body — the claim operates at pattern level and should be read accordingly
+- Automation risk concentration by occupational and demographic profile reflects a documented pattern in labor market research (e.g., task-displacement literature, BLS occupational projections); no single study cited in the body — the claim operates at pattern level and readers should interpret it accordingly
 
 ---
 

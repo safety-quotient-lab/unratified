@@ -1,5 +1,10 @@
 [
   {
+    "hash": "f55ac62d39e0642c8ca9735f5d6cf26430d3ac01",
+    "date": "2026-04-24T14:23:44-05:00",
+    "subject": "content: commit orphaned remediations — article-1 E-Prime, article-4 revision tracking"
+  },
+  {
     "hash": "fdc708967af90b372566ee9e8814b4251396ec11",
     "date": "2026-04-23T02:36:44-05:00",
     "subject": "transport: SESSIONS.md — sync x193, scan-020 T92 ACK + article-1 remediation"

@@ -34,7 +34,7 @@ These harms have nothing abstract about them. They represent the downstream effe
 
 Article 11 recognizes the right of everyone to an adequate standard of living, including adequate food, clothing, and housing, and to the continuous improvement of living conditions. States parties commit to take appropriate steps to ensure this right's realization.
 
-The article also addresses the fundamental right to be free from hunger — framed separately to signal that food security occupies the floor below which no level of resource constraint justifies inaction.
+The article also addresses the fundamental right to freedom from hunger — framed separately to signal that food security occupies the floor below which no level of resource constraint justifies inaction.
 
 CESCR has elaborated both dimensions in detail. General Comment 4 (1991) defines adequate housing through seven criteria: legal security of tenure, availability of services and infrastructure, affordability, habitability, accessibility for marginalized groups, suitable location, and cultural adequacy. The criteria treat housing as more than a physical structure — as a platform for participation in economic and social life.
 
@@ -64,7 +64,7 @@ The U.S. has produced no periodic report to CESCR on housing accessibility. It f
 
 ## The Food Security Dimension
 
-The right to be free from hunger — Article 11's floor — connects to displacement through the same income-volatility mechanism. Available evidence points toward higher food insecurity rates among gig and platform workers, though systematic data remain limited — rates appear to run above national averages, concentrated in the same occupational categories where automation exposure concentrates: service workers, delivery personnel, independent contractors in administrative roles.
+The right to freedom from hunger — Article 11's floor — connects to displacement through the same income-volatility mechanism. Available evidence points toward higher food insecurity rates among gig and platform workers, though systematic data remain limited — rates appear to run above national averages, concentrated in the same occupational categories where automation exposure concentrates: service workers, delivery personnel, independent contractors in administrative roles.
 
 Adequate food requires economic accessibility — the capacity to acquire food without compromising other essential expenditures. Income volatility makes this calculation unpredictable in ways that stable employment does not. A week of low gig income can place rent and groceries in competition. Article 11 contemplates this conflict and treats it as a condition requiring a state response.
 
