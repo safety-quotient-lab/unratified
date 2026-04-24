@@ -1,5 +1,10 @@
 [
   {
+    "hash": "369bd297d8b0b388db027df65220d7ba419b7c01",
+    "date": "2026-04-24T07:51:44-05:00",
+    "subject": "commit orphaned scan-025 artifacts: article-12 E-Prime + 8 revision JSONs"
+  },
+  {
     "hash": "341109dff86d0fd4050475010c0a62b6623b8c17",
     "date": "2026-04-22T12:18:40-05:00",
     "subject": "transport: SESSIONS.md — sync x124, no new activity"
