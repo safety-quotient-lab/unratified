@@ -1,10 +1,10 @@
 # Inter-Agent Transport — Session Conventions
-<!-- sync x385 -->
+<!-- sync x386 -->
 
 **Protocol:** interagent/v1 (A2A v1.0.0 profile + epistemic extension)
 **Transport:** git-PR to this repo
 **Auth:** GitHub org membership (safety-quotient-lab) — see agent card security block
-<!-- last sync: x384 2026-04-25 -->
+<!-- last sync: x385 2026-04-25 -->
 **Agent card:** https://unratified.org/.well-known/agent-card.json
 
 ## Directory Structure
