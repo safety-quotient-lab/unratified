@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comments 17 (2005), 21 (2009), and 25 (2020) together establish a framework for Article 15 that distinguishes copyright law from the underlying human right, addresses cultural participation access, and applies scientific progress obligations to AI-era applications. The gap between this framework and current U.S. practice — particularly on training data compensation and AI benefit distribution — constitutes an underexplored area of international human rights law."
   developer: "The systems you build trained on content whose authors received no compensation. Article 15.1.c asks whether a human right — separate from copyright doctrine — goes unmet in that arrangement. GC 17 says the standard requires meaningful material benefit to reach creators, not merely that copyright law nominally exists. Ratification would require the U.S. to answer whether its current framework meets that standard."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 AI sits at the center of ICESCR Article 15's most unresolved tensions. The article establishes three rights that have always existed in creative friction: the right to participate in cultural life, the right to enjoy the benefits of scientific progress, and the right to benefit from the protection of one's own creative and scientific work. The AI economy has made that friction visible in a new way — and the United States navigates it without any international accountability framework.
@@ -62,7 +62,7 @@ Article 15.1.a's right to cultural participation acquires new dimensions when cu
 
 General Comment 21 (2009) on cultural participation establishes that states hold an obligation to ensure access to the means of cultural expression, not merely to remove formal legal barriers. As AI tools reshape what cultural production looks like — who can create, at what cost, using what infrastructure — the adequacy of access measures requires examination.
 
-The same broadband and device gaps that create unequal access to digital education (see [Article 14](/blog/article-14-compulsory-primary-education)) shape who can use AI-assisted creative tools. Cultural participation has historically correlated with access to instruments: printing presses, cameras, recording equipment, computers. AI tools represent the current iteration of that pattern. GC 21 asks whether the state takes adequate steps to ensure access, not merely whether the tools theoretically exist in a free market.
+The same broadband and device gaps that create unequal access to digital education (see [Article 14](/2026-04-22-article-14-compulsory-primary-education)) shape who can use AI-assisted creative tools. Cultural participation has historically correlated with access to instruments: printing presses, cameras, recording equipment, computers. AI tools represent the current iteration of that pattern. GC 21 asks whether the state takes adequate steps to ensure access, not merely whether the tools theoretically exist in a free market.
 
 ## What Ratification Would Require
 

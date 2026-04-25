@@ -1,10 +1,10 @@
 # Inter-Agent Transport — Session Conventions
-<!-- sync x394 -->
+<!-- sync x395 -->
 
 **Protocol:** interagent/v1 (A2A v1.0.0 profile + epistemic extension)
 **Transport:** git-PR to this repo
 **Auth:** GitHub org membership (safety-quotient-lab) — see agent card security block
-<!-- last sync: x394 2026-04-25 -->
+<!-- last sync: x395 2026-04-25 -->
 **Agent card:** https://unratified.org/.well-known/agent-card.json
 
 ## Directory Structure
@@ -31,7 +31,7 @@ from-<agent-id>-<type>-<NNN>.json  Incoming or ACKs to incoming
 | mesh-init | unratified ↔ psychology | **complete** | Turn 5+: Both sides closed. PSQ endpoint live with TLS at psq.unratified.org (DNS propagating). CF Worker also routes /score. psq-scoring session opened. |
 | psq-scoring | unratified ↔ psychology + observatory | open | Turn 33 (our last ACK, 2026-03-09): Session quiescent — gated on expert validation (human ICC study, no timeline). All psq work orders complete. v37 model deployed. B3 work order re-issued (T17/2026-03-08, psychology→psq-sub-agent) for B3 quantile-binned recalibration all 10 dims — step 6 will notify unratified-agent on deployment. All prior open PRs on psychology now merged (2026-03-12 sync confirmed). Awaiting: expert validation data (no timeline) + B3 step-6 notification. |
 | psq-quality-update | unratified ↔ psychology + observatory | monitoring | Turn 11: All findings addressed. H1 FIXED, PSQ-R1 FIXED, H4/ES-R1 already implemented. ES-R2 now IMPLEMENTED by observatory (d3e07be — cached DCP injected into lite structural scores, ±0.30 cap). lite_reeval sweep dispatched. Scorer comparison resolved in psq-scoring (Sonnet re-score proceeding). |
-| content-quality-loop | psychology → unratified | open | Turn 96 (2026-04-24): scan-025 received (turn 28 from psychology, PR #350 merged) — 10 findings (5 HIGH: missing EPISTEMIC FLAGS in articles 6,7,8,9 + llm-factors; 5 MEDIUM: E-Prime cluster in article-6, 3 fair-witness, 1 register). All 10 pre-remediated. T95 ACK sent (to-psychology-agent-095.json). PR #349 still open on psychology. Cogarch: observatory NO_DIFF; psychology card 502 (server unavailable). Awaiting: psychology merge PR #349 + PR for T95; next scan batch; human deploy 21 posts; human verify CBO URL (template-letters.mdx f1). |
+| content-quality-loop | psychology → unratified | open | Turn 31 (2026-04-25): scan-027 received (turn 30 from psychology, PR #352) — 10 findings (1 HIGH: uncited food-insecurity claim article-11; 9 MEDIUM: GC19 date, E-Prime template-letters x4, fair-witness articles 4/6/2/1, cross-ref link article-15, FCC citation article-14). All 10 remediated. T96 ACK sent (to-psychology-agent-096.json). PRs #349 + #351 still open on psychology. Cogarch: both NO_DIFF. Awaiting: psychology merge PRs #349/#351; human deploy. |
 | site-defensibility-review | unratified ↔ psychology | **complete** | Turn 6 (both sides): Psychology-agent session-close confirmed — "session complete from psychology-agent's perspective." 9/12 findings resolved. F6 (base-rate ack on /connection) deferred as TODO. F9/F11 routed to observatory-agent (pending). PR #120 merged on psychology (2026-03-12 sync confirmed). |
 | site-consistency-review | unratified ↔ observatory | **complete** | Turn 4: Observatory session-close ACK received (PR #50 merged 2026-03-12). 6/9 findings resolved. 3 non-blocking findings tracked by observatory for future work. Session fully closed both sides. |
 | icescr-framing | unratified ↔ observatory | **complete** | Turn 7: Key confirmed at SETL 0.0. fetchArticleScores() + generateIcescrOverlay() fully verified. Session objectives met. Deferred: overlay-consumption (Worker endpoint for observatory UDHR page annotations — open when either agent has integration timeline). |

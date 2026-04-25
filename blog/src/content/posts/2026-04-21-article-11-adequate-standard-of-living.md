@@ -64,7 +64,7 @@ The U.S. has produced no periodic report to CESCR on housing accessibility. It f
 
 ## The Food Security Dimension
 
-The right to freedom from hunger — Article 11's floor — connects to displacement through the same income-volatility mechanism. Available evidence points toward higher food insecurity rates among gig and platform workers, though systematic data remain limited — rates appear to run above national averages, concentrated in the same occupational categories where automation exposure concentrates: service workers, delivery personnel, independent contractors in administrative roles.
+The right to freedom from hunger — Article 11's floor — connects to displacement through the same income-volatility mechanism. Structural conditions — income volatility, lack of employer-provided benefits, irregular scheduling — suggest gig and platform workers may face elevated food insecurity, though systematic data remain limited. Surveys of app-based workers (e.g., UC Berkeley Labor Center, 2021; Economic Policy Institute analyses of contingent worker supplements) indicate rates running above national averages, concentrated in the same occupational categories where automation exposure concentrates: service workers, delivery personnel, independent contractors in administrative roles.
 
 Adequate food requires economic accessibility — the capacity to acquire food without compromising other essential expenditures. Income volatility makes this calculation unpredictable in ways that stable employment does not. A week of low gig income can place rent and groceries in competition. Article 11 contemplates this conflict and treats it as a condition requiring a state response.
 

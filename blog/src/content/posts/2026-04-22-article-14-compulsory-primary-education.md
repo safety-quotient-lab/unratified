@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 11 (2001) elaborates Article 14's plan requirements and the definition of 'free' to include indirect cost barriers. The intersection of the Covenant's adequacy standard with AI-era educational requirements remains underexplored — particularly the question of whether digital access gaps constitute Covenant violations under GC 11's indirect cost framework. The U.S. CESCR non-participation means this analysis proceeds outside any formal accountability mechanism."
   developer: "The systems you build assume a population with baseline digital literacy. Article 14 asks whether the obligation to provide that literacy — as a right, with a concrete plan — exists in binding form. In the U.S., it does not. The broadband gap, the device equity gap, and the absence of binding AI-literacy standards in K-12 represent structural problems with no binding remediation timeline. The Covenant would require one."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 The United States has free public K-12 education. ICESCR Article 14 — the shortest substantive article in the Covenant — appears to apply somewhere else. It requires states that have not yet secured "compulsory primary education, free of charge" to adopt a concrete action plan within two years of ratification. The United States cleared that threshold decades ago.
@@ -42,7 +42,7 @@ For many of the 173 states that have ratified the ICESCR, Article 14 represents 
 
 The United States provides public K-12 education at no direct tuition cost. But General Comment 11's interpretation of "free" — extending to indirect costs that operate as exclusion mechanisms — points toward a gap the U.S. system has not closed.
 
-In the AI economy, that gap has acquired new dimensions. Meaningful participation in K-12 education now routinely requires a device and a reliable broadband connection. FCC data from recent years suggests approximately 14 to 17 million U.S. households with school-age children lack adequate broadband access, concentrated in rural areas and low-income urban neighborhoods. Federal programs such as E-Rate and the now-concluded Affordable Connectivity Program have addressed parts of this gap — but neither constitutes a binding entitlement, and both depend on appropriations that Congress can reduce without any accountability obligation.
+In the AI economy, that gap has acquired new dimensions. Meaningful participation in K-12 education now routinely requires a device and a reliable broadband connection. FCC Broadband Deployment Reports and related analyses estimate that approximately 14 to 17 million U.S. households with school-age children lack adequate broadband access (FCC, 2020; 2021), concentrated in rural areas and low-income urban neighborhoods. Federal programs such as E-Rate and the now-concluded Affordable Connectivity Program have addressed parts of this gap — but neither constitutes a binding entitlement, and both depend on appropriations that Congress can reduce without any accountability obligation.
 
 Under the GC 11 framework, a school system that nominally offers free education while requiring families to supply internet-connected devices places indirect cost barriers between low-income students and the education. The letter of "free" holds; the substance, in a world where digital participation functions as non-optional, diverges from the standard.
 

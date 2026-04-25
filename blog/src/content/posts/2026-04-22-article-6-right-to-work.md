@@ -48,7 +48,7 @@ The UN Committee on Economic, Social and Cultural Rights published General Comme
 
 **Active state obligations apply.** General Comment 18 identifies specific duties. States must adopt national employment strategies. They must provide technical and vocational training, with particular attention to people who face structural barriers to reentry. They must take effective steps to prevent and address unemployment. The treaty does not permit a passive response — waiting for markets to self-correct — when displacement occurs at scale.
 
-**Non-discrimination obligations extend to labor market access.** If AI displacement falls disproportionately on workers by age, race, or gender — and research suggests it does not fall evenly — states have a specific obligation to address that disparity within their employment policies.
+**Non-discrimination obligations extend to labor market access.** If AI displacement falls disproportionately on workers by age, race, or gender — and research suggests it does not fall evenly (Frey & Osborne, 2017; Muro, Maxim & Whiton, 2019) — states have a specific obligation to address that disparity within their employment policies.
 
 **Justiciability continues to develop.** Article 6 falls under progressive realization (a state must take steps to the maximum of its available resources toward full realization), but General Comment 18 makes clear that some elements carry immediate force: non-discrimination, non-retrogression, and the obligation to take deliberate action.
 

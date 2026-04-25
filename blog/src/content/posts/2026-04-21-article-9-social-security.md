@@ -105,7 +105,7 @@ If you want to engage on ratification, the voter guide on this site includes [sp
 
 **EPISTEMIC FLAGS**
 
-- CESCR General Comment 19 (2008) interpretations cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
+- CESCR General Comment 19 (2007) interpretations cited from knowledge base; specific paragraph numbers have not been verified against official OHCHR text
 - Acemoglu & Restrepo (2018) citation drawn from knowledge base — verify publication details and specific findings before citing in research contexts
 - The characterization of U.S. social insurance gaps as they apply to AI-displaced workers represents a structural inference from known coverage rules, not a published CESCR finding on U.S. policy
 - Contractor classification exclusions described in general terms; specific state-by-state variations in unemployment insurance eligibility may differ from the aggregate pattern described
