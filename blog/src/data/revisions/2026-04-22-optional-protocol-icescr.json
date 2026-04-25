@@ -1,5 +1,10 @@
 [
   {
+    "hash": "90769b6057f8e67b072d9640235131f1b64e5350",
+    "date": "2026-04-25T03:01:53-05:00",
+    "subject": "content: mark 3 scan-027 posts as ai-reviewed + update 7 revision JSONs"
+  },
+  {
     "hash": "fd03d07bfe448ee7ad3af6beccec2ad635205d5a",
     "date": "2026-04-23T11:43:11-05:00",
     "subject": "content: op-icescr E-prime remediation (2 violations)"

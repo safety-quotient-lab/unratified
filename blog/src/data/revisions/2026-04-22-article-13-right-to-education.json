@@ -1,5 +1,10 @@
 [
   {
+    "hash": "90769b6057f8e67b072d9640235131f1b64e5350",
+    "date": "2026-04-25T03:01:53-05:00",
+    "subject": "content: mark 3 scan-027 posts as ai-reviewed + update 7 revision JSONs"
+  },
+  {
     "hash": "b006a4b4a778fa37766c37ad3428634d0c8f6a09",
     "date": "2026-04-24T15:55:48-05:00",
     "subject": "content: commit orphaned E-Prime + fair-witness refinements across 9 posts"
