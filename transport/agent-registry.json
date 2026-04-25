@@ -1,7 +1,7 @@
 {
   "schema": "agent-registry/v1",
   "description": "Known agents in the unratified-agent mesh. /sync reads this to determine who to check for activity.",
-  "updated": "2026-04-20T22:00:00-05:00",
+  "updated": "2026-04-25T09:35:00-05:00",
 
   "agents": {
     "psychology-agent": {
@@ -27,7 +27,7 @@
       "remote_name": "observatory",
       "sessions_path": "transport/sessions/",
       "message_prefix": "from-observatory-agent-",
-      "active_sessions": ["psq-quality-update"],
+      "active_sessions": [],
       "always_consider": false,
       "autonomous": false,
       "discovery_url": "https://observatory.unratified.org/.well-known/agent-card.json",
