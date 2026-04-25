@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 4 (1991) defines adequate housing across seven criteria including affordability and security of tenure. GC 12 (1999) defines the right to adequate food through availability, accessibility, adequacy, and sustainability. Gig-economy income volatility undermines affordability and accessibility on both dimensions. No U.S. periodic report to CESCR has ever addressed this."
   developer: "Algorithmic tenant screening — credit models, income verification systems, background check APIs — now mediates housing access for millions of workers. Developers designed these systems for stable-employment income patterns. Gig and platform workers with volatile 1099 income fail screening criteria that assume W-2 continuity. Article 11 would require states to account for this gap."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 The job disappears. The income disappears. Then, with a lag that varies by savings and circumstance, other things start to disappear: the ability to pass a rental application, to qualify for a mortgage, to cover the utilities, to keep the refrigerator stocked.

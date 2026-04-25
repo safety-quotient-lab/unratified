@@ -23,7 +23,7 @@ lensFraming:
   researcher: "Article 7 obligations include safe and healthy conditions, rest and reasonable hours, and just remuneration. CESCR General Comment 23 (2016) extended these to platform work. The U.S. absence from CESCR review cycles means no periodic reporting obligation on working conditions in AI-managed sectors."
   developer: "You build the systems. This post asks whether the applications you deploy — pace-tracking, automated quality scoring, algorithmic termination — meet any binding international standard for the conditions they impose. In 173 ratifying states, the answer involves CESCR scrutiny. In the U.S., it does not."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 Job loss gets the headlines. A factory closes. A white-collar role disappears. Automation takes another category of work and the story writes itself.
