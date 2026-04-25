@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 13 (1999) provides the authoritative elaboration of Article 13. Its 4-A framework and specific attention to vocational education access, economic accessibility for adults, and adaptability obligations provide a structured lens for evaluating whether U.S. retraining programs meet the treaty's minimum thresholds. No such evaluation currently occurs through any international accountability mechanism."
   developer: "Automation produces displaced workers who need education to reenter labor markets shaped by the systems you build. Article 13 frames that education access as a right, not a workforce development appropriation. In 173 ratifying states, that right carries a periodic accountability mechanism. In the U.S., it does not. The gap between 'the economy needs workers to adapt' and 'those workers have an enforceable right to the means of adaptation' represents precisely the gap the ICESCR addresses."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 The standard response to AI job displacement: retrain. Learn new skills. Adapt to what the market now requires. The advice appears in policy papers, in presidential remarks, in company press releases announcing layoffs driven by automation.

@@ -23,7 +23,7 @@ lensFraming:
   researcher: "CESCR General Comment 16 (2005) on Article 3 articulates a tripartite framework: formal equality (identical legal rules), substantive equality (equal outcomes despite structural differences), and transformative equality (addressing root causes of inequality). Automation risk research suggests women face higher occupational exposure to AI displacement than men, associated with historical patterns of occupational segregation. The intersection of GC 16's transformative equality standard with automation labor economics constitutes an underexplored area of international human rights law."
   developer: "The systems you build inherit the data they trained on. If training data reflects decades of gender-segregated hiring, pay gap patterns, or gender-correlated credit histories, AI hiring tools and credit systems can replicate those patterns at scale. Article 3's substantive equality standard asks not whether the algorithm applies the same rules to everyone, but whether its outputs produce equal enjoyment of rights — a question that standard anti-discrimination testing frameworks do not fully resolve."
 draft: false
-reviewStatus: "unreviewed"
+reviewStatus: "ai-reviewed"
 ---
 
 Article 3 of the ICESCR runs to a single sentence. It does not establish a new right: it establishes that every right in the Covenant — work, just conditions of work, social security, health, education, cultural participation — applies equally to men and women. The operative standard reaches beyond formal equality to substantive equality. That distinction, unremarkable in the abstract, carries significant weight when applied to the specific mechanics of how AI reshapes labor markets.

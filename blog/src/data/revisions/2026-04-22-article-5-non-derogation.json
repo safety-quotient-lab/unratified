@@ -1,5 +1,10 @@
 [
   {
+    "hash": "866229e255dc42e7c5bd532d2de2b8b8d8e54420",
+    "date": "2026-04-24T23:27:52-05:00",
+    "subject": "content: mark 7 scan-025 remediated posts as ai-reviewed"
+  },
+  {
     "hash": "b274ae7fbdb19c1e4eb3cb2d66d5883b471d292a",
     "date": "2026-04-24T03:12:38-05:00",
     "subject": "remediate scan-025: 10 findings across 7 posts"
