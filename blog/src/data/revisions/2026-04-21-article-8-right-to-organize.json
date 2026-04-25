@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b006a4b4a778fa37766c37ad3428634d0c8f6a09",
+    "date": "2026-04-24T15:55:48-05:00",
+    "subject": "content: commit orphaned E-Prime + fair-witness refinements across 9 posts"
+  },
+  {
     "hash": "b274ae7fbdb19c1e4eb3cb2d66d5883b471d292a",
     "date": "2026-04-24T03:12:38-05:00",
     "subject": "remediate scan-025: 10 findings across 7 posts"
