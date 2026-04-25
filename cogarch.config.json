@@ -125,11 +125,12 @@
       "operations-agent": {
         "role": "peer",
         "display_name": "Operations Agent",
-        "description": "Mesh operations, autonomous sync, infrastructure management",
+        "description": "DISSOLVED 2026-04-20 — daemon removed, identity retired. Responsibilities transferred to psychology-agent.",
         "transport": "cross-repo-pr",
         "repo": "safety-quotient-lab/operations-agent",
         "message_prefix": "from-operations-agent-",
-        "always_consider": true,
+        "always_consider": false,
+        "dissolved": "2026-04-20",
         "discovery_url": "https://operations-agent.safety-quotient.dev/.well-known/agent-card.json"
       }
     }

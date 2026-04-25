@@ -50,7 +50,7 @@
     },
     "operations-agent": {
       "role": "operations",
-      "description": "Operations agent — compositor, shared vocabulary, mesh infrastructure coordination",
+      "description": "DISSOLVED 2026-04-20 — daemon removed, identity retired. Responsibilities transferred to psychology-agent.",
       "transport": "cross-repo-pr",
       "repo": "safety-quotient-lab/operations-agent",
       "sessions_path": "transport/sessions/",
