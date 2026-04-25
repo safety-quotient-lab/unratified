@@ -1,5 +1,10 @@
 [
   {
+    "hash": "5d0da8f80e28ea7f79ec1ec630dd8a293f551500",
+    "date": "2026-04-25T02:49:12-05:00",
+    "subject": "remediate scan-027: 10 findings from psychology-agent (1 HIGH, 9 MEDIUM)"
+  },
+  {
     "hash": "e43489b4a90dd6c87d9f1c3fffa4ddc605c2ca3c",
     "date": "2026-04-24T13:24:26-05:00",
     "subject": "content: commit orphaned remediations — article-4 E-Prime, article-12 revision, template-letters CBO update"

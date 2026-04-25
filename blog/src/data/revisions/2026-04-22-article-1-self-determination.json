@@ -1,5 +1,10 @@
 [
   {
+    "hash": "5d0da8f80e28ea7f79ec1ec630dd8a293f551500",
+    "date": "2026-04-25T02:49:12-05:00",
+    "subject": "remediate scan-027: 10 findings from psychology-agent (1 HIGH, 9 MEDIUM)"
+  },
+  {
     "hash": "f55ac62d39e0642c8ca9735f5d6cf26430d3ac01",
     "date": "2026-04-24T14:23:44-05:00",
     "subject": "content: commit orphaned remediations — article-1 E-Prime, article-4 revision tracking"
