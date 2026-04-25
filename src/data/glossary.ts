@@ -184,6 +184,31 @@ export const glossary: GlossaryTerm[] = [
     seeAlso: '/connection/ai/higher-order-effects',
   },
 
+  {
+    id: 'algorithmic-management',
+    term: 'Algorithmic Management',
+    definition: 'The practice of using automated systems to set work pace, evaluate performance, assign tasks, and terminate working relationships — often without human review. Encompasses productivity tracking, automated discipline, platform deactivation, and surveillance tools. Raises Article 7 (just and favorable conditions) and Article 8 (right to organize) concerns under the ICESCR.',
+    category: 'methodology',
+    related: ['four-scarcities', 'bifurcation'],
+    seeAlso: '/posts/2026-04-21-article-7-algorithmic-management',
+  },
+  {
+    id: 'general-welfare',
+    term: 'General Welfare',
+    definition: 'The standard in ICESCR Article 4 requiring that any limitation on Covenant rights serve "solely the purpose of promoting the general welfare in a democratic society." Implies both a substantive test (public benefit, not private interests) and a procedural test (democratic accountability). Limitations serving private economic benefit rather than public welfare do not satisfy this standard.',
+    category: 'treaty',
+    related: ['icescr', 'progressive-realization'],
+    seeAlso: '/posts/2026-04-22-article-4-limitations-on-rights',
+  },
+  {
+    id: 'llm-factors-psychology',
+    term: 'LLM-Factors Psychology',
+    definition: 'A project-coined discipline that adapts human factor-analytic constructs (Big Five personality traits, affect dimensions, cognitive style measures) to LLM agents through apophatic discipline — preserving the measurement structure while explicitly marking disanalogies with human psychology. Each construct maps a structural parallel alongside an explicit disanalogy checklist, maintaining analytical utility without overclaiming inner experience.',
+    category: 'methodology',
+    related: ['apophatic-method', 'pad-space', 'd-prime'],
+    seeAlso: '/posts/2026-04-19-llm-factors-psychology',
+  },
+
   // ── Hypotheses ─────────────────────────────────────────────────
   {
     id: 'h1-productivity-multiplier',

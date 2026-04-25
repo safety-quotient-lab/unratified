@@ -95,7 +95,7 @@ Automation will continue to displace workers. The workers it displaces will incr
 
 ICESCR Article 9 asks states to examine whether social security reaches everyone. For forty-nine years, the U.S. has not had a formal obligation to answer that question in an international forum.
 
-If you want to engage on ratification, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [concrete steps for making contact](/2026-03-08-voter-guide-contact-your-senator).
+If you want to engage on ratification, the [action guide](/action/) describes how to contact your senators and includes template letters you can personalize.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "When Your Manager Runs as an Algorithm: ICESCR Article 7 and the Hidden Rights Gap in AI-Managed Work"
-summary: "Millions of American workers now take instructions from software — warehouse systems that pace their movements, gig platforms that deactivate accounts without explanation, content moderation queues with automated quality scores. ICESCR Article 7 defines what 'just and favorable conditions of work' means in international law. The U.S. lacks this accountability layer."
+summary: "Workers across multiple sectors now take instructions from software — warehouse systems that pace their movements, gig platforms that deactivate accounts without explanation, content moderation queues with automated quality scores. ICESCR Article 7 defines what 'just and favorable conditions of work' means in international law. The U.S. lacks this accountability layer."
 publishedDate: "2026-04-21T09:00:00-05:00"
 author:
   tool:
@@ -46,7 +46,7 @@ Documented practices in U.S. workplaces include:
 
 **Surveillance and location tracking.** GPS monitoring, keyloggers, screen capture software, and biometric time clocks now appear in a broad range of workplaces from trucking to remote office work.
 
-None of these practices makes U.S. law automatically illegal. Some face regulatory scrutiny under OSHA, the NLRA, or state laws. But no binding floor governs the specific conditions algorithmic management creates.
+No U.S. law automatically prohibits these practices. Some face regulatory scrutiny under OSHA, the NLRA, or state laws. But no binding floor governs the specific conditions algorithmic management creates.
 
 ## What Article 7 Actually Requires
 
@@ -91,7 +91,7 @@ Algorithmic management grows. The workers it affects span warehouse fulfillment,
 
 The U.S. has a choice about whether those workers have access to an international accountability mechanism. Forty-nine years after President Carter signed the treaty, that choice remains open.
 
-If you want to engage on this issue, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [what you can do right now to make contact](/2026-03-08-voter-guide-contact-your-senator).
+If you want to engage on this issue, the [action guide](/action/) describes how to contact your senators and includes template letters you can personalize.
 
 ---
 

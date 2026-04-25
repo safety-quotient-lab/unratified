@@ -93,7 +93,7 @@ The right to organize has always depended partly on conditions outside the text 
 
 Forty-nine years after the U.S. signed the treaty, the question of whether American workers in AI-managed, platform-classified, algorithmically monitored roles can meaningfully exercise Article 8 rights remains outside the scope of any formal international review.
 
-If you want to act on this, the voter guide on this site includes [specific senators who could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [concrete steps for making contact](/2026-03-08-voter-guide-contact-your-senator).
+If you want to act on this, the [action guide](/action/) describes how to contact your senators and includes template letters you can personalize.
 
 ---
 

@@ -80,7 +80,7 @@ AI displacement does not respect sector boundaries or skill levels. It proceeds 
 
 ICESCR Article 6 says governments have obligations when that happens. Forty-nine years after the U.S. signed the treaty, those obligations remain voluntary. Ratification would make them binding — and create the accountability infrastructure to enforce them.
 
-If this question matters to you, the voter guide on this site covers [which senators could move on ratification](/2026-03-06-voter-guide-which-senators-could-move) and [how to make contact](/2026-03-08-voter-guide-contact-your-senator).
+If this question matters to you, the [action guide](/action/) describes how to contact your senators and includes template letters you can personalize.
 
 ---
 
