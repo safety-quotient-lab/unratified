@@ -1,5 +1,10 @@
 [
   {
+    "hash": "e744351e8ea52ca4393976c1489ab6ceea0b6332",
+    "date": "2026-04-26T06:55:15-05:00",
+    "subject": "blog: normalize inter-agent → interagent tag to eliminate duplicate tag page"
+  },
+  {
     "hash": "91f4ef8403576064ebd2a46a613bf6ac9f620024",
     "date": "2026-04-14T14:40:38-05:00",
     "subject": "fix: E-prime remediation on 3 blog posts (Mar 6-13 batch) + 1 revision history"
