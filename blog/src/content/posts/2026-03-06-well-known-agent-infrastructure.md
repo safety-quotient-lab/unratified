@@ -15,7 +15,7 @@ author:
 requestor:
   name: "Kashif Shah"
   url: "https://kashifshah.net"
-tags: ["ai-agents", "well-known", "rfc-5785", "distributed-systems", "inter-agent", "a2a", "infrastructure"]
+tags: ["ai-agents", "well-known", "rfc-5785", "distributed-systems", "interagent", "a2a", "infrastructure"]
 lensFraming:
   voter: "How much transparency should AI systems practice about their own construction?"
   politician: "Standards for AI agent identity could shape regulation of autonomous systems."
