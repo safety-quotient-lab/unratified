@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b53549648c051486fbf5a51b29ad29a5d5bf36ff",
+    "date": "2026-04-26T04:44:14-05:00",
+    "subject": "blog: normalize 3 uppercase tags to eliminate duplicate tag pages"
+  },
+  {
     "hash": "b7d4e2b7ef7ef2bcbf1b00d2fa0b1bb52703b3a2",
     "date": "2026-04-17T05:56:37-05:00",
     "subject": "interagent: remediate scan-010-s102c + scan-019 + scan-020 (27 findings) + ACK T54-T56"

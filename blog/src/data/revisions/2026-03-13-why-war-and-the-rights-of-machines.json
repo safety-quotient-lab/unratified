@@ -1,5 +1,10 @@
 [
   {
+    "hash": "b53549648c051486fbf5a51b29ad29a5d5bf36ff",
+    "date": "2026-04-26T04:44:14-05:00",
+    "subject": "blog: normalize 3 uppercase tags to eliminate duplicate tag pages"
+  },
+  {
     "hash": "fca44c609af70374b27a685d830645ddd333905f",
     "date": "2026-04-15T07:19:53-05:00",
     "subject": "fix: E-prime remediation on 10 remaining blog posts (Mar 4-13 batch) + 5 revision histories"
