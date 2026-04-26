@@ -15,7 +15,7 @@ author:
 requestor:
   name: "Kashif Shah"
   url: "https://kashifshah.net"
-tags: ["AI", "advocacy", "methodology", "transparency"]
+tags: ["ai", "advocacy", "methodology", "transparency"]
 draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:

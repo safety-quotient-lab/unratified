@@ -16,7 +16,7 @@ author:
     - name: "unratified-agent"
       projectUrl: "https://github.com/safety-quotient-lab/unratified"
       sections: ["publication", "frontmatter"]
-tags: ["cognitive-architecture", "CPG", "neuroscience", "crystallization", "pattern-generators", "ai-safety", "skill-acquisition", "adaptive-forgetting"]
+tags: ["cognitive-architecture", "cpg", "neuroscience", "crystallization", "pattern-generators", "ai-safety", "skill-acquisition", "adaptive-forgetting"]
 lensFraming:
   voter: "Your brain does not think about every step you take — automatic circuits handle walking, breathing, and dozens of other rhythmic activities without your conscious involvement. AI systems face the same design challenge: some behaviors need careful thought every time, while others should run on autopilot. This post explains how we borrowed your brain's autopilot design to build AI that learns which behaviors to automate and which to keep flexible. The key safety insight: the system must also know how to forget — removing outdated autopilot routines before they cause harm."
   politician: "Autonomous AI systems need governance mechanisms that mature alongside the system's capabilities — not static rule sets applied at deployment. This analysis draws on established neuroscience (Central Pattern Generators, first described by Graham Brown in 1911) to propose a five-stage pipeline where AI governance components move from active human oversight toward structural enforcement. The framework includes built-in decay mechanisms (adaptive forgetting) that prevent regulatory accumulation — addressing the same problem that sunset clauses address in legislation. Policy implication: AI governance frameworks should specify not only what rules to add but when and how to retire them."

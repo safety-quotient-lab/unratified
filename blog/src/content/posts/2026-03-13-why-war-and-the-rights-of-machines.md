@@ -27,7 +27,7 @@ tags:
   - ai-safety
   - cross-cultural
   - psychoemotional-safety
-  - UDHR
+  - udhr
   - taoism
   - wu-wei
 reviewStatus: "ai-reviewed"
