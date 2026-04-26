@@ -61,13 +61,13 @@ All analysis follows fair witness principles: observations separated from infere
 
 - Main site: https://unratified.org
 - Blog: https://blog.unratified.org
-- Blog llms.txt: https://blog.unratified.org/llms.txt (43 posts with summaries)
+- Blog llms.txt: https://blog.unratified.org/llms.txt (64 posts with summaries)
 - Repository: https://github.com/safety-quotient-lab/unratified
 - Machine-readable endpoints:
   - /.well-known/agent-card.json — Agent identity, capabilities, and skills
   - /.well-known/agent-inbox.json — Site identity and agent interaction spec
   - /.well-known/fair-witness.json — Discriminator methodology (5 dimensions, anchors, elimination threshold)
-  - /.well-known/glossary.json — 57 terms with SKOS mappings
+  - /.well-known/glossary.json — 66 terms with SKOS mappings
   - /.well-known/taxonomy.json — SKOS ConceptScheme
 
 ## Technical Stack

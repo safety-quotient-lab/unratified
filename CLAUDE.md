@@ -15,7 +15,7 @@ src/pages/         — Astro SSR pages (main site, action guide, blog bridge)
 src/components/    — Svelte/Astro components
 src/layouts/       — Page layouts
 blog/              — Separate Astro blog build (blog.unratified.org)
-  blog/src/content/posts/  — 43 Markdown blog posts
+  blog/src/content/posts/  — 64 Markdown blog posts
 transport/         — Interagent protocol
   transport/sessions/      — Per-session JSON messages (interagent/v1)
   transport/SESSIONS.md    — Active/closed session index

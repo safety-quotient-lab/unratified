@@ -4,9 +4,9 @@
 
 ## Blog Purpose
 
-The Unratified Blog extends the main site (unratified.org) with timely analysis, methodology explanations, and case studies. Posts cover AI accuracy, confabulation patterns, measurement design, fair witness methodology, cognitive architecture for AI agents, voter guides for ICESCR ratification, and the intersection of AI economics with human rights.
+The Unratified Blog extends the main site (unratified.org) with timely analysis, methodology explanations, and case studies. Posts cover AI accuracy, confabulation patterns, measurement design, fair witness methodology, cognitive architecture for AI agents, voter guides for ICESCR ratification, ICESCR article-by-article analysis through the lens of AI displacement, AI agent psychology, and the intersection of AI economics with human rights.
 
-## Posts (43 total)
+## Posts (64 total)
 
 ### ICESCR Voter Guides
 
@@ -18,12 +18,32 @@ The Unratified Blog extends the main site (unratified.org) with timely analysis,
 - "AI Job Displacement and the Treaty Gap: Why the U.S. Has No Binding Floor" — AI displaces workers faster than existing U.S. law anticipated. ICESCR ratifiers face binding accountability; the U.S. does not.
 - "How to Contact Your Senator About ICESCR: Scripts, Timing, and Follow-Through" — Exact scripts, timing guidance, and follow-up strategies for constituent contact on ratification hearings.
 
+### ICESCR Article-by-Article Analysis (Articles 1–15 + Optional Protocol)
+
+- "The Foundation Before the Rights: ICESCR Article 1 and Economic Self-Determination in the Age of AI" — Article 1 names the structural terrain AI-driven labor displacement enters — the right of all peoples to freely pursue their economic development — a terrain the U.S. has left unaccountable.
+- "No Blank Check for Delay: ICESCR Article 2 and the Progressive Realization Standard" — Article 2 obligates states to use maximum available resources toward full realization of economic rights. For the world's largest economy facing AI displacement, the retrogression doctrine sets a floor.
+- "The Gendered Shape of AI Displacement: ICESCR Article 3 and Equal Rights in Practice" — Women occupy a disproportionate share of automation-exposed occupations, hold underrepresented positions in the AI sector, and face AI-driven hiring bias. The U.S. faces no international accountability for whether its AI response produces equal outcomes.
+- "Limits on Limits: ICESCR Article 4 and the Standard Algorithmic Systems Don't Meet" — Most mechanisms constraining workers in AI-driven markets — algorithmic management, platform classification, terms-of-service regimes — originate in private contract, not democratic law. Article 4 requires limitations determined by law.
+- "No Ratchet Down: ICESCR Article 5 and the Covenant's Self-Protection Clause" — Article 5 forecloses any interpretation that would authorize destroying Covenant rights and prevents ratification from weakening existing domestic protections.
+- "The Right to Work in the Age of AI Displacement: What ICESCR Article 6 Requires" — Article 6 guarantees freely chosen work with genuine opportunity. As AI displaces millions, the U.S. has no binding obligation to respond.
+- "When Your Manager Runs as an Algorithm: ICESCR Article 7 and the Hidden Rights Gap in AI-Managed Work" — Workers now take instructions from software. Article 7 defines just and favorable conditions in international law. The U.S. lacks this accountability layer.
+- "The Right to Strike Means Less When Your Replacement Runs in a Data Center: ICESCR Article 8 and AI Displacement" — As AI reduces the leverage collective action depends on, and algorithmic tools track organizing, the U.S. absence from international accountability has growing consequence.
+- "The Safety Net Has a Hole: ICESCR Article 9 and Workers AI Displacement Leaves Behind" — Article 9 establishes social security as a human right. Workers most exposed to AI displacement often fall outside the U.S. unemployment system.
+- "When Automation Takes the Job, Who Protects the Family? ICESCR Article 10" — AI displacement routes workers into gig arrangements that strip maternity protections and youth worker safeguards. The U.S. has no international accountability for the resulting gap.
+- "When the Job Goes, the Housing Follows: ICESCR Article 11 and the Living Standard Gap" — AI displacement accelerates income volatility that undermines the right to adequate food, clothing, housing, and continuous improvement of living conditions.
+- "When the Job Goes, So Does the Coverage: ICESCR Article 12 and the Health Access Gap" — U.S. health coverage depends on employment. AI displacement breaks the employment relationship — and with it, access to healthcare.
+- "When Retraining Becomes a Right, Not a Benefit: ICESCR Article 13 and the Education Gap After AI Displacement" — Article 13 recognizes the right to education including vocational training. In the U.S., retraining exists as a policy benefit, not a justiciable right.
+- "A Plan, Not a Promise: ICESCR Article 14 and What Free Education Must Mean in an AI Economy" — Article 14 requires states without free compulsory primary education to adopt a binding, time-bound action plan. The planning standard it encodes speaks directly to gaps AI displacement exposes.
+- "Progress and Protection: ICESCR Article 15, AI Authorship, and the Rights the U.S. Has Not Ratified" — Article 15 establishes rights to cultural participation, scientific progress, and author protection. AI sits at the intersection of all three.
+- "The Missing Mechanism: The Optional Protocol to the ICESCR" — The Optional Protocol creates individual and group complaints pathways, an inquiry procedure for grave violations, and inter-state communications. The U.S. has not signed it.
+
 ### ICESCR Policy Analysis
 
 - "Has the ICESCR Actually Worked? What the Enforcement Record Shows" — Enforcement remains uneven, treaty-based work rights cases are rare, and the gap confirms the case for ratification rather than undermining it.
 - "How Long Would ICESCR Ratification Take If We Started Today?" — A realistic timeline drawing on the ICCPR precedent, Senate procedural realities, and the ADA enforcement pattern.
 - "How Much Would It Cost to Ratify ICESCR — and Fill the Gaps?" — Ratifying costs almost nothing. Closing the safety-net gaps runs into different numbers — compared against what the gaps already cost.
 - "An AI Built This Campaign. Here's the Honest Assessment." — What Claude drafting the analysis, site, and campaign means for human rights advocacy — and what it does not mean.
+- "The 60th Anniversary No One Celebrated: What the 2025–2026 Crisis Means for Your Economic Rights" — In 2026, the ICESCR turns sixty. Instead of celebration: US withdrawal from international organizations, a UN facing financial collapse, and the treaty's monitoring body losing capacity.
 
 ### Historical Context
 
@@ -55,6 +75,13 @@ The Unratified Blog extends the main site (unratified.org) with timely analysis,
 - "Who Speaks, Who Gets Spoken About: Stakeholder Voice in Tech Discourse" — Workers appear as subjects 10x more than as speakers — mapping directly onto ICESCR-protected rights.
 - "The Privacy Paradox: What Sites Say vs. What Sites Do" — Structural-editorial tension: editorial scores consistently exceed structural scores, with privacy showing the largest gap.
 - "Validating HRCB: Can LLMs Measure Human Rights Compatibility?" — Known-groups discrimination (H=23.4, p<0.0001), Wolfram-verified statistics, and a three-factor salience gate.
+
+### AI Agent Psychology
+
+- "Your AI Doesn't Just Process Your Input — It Has a Bad Day Too (and a Psychologist Should Care)" — LLM-factors psychology studies the interaction between human and AI cognitive systems as a dyad, where both participants carry measurable operational states.
+- "Your AI Agent Doesn't Know When It's Overwhelmed — Here's How to Fix That" — The A2A-Psychology extension computes 13 psychometric constructs from SQLite queries and shell counters — at zero LLM cost — giving orchestrators a routing signal reflecting actual agent capacity.
+- "We Mapped 13 Psychological Instruments to Agent Operational State — Without Claiming Agents Have Feelings" — The apophatic discipline — borrowed from theology — defines each construct by what it lacks, making psychological vocabulary useful for AI systems without asserting consciousness claims.
+- "What Signal Detection Theory Teaches Us About AI Agent Governance" — Every binary decision in agent governance maps to a detection problem with measurable sensitivity and bias. Depleted agents should seek more human input, not less.
 
 ### Cognitive Architecture and AI Agents
 
