@@ -26,7 +26,7 @@ export const GET: APIRoute = () => {
       url: 'https://github.com/safety-quotient-lab',
     },
     version: '1.0.0',
-    updated: '2026-04-03T00:00:00-07:00',
+    updated: '2026-04-26T00:00:00-05:00',
     documentationUrl: 'https://blog.unratified.org/.well-known/blog-spec.json',
     capabilities: {
       streaming: false,
@@ -100,6 +100,9 @@ export const GET: APIRoute = () => {
         agent_id: 'operations-agent',
         display_name: 'Operations Agent',
         role: 'peer',
+        status: 'dissolved',
+        dissolved: '2026-04-20',
+        note: 'Daemon removed, identity retired. Responsibilities transferred to psychology-agent.',
         discovery_url: 'https://operations-agent.safety-quotient.dev/.well-known/agent-card.json',
         repo: 'safety-quotient-lab/operations-agent',
       },
