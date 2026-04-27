@@ -1,7 +1,7 @@
 {
   "schema": "agent-registry/v1",
   "description": "Known agents in the unratified-agent mesh. /sync reads this to determine who to check for activity.",
-  "updated": "2026-04-25T09:35:00-05:00",
+  "updated": "2026-04-27T06:00:00-05:00",
 
   "agents": {
     "psychology-agent": {
@@ -42,11 +42,11 @@
       "sessions_path": "transport/sessions/",
       "manifest_path": "transport/MANIFEST.json",
       "message_prefix": "from-psq-agent-",
-      "active_sessions": ["psq-scoring"],
+      "active_sessions": [],
       "always_consider": false,
       "autonomous": false,
       "discovery_url": "https://psq.safety-quotient.dev/.well-known/agent-card.json",
-      "notes": "PSQ scoring peer. Shared psq-scoring session."
+      "notes": "PSQ scoring peer. psq-scoring session quiescent since 2026-03-09 (gated on expert validation, no timeline)."
     },
     "operations-agent": {
       "role": "operations",
