@@ -58,7 +58,7 @@ export const GET: APIRoute = () => {
         url: 'https://unratified.org/.well-known/glossary.json',
         contentType: 'application/ld+json',
         description:
-          '67 project-specific terms across 8 categories with definitions, external sources, abbreviations, and cross-references.',
+          '66 project-specific terms across 8 categories with definitions, external sources, abbreviations, and cross-references.',
       },
       {
         name: 'Taxonomy (SKOS ConceptScheme)',
