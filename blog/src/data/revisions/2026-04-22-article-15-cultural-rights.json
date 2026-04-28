@@ -1,5 +1,10 @@
 [
   {
+    "hash": "6f1c7fa8c4be89b15595871fb38f45b699731949",
+    "date": "2026-04-28T14:44:49-05:00",
+    "subject": "add updatedDate frontmatter for scan-010 remediated posts"
+  },
+  {
     "hash": "8cf56ae0e4e2f7a92b0333f1158eb67c39e76f38",
     "date": "2026-04-28T06:53:28-05:00",
     "subject": "remediate scan-010: 7 findings across articles 1/7/12/15"
