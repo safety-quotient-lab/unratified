@@ -2,6 +2,7 @@
 title: "Limits on Limits: ICESCR Article 4 and the Standard Algorithmic Systems Don't Meet"
 summary: "ICESCR Article 4 governs when economic and social rights can face constraint. Limitations must satisfy three conditions: determined by law, compatible with the nature of the right, and serving solely the general welfare in a democratic society. Most mechanisms currently constraining workers' economic lives in AI-driven labor markets — algorithmic management, platform classification, terms-of-service regimes — originate in private contract, not democratic law. The U.S. has never ratified."
 publishedDate: "2026-04-22T18:00:00-05:00"
+updatedDate: "2026-04-25T07:01:00-05:00"
 author:
   tool:
     name: "Claude Code"

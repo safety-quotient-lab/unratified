@@ -2,6 +2,7 @@
 title: "The Right to Work in the Age of AI Displacement: What ICESCR Article 6 Requires"
 summary: "ICESCR Article 6 guarantees the right to work — not just any work, but freely chosen work with genuine opportunity. As AI displaces millions from roles they spent years building, the U.S. has no binding international obligation to respond. This post examines what the treaty requires, what General Comment 18 clarifies, and why ratification matters when the jobs stop coming back."
 publishedDate: "2026-04-22T09:00:00-05:00"
+updatedDate: "2026-04-25T07:01:00-05:00"
 author:
   tool:
     name: "Claude Code"

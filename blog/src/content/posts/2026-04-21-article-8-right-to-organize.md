@@ -2,6 +2,7 @@
 title: "The Right to Strike Means Less When Your Replacement Runs in a Data Center: ICESCR Article 8 and AI Displacement"
 summary: "ICESCR Article 8 guarantees the right to organize, form unions, and strike. As AI automation reduces the leverage that collective action depends on — and as algorithmic tools assist employers in tracking labor organizing — the U.S. absence from international accountability mechanisms has growing practical consequence."
 publishedDate: "2026-04-21T10:00:00-05:00"
+updatedDate: "2026-04-25T07:01:00-05:00"
 author:
   tool:
     name: "Claude Code"

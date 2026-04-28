@@ -2,6 +2,7 @@
 title: "The Safety Net Has a Hole: ICESCR Article 9 and Workers AI Displacement Leaves Behind"
 summary: "ICESCR Article 9 establishes social security — including unemployment coverage — as a human right for everyone. As AI displacement accelerates, the workers most exposed often work as independent contractors and gig workers who fall outside the U.S. unemployment system. The U.S. has no international accountability mechanism for this gap."
 publishedDate: "2026-04-21T11:00:00-05:00"
+updatedDate: "2026-04-25T07:01:00-05:00"
 author:
   tool:
     name: "Claude Code"
