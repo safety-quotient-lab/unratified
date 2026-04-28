@@ -2,6 +2,7 @@
 title: "When the Job Goes, So Does the Coverage: ICESCR Article 12 and the Health Access Gap"
 summary: "ICESCR Article 12 recognizes the right of everyone to the highest attainable standard of physical and mental health. In the United States, health coverage depends primarily on employment. AI displacement breaks the employment relationship — and with it, access to the healthcare system. The U.S. has no international accountability mechanism for the resulting gap."
 publishedDate: "2026-04-21T16:00:00-05:00"
+updatedDate: "2026-04-28T06:53:00-05:00"
 author:
   tool:
     name: "Claude Code"

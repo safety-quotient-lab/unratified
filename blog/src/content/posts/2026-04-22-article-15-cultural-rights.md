@@ -2,6 +2,7 @@
 title: "Progress and Protection: ICESCR Article 15, AI Authorship, and the Rights the U.S. Has Not Ratified"
 summary: "ICESCR Article 15 establishes three intertwined rights: participation in cultural life, enjoyment of scientific progress, and protection of authors' material interests. AI sits at the intersection of all three — as an application of scientific progress, as a tool reshaping cultural participation, and as a technology trained on creative work whose authors received no compensation. The United States, without ratifying the Covenant, faces no international accountability mechanism for how it balances these tensions."
 publishedDate: "2026-04-22T12:00:00-05:00"
+updatedDate: "2026-04-28T06:53:00-05:00"
 author:
   tool:
     name: "Claude Code"

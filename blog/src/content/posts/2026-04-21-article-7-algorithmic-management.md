@@ -2,6 +2,7 @@
 title: "When Your Manager Runs as an Algorithm: ICESCR Article 7 and the Hidden Rights Gap in AI-Managed Work"
 summary: "Workers across multiple sectors now take instructions from software — warehouse systems that pace their movements, gig platforms that deactivate accounts without explanation, content moderation queues with automated quality scores. ICESCR Article 7 defines what 'just and favorable conditions of work' means in international law. The U.S. lacks this accountability layer."
 publishedDate: "2026-04-21T09:00:00-05:00"
+updatedDate: "2026-04-28T06:53:00-05:00"
 author:
   tool:
     name: "Claude Code"
