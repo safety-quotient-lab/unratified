@@ -62,7 +62,7 @@ Article 15.1.a's right to cultural participation acquires new dimensions when cu
 
 General Comment 21 (2009) on cultural participation establishes that states hold an obligation to ensure access to the means of cultural expression, not merely to remove formal legal barriers. As AI tools reshape what cultural production looks like — who can create, at what cost, using what infrastructure — the adequacy of access measures requires examination.
 
-The same broadband and device gaps that create unequal access to digital education (see [Article 14](/2026-04-22-article-14-compulsory-primary-education)) shape who can use AI-assisted creative tools. Cultural participation has historically correlated with access to instruments: printing presses, cameras, recording equipment, computers. AI tools represent the current iteration of that pattern. GC 21 asks whether the state takes adequate steps to ensure access, not merely whether the tools theoretically exist in a free market.
+The same broadband and device gaps that create unequal access to digital education (see [Article 14](/posts/2026-04-22-article-14-compulsory-primary-education)) shape who can use AI-assisted creative tools. Cultural participation has historically correlated with access to instruments: printing presses, cameras, recording equipment, computers. AI tools represent the current iteration of that pattern. GC 21 asks whether the state takes adequate steps to ensure access, not merely whether the tools theoretically exist in a free market.
 
 ## What Ratification Would Require
 

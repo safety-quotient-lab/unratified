@@ -36,11 +36,11 @@ Article 12 recognizes the right of everyone to the enjoyment of the highest atta
 
 The article covers both physical and mental health — a design choice that anticipates the psychological dimension of economic and social disruption.
 
-CESCR General Comment 14 (2000) elaborates Article 12 through the AAAQ framework: availability, accessibility, acceptability, and quality. Of these, accessibility carries four dimensions: non-discrimination, physical accessibility, economic accessibility, and information accessibility. Economic accessibility receives explicit treatment — health facilities and services must be affordable for all, including socially disadvantaged groups. The framework treats affordability as a legal obligation, not a policy aspiration.
+CESCR General Comment 14 (2000) elaborates Article 12 through the AAAQ framework: availability, accessibility, acceptability, and quality. Of these, accessibility carries four dimensions: non-discrimination, physical accessibility, economic accessibility, and information accessibility. Economic accessibility receives explicit treatment — the framework requires that health facilities and services remain affordable for all, including socially disadvantaged groups. The framework treats affordability as a legal obligation, not a policy aspiration.
 
 ## The Employment-Coverage Nexus
 
-The United States delivers health coverage primarily through employers. Approximately 160 million Americans receive insurance through employer-sponsored plans. This arrangement ties the right Article 12 describes — access to healthcare — to employment status in a way the treaty explicitly does not.
+The United States delivers health coverage primarily through employers. Approximately 160 million Americans receive insurance through employer-sponsored plans (Kaiser Family Foundation, *Employer Health Benefits Annual Survey*, 2023). This arrangement ties the right Article 12 describes — access to healthcare — to employment status in a way the treaty explicitly does not.
 
 AI displacement severs this connection. When automation eliminates a position, the displaced worker loses not just income but the coverage mechanism that employment provided. COBRA allows temporary continuation, but premiums that employers previously absorbed now fall entirely to the individual — at full market rates, typically several times what the worker contributed as an employee. Most displaced workers cannot sustain COBRA for the maximum coverage period.
 
@@ -52,7 +52,7 @@ CESCR GC 14 requires that states ensure economic accessibility — that cost doe
 
 Article 12 covers mental health with the same legal weight as physical health. This matters because the mental health burden of AI displacement does not require hospitalization or a diagnosed condition to represent a rights concern — it operates through the chronic stress, anxiety, and depression that income insecurity and employment loss produce at scale.
 
-Research on prior automation waves suggests elevated mental health effects among displaced workers: increased depression rates, elevated substance use, reduced life expectancy in affected cohorts. These effects persist years beyond the initial displacement event. The communities where manufacturing automation concentrated in the 1980s and 1990s showed measurable public health consequences a generation later.
+Research on prior automation waves documents elevated mental health effects among displaced workers: increased depression rates, elevated substance use, and reduced life expectancy in affected cohorts (Case & Deaton, *Rising Morbidity and Mortality in Midlife Among White Non-Hispanic Americans*, 2015; Pierce & Schott, *Trade Liberalization and Mortality*, 2020). These effects persist years beyond the initial displacement event. The communities where manufacturing automation concentrated in the 1980s and 1990s showed measurable public health consequences a generation later.
 
 AI displacement's current wave concentrates in different occupational categories — administrative, customer service, logistics coordination — but the mechanism remains the same: sudden income loss, status change, and prolonged uncertainty. The mental health dimension of Article 12 would require ratifying states to report on these population-level effects and demonstrate proactive response.
 

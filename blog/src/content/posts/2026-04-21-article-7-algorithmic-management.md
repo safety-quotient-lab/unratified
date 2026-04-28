@@ -28,9 +28,9 @@ reviewStatus: "ai-reviewed"
 
 Job loss gets the headlines. A factory closes. A white-collar role disappears. Automation takes another category of work and the story writes itself.
 
-The quieter transformation attracts less attention: the millions of workers who still have jobs, but whose working conditions now run through software they cannot see, cannot question, and cannot appeal to as a person.
+The quieter transformation attracts less attention: a large and growing number of workers who still have jobs, but whose working conditions now run through software they cannot see, cannot question, and cannot appeal to as a person.
 
-This transformation has a name — algorithmic management — and a treaty framework designed to address it. The International Covenant on Economic, Social and Cultural Rights includes specific obligations about working conditions. The U.S. has signed but never ratified that treaty, which means American workers in algorithmically managed roles operate without the accountability layer that workers in 173 other countries can invoke.
+This transformation has a name — algorithmic management — and a treaty framework designed to address it. The International Covenant on Economic, Social and Cultural Rights includes specific obligations about working conditions. The U.S. has signed but never ratified that treaty, which means American workers in algorithmically managed roles operate without the accountability layer that workers in over 170 other countries can invoke.
 
 ## What Algorithmic Management Looks Like on the Ground
 
