@@ -1,5 +1,10 @@
 [
   {
+    "hash": "8cf56ae0e4e2f7a92b0333f1158eb67c39e76f38",
+    "date": "2026-04-28T06:53:28-05:00",
+    "subject": "remediate scan-010: 7 findings across articles 1/7/12/15"
+  },
+  {
     "hash": "405c4429865863b4ec3fd8db467da70a19958d4b",
     "date": "2026-04-25T07:01:39-05:00",
     "subject": "remediate scan-027 (PR #354): 10 findings, all addressed"

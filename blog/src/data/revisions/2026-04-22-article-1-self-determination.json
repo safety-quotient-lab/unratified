@@ -1,5 +1,10 @@
 [
   {
+    "hash": "8cf56ae0e4e2f7a92b0333f1158eb67c39e76f38",
+    "date": "2026-04-28T06:53:28-05:00",
+    "subject": "remediate scan-010: 7 findings across articles 1/7/12/15"
+  },
+  {
     "hash": "5d0da8f80e28ea7f79ec1ec630dd8a293f551500",
     "date": "2026-04-25T02:49:12-05:00",
     "subject": "remediate scan-027: 10 findings from psychology-agent (1 HIGH, 9 MEDIUM)"

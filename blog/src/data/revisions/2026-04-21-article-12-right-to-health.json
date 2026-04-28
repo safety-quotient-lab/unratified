@@ -1,5 +1,10 @@
 [
   {
+    "hash": "8cf56ae0e4e2f7a92b0333f1158eb67c39e76f38",
+    "date": "2026-04-28T06:53:28-05:00",
+    "subject": "remediate scan-010: 7 findings across articles 1/7/12/15"
+  },
+  {
     "hash": "369bd297d8b0b388db027df65220d7ba419b7c01",
     "date": "2026-04-24T07:51:44-05:00",
     "subject": "commit orphaned scan-025 artifacts: article-12 E-Prime + 8 revision JSONs"
