@@ -156,7 +156,7 @@ The senators who could move on ICESCR don't currently see it as a priority const
 - [ICESCR ratification status — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) (173 parties as of March 2026)
 - [U.S. Senate Foreign Relations Committee](https://www.foreign.senate.gov/) — current membership and jurisdiction
 - [U.S. Constitution, Article II, Section 2](https://constitution.congress.gov/browse/article-2/section-2/) — two-thirds treaty ratification threshold
-- [Congressional Management Foundation — Communicating with Congress](https://www.congressfoundation.org/projects/communicating-with-congress) — research on constituent contact effectiveness
+- [Congressional Management Foundation — Communicating with Congress](https://www.congressfoundation.org/research) — research on constituent contact effectiveness
 - [ICCPR ratification by U.S. (1992) — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-4&chapter=4&clang=_en)
 - [Convention Against Torture ratification by U.S. (1994) — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-9&chapter=4&clang=_en)
 - [CERD ratification by U.S. (1994) — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-2&chapter=4&clang=_en)

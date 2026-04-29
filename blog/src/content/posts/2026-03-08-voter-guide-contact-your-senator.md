@@ -209,6 +209,6 @@ Your two senators represent the right starting point. Find their contact informa
 - [ICESCR full text (OHCHR)](https://www.ohchr.org/en/instruments-mechanisms/instruments/international-covenant-economic-social-and-cultural-rights)
 - [ICESCR ratification status — UN Treaty Collection](https://treaties.un.org/Pages/ViewDetails.aspx?src=TREATY&mtdsg_no=IV-3&chapter=4&clang=_en) (173 parties as of March 2026)
 - [Find your senators — U.S. Senate](https://www.senate.gov/senators/senators-contact.htm)
-- [Congressional Management Foundation — Communicating with Congress: Perceptions of Citizen Advocacy on Capitol Hill](https://www.congressfoundation.org/projects/communicating-with-congress) — research on constituent contact effectiveness by channel (in-person, phone, letter, email, form)
+- [Congressional Management Foundation — Communicating with Congress](https://www.congressfoundation.org/research) — research on constituent contact effectiveness by channel (in-person, phone, letter, email, form)
 - [U.S. Senate Foreign Relations Committee](https://www.foreign.senate.gov/)
 - [Committee on Economic, Social and Cultural Rights (CESCR)](https://www.ohchr.org/en/treaty-bodies/cescr)
