@@ -1,5 +1,10 @@
 [
   {
+    "hash": "0313002091fe35a37f3442d4cf0843c9a1b3860e",
+    "date": "2026-04-30T12:59:17-05:00",
+    "subject": "remediate: E-prime in article-12 + commit orphaned revision histories"
+  },
+  {
     "hash": "6f1c7fa8c4be89b15595871fb38f45b699731949",
     "date": "2026-04-28T14:44:49-05:00",
     "subject": "add updatedDate frontmatter for scan-010 remediated posts"
