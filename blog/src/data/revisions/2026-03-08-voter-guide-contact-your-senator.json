@@ -1,5 +1,10 @@
 [
   {
+    "hash": "016172a29e9984a9e2112a1b648980210382c16a",
+    "date": "2026-04-29T01:19:11-05:00",
+    "subject": "remediate: update Congressional Management Foundation URLs"
+  },
+  {
     "hash": "117e01d5ae56aa90efad14913c39fdb16a73db97",
     "date": "2026-04-15T10:52:27-05:00",
     "subject": "fix: E-prime remediation on 9 remaining blog posts (Mar 3-12 batch) + 10 revision histories"

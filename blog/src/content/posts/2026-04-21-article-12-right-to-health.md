@@ -21,7 +21,7 @@ lensFraming:
   voter: "Most Americans get health insurance through their employer. When AI automation eliminates that job, the coverage disappears too. ICESCR Article 12 treats access to healthcare as a right that does not depend on employment status. The U.S. has never ratified it."
   politician: "Article 12 obliges ratifying states to ensure economic accessibility to healthcare — coverage that does not depend on employment classification. AI displacement produces a documented population of workers who lose employer-sponsored insurance and cycle through coverage gaps. CESCR periodic review would surface this pattern systematically."
   educator: "Article 12 illustrates the rights-based model of health access: the AAAQ framework (availability, accessibility, acceptability, quality) developed in CESCR General Comment 14 treats economic accessibility as a legal obligation rather than a benefit contingent on labor market participation."
-  researcher: "CESCR GC 14 (2000) defines economic accessibility as the requirement that health services be affordable for all, including socially disadvantaged groups. Gig workers and displaced employees who lose employer-sponsored insurance face documented gaps in both coverage continuity and affordability. Article 12(2)(b) and (c) also address occupational health — an area where platform workers occupy a legal gray zone outside OSHA's employee classifications."
+  researcher: "CESCR GC 14 (2000) defines economic accessibility as the requirement that health services remain affordable for all, including socially disadvantaged groups. Gig workers and displaced employees who lose employer-sponsored insurance face documented gaps in both coverage continuity and affordability. Article 12(2)(b) and (c) also address occupational health — an area where platform workers occupy a legal gray zone outside OSHA's employee classifications."
   developer: "Algorithmic hiring systems that screen applicants by employment history gaps, credit scores, or platform-work income patterns may systematically exclude workers displaced by prior AI systems from the employment relationships that provide health coverage. This feedback loop — AI displacement leading to coverage loss leading to barriers to re-employment — falls within Article 12's economic accessibility framework."
 draft: false
 reviewStatus: "ai-reviewed"
@@ -71,7 +71,7 @@ Like other ICESCR provisions, Article 12 operates under progressive realization 
 
 A healthcare financing system that leaves a growing population of AI-displaced workers without coverage, during a period of documented technological transition, raises a retrogression question under Article 12's accessibility framework. Whether the rate at which displacement produces coverage gaps constitutes a retrogressive trend — rather than a transitional gap under progressive realization — remains an open question that CESCR periodic review would examine.
 
-The U.S. faces no such review. The question cannot be formally asked.
+The U.S. faces no such review. No one can formally ask the question.
 
 ## What Ratification Would Require
 
