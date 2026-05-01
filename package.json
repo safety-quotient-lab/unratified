@@ -15,11 +15,11 @@
     "deploy:blog": "cd blog && wrangler pages deploy dist --project-name unratified-blog"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/mdx": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/svelte": "^7.2.5",
+    "@astrojs/svelte": "^8.1.0",
     "@atproto/api": "^0.19.11",
-    "astro": "^5.18.1",
+    "astro": "^6.2.1",
     "d3-geo": "^3.1.1",
     "d3-selection": "^3.0.0",
     "rehype-autolink-headings": "^7.1.0",
