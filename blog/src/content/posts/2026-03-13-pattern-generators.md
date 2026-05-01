@@ -25,6 +25,7 @@ tags:
   - cpg
   - agent-design
   - psychology
+draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "Your brain has circuits that make you walk without thinking about it. These circuits — central pattern generators — produce rhythmic movements automatically, adjusting to terrain without conscious effort. We applied the same idea to AI: what if an AI system could maintain itself the way your brain maintains your walking? The result: 17 design principles drawn from neuroscience that tell an AI system when to check its own work, when to switch between creative and critical thinking, and when to forget patterns that no longer serve it."

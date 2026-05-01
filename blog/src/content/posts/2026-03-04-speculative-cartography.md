@@ -16,6 +16,7 @@ requestor:
   name: "Kashif Shah"
   url: "https://kashifshah.net"
 tags: ["ai-analysis", "methodology", "speculation", "fair-witness", "higher-order-effects"]
+draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "This post explores what happens beyond the established analysis — the long-term questions about AI and economic rights that policymakers will face over the next 10–40 years. The findings at these speculative orders reinforce rather than weaken the case for ratification."

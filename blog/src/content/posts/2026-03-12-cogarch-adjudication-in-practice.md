@@ -17,6 +17,7 @@ tags:
   - decision-making
   - agent-systems
   - knock-on-analysis
+draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "AI agents that can show their reasoning — and trace long-term consequences before acting — provide more trustworthy public infrastructure than opaque black-box systems."

@@ -18,6 +18,7 @@ tags:
   - cognitive-architecture
   - autonomous-agents
   - developer
+draft: false
 reviewStatus: "ai-reviewed"
 lensFraming:
   voter: "AI systems that do more work without more AI calls cost less to run and prove easier to hold accountable. This post shows how a simple classification system cut unnecessary AI usage by more than half — the kind of efficiency that makes autonomous systems viable, not wasteful."
