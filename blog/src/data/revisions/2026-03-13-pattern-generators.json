@@ -1,5 +1,10 @@
 [
   {
+    "hash": "73702a9d454cebc94ace21c0c784acd5e84e45d2",
+    "date": "2026-05-01T16:17:06-05:00",
+    "subject": "blog: add explicit draft: false to 5 posts missing the field"
+  },
+  {
     "hash": "b7d4e2b7ef7ef2bcbf1b00d2fa0b1bb52703b3a2",
     "date": "2026-04-17T05:56:37-05:00",
     "subject": "interagent: remediate scan-010-s102c + scan-019 + scan-020 (27 findings) + ACK T54-T56"

@@ -1,5 +1,10 @@
 [
   {
+    "hash": "73702a9d454cebc94ace21c0c784acd5e84e45d2",
+    "date": "2026-05-01T16:17:06-05:00",
+    "subject": "blog: add explicit draft: false to 5 posts missing the field"
+  },
+  {
     "hash": "91f4ef8403576064ebd2a46a613bf6ac9f620024",
     "date": "2026-04-14T14:40:38-05:00",
     "subject": "fix: E-prime remediation on 3 blog posts (Mar 6-13 batch) + 1 revision history"
