@@ -1,5 +1,10 @@
 [
   {
+    "hash": "7f76eee8050c0825a1704030332f4a76a827aa85",
+    "date": "2026-05-01T09:40:51-05:00",
+    "subject": "remediate scan-010b: 5 fair-witness findings from psychology-agent"
+  },
+  {
     "hash": "6f1c7fa8c4be89b15595871fb38f45b699731949",
     "date": "2026-04-28T14:44:49-05:00",
     "subject": "add updatedDate frontmatter for scan-010 remediated posts"

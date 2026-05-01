@@ -1,5 +1,10 @@
 [
   {
+    "hash": "7f76eee8050c0825a1704030332f4a76a827aa85",
+    "date": "2026-05-01T09:40:51-05:00",
+    "subject": "remediate scan-010b: 5 fair-witness findings from psychology-agent"
+  },
+  {
     "hash": "0313002091fe35a37f3442d4cf0843c9a1b3860e",
     "date": "2026-04-30T12:59:17-05:00",
     "subject": "remediate: E-prime in article-12 + commit orphaned revision histories"
