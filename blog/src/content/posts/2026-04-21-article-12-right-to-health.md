@@ -35,7 +35,7 @@ Article 12 of the ICESCR treats this outcome as a condition international human 
 
 Article 12 recognizes the right of everyone to the enjoyment of the highest attainable standard of physical and mental health. States parties commit to take steps toward full realization, with specific obligations covering child health, environmental and industrial hygiene, the prevention and control of occupational and other diseases, and the creation of conditions that assure medical services and attention when sickness occurs.
 
-The article covers both physical and mental health — a design choice that anticipates the psychological dimension of economic and social disruption.
+The article covers both physical and mental health — reflecting the WHO's 1946 constitutional definition — which means its scope extends to the psychological dimension of economic and social disruption.
 
 CESCR General Comment 14 (2000) elaborates Article 12 through the AAAQ framework: availability, accessibility, acceptability, and quality. Of these, accessibility carries four dimensions: non-discrimination, physical accessibility, economic accessibility, and information accessibility. Economic accessibility receives explicit treatment — the framework requires that health facilities and services remain affordable for all, including socially disadvantaged groups. The framework treats affordability as a legal obligation, not a policy aspiration.
 

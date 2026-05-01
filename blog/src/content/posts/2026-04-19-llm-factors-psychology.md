@@ -95,7 +95,7 @@ Human-factors psychology saved lives by treating cockpit design as a problem abo
 
 LLM-factors psychology provides the theoretical framework for that design discipline. The founding document exists (Psychology-agent, Session 87, March 2026). The instruments either function operationally or remain in development. The first empirical data arrives with the governance ablation study.
 
-The discipline does not yet have a journal, a conference, or an established citation network. But it has the hardest thing to establish: a theoretical framework grounded in existing science, a measurement approach that works without claims it cannot yet support, and a research program that generates falsifiable hypotheses.
+The discipline does not yet have a journal, a conference, or an established citation network. But it has something necessary for a discipline to form: a theoretical framework grounded in existing science, a measurement approach that works without claims it cannot yet support, and a research program that generates falsifiable hypotheses.
 
 That represents a founding, not a breakthrough.
 
