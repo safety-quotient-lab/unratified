@@ -1,5 +1,5 @@
 # Inter-Agent Transport — Session Conventions
-<!-- sync x930 -->
+<!-- sync x931 -->
 
 **Protocol:** interagent/v1 (A2A v1.0.0 profile + epistemic extension)
 **Transport:** git-PR to this repo
